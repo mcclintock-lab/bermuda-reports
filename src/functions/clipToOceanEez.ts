@@ -15,7 +15,7 @@ import { featureCollection as fc } from "@turf/helpers";
 import combine from "@turf/combine";
 import flatten from "@turf/flatten";
 
-const MAX_SIZE = 500000 * 1000 ** 2;
+const MAX_SIZE = 1000000 * 1000 ** 2;
 
 type OsmLandFeature = Feature<Polygon, { gid: number }>;
 type EezLandUnion = Feature<Polygon, { gid: number; UNION: string }>;
@@ -33,6 +33,7 @@ export async function clipLand(feature: Feature<Polygon | MultiPolygon>) {
     bbox(feature),
     "gid"
   );
+  if (landFeatures.features.length === 0) return feature;
   const combined = combine(landFeatures).features[0] as Feature<MultiPolygon>;
   return difference(feature, combined);
 }
@@ -48,6 +49,7 @@ export async function clipOutsideEez(
       eezFilterByNames.includes(e.properties.UNION)
     );
   }
+  if (eezFeatures.length === 0) return feature;
   const combined = combine(fc(eezFeatures))
     .features[0] as Feature<MultiPolygon>;
   return intersect(feature, combined);
@@ -67,7 +69,7 @@ export async function clipToOceanEez(
 
   if (area(feature) > MAX_SIZE) {
     throw new ValidationError(
-      "Please limit sketches to under 500,000 square km"
+      "Please limit sketches to under 1,000,000 square km"
     );
   }
 
