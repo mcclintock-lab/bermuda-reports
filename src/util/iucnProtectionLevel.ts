@@ -1,9 +1,8 @@
-import { Sketch, getUserAttribute } from "@seasketch/geoprocessing";
-
 export interface IucnCategory {
-  category: string;
+  category: string | null;
   name: string;
   allowedActivities: string[];
+  level: string;
 }
 
 export interface IucnActivity {
@@ -36,11 +35,13 @@ export const iucnActivities = [
 export const iucnCategories: Record<string, IucnCategory> = {
   "1a": {
     category: "1a",
+    level: "full",
     name: "Strict Nature Reserve",
     allowedActivities: ["RESEARCH_NE", "TRAD_USE_NE", "RESTORE_CON"],
   },
   "1b": {
     category: "1b",
+    level: "full",
     name: "Wilderness Area",
     allowedActivities: [
       "RESEARCH_NE",
@@ -76,6 +77,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
   // },
   "2/3": {
     category: "2/3",
+    level: "full",
     name: "National Park or Natural Monument/Feature",
     allowedActivities: [
       "RESEARCH_NE",
@@ -88,6 +90,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
   },
   "4/6": {
     category: "4/6",
+    level: "high",
     name:
       "Habitat/Species Management Area or Protected area with sustainable use of natural resources",
     allowedActivities: [
@@ -129,6 +132,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
   // },
   "5": {
     category: "5",
+    level: "high",
     name: "Protected Landscape/Seascape",
     allowedActivities: [
       "RESEARCH_NE",
@@ -176,12 +180,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
  * @param sketch
  * @param activityAttrib
  */
-export const iucnCategoryForSketch = (
-  sketch: Sketch,
-  activityAttrib = "ACTIVITIES"
-) => {
-  // Get sketch allowed activities
-  const activities: string[] = getJsonUserAttribute(sketch, activityAttrib, []);
+export const getCategoryForActivities = (activities: string[]) => {
   if (activities.length === 0) return null;
 
   // Get first category where all activities allowed in sketch are allowed by the category
@@ -199,15 +198,11 @@ export const iucnCategoryForSketch = (
   return firstCategory;
 };
 
-function getJsonUserAttribute<T>(
-  sketch: Sketch,
-  exportid: string,
-  defaultValue: T
-): T {
-  const value = getUserAttribute(sketch, exportid, defaultValue);
-  if (typeof value === "string") {
-    return JSON.parse(value);
-  } else {
-    return value;
-  }
-}
+/**
+ * Returns IUCN category object given category ID.  If category not found it returns a special low protection object
+ */
+export const getCategoryWithId = (categoryId: string | null) => {
+  return categoryId
+    ? iucnCategories[categoryId]
+    : { category: null, level: "low", name: "None", allowedActivities: [] };
+};
