@@ -5,3 +5,6 @@
  * meters to square miles */
 export const STUDY_REGION_AREA_SQ_METERS = 465737168307.9038;
 export const STUDY_REGION_AREA_SQ_KM = STUDY_REGION_AREA_SQ_METERS / 1000;
+24031748;
+
+export const units = "imperial";

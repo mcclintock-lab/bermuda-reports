@@ -1,5 +1,5 @@
 export interface IucnCategory {
-  category: string | null;
+  category: string;
   name: string;
   allowedActivities: string[];
   level: string;
@@ -172,6 +172,31 @@ export const iucnCategories: Record<string, IucnCategory> = {
   //     "WORKS",
   //   ],
   // },
+  None: {
+    category: "None",
+    level: "low",
+    name: "None",
+    allowedActivities: [
+      "RESEARCH_NE",
+      "TRAD_USE_NE",
+      "RESTORE_CON",
+      "TRAD_FISH_COLLECT",
+      "RECREATE_NE",
+      "TOURISM",
+      "SHIPPING",
+      "RESEARCH",
+      "RENEWABLE_ENERGY",
+      "RESTORE_OTH",
+      "FISH_COLLECT_REC",
+      "FISH_COLLECT_LOCAL",
+      "FISH_AQUA_INDUSTRIAL",
+      "AQUA_SMALL",
+      "WORKS",
+      "UNTREATED_WATER",
+      "MINING_OIL_GAS",
+      "HABITATION",
+    ],
+  },
 };
 
 /**
@@ -180,29 +205,24 @@ export const iucnCategories: Record<string, IucnCategory> = {
  * @param sketch
  * @param activityAttrib
  */
-export const getCategoryForActivities = (activities: string[]) => {
-  if (activities.length === 0) return null;
+export const getCategoryForActivities = (
+  activities: string[]
+): IucnCategory => {
+  if (activities.length === 0) return iucnCategories["None"];
 
   // Get first category where all activities allowed in sketch are allowed by the category
-  let firstCategory: string | null = null;
-  const categories = Object.keys(iucnCategories).sort();
-  for (const category of categories) {
-    const hasCategory = activities
-      .map((act) => iucnCategories[category].allowedActivities.includes(act))
+  let firstCategory: IucnCategory | undefined = undefined;
+  const categoryIds = Object.keys(iucnCategories).sort();
+  for (const categoryId of categoryIds) {
+    const curCategory = iucnCategories[categoryId];
+    const matchCategory = activities
+      .map((act) => curCategory.allowedActivities.includes(act))
       .reduce((acc, hasActivity) => acc && hasActivity, true);
-    if (hasCategory) {
-      firstCategory = category;
+    if (matchCategory) {
+      firstCategory = curCategory;
       break;
     }
   }
+  if (!firstCategory) firstCategory = iucnCategories["None"];
   return firstCategory;
-};
-
-/**
- * Returns IUCN category object given category ID.  If category not found it returns a special low protection object
- */
-export const getCategoryWithId = (categoryId: string | null) => {
-  return categoryId
-    ? iucnCategories[categoryId]
-    : { category: null, level: "low", name: "None", allowedActivities: [] };
 };

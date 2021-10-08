@@ -18,13 +18,14 @@ describe("Basic smoke tests", () => {
       const result = await protection(example);
       expect(result).toBeTruthy();
       console.log("sketchCategories", result);
-      result.sketchCategories.forEach((sCat) => {
+      result.sketchStats.forEach((sStat) => {
         expect(
-          typeof sCat.category === "string" || sCat.category === null
+          typeof sStat.category === "string" || sStat.category === null
         ).toBe(true);
         expect(
-          typeof sCat.sketchId === "string" || sCat.sketchId === null
+          typeof sStat.sketchId === "string" || sStat.sketchId === null
         ).toBe(true);
+        expect(sStat.percPlanningArea).toBeGreaterThanOrEqual(0);
       });
       writeResultOutput(result, "protection", example.properties.name);
     }

@@ -1,0 +1,102 @@
+{
+  "sketchStats": [
+    {
+      "sketchId": "615f8a88045840708a6e5387",
+      "name": "full-2",
+      "category": "1a",
+      "level": "full",
+      "area": 39418323.68525186,
+      "percPlanningArea": 0.00008463641377059257
+    },
+    {
+      "sketchId": "615f8aa1045840708a6e5389",
+      "name": "high-2",
+      "category": "2/3",
+      "level": "full",
+      "area": 81735976.75050713,
+      "percPlanningArea": 0.00017549807555078062
+    },
+    {
+      "sketchId": "615f8ae9045840708a6e538e",
+      "name": "low-2",
+      "category": "None",
+      "level": "low",
+      "area": 29469210.36870289,
+      "percPlanningArea": 0.00006327433663018383
+    },
+    {
+      "sketchId": "615f8b01045840708a6e5391",
+      "name": "full-1",
+      "category": "1a",
+      "level": "full",
+      "area": 62536840.14762495,
+      "percPlanningArea": 0.0001342749610790805
+    },
+    {
+      "sketchId": "615f8b48045840708a6e5395",
+      "name": "full-1",
+      "category": "4/6",
+      "level": "high",
+      "area": 46159357.39177554,
+      "percPlanningArea": 0.00009911031485736843
+    },
+    {
+      "sketchId": "615f8b80045840708a6e53a0",
+      "name": "low-2",
+      "category": "None",
+      "level": "low",
+      "area": 13281509.242890002,
+      "percPlanningArea": 0.000028517176954426482
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "1a",
+      "level": "full",
+      "numSketches": 2,
+      "area": 101955163.8328768,
+      "percPlanningArea": 0.00021891137484967305
+    },
+    {
+      "category": "2/3",
+      "level": "full",
+      "numSketches": 1,
+      "area": 81735976.75050713,
+      "percPlanningArea": 0.00017549807555078062
+    },
+    {
+      "category": "None",
+      "level": "low",
+      "numSketches": 2,
+      "area": 42750719.61159289,
+      "percPlanningArea": 0.00009179151358461031
+    },
+    {
+      "category": "4/6",
+      "level": "high",
+      "numSketches": 1,
+      "area": 46159357.39177554,
+      "percPlanningArea": 0.00009911031485736843
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 3,
+      "area": 183691140.58338395,
+      "percPlanningArea": 0.0003944094504004537
+    },
+    {
+      "level": "low",
+      "numSketches": 2,
+      "area": 42750719.61159289,
+      "percPlanningArea": 0.00009179151358461031
+    },
+    {
+      "level": "high",
+      "numSketches": 1,
+      "area": 46159357.39177554,
+      "percPlanningArea": 0.00009911031485736843
+    }
+  ]
+}

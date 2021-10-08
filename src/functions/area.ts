@@ -3,26 +3,14 @@ import {
   SketchCollection,
   Polygon,
   GeoprocessingHandler,
-  sketchArea,
 } from "@seasketch/geoprocessing";
-import { STUDY_REGION_AREA_SQ_METERS } from "./areaConstants";
-
-export interface AreaResults {
-  /** area of the sketch in square meters */
-  area: number;
-  /** Percentage of the overall planning area */
-  percPlanningArea: number;
-}
+import { area as areaTool, AreaResults } from "../util/area";
+import { STUDY_REGION_AREA_SQ_METERS, units } from "../_config";
 
 export async function area(
-  feature: Sketch<Polygon> | SketchCollection<Polygon>
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<AreaResults> {
-  const featureArea = sketchArea(feature);
-
-  return {
-    area: featureArea,
-    percPlanningArea: featureArea / STUDY_REGION_AREA_SQ_METERS,
-  };
+  return areaTool(sketch, STUDY_REGION_AREA_SQ_METERS);
 }
 
 export default new GeoprocessingHandler(area, {

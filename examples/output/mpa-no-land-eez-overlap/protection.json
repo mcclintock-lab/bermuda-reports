@@ -1,8 +1,29 @@
 {
-  "sketchCategories": [
+  "sketchStats": [
     {
       "sketchId": "615bbbe9aac8c8285d50db2d",
-      "category": "1a"
+      "name": "mpa-no-land-eez-overlap",
+      "category": "1a",
+      "level": "full",
+      "area": 956935.1638319656,
+      "percPlanningArea": 0.0000020546678018176244
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "1a",
+      "level": "full",
+      "numSketches": 1,
+      "area": 956935.1638319656,
+      "percPlanningArea": 0.0000020546678018176244
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 1,
+      "area": 956935.1638319656,
+      "percPlanningArea": 0.0000020546678018176244
     }
   ]
 }

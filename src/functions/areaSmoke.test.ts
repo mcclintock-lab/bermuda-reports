@@ -2,7 +2,7 @@
  * @group smoke
  */
 import { area } from "./area";
-import { STUDY_REGION_AREA_SQ_METERS } from "./areaConstants";
+import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
   getExamplePolygonSketchAll,
   writeResultOutput,

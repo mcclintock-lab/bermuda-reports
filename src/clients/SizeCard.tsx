@@ -5,10 +5,10 @@ import {
   LayerToggle,
   KeySection,
 } from "@seasketch/geoprocessing/client";
-import { STUDY_REGION_AREA_SQ_METERS } from "../functions/areaConstants";
+import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 
 // Import type definitions from function
-import { AreaResults } from "../functions/area";
+import { AreaResults } from "../util/area";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 const Percent = new Intl.NumberFormat("en", {
