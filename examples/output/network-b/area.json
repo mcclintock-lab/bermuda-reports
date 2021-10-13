@@ -1,4 +1,149 @@
 {
-  "area": 272601217.5867524,
-  "percPlanningArea": 0.0005853112788424326
+  "eez": {
+    "area": 651275382.9986175,
+    "percArea": 0.0013983753655839905,
+    "sketchAreas": [
+      {
+        "sketchId": "615f8a88045840708a6e5387",
+        "name": "full-2",
+        "area": 39418323.68525186,
+        "percArea": 0.00008463641377059257
+      },
+      {
+        "sketchId": "615f8aa1045840708a6e5389",
+        "name": "high-2",
+        "area": 81735976.75050713,
+        "percArea": 0.00017549807555078062
+      },
+      {
+        "sketchId": "615f8ae9045840708a6e538e",
+        "name": "low-2",
+        "area": 29469210.36870289,
+        "percArea": 0.00006327433663018383
+      },
+      {
+        "sketchId": "615f8b01045840708a6e5391",
+        "name": "full-1",
+        "area": 62536840.14762495,
+        "percArea": 0.0001342749610790805
+      },
+      {
+        "sketchId": "615f8b48045840708a6e5395",
+        "name": "full-1",
+        "area": 46159357.39177554,
+        "percArea": 0.00009911031485736843
+      },
+      {
+        "sketchId": "615f8b80045840708a6e53a0",
+        "name": "low-2",
+        "area": 13281509.242890002,
+        "percArea": 0.000028517176954426482
+      },
+      {
+        "sketchId": "6165ca3f1e0a596510ad8970",
+        "name": "crosser",
+        "area": 392791447.4665036,
+        "percArea": 0.0008433757797205161
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "nearshore": {
+    "area": 433513798.6103625,
+    "percArea": 0.16752605004725207,
+    "sketchAreas": [
+      {
+        "sketchId": "615f8a88045840708a6e5387",
+        "name": "full-2",
+        "area": 39418323.68525186,
+        "percArea": 0.015232724050865853
+      },
+      {
+        "sketchId": "615f8aa1045840708a6e5389",
+        "name": "high-2",
+        "area": 81735976.75051041,
+        "percArea": 0.03158585811030683
+      },
+      {
+        "sketchId": "615f8ae9045840708a6e538e",
+        "name": "low-2",
+        "area": 29393012.198561378,
+        "percArea": 0.01135856632107207
+      },
+      {
+        "sketchId": "615f8b01045840708a6e5391",
+        "name": "full-1",
+        "area": 62536840.14762384,
+        "percArea": 0.024166589035806083
+      },
+      {
+        "sketchId": "615f8b48045840708a6e5395",
+        "name": "full-1",
+        "area": 46159357.39177554,
+        "percArea": 0.0178377132200902
+      },
+      {
+        "sketchId": "615f8b80045840708a6e53a0",
+        "name": "low-2",
+        "area": 13281509.242890002,
+        "percArea": 0.005132475112118026
+      },
+      {
+        "sketchId": "6165ca3f1e0a596510ad8970",
+        "name": "crosser",
+        "area": 175089945.81068653,
+        "percArea": 0.06766134577186808
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "offshore": {
+    "area": 217741451.73871174,
+    "percArea": 0.0004701321825222559,
+    "sketchAreas": [
+      {
+        "sketchId": "615f8a88045840708a6e5387",
+        "name": "full-2",
+        "area": 0,
+        "percArea": 0
+      },
+      {
+        "sketchId": "615f8aa1045840708a6e5389",
+        "name": "high-2",
+        "area": 0,
+        "percArea": 0
+      },
+      {
+        "sketchId": "615f8ae9045840708a6e538e",
+        "name": "low-2",
+        "area": 76198.17311179634,
+        "percArea": 1.6452179014699092e-7
+      },
+      {
+        "sketchId": "615f8b01045840708a6e5391",
+        "name": "full-1",
+        "area": 0,
+        "percArea": 0
+      },
+      {
+        "sketchId": "615f8b48045840708a6e5395",
+        "name": "full-1",
+        "area": 0,
+        "percArea": 0
+      },
+      {
+        "sketchId": "615f8b80045840708a6e53a0",
+        "name": "low-2",
+        "area": 0,
+        "percArea": 0
+      },
+      {
+        "sketchId": "6165ca3f1e0a596510ad8970",
+        "name": "crosser",
+        "area": 217665253.56559995,
+        "percArea": 0.0004699676607321089
+      }
+    ],
+    "areaUnit": "square meters"
+  }
 }

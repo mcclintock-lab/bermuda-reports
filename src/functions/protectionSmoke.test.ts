@@ -17,7 +17,6 @@ describe("Basic smoke tests", () => {
     for (const example of examples) {
       const result = await protection(example);
       expect(result).toBeTruthy();
-      console.log("sketchCategories", result);
       result.sketchStats.forEach((sStat) => {
         expect(
           typeof sStat.category === "string" || sStat.category === null

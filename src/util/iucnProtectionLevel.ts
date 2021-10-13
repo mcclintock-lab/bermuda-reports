@@ -3,6 +3,7 @@ export interface IucnCategory {
   name: string;
   allowedActivities: string[];
   level: string;
+  categories?: { category: string; name: string }[];
 }
 
 export interface IucnActivity {
@@ -65,7 +66,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
   // },
   // "3": {
   //   category: "3",
-  //   name: "Natural Monument or Feature",
+  //   name: "Natural Monument/Feature",
   //   allowedActivities: [
   //     "RESEARCH_NE",
   //     "TRAD_USE_NE",
@@ -87,12 +88,22 @@ export const iucnCategories: Record<string, IucnCategory> = {
       "RECREATE_NE",
       "TOURISM",
     ],
+    categories: [
+      {
+        category: "2",
+        name: "National Park",
+      },
+      {
+        category: "3",
+        name: "National Monument or Feature",
+      },
+    ],
   },
   "4/6": {
     category: "4/6",
     level: "high",
     name:
-      "Habitat/Species Management Area or Protected area with sustainable use of natural resources",
+      "Habitat/Species Management Area or Protected area with sustainable use",
     allowedActivities: [
       "RESEARCH_NE",
       "TRAD_USE_NE",
@@ -108,6 +119,16 @@ export const iucnCategories: Record<string, IucnCategory> = {
       "FISH_COLLECT_LOCAL",
       "AQUA_SMALL",
       "WORKS",
+    ],
+    categories: [
+      {
+        category: "4",
+        name: "Habitat/Species Management Area",
+      },
+      {
+        category: "6",
+        name: "Protected area with sustainable use",
+      },
     ],
   },
   // "4": {
@@ -208,7 +229,7 @@ export const iucnCategories: Record<string, IucnCategory> = {
 export const getCategoryForActivities = (
   activities: string[]
 ): IucnCategory => {
-  if (activities.length === 0) return iucnCategories["None"];
+  if (activities.length === 0) return iucnCategories["1a"];
 
   // Get first category where all activities allowed in sketch are allowed by the category
   let firstCategory: IucnCategory | undefined = undefined;

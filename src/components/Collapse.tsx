@@ -9,18 +9,20 @@ export interface CollapseProps {
 
 const StyledCollapse = styled.div`
   .collapse-header {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
-    height: 30px;
+    height: 20px;
   }
 
   .collapse-icon-container {
+    margin-left: -3px;
   }
 
   .collapse-icon-button {
     display: block;
     border: 0;
     margin-bottom: 10px;
+    padding-left: 0px;
     background-color: transparent;
     font-size: 15px;
     height: 20px;
@@ -33,6 +35,7 @@ const StyledCollapse = styled.div`
     display: block;
     border: 0;
     margin-bottom: 10px;
+    padding-left: 0px;
     background-color: transparent;
     font-size: 15px;
     height: 20px;
@@ -42,8 +45,11 @@ const StyledCollapse = styled.div`
   }
 
   .collapse-content {
-    margin-left: 10px;
+    margin-left: 15px;
     background-color: transparent;
+    & p {
+      margin: 10px 0px;
+    }
   }
 
   .collapse-content.collapsed {
@@ -88,4 +94,23 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
       </div>
     </StyledCollapse>
   );
+};
+
+///////////
+
+const StyledCollapseGroup = styled.div`
+  margin-top: 15px;
+  & .collapse-header {
+    margin-top: 0px;
+  }
+`;
+
+export interface CollapseGroupProps {
+  children: ReactNode;
+}
+
+export const CollapseGroup: React.FunctionComponent<CollapseGroupProps> = ({
+  children,
+}) => {
+  return <StyledCollapseGroup>{children}</StyledCollapseGroup>;
 };

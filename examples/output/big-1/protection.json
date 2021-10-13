@@ -1,0 +1,29 @@
+{
+  "sketchStats": [
+    {
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "name": "big-1",
+      "category": "1a",
+      "level": "full",
+      "area": 100500428268.71396,
+      "percPlanningArea": 0.21578786299974248
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "1a",
+      "level": "full",
+      "numSketches": 1,
+      "area": 100500428268.71396,
+      "percPlanningArea": 0.21578786299974248
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 1,
+      "area": 100500428268.71396,
+      "percPlanningArea": 0.21578786299974248
+    }
+  ]
+}

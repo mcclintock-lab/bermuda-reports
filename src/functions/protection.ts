@@ -10,7 +10,7 @@ import {
   genSampleSketchCollection,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
-import { area } from "../util/area";
+import { areaStats } from "../util/areaStats";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
   getCategoryForActivities,
@@ -59,7 +59,10 @@ export async function protection(
   const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
   // TODO: convert to square meters
-  const areaStats = await area(sketch, STUDY_REGION_AREA_SQ_METERS);
+  const planningAreaStats = await areaStats(
+    sketch,
+    STUDY_REGION_AREA_SQ_METERS
+  );
 
   const sketchStats: SketchStat[] = sketches.map((s, index) => {
     // Get sketch allowed activities, then category
@@ -72,8 +75,8 @@ export async function protection(
       name: s.properties.name,
       category: category.category,
       level,
-      area: areaStats.sketchAreas[index].area,
-      percPlanningArea: areaStats.sketchAreas[index].percPlanningArea,
+      area: planningAreaStats.sketchAreas[index].area,
+      percPlanningArea: planningAreaStats.sketchAreas[index].percArea,
     };
   });
 
@@ -87,7 +90,7 @@ export async function protection(
       );
       // Dissolve by category to get true area and %
       const sc = genSampleSketchCollection(featureCollection(catSketches));
-      const catArea = await area(
+      const catAreaStats = await areaStats(
         sc as SketchCollection<Polygon>,
         STUDY_REGION_AREA_SQ_METERS
       );
@@ -96,8 +99,8 @@ export async function protection(
         category: categoryName,
         level: iucnCategories[categoryName].level,
         numSketches: catGroups[categoryName].length,
-        area: catArea.area,
-        percPlanningArea: catArea.percPlanningArea,
+        area: catAreaStats.area,
+        percPlanningArea: catAreaStats.percArea,
       };
     })
   );
@@ -112,7 +115,7 @@ export async function protection(
       );
       // Dissolve by category to get true area and %
       const sl = genSampleSketchCollection(featureCollection(levelSketches));
-      const levelArea = await area(
+      const levelAreaStats = await areaStats(
         sl as SketchCollection<Polygon>,
         STUDY_REGION_AREA_SQ_METERS
       );
@@ -120,8 +123,8 @@ export async function protection(
       return {
         level: levelName,
         numSketches: levelGroups[levelName].length,
-        area: levelArea.area,
-        percPlanningArea: levelArea.percPlanningArea,
+        area: levelAreaStats.area,
+        percPlanningArea: levelAreaStats.percArea,
       };
     })
   );

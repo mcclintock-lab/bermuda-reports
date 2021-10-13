@@ -9,7 +9,11 @@ import {
   MultiPolygon,
   Sketch,
 } from "@seasketch/geoprocessing";
-import { iucnCategoryForSketch } from "./iucnProtectionLevel";
+import {
+  getCategoryForActivities,
+  iucnActivities,
+  iucnCategories,
+} from "./iucnProtectionLevel";
 
 const genSketchWithActivities = (activities: string[]): Sketch => {
   return {
@@ -38,75 +42,60 @@ const genSketchWithActivities = (activities: string[]): Sketch => {
 };
 
 describe("IUCN protection level", () => {
-  test("no activity returns null category", async () => {
-    const category = iucnCategoryForSketch(genSketchWithActivities([]));
-    expect(category).toBe(null);
+  test("no allowed activity returns None category", async () => {
+    const category = getCategoryForActivities([]);
+    expect(category.category).toBe("1a");
   });
 
   test("single activity - 1a", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["RESEARCH_NE"])
-    );
-    expect(category).toBe("1a");
+    const category = getCategoryForActivities(["RESEARCH_NE"]);
+    expect(category.category).toBe("1a");
   });
 
   test("single activity - 1b", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["TRAD_FISH_COLLECT"])
-    );
-    expect(category).toBe("1b");
+    const category = getCategoryForActivities(["TRAD_FISH_COLLECT"]);
+    expect(category.category).toBe("1b");
   });
 
   test("single activity - 2/3", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["TOURISM"])
-    );
-    expect(category).toBe("2/3");
+    const category = getCategoryForActivities(["TOURISM"]);
+    expect(category.category).toBe("2/3");
   });
 
   // Category 3 is unreachable because 2 will always match
 
   test("single activity - 4/6", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["SHIPPING"])
-    );
-    expect(category).toBe("4/6");
+    const category = getCategoryForActivities(["SHIPPING"]);
+    expect(category.category).toBe("4/6");
   });
 
   test("single activity - 5", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["HABITATION"])
-    );
-    expect(category).toBe("5");
+    const category = getCategoryForActivities(["HABITATION"]);
+    expect(category.category).toBe("5");
   });
 
   // Category 6 is unreachable because 4 will always match
 
-  test("single - industrial should not match any", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["FISH_AQUA_INDUSTRIAL"])
-    );
-    expect(category).toBe(null);
+  test("single - industrial should match None", async () => {
+    const category = getCategoryForActivities(["FISH_AQUA_INDUSTRIAL"]);
+    expect(category.category).toBe("None");
   });
 
-  test("single - works should not match any", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["UNTREATED_WATER"])
-    );
-    expect(category).toBe(null);
+  test("single - works should match None", async () => {
+    const category = getCategoryForActivities(["UNTREATED_WATER"]);
+    expect(category.category).toBe("None");
   });
 
-  test("single - mining should not match any", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["MINING_OIL_GAS"])
-    );
-    expect(category).toBe(null);
+  test("single - mining should match None", async () => {
+    const category = getCategoryForActivities(["MINING_OIL_GAS"]);
+    expect(category.category).toBe("None");
   });
 
-  test("multiple - research + mining should not match any", async () => {
-    const category = iucnCategoryForSketch(
-      genSketchWithActivities(["RESEARCH_NE", "MINING_OIL_GAS"])
-    );
-    expect(category).toBe(null);
+  test("multiple - research + mining should match None", async () => {
+    const category = getCategoryForActivities([
+      "RESEARCH_NE",
+      "MINING_OIL_GAS",
+    ]);
+    expect(category.category).toBe("None");
   });
 });

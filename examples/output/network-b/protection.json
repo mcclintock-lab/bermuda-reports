@@ -47,15 +47,23 @@
       "level": "low",
       "area": 13281509.242890002,
       "percPlanningArea": 0.000028517176954426482
+    },
+    {
+      "sketchId": "6165ca3f1e0a596510ad8970",
+      "name": "crosser",
+      "category": "1a",
+      "level": "full",
+      "area": 392791447.4665036,
+      "percPlanningArea": 0.0008433757797205161
     }
   ],
   "categoryStats": [
     {
       "category": "1a",
       "level": "full",
-      "numSketches": 2,
-      "area": 101955163.8328768,
-      "percPlanningArea": 0.00021891137484967305
+      "numSketches": 3,
+      "area": 480629329.24474204,
+      "percPlanningArea": 0.0010319754615912312
     },
     {
       "category": "2/3",
@@ -82,9 +90,9 @@
   "levelStats": [
     {
       "level": "full",
-      "numSketches": 3,
-      "area": 183691140.58338395,
-      "percPlanningArea": 0.0003944094504004537
+      "numSketches": 4,
+      "area": 562365305.9952492,
+      "percPlanningArea": 0.001207473537142012
     },
     {
       "level": "low",
