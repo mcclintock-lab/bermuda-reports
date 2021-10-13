@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { SegmentControl } from "@seasketch/geoprocessing/client";
 import Overview from "./Overview";
+import HumanUse from "./HumanUse";
+import Energy from "./Energy";
+import Ecological from "./Ecological";
 
 const enableAllTabs = false;
 const AllReports = () => {
@@ -11,10 +14,13 @@ const AllReports = () => {
         <SegmentControl
           value={tab}
           onClick={(segment) => setTab(segment)}
-          segments={["Overview"]}
+          segments={["Overview", "Ecological", "Human Use", "Energy"]}
         />
       </div>
       <Overview hidden={!enableAllTabs && tab !== "Overview"} />
+      <Ecological hidden={!enableAllTabs && tab !== "Ecological"} />
+      <HumanUse hidden={!enableAllTabs && tab !== "Human Use"} />
+      <Energy hidden={!enableAllTabs && tab !== "Energy"} />
     </>
   );
 };

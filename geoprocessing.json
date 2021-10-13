@@ -5,13 +5,48 @@
   "clients": [
     {
       "name": "AllReports",
-      "description":  "All reports",
+      "description": "All reports",
       "source": "src/clients/AllReports.tsx"
     },
     {
       "name": "Overview",
       "description": "Overview report",
       "source": "src/clients/Overview.tsx"
+    },
+    {
+      "name": "HabitatProtection",
+      "description": "habitat protection",
+      "source": "src/clients/HabitatProtection.tsx"
+    },
+    {
+      "name": "HabitatRepresentation",
+      "description": "habitat representation",
+      "source": "src/clients/HabitatRepresentation.tsx"
+    },
+    {
+      "name": "HabitatRestoration",
+      "description": "habitat restoration",
+      "source": "src/clients/HabitatRestoration.tsx"
+    },
+    {
+      "name": "KeyNurseryHabitat",
+      "description": "key nursery habitat",
+      "source": "src/clients/KeyNurseryHabitat.tsx"
+    },
+    {
+      "name": "OceanUse",
+      "description": "ocean use",
+      "source": "src/clients/OceanUse.tsx"
+    },
+    {
+      "name": "PlatformEdge",
+      "description": "platform edge",
+      "source": "src/clients/PlatformEdge.tsx"
+    },
+    {
+      "name": "RenewableEnergy",
+      "description": "renewable energy",
+      "source": "src/clients/RenewableEnergy.tsx"
     }
   ],
   "preprocessingFunctions": [
