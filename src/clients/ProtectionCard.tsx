@@ -1,16 +1,16 @@
 import React from "react";
 import {
   ResultsCard,
-  KeySection,
   Table,
   Column,
   capitalize,
   keyBy,
+  percentLower,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
-import { PillColumn, Pill, LevelPill } from "../components/Pill";
-import { Circle, LevelCircle, LevelCircleRow } from "../components/Circle";
+import { Pill, LevelPill } from "../components/Pill";
+import { LevelCircleRow } from "../components/Circle";
 
 // Import type definitions from function
 import {
@@ -21,11 +21,11 @@ import {
 } from "../functions/protection";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 import { Collapse } from "../components/Collapse";
+import config from "../_config";
 
-const Number = new Intl.NumberFormat("en", { style: "decimal" });
 const Percent = new Intl.NumberFormat("en", {
   style: "percent",
-  maximumFractionDigits: 2,
+  maximumFractionDigits: 1,
 });
 const PercentZero = new Intl.NumberFormat("en", {
   style: "percent",
@@ -34,15 +34,19 @@ const PercentZero = new Intl.NumberFormat("en", {
 
 const SmallTableStyled = styled.div`
   .squeeze {
-    font-size: 14px;
+    font-size: 13px;
 
-    td {
+    td,
+    th {
       padding: 5px 5px;
+    }
+
+    td:last-child,
+    th:last-child {
+      text-align: right;
     }
   }
 `;
-
-const GOAL = 0.2;
 
 const ProtectionCard = () => (
   <ResultsCard title="Protection Level" functionName="protection">
@@ -132,7 +136,7 @@ const genNetworkObjective = (
   objective: number
 ) => {
   const needed =
-    GOAL -
+    config.eezObjective -
     levelMap["full"].percPlanningArea -
     levelMap["high"].percPlanningArea;
 
@@ -144,17 +148,27 @@ const genNetworkObjective = (
         </span>
         <span>
           <LevelPill level="full">
-            {Percent.format(levelMap["full"].percPlanningArea)}
+            {percentLower(levelMap["full"].percPlanningArea, {
+              lower: 0.001,
+              digits: 1,
+            })}
           </LevelPill>{" "}
           +{" "}
           <LevelPill level="high">
-            {Percent.format(levelMap["high"].percPlanningArea)}
+            {percentLower(levelMap["high"].percPlanningArea, {
+              lower: 0.001,
+              digits: 1,
+            })}
           </LevelPill>{" "}
           ={" "}
           <Pill>
-            {Percent.format(
+            {percentLower(
               levelMap["full"].percPlanningArea +
-                levelMap["high"].percPlanningArea
+                levelMap["high"].percPlanningArea,
+              {
+                lower: 0.001,
+                digits: 1,
+              }
             )}
           </Pill>
         </span>
@@ -165,7 +179,7 @@ const genNetworkObjective = (
             <b>Still needed:</b>
           </span>
           <span>
-            <b>{Percent.format(needed)}</b>
+            <b>{percentLower(needed, { lower: 0.1, digits: 1 })}</b>
           </span>
         </div>
       )}
@@ -291,13 +305,15 @@ const genLevelTable = (levelStats: LevelStat[]) => {
           }`}
         />
       ),
-      style: { width: "85%" },
     },
     {
       Header: "% EEZ",
       accessor: (row) => (
         <LevelPill level={row.level}>
-          {Percent.format(row.percPlanningArea)}
+          {percentLower(row.percPlanningArea, {
+            lower: 0.001,
+            digits: 1,
+          })}
         </LevelPill>
       ),
       style: { width: "15%" },
@@ -355,16 +371,15 @@ const genCategoryTable = (categoryStats: CategoryStat[]) => {
       accessor: (row) => (
         <LevelCircleRow level={row.level} circleText={row.numSketches} />
       ),
-      style: { width: "10%" },
     },
     {
       Header: "Category",
       accessor: (row) => genCategoryRowText(row),
-      style: { width: "75%" },
     },
     {
-      Header: "% EEZ",
-      accessor: (row) => Percent.format(row.percPlanningArea),
+      Header: "%EEZ",
+      accessor: (row) =>
+        percentLower(row.percPlanningArea, { lower: 0.001, digits: 1 }),
       style: { width: "15%" },
     },
   ];
@@ -387,16 +402,21 @@ const genSketchTable = (sketchStats: SketchStat[]) => {
       accessor: (row) => (
         <LevelCircleRow level={row.level} rowText={row.name} />
       ),
-      style: { width: "30%" },
     },
     {
       Header: "Category",
       accessor: (row) => genCategoryRowText(row),
-      style: { width: "55%" },
     },
     {
       Header: "% EEZ",
-      accessor: (row) => Percent.format(row.percPlanningArea),
+      accessor: (row) => (
+        <span className="eezPerc">
+          {percentLower(row.percPlanningArea, {
+            lower: 0.001,
+            digits: 1,
+          })}
+        </span>
+      ),
       style: { width: "15%" },
     },
   ];
@@ -406,23 +426,10 @@ const genSketchTable = (sketchStats: SketchStat[]) => {
       <Table
         className="squeeze"
         columns={columns}
-        data={sketchStats.sort((a, b) => a.level.localeCompare(b.level))}
+        data={sketchStats.sort((a, b) => a.category.localeCompare(b.category))}
       />
     </SmallTableStyled>
   );
-};
-
-const levelToCounts = (level: string) => {
-  switch (level) {
-    case "full":
-      return "yes";
-      break;
-    case "high":
-      return "TBD";
-      break;
-    default:
-      return "no";
-  }
 };
 
 export default ProtectionCard;

@@ -5,7 +5,7 @@ const StyledCircle = styled.div`
   background-color: ${(props) => (props.color ? props.color : "#DDD")};
   border-radius: 18px;
   padding: 3px 5px;
-  width: 17px;
+  min-width: 17px;
   height: 21px;
   display: flex;
   justify-content: center;
