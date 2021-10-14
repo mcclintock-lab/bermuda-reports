@@ -1,0 +1,119 @@
+{
+  "Aquaculture_Area": {
+    "name": "Aquaculture_Area",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Boating_Area": {
+    "name": "Boating_Area",
+    "value": 1550.3445754871937,
+    "percValue": 0.0032785925116951106,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 1550.3445754871937,
+        "percValue": 0.0032785925116951106
+      }
+    ]
+  },
+  "Commercial_Fishing_Area_all": {
+    "name": "Commercial_Fishing_Area_all",
+    "value": 22220.713642876595,
+    "percValue": 0.11124830029127203,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 22220.713642876595,
+        "percValue": 0.11124830029127203
+      }
+    ]
+  },
+  "Passive_Recreation_Conservation": {
+    "name": "Passive_Recreation_Conservation",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Recreational": {
+    "name": "Recreational",
+    "value": 152.0165675356984,
+    "percValue": 0.0006302779525876678,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 152.0165675356984,
+        "percValue": 0.0006302779525876678
+      }
+    ]
+  },
+  "Shipping": {
+    "name": "Shipping",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Swimming_Snorkeling_Diving": {
+    "name": "Swimming_Snorkeling_Diving",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Tourism": {
+    "name": "Tourism",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Utilities": {
+    "name": "Utilities",
+    "value": 38.0939887650311,
+    "percValue": 0.0005125144315402497,
+    "sketchMetrics": [
+      {
+        "sketchId": "615ffd9d045840708a6e54e5",
+        "name": "big-1",
+        "value": 38.0939887650311,
+        "percValue": 0.0005125144315402497
+      }
+    ]
+  }
+}

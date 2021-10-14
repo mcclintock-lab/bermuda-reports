@@ -8,7 +8,6 @@ import {
   difference,
   intersect,
   toSketchArray,
-  FeatureCollection,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
@@ -48,7 +47,6 @@ export async function areaStats(
     includeSketchAreas: boolean;
   } = { units: "metric", includeSketchAreas: true }
 ): Promise<AreaMetric> {
-  const sketches = toSketchArray(sketch);
   const combinedSketch = isSketchCollection(sketch)
     ? dissolve(sketch)
     : featureCollection([sketch]);

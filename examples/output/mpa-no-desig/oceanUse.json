@@ -1,0 +1,119 @@
+{
+  "Aquaculture_Area": {
+    "name": "Aquaculture_Area",
+    "value": 90.24480931088328,
+    "percValue": 0.0033299217980576425,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 90.24480931088328,
+        "percValue": 0.0033299217980576425
+      }
+    ]
+  },
+  "Boating_Area": {
+    "name": "Boating_Area",
+    "value": 1978.7399383187294,
+    "percValue": 0.00418454197017792,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 1978.7399383187294,
+        "percValue": 0.00418454197017792
+      }
+    ]
+  },
+  "Commercial_Fishing_Area_all": {
+    "name": "Commercial_Fishing_Area_all",
+    "value": 1399.1844753623009,
+    "percValue": 0.007005035804864479,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 1399.1844753623009,
+        "percValue": 0.007005035804864479
+      }
+    ]
+  },
+  "Passive_Recreation_Conservation": {
+    "name": "Passive_Recreation_Conservation",
+    "value": 2904.41860640049,
+    "percValue": 0.012485017264540642,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 2904.41860640049,
+        "percValue": 0.012485017264540642
+      }
+    ]
+  },
+  "Recreational": {
+    "name": "Recreational",
+    "value": 1587.6691319942474,
+    "percValue": 0.0065826565230463025,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 1587.6691319942474,
+        "percValue": 0.0065826565230463025
+      }
+    ]
+  },
+  "Shipping": {
+    "name": "Shipping",
+    "value": 13.274213790893555,
+    "percValue": 0.000898836040373885,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 13.274213790893555,
+        "percValue": 0.000898836040373885
+      }
+    ]
+  },
+  "Swimming_Snorkeling_Diving": {
+    "name": "Swimming_Snorkeling_Diving",
+    "value": 11555.36561268568,
+    "percValue": 0.021986372675005153,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 11555.36561268568,
+        "percValue": 0.021986372675005153
+      }
+    ]
+  },
+  "Tourism": {
+    "name": "Tourism",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Utilities": {
+    "name": "Utilities",
+    "value": 218.4756335914135,
+    "percValue": 0.002939359168874574,
+    "sketchMetrics": [
+      {
+        "sketchId": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 218.4756335914135,
+        "percValue": 0.002939359168874574
+      }
+    ]
+  }
+}

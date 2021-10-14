@@ -7,7 +7,6 @@ import {
   GeoprocessingHandler,
 } from "@seasketch/geoprocessing";
 import { areaStats, subAreaStats, AreaMetric } from "../util/areaStats";
-// import { fetchFromFgb } from "../util/fgb";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 
 // Multipolygon Feature Collection

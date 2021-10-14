@@ -54,6 +54,7 @@
   ],
   "geoprocessingFunctions": [
     "src/functions/area.ts",
-    "src/functions/protection.ts"
+    "src/functions/protection.ts",
+    "src/functions/oceanUse.ts"
   ]
 }

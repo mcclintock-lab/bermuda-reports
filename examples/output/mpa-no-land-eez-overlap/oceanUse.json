@@ -1,0 +1,119 @@
+{
+  "Aquaculture_Area": {
+    "name": "Aquaculture_Area",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Boating_Area": {
+    "name": "Boating_Area",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Commercial_Fishing_Area_all": {
+    "name": "Commercial_Fishing_Area_all",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Passive_Recreation_Conservation": {
+    "name": "Passive_Recreation_Conservation",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Recreational": {
+    "name": "Recreational",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Shipping": {
+    "name": "Shipping",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Swimming_Snorkeling_Diving": {
+    "name": "Swimming_Snorkeling_Diving",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Tourism": {
+    "name": "Tourism",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  },
+  "Utilities": {
+    "name": "Utilities",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "sketchId": "615bbbe9aac8c8285d50db2d",
+        "name": "mpa-no-land-eez-overlap",
+        "value": 0,
+        "percValue": 0
+      }
+    ]
+  }
+}
