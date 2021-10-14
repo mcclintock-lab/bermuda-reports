@@ -1,7 +1,7 @@
 {
   "eez": {
-    "area": 651275382.9986175,
-    "percArea": 0.0013983753655839905,
+    "area": 821382992.145809,
+    "percArea": 0.0017636191569807974,
     "sketchAreas": [
       {
         "sketchId": "615f8a88045840708a6e5387",
@@ -23,7 +23,7 @@
       },
       {
         "sketchId": "615f8b01045840708a6e5391",
-        "name": "full-1",
+        "name": "full-3",
         "area": 62536840.14762495,
         "percArea": 0.0001342749610790805
       },
@@ -42,15 +42,21 @@
       {
         "sketchId": "6165ca3f1e0a596510ad8970",
         "name": "crosser",
-        "area": 392791447.4665036,
-        "percArea": 0.0008433757797205161
+        "area": 255530546.6016663,
+        "percArea": 0.0005486582647677634
+      },
+      {
+        "sketchId": "6165d8981e0a596510ad8b2a",
+        "name": "outside-a",
+        "area": 293251227.9573903,
+        "percArea": 0.0006296496133706013
       }
     ],
     "areaUnit": "square meters"
   },
   "nearshore": {
-    "area": 433513798.6103625,
-    "percArea": 0.16752605004725207,
+    "area": 328228021.463362,
+    "percArea": 0.12683966260553378,
     "sketchAreas": [
       {
         "sketchId": "615f8a88045840708a6e5387",
@@ -72,7 +78,7 @@
       },
       {
         "sketchId": "615f8b01045840708a6e5391",
-        "name": "full-1",
+        "name": "full-3",
         "area": 62536840.14762384,
         "percArea": 0.024166589035806083
       },
@@ -91,15 +97,21 @@
       {
         "sketchId": "6165ca3f1e0a596510ad8970",
         "name": "crosser",
-        "area": 175089945.81068653,
-        "percArea": 0.06766134577186808
+        "area": 55703002.046748914,
+        "percArea": 0.021525736755274718
+      },
+      {
+        "sketchId": "6165d8981e0a596510ad8b2a",
+        "name": "outside-a",
+        "area": 0,
+        "percArea": 0
       }
     ],
     "areaUnit": "square meters"
   },
   "offshore": {
-    "area": 217741451.73871174,
-    "percArea": 0.0004701321825222559,
+    "area": 493139350.56343406,
+    "percArea": 0.0010647521513092618,
     "sketchAreas": [
       {
         "sketchId": "615f8a88045840708a6e5387",
@@ -121,7 +133,7 @@
       },
       {
         "sketchId": "615f8b01045840708a6e5391",
-        "name": "full-1",
+        "name": "full-3",
         "area": 0,
         "percArea": 0
       },
@@ -140,8 +152,14 @@
       {
         "sketchId": "6165ca3f1e0a596510ad8970",
         "name": "crosser",
-        "area": 217665253.56559995,
-        "percArea": 0.0004699676607321089
+        "area": 199811924.43292975,
+        "percArea": 0.0004314199954924077
+      },
+      {
+        "sketchId": "6165d8981e0a596510ad8b2a",
+        "name": "outside-a",
+        "area": 293251227.9573925,
+        "percArea": 0.000633167634026707
       }
     ],
     "areaUnit": "square meters"

@@ -26,7 +26,7 @@
     },
     {
       "sketchId": "615f8b01045840708a6e5391",
-      "name": "full-1",
+      "name": "full-3",
       "category": "1a",
       "level": "full",
       "area": 62536840.14762495,
@@ -53,8 +53,16 @@
       "name": "crosser",
       "category": "1a",
       "level": "full",
-      "area": 392791447.4665036,
-      "percPlanningArea": 0.0008433757797205161
+      "area": 255530546.6016663,
+      "percPlanningArea": 0.0005486582647677634
+    },
+    {
+      "sketchId": "6165d8981e0a596510ad8b2a",
+      "name": "outside-a",
+      "category": "4/6",
+      "level": "high",
+      "area": 293251227.9573903,
+      "percPlanningArea": 0.0006296496133706013
     }
   ],
   "categoryStats": [
@@ -62,8 +70,8 @@
       "category": "1a",
       "level": "full",
       "numSketches": 3,
-      "area": 480629329.24474204,
-      "percPlanningArea": 0.0010319754615912312
+      "area": 357485710.43454313,
+      "percPlanningArea": 0.0007675696396174366
     },
     {
       "category": "2/3",
@@ -82,17 +90,17 @@
     {
       "category": "4/6",
       "level": "high",
-      "numSketches": 1,
-      "area": 46159357.39177554,
-      "percPlanningArea": 0.00009911031485736843
+      "numSketches": 2,
+      "area": 339410585.34916586,
+      "percPlanningArea": 0.0007287599282279698
     }
   ],
   "levelStats": [
     {
       "level": "full",
       "numSketches": 4,
-      "area": 562365305.9952492,
-      "percPlanningArea": 0.001207473537142012
+      "area": 439221687.18505025,
+      "percPlanningArea": 0.0009430677151682172
     },
     {
       "level": "low",
@@ -102,9 +110,9 @@
     },
     {
       "level": "high",
-      "numSketches": 1,
-      "area": 46159357.39177554,
-      "percPlanningArea": 0.00009911031485736843
+      "numSketches": 2,
+      "area": 339410585.34916586,
+      "percPlanningArea": 0.0007287599282279698
     }
   ]
 }
