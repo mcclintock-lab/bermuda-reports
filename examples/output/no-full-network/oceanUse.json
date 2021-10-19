@@ -1,0 +1,173 @@
+{
+  "Aquaculture_Area": {
+    "name": "Aquaculture_Area",
+    "value": 766.0179242901504,
+    "percValue": 0.028265113564698102,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 111.23388722166419,
+        "percValue": 0.004104392801874266
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 654.7840370684862,
+        "percValue": 0.024160720762823835
+      }
+    ]
+  },
+  "Boating_Area": {
+    "name": "Boating_Area",
+    "value": 14456.661980807781,
+    "percValue": 0.030572238239030956,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 10557.369421899319,
+        "percValue": 0.022326205978410226
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 3899.2925589084625,
+        "percValue": 0.008246032260620732
+      }
+    ]
+  },
+  "Commercial_Fishing_Area_all": {
+    "name": "Commercial_Fishing_Area_all",
+    "value": 8949.065706074238,
+    "percValue": 0.04480361724632662,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 4537.498353898525,
+        "percValue": 0.022717046246058723
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 4411.567352175713,
+        "percValue": 0.0220865710002679
+      }
+    ]
+  },
+  "Passive_Recreation_Conservation": {
+    "name": "Passive_Recreation_Conservation",
+    "value": 37241.0732832253,
+    "percValue": 0.16008554754003615,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 8919.462820321321,
+        "percValue": 0.038341459132900456
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 28321.610462903976,
+        "percValue": 0.12174408840713569
+      }
+    ]
+  },
+  "Recreational": {
+    "name": "Recreational",
+    "value": 19084.41256606579,
+    "percValue": 0.07912614179802228,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 10965.132634162903,
+        "percValue": 0.04546268514377204
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 8119.279931902885,
+        "percValue": 0.03366345665425025
+      }
+    ]
+  },
+  "Shipping": {
+    "name": "Shipping",
+    "value": 625.037816286087,
+    "percValue": 0.04232314807675763,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 0,
+        "percValue": 0
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 625.037816286087,
+        "percValue": 0.04232314807675763
+      }
+    ]
+  },
+  "Swimming_Snorkeling_Diving": {
+    "name": "Swimming_Snorkeling_Diving",
+    "value": 95335.7672867477,
+    "percValue": 0.18139518722998071,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 25528.29450342059,
+        "percValue": 0.04857263850598667
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 69807.4727833271,
+        "percValue": 0.13282254872399404
+      }
+    ]
+  },
+  "Tourism": {
+    "name": "Tourism",
+    "value": 1193.7455640882254,
+    "percValue": 0.07299028959836584,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 385.4575791209936,
+        "percValue": 0.023568389424270152
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 808.2879849672318,
+        "percValue": 0.04942190017409569
+      }
+    ]
+  },
+  "Utilities": {
+    "name": "Utilities",
+    "value": 7964.957042232156,
+    "percValue": 0.10716009436348112,
+    "sketchMetrics": [
+      {
+        "sketchId": "616f1ae906f1b7772b51f18f",
+        "name": "MPA 1",
+        "value": 6526.873051896691,
+        "percValue": 0.08781219138172539
+      },
+      {
+        "sketchId": "616f1ae906f1b7772b51f191",
+        "name": "MPA 2",
+        "value": 1438.0839903354645,
+        "percValue": 0.019347902981755732
+      }
+    ]
+  }
+}

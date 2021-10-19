@@ -1,12 +1,12 @@
 {
   "sketchStats": [
     {
-      "sketchId": "615c6af3aac8c8285d50dc42",
-      "name": "mpa-no-desig",
+      "sketchId": "61685a10f3f078352076a1fb",
+      "name": "low-1",
       "category": "None",
       "level": "low",
-      "area": 36282559.79247418,
-      "percPlanningArea": 0.00007790350923525046
+      "area": 13281509.242890002,
+      "percPlanningArea": 0.000028517176954426482
     }
   ],
   "categoryStats": [
@@ -14,8 +14,8 @@
       "category": "None",
       "level": "low",
       "numSketches": 1,
-      "area": 36282559.79247418,
-      "percPlanningArea": 0.00007790350923525046
+      "area": 13281509.242890002,
+      "percPlanningArea": 0.000028517176954426482
     }
   ],
   "levelStats": [
@@ -34,8 +34,8 @@
     {
       "level": "low",
       "numSketches": 1,
-      "area": 36282559.79247418,
-      "percPlanningArea": 0.00007790350923525046
+      "area": 13281509.242890002,
+      "percPlanningArea": 0.000028517176954426482
     }
   ]
 }

@@ -32,6 +32,8 @@ export const iucnActivities = [
   "HABITATION",
 ];
 
+export const levels = ["full", "high", "low"];
+
 /** IUCN category definitions.  Note categories 2/3 and 4/6 have been merged because they have the same allowed uses */
 export const iucnCategories: Record<string, IucnCategory> = {
   "1a": {

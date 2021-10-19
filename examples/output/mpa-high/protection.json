@@ -20,10 +20,22 @@
   ],
   "levelStats": [
     {
+      "level": "full",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    },
+    {
       "level": "high",
       "numSketches": 1,
       "area": 24031748.116384912,
       "percPlanningArea": 0.00005159937782869257
+    },
+    {
+      "level": "low",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
     }
   ]
 }

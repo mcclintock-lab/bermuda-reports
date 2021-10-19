@@ -6,6 +6,7 @@ import {
   capitalize,
   keyBy,
   percentLower,
+  ReportError,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
@@ -53,9 +54,13 @@ const ProtectionCard = () => (
     {(data: ProtectionResult) => {
       if (data.sketchStats.length === 0)
         throw new Error("Protection results not found");
-      return data.sketchStats.length > 1
-        ? networkProtection(data)
-        : singleProtection(data.sketchStats[0]);
+      return (
+        <ReportError>
+          {data.sketchStats.length > 1
+            ? networkProtection(data)
+            : singleProtection(data.sketchStats[0])}
+        </ReportError>
+      );
     }}
   </ResultsCard>
 );
@@ -135,10 +140,38 @@ const genNetworkObjective = (
   levelMap: Record<string, LevelStat>,
   objective: number
 ) => {
-  const needed =
-    config.eezObjective -
-    levelMap["full"].percPlanningArea -
-    levelMap["high"].percPlanningArea;
+  const fullPerc = levelMap["full"]?.percPlanningArea || 0;
+  const highPerc = levelMap["high"]?.percPlanningArea || 0;
+  const needed = config.eezObjective - fullPerc - highPerc;
+
+  const lower = percentLower(fullPerc, {
+    lower: 0.001,
+    digits: 1,
+  });
+
+  const fullPercDisplay =
+    fullPerc === 0
+      ? Percent.format(fullPerc)
+      : percentLower(fullPerc, {
+          lower: 0.001,
+          digits: 1,
+        });
+
+  const highPercDisplay =
+    highPerc === 0
+      ? Percent.format(highPerc)
+      : percentLower(highPerc, {
+          lower: 0.001,
+          digits: 1,
+        });
+
+  const combinedPercDisplay =
+    fullPerc + highPerc === 0
+      ? Percent.format(fullPerc + highPerc)
+      : percentLower(fullPerc + highPerc, {
+          lower: 0.001,
+          digits: 1,
+        });
 
   const progressMsg = (
     <>
@@ -147,30 +180,9 @@ const genNetworkObjective = (
           <b>Designated:</b>
         </span>
         <span>
-          <LevelPill level="full">
-            {percentLower(levelMap["full"].percPlanningArea, {
-              lower: 0.001,
-              digits: 1,
-            })}
-          </LevelPill>{" "}
-          +{" "}
-          <LevelPill level="high">
-            {percentLower(levelMap["high"].percPlanningArea, {
-              lower: 0.001,
-              digits: 1,
-            })}
-          </LevelPill>{" "}
-          ={" "}
-          <Pill>
-            {percentLower(
-              levelMap["full"].percPlanningArea +
-                levelMap["high"].percPlanningArea,
-              {
-                lower: 0.001,
-                digits: 1,
-              }
-            )}
-          </Pill>
+          <LevelPill level="full">{fullPercDisplay}</LevelPill> +{" "}
+          <LevelPill level="high">{highPercDisplay}</LevelPill> ={" "}
+          <Pill>{combinedPercDisplay}</Pill>
         </span>
       </div>
       {needed > 0 && (
@@ -186,7 +198,7 @@ const genNetworkObjective = (
     </>
   );
 
-  if (levelMap["full"].percPlanningArea > objective) {
+  if (fullPerc > objective) {
     return (
       <ObjectiveStatus
         status="yes"
@@ -199,10 +211,7 @@ const genNetworkObjective = (
         }
       />
     );
-  } else if (
-    levelMap["full"].percPlanningArea + levelMap["full"].percPlanningArea >
-    objective
-  ) {
+  } else if (fullPerc + highPerc > objective) {
     return (
       <ObjectiveStatus
         status="maybe"
@@ -299,7 +308,7 @@ const genLevelTable = (levelStats: LevelStat[]) => {
       accessor: (row) => (
         <LevelCircleRow
           level={row.level}
-          circleText={row.numSketches}
+          circleText={`${row.numSketches}`}
           rowText={`${capitalize(row.level)} Protection MPA${
             row.numSketches === 1 ? "" : "s"
           }`}
@@ -310,10 +319,12 @@ const genLevelTable = (levelStats: LevelStat[]) => {
       Header: "% EEZ",
       accessor: (row) => (
         <LevelPill level={row.level}>
-          {percentLower(row.percPlanningArea, {
-            lower: 0.001,
-            digits: 1,
-          })}
+          {row.percPlanningArea === 0
+            ? Percent.format(row.percPlanningArea)
+            : percentLower(row.percPlanningArea, {
+                lower: 0.001,
+                digits: 1,
+              })}
         </LevelPill>
       ),
       style: { width: "15%" },

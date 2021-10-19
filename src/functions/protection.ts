@@ -15,6 +15,7 @@ import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
   getCategoryForActivities,
   iucnCategories,
+  levels,
 } from "../util/iucnProtectionLevel";
 
 const linearUnits = "feet";
@@ -108,8 +109,17 @@ export async function protection(
   // rollup to level stats
   const levelGroups = groupBy(sketchStats, (item) => item.level);
   const levelStats: LevelStat[] = await Promise.all(
-    Object.keys(levelGroups).map(async (levelName) => {
+    levels.map(async (levelName) => {
       const levelSketchStats = levelGroups[levelName];
+
+      if (!levelSketchStats)
+        return {
+          level: levelName,
+          numSketches: 0,
+          area: 0,
+          percPlanningArea: 0,
+        };
+
       const levelSketches = levelSketchStats.map(
         (stat) => sketchMap[stat.sketchId]
       );

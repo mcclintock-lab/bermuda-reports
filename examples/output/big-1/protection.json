@@ -24,6 +24,18 @@
       "numSketches": 1,
       "area": 100500428268.71396,
       "percPlanningArea": 0.21578786299974248
+    },
+    {
+      "level": "high",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    },
+    {
+      "level": "low",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
     }
   ]
 }
