@@ -53,3 +53,9 @@ export const LevelPill: React.FunctionComponent<LevelPillProps> = ({
     </Pill>
   );
 };
+
+export const WarningPill: React.FunctionComponent<{ children: ReactNode }> = ({
+  children,
+}) => {
+  return <Pill color={"#FFE1A3"}>{children}</Pill>;
+};

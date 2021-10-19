@@ -1,20 +1,14 @@
 import {
   Sketch,
   SketchCollection,
-  Feature,
-  MultiPolygon,
   Polygon,
   isSketchCollection,
-  difference,
-  intersect,
   toSketchArray,
   loadCogWindow,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
-import turfArea from "@turf/area";
 import dissolve from "@turf/dissolve";
-import flatten from "@turf/flatten";
 import bbox from "@turf/bbox";
 
 // @ts-ignore
