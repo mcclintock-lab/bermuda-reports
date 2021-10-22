@@ -61,12 +61,12 @@ export const legislatedLayers = [
   {
     name: "Prohibited",
     display: "Prohibited Marine Board Notice Areas",
-    layerId: "615b204f42b883e66c1a6bf3",
+    layerId: "61538b8cd5974aea32a4a5e8",
   },
   {
     name: "NoNetFish",
     display: "No Net Fishing Areas",
-    layerId: "615b204f42b883e66c1a6bf3",
+    layerId: "615b211242b883e66c1a6c99",
   },
   {
     name: "NoLobsterFish",
