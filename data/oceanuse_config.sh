@@ -2,13 +2,13 @@
 
 ## declare an array variable
 declare -a SECTORS=(
-  "Aquaculture_Area"
-  "Boating_Area"
-  "Commercial_Fishing_Area_all"
-  "Passive_Recreation_Conservation"
-  "Recreational"
-  "Shipping"
-  "Swimming_Snorkeling_Diving"
-  "Tourism"
-  "Utilities"
+  "aquaculture_heatmap"
+  "boating_heatmap"
+  "commercial_fishing_heatmap"
+  "passiverec_conservation_heatmap"
+  "recreational_fishing_heatmap"
+  "shipping_heatmap"
+  "swim_snorkel_dive_heatmap"
+  "tourism_heatmap"
+  "utilities_heatmap"
 )

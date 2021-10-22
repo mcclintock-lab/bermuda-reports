@@ -1,71 +1,71 @@
 {
-  "Aquaculture_Area": {
-    "name": "Aquaculture_Area",
-    "value": 125.38203449174762,
-    "percValue": 0.004626441929758,
+  "aquaculture_heatmap": {
+    "name": "aquaculture_heatmap",
+    "value": 98.00299072265625,
+    "percValue": 0.006549386187840262,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 125.38203449174762,
-        "percValue": 0.004626441929758
+        "value": 98.00299072265625,
+        "percValue": 0.006549386187840262
       }
     ]
   },
-  "Boating_Area": {
-    "name": "Boating_Area",
-    "value": 3127.0346143245697,
-    "percValue": 0.006612899114452786,
+  "boating_heatmap": {
+    "name": "boating_heatmap",
+    "value": 2728.185097038746,
+    "percValue": 0.006339515224275744,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 3127.0346143245697,
-        "percValue": 0.006612899114452786
+        "value": 2728.185097038746,
+        "percValue": 0.006339515224275744
       }
     ]
   },
-  "Commercial_Fishing_Area_all": {
-    "name": "Commercial_Fishing_Area_all",
-    "value": 1537.434460401535,
-    "percValue": 0.007697186205526298,
+  "commercial_fishing_heatmap": {
+    "name": "commercial_fishing_heatmap",
+    "value": 1546.8668369054794,
+    "percValue": 0.00522082889547119,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 1537.434460401535,
-        "percValue": 0.007697186205526298
+        "value": 1546.8668369054794,
+        "percValue": 0.00522082889547119
       }
     ]
   },
-  "Passive_Recreation_Conservation": {
-    "name": "Passive_Recreation_Conservation",
+  "passiverec_conservation_heatmap": {
+    "name": "passiverec_conservation_heatmap",
     "value": 6105.572274446487,
-    "percValue": 0.026245588390179174,
+    "percValue": 0.026448168339645344,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
         "value": 6105.572274446487,
-        "percValue": 0.026245588390179174
+        "percValue": 0.026448168339645344
       }
     ]
   },
-  "Recreational": {
-    "name": "Recreational",
-    "value": 2235.438900589943,
-    "percValue": 0.009268383546864323,
+  "recreational_fishing_heatmap": {
+    "name": "recreational_fishing_heatmap",
+    "value": 2237.5485388040543,
+    "percValue": 0.009684250519123307,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 2235.438900589943,
-        "percValue": 0.009268383546864323
+        "value": 2237.5485388040543,
+        "percValue": 0.009684250519123307
       }
     ]
   },
-  "Shipping": {
-    "name": "Shipping",
+  "shipping_heatmap": {
+    "name": "shipping_heatmap",
     "value": 629.8444662094116,
     "percValue": 0.04264862047403878,
     "sketchMetrics": [
@@ -77,42 +77,42 @@
       }
     ]
   },
-  "Swimming_Snorkeling_Diving": {
-    "name": "Swimming_Snorkeling_Diving",
-    "value": 11113.764210283756,
-    "percValue": 0.021146138507394337,
+  "swim_snorkel_dive_heatmap": {
+    "name": "swim_snorkel_dive_heatmap",
+    "value": 10664.57751351595,
+    "percValue": 0.017375849238273115,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 11113.764210283756,
-        "percValue": 0.021146138507394337
+        "value": 10664.57751351595,
+        "percValue": 0.017375849238273115
       }
     ]
   },
-  "Tourism": {
-    "name": "Tourism",
-    "value": 172.9394391477108,
-    "percValue": 0.010574196148751063,
+  "tourism_heatmap": {
+    "name": "tourism_heatmap",
+    "value": 203.60243877768517,
+    "percValue": 0.010076737627506958,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 172.9394391477108,
-        "percValue": 0.010574196148751063
+        "value": 203.60243877768517,
+        "percValue": 0.010076737627506958
       }
     ]
   },
-  "Utilities": {
-    "name": "Utilities",
-    "value": 349.1345805376768,
-    "percValue": 0.004697237461243969,
+  "utilities_heatmap": {
+    "name": "utilities_heatmap",
+    "value": 57.1260244846344,
+    "percValue": 0.0037836223104819383,
     "sketchMetrics": [
       {
         "sketchId": "615bbc28aac8c8285d50db2f",
         "name": "mpa-high",
-        "value": 349.1345805376768,
-        "percValue": 0.004697237461243969
+        "value": 57.1260244846344,
+        "percValue": 0.0037836223104819383
       }
     ]
   }

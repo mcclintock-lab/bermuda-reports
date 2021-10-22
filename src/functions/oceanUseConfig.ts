@@ -3,47 +3,47 @@ import { dataBucketUrl } from "../_config";
 
 const rasterMaps = [
   {
-    name: "Aquaculture_Area",
+    name: "aquaculture_heatmap",
     display: "Aquaculture",
     layerId: "60ef55245bf512cb19da4d04",
   },
   {
-    name: "Boating_Area",
+    name: "boating_heatmap",
     display: "Boating",
     layerId: "60ef55245bf512cb19da4d0a",
   },
   {
-    name: "Commercial_Fishing_Area_all",
+    name: "commercial_fishing_heatmap",
     display: "Commercial Fishing",
     layerId: "60ef55245bf512cb19da4d00",
   },
   {
-    name: "Passive_Recreation_Conservation",
+    name: "passiverec_conservation_heatmap",
     display: "Passive Recreation / Conservation",
     layerId: "60ef55245bf512cb19da4d10",
   },
   {
-    name: "Recreational",
+    name: "recreational_fishing_heatmap",
     display: "Recreational Fishing",
     layerId: "60ef55245bf512cb19da4d02",
   },
   {
-    name: "Shipping",
+    name: "shipping_heatmap",
     display: "Shipping",
     layerId: "60ef55245bf512cb19da4d08",
   },
   {
-    name: "Swimming_Snorkeling_Diving",
+    name: "swim_snorkel_dive_heatmap",
     display: "Swimming / Snorkeling / Diving",
     layerId: "60ef55245bf512cb19da4d0e",
   },
   {
-    name: "Tourism",
+    name: "tourism_heatmap",
     display: "Tourism",
     layerId: "60ef55245bf512cb19da4d0c",
   },
   {
-    name: "Utilities",
+    name: "utilities_heatmap",
     display: "Utilities",
     layerId: "60ef55245bf512cb19da4d06",
   },

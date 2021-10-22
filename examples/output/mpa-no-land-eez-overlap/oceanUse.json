@@ -1,6 +1,6 @@
 {
-  "Aquaculture_Area": {
-    "name": "Aquaculture_Area",
+  "aquaculture_heatmap": {
+    "name": "aquaculture_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -12,8 +12,8 @@
       }
     ]
   },
-  "Boating_Area": {
-    "name": "Boating_Area",
+  "boating_heatmap": {
+    "name": "boating_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -25,8 +25,8 @@
       }
     ]
   },
-  "Commercial_Fishing_Area_all": {
-    "name": "Commercial_Fishing_Area_all",
+  "commercial_fishing_heatmap": {
+    "name": "commercial_fishing_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -38,8 +38,8 @@
       }
     ]
   },
-  "Passive_Recreation_Conservation": {
-    "name": "Passive_Recreation_Conservation",
+  "passiverec_conservation_heatmap": {
+    "name": "passiverec_conservation_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -51,8 +51,8 @@
       }
     ]
   },
-  "Recreational": {
-    "name": "Recreational",
+  "recreational_fishing_heatmap": {
+    "name": "recreational_fishing_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -64,8 +64,8 @@
       }
     ]
   },
-  "Shipping": {
-    "name": "Shipping",
+  "shipping_heatmap": {
+    "name": "shipping_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -77,8 +77,8 @@
       }
     ]
   },
-  "Swimming_Snorkeling_Diving": {
-    "name": "Swimming_Snorkeling_Diving",
+  "swim_snorkel_dive_heatmap": {
+    "name": "swim_snorkel_dive_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -90,8 +90,8 @@
       }
     ]
   },
-  "Tourism": {
-    "name": "Tourism",
+  "tourism_heatmap": {
+    "name": "tourism_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [
@@ -103,8 +103,8 @@
       }
     ]
   },
-  "Utilities": {
-    "name": "Utilities",
+  "utilities_heatmap": {
+    "name": "utilities_heatmap",
     "value": 0,
     "percValue": 0,
     "sketchMetrics": [

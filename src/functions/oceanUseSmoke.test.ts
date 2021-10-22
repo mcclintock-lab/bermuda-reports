@@ -19,5 +19,5 @@ describe("Basic smoke tests", () => {
       expect(result).toBeTruthy();
       writeResultOutput(result, "oceanUse", example.properties.name);
     }
-  }, 20000);
+  }, 60000);
 });

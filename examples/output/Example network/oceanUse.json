@@ -1,50 +1,50 @@
 {
-  "Aquaculture_Area": {
-    "name": "Aquaculture_Area",
-    "value": 2228.718583676964,
-    "percValue": 0.08223695800559545,
+  "aquaculture_heatmap": {
+    "name": "aquaculture_heatmap",
+    "value": 929.0245948433876,
+    "percValue": 0.06208525683517289,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 457.0361027419567,
-        "percValue": 0.016864066671989936
+        "value": 450.2391913533211,
+        "percValue": 0.030088779121228502
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
-        "value": 58.34964322671294,
-        "percValue": 0.002153029635423983
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 280.5867421142757,
-        "percValue": 0.01035330359659397
+        "value": 163.33831787109375,
+        "percValue": 0.010915643646400438
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 532.6300681494176,
-        "percValue": 0.01965339045841144
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
-        "value": 42.21370263770223,
-        "percValue": 0.0015576333936921055
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
-        "value": 310.7439158298075,
-        "percValue": 0.011466065991350895
+        "value": 315.4470856189728,
+        "percValue": 0.021080834067543946
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
-        "value": 120.85579404979944,
-        "percValue": 0.004459429258048851
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
@@ -55,8 +55,8 @@
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
-        "value": 426.30261492729187,
-        "percValue": 0.015730039000084274
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
@@ -78,64 +78,64 @@
       }
     ]
   },
-  "Boating_Area": {
-    "name": "Boating_Area",
-    "value": 17392.03182031284,
-    "percValue": 0.03677981410766176,
+  "boating_heatmap": {
+    "name": "boating_heatmap",
+    "value": 14129.655462981667,
+    "percValue": 0.03283324361626738,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 830.3401547372341,
-        "percValue": 0.0017559625495678995
+        "value": 686.4224562346935,
+        "percValue": 0.0015950477906751753
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
-        "value": 1655.2498310804367,
-        "percValue": 0.003500440990325989
+        "value": 1454.5127385556698,
+        "percValue": 0.003379868052202661
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 2729.8434377908707,
-        "percValue": 0.005772938735525067
+        "value": 2557.843014359474,
+        "percValue": 0.00594368935906879
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 5653.801437139511,
-        "percValue": 0.01195638140546374
+        "value": 2973.8009452819824,
+        "percValue": 0.0069102556080391135
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
-        "value": 383.31831538677216,
-        "percValue": 0.0008106227339994567
+        "value": 292.6308528929949,
+        "percValue": 0.0006799896931559223
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
-        "value": 230.72182461619377,
-        "percValue": 0.00048791917515083667
+        "value": 237.26518618687987,
+        "percValue": 0.0005513358538813915
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
-        "value": 963.1830418109894,
-        "percValue": 0.0020368921581712684
+        "value": 740.5200507640839,
+        "percValue": 0.0017207549959846746
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
-        "value": 773.8374552316964,
-        "percValue": 0.0016364734176559175
+        "value": 774.2614692635834,
+        "percValue": 0.0017991603199117114
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
-        "value": 4093.652918810374,
-        "percValue": 0.008657055997291998
+        "value": 4256.23194202478,
+        "percValue": 0.00989025532901062
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
@@ -152,148 +152,148 @@
       {
         "sketchId": "6165e3fe1e0a596510ad8d80",
         "name": "Deep South",
-        "value": 78.08340370876249,
-        "percValue": 0.00016512694450958822
+        "value": 156.16680741752498,
+        "percValue": 0.0003628866143373253
       }
     ]
   },
-  "Commercial_Fishing_Area_all": {
-    "name": "Commercial_Fishing_Area_all",
-    "value": 43578.692696539685,
-    "percValue": 0.2181773083134022,
+  "commercial_fishing_heatmap": {
+    "name": "commercial_fishing_heatmap",
+    "value": 63115.07119209133,
+    "percValue": 0.21301962105450864,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 3230.979205608368,
-        "percValue": 0.016175940641564544
+        "value": 3217.528707444668,
+        "percValue": 0.010859478299657692
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
-        "value": 6114.365265309811,
-        "percValue": 0.030611651545393463
+        "value": 6179.22887980938,
+        "percValue": 0.020855509936444614
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 3177.67538356781,
-        "percValue": 0.01590907434301335
+        "value": 3192.1384012699127,
+        "percValue": 0.01077378349970503
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 2512.6186244487762,
-        "percValue": 0.012579458776281421
+        "value": 2533.802692770958,
+        "percValue": 0.008551835231211728
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
-        "value": 1549.9031636714935,
-        "percValue": 0.007759610935348771
+        "value": 1591.4829332232475,
+        "percValue": 0.00537141264276059
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
-        "value": 1024.717808790505,
-        "percValue": 0.005130263426201224
+        "value": 1116.8158366084099,
+        "percValue": 0.003769364144071633
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
-        "value": 2119.136897087097,
-        "percValue": 0.010609487241245084
+        "value": 2131.9281363487244,
+        "percValue": 0.007195468770656424
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
-        "value": 3726.9460828714073,
-        "percValue": 0.01865900545141015
+        "value": 3840.3454023115337,
+        "percValue": 0.012961546376601981
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
-        "value": 17785.531949883327,
-        "percValue": 0.08904350377760825
+        "value": 17467.168519521132,
+        "percValue": 0.05895342504802367
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
         "name": "Offshore East",
-        "value": 2335.018015380949,
-        "percValue": 0.011690298949687629
+        "value": 11203.197946236469,
+        "percValue": 0.037811903496751245
       },
       {
         "sketchId": "6165e2c81e0a596510ad8c71",
         "name": "Offshore Outer",
-        "value": 1.800299920141697,
-        "percValue": 0.000009013225648334719
+        "value": 7328.811090205796,
+        "percValue": 0.024735463839757874
       },
       {
         "sketchId": "6165e3fe1e0a596510ad8d80",
         "name": "Deep South",
-        "value": 0,
-        "percValue": 0
+        "value": 3312.6226463411003,
+        "percValue": 0.011180429768866159
       }
     ]
   },
-  "Passive_Recreation_Conservation": {
-    "name": "Passive_Recreation_Conservation",
+  "passiverec_conservation_heatmap": {
+    "name": "passiverec_conservation_heatmap",
     "value": 29498.91660275031,
-    "percValue": 0.1268048904035282,
+    "percValue": 0.12778365025863672,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
         "value": 2281.0751919448376,
-        "percValue": 0.009805495354693943
+        "percValue": 0.009881180331685654
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
         "value": 2434.7477973401546,
-        "percValue": 0.010466076831213695
+        "percValue": 0.0105468605912901
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
         "value": 16753.177582383156,
-        "percValue": 0.07201569046935358
+        "percValue": 0.07257155283826554
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
         "value": 4839.232603371143,
-        "percValue": 0.020802064298539227
+        "percValue": 0.02096262770720592
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
         "value": 560.7512218356133,
-        "percValue": 0.002410461312395451
+        "percValue": 0.002429066768047493
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
         "value": 158.49003796465695,
-        "percValue": 0.0006812898305656958
+        "percValue": 0.0006865484537444186
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
         "value": 2143.6972662210464,
-        "percValue": 0.009214958656351427
+        "percValue": 0.009286085499887351
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
         "value": 92.12813993683085,
-        "percValue": 0.00039602466914603755
+        "percValue": 0.0003990814364880485
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
         "value": 235.61676175286993,
-        "percValue": 0.001012828981269139
+        "percValue": 0.0010206466320222137
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
@@ -315,64 +315,64 @@
       }
     ]
   },
-  "Recreational": {
-    "name": "Recreational",
-    "value": 48428.94426083285,
-    "percValue": 0.20079190268213407,
+  "recreational_fishing_heatmap": {
+    "name": "recreational_fishing_heatmap",
+    "value": 44949.91492249351,
+    "percValue": 0.1945460531351748,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 1778.1446479856968,
-        "percValue": 0.0073723896434772585
+        "value": 1773.699871957302,
+        "percValue": 0.007676684374834767
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
-        "value": 13038.96209526062,
-        "percValue": 0.054061017601513585
+        "value": 12232.395745396614,
+        "percValue": 0.05294257657123065
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 8085.990631520748,
-        "percValue": 0.03352543543440523
+        "value": 8367.736465930939,
+        "percValue": 0.03621608863841282
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 5429.398597121239,
-        "percValue": 0.022510903167000707
+        "value": 5403.990319252014,
+        "percValue": 0.02338880929149604
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
-        "value": 2999.6404089927673,
-        "percValue": 0.012436849786357793
+        "value": 2950.8483178019524,
+        "percValue": 0.012771456733985161
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
-        "value": 1482.9187659844756,
-        "percValue": 0.006148349609716322
+        "value": 1477.3564128708094,
+        "percValue": 0.006394091283454914
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
-        "value": 1242.6683723926544,
-        "percValue": 0.005152244194128149
+        "value": 1270.5305020809174,
+        "percValue": 0.005498935759809505
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
-        "value": 4751.327637668699,
-        "percValue": 0.019699543964770718
+        "value": 3186.7428437313065,
+        "percValue": 0.01379242304849055
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
-        "value": 9619.893103905953,
-        "percValue": 0.03988516928076429
+        "value": 8286.614443471655,
+        "percValue": 0.035864987433460394
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
@@ -394,8 +394,8 @@
       }
     ]
   },
-  "Shipping": {
-    "name": "Shipping",
+  "shipping_heatmap": {
+    "name": "shipping_heatmap",
     "value": 593.5278297662735,
     "percValue": 0.04018951425392939,
     "sketchMetrics": [
@@ -473,64 +473,64 @@
       }
     ]
   },
-  "Swimming_Snorkeling_Diving": {
-    "name": "Swimming_Snorkeling_Diving",
-    "value": 49304.49935746193,
-    "percValue": 0.09381157929244976,
+  "swim_snorkel_dive_heatmap": {
+    "name": "swim_snorkel_dive_heatmap",
+    "value": 56961.20519820228,
+    "percValue": 0.09280717522095223,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 186.0794304832816,
-        "percValue": 0.0003540529865421775
+        "value": 2050.9126804433763,
+        "percValue": 0.00334156224108103
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
         "value": 2863.4928022027016,
-        "percValue": 0.005448362432799809
+        "percValue": 0.00466550307903859
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 27668.69439983368,
-        "percValue": 0.052645173410846596
+        "value": 33918.93332362175,
+        "percValue": 0.05526428693563719
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 15894.58199775219,
-        "percValue": 0.0302425916262104
+        "value": 15436.215664744377,
+        "percValue": 0.02515030303452133
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
         "value": 971.7505952119827,
-        "percValue": 0.001848948051460489
+        "percValue": 0.00158327808281257
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
         "value": 94.36440682411194,
-        "percValue": 0.00017954698148304793
+        "percValue": 0.0001537483978485584
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
         "value": 278.44489292800426,
-        "percValue": 0.0005297965802697042
+        "percValue": 0.00045367165033516793
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
         "value": 89.7737577110529,
-        "percValue": 0.00017081236194759215
+        "percValue": 0.00014626883039328578
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
         "value": 1257.3170745149255,
-        "percValue": 0.0023922948608899475
+        "percValue": 0.0020485529692845133
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
@@ -552,10 +552,10 @@
       }
     ]
   },
-  "Tourism": {
-    "name": "Tourism",
-    "value": 1196.8517821878195,
-    "percValue": 0.07318021596581435,
+  "tourism_heatmap": {
+    "name": "tourism_heatmap",
+    "value": 1260.9821894019842,
+    "percValue": 0.06240881372466017,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
@@ -567,13 +567,13 @@
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
         "value": 46.01172226667404,
-        "percValue": 0.0028133373092190258
+        "percValue": 0.002277222492296639
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 1140.7676895856857,
-        "percValue": 0.06975101439720541
+        "value": 1204.8980967998505,
+        "percValue": 0.059633087217545046
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
@@ -585,7 +585,7 @@
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
         "value": 10.07237033545971,
-        "percValue": 0.0006158642593899168
+        "percValue": 0.0004985040148184894
       },
       {
         "sketchId": "6165dc99a043231065389801",
@@ -631,64 +631,64 @@
       }
     ]
   },
-  "Utilities": {
-    "name": "Utilities",
-    "value": 9383.812950548716,
-    "percValue": 0.1262493037863577,
+  "utilities_heatmap": {
+    "name": "utilities_heatmap",
+    "value": 828.4902176260948,
+    "percValue": 0.054873310364338235,
     "sketchMetrics": [
       {
         "sketchId": "6165dc99a0432310653897fa",
         "name": "Area 4",
-        "value": 273.7035089433193,
-        "percValue": 0.0036823919690296687
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a0432310653897fc",
         "name": "Area 5",
-        "value": 2491.1306121349335,
-        "percValue": 0.03351553436543382
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a0432310653897fd",
         "name": "Area 1",
-        "value": 1167.4628213644028,
-        "percValue": 0.015706980645335013
+        "value": 311.83071011304855,
+        "percValue": 0.020653452476716787
       },
       {
         "sketchId": "6165dc99a0432310653897fe",
         "name": "Area 2",
-        "value": 901.00778606534,
-        "percValue": 0.012122109242403974
+        "value": 310.00161123275757,
+        "percValue": 0.02053230595209896
       },
       {
         "sketchId": "6165dc99a0432310653897ff",
         "name": "Area 3 - Energy",
-        "value": 332.02091087400913,
-        "percValue": 0.00446699109000301
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a043231065389801",
         "name": "Offshore North",
-        "value": 133.41127486340702,
-        "percValue": 0.001794907960923352
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165dc99a043231065389800",
         "name": "Area 6",
-        "value": 346.30415990948677,
-        "percValue": 0.004659157137646871
+        "value": 206.6578962802887,
+        "percValue": 0.013687551935522489
       },
       {
         "sketchId": "6165dff31e0a596510ad8b4e",
         "name": "Offshore West",
-        "value": 1753.2000099020079,
-        "percValue": 0.023587456593049536
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165e0281e0a596510ad8b53",
         "name": "Offshore South - energy",
-        "value": 1985.5718664918095,
-        "percValue": 0.02671377478253245
+        "value": 0,
+        "percValue": 0
       },
       {
         "sketchId": "6165e20a1e0a596510ad8b5f",
