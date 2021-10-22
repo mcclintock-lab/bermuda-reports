@@ -61,9 +61,8 @@ const SizeCard = () => {
         return (
           <>
             <p>
-              This report summarizes the size and proportion of this plan within
-              the Bermuda EEZ, the nearshore (0-2,000m depth) and offshore
-              (2,000m+ depth).
+              Size and proportion of this plan within the Bermuda EEZ, the
+              nearshore (0-2,000m depth) and offshore (2,000m+ depth).
             </p>
 
             <Collapse title="Learn more">
@@ -115,13 +114,13 @@ const genSingleSizeTable = (data: AreaResult) => {
       accessor: (row) => <b>{regionLabels[row.region]}</b>,
     },
     {
-      Header: "Plan size",
+      Header: "Plan Area Within",
       accessor: (row) =>
         Number.format(Math.round(squareMeterToKilometer(row.area))) +
         " sq. mi.",
     },
     {
-      Header: "% of Region",
+      Header: "% Within Plan",
       accessor: (row) => Percent.format(row.percArea),
     },
   ];

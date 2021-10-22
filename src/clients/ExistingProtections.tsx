@@ -1,7 +1,6 @@
 import React from "react";
 import {
   ResultsCard,
-  SketchAttributesCard,
   Skeleton,
   Column,
   Table,
@@ -61,12 +60,19 @@ const ExistingProtections = () => {
       >
         {(data: OverlapResult) => {
           return (
-            <Table
-              columns={columns}
-              data={data.areaByClass.sort((a, b) =>
-                a.class.localeCompare(b.class)
-              )}
-            />
+            <>
+              <p>
+                MPA designs can overlap with existing protected areas where the
+                allowed activities align. This report summarizes the percentage
+                of currently legislated areas that overlap with this plan.
+              </p>
+              <Table
+                columns={columns}
+                data={data.areaByClass.sort((a, b) =>
+                  a.class.localeCompare(b.class)
+                )}
+              />
+            </>
           );
         }}
       </ResultsCard>
