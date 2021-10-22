@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ./_config.sh
 source ./oceanuse_config.sh
 
 for SECTOR in "${SECTORS[@]}"

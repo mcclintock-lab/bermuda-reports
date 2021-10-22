@@ -12,5 +12,3 @@ declare -a SECTORS=(
   "Tourism"
   "Utilities"
 )
-
-DATASET_S3_BUCKET=gp-bermuda-reports-datasets

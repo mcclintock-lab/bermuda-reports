@@ -47,6 +47,11 @@
       "name": "RenewableEnergy",
       "description": "renewable energy",
       "source": "src/clients/RenewableEnergy.tsx"
+    },
+    {
+      "name": "ExistingProtections",
+      "description": "report overlap with existing protections",
+      "source": "src/clients/ExistingProtections.tsx"
     }
   ],
   "preprocessingFunctions": [
@@ -55,6 +60,7 @@
   "geoprocessingFunctions": [
     "src/functions/area.ts",
     "src/functions/protection.ts",
-    "src/functions/oceanUse.ts"
+    "src/functions/oceanUse.ts",
+    "src/functions/existingProtections.ts"
   ]
 }

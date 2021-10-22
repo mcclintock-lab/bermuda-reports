@@ -1,0 +1,81 @@
+{
+  "totalArea": 1262386534.014525,
+  "areaByClass": [
+    {
+      "class": "Ferry Route",
+      "totalArea": 6531869.480055,
+      "percArea": 0.005174
+    },
+    {
+      "class": "Shipping Lane",
+      "totalArea": 6404448.404036,
+      "percArea": 0.005073
+    },
+    {
+      "class": "CableZone",
+      "totalArea": 724129832.714296,
+      "percArea": 0.57362
+    },
+    {
+      "class": "SpearfishEx",
+      "totalArea": 190898381.115183,
+      "percArea": 0.15122
+    },
+    {
+      "class": "SeasonalPA",
+      "totalArea": 86861956.526907,
+      "percArea": 0.068808
+    },
+    {
+      "class": "MPAExtendedClosure",
+      "totalArea": 16223333.484141,
+      "percArea": 0.012851
+    },
+    {
+      "class": "Wreck",
+      "totalArea": 8346169.285616,
+      "percArea": 0.006611
+    },
+    {
+      "class": "Reef",
+      "totalArea": 7244658.235392,
+      "percArea": 0.005739
+    },
+    {
+      "class": "Prohibited",
+      "totalArea": 415252.02291,
+      "percArea": 0.000329
+    },
+    {
+      "class": "NoNetFish",
+      "totalArea": 478936.71521,
+      "percArea": 0.000379
+    },
+    {
+      "class": "NoLobsterFish",
+      "totalArea": 81967128.629064,
+      "percArea": 0.06493
+    },
+    {
+      "class": "Amenity Park",
+      "totalArea": 893250.188421,
+      "percArea": 0.000708
+    },
+    {
+      "class": "Recreational Park",
+      "totalArea": 45354.238667,
+      "percArea": 0.000036
+    },
+    {
+      "class": "Nature Reserve",
+      "totalArea": 483071.367423,
+      "percArea": 0.000383
+    },
+    {
+      "class": "CoralPreserve",
+      "totalArea": 131462891.607205,
+      "percArea": 0.104138
+    }
+  ],
+  "areaUnit": "square meters"
+}

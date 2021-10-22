@@ -20,10 +20,13 @@ services:
       PGUSER: "docker"
       PGPASSWORD: "docker"
       PGDATABASE: "gis"
-    # The contents of the project directory in the host will be mirrored
-    # within the workspace. 
+    # The contents of the project directory in the host will be
+    # mirrored within the workspace. The source data is then copied
+    # into the project/data/src subdirectory, overwriting anything that
+    # may exist there.  Restart the container to copy in new data updates
     volumes:
       - "..:/project"
+      - "~/Box\ Sync/GIS/Waitt/Bermuda_Blue_Prosperity/Analytics/:/project/data/src"
     # Switch to the data directory on startup
     working_dir: /project/data
     depends_on:

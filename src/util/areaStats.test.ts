@@ -148,7 +148,7 @@ describe("Area stats tool", () => {
     expect(stats.sketchAreas.length).toBe(sc.features.length);
   });
 
-  test.only("subarea difference - network, half inside and outside", async () => {
+  test("subarea difference - network, half inside and outside", async () => {
     const stats = await subAreaStats(sc, outer, {
       operation: "difference",
       outerArea: outerOuterArea,
