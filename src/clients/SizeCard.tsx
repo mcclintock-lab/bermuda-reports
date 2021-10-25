@@ -61,8 +61,11 @@ const SizeCard = () => {
         return (
           <>
             <p>
-              Size and proportion of this plan within the Bermuda EEZ, the
-              nearshore (0-2,000m depth) and offshore (2,000m+ depth).
+              Plans should be large enough to sustain focal species within their
+              boundaries during their adult and juvenile life history phases.
+              This report summarizes the size and proportion of this plan within
+              the Bermuda EEZ, the nearshore (0-2,000m depth) and offshore
+              (2,000m+ depth).
             </p>
 
             <Collapse title="Learn more">

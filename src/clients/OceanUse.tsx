@@ -42,19 +42,27 @@ const OceanUse = () => {
           return (
             <>
               <p>
-                Ocean use surveys were conducted to document where activities
-                take place in Bermuda waters, and the value individuals place on
-                those areas. The responses were combined to produce aggregate
-                heatmaps.
+                Plans should ensure continued access to the most highly valued
+                areas for each sector. This report summarizes how much value
+                falls within this MPA plan for each sector . The higher the
+                percentage, the greater the potential impact if access or
+                activities are restricted.
               </p>
-              <p>
-                This report summarizes how much of the overall value for each
-                sector falls within this MPA plan. The higher the percentage,
-                the greater the potential impact if activities are restricted.
-              </p>
+              <p></p>
 
               <Collapse title="Learn more">
-                <p></p>
+                <p>
+                  To capture the value each sector places on different areas
+                  within Bermuda waters, an Ocean Use Survey was conducted.
+                  Individuals identified the sectors they participate in, and
+                  were asked to draw the areas they use relative to that sector
+                  and assign a value of importance. Individual responses were
+                  then combined to produce aggregate heatmaps by sector.
+                </p>
+                <p>
+                  Note, the resulting heatmaps are only representative of the
+                  individuals that were surveyed.
+                </p>
                 <p>
                   <a
                     target="_blank"

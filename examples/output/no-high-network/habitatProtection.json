@@ -1,0 +1,274 @@
+{
+  "nearshore": {
+    "Bays and Coast": {
+      "name": "Bays and Coast",
+      "value": 204,
+      "percValue": 0.022013596633214633,
+      "sketchMetrics": []
+    },
+    "Madracis Reef": {
+      "name": "Madracis Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Montastraea Reef": {
+      "name": "Montastraea Reef",
+      "value": 43,
+      "percValue": 0.001730521571152608,
+      "sketchMetrics": []
+    },
+    "Diploria Porites Reef": {
+      "name": "Diploria Porites Reef",
+      "value": 7534,
+      "percValue": 0.218149177669678,
+      "sketchMetrics": []
+    },
+    "Castle Harbour Madracis": {
+      "name": "Castle Harbour Madracis",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Algal Vermetid Reef": {
+      "name": "Algal Vermetid Reef",
+      "value": 36,
+      "percValue": 0.2975206611570248,
+      "sketchMetrics": []
+    },
+    "Rim Reef": {
+      "name": "Rim Reef",
+      "value": 2827,
+      "percValue": 0.22861070677664563,
+      "sketchMetrics": []
+    },
+    "Main Terrace Reef": {
+      "name": "Main Terrace Reef",
+      "value": 3598,
+      "percValue": 0.11493371665868073,
+      "sketchMetrics": []
+    },
+    "Fore Reef": {
+      "name": "Fore Reef",
+      "value": 2219,
+      "percValue": 0.08994730441832186,
+      "sketchMetrics": []
+    },
+    "Mesotrophic": {
+      "name": "Mesotrophic",
+      "value": 1603,
+      "percValue": 0.05121405750798722,
+      "sketchMetrics": []
+    },
+    "Rariphotic": {
+      "name": "Rariphotic",
+      "value": 1842,
+      "percValue": 0.08818460360015319,
+      "sketchMetrics": []
+    },
+    "Mesopelagic": {
+      "name": "Mesopelagic",
+      "value": 774,
+      "percValue": 0.011004322111010009,
+      "sketchMetrics": []
+    },
+    "Bathypelagic": {
+      "name": "Bathypelagic",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    }
+  },
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

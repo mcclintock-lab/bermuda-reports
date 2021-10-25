@@ -1,0 +1,634 @@
+{
+  "nearshore": {
+    "Bays and Coast": {
+      "name": "Bays and Coast",
+      "value": 79,
+      "percValue": 0.008524873205999784,
+      "sketchMetrics": []
+    },
+    "Madracis Reef": {
+      "name": "Madracis Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Montastraea Reef": {
+      "name": "Montastraea Reef",
+      "value": 5494,
+      "percValue": 0.22110431423052157,
+      "sketchMetrics": []
+    },
+    "Diploria Porites Reef": {
+      "name": "Diploria Porites Reef",
+      "value": 4476,
+      "percValue": 0.1296038915913829,
+      "sketchMetrics": []
+    },
+    "Castle Harbour Madracis": {
+      "name": "Castle Harbour Madracis",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Algal Vermetid Reef": {
+      "name": "Algal Vermetid Reef",
+      "value": 29,
+      "percValue": 0.2396694214876033,
+      "sketchMetrics": []
+    },
+    "Rim Reef": {
+      "name": "Rim Reef",
+      "value": 1540,
+      "percValue": 0.12453501536470969,
+      "sketchMetrics": []
+    },
+    "Main Terrace Reef": {
+      "name": "Main Terrace Reef",
+      "value": 8735,
+      "percValue": 0.2790289091199489,
+      "sketchMetrics": []
+    },
+    "Fore Reef": {
+      "name": "Fore Reef",
+      "value": 6220,
+      "percValue": 0.25212809079854076,
+      "sketchMetrics": []
+    },
+    "Mesotrophic": {
+      "name": "Mesotrophic",
+      "value": 3318,
+      "percValue": 0.10600638977635783,
+      "sketchMetrics": []
+    },
+    "Rariphotic": {
+      "name": "Rariphotic",
+      "value": 4713,
+      "percValue": 0.2256319417847568,
+      "sketchMetrics": []
+    },
+    "Mesopelagic": {
+      "name": "Mesopelagic",
+      "value": 10397,
+      "percValue": 0.14781904003639673,
+      "sketchMetrics": []
+    },
+    "Bathypelagic": {
+      "name": "Bathypelagic",
+      "value": 7677,
+      "percValue": 0.05329251530675996,
+      "sketchMetrics": []
+    }
+  },
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 4,
+      "percValue": 0.0006206361520558572,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 4,
+          "percValue": 0.0006206361520558572
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 7,
+      "percValue": 0.05982905982905983,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 1,
+          "percValue": 0.008547008547008548
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 6,
+          "percValue": 0.05128205128205128
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 1,
+      "percValue": 0.1111111111111111,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 1,
+          "percValue": 0.1111111111111111
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 1,
+      "percValue": 0.009345794392523364,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 1,
+          "percValue": 0.009345794392523364
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 11,
+      "percValue": 0.003526771401090093,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 1,
+          "percValue": 0.0003206155819172812
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 3,
+          "percValue": 0.0009618467457518436
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 7,
+          "percValue": 0.0022443090734209684
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 4,
+      "percValue": 0.0015100037750094375,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 4,
+          "percValue": 0.0015100037750094375
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 7,
+      "percValue": 0.0012306610407876231,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 3,
+          "percValue": 0.0005274261603375527
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 4,
+          "percValue": 0.0007032348804500703
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

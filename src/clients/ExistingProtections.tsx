@@ -5,6 +5,7 @@ import {
   Column,
   Table,
   LayerToggle,
+  percentLower,
 } from "@seasketch/geoprocessing/client";
 import config, {
   OverlapResult,
@@ -30,10 +31,11 @@ const ExistingProtections = () => {
     {
       Header: "% Within Plan",
       style: { textAlign: "center" },
-      accessor: (row) => {
-        const num = Percent.format(row.sketchArea / row.totalArea);
-        return num === "0%" ? "-" : num;
-      },
+      accessor: (row) =>
+        percentLower(row.sketchArea / row.totalArea, {
+          lower: 0.01,
+          digits: 1,
+        }),
     },
     {
       Header: "Show Map",
@@ -62,9 +64,9 @@ const ExistingProtections = () => {
           return (
             <>
               <p>
-                MPA designs can overlap with existing protected areas where the
-                allowed activities align. This report summarizes the percentage
-                of currently legislated areas that overlap with this plan.
+                Plans should consider and optimize for overlap with existing
+                protected areas. This report summarizes the percentage of
+                currently legislated areas that overlap with this plan.
               </p>
               <Table
                 columns={columns}

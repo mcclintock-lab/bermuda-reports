@@ -2,7 +2,6 @@
 // Precalculates overall stats used by habitat function
 
 import fs from "fs";
-import { sapStats } from "../src/util/sapStats";
 import { rasterConfig } from "../src/functions/oceanUseConfig";
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";

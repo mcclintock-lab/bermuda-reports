@@ -52,7 +52,6 @@ const rasterMaps = [
 const totals = precalcTotals as Record<string, number>;
 
 export const rasterConfig = rasterMaps.map((rasterMap) => {
-  const foo = totals[rasterMap.name] as any;
   const filename = `${rasterMap.name}_cog.tif`;
   const url = `${dataBucketUrl}${filename}`;
   return { ...rasterMap, url, totalValue: totals[rasterMap.name] };
