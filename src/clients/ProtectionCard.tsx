@@ -12,6 +12,7 @@ import styled from "styled-components";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Pill, LevelPill } from "../components/Pill";
 import { LevelCircleRow } from "../components/Circle";
+import { IucnMatrix } from "../components/IucnMatrix";
 
 // Import type definitions from function
 import {
@@ -23,6 +24,7 @@ import {
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 import { Collapse } from "../components/Collapse";
 import config from "../_config";
+import { IucnDesignationTable } from "../components/IucnDesignationTable";
 
 const Percent = new Intl.NumberFormat("en", {
   style: "percent",
@@ -71,8 +73,8 @@ const singleProtection = (sketchCategory: SketchStat) => {
   return (
     <>
       {genSingleObjective(category, 0.2)}
-      {genLearnMore()}
       {genSingleSketchTable([category])}
+      {genLearnMore()}
     </>
   );
 };
@@ -82,12 +84,14 @@ const networkProtection = (data: ProtectionResult) => {
   return (
     <>
       {genNetworkObjective(levelMap, 0.2)}
-      {genLearnMore()}
       {genLevelTable(data.levelStats)}
-      {genSketchTable(data.sketchStats)}
+      <Collapse title="Show by MPA">
+        {genSketchTable(data.sketchStats)}
+      </Collapse>
       <Collapse title="Show By Category">
         {genCategoryTable(data.categoryStats)}
       </Collapse>
+      {genLearnMore()}
     </>
   );
 };
@@ -250,12 +254,15 @@ const genLearnMore = () => {
   return (
     <Collapse title="Learn more">
       <p>
-        This report looks at each MPAs allowed activities and assigns the first
-        viable MPA category that allows all of those actitivities.
+        This report looks at an MPAs allowed activities and assigns the first
+        viable category that allows all of those actitivities.
       </p>
-
       <p>
-        The categories are{" "}
+        To increase the protection level for an MPA, remove activities that are
+        not allowed for the category you want to achieve.
+      </p>
+      <p>
+        The MPA categories are{" "}
         <a
           href="https://www.iucn.org/theme/protected-areas/about/protected-area-categories"
           target="_blank"
@@ -267,21 +274,40 @@ const genLearnMore = () => {
         recording protected areas.
       </p>
 
+      <IucnDesignationTable />
+
       <p>
-        Category 1-3 offer full protection and are suitable for inclusion in 20%
-        fully protected fisheries replenishment zone. Category 4-6 may offer
-        high protection and may be suitable, if allowed uses are aligned with
-        objectives. Those that do not receive a category are not suitable and
-        have low protection.
+        <b>Category 1-3</b> offer <i>full</i> protection and are suitable for
+        inclusion in 20% fully protected fisheries replenishment zone.{" "}
+        <b>Category 4-6</b> offer
+        <i>high</i> protection and may be suitable, if allowed uses are aligned
+        with objectives. Those that do not receive a category are not suitable
+        and offer <i>low</i> protection.
       </p>
-      <p>[INSERT LIST MAPPING CATEGORIES TO FULL/HIGH PROTECTION]</p>
-      <p>[INSERT IMAGE WITH TABLE MATRIX]</p>
+
+      <p>
+        The full list of activities and whether they are allowed under each
+        category are as follows.
+      </p>
+      <IucnMatrix />
+
       <p>
         Categories 2 and 3 have the same allowed activities, so they are
         grouped. This means they can both be viable options for a given plan and
         are reported together. The right option will be the one that best
         matches the objectives. Categories 4 and 6 also have the same allowed
         activities and are grouped.
+      </p>
+
+      <p>
+        More information can be found in the{" "}
+        <a
+          href="https://portals.iucn.org/library/sites/library/files/documents/PAG-019-2nd%20ed.-En.pdf"
+          target="_blank"
+        >
+          Guidelines for applying the IUCN protected area management categories
+          to marine protected areas
+        </a>
       </p>
     </Collapse>
   );

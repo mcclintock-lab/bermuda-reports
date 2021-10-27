@@ -39,8 +39,6 @@ async function main() {
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
   assert(Object.keys(totalMap).length === config.offshore.layers.length);
-
-  // Nearshore
 }
 
 main();

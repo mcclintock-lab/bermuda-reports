@@ -1,4 +1,4 @@
-/** Properties for representing value and perc value, such as area or sum */
+/** Properties for representing metric value and perc value, such as area or sum */
 export interface ValueMetric {
   /** Value from map */
   value: number;
@@ -6,13 +6,13 @@ export interface ValueMetric {
   percValue: number;
 }
 
-/** Properties for representing sub group/category */
+/** Properties for representing metric sub group/category */
 export interface SubMetric {
   id: string;
   name: string;
 }
 
-/** ValueMetric with sketch identifiers */
+/** Combined ValueMetric with sketch identifiers */
 export type SketchMetric = SubMetric & ValueMetric;
 
 /** Metric calculated per class, including per-sketch SubMetric */

@@ -59,3 +59,9 @@ export const WarningPill: React.FunctionComponent<{ children: ReactNode }> = ({
 }) => {
   return <Pill color={"#FFE1A3"}>{children}</Pill>;
 };
+
+export const GreenPill: React.FunctionComponent<{ children: ReactNode }> = ({
+  children,
+}) => {
+  return <Pill color={"#BEE4BE"}>{children}</Pill>;
+};

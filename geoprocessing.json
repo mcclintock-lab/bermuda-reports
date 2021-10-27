@@ -62,6 +62,6 @@
     "src/functions/protection.ts",
     "src/functions/oceanUse.ts",
     "src/functions/existingProtections.ts",
-    "src/functions/habitatProtection"
+    "src/functions/habitatProtection.ts"
   ]
 }

@@ -8,27 +8,51 @@ import {
   keyBy,
   percentLower,
 } from "@seasketch/geoprocessing/client";
-// Import the results type definition from your functions to type-check your
-// component render functions
-import { AreaResult } from "../functions/area";
-import config, { OverlapMetric } from "../functions/habitatProtectionConfig";
+import config, { HabitatResults, nearshore } from "../_config";
+import { ClassMetric } from "../util/types";
+import { Collapse } from "../components/Collapse";
+import { GreenPill } from "../components/Pill";
+import styled from "styled-components";
 
-const Number = new Intl.NumberFormat("en", { style: "decimal" });
+const TableStyled = styled.div`
+  .styled {
+    td {
+      padding: 5px 5px;
+    }
+  }
+}
+`;
 
 const HabitatProtection = () => {
-  const offshoreClasses = keyBy(config.offshore.layers, (lyr) => lyr.name);
+  const offshoreClasses = keyBy(
+    config.offshore.layers,
+    (lyr) => lyr.baseFilename
+  );
 
-  const offshoreColumns: Column<OverlapMetric>[] = [
+  const offshoreColumns: Column<ClassMetric>[] = [
     {
       Header: "Offshore",
-      accessor: (row) => offshoreClasses[row.class],
+      accessor: (row) => offshoreClasses[row.name].display,
+      style: { width: "30%" },
     },
     {
       Header: "% Within Plan",
-      style: { textAlign: "center" },
-      accessor: (row) => {
-        const num = percentLower(row.sketchArea / row.totalArea);
-        return num === "0%" ? "-" : num;
+      style: { textAlign: "right", width: "30%" },
+      accessor: (row, index) => {
+        const percDisplay = percentLower(row.percValue);
+        const goal = config.offshore.layers[index].goalPerc;
+        if (row.percValue > goal) {
+          return <GreenPill>{percDisplay}</GreenPill>;
+        } else {
+          return percDisplay;
+        }
+      },
+    },
+    {
+      Header: "Goal",
+      style: { textAlign: "right", width: "20%" },
+      accessor: (row, index) => {
+        return percentLower(config.offshore.layers[index].goalPerc);
       },
     },
     {
@@ -36,7 +60,7 @@ const HabitatProtection = () => {
       accessor: (row) => (
         <LayerToggle
           simple
-          layerId={offshoreClasses[row.class].layerId}
+          layerId={offshoreClasses[row.name].layerId}
           style={{ marginTop: 0, marginLeft: 15 }}
         />
       ),
@@ -44,28 +68,45 @@ const HabitatProtection = () => {
     },
   ];
 
-  const nearshoreColumns: Column<OverlapMetric>[] = [
+  const nearshoreColumns: Column<ClassMetric>[] = [
     {
       Header: "Nearshore/Platform",
-      accessor: (row) => config.nearshore.classIdToName[row.class_id || "0"],
+      accessor: (row) => row.name,
+      style: { width: "30%" },
     },
     {
       Header: "% Within Plan",
-      style: { textAlign: "center" },
-      accessor: (row) => {
-        const num = percentLower(row.sketchArea / row.totalArea);
-        return num === "0%" ? "-" : num;
+      style: { textAlign: "right", width: "30%" },
+      accessor: (row, index) => {
+        const percDisplay = percentLower(row.percValue);
+        const goal = config.nearshore.layers[index].goalPerc;
+        if (row.percValue > goal) {
+          return <GreenPill>{percDisplay}</GreenPill>;
+        } else {
+          return percDisplay;
+        }
+      },
+    },
+    {
+      Header: "Goal",
+      style: { textAlign: "right", width: "20%" },
+      accessor: (row, index) => {
+        return percentLower(config.nearshore.layers[index].goalPerc);
       },
     },
     {
       Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={config.nearshore.layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
+      accessor: (row, index) => {
+        return index == 0 ? (
+          <LayerToggle
+            simple
+            layerId={nearshore.layerId}
+            style={{ marginTop: 0, marginLeft: 15 }}
+          />
+        ) : (
+          <></>
+        );
+      },
       style: { width: "20%" },
     },
   ];
@@ -74,10 +115,12 @@ const HabitatProtection = () => {
     <>
       <ResultsCard
         title="Habitat Protection"
-        functionName="area"
+        functionName="habitatProtection"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: AreaResult) => {
+        {(data: HabitatResults) => {
+          const nearshore = Object.values(data.nearshore);
+          const offshore = Object.values(data.offshore);
           return (
             <>
               <p>
@@ -85,8 +128,27 @@ const HabitatProtection = () => {
                 habitat type. This report summarizes the percentage of each
                 habitat that overlaps with this plan.
               </p>
-              <Table columns={nearshoreColumns} data={[]} />
-              <Table columns={offshoreColumns} data={[]} />
+              <Collapse title="Learn more">
+                <p>
+                  Goals for each habitat type were established and approved by
+                  the Science Committee. Only MPAs with a Full Protection
+                  designation count towards meeting the objective.
+                </p>
+              </Collapse>
+              <TableStyled>
+                <Table
+                  className="styled"
+                  columns={nearshoreColumns}
+                  data={nearshore}
+                />
+              </TableStyled>
+              <TableStyled>
+                <Table
+                  className="styled"
+                  columns={offshoreColumns}
+                  data={offshore}
+                />
+              </TableStyled>
             </>
           );
         }}

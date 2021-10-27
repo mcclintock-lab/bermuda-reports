@@ -1,3 +1,5 @@
+import { ClassMetrics } from "../src/util/types";
+
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing
  * sketch in seasketch project, exporting the resulting sketch, calling turf/area function on it and converting square
@@ -18,34 +20,92 @@ export const eezObjective = 0.2; // 20 percent
 
 /** Habitat */
 
+export interface HabitatResults {
+  nearshore: ClassMetrics;
+  offshore: ClassMetrics;
+}
+
 export const fileSuffix = "_cog.tif";
 
 const nearshoreBaseFilename = "Habitat Zones1";
 
-export const nearshore: {
-  baseFilename: string;
-  filename: string;
-  layerId: string;
-  classIdToName: Record<string, string>;
-} = {
+const nearshoreLayers = [
+  {
+    class_id: "1",
+    name: "Bays and Coast",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "2",
+    name: "Madracis Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "3",
+    name: "Montastraea Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "4",
+    name: "Diploria Porites Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "5",
+    name: "Castle Harbour Madracis",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "6",
+    name: "Algal Vermetid Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "7",
+    name: "Rim Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "8",
+    name: "Main Terrace Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "9",
+    name: "Fore Reef",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "10",
+    name: "Mesotrophic",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "11",
+    name: "Rariphotic",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "12",
+    name: "Mesopelagic",
+    goalPerc: 0.2,
+  },
+  {
+    class_id: "13",
+    name: "Bathypelagic",
+    goalPerc: 0.2,
+  },
+];
+
+export const nearshore = {
   baseFilename: nearshoreBaseFilename,
   filename: `${nearshoreBaseFilename}${fileSuffix}`,
   layerId: "60359da253bd7d85675a1bd8",
-  classIdToName: {
-    "1": "Bays and Coast",
-    "2": "Madracis Reef",
-    "3": "Montastraea Reef",
-    "4": "Diploria Porites Reef",
-    "5": "Castle Harbour Madracis",
-    "6": "Algal Vermetid Reef",
-    "7": "Rim Reef",
-    "8": "Main Terrace Reef",
-    "9": "Fore Reef",
-    "10": "Mesotrophic",
-    "11": "Rariphotic",
-    "12": "Mesopelagic",
-    "13": "Bathypelagic",
-  },
+  layers: nearshoreLayers,
+  classIdToName: nearshoreLayers.reduce<Record<string, string>>(
+    (acc, lyr) => ({ ...acc, [lyr.class_id]: lyr.name }),
+    {}
+  ),
 };
 
 export const offshoreLayers = [
@@ -53,61 +113,71 @@ export const offshoreLayers = [
     baseFilename: "feature_abyssopelagic",
     noDataValue: -3.39999995214436425e38,
     display: "Abyssopelagic",
-    layerId: "",
+    layerId: "61771f5ae9125f452fe759f8",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Bathypelagic1",
     noDataValue: -3.39999995214436425e38,
     display: "Bathypelagic",
-    layerId: "",
+    layerId: "614df361c33508c1270159f2",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Cold water coral1",
     noDataValue: -3.39999995214436425e38,
     display: "Cold water coral",
-    layerId: "",
+    layerId: "614df361c33508c1270159f4",
+    goalPerc: 1,
   },
   {
     baseFilename: "Escarpments1",
     noDataValue: -3.39999995214436425e38,
     display: "Escarpments",
-    layerId: "",
+    layerId: "614df361c33508c1270159f6",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Knolls1",
     noDataValue: -3.39999995214436425e38,
     display: "Knolls",
-    layerId: "",
+    layerId: "614df361c33508c1270159f8",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Pelagic zone 1",
     noDataValue: -3.39999995214436425e38,
     display: "Pelagic zone 1",
-    layerId: "",
+    layerId: "614df361c33508c1270159fc",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Pelagic zone 2",
     noDataValue: -3.39999995214436425e38,
     display: "Pelagic zone 2",
-    layerId: "",
+    layerId: "614df361c33508c1270159fe",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Pelagic zone 3",
     noDataValue: -3.39999995214436425e38,
     display: "Pelagic zone 3",
-    layerId: "",
+    layerId: "614df361c33508c127015a00",
+    goalPerc: 0.2,
   },
   {
     baseFilename: "Plains",
     noDataValue: -3.39999995214436425e38,
     display: "Plains",
-    layerId: "",
+    layerId: "614df361c33508c127015a02a",
+    goalPerc: 0.1,
   },
   {
     baseFilename: "seamounts_buffered",
     noDataValue: -3.39999995214436425e38,
     display: "Seamounts",
-    layerId: "",
+    layerId: "61771fcde9125f452fe75b01",
+    goalPerc: 0.4,
   },
 ];
 

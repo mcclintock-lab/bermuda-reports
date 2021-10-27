@@ -12,9 +12,8 @@ import {
 import dissolve from "@turf/dissolve";
 import bbox from "@turf/bbox";
 import { featureCollection } from "@turf/helpers";
-import config from "../_config";
+import config, { HabitatResults } from "../_config";
 import { rasterClassStats } from "../util/overlapByClassRaster";
-import { ClassMetrics } from "../util/types";
 import { sumOverlapRaster } from "../util/sumOverlapRaster";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
@@ -23,11 +22,6 @@ import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json
 // Define at module level for potential cache and reuse by Lambda
 let nearshoreRaster: Georaster;
 let offshoreRasters: Georaster[];
-
-interface HabitatResults {
-  nearshore: ClassMetrics;
-  offshore: ClassMetrics;
-}
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
