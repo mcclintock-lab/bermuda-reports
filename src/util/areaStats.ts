@@ -39,13 +39,7 @@ export async function areaStats(
   /** single sketch or collection. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** area of outer boundary (typically EEZ or planning area) */
-  outerArea: number,
-  options: {
-    /** system of measurement */
-    units: "imperial" | "metric";
-    /** Whether to calculate individual sketch areas, otherwide just overall */
-    includeSketchAreas: boolean;
-  } = { units: "metric", includeSketchAreas: true }
+  outerArea: number
 ): Promise<AreaMetric> {
   const combinedSketch = isSketchCollection(sketch)
     ? dissolve(sketch)
@@ -53,7 +47,7 @@ export async function areaStats(
 
   const combinedSketchArea = turfArea(combinedSketch);
   let sketchAreas: AreaMetric["sketchAreas"] = [];
-  if (options?.includeSketchAreas) {
+  if (sketch) {
     featureEach(sketch, (feat) => {
       const sketchArea = turfArea(feat);
       sketchAreas.push({
@@ -74,39 +68,35 @@ export async function areaStats(
 }
 
 /**
- * Returns area stats for sketch input after performing overlay operation against a subarea feature`.
+ * Returns area stats for sketch input after performing overlay operation against a subarea feature.
  * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
  */
 export async function subAreaStats(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** subarea feature */
   subareaFeature: Feature<Polygon | MultiPolygon> | Polygon | MultiPolygon,
-  options: {
-    /** system of measurement */
-    units?: "imperial" | "metric";
-    /** Whether to calculate individual sketch areas, otherwide just overall */
-    includeSketchAreas?: boolean;
+  options?: {
     /** operation to perform on sketch in relation to sub area features, defaults to 'intersection' */
     operation?: "intersect" | "difference";
-    /** area of outer boundary (typically EEZ or planning area).  used to calculate the area outside of the subarea for difference */
-    outerArea?: number;
-  } = {
-    units: "metric",
-    includeSketchAreas: true,
-    operation: "intersect",
+    /** area of outer boundary.  Use for total area of the subarea for intersection when you don't have the whole feature, or use for the total area of the boundar outside of the subarea for difference (typically EEZ or planning area) */
+    outerArea?: number | undefined;
   }
 ): Promise<AreaMetric> {
-  const subareaArea = turfArea(subareaFeature);
+  const operation = options?.operation || "intersect";
+  const subareaArea =
+    options?.outerArea && operation === "intersect"
+      ? options?.outerArea
+      : turfArea(subareaFeature);
   const sketches = toSketchArray(sketch);
 
-  if (options.operation === "difference" && !options.outerArea)
+  if (operation === "difference" && !options?.outerArea)
     throw new Error(
       "Missing outerArea which is required when operation is difference"
     );
 
   // Run op and keep null remainders for reporting purposes
   const subsketches = (() => {
-    if (options?.operation === "intersect") {
+    if (operation === "intersect") {
       return sketches.map((sketch) => intersect(subareaFeature, sketch));
     } else {
       return sketches.map((sketch) => difference(sketch, subareaFeature));
@@ -129,8 +119,8 @@ export async function subAreaStats(
 
   // Choose inner or outer subarea for calculating percentage
   const operationArea = (() => {
-    if (options.operation === "difference" && options.outerArea) {
-      return options.outerArea - subareaArea;
+    if (operation === "difference" && options?.outerArea) {
+      return options?.outerArea - subareaArea;
     } else {
       return subareaArea;
     }

@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 1419,
-      "percValue": 0.04108756080611536,
+      "value": 2717,
+      "percValue": 0.0786715311558953,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,20 +32,20 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 1,
-      "percValue": 0.008264462809917356,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 135,
-      "percValue": 0.010917030567685589,
+      "value": 485,
+      "percValue": 0.03922044315057416,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 585,
-      "percValue": 0.018687110685194058,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": []
     },
     "Fore Reef": {
@@ -86,8 +86,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -95,14 +95,14 @@
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 0,
-      "percValue": 0,
+      "value": 1,
+      "percValue": 0.008547008547008548,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
+          "value": 1,
+          "percValue": 0.008547008547008548
         }
       ]
     },
@@ -112,8 +112,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -121,14 +121,14 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 0,
-      "percValue": 0,
+      "value": 1,
+      "percValue": 0.009345794392523364,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
+          "value": 1,
+          "percValue": 0.009345794392523364
         }
       ]
     },
@@ -138,8 +138,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -147,14 +147,14 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 0,
-      "percValue": 0,
+      "value": 1,
+      "percValue": 0.0003206155819172812,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
+          "value": 1,
+          "percValue": 0.0003206155819172812
         }
       ]
     },
@@ -164,8 +164,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -177,8 +177,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -190,8 +190,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }
@@ -203,8 +203,8 @@
       "percValue": 0,
       "sketchMetrics": [
         {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
+          "id": "617abdf4dc13e871274c3dec",
+          "name": "Demo MPA 13",
           "value": 0,
           "percValue": 0
         }

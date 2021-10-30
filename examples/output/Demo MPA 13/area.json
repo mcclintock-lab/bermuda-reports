@@ -1,0 +1,41 @@
+{
+  "eez": {
+    "area": 19799522.285427053,
+    "percArea": 0.00004251222284311519,
+    "sketchAreas": [
+      {
+        "sketchId": "617abdf4dc13e871274c3dec",
+        "name": "Demo MPA 13",
+        "area": 19799522.285427053,
+        "percArea": 0.00004251222284311519
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "nearshore": {
+    "area": 19799522.285425402,
+    "percArea": 0.007651280701865466,
+    "sketchAreas": [
+      {
+        "sketchId": "617abdf4dc13e871274c3dec",
+        "name": "Demo MPA 13",
+        "area": 19799522.285425402,
+        "percArea": 0.007651280701865466
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "offshore": {
+    "area": 0,
+    "percArea": 0,
+    "sketchAreas": [
+      {
+        "sketchId": "617abdf4dc13e871274c3dec",
+        "name": "Demo MPA 13",
+        "area": 0,
+        "percArea": 0
+      }
+    ],
+    "areaUnit": "square meters"
+  }
+}

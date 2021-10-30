@@ -1,5 +1,5 @@
 import fs from "fs";
-import config from "../src/functions/habitatProtectionConfig";
+import config from "../src/_config";
 // @ts-ignore
 import { loadCogWindow } from "../src/util/cog";
 // @ts-ignore

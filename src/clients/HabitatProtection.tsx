@@ -52,7 +52,10 @@ const HabitatProtection = () => {
       Header: "Goal",
       style: { textAlign: "right", width: "20%" },
       accessor: (row, index) => {
-        return percentLower(config.offshore.layers[index].goalPerc);
+        const goalPerc = config.offshore.layers.find(
+          (lyr) => lyr.baseFilename === row.name
+        )?.goalPerc;
+        return percentLower(goalPerc || 0);
       },
     },
     {
@@ -91,7 +94,10 @@ const HabitatProtection = () => {
       Header: "Goal",
       style: { textAlign: "right", width: "20%" },
       accessor: (row, index) => {
-        return percentLower(config.nearshore.layers[index].goalPerc);
+        const goalPerc = config.nearshore.layers.find(
+          (lyr) => lyr.name === row.name
+        )?.goalPerc;
+        return percentLower(goalPerc || 0);
       },
     },
     {

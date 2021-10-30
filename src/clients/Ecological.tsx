@@ -11,9 +11,9 @@ interface ReportProps {
 const Report: FunctionComponent<ReportProps> = ({ hidden }) => {
   return (
     <div style={{ display: hidden ? "none" : "block" }}>
+      <HabitatProtection />
       <KeyNurseryHabitat />
       <HabitatRepresentation />
-      <HabitatProtection />
       <HabitatRestoration />
     </div>
   );

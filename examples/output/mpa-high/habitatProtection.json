@@ -79,5 +79,136 @@
       "sketchMetrics": []
     }
   },
-  "offshore": {}
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
 }

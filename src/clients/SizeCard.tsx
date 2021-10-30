@@ -117,7 +117,7 @@ const genSingleSizeTable = (data: AreaResult) => {
       accessor: (row) => <b>{regionLabels[row.region]}</b>,
     },
     {
-      Header: "Plan Area Within",
+      Header: "Area Within Plan",
       accessor: (row) =>
         Number.format(Math.round(squareMeterToKilometer(row.area))) +
         " sq. mi.",

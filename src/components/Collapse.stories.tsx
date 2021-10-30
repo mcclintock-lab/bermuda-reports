@@ -10,6 +10,6 @@ export default {
 
 export const text = () => (
   <Card title="Card Title">
-    <Collapse title="Learn More">Help text here</Collapse>
+    <Collapse title="Learn more">Help text here</Collapse>
   </Card>
 );
