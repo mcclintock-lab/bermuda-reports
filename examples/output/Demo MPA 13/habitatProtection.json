@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 2717,
-      "percValue": 0.0786715311558953,
+      "value": 2762,
+      "percValue": 0.07997451934213574,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -38,8 +38,8 @@
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 485,
-      "percValue": 0.03922044315057416,
+      "value": 439,
+      "percValue": 0.03550056606825166,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
@@ -95,14 +95,14 @@
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 1,
-      "percValue": 0.008547008547008548,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
-          "value": 1,
-          "percValue": 0.008547008547008548
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
@@ -121,14 +121,14 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 1,
-      "percValue": 0.009345794392523364,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
-          "value": 1,
-          "percValue": 0.009345794392523364
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
@@ -147,14 +147,14 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 1,
-      "percValue": 0.0003206155819172812,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
-          "value": 1,
-          "percValue": 0.0003206155819172812
+          "value": 0,
+          "percValue": 0
         }
       ]
     },

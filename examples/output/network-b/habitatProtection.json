@@ -2,8 +2,8 @@
   "nearshore": {
     "Bays and Coast": {
       "name": "Bays and Coast",
-      "value": 79,
-      "percValue": 0.008524873205999784,
+      "value": 76,
+      "percValue": 0.008201143843746627,
       "sketchMetrics": []
     },
     "Madracis Reef": {
@@ -14,14 +14,14 @@
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
-      "value": 5494,
-      "percValue": 0.22110431423052157,
+      "value": 5548,
+      "percValue": 0.22327752736638765,
       "sketchMetrics": []
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 4476,
-      "percValue": 0.1296038915913829,
+      "value": 4427,
+      "percValue": 0.1281850822330322,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -38,44 +38,44 @@
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 1540,
-      "percValue": 0.12453501536470969,
+      "value": 1507,
+      "percValue": 0.12186640789260876,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 8735,
-      "percValue": 0.2790289091199489,
+      "value": 8712,
+      "percValue": 0.27829420220412077,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 6220,
-      "percValue": 0.25212809079854076,
+      "value": 6229,
+      "percValue": 0.25249290636400484,
       "sketchMetrics": []
     },
     "Mesotrophic": {
       "name": "Mesotrophic",
-      "value": 3318,
-      "percValue": 0.10600638977635783,
+      "value": 3304,
+      "percValue": 0.1055591054313099,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 4713,
-      "percValue": 0.2256319417847568,
+      "value": 4763,
+      "percValue": 0.22802566066641133,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 10397,
-      "percValue": 0.14781904003639673,
+      "value": 10474,
+      "percValue": 0.14891378525932666,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 7677,
-      "percValue": 0.05329251530675996,
+      "value": 7714,
+      "percValue": 0.05354936343315701,
       "sketchMetrics": []
     }
   },
@@ -167,8 +167,8 @@
         {
           "id": "615f8b48045840708a6e5395",
           "name": "full-1",
-          "value": 1,
-          "percValue": 0.008547008547008548
+          "value": 0,
+          "percValue": 0
         },
         {
           "id": "615f8b80045840708a6e53a0",
@@ -179,21 +179,21 @@
         {
           "id": "6165ca3f1e0a596510ad8970",
           "name": "crosser",
-          "value": 6,
-          "percValue": 0.05128205128205128
+          "value": 4,
+          "percValue": 0.03418803418803419
         },
         {
           "id": "6165d8981e0a596510ad8b2a",
           "name": "outside-a",
-          "value": 0,
-          "percValue": 0
+          "value": 3,
+          "percValue": 0.02564102564102564
         }
       ]
     },
     "Cold water coral1": {
       "name": "Cold water coral1",
-      "value": 1,
-      "percValue": 0.1111111111111111,
+      "value": 2,
+      "percValue": 0.2222222222222222,
       "sketchMetrics": [
         {
           "id": "615f8a88045840708a6e5387",
@@ -234,8 +234,8 @@
         {
           "id": "6165ca3f1e0a596510ad8970",
           "name": "crosser",
-          "value": 1,
-          "percValue": 0.1111111111111111
+          "value": 2,
+          "percValue": 0.2222222222222222
         },
         {
           "id": "6165d8981e0a596510ad8b2a",
@@ -247,8 +247,8 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 1,
-      "percValue": 0.009345794392523364,
+      "value": 4,
+      "percValue": 0.037383177570093455,
       "sketchMetrics": [
         {
           "id": "615f8a88045840708a6e5387",
@@ -277,8 +277,8 @@
         {
           "id": "615f8b48045840708a6e5395",
           "name": "full-1",
-          "value": 1,
-          "percValue": 0.009345794392523364
+          "value": 0,
+          "percValue": 0
         },
         {
           "id": "615f8b80045840708a6e53a0",
@@ -295,8 +295,8 @@
         {
           "id": "6165d8981e0a596510ad8b2a",
           "name": "outside-a",
-          "value": 0,
-          "percValue": 0
+          "value": 4,
+          "percValue": 0.037383177570093455
         }
       ]
     },
@@ -357,8 +357,8 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 11,
-      "percValue": 0.003526771401090093,
+      "value": 8,
+      "percValue": 0.0025649246553382495,
       "sketchMetrics": [
         {
           "id": "615f8a88045840708a6e5387",
@@ -387,8 +387,8 @@
         {
           "id": "615f8b48045840708a6e5395",
           "name": "full-1",
-          "value": 1,
-          "percValue": 0.0003206155819172812
+          "value": 0,
+          "percValue": 0
         },
         {
           "id": "615f8b80045840708a6e53a0",
@@ -399,8 +399,8 @@
         {
           "id": "6165ca3f1e0a596510ad8970",
           "name": "crosser",
-          "value": 3,
-          "percValue": 0.0009618467457518436
+          "value": 1,
+          "percValue": 0.0003206155819172812
         },
         {
           "id": "6165d8981e0a596510ad8b2a",
@@ -467,63 +467,8 @@
     },
     "Pelagic zone 3": {
       "name": "Pelagic zone 3",
-      "value": 4,
-      "percValue": 0.0015100037750094375,
-      "sketchMetrics": [
-        {
-          "id": "615f8a88045840708a6e5387",
-          "name": "full-2",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "615f8aa1045840708a6e5389",
-          "name": "high-2",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "615f8ae9045840708a6e538e",
-          "name": "low-2",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "615f8b01045840708a6e5391",
-          "name": "full-3",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "615f8b48045840708a6e5395",
-          "name": "full-1",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "615f8b80045840708a6e53a0",
-          "name": "low-2",
-          "value": 0,
-          "percValue": 0
-        },
-        {
-          "id": "6165ca3f1e0a596510ad8970",
-          "name": "crosser",
-          "value": 4,
-          "percValue": 0.0015100037750094375
-        },
-        {
-          "id": "6165d8981e0a596510ad8b2a",
-          "name": "outside-a",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Plains": {
-      "name": "Plains",
-      "value": 7,
-      "percValue": 0.0012306610407876231,
+      "value": 3,
+      "percValue": 0.0011325028312570782,
       "sketchMetrics": [
         {
           "id": "615f8a88045840708a6e5387",
@@ -565,13 +510,68 @@
           "id": "6165ca3f1e0a596510ad8970",
           "name": "crosser",
           "value": 3,
-          "percValue": 0.0005274261603375527
+          "percValue": 0.0011325028312570782
         },
         {
           "id": "6165d8981e0a596510ad8b2a",
           "name": "outside-a",
-          "value": 4,
-          "percValue": 0.0007032348804500703
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 3,
+      "percValue": 0.0005274261603375527,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 3,
+          "percValue": 0.0005274261603375527
         }
       ]
     },

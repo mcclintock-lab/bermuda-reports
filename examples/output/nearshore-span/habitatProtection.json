@@ -2,8 +2,8 @@
   "nearshore": {
     "Bays and Coast": {
       "name": "Bays and Coast",
-      "value": 89,
-      "percValue": 0.009603971080176972,
+      "value": 92,
+      "percValue": 0.009927700442430128,
       "sketchMetrics": []
     },
     "Madracis Reef": {
@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 4021,
-      "percValue": 0.11642923326384064,
+      "value": 3960,
+      "percValue": 0.11466296038915914,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,64 +32,64 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 9,
-      "percValue": 0.0743801652892562,
+      "value": 8,
+      "percValue": 0.06611570247933884,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 1472,
-      "percValue": 0.11903606663431991,
+      "value": 1463,
+      "percValue": 0.1183082645964742,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 6595,
-      "percValue": 0.2106692221689826,
+      "value": 6522,
+      "percValue": 0.20833732630570195,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 427,
-      "percValue": 0.017308471828131333,
+      "value": 419,
+      "percValue": 0.016984191325496556,
       "sketchMetrics": []
     },
     "Mesotrophic": {
       "name": "Mesotrophic",
-      "value": 1696,
-      "percValue": 0.054185303514376996,
+      "value": 1683,
+      "percValue": 0.05376996805111821,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 1771,
-      "percValue": 0.08478552278820375,
+      "value": 1768,
+      "percValue": 0.08464189965530448,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 4649,
-      "percValue": 0.06609702001819837,
+      "value": 4620,
+      "percValue": 0.06568471337579618,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 13262,
-      "percValue": 0.09206269871020589,
+      "value": 13209,
+      "percValue": 0.09169478112374527,
       "sketchMetrics": []
     }
   },
   "offshore": {
     "feature_abyssopelagic": {
       "name": "feature_abyssopelagic",
-      "value": 13,
-      "percValue": 0.002017067494181536,
+      "value": 18,
+      "percValue": 0.0027928626842513575,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 13,
-          "percValue": 0.002017067494181536
+          "value": 18,
+          "percValue": 0.0027928626842513575
         }
       ]
     },
@@ -147,14 +147,14 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 26,
-      "percValue": 0.00833600512984931,
+      "value": 30,
+      "percValue": 0.009618467457518435,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 26,
-          "percValue": 0.00833600512984931
+          "value": 30,
+          "percValue": 0.009618467457518435
         }
       ]
     },
@@ -186,14 +186,14 @@
     },
     "Plains": {
       "name": "Plains",
-      "value": 15,
-      "percValue": 0.0026371308016877636,
+      "value": 19,
+      "percValue": 0.003340365682137834,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 15,
-          "percValue": 0.0026371308016877636
+          "value": 19,
+          "percValue": 0.003340365682137834
         }
       ]
     },

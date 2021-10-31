@@ -1,118 +1,118 @@
 {
   "aquaculture_heatmap": {
     "name": "aquaculture_heatmap",
-    "value": 116.28034210205078,
-    "percValue": 0.007770832919126967,
+    "value": 199.8930206298828,
+    "percValue": 0.013358537108973847,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 116.28034210205078,
-        "percValue": 0.007770832919126967
+        "value": 199.8930206298828,
+        "percValue": 0.013358537108973847
       }
     ]
   },
   "boating_heatmap": {
     "name": "boating_heatmap",
-    "value": 17736.48816711642,
-    "percValue": 0.04121448243473937,
+    "value": 16687.99516574852,
+    "percValue": 0.038778087135925836,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 17736.48816711642,
-        "percValue": 0.04121448243473937
+        "value": 16687.99516574852,
+        "percValue": 0.038778087135925836
       }
     ]
   },
   "commercial_fishing_heatmap": {
     "name": "commercial_fishing_heatmap",
-    "value": 15237.445951353759,
-    "percValue": 0.05142789037688134,
+    "value": 15161.36348934099,
+    "percValue": 0.051171104526517214,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 15237.445951353759,
-        "percValue": 0.05142789037688134
+        "value": 15161.36348934099,
+        "percValue": 0.051171104526517214
       }
     ]
   },
   "passiverec_conservation_heatmap": {
     "name": "passiverec_conservation_heatmap",
-    "value": 10539.000458738767,
-    "percValue": 0.04565292911704855,
+    "value": 10295.292414323427,
+    "percValue": 0.04459723260004893,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 10539.000458738767,
-        "percValue": 0.04565292911704855
+        "value": 10295.292414323427,
+        "percValue": 0.04459723260004893
       }
     ]
   },
   "recreational_fishing_heatmap": {
     "name": "recreational_fishing_heatmap",
-    "value": 36161.94283885881,
-    "percValue": 0.1565111583666045,
+    "value": 35717.26711301319,
+    "percValue": 0.15458657391438801,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 36161.94283885881,
-        "percValue": 0.1565111583666045
+        "value": 35717.26711301319,
+        "percValue": 0.15458657391438801
       }
     ]
   },
   "shipping_heatmap": {
     "name": "shipping_heatmap",
-    "value": 446.7243576645851,
-    "percValue": 0.030249019573367418,
+    "value": 424.4018843770027,
+    "percValue": 0.028737499281677754,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 446.7243576645851,
-        "percValue": 0.030249019573367418
+        "value": 424.4018843770027,
+        "percValue": 0.028737499281677754
       }
     ]
   },
   "swim_snorkel_dive_heatmap": {
     "name": "swim_snorkel_dive_heatmap",
-    "value": 60031.25556525588,
-    "percValue": 0.09780922356878607,
+    "value": 59732.08216327429,
+    "percValue": 0.0973217788554493,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 60031.25556525588,
-        "percValue": 0.09780922356878607
+        "value": 59732.08216327429,
+        "percValue": 0.0973217788554493
       }
     ]
   },
   "tourism_heatmap": {
     "name": "tourism_heatmap",
-    "value": 746.5470255017281,
-    "percValue": 0.03694827305477814,
+    "value": 711.8624566197395,
+    "percValue": 0.03523165658178677,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 746.5470255017281,
-        "percValue": 0.03694827305477814
+        "value": 711.8624566197395,
+        "percValue": 0.03523165658178677
       }
     ]
   },
   "utilities_heatmap": {
     "name": "utilities_heatmap",
-    "value": 4.6824610233306885,
-    "percValue": 0.00031013297626901134,
+    "value": 3.745968818664551,
+    "percValue": 0.0002481063810152091,
     "sketchMetrics": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "value": 4.6824610233306885,
-        "percValue": 0.00031013297626901134
+        "value": 3.745968818664551,
+        "percValue": 0.0002481063810152091
       }
     ]
   }

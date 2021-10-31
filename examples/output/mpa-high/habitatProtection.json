@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 291,
-      "percValue": 0.008425990271021543,
+      "value": 233,
+      "percValue": 0.0067465832754227475,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -38,26 +38,26 @@
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 47,
-      "percValue": 0.0038007439754164647,
+      "value": 50,
+      "percValue": 0.004043344654698367,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 1480,
-      "percValue": 0.04727679284459352,
+      "value": 1478,
+      "percValue": 0.04721290528669542,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 101,
-      "percValue": 0.004094041345764086,
+      "value": 97,
+      "percValue": 0.003931901094446697,
       "sketchMetrics": []
     },
     "Mesotrophic": {
       "name": "Mesotrophic",
-      "value": 566,
-      "percValue": 0.018083067092651756,
+      "value": 569,
+      "percValue": 0.018178913738019168,
       "sketchMetrics": []
     },
     "Rariphotic": {
@@ -68,14 +68,14 @@
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 1149,
-      "percValue": 0.016335873521383076,
+      "value": 1203,
+      "percValue": 0.017103616924476796,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 1,
-      "percValue": 0.000006941841253974204,
+      "value": 6,
+      "percValue": 0.00004165104752384522,
       "sketchMetrics": []
     }
   },

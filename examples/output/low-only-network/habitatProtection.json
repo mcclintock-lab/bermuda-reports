@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 1419,
-      "percValue": 0.04108756080611536,
+      "value": 1392,
+      "percValue": 0.04030576789437109,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -38,14 +38,14 @@
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 135,
-      "percValue": 0.010917030567685589,
+      "value": 132,
+      "percValue": 0.010674429888403688,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 585,
-      "percValue": 0.018687110685194058,
+      "value": 594,
+      "percValue": 0.018974604695735506,
       "sketchMetrics": []
     },
     "Fore Reef": {

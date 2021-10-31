@@ -14,27 +14,27 @@
   },
   "boating_heatmap": {
     "name": "boating_heatmap",
-    "value": 1757.8491809892002,
-    "percValue": 0.004084734447438196,
+    "value": 1772.1131806676276,
+    "percValue": 0.0041178798682597545,
     "sketchMetrics": [
       {
         "sketchId": "615ffd9d045840708a6e54e5",
         "name": "big-1",
-        "value": 1757.8491809892002,
-        "percValue": 0.004084734447438196
+        "value": 1772.1131806676276,
+        "percValue": 0.0041178798682597545
       }
     ]
   },
   "commercial_fishing_heatmap": {
     "name": "commercial_fishing_heatmap",
-    "value": 40841.81334604975,
-    "percValue": 0.1378451681639656,
+    "value": 40910.256570832804,
+    "percValue": 0.13807617083150062,
     "sketchMetrics": [
       {
         "sketchId": "615ffd9d045840708a6e54e5",
         "name": "big-1",
-        "value": 40841.81334604975,
-        "percValue": 0.1378451681639656
+        "value": 40910.256570832804,
+        "percValue": 0.13807617083150062
       }
     ]
   },
@@ -53,14 +53,14 @@
   },
   "recreational_fishing_heatmap": {
     "name": "recreational_fishing_heatmap",
-    "value": 149.9252351745963,
-    "percValue": 0.0006488858281238898,
+    "value": 159.9315665587783,
+    "percValue": 0.0006921938584174262,
     "sketchMetrics": [
       {
         "sketchId": "615ffd9d045840708a6e54e5",
         "name": "big-1",
-        "value": 149.9252351745963,
-        "percValue": 0.0006488858281238898
+        "value": 159.9315665587783,
+        "percValue": 0.0006921938584174262
       }
     ]
   },
