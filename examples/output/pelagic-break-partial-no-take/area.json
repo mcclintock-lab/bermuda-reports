@@ -1,0 +1,41 @@
+{
+  "eez": {
+    "area": 251253216.90383413,
+    "percArea": 0.0005394742657466582,
+    "sketchAreas": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "area": 251253216.90383413,
+        "percArea": 0.0005394742657466582
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "nearshore": {
+    "area": 61974884.42410125,
+    "percArea": 0.02394942819118024,
+    "sketchAreas": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "area": 61974884.42410125,
+        "percArea": 0.02394942819118024
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "offshore": {
+    "area": 189253446.0152926,
+    "percArea": 0.0004086228640185416,
+    "sketchAreas": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "area": 189253446.0152926,
+        "percArea": 0.0004086228640185416
+      }
+    ],
+    "areaUnit": "square meters"
+  }
+}

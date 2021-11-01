@@ -13,7 +13,7 @@ describe("Basic smoke tests", () => {
     expect(typeof Handler.func).toBe("function");
   });
   test("tests run against all examples", async () => {
-    const examples = await getExamplePolygonSketchAll("Example network");
+    const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await Handler.func(example);
       expect(result).toBeTruthy();

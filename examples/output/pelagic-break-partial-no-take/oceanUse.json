@@ -1,0 +1,119 @@
+{
+  "aquaculture_heatmap": {
+    "name": "aquaculture_heatmap",
+    "value": 133.64044189453125,
+    "percValue": 0.008930981165236721,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 133.64044189453125,
+        "percValue": 0.008930981165236721
+      }
+    ]
+  },
+  "boating_heatmap": {
+    "name": "boating_heatmap",
+    "value": 3807.950564634055,
+    "percValue": 0.008848578714101876,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 3807.950564634055,
+        "percValue": 0.008848578714101876
+      }
+    ]
+  },
+  "commercial_fishing_heatmap": {
+    "name": "commercial_fishing_heatmap",
+    "value": 3297.840440750122,
+    "percValue": 0.011130538359827637,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 3297.840440750122,
+        "percValue": 0.011130538359827637
+      }
+    ]
+  },
+  "passiverec_conservation_heatmap": {
+    "name": "passiverec_conservation_heatmap",
+    "value": 9863.22203614004,
+    "percValue": 0.042725586571945126,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 9863.22203614004,
+        "percValue": 0.042725586571945126
+      }
+    ]
+  },
+  "recreational_fishing_heatmap": {
+    "name": "recreational_fishing_heatmap",
+    "value": 3924.9022018164396,
+    "percValue": 0.016987223081991718,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 3924.9022018164396,
+        "percValue": 0.016987223081991718
+      }
+    ]
+  },
+  "shipping_heatmap": {
+    "name": "shipping_heatmap",
+    "value": 900.2259992361069,
+    "percValue": 0.06095694896447332,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 900.2259992361069,
+        "percValue": 0.06095694896447332
+      }
+    ]
+  },
+  "swim_snorkel_dive_heatmap": {
+    "name": "swim_snorkel_dive_heatmap",
+    "value": 26660.67877505347,
+    "percValue": 0.043438376663139835,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 26660.67877505347,
+        "percValue": 0.043438376663139835
+      }
+    ]
+  },
+  "tourism_heatmap": {
+    "name": "tourism_heatmap",
+    "value": 359.3579382300377,
+    "percValue": 0.01778542378787469,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 359.3579382300377,
+        "percValue": 0.01778542378787469
+      }
+    ]
+  },
+  "utilities_heatmap": {
+    "name": "utilities_heatmap",
+    "value": 116.12503337860107,
+    "percValue": 0.007691297811471481,
+    "sketchMetrics": [
+      {
+        "sketchId": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 116.12503337860107,
+        "percValue": 0.007691297811471481
+      }
+    ]
+  }
+}

@@ -9,6 +9,7 @@ import {
   keyBy,
   genSampleSketchCollection,
 } from "@seasketch/geoprocessing";
+import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import { featureCollection } from "@turf/helpers";
 import { areaStats } from "../util/areaStats";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
@@ -154,16 +155,3 @@ export default new GeoprocessingHandler(protection, {
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });
-
-function getJsonUserAttribute<T>(
-  sketch: Sketch,
-  exportid: string,
-  defaultValue: T
-): T {
-  const value = getUserAttribute(sketch, exportid, defaultValue);
-  if (typeof value === "string") {
-    return JSON.parse(value);
-  } else {
-    return value;
-  }
-}

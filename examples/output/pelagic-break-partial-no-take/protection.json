@@ -1,0 +1,41 @@
+{
+  "sketchStats": [
+    {
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "category": "4/6",
+      "level": "high",
+      "area": 251253216.90383413,
+      "percPlanningArea": 0.0005394742657466582
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "4/6",
+      "level": "high",
+      "numSketches": 1,
+      "area": 251253216.90383413,
+      "percPlanningArea": 0.0005394742657466582
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    },
+    {
+      "level": "high",
+      "numSketches": 1,
+      "area": 251253216.90383413,
+      "percPlanningArea": 0.0005394742657466582
+    },
+    {
+      "level": "low",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    }
+  ]
+}
