@@ -11,7 +11,7 @@ const HabitatRestoration = () => {
     <>
       <ResultsCard
         title="Habitat Restoration"
-        functionName="area"
+        functionName="protection"
         skeleton={<LoadingSkeleton />}
       >
         {(data: AreaResult) => <p>Work in progress</p>}

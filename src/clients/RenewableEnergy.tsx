@@ -11,7 +11,7 @@ const RenewableEnergy = () => {
     <>
       <ResultsCard
         title="Renewable Energy"
-        functionName="area"
+        functionName="protection"
         skeleton={<LoadingSkeleton />}
       >
         {(data: AreaResult) => <p>Work in progress</p>}
