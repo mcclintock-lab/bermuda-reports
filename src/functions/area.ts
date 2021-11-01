@@ -12,7 +12,7 @@ import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 // Multipolygon Feature Collection
 import nearshoreFC from "../../data/dist/nearshore_dissolved.json";
 
-export const NEARSHORE_AREA = 2580299972.372506; // Calculated manually in qgis with 4326
+export const NEARSHORE_AREA = 2585036229.0963717; // Calculated manually with turf
 export const OFFSHORE_AREA = STUDY_REGION_AREA_SQ_METERS - NEARSHORE_AREA;
 
 export type AreaResultType = "eez" | "nearshore" | "offshore";
@@ -42,8 +42,8 @@ export async function area(
 export default new GeoprocessingHandler(area, {
   title: "area",
   description: "Calculates area stats",
-  timeout: 10, // seconds
-  executionMode: "sync",
+  timeout: 20, // seconds
+  executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

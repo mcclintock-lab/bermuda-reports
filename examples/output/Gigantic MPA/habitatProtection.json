@@ -1,0 +1,214 @@
+{
+  "nearshore": {
+    "Bays and Coast": {
+      "name": "Bays and Coast",
+      "value": 9201,
+      "percValue": 0.9928779540304306,
+      "sketchMetrics": []
+    },
+    "Madracis Reef": {
+      "name": "Madracis Reef",
+      "value": 6397,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Montastraea Reef": {
+      "name": "Montastraea Reef",
+      "value": 24848,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Diploria Porites Reef": {
+      "name": "Diploria Porites Reef",
+      "value": 34541,
+      "percValue": 1.0001447764651379,
+      "sketchMetrics": []
+    },
+    "Castle Harbour Madracis": {
+      "name": "Castle Harbour Madracis",
+      "value": 659,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Algal Vermetid Reef": {
+      "name": "Algal Vermetid Reef",
+      "value": 122,
+      "percValue": 1.0082644628099173,
+      "sketchMetrics": []
+    },
+    "Rim Reef": {
+      "name": "Rim Reef",
+      "value": 12366,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Main Terrace Reef": {
+      "name": "Main Terrace Reef",
+      "value": 31305,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Fore Reef": {
+      "name": "Fore Reef",
+      "value": 24670,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Mesotrophic": {
+      "name": "Mesotrophic",
+      "value": 31300,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Rariphotic": {
+      "name": "Rariphotic",
+      "value": 20888,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Mesopelagic": {
+      "name": "Mesopelagic",
+      "value": 70336,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Bathypelagic": {
+      "name": "Bathypelagic",
+      "value": 144054,
+      "percValue": 1,
+      "sketchMetrics": []
+    }
+  },
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 39,
+      "percValue": 0.006051202482544608,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 39,
+          "percValue": 0.006051202482544608
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 53,
+      "percValue": 0.452991452991453,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 53,
+          "percValue": 0.452991452991453
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 39,
+      "percValue": 0.3644859813084112,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 39,
+          "percValue": 0.3644859813084112
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 6,
+      "percValue": 0.003804692454026633,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 6,
+          "percValue": 0.003804692454026633
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 94,
+      "percValue": 0.03013786470022443,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 94,
+          "percValue": 0.03013786470022443
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 5,
+      "percValue": 0.001887504718761797,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 5,
+          "percValue": 0.001887504718761797
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 42,
+      "percValue": 0.007383966244725738,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 42,
+          "percValue": 0.007383966244725738
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}
