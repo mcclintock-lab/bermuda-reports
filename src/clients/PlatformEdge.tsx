@@ -12,8 +12,6 @@ import { Collapse } from "../components/Collapse";
 // component render functions
 import { PlatformEdgeResult } from "../functions/platformEdge";
 
-const Number = new Intl.NumberFormat("en", { style: "decimal" });
-
 const PlatformEdge = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
   return (
@@ -30,8 +28,7 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 This plan would <b>not</b> create breaks in pelagic fisheries
-                access. For each MPA, at least one fishing activity is allowed
-                or it doesn’t overlap with the nearshore pelagic fishing zone.
+                access.
               </>
             );
           } else {
@@ -39,9 +36,10 @@ const PlatformEdge = () => {
               <>
                 This plan <b>would</b> create breaks in pelagic fisheries
                 access. <b>{data.edge.overlapCount}</b> of the{" "}
-                <b>{data.edge.totalCount}</b> MPAs don’t allow fishing (no-take)
-                and overlap with <b>{percentLower(data.edge.percArea)}</b> of
-                the nearshore pelagic fishing zone.
+                <b>{data.edge.totalCount}</b> MPAs in this plan are completely
+                no-take and overlap with{" "}
+                <b>{percentLower(data.edge.percArea)}</b> of the nearshore
+                pelagic fishing zone.
               </>
             );
           }
@@ -50,8 +48,7 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 This MPA would <b>not</b> create a break in pelagic fisheries
-                access. At least one fishing activity is allowed or it does not
-                overlap with the nearshore pelagic fishing zone.
+                access.
               </>
             );
           } else {
@@ -76,9 +73,9 @@ const PlatformEdge = () => {
             <KeySection>{keySection}</KeySection>
             <Collapse title="Learn more">
               <p>
-                A break is classed as any MPA area where fishing is not allowed
-                (no fishing activities), that overlaps with the 55-2000m area of
-                the platform.
+                A break is classed as any MPA where fishing is not allowed (no
+                fishing activities), that overlaps with the 55-2000m area of the
+                platform.
               </p>
               <p>
                 If at least one of the 4 fishing activities are allowed for an
