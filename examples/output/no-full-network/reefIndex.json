@@ -1,0 +1,175 @@
+{
+  "reefIndex": {
+    "wgs84_Coral cover1": {
+      "name": "wgs84_Coral cover1",
+      "value": 25719.26516082883,
+      "percValue": 0.11736307602503646,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 16582.40093165636,
+          "percValue": 0.07566940847842263
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 9136.864229172468,
+          "percValue": 0.04169366754661382
+        }
+      ]
+    },
+    "wgs84_Coral diversity (richness)1": {
+      "name": "wgs84_Coral diversity (richness)1",
+      "value": 24975.420911490917,
+      "percValue": 0.10768788523412817,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 17123.026474952698,
+          "percValue": 0.07383028764281072
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 7852.394436538219,
+          "percValue": 0.03385759759131745
+        }
+      ]
+    },
+    "wgs84_Coral recruit density1": {
+      "name": "wgs84_Coral recruit density1",
+      "value": 5420.747193533985,
+      "percValue": 0.07384676255377914,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 4472.19490936771,
+          "percValue": 0.06092464816662854
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 948.5522841662751,
+          "percValue": 0.0129221143871506
+        }
+      ]
+    },
+    "wgs84_Rugosity1": {
+      "name": "wgs84_Rugosity1",
+      "value": 6253.270216986537,
+      "percValue": 0.08649391989293193,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 4521.228461146355,
+          "percValue": 0.06253668221049444
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 1732.0417558401823,
+          "percValue": 0.023957237682437484
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BRUVs data)1": {
+      "name": "wgs84_Fish diversity (BRUVs data)1",
+      "value": 12759.84696650505,
+      "percValue": 0.06555303910440552,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 9424.139060974121,
+          "percValue": 0.04841601611767634
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 3335.7079055309296,
+          "percValue": 0.017137022986729183
+        }
+      ]
+    },
+    "wgs84_Fish density1": {
+      "name": "wgs84_Fish density1",
+      "value": 28111.0870360104,
+      "percValue": 0.11094263417393459,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 23587.607479490864,
+          "percValue": 0.09309036339588352
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 4523.479556519538,
+          "percValue": 0.01785227077805108
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BREAM data)1": {
+      "name": "wgs84_Fish diversity (BREAM data)1",
+      "value": 45210.03184568882,
+      "percValue": 0.13554087713405255,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 36944.77858817577,
+          "percValue": 0.1107614281816132
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 8265.253257513046,
+          "percValue": 0.02477944895243935
+        }
+      ]
+    },
+    "wgs84_Fish recruit density1": {
+      "name": "wgs84_Fish recruit density1",
+      "value": 5677.342019669712,
+      "percValue": 0.07530548371218843,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 5264.065859435126,
+          "percValue": 0.0698236999751234
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 413.2761602345854,
+          "percValue": 0.005481783737065028
+        }
+      ]
+    },
+    "wgs84_Seagrass Index Value1": {
+      "name": "wgs84_Seagrass Index Value1",
+      "value": 225.32707726210356,
+      "percValue": 0.07789892718634739,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 219.97816272079945,
+          "percValue": 0.07604972774950225
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 5.3489145413041115,
+          "percValue": 0.001849199436845142
+        }
+      ]
+    }
+  }
+}

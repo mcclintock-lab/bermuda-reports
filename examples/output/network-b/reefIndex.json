@@ -1,0 +1,499 @@
+{
+  "reefIndex": {
+    "wgs84_Coral cover1": {
+      "name": "wgs84_Coral cover1",
+      "value": 44078.180149793625,
+      "percValue": 0.2011391373593495,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 7070.427953243256,
+          "percValue": 0.032264031192844926
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 14266.501747250557,
+          "percValue": 0.0651014140063372
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 5178.724466919899,
+          "percValue": 0.023631741790567155
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 11794.123972058296,
+          "percValue": 0.05381937079950288
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 178.7417253255844,
+          "percValue": 0.0008156406711876958
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 4167.905519247055,
+          "percValue": 0.019019136404626484
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 1421.7547657489777,
+          "percValue": 0.006487802494283156
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Coral diversity (richness)1": {
+      "name": "wgs84_Coral diversity (richness)1",
+      "value": 48418.84934860468,
+      "percValue": 0.20877019491680002,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 12533.456561684608,
+          "percValue": 0.05404118859837273
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 11915.461992740631,
+          "percValue": 0.05137654769195524
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 5025.418352305889,
+          "percValue": 0.021668370542960846
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 10293.359769582748,
+          "percValue": 0.044382441019459415
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 356.6379747390747,
+          "percValue": 0.0015377354171502025
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 3782.0307517051697,
+          "percValue": 0.016307188374718652
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 4512.483945846558,
+          "percValue": 0.019456723272182945
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Coral recruit density1": {
+      "name": "wgs84_Coral recruit density1",
+      "value": 12502.243333505554,
+      "percValue": 0.17031788457875896,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 1686.6498295664787,
+          "percValue": 0.02297720683671409
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 1597.1168459951878,
+          "percValue": 0.021757500264452768
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 632.7974313619488,
+          "percValue": 0.008620590481358005
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 5795.214673613198,
+          "percValue": 0.07894812775275156
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 2790.4645529687405,
+          "percValue": 0.03801445924348254
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Rugosity1": {
+      "name": "wgs84_Rugosity1",
+      "value": 15062.039221238345,
+      "percValue": 0.20833496212703212,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 2377.048452973366,
+          "percValue": 0.03287883480784159
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 1005.4035965800285,
+          "percValue": 0.013906531322832464
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 792.1409082561731,
+          "percValue": 0.010956726622257093
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 6337.130683656782,
+          "percValue": 0.08765386024968425
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 4550.3155797719955,
+          "percValue": 0.06293900912441673
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BRUVs data)1": {
+      "name": "wgs84_Fish diversity (BRUVs data)1",
+      "value": 36850.60883812606,
+      "percValue": 0.1893180544036326,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 4880.255723103881,
+          "percValue": 0.02507205573044213
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 14893.012278676033,
+          "percValue": 0.07651206310304577
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 3014.516973257065,
+          "percValue": 0.015486921555371957
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 655.2998547554016,
+          "percValue": 0.0033665683543584136
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 11366.459286928177,
+          "percValue": 0.058394583576947254
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 2041.0647214055061,
+          "percValue": 0.010485862083467077
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Fish density1": {
+      "name": "wgs84_Fish density1",
+      "value": 38134.36877539754,
+      "percValue": 0.1505003103965089,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 3374.0087714493275,
+          "percValue": 0.013315793172673904
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 11882.8348903656,
+          "percValue": 0.04689655019396202
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 2474.9932818710804,
+          "percValue": 0.009767757251856827
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 16618.29803222418,
+          "percValue": 0.06558543100167938
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 532.6144609451294,
+          "percValue": 0.002102005206013158
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 1749.162387996912,
+          "percValue": 0.006903208071383364
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 1502.456950545311,
+          "percValue": 0.005929565498940249
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BREAM data)1": {
+      "name": "wgs84_Fish diversity (BREAM data)1",
+      "value": 62435.04219725728,
+      "percValue": 0.18718191600045975,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 5348.805169582367,
+          "percValue": 0.01603586006705019
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 18071.86334848404,
+          "percValue": 0.05417992666010126
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 3654.561907887459,
+          "percValue": 0.010956473736326246
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 30158.845242649317,
+          "percValue": 0.09041701964491405
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 5200.9665286540985,
+          "percValue": 0.015592635892068003
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Fish recruit density1": {
+      "name": "wgs84_Fish recruit density1",
+      "value": 5049.727878647856,
+      "percValue": 0.0669806749706129,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 393.9389254413545,
+          "percValue": 0.005225290502252811
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 713.9204565435648,
+          "percValue": 0.009469594244238828
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 167.39954993501306,
+          "percValue": 0.0022204235780376993
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 3554.6497920639813,
+          "percValue": 0.04714963817423511
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 5.994738012552261,
+          "percValue": 0.00007951549232000544
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 213.8244166513905,
+          "percValue": 0.002836212979528446
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Seagrass Index Value1": {
+      "name": "wgs84_Seagrass Index Value1",
+      "value": 123.5419248281978,
+      "percValue": 0.04271028375102237,
+      "sketchMetrics": [
+        {
+          "id": "615f8a88045840708a6e5387",
+          "name": "full-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8aa1045840708a6e5389",
+          "name": "high-2",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8ae9045840708a6e538e",
+          "name": "low-2",
+          "value": 5.215581215918064,
+          "percValue": 0.0018031041200640189
+        },
+        {
+          "id": "615f8b01045840708a6e5391",
+          "name": "full-3",
+          "value": 107.92634399374947,
+          "percValue": 0.03731174483960589
+        },
+        {
+          "id": "615f8b48045840708a6e5395",
+          "name": "full-1",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "615f8b80045840708a6e53a0",
+          "name": "low-2",
+          "value": 10.399999618530273,
+          "percValue": 0.0035954347913524573
+        },
+        {
+          "id": "6165ca3f1e0a596510ad8970",
+          "name": "crosser",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "6165d8981e0a596510ad8b2a",
+          "name": "outside-a",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

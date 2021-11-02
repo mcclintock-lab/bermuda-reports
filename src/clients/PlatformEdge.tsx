@@ -86,7 +86,7 @@ const PlatformEdge = () => {
                   <li>
                     Fishing/collection: local fishing (sustainable) Industrial
                   </li>
-                  <li>fishing, industrial scale aquaculture</li>
+                  <li>Fishing, industrial scale aquaculture</li>
                 </ul>
               </p>
             </Collapse>

@@ -1,0 +1,121 @@
+{
+  "reefIndex": {
+    "wgs84_Coral cover1": {
+      "name": "wgs84_Coral cover1",
+      "value": 4167.905519247055,
+      "percValue": 0.019019136404626484,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 4167.905519247055,
+          "percValue": 0.019019136404626484
+        }
+      ]
+    },
+    "wgs84_Coral diversity (richness)1": {
+      "name": "wgs84_Coral diversity (richness)1",
+      "value": 3782.0307517051697,
+      "percValue": 0.016307188374718652,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 3782.0307517051697,
+          "percValue": 0.016307188374718652
+        }
+      ]
+    },
+    "wgs84_Coral recruit density1": {
+      "name": "wgs84_Coral recruit density1",
+      "value": 2790.4645529687405,
+      "percValue": 0.03801445924348254,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 2790.4645529687405,
+          "percValue": 0.03801445924348254
+        }
+      ]
+    },
+    "wgs84_Rugosity1": {
+      "name": "wgs84_Rugosity1",
+      "value": 4550.3155797719955,
+      "percValue": 0.06293900912441673,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 4550.3155797719955,
+          "percValue": 0.06293900912441673
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BRUVs data)1": {
+      "name": "wgs84_Fish diversity (BRUVs data)1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "wgs84_Fish density1": {
+      "name": "wgs84_Fish density1",
+      "value": 1749.162387996912,
+      "percValue": 0.006903208071383364,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 1749.162387996912,
+          "percValue": 0.006903208071383364
+        }
+      ]
+    },
+    "wgs84_Fish diversity (BREAM data)1": {
+      "name": "wgs84_Fish diversity (BREAM data)1",
+      "value": 5200.9665286540985,
+      "percValue": 0.015592635892068003,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 5200.9665286540985,
+          "percValue": 0.015592635892068003
+        }
+      ]
+    },
+    "wgs84_Fish recruit density1": {
+      "name": "wgs84_Fish recruit density1",
+      "value": 213.8244166513905,
+      "percValue": 0.002836212979528446,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 213.8244166513905,
+          "percValue": 0.002836212979528446
+        }
+      ]
+    },
+    "wgs84_Seagrass Index Value1": {
+      "name": "wgs84_Seagrass Index Value1",
+      "value": 10.399999618530273,
+      "percValue": 0.0035954347913524573,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 10.399999618530273,
+          "percValue": 0.0035954347913524573
+        }
+      ]
+    }
+  }
+}

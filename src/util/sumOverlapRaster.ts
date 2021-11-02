@@ -71,7 +71,7 @@ export async function sumOverlapRaster(
   return {
     name,
     value: sumValue,
-    percValue: sumValue / totalValue,
+    percValue: Math.min(sumValue, totalValue) / totalValue,
     sketchMetrics,
   };
 }

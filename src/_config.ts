@@ -17,6 +17,7 @@ export const dataBucketUrl =
     : `https://gp-bermuda-reports-datasets.s3.us-east-1.amazonaws.com/`;
 
 export const eezObjective = 0.2; // 20 percent
+export const fileSuffix = "_cog.tif";
 
 /** Habitat */
 
@@ -24,8 +25,6 @@ export interface HabitatResults {
   nearshore: ClassMetrics;
   offshore: ClassMetrics;
 }
-
-export const fileSuffix = "_cog.tif";
 
 const nearshoreBaseFilename = "Habitat Zones1";
 
@@ -187,6 +186,86 @@ export const offshore = {
   }),
 };
 
+//// REEF INDEX ////
+
+export interface ReefIndexResults {
+  reefIndex: ClassMetrics;
+}
+
+export const reefIndexLayers = [
+  {
+    baseFilename: "wgs84_Coral cover1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Coral Cover",
+    layerId: "614df361c33508c127015a20",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Coral diversity (richness)1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Coral Diversity (richness)",
+    layerId: "614df361c33508c127015a22",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Coral recruit density1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Coral Recruit Density",
+    layerId: "614df361c33508c127015a24",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Rugosity1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Rugosity (complexity)",
+    layerId: "614df361c33508c127015a26",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Fish diversity (BRUVs data)1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Fish Diversity (BRUV)",
+    layerId: "614df361c33508c127015a14",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Fish density1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Fish Density",
+    layerId: "614df361c33508c127015a18",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Fish diversity (BREAM data)1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Fish Diversity (BREAM)",
+    layerId: "614df361c33508c127015a16",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Fish recruit density1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Fish Recruit Density",
+    layerId: "614df361c33508c127015a1a",
+    goalPerc: 0.2,
+  },
+  {
+    baseFilename: "wgs84_Seagrass Index Value1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Seagrass",
+    layerId: "614df361c33508c127015a1e",
+    goalPerc: 0.5,
+  },
+];
+
+export const reefIndex = {
+  layers: reefIndexLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${fileSuffix}` };
+  }),
+};
+
+//// Export ////
+
 export default {
   STUDY_REGION_AREA_SQ_KM,
   STUDY_REGION_AREA_SQ_METERS,
@@ -194,6 +273,7 @@ export default {
   localDataUrl,
   dataBucketUrl,
   eezObjective,
-  nearshore: nearshore,
-  offshore: offshore,
+  nearshore,
+  offshore,
+  reefIndex,
 };
