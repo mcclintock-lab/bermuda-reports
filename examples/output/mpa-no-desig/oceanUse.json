@@ -15,52 +15,52 @@
   "boating_heatmap": {
     "name": "boating_heatmap",
     "value": 1402.5762112140656,
-    "percValue": 0.0032591825436807157,
+    "percValue": 0.003259182534592635,
     "sketchMetrics": [
       {
         "sketchId": "615c6af3aac8c8285d50dc42",
         "name": "mpa-no-desig",
         "value": 1402.5762112140656,
-        "percValue": 0.0032591825436807157
+        "percValue": 0.003259182534592635
       }
     ]
   },
   "commercial_fishing_heatmap": {
     "name": "commercial_fishing_heatmap",
     "value": 1279.6457659006119,
-    "percValue": 0.004318931294659014,
+    "percValue": 0.0043189286912403545,
     "sketchMetrics": [
       {
         "sketchId": "615c6af3aac8c8285d50dc42",
         "name": "mpa-no-desig",
         "value": 1279.6457659006119,
-        "percValue": 0.004318931294659014
+        "percValue": 0.0043189286912403545
       }
     ]
   },
   "passiverec_conservation_heatmap": {
     "name": "passiverec_conservation_heatmap",
     "value": 3005.5058405399323,
-    "percValue": 0.01301927499066314,
+    "percValue": 0.013019254451483851,
     "sketchMetrics": [
       {
         "sketchId": "615c6af3aac8c8285d50dc42",
         "name": "mpa-no-desig",
         "value": 3005.5058405399323,
-        "percValue": 0.01301927499066314
+        "percValue": 0.013019254451483851
       }
     ]
   },
   "recreational_fishing_heatmap": {
     "name": "recreational_fishing_heatmap",
     "value": 1693.5159249305725,
-    "percValue": 0.0073296432192341806,
+    "percValue": 0.007329627199075819,
     "sketchMetrics": [
       {
         "sketchId": "615c6af3aac8c8285d50dc42",
         "name": "mpa-no-desig",
         "value": 1693.5159249305725,
-        "percValue": 0.0073296432192341806
+        "percValue": 0.007329627199075819
       }
     ]
   },
@@ -80,13 +80,13 @@
   "swim_snorkel_dive_heatmap": {
     "name": "swim_snorkel_dive_heatmap",
     "value": 14437.039018332958,
-    "percValue": 0.02352233954994403,
+    "percValue": 0.02352230111268414,
     "sketchMetrics": [
       {
         "sketchId": "615c6af3aac8c8285d50dc42",
         "name": "mpa-no-desig",
         "value": 14437.039018332958,
-        "percValue": 0.02352233954994403
+        "percValue": 0.02352230111268414
       }
     ]
   },

@@ -15,52 +15,52 @@
   "boating_heatmap": {
     "name": "boating_heatmap",
     "value": 4845.887756824493,
-    "percValue": 0.01126044535719565,
+    "percValue": 0.011260445325796417,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 4845.887756824493,
-        "percValue": 0.01126044535719565
+        "percValue": 0.011260445325796417
       }
     ]
   },
   "commercial_fishing_heatmap": {
     "name": "commercial_fishing_heatmap",
     "value": 3174.694795846939,
-    "percValue": 0.010714909602443359,
+    "percValue": 0.010714903143578031,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 3174.694795846939,
-        "percValue": 0.010714909602443359
+        "percValue": 0.010714903143578031
       }
     ]
   },
   "passiverec_conservation_heatmap": {
     "name": "passiverec_conservation_heatmap",
     "value": 2146.922363817692,
-    "percValue": 0.009300056004258392,
+    "percValue": 0.00930004133251071,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 2146.922363817692,
-        "percValue": 0.009300056004258392
+        "percValue": 0.00930004133251071
       }
     ]
   },
   "recreational_fishing_heatmap": {
     "name": "recreational_fishing_heatmap",
     "value": 5815.275290131569,
-    "percValue": 0.025168876460397234,
+    "percValue": 0.02516882144961777,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 5815.275290131569,
-        "percValue": 0.025168876460397234
+        "percValue": 0.02516882144961777
       }
     ]
   },
@@ -80,26 +80,26 @@
   "swim_snorkel_dive_heatmap": {
     "name": "swim_snorkel_dive_heatmap",
     "value": 3087.28367421031,
-    "percValue": 0.005030126660983364,
+    "percValue": 0.0050301184413806595,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 3087.28367421031,
-        "percValue": 0.005030126660983364
+        "percValue": 0.0050301184413806595
       }
     ]
   },
   "tourism_heatmap": {
     "name": "tourism_heatmap",
     "value": 123.75391072034836,
-    "percValue": 0.006124856343535833,
+    "percValue": 0.006124385753109841,
     "sketchMetrics": [
       {
         "sketchId": "615bbbe9aac8c8285d50db2d",
         "name": "mpa-full",
         "value": 123.75391072034836,
-        "percValue": 0.006124856343535833
+        "percValue": 0.006124385753109841
       }
     ]
   },

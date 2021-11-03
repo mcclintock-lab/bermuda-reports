@@ -5,7 +5,9 @@ import fs from "fs";
 import { rasterConfig } from "../src/functions/oceanUseConfig";
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
+import fetch from "node-fetch";
 // @ts-ignore
+import parseGeoraster from "georaster";
 
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
@@ -17,8 +19,11 @@ const DEST_PATH = `${__dirname}/precalc/oceanUseTotals.json`;
 async function main() {
   const sapTotals = await Promise.all(
     rasterConfig.map(async (mapConfig) => {
-      const raster = await loadCogWindow(mapConfig.url, {});
+      const response = await fetch(mapConfig.url);
+      const rasterBuf = await response.arrayBuffer();
+      const raster = await parseGeoraster(rasterBuf);
       const sum = geoblaze.sum(raster)[0] as number;
+      console.log(mapConfig.name, sum);
       return sum;
     })
   );
@@ -39,12 +44,6 @@ async function main() {
   );
 
   assert(Object.keys(sapMap).length === rasterConfig.length);
-  // assert(stats.areaByClass.length > 0);
-  // const sumPerc = stats.areaByClass.reduce<number>(
-  //   (sum, areaType) => areaType.percArea + sum,
-  //   0
-  // );
-  // assert(sumPerc > 0.99 && sumPerc < 1.01);
 }
 
 main();
