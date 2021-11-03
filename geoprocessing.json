@@ -64,6 +64,7 @@
     "src/functions/existingProtections.ts",
     "src/functions/habitatProtection.ts",
     "src/functions/platformEdge.ts",
-    "src/functions/reefIndex.ts"
+    "src/functions/reefIndex.ts",
+    "src/functions/renewable.ts"
   ]
 }

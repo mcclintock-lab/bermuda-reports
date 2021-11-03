@@ -84,9 +84,9 @@ const SpeciesProtection = () => {
                 Plans should prioritize areas of high quality habitat used by
                 unique, rare, and/or threatened species named in the Protected
                 Species Act. High quality habitat areas have been determined
-                using 9 different measures. This report summarizes the
-                proportion of high quality habitat within this plan for each
-                measure.
+                using 9 different measures of reef health. This report
+                summarizes the proportion of high quality habitat within this
+                plan for each measure.
               </p>
               <Collapse title="Learn more">
                 <p>
@@ -96,13 +96,15 @@ const SpeciesProtection = () => {
                 </p>
                 <p>
                   A reef index has been developed that identifies the best
-                  habitat based on 9 different measures. Goals have been
-                  established for each measure to prioritize representative
-                  coverage of different high quality habitat types.
+                  habitat based on 9 different measures of reef health. Goals
+                  have been established for each measure to prioritize
+                  representative coverage of different high quality habitat
+                  types.
                 </p>
                 <p>
-                  There are areas that will score high for multiple measures and
-                  may be good candidates for inclusion in a plan.
+                  There are areas that will score high for multiple measures of
+                  reef health and may be good candidates for inclusion in a
+                  plan.
                 </p>
               </Collapse>
               <TableStyled>

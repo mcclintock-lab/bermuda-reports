@@ -19,7 +19,7 @@ export const dataBucketUrl =
 export const eezObjective = 0.2; // 20 percent
 export const fileSuffix = "_cog.tif";
 
-/** Habitat */
+//// HABITAT ////
 
 export interface HabitatResults {
   nearshore: ClassMetrics;
@@ -264,6 +264,45 @@ export const reefIndex = {
   }),
 };
 
+//// RENEWABLE ENERGY ////
+
+export interface RenewableResults {
+  renewable: ClassMetrics;
+}
+
+export const renewableLayers = [
+  {
+    baseFilename: "float_solar1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Floating Solar",
+    layerId: "",
+  },
+  {
+    baseFilename: "wind_fixed1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Fixed Offshore Wind",
+    layerId: "",
+  },
+  {
+    baseFilename: "wind_float1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Floating Offshore Wind",
+    layerId: "",
+  },
+  {
+    baseFilename: "wave_energy1",
+    noDataValue: -3.39999995214436425e38,
+    display: "Wave Energy",
+    layerId: "",
+  },
+];
+
+export const renewable = {
+  layers: renewableLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${fileSuffix}` };
+  }),
+};
+
 //// Export ////
 
 export default {
@@ -276,4 +315,5 @@ export default {
   nearshore,
   offshore,
   reefIndex,
+  renewable,
 };

@@ -1,0 +1,56 @@
+{
+  "renewable": {
+    "float_solar1": {
+      "name": "float_solar1",
+      "value": 2150.1310334801674,
+      "percValue": 0.003229075853366909,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 2150.1310334801674,
+          "percValue": 0.003229075853366909
+        }
+      ]
+    },
+    "wind_fixed1": {
+      "name": "wind_fixed1",
+      "value": 206.27262723445892,
+      "percValue": 0.00043389855341239295,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 206.27262723445892,
+          "percValue": 0.00043389855341239295
+        }
+      ]
+    },
+    "wind_float1": {
+      "name": "wind_float1",
+      "value": 1674.0362644195557,
+      "percValue": 0.011734276224185462,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 1674.0362644195557,
+          "percValue": 0.011734276224185462
+        }
+      ]
+    },
+    "wave_energy1": {
+      "name": "wave_energy1",
+      "value": 408.15099066495895,
+      "percValue": 0.0017367313271318024,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 408.15099066495895,
+          "percValue": 0.0017367313271318024
+        }
+      ]
+    }
+  }
+}

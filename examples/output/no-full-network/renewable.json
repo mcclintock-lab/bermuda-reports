@@ -1,0 +1,80 @@
+{
+  "renewable": {
+    "float_solar1": {
+      "name": "float_solar1",
+      "value": 101303.3486155197,
+      "percValue": 0.15213779615566952,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 98073.00915759057,
+          "percValue": 0.14728645873513388
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 3230.3394579291344,
+          "percValue": 0.004851337420535646
+        }
+      ]
+    },
+    "wind_fixed1": {
+      "name": "wind_fixed1",
+      "value": 85137.5437418446,
+      "percValue": 0.17908850808731785,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 82670.54312827438,
+          "percValue": 0.17389912347605335
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 2467.0006135702133,
+          "percValue": 0.005189384611264508
+        }
+      ]
+    },
+    "wind_float1": {
+      "name": "wind_float1",
+      "value": 14753.721127659082,
+      "percValue": 0.10341725727583366,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 14094.46250346303,
+          "percValue": 0.0987961370743694
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 659.2586241960526,
+          "percValue": 0.00462112020146425
+        }
+      ]
+    },
+    "wave_energy1": {
+      "name": "wave_energy1",
+      "value": 50777.75278497487,
+      "percValue": 0.21606541696577866,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 48348.84639395028,
+          "percValue": 0.20573012949510386
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 2428.9063910245895,
+          "percValue": 0.010335287470674786
+        }
+      ]
+    }
+  }
+}
