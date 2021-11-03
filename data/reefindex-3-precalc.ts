@@ -6,10 +6,9 @@ import config from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
 // @ts-ignore
+import parseGeoraster from "georaster";
+import fetch from "node-fetch";
 
-// TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
-// @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
 import { strict as assert } from "assert";
 
 const LAYERS = config.reefIndex.layers;
@@ -20,7 +19,9 @@ async function main() {
   const totals = await Promise.all(
     LAYERS.map(async (lyr) => {
       const url = `${config.localDataUrl}${lyr.filename}`;
-      const raster = await loadCogWindow(url, { noDataValue: lyr.noDataValue });
+      const response = await fetch(url);
+      const rasterBuf = await response.arrayBuffer();
+      const raster = await parseGeoraster(rasterBuf);
       const sum = geoblaze.sum(raster)[0] as number;
       return sum;
     })
