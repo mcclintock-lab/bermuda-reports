@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 import KeyNurseryHabitat from "./KeyNurseryHabitat";
-import HabitatRepresentation from "./HabitatRepresentation";
 import HabitatProtection from "./HabitatProtection";
 import HabitatRestoration from "./HabitatRestoration";
 import SpeciesProtection from "./SpeciesProtection";
@@ -15,7 +14,6 @@ const Report: FunctionComponent<ReportProps> = ({ hidden }) => {
       <HabitatProtection />
       <SpeciesProtection />
       <KeyNurseryHabitat />
-      <HabitatRepresentation />
       <HabitatRestoration />
     </div>
   );

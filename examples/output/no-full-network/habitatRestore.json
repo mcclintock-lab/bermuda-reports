@@ -1,0 +1,42 @@
+{
+  "restore": {
+    "seagrass_restoration": {
+      "name": "seagrass_restoration",
+      "value": 20,
+      "percValue": 0.2,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 2,
+          "percValue": 0.025
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 2,
+          "percValue": 0.025
+        }
+      ]
+    },
+    "mangrove_saltmarsh_restoration": {
+      "name": "mangrove_saltmarsh_restoration",
+      "value": 20,
+      "percValue": 0.2,
+      "sketchMetrics": [
+        {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "value": 2,
+          "percValue": 0.025
+        },
+        {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "value": 2,
+          "percValue": 0.025
+        }
+      ]
+    }
+  }
+}

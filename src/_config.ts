@@ -16,8 +16,12 @@ export const dataBucketUrl =
     ? localDataUrl
     : `https://gp-bermuda-reports-datasets.s3.us-east-1.amazonaws.com/`;
 
+export const cogFileSuffix = "_cog.tif";
+export const fgbFileSuffix = ".fgb";
+
+//// SIZE ////
+
 export const eezObjective = 0.2; // 20 percent
-export const fileSuffix = "_cog.tif";
 
 //// HABITAT ////
 
@@ -98,7 +102,7 @@ const nearshoreLayers = [
 
 export const nearshore = {
   baseFilename: nearshoreBaseFilename,
-  filename: `${nearshoreBaseFilename}${fileSuffix}`,
+  filename: `${nearshoreBaseFilename}${cogFileSuffix}`,
   layerId: "60359da253bd7d85675a1bd8",
   layers: nearshoreLayers,
   classIdToName: nearshoreLayers.reduce<Record<string, string>>(
@@ -182,7 +186,7 @@ export const offshoreLayers = [
 
 export const offshore = {
   layers: offshoreLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fileSuffix}` };
+    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
   }),
 };
 
@@ -260,7 +264,7 @@ export const reefIndexLayers = [
 
 export const reefIndex = {
   layers: reefIndexLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fileSuffix}` };
+    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
   }),
 };
 
@@ -299,7 +303,35 @@ export const renewableLayers = [
 
 export const renewable = {
   layers: renewableLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fileSuffix}` };
+    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  }),
+};
+
+//// HABITAT RESTORATION ////
+
+export interface HabitatRestoreResults {
+  /** area of the sketch in square meters */
+  restore: ClassMetrics;
+}
+
+const habitatRestoreLayers = [
+  {
+    baseFilename: "seagrass_restoration",
+    display: "Seagrass",
+    type: "point",
+    layerId: "",
+  },
+  {
+    baseFilename: "mangrove_saltmarsh_restoration",
+    display: "Mangrove/Saltmarsh",
+    type: "linestring",
+    layerId: "",
+  },
+];
+
+export const habitatRestore = {
+  layers: habitatRestoreLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
   }),
 };
 
@@ -316,4 +348,5 @@ export default {
   offshore,
   reefIndex,
   renewable,
+  habitatRestore,
 };
