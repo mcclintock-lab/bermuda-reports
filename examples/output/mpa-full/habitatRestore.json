@@ -1,7 +1,7 @@
 {
   "habitatRestore": {
-    "seagrass_restoration": {
-      "name": "seagrass_restoration",
+    "seagrass_restoration_500mbuff": {
+      "name": "seagrass_restoration_500mbuff",
       "value": 20,
       "percValue": 0.2,
       "sketchMetrics": [
@@ -13,8 +13,8 @@
         }
       ]
     },
-    "mangrove_saltmarsh_restoration": {
-      "name": "mangrove_saltmarsh_restoration",
+    "mangrove__restoration_500mbuff": {
+      "name": "mangrove__restoration_500mbuff",
       "value": 20,
       "percValue": 0.2,
       "sketchMetrics": [
