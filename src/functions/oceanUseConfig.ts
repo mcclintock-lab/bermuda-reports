@@ -15,7 +15,7 @@ const rasterMaps = [
   {
     name: "commercial_fishing_heatmap",
     display: "Commercial Fishing",
-    layerId: "60ef55245bf512cb19da4d00",
+    layerId: "61648ab8a04323106537d190",
   },
   {
     name: "passiverec_conservation_heatmap",
@@ -30,7 +30,7 @@ const rasterMaps = [
   {
     name: "shipping_heatmap",
     display: "Shipping",
-    layerId: "60ef55245bf512cb19da4d08",
+    layerId: "61648ab8a04323106537d198",
   },
   {
     name: "swim_snorkel_dive_heatmap",
@@ -45,7 +45,7 @@ const rasterMaps = [
   {
     name: "utilities_heatmap",
     display: "Utilities",
-    layerId: "60ef55245bf512cb19da4d06",
+    layerId: "61648ab8a04323106537d196",
   },
 ];
 
