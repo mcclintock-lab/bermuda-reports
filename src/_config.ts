@@ -329,13 +329,13 @@ const habitatRestoreLayers = [
     baseFilename: "seagrass_restoration",
     display: "Seagrass",
     type: "point",
-    layerId: "",
+    layerId: "5dc07170cae3e4074e651711",
   },
   {
     baseFilename: "mangrove_saltmarsh_restoration",
     display: "Mangrove/Saltmarsh",
     type: "linestring",
-    layerId: "",
+    layerId: "6185c0f7cef7c17717464d97",
   },
 ];
 
