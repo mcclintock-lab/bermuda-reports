@@ -55,9 +55,9 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 This MPA <b>would</b> create a break in pelagic fisheries
-                access. Fishing is not allowed (no-take) and it overlaps with{" "}
-                <b>{percentLower(data.edge.percArea)}</b> of the nearshore
-                pelagic fishing zone.
+                access. At least one fishing activity is prohibited and it
+                overlaps with <b>{percentLower(data.edge.percArea)}</b> of the
+                nearshore pelagic fishing zone.
               </>
             );
           }
