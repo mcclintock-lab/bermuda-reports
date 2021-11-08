@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react";
-import { SketchAttributesCard, Card } from "@seasketch/geoprocessing/client";
+import { Card } from "@seasketch/geoprocessing/client";
+import { InfoStatus } from "../components/InfoStatus";
 import SizeCard from "./SizeCard";
 import ProtectionCard from "./ProtectionCard";
 import ExistingProtections from "./ExistingProtections";
-import { InfoStatus } from "../components/InfoStatus";
+import AttributesCard from "./AttributesCard";
 
 interface ReportProps {
   hidden: boolean;
@@ -18,9 +19,8 @@ const Overview: FunctionComponent<ReportProps> = ({ hidden }) => {
           msg={
             <span>
               These are <b>draft</b> reports. Users will be notified of
-              significant changes via SeaSketch forums post for which users
-              should receive an email. Direct all report questions, requests and
-              feedback to PERSON@gmail.com
+              significant changes via SeaSketch forum post and email. Direct all
+              report feedback to PERSON@gmail.com
             </span>
           }
         />
@@ -28,7 +28,7 @@ const Overview: FunctionComponent<ReportProps> = ({ hidden }) => {
       <SizeCard />
       <ProtectionCard />
       <ExistingProtections />
-      <SketchAttributesCard autoHide={true} />
+      <AttributesCard />
     </div>
   );
 };
