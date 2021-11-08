@@ -1,11 +1,12 @@
 import React from "react";
 import {
   ResultsCard,
-  squareMeterToKilometer,
+  squareMeterToMile,
   LayerToggle,
   Column,
   Table,
   useSketchProperties,
+  percentLower,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
@@ -45,6 +46,32 @@ const TableStyled = styled.div`
   font-size: 12px;
   td {
     text-align: right;
+  }
+
+  tr:nth-child(1) > th:nth-child(n + 1) {
+    text-align: center;
+  }
+
+  tr:nth-child(2) > th:nth-child(n + 1) {
+    text-align: center;
+  }
+
+  tr > td:nth-child(1),
+  tr > th:nth-child(1) {
+    border-right: 1px solid #777;
+  }
+
+  tr:nth-child(1) > th:nth-child(2) {
+    border-right: 1px solid #777;
+  }
+
+  tr > td:nth-child(3),
+  tr > th:nth-child(3) {
+    border-right: 1px solid #777;
+  }
+  tr > td:nth-child(5),
+  tr > th:nth-child(5) {
+    border-right: 1px solid #777;
   }
 `;
 
@@ -119,12 +146,11 @@ const genSingleSizeTable = (data: AreaResult) => {
     {
       Header: "Area Within Plan",
       accessor: (row) =>
-        Number.format(Math.round(squareMeterToKilometer(row.area))) +
-        " sq. mi.",
+        Number.format(Math.round(squareMeterToMile(row.area))) + " sq. mi.",
     },
     {
       Header: "% Within Plan",
-      accessor: (row) => Percent.format(row.percArea),
+      accessor: (row) => percentLower(row.percArea),
     },
   ];
 
@@ -176,13 +202,13 @@ const genNetworkSizeTable = (data: AreaResult) => {
         {
           Header: "Area",
           accessor: (row) =>
-            Number.format(
-              Math.round(squareMeterToKilometer(row.nearshoreArea))
-            ) + " sq. mi.",
+            Number.format(Math.round(squareMeterToMile(row.nearshoreArea))) +
+            " sq. mi.",
         },
         {
           Header: "% Area",
-          accessor: (row) => Percent.format(row.nearshorePercArea),
+          accessor: (row) =>
+            percentLower(row.nearshorePercArea, { lowerOverride: "0.1%" }),
         },
       ],
     },
@@ -193,13 +219,12 @@ const genNetworkSizeTable = (data: AreaResult) => {
         {
           Header: "Area ",
           accessor: (row) =>
-            Number.format(
-              Math.round(squareMeterToKilometer(row.offshoreArea))
-            ) + " sq. mi.",
+            Number.format(Math.round(squareMeterToMile(row.offshoreArea))) +
+            " sq. mi.",
         },
         {
           Header: "% Area ",
-          accessor: (row) => Percent.format(row.offshorePercArea),
+          accessor: (row) => percentLower(row.offshorePercArea),
         },
       ],
     },
@@ -210,12 +235,12 @@ const genNetworkSizeTable = (data: AreaResult) => {
         {
           Header: "Area  ",
           accessor: (row) =>
-            Number.format(Math.round(squareMeterToKilometer(row.overallArea))) +
+            Number.format(Math.round(squareMeterToMile(row.overallArea))) +
             " sq. mi.",
         },
         {
           Header: "% Area  ",
-          accessor: (row) => Percent.format(row.overallPercArea),
+          accessor: (row) => percentLower(row.overallPercArea),
         },
       ],
     },

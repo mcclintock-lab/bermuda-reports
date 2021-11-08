@@ -20,7 +20,6 @@ import config, {
 import {
   ClassMetrics,
   GroupMetricAgg,
-  GroupMetricsSketch,
   SketchGroupMetricAgg,
 } from "../util/types";
 import {
@@ -29,16 +28,16 @@ import {
 } from "../util/iucnProtectionLevel";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
-import { Pill, LevelPill, GreenPill } from "../components/Pill";
+import { Pill, LevelPill } from "../components/Pill";
 import { ClassMetric } from "../util/types";
 import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
 
+import styled from "styled-components";
+import { getGroupAgg, getSketchAgg } from "../util/metrics";
+
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
-import styled from "styled-components";
-import { stringLiteral } from "@babel/types";
-import { getGroupAgg, getSketchAgg } from "../util/metrics";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 const Percent = new Intl.NumberFormat("en", {
@@ -473,8 +472,8 @@ const genHelp = () => (
       </p>
       <p>
         Strategy: The effectiveness of a plan increases when its MPAs contain a
-        mosaic of habitats. Consider opportunities for MPA boundaries to include
-        multiple habitat types.
+        mosaic of habitats (two or more types). Strive to include multiple
+        habitat types in MPA boundaries.
       </p>
     </Collapse>
   </>

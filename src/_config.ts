@@ -326,13 +326,13 @@ export interface HabitatRestoreResults {
 
 const habitatRestoreLayers = [
   {
-    baseFilename: "seagrass_restoration",
+    baseFilename: "seagrass_restoration_500mbuff",
     display: "Seagrass",
     type: "point",
     layerId: "5dc07170cae3e4074e651711",
   },
   {
-    baseFilename: "mangrove_saltmarsh_restoration",
+    baseFilename: "mangrove__restoration_500mbuff",
     display: "Mangrove/Saltmarsh",
     type: "linestring",
     layerId: "6185c0f7cef7c17717464d97",

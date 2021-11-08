@@ -67,7 +67,6 @@ export const IucnMatrix = () => {
             <tr>
               <td>{act.display}</td>
               {iucnActivityCategories[act.id].map((rank) => {
-                console.log("rank", rank);
                 return <td className={rank}>{activityRanks[rank].display}</td>;
               })}
             </tr>

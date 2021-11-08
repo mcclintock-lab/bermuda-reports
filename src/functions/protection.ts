@@ -8,8 +8,8 @@ import {
   groupBy,
   keyBy,
   genSampleSketchCollection,
+  getJsonUserAttribute,
 } from "@seasketch/geoprocessing";
-import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import { featureCollection } from "@turf/helpers";
 import { areaStats } from "../util/areaStats";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
