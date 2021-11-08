@@ -50,7 +50,7 @@ export async function platformEdge(
         "ACTIVITIES",
         []
       );
-      const numFishing = fishingActivities.reduce(
+      const numFishingActivities = fishingActivities.reduce(
         (hasFishingSoFar, fishingActivity) =>
           sketchActivities.includes(fishingActivity)
             ? hasFishingSoFar + 1
@@ -59,7 +59,7 @@ export async function platformEdge(
       );
 
       // If sketch overlaps and all fishing activity allowed then count as overlap and add area to sum
-      return remPoly && numFishing === 0
+      return remPoly && numFishingActivities < fishingActivities.length
         ? { area: result.area + turfArea(remPoly), count: result.count + 1 }
         : result;
     },

@@ -1,9 +1,9 @@
 {
   "edge": {
-    "area": 0,
-    "percArea": 0,
+    "area": 10852157.094060296,
+    "percArea": 0.006257615658889126,
     "totalCount": 1,
-    "overlapCount": 0,
+    "overlapCount": 1,
     "areaUnit": "square meters",
     "sketchAreas": []
   }

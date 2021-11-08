@@ -36,8 +36,8 @@ const PlatformEdge = () => {
               <>
                 This plan <b>would</b> create breaks in pelagic fisheries
                 access. <b>{data.edge.overlapCount}</b> of the{" "}
-                <b>{data.edge.totalCount}</b> MPAs in this plan are completely
-                no-take and overlap with{" "}
+                <b>{data.edge.totalCount}</b> MPAs in this plan prohibit some
+                type of fishing activity and overlap with{" "}
                 <b>{percentLower(data.edge.percArea)}</b> of the nearshore
                 pelagic fishing zone.
               </>
