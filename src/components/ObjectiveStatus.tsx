@@ -2,7 +2,7 @@ import React from "react";
 import {
   CheckCircleFill,
   XCircleFill,
-  ExclamationCircleFill,
+  QuestionCircleFill,
 } from "@styled-icons/bootstrap";
 
 export interface ObjectiveStatusProps {
@@ -30,7 +30,7 @@ export const ObjectiveStatus: React.FunctionComponent<ObjectiveStatusProps> = ({
       break;
     case "maybe":
       icon = (
-        <ExclamationCircleFill
+        <QuestionCircleFill
           size={size}
           style={{ ...{ color: "#fec44f" }, ...style }}
         />

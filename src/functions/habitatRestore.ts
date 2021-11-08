@@ -32,7 +32,7 @@ export async function habitatRestore(
   // );
 
   return {
-    restore: config.habitatRestore.layers.reduce(
+    habitatRestore: config.habitatRestore.layers.reduce(
       (acc, lyr) => ({
         ...acc,
         [lyr.baseFilename]: {
@@ -55,7 +55,7 @@ export async function habitatRestore(
 export default new GeoprocessingHandler(habitatRestore, {
   title: "habitatRestore",
   description: "habitat restoration area within sketch",
-  timeout: 2, // seconds
+  timeout: 10, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],

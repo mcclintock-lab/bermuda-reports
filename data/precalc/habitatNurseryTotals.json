@@ -1,0 +1,23 @@
+{
+  "overall": {
+    "value": 6000,
+    "percValue": 1
+  },
+  "byClass": {
+    "lagoonal_reef_only": {
+      "name": "lagoonal_reef_only",
+      "value": 2000,
+      "percValue": 0.333
+    },
+    "Mangrove_shp_2012": {
+      "name": "Mangrove_shp_2012",
+      "value": 1000,
+      "percValue": 0.1666
+    },
+    "Seagrass_2014_50mbuff": {
+      "name": "Seagrass_2014_50mbuff",
+      "value": 3000,
+      "percValue": 0.5
+    }    
+  }
+}

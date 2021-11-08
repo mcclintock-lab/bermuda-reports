@@ -1,0 +1,121 @@
+{
+  "overall": {
+    "value": 6000,
+    "percValue": 1
+  },
+  "byClass": {
+    "lagoonal_reef_only": {
+      "name": "lagoonal_reef_only",
+      "value": 30,
+      "percValue": 0.015,
+      "sketchMetrics": [
+        {
+          "id": "615c6af3aac8c8285d50dc42",
+          "name": "mpa-no-desig",
+          "value": 13,
+          "percValue": 0.0065
+        }
+      ]
+    },
+    "Mangrove_shp_2012": {
+      "name": "Mangrove_shp_2012",
+      "value": 30,
+      "percValue": 0.03,
+      "sketchMetrics": [
+        {
+          "id": "615c6af3aac8c8285d50dc42",
+          "name": "mpa-no-desig",
+          "value": 13,
+          "percValue": 0.013
+        }
+      ]
+    },
+    "Seagrass_2014_50mbuff": {
+      "name": "Seagrass_2014_50mbuff",
+      "value": 30,
+      "percValue": 0.01,
+      "sketchMetrics": [
+        {
+          "id": "615c6af3aac8c8285d50dc42",
+          "name": "mpa-no-desig",
+          "value": 13,
+          "percValue": 0.004333333333333333
+        }
+      ]
+    }
+  },
+  "byLevel": {
+    "full": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "high": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "low": {
+      "lagoonal_reef_only": {
+        "value": 13,
+        "percValue": 0.0021666666666666666,
+        "sketchMetrics": [
+          {
+            "id": "615c6af3aac8c8285d50dc42",
+            "name": "mpa-no-desig",
+            "value": 13,
+            "percValue": 0.0065
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 13,
+        "percValue": 0.0021666666666666666,
+        "sketchMetrics": [
+          {
+            "id": "615c6af3aac8c8285d50dc42",
+            "name": "mpa-no-desig",
+            "value": 13,
+            "percValue": 0.013
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 13,
+        "percValue": 0.0021666666666666666,
+        "sketchMetrics": [
+          {
+            "id": "615c6af3aac8c8285d50dc42",
+            "name": "mpa-no-desig",
+            "value": 13,
+            "percValue": 0.004333333333333333
+          }
+        ]
+      }
+    }
+  }
+}

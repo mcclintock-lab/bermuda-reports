@@ -72,7 +72,7 @@ const singleProtection = (sketchCategory: SketchStat) => {
 
   return (
     <>
-      {genSingleObjective(category, 0.2)}
+      {genSingleObjective(category, config.objectives.eez)}
       {genSingleSketchTable([category])}
       {genLearnMore()}
     </>
@@ -83,7 +83,7 @@ const networkProtection = (data: ProtectionResult) => {
   const levelMap = keyBy(data.levelStats, (item) => item.level);
   return (
     <>
-      {genNetworkObjective(levelMap, 0.2)}
+      {genNetworkObjective(levelMap, config.objectives.eez)}
       {genLevelTable(data.levelStats)}
       <Collapse title="Show by MPA">
         {genSketchTable(data.sketchStats)}
@@ -146,7 +146,7 @@ const genNetworkObjective = (
 ) => {
   const fullPerc = levelMap["full"]?.percPlanningArea || 0;
   const highPerc = levelMap["high"]?.percPlanningArea || 0;
-  const needed = config.eezObjective - fullPerc - highPerc;
+  const needed = config.objectives.eez - fullPerc - highPerc;
 
   const lower = percentLower(fullPerc, {
     lower: 0.001,
@@ -180,9 +180,7 @@ const genNetworkObjective = (
   const progressMsg = (
     <>
       <div style={{ display: "flex", paddingTop: 15 }}>
-        <span style={{ paddingBottom: 15, width: 140 }}>
-          <b>Designated:</b>
-        </span>
+        <span style={{ paddingBottom: 15, width: 100 }}>So far:</span>
         <span>
           <LevelPill level="full">{fullPercDisplay}</LevelPill> +{" "}
           <LevelPill level="high">{highPercDisplay}</LevelPill> ={" "}
@@ -191,19 +189,18 @@ const genNetworkObjective = (
       </div>
       {needed > 0 && (
         <div style={{ display: "flex" }}>
-          <span style={{ width: 140 }}>
-            <b>Still needed:</b>
-          </span>
+          <span style={{ width: 100 }}>Still needs:</span>
           <span>
-            <b>{percentLower(needed, { lower: 0.1, digits: 1 })}</b>
+            <Pill>{percentLower(needed, { lower: 0.1, digits: 1 })}</Pill>
           </span>
         </div>
       )}
     </>
   );
 
+  let objectiveCmp;
   if (fullPerc > objective) {
-    return (
+    objectiveCmp = (
       <ObjectiveStatus
         status="yes"
         msg={
@@ -216,7 +213,7 @@ const genNetworkObjective = (
       />
     );
   } else if (fullPerc + highPerc > objective) {
-    return (
+    objectiveCmp = (
       <ObjectiveStatus
         status="maybe"
         msg={
@@ -232,7 +229,7 @@ const genNetworkObjective = (
       />
     );
   } else {
-    return (
+    objectiveCmp = (
       <ObjectiveStatus
         status="no"
         msg={
@@ -248,6 +245,8 @@ const genNetworkObjective = (
       />
     );
   }
+
+  return <div style={{ paddingBottom: 20 }}>{objectiveCmp}</div>;
 };
 
 const genLearnMore = () => {

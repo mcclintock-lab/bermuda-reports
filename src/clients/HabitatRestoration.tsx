@@ -11,7 +11,6 @@ import {
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
 import { ClassMetric } from "../util/types";
-import { GreenPill } from "../components/Pill";
 import styled from "styled-components";
 
 const TableStyled = styled.div`
@@ -61,12 +60,16 @@ const HabitatRestoration = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: HabitatRestoreResults) => {
-          const results = Object.values(data.restore);
+          const results = Object.values(data.habitatRestore);
           return (
             <>
               <p>
-                This report summarizes the amount of potential restoration area
-                within this plan for each habitat type.
+                A suitability analysis was conducted to find areas with
+                restoration potential for multiple habitat types. This report
+                summarizes the amount of potential restoration area within this
+                plan. The stated objective is to identify and restore these
+                areas, not necessarily to include them in MPAs. The potential
+                benefits of inclusion can be considered.
               </p>
               <Collapse title="Learn more">
                 <p>

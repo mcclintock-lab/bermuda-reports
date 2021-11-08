@@ -4,7 +4,7 @@
 import fs from "fs";
 import { rasterConfig } from "../src/functions/oceanUseConfig";
 // @ts-ignore
-import geoblaze, { Georaster } from "geoblaze";
+import geoblaze from "geoblaze";
 import fetch from "node-fetch";
 // @ts-ignore
 import parseGeoraster from "georaster";

@@ -1,4 +1,9 @@
-import { ClassMetrics } from "../src/util/types";
+import {
+  ClassMetrics,
+  ClassMetricsSketch,
+  GroupMetricsSketch,
+  ValueMetric,
+} from "../src/util/types";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing
@@ -19,9 +24,14 @@ export const dataBucketUrl =
 export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
 
-//// SIZE ////
+//// OBJECTIVES ////
 
-export const eezObjective = 0.2; // 20 percent
+export const objectives = {
+  eez: 0.2,
+  habitatNursery: 0.5,
+};
+
+//// SIZE ////
 
 //// HABITAT ////
 
@@ -311,7 +321,7 @@ export const renewable = {
 
 export interface HabitatRestoreResults {
   /** area of the sketch in square meters */
-  restore: ClassMetrics;
+  habitatRestore: ClassMetrics;
 }
 
 const habitatRestoreLayers = [
@@ -335,6 +345,43 @@ export const habitatRestore = {
   }),
 };
 
+//// KEY NURSERY HABITAT ////
+
+// base for precalc
+export interface HabitatNurseryResults {
+  byClass: ClassMetrics;
+  overall: ValueMetric;
+}
+
+export interface HabitatNurseryLevelResults extends HabitatNurseryResults {
+  byClass: ClassMetricsSketch;
+  byLevel: GroupMetricsSketch;
+}
+
+const habitatNurseryLayers = [
+  {
+    baseFilename: "lagoonal_reef_only",
+    display: "Lagoonal Reef",
+    layerId: "6185c183cef7c177174651a2",
+  },
+  {
+    baseFilename: "Mangrove_shp_2012",
+    display: "Mangrove",
+    layerId: "5dc07170cae3e4074e65170b",
+  },
+  {
+    baseFilename: "Seagrass_2014_50mbuff",
+    display: "Seagrass",
+    layerId: "5dc07170cae3e4074e651711",
+  },
+];
+
+export const habitatNursery = {
+  layers: habitatNurseryLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
+  }),
+};
+
 //// Export ////
 
 export default {
@@ -343,10 +390,11 @@ export default {
   units,
   localDataUrl,
   dataBucketUrl,
-  eezObjective,
+  objectives,
   nearshore,
   offshore,
   reefIndex,
   renewable,
   habitatRestore,
+  habitatNursery,
 };
