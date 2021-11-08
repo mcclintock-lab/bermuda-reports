@@ -1,5 +1,5 @@
 import { GroupMetricsSketch, SketchGroupMetricAgg } from "./types";
-import { keyBy } from "@seasketch/geoprocessing";
+import { keyBy } from "@seasketch/geoprocessing/client";
 
 /**
  * Build agg group objects with groupId, percValue for each class, and total percValue across classes per group
