@@ -2,15 +2,12 @@ import {
   Sketch,
   SketchCollection,
   GeoprocessingHandler,
-  sketchArea,
   Feature,
   Polygon,
-  isFeatureCollection,
   fgbFetchAll,
-  groupBy,
+  toSketchArray,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
 import config, {
   HabitatNurseryResults,
   HabitatNurseryLevelResults,
@@ -24,51 +21,38 @@ import {
 import { ClassMetricsSketch, GroupMetricsSketch } from "../util/types";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
+import { overlapStatsVector } from "../util/sumOverlapVector";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<HabitatNurseryLevelResults> {
-  const sketchColl = isFeatureCollection(sketch)
-    ? sketch
-    : featureCollection([sketch]);
+  const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
-  // const nurseryFeatures = await Promise.all(
-  //   config.habitatNursery.layers.map((lyr) => {
-  //     return fgbFetchAll<Feature<Polygon | LineString | Point>>(
-  //       `${config.dataBucketUrl}${lyr.filename}`,
-  //       box
-  //     );
-  //   })
-  // );
+  const classMetrics = (
+    await Promise.all(
+      config.habitatNursery.layers.map(async (lyr) => {
+        const features = await fgbFetchAll<Feature<Polygon>>(
+          `${config.dataBucketUrl}${lyr.filename}`,
+          box
+        );
+        return overlapStatsVector(
+          features,
+          lyr.baseFilename,
+          sketches,
+          precalcTotals.byClass[lyr.baseFilename].value
+        );
+      })
+    )
+  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
+    return {
+      ...metricsSoFar,
+      [metric.name]: metric,
+    };
+  }, {});
 
-  const classMetrics: ClassMetricsSketch = config.habitatNursery.layers.reduce(
-    (acc, lyr) => {
-      const lyrValue = 30;
-      return {
-        ...acc,
-        [lyr.baseFilename]: {
-          name: lyr.baseFilename,
-          value: lyrValue,
-          percValue: lyrValue / precalcTotals.byClass[lyr.baseFilename].value,
-          sketchMetrics: sketchColl.features.map((sk) => {
-            const sketchValue = 13;
-            return {
-              id: sk.properties.id,
-              name: sk.properties.name,
-              value: sketchValue,
-              percValue:
-                sketchValue / precalcTotals.byClass[lyr.baseFilename].value,
-            };
-          }),
-        },
-      };
-    },
-    {}
-  );
-
-  const sketchCategoryMap = sketchColl.features.reduce<
+  const sketchCategoryMap = sketches.reduce<
     Record<string, IucnCategoryCombined>
   >((acc, sketch) => {
     // Get sketch allowed activities, then category
@@ -138,8 +122,9 @@ export async function habitatNursery(
 export default new GeoprocessingHandler(habitatNursery, {
   title: "habitatNursery",
   description: "key nursery habitat within sketch",
-  timeout: 60, // seconds
+  timeout: 120, // seconds
   executionMode: "async",
+  memory: 4096,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

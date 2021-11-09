@@ -2,7 +2,13 @@
 
 ## declare an array variable
 declare -a LAYERS=(
-  "Coral_cover_10to70"
+  "lagoonal_reef_only"
   "Mangrove_shp_2012"
-  "Seagrass_shp_1997"
+  "Seagrass_2014_50mbuff"
+)
+
+declare -a ATTRIBS_TO_KEEP=(
+  "OBJECTID"
+  "OBJECTID"
+  "ORIG_FID"
 )

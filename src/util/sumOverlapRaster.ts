@@ -14,7 +14,12 @@ import bbox from "@turf/bbox";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
-import { ClassMetric, ClassMetrics, SketchMetric } from "./types";
+import {
+  ClassMetric,
+  ClassMetrics,
+  ClassMetricSketch,
+  SketchMetric,
+} from "./types";
 
 /**
  * calculate class metrics within single raster, conveniently bundling in class name and perc of total
@@ -45,7 +50,7 @@ export async function sumOverlapRaster(
   totalValue: number,
   /** single sketch or collection. */
   sketch?: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<ClassMetric> {
+): Promise<ClassMetricSketch> {
   let sumValue = 0;
   let sketchMetrics: SketchMetric[] = [];
   if (sketch) {

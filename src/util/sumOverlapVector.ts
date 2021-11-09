@@ -3,18 +3,23 @@ import {
   Point,
   LineString,
   Polygon,
+  Feature,
   FeatureCollection,
   isSketchCollection,
   isPolygonSketchCollection,
+  isPolygonFeature,
   isLineStringSketchCollection,
+  intersect,
+  toSketchArray,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import combine from "@turf/combine";
 import { featureEach } from "@turf/meta";
-import { SketchMetric, ClassMetric } from "./types";
+import { SketchMetric, ClassMetric, ClassMetricSketch } from "./types";
 import dissolve from "@turf/dissolve";
 import turfArea from "@turf/area";
 import length from "@turf/length";
+import { chunk } from "../util/chunk";
 
 // NOT YET COMPLETE
 
@@ -26,59 +31,77 @@ import length from "@turf/length";
  */
 export async function overlapStatsVector(
   /** collection of features to intersect and get overlap stats */
-  featureColl: FeatureCollection<Polygon | LineString | Point>,
+  features: Feature<Point | LineString | Polygon>[],
+  /** Name of class */
   name: string,
   /** single sketch or collection. */
-  sketch: SketchCollection<Point | LineString | Polygon>,
-  /** geometry type of sketch */
-  type: "point" | "linestring" | "polygon",
+  sketches: Sketch<Point | LineString | Polygon>[],
   /**
    * point - total number points
    * line - total length all lines
    * polygon - area of outer boundary (typically EEZ or planning area)
    */
   totalValue: number
-): Promise<ClassMetric> {
-  let combinedSketch: FeatureCollection;
-  let combinedSketchValue: number = 0;
-  if (isPolygonSketchCollection(sketch)) {
-    combinedSketch = isSketchCollection(sketch)
-      ? dissolve(sketch)
-      : featureCollection([sketch]);
-    combinedSketchValue = turfArea(combinedSketch);
-  } else if (isLineStringSketchCollection(sketch)) {
-    combinedSketchValue = length(featureColl);
-  } else {
-    combinedSketchValue = featureColl.features.length;
-  }
+): Promise<ClassMetricSketch> {
+  // This is incomplete and not yet used
+  // let combinedSketch: FeatureCollection;
+  // let combinedSketchValue: number = 0;
+  // if (isPolygonSketchCollection(sketch)) {
+  //   combinedSketch = isSketchCollection(sketch)
+  //     ? dissolve(sketch)
+  //     : featureCollection([sketch]);
+  //   combinedSketchValue = turfArea(combinedSketch);
+  // } else if (isLineStringSketchCollection(sketch)) {
+  //   combinedSketchValue = length(sketch);
+  // } else {
+  //   combinedSketchValue = sketch.features.length;
+  // }
 
-  let sketchMetrics: SketchMetric[] = [];
-  if (sketch) {
-    featureEach(sketch, (feat) => {
-      let sketchValue: number;
-      if (isPolygonSketchCollection(sketch)) {
-        // intersect and get area of remainder
-        sketchValue = turfArea(feat);
-      } else if (isLineStringSketchCollection(sketch)) {
-        // intersect and get area of remainder
-        sketchValue = length(feat);
-      } else {
-        // point in poly and return remainder
-        sketchValue = 0;
+  const sketchMetrics = sketches.map((curSketch) => {
+    let sketchValue: number = 0;
+    if (isPolygonFeature(curSketch)) {
+      // intersect and get area of remainder
+      try {
+        const clippedFeatures = intersect(
+          curSketch,
+          features as Feature<Polygon>[]
+        );
+        sketchValue = clippedFeatures ? turfArea(clippedFeatures) : 0;
+      } catch (err) {
+        // assume failed due to size, fallback to chunking
+        const chunks = chunk(features as Feature<Polygon>[], 1000);
+        sketchValue = chunks
+          .map((curChunk) => intersect(curSketch, curChunk))
+          .reduce(
+            (sumValue, rem) => (rem ? turfArea(rem) + sumValue : sumValue),
+            0
+          );
       }
-      sketchMetrics.push({
-        id: feat.properties.id,
-        name: feat.properties.name,
-        value: sketchValue,
-        percValue: sketchValue / totalValue,
-      });
-    });
-  }
+    }
+    // else if (isLineStringSketchCollection(sketch)) {
+    //   // intersect and get area of remainder
+    //   sketchValue = length(curSketch);
+    // } else {
+    //   // point in poly and return remainder
+    //   sketchValue = 0;
+    // }
+    return {
+      id: curSketch.properties.id,
+      name: curSketch.properties.name,
+      value: sketchValue,
+      percValue: sketchValue / totalValue,
+    };
+  });
+
+  const sumSketchValue = sketchMetrics.reduce(
+    (sumSoFar, sm) => sumSoFar + sm.value,
+    0
+  );
 
   return {
     name,
-    value: combinedSketchValue,
-    percValue: combinedSketchValue / totalValue,
+    value: sumSketchValue,
+    percValue: sumSketchValue / totalValue,
     sketchMetrics,
   };
 }
