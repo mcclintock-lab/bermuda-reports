@@ -289,25 +289,25 @@ export const renewableLayers = [
     baseFilename: "float_solar1",
     noDataValue: -3.39999995214436425e38,
     display: "Floating Solar",
-    layerId: "",
+    layerId: "6185c0f7cef7c17717464da5",
   },
   {
     baseFilename: "wind_fixed1",
     noDataValue: -3.39999995214436425e38,
     display: "Fixed Offshore Wind",
-    layerId: "",
+    layerId: "6185c0f7cef7c17717464da3",
   },
   {
     baseFilename: "wind_float1",
     noDataValue: -3.39999995214436425e38,
     display: "Floating Offshore Wind",
-    layerId: "",
+    layerId: "6185c0f7cef7c17717464da1",
   },
   {
     baseFilename: "wave_energy1",
     noDataValue: -3.39999995214436425e38,
     display: "Wave Energy",
-    layerId: "",
+    layerId: "6185c0f7cef7c17717464d9f",
   },
 ];
 
@@ -332,12 +332,12 @@ const habitatRestoreLayers = [
   {
     baseFilename: "seagrass_restoration_500mbuff",
     display: "Seagrass",
-    layerId: "5dc07170cae3e4074e651711",
+    layerId: "6185c0f7cef7c17717464d9d",
   },
   {
     baseFilename: "mangrove_restoration_500mbuff",
     display: "Mangrove/Saltmarsh",
-    layerId: "6185c0f7cef7c17717464d97",
+    layerId: "6185c0f7cef7c17717464d9b",
   },
 ];
 

@@ -91,23 +91,14 @@ const genOverallUseTable = (data: SapMapResults) => {
       accessor: (row) => {
         const sector = rasterConfig.find((config) => config.name === row.name);
         const sectorName = sector?.display ? sector.display : "";
-        if (row.percValue > 0.1) {
-          return <WarningPill>{sectorName}</WarningPill>;
-        } else {
-          return sectorName;
-        }
+        return sectorName
       },
       style: { width: "65%" },
     },
     {
       Header: "% Value In Plan",
       accessor: (row) => {
-        const value = percentLower(row.percValue, { lower: 0.01, digits: 1 });
-        if (row.percValue > 0.1) {
-          return <WarningPill>{value}</WarningPill>;
-        } else {
-          return value;
-        }
+        return percentLower(row.percValue, { lower: 0.01, digits: 1 });
       },
       style: { width: "20%" },
     },

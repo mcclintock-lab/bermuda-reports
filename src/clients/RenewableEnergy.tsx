@@ -38,12 +38,7 @@ const SpeciesProtection = () => {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
       accessor: (row, index) => {
-        const percDisplay = percentLower(row.percValue);
-        if (row.percValue > 0.1) {
-          return <GreenPill>{percDisplay}</GreenPill>;
-        } else {
-          return percDisplay;
-        }
+        return percentLower(row.percValue);
       },
     },
     {

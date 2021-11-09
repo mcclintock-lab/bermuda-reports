@@ -19,8 +19,7 @@ const Overview: FunctionComponent<ReportProps> = ({ hidden }) => {
           msg={
             <span>
               These are <b>draft</b> reports. Users will be notified of
-              significant changes via SeaSketch forum post and email. Direct all
-              report feedback to PERSON@gmail.com
+              updates/corrections via SeaSketch forum post and email.
             </span>
           }
         />
