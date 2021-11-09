@@ -1,4 +1,8 @@
-import { GroupMetricsSketch, SketchGroupMetricAgg } from "./types";
+import {
+  ClassMetricsSketch,
+  GroupMetricsSketch,
+  GroupMetricSketchAgg,
+} from "./types";
 import { keyBy } from "@seasketch/geoprocessing/client";
 
 /**
@@ -45,7 +49,7 @@ export const getSketchAgg = (
   }>
 ) => {
   // For each group
-  let sketchRows: SketchGroupMetricAgg[] = [];
+  let sketchRows: GroupMetricSketchAgg[] = [];
   Object.keys(groupData).forEach((groupId) => {
     const classMetrics = groupData[groupId];
     // Inspect first class to get list of sketches in this group
@@ -83,3 +87,60 @@ export const getSketchAgg = (
   });
   return sketchRows;
 };
+
+// /**
+//  * Build agg sketch objects with groupId, sketchId, sketchName, percValue for each class, and total percValue across classes per sketch
+//  * @param groupData
+//  * @param totalValue
+//  * @param classes
+//  * @returns
+//  */
+//  export const getClassAgg = (
+//   groupData: ClassMetricsSketch,
+//   totalValue: number,
+//   classes: Array<{
+//     filename: string;
+//     baseFilename: string;
+//     display: string;
+//     layerId: string;
+//   }>
+// ) => {
+//   // For each group
+//   let sketchRows: GroupMetricSketchAgg[] = [];
+//   Object.keys(groupData).forEach((groupId) => {
+//     const classMetrics = groupData[groupId];
+//     // Inspect first class to get list of sketches in this group
+//     const sketchesInGroup = Object.values(
+//       classMetrics
+//     )[0].sketchMetrics.map((sm) => ({ id: sm.id, name: sm.name }));
+
+//     // For each sketch
+//     sketchesInGroup.forEach((sketchInGroup) => {
+//       // Build up agg percValue for each class
+//       const classAgg = classes.reduce<Record<string, number>>(
+//         (classAggSoFar, lyr) => {
+//           const groupSketchMetrics = keyBy(
+//             classMetrics[lyr.baseFilename].sketchMetrics,
+//             (sm) => sm.id
+//           );
+//           return {
+//             ...classAggSoFar,
+//             value:
+//               classAggSoFar.value + groupSketchMetrics[sketchInGroup.id].value,
+//             [lyr.baseFilename]: groupSketchMetrics[sketchInGroup.id].percValue,
+//           };
+//         },
+//         { value: 0 }
+//       );
+
+//       sketchRows.push({
+//         groupId,
+//         sketchId: sketchInGroup.id,
+//         sketchName: sketchInGroup.name,
+//         percValue: classAgg.value / totalValue,
+//         ...classAgg,
+//       });
+//     });
+//   });
+//   return sketchRows;
+// };

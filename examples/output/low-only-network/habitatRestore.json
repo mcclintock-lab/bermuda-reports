@@ -1,28 +1,28 @@
 {
-  "habitatRestore": {
+  "byClass": {
     "seagrass_restoration_500mbuff": {
       "name": "seagrass_restoration_500mbuff",
-      "value": 20,
-      "percValue": 0.2,
+      "value": 331768.14319573884,
+      "percValue": 0.010155013795034874,
       "sketchMetrics": [
         {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
-          "value": 2,
-          "percValue": 0.025
+          "value": 331768.14319573884,
+          "percValue": 0.010155013795034874
         }
       ]
     },
-    "mangrove__restoration_500mbuff": {
-      "name": "mangrove__restoration_500mbuff",
-      "value": 20,
-      "percValue": 0.2,
+    "mangrove_restoration_500mbuff": {
+      "name": "mangrove_restoration_500mbuff",
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
-          "value": 2,
-          "percValue": 0.025
+          "value": 0,
+          "percValue": 0
         }
       ]
     }

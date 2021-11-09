@@ -20,7 +20,7 @@ import config, {
 import {
   ClassMetrics,
   GroupMetricAgg,
-  SketchGroupMetricAgg,
+  GroupMetricSketchAgg,
 } from "../util/types";
 import {
   IucnCategory,
@@ -94,7 +94,9 @@ const KeyNurseryHabitat = () => {
       throw new Error("Missing activities in sketch, something is not right");
     const activities =
       typeof activityProp.value === "string"
-        ? JSON.parse(activityProp.value)
+        ? activityProp.value === ""
+          ? []
+          : JSON.parse(activityProp.value)
         : activityProp.value;
     category = getCategoryForActivities(activities);
   }
@@ -109,9 +111,7 @@ const KeyNurseryHabitat = () => {
         {(data: HabitatNurseryLevelResults) => {
           return (
             <ReportError>
-              {isCollection
-                ? networkNursery(data)
-                : singleNursery(data, category)}
+              {isCollection ? genNetwork(data) : genSingle(data, category)}
             </ReportError>
           );
         }}
@@ -120,7 +120,7 @@ const KeyNurseryHabitat = () => {
   );
 };
 
-const singleNursery = (
+const genSingle = (
   data: HabitatNurseryLevelResults,
   category: IucnCategory
 ) => {
@@ -141,7 +141,7 @@ const singleNursery = (
   );
 };
 
-const networkNursery = (data: HabitatNurseryLevelResults) => {
+const genNetwork = (data: HabitatNurseryLevelResults) => {
   // Build agg group objects with percValue for each class
   const levelRows: GroupMetricAgg[] = getGroupAgg(
     data.byLevel,
@@ -180,8 +180,8 @@ const genHabitatToggles = () => {
   );
 };
 
-const genSketchTable = (sketchRows: SketchGroupMetricAgg[]) => {
-  const classColumns: Column<SketchGroupMetricAgg>[] = config.habitatNursery.layers.map(
+const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
+  const classColumns: Column<GroupMetricSketchAgg>[] = config.habitatNursery.layers.map(
     (lyr) => ({
       Header: lyr.display,
       accessor: (row) =>
@@ -191,7 +191,7 @@ const genSketchTable = (sketchRows: SketchGroupMetricAgg[]) => {
     })
   );
 
-  const columns: Column<SketchGroupMetricAgg>[] = [
+  const columns: Column<GroupMetricSketchAgg>[] = [
     {
       Header: "MPA",
       accessor: (row) => (

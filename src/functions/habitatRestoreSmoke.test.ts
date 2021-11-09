@@ -18,5 +18,5 @@ describe("Basic smoke tests", () => {
       expect(result).toBeTruthy();
       writeResultOutput(result, "habitatRestore", example.properties.name);
     }
-  });
+  }, 60000);
 });

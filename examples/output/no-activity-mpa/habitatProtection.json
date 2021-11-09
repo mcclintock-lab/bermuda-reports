@@ -1,0 +1,214 @@
+{
+  "nearshore": {
+    "Bays and Coast": {
+      "name": "Bays and Coast",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Madracis Reef": {
+      "name": "Madracis Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Montastraea Reef": {
+      "name": "Montastraea Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Diploria Porites Reef": {
+      "name": "Diploria Porites Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Castle Harbour Madracis": {
+      "name": "Castle Harbour Madracis",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Algal Vermetid Reef": {
+      "name": "Algal Vermetid Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Rim Reef": {
+      "name": "Rim Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Main Terrace Reef": {
+      "name": "Main Terrace Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Fore Reef": {
+      "name": "Fore Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Mesotrophic": {
+      "name": "Mesotrophic",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Rariphotic": {
+      "name": "Rariphotic",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": []
+    },
+    "Mesopelagic": {
+      "name": "Mesopelagic",
+      "value": 853,
+      "percValue": 0.012127502274795268,
+      "sketchMetrics": []
+    },
+    "Bathypelagic": {
+      "name": "Bathypelagic",
+      "value": 13285,
+      "percValue": 0.0922223610590473,
+      "sketchMetrics": []
+    }
+  },
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 1,
+      "percValue": 0.0001551590380139643,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 1,
+          "percValue": 0.0001551590380139643
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 6,
+      "percValue": 0.05128205128205128,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 6,
+          "percValue": 0.05128205128205128
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 6,
+      "percValue": 0.056074766355140186,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 6,
+          "percValue": 0.056074766355140186
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 6,
+      "percValue": 0.0019236934915036871,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 6,
+          "percValue": 0.0019236934915036871
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

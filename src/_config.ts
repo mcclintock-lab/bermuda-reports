@@ -319,22 +319,24 @@ export const renewable = {
 
 //// HABITAT RESTORATION ////
 
+// base for precalc
 export interface HabitatRestoreResults {
-  /** area of the sketch in square meters */
-  habitatRestore: ClassMetrics;
+  byClass: ClassMetrics;
+}
+
+export interface HabitatRestoreLevelResults extends HabitatRestoreResults {
+  byClass: ClassMetricsSketch;
 }
 
 const habitatRestoreLayers = [
   {
     baseFilename: "seagrass_restoration_500mbuff",
     display: "Seagrass",
-    type: "point",
     layerId: "5dc07170cae3e4074e651711",
   },
   {
-    baseFilename: "mangrove__restoration_500mbuff",
+    baseFilename: "mangrove_restoration_500mbuff",
     display: "Mangrove/Saltmarsh",
-    type: "linestring",
     layerId: "6185c0f7cef7c17717464d97",
   },
 ];

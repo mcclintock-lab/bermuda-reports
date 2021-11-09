@@ -1,0 +1,121 @@
+{
+  "overall": {
+    "value": 51374989.98110728,
+    "percValue": 1
+  },
+  "byClass": {
+    "lagoonal_reef_only": {
+      "name": "lagoonal_reef_only",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Mangrove_shp_2012": {
+      "name": "Mangrove_shp_2012",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Seagrass_2014_50mbuff": {
+      "name": "Seagrass_2014_50mbuff",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  },
+  "byLevel": {
+    "full": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "618abe61e4efd949c23c5899",
+            "name": "no-activity-mpa",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "618abe61e4efd949c23c5899",
+            "name": "no-activity-mpa",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "618abe61e4efd949c23c5899",
+            "name": "no-activity-mpa",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      }
+    },
+    "high": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "low": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    }
+  }
+}

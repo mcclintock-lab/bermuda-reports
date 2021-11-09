@@ -20,8 +20,8 @@ import {
 } from "../util/iucnProtectionLevel";
 import { ClassMetricsSketch, GroupMetricsSketch } from "../util/types";
 
-import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 import { overlapStatsVector } from "../util/sumOverlapVector";
+import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
 export async function habitatNursery(

@@ -1,5 +1,6 @@
 import {
   SketchCollection,
+  Sketch,
   Point,
   LineString,
   Polygon,
@@ -20,8 +21,6 @@ import dissolve from "@turf/dissolve";
 import turfArea from "@turf/area";
 import length from "@turf/length";
 import { chunk } from "../util/chunk";
-
-// NOT YET COMPLETE
 
 /**
  * returns overlap metric for feature collection.  If sketch passed, metric is calculated for each sketch and overall
