@@ -6,14 +6,14 @@
   "byClass": {
     "lagoonal_reef_only": {
       "name": "lagoonal_reef_only",
-      "value": 4686261.869024358,
-      "percValue": 0.0969925652497711,
+      "value": 4686261.869023803,
+      "percValue": 0.0969925652497596,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 4686261.869024358,
-          "percValue": 0.0969925652497711
+          "value": 4686261.869023803,
+          "percValue": 0.0969925652497596
         }
       ]
     },
@@ -64,14 +64,14 @@
     },
     "high": {
       "lagoonal_reef_only": {
-        "value": 4686261.869024358,
-        "percValue": 0.09121679382804145,
+        "value": 4686261.869023803,
+        "percValue": 0.09121679382803065,
         "sketchMetrics": [
           {
             "id": "61649a3c1e0a596510ad8329",
             "name": "nearshore-span",
-            "value": 4686261.869024358,
-            "percValue": 0.0969925652497711
+            "value": 4686261.869023803,
+            "percValue": 0.0969925652497596
           }
         ]
       },

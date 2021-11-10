@@ -12,15 +12,13 @@ import config, {
   HabitatNurseryResults,
   HabitatNurseryLevelResults,
 } from "../_config";
-import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
-import {
-  getCategoryForActivities,
-  IucnCategoryCombined,
-  levels,
-} from "../util/iucnProtectionLevel";
-import { ClassMetricsSketch, GroupMetricsSketch } from "../util/types";
+import { levels } from "../util/iucnProtectionLevel";
+import { getCategoryNameForSketches } from "../util/iucnHelpers";
+import { ClassMetricsSketch } from "../util/types";
 
 import { overlapStatsVector } from "../util/sumOverlapVector";
+import { getGroupMetrics } from "../util/metrics";
+
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
@@ -52,65 +50,13 @@ export async function habitatNursery(
     };
   }, {});
 
-  const sketchCategoryMap = sketches.reduce<
-    Record<string, IucnCategoryCombined>
-  >((acc, sketch) => {
-    // Get sketch allowed activities, then category
-    const activities: string[] = getJsonUserAttribute(sketch, "ACTIVITIES", []);
-    const category = getCategoryForActivities(activities);
-    return {
-      ...acc,
-      [sketch.properties.id]: category,
-    };
-  }, {});
-
-  // For each level
-  const levelMetrics = levels.reduce<GroupMetricsSketch>((acc, curLevel) => {
-    // For each class metric, get sketch metrics for just this level
-    const newBaseMetrics = Object.keys(classMetrics).reduce(
-      (acc, curClassMetricName) => {
-        const curClassMetric = classMetrics[curClassMetricName];
-        const levelSketchMetrics = curClassMetric.sketchMetrics.filter(
-          (sketchMetric) =>
-            sketchCategoryMap[sketchMetric.id].level === curLevel
-        );
-
-        // If no sketch metrics found for this level, return empty
-        if (levelSketchMetrics.length === 0) {
-          return {
-            ...acc,
-            [curClassMetricName]: {
-              value: 0,
-              percValue: 0,
-              sketchMetrics: [],
-            },
-          };
-        }
-
-        // Calc the overall stats for this level
-        const levelValue = levelSketchMetrics.reduce(
-          (sumSoFar, sm) => sm.value + sumSoFar,
-          0
-        );
-        const levelPercValue = levelValue / precalcTotals.overall.value;
-
-        return {
-          ...acc,
-          [curClassMetricName]: {
-            value: levelValue,
-            percValue: levelPercValue,
-            sketchMetrics: levelSketchMetrics,
-          },
-        };
-      },
-      {}
-    );
-
-    return {
-      ...acc,
-      [curLevel]: newBaseMetrics,
-    };
-  }, {});
+  const sketchCategoryMap = getCategoryNameForSketches(sketches);
+  const levelMetrics = getGroupMetrics(
+    levels,
+    sketchCategoryMap,
+    classMetrics,
+    precalcTotals.overall.value
+  );
 
   return {
     overall: precalcTotals.overall,

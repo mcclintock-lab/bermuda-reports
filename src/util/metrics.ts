@@ -3,7 +3,66 @@ import {
   GroupMetricsSketch,
   GroupMetricSketchAgg,
 } from "./types";
-import { keyBy } from "@seasketch/geoprocessing/client";
+import { keyBy } from "@seasketch/geoprocessing";
+
+/**
+ * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
+ * @param levels
+ */
+export const getGroupMetrics = (
+  groups: string[],
+  sketchGroupMap: Record<string, string>,
+  classMetrics: ClassMetricsSketch,
+  totalValue: number
+) => {
+  // For each group
+  const groupMetrics = groups.reduce<GroupMetricsSketch>((acc, curGroup) => {
+    // For each class metric, get sketch metrics for just this level
+    const newBaseMetrics = Object.keys(classMetrics).reduce(
+      (acc, curClassMetricName) => {
+        const curClassMetric = classMetrics[curClassMetricName];
+        const levelSketchMetrics = curClassMetric.sketchMetrics.filter(
+          (sketchMetric) => sketchGroupMap[sketchMetric.id] === curGroup
+        );
+
+        // If no sketch metrics found for this level, return empty
+        if (levelSketchMetrics.length === 0) {
+          return {
+            ...acc,
+            [curClassMetricName]: {
+              value: 0,
+              percValue: 0,
+              sketchMetrics: [],
+            },
+          };
+        }
+
+        // Calc the overall stats for this level
+        const levelValue = levelSketchMetrics.reduce(
+          (sumSoFar, sm) => sm.value + sumSoFar,
+          0
+        );
+        const levelPercValue = levelValue / totalValue;
+
+        return {
+          ...acc,
+          [curClassMetricName]: {
+            value: levelValue,
+            percValue: levelPercValue,
+            sketchMetrics: levelSketchMetrics,
+          },
+        };
+      },
+      {}
+    );
+
+    return {
+      ...acc,
+      [curGroup]: newBaseMetrics,
+    };
+  }, {});
+  return groupMetrics;
+};
 
 /**
  * Build agg group objects with groupId, percValue for each class, and total percValue across classes per group

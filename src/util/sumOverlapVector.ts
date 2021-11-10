@@ -59,23 +59,15 @@ export async function overlapStatsVector(
   const sketchMetrics = sketches.map((curSketch) => {
     let sketchValue: number = 0;
     if (isPolygonFeature(curSketch)) {
+      // chunk to avoid blowing up intersect
+      const chunks = chunk(features as Feature<Polygon | MultiPolygon>[], 5000);
       // intersect and get area of remainder
-      try {
-        const clippedFeatures = intersect(
-          curSketch,
-          features as Feature<Polygon | MultiPolygon>[]
+      sketchValue = chunks
+        .map((curChunk) => intersect(curSketch, curChunk))
+        .reduce(
+          (sumValue, rem) => (rem ? turfArea(rem) + sumValue : sumValue),
+          0
         );
-        sketchValue = clippedFeatures ? turfArea(clippedFeatures) : 0;
-      } catch (err) {
-        // assume failed due to size, fallback to chunking
-        const chunks = chunk(features as Feature<Polygon>[], 1000);
-        sketchValue = chunks
-          .map((curChunk) => intersect(curSketch, curChunk))
-          .reduce(
-            (sumValue, rem) => (rem ? turfArea(rem) + sumValue : sumValue),
-            0
-          );
-      }
     }
     // else if (isLineStringSketchCollection(sketch)) {
     //   // intersect and get area of remainder
