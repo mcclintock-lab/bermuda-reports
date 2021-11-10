@@ -3,6 +3,8 @@ import {
   ClassMetricsSketch,
   GroupMetricsSketch,
   ValueMetric,
+  SketchMetric,
+  ClassMetric,
 } from "../src/util/types";
 
 /**
@@ -384,6 +386,32 @@ export const habitatNursery = {
   }),
 };
 
+//// PLATFORM EDGE ////
+
+// Build up new type with additional sketch property
+export interface EdgeSketchMetric extends SketchMetric {
+  overlap: boolean;
+}
+export type EdgeClassMetricSketch = ClassMetric & {
+  sketchMetrics: EdgeSketchMetric[];
+};
+export type PlatformEdgeResult = Record<"edge", EdgeClassMetricSketch>;
+
+const platformEdgeLayers = [
+  {
+    baseFilename: "Pelagic_Fishing_Zone_Dissolved",
+    display: "Platform Edge",
+    layerId: "6164aebea04323106537eb5c",
+    totalArea: 1734231963.998059,
+  },
+];
+
+export const platformEdge = {
+  layers: platformEdgeLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
+  }),
+};
+
 //// Export ////
 
 export default {
@@ -399,4 +427,5 @@ export default {
   renewable,
   habitatRestore,
   habitatNursery,
+  platformEdge,
 };

@@ -13,7 +13,7 @@ import {
   intersect,
   toSketchArray,
 } from "@seasketch/geoprocessing";
-import { featureCollection } from "@turf/helpers";
+import { featureCollection, MultiPolygon } from "@turf/helpers";
 import combine from "@turf/combine";
 import { featureEach } from "@turf/meta";
 import { SketchMetric, ClassMetric, ClassMetricSketch } from "./types";
@@ -30,7 +30,7 @@ import { chunk } from "../util/chunk";
  */
 export async function overlapStatsVector(
   /** collection of features to intersect and get overlap stats */
-  features: Feature<Point | LineString | Polygon>[],
+  features: Feature<Point | LineString | Polygon | MultiPolygon>[],
   /** Name of class */
   name: string,
   /** single sketch or collection. */
@@ -63,7 +63,7 @@ export async function overlapStatsVector(
       try {
         const clippedFeatures = intersect(
           curSketch,
-          features as Feature<Polygon>[]
+          features as Feature<Polygon | MultiPolygon>[]
         );
         sketchValue = clippedFeatures ? turfArea(clippedFeatures) : 0;
       } catch (err) {

@@ -66,7 +66,7 @@ export interface GroupMetricsSketch {
 //// AGGREGATIONS ////
 
 /**
- * Flattened metric with class values keyed by class name
+ * Single flattened metric with class values keyed by class name
  * Useful for rendering table rows with the values of multiple classes for a group
  */
 export interface ClassMetricAgg {
@@ -81,7 +81,7 @@ export type ClassMetricSketchAgg = ClassMetricAgg & {
 };
 
 /**
- * Flattened metric with class values keyed by class name
+ * Single flattened metric with class values keyed by class name
  * Useful for rendering table rows with the values of multiple classes for a group
  */
 

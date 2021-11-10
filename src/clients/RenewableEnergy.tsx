@@ -11,7 +11,6 @@ import {
 import config, { RenewableResults } from "../_config";
 import { ClassMetric } from "../util/types";
 import { Collapse } from "../components/Collapse";
-import { GreenPill } from "../components/Pill";
 import styled from "styled-components";
 
 const TableStyled = styled.div`

@@ -38,9 +38,11 @@ const HabitatProtection = () => {
     {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => {
+      accessor: (row) => {
         const percDisplay = percentLower(row.percValue);
-        const goal = config.offshore.layers[index].goalPerc;
+        const goal =
+          config.nearshore.layers.find((lyr) => lyr.name === row.name)
+            ?.goalPerc || 0;
         if (row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
@@ -51,7 +53,7 @@ const HabitatProtection = () => {
     {
       Header: "Goal",
       style: { textAlign: "right", width: "20%" },
-      accessor: (row, index) => {
+      accessor: (row) => {
         const goalPerc = config.offshore.layers.find(
           (lyr) => lyr.baseFilename === row.name
         )?.goalPerc;
@@ -80,9 +82,11 @@ const HabitatProtection = () => {
     {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => {
+      accessor: (row) => {
         const percDisplay = percentLower(row.percValue);
-        const goal = config.nearshore.layers[index].goalPerc;
+        const goal =
+          config.nearshore.layers.find((lyr) => lyr.name === row.name)
+            ?.goalPerc || 0;
         if (row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {

@@ -39,7 +39,8 @@ const SpeciesProtection = () => {
       style: { textAlign: "right", width: "30%" },
       accessor: (row, index) => {
         const percDisplay = percentLower(row.percValue);
-        const goal = LAYERS[index].goalPerc;
+        const goal =
+          LAYERS.find((lyr) => lyr.baseFilename === row.name)?.goalPerc || 0;
         if (row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {

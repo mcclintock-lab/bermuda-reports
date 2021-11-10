@@ -6,11 +6,12 @@ import {
   percentLower,
   LayerToggle,
   useSketchProperties,
+  ReportError,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 // Import the results type definition from your functions to type-check your
 // component render functions
-import { PlatformEdgeResult } from "../functions/platformEdge";
+import config, { PlatformEdgeResult } from "../_config";
 
 const PlatformEdge = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
@@ -21,10 +22,15 @@ const PlatformEdge = () => {
       skeleton={<LoadingSkeleton />}
     >
       {(data: PlatformEdgeResult) => {
-        const breaks = data.edge.overlapCount;
+        const totalCount = data.edge.sketchMetrics.length;
+        const overlapCount = data.edge.sketchMetrics.reduce(
+          (sumSoFar, sm) => (sm.overlap ? sumSoFar + 1 : sumSoFar),
+          0
+        );
+
         let keySection: JSX.Element;
         if (isCollection) {
-          if (!breaks) {
+          if (!overlapCount) {
             keySection = (
               <>
                 This plan would <b>not</b> create breaks in pelagic fisheries
@@ -35,16 +41,15 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 This plan <b>would</b> create breaks in pelagic fisheries
-                access. <b>{data.edge.overlapCount}</b> of the{" "}
-                <b>{data.edge.totalCount}</b> MPAs in this plan prohibit some
-                type of fishing activity and overlap with{" "}
-                <b>{percentLower(data.edge.percArea)}</b> of the nearshore
+                access. <b>{overlapCount}</b> of the <b>{totalCount}</b> MPAs in
+                this plan prohibit some type of fishing activity and overlap
+                with <b>{percentLower(data.edge.percValue)}</b> of the nearshore
                 pelagic fishing zone.
               </>
             );
           }
         } else {
-          if (!breaks) {
+          if (!overlapCount) {
             keySection = (
               <>
                 This MPA would <b>not</b> create a break in pelagic fisheries
@@ -56,7 +61,7 @@ const PlatformEdge = () => {
               <>
                 This MPA <b>would</b> create a break in pelagic fisheries
                 access. At least one fishing activity is prohibited and it
-                overlaps with <b>{percentLower(data.edge.percArea)}</b> of the
+                overlaps with <b>{percentLower(data.edge.percValue)}</b> of the
                 nearshore pelagic fishing zone.
               </>
             );
@@ -64,7 +69,7 @@ const PlatformEdge = () => {
         }
 
         return (
-          <>
+          <ReportError>
             <p>
               Plans should allow for spatial continuity of fishing for pelagic
               species in depths {">"} 55 meters out to 2000 meters including the
@@ -94,7 +99,7 @@ const PlatformEdge = () => {
               label="Show Pelagic Fishing Zone Layer"
               layerId="6164aebea04323106537eb5c"
             />
-          </>
+          </ReportError>
         );
       }}
     </ResultsCard>

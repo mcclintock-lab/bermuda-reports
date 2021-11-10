@@ -1,10 +1,16 @@
 {
   "edge": {
-    "area": 0,
-    "percArea": 0,
-    "totalCount": 1,
-    "overlapCount": 0,
-    "areaUnit": "square meters",
-    "sketchAreas": []
+    "name": "Pelagic_Fishing_Zone_Dissolved",
+    "value": 0,
+    "percValue": 0,
+    "sketchMetrics": [
+      {
+        "id": "615c6af3aac8c8285d50dc42",
+        "name": "mpa-no-desig",
+        "value": 0,
+        "percValue": 0,
+        "overlap": false
+      }
+    ]
   }
 }

@@ -6,22 +6,23 @@ import {
   Feature,
   GeoprocessingHandler,
   fgbFetchAll,
-  intersect,
   toSketchArray,
+  keyBy,
 } from "@seasketch/geoprocessing";
 import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
-import { AreaMetric } from "../util/areaStats";
+import { ClassMetricSketch, ClassMetric, SketchMetric } from "../util/types";
 import bbox from "@turf/bbox";
-import turfArea from "@turf/area";
-import config from "../_config";
+import config, { PlatformEdgeResult } from "../_config";
+import { overlapStatsVector } from "../util/sumOverlapVector";
 
-export const PLATFORM_EDGE_AREA = 1734231963.998059; // Calculated manually with turf/area using dist/Pelagic_Fishing_Zone_Dissolved.json
-const FILENAME = "Pelagic_Fishing_Zone_Dissolved.fgb";
+const fishingActivities = [
+  "TRAD_FISH_COLLECT",
+  "FISH_COLLECT_REC",
+  "FISH_COLLECT_LOCAL",
+  "FISH_AQUA_INDUSTRIAL",
+];
 
-export type PlatformEdgeResult = Record<
-  "edge",
-  AreaMetric & { overlapCount: number; totalCount: number }
->;
+const LAYER = config.platformEdge.layers[0];
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -29,51 +30,48 @@ export async function platformEdge(
   const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
-  const edgeMultiPoly = await fgbFetchAll<Feature<MultiPolygon>>(
-    `${config.dataBucketUrl}${FILENAME}`,
+  const edgeMultiPoly = await fgbFetchAll<Feature<Polygon>>(
+    `${config.dataBucketUrl}${LAYER.filename}`,
     box
   );
 
-  // intersect each sketch with nearshore multipoly array
-  const rem = sketches.reduce<{ area: number; count: number }>(
-    (result, sketch, index) => {
-      const remPoly = intersect(sketch, edgeMultiPoly);
-
-      const fishingActivities = [
-        "TRAD_FISH_COLLECT",
-        "FISH_COLLECT_REC",
-        "FISH_COLLECT_LOCAL",
-        "FISH_AQUA_INDUSTRIAL",
-      ];
-      const sketchActivities: string[] = getJsonUserAttribute(
-        sketch,
-        "ACTIVITIES",
-        []
-      );
-      const numFishingActivities = fishingActivities.reduce(
-        (hasFishingSoFar, fishingActivity) =>
-          sketchActivities.includes(fishingActivity)
-            ? hasFishingSoFar + 1
-            : hasFishingSoFar,
-        0
-      );
-
-      // If sketch overlaps and all fishing activity allowed then count as overlap and add area to sum
-      return remPoly && numFishingActivities < fishingActivities.length
-        ? { area: result.area + turfArea(remPoly), count: result.count + 1 }
-        : result;
-    },
-    { area: 0, count: 0 }
+  const classMetric = await overlapStatsVector(
+    edgeMultiPoly,
+    LAYER.baseFilename,
+    sketches,
+    LAYER.totalArea
   );
+
+  const sketchMetricsById = keyBy(classMetric.sketchMetrics, (item) => item.id);
+
+  const edgeSketchMetrics = sketches.map((sketch) => {
+    const sketchActivities: string[] = getJsonUserAttribute(
+      sketch,
+      "ACTIVITIES",
+      []
+    );
+    const numFishingActivities = fishingActivities.reduce(
+      (hasFishingSoFar, fishingActivity) =>
+        sketchActivities.includes(fishingActivity)
+          ? hasFishingSoFar + 1
+          : hasFishingSoFar,
+      0
+    );
+
+    const curSketchMetric = sketchMetricsById[sketch.properties.id];
+
+    return {
+      ...curSketchMetric,
+      overlap:
+        curSketchMetric.value > 0 &&
+        numFishingActivities < fishingActivities.length,
+    };
+  });
 
   return {
     edge: {
-      area: rem.area,
-      percArea: rem.area / PLATFORM_EDGE_AREA,
-      totalCount: sketches.length,
-      overlapCount: rem.count,
-      areaUnit: "square meters",
-      sketchAreas: [],
+      ...classMetric,
+      sketchMetrics: edgeSketchMetrics,
     },
   };
 }
@@ -81,7 +79,7 @@ export async function platformEdge(
 export default new GeoprocessingHandler(platformEdge, {
   title: "platformEdge",
   description: "Calculates area stats",
-  timeout: 20, // seconds
+  timeout: 30, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],

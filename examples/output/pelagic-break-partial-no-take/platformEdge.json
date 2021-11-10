@@ -1,10 +1,16 @@
 {
   "edge": {
-    "area": 45937300.38209538,
-    "percArea": 0.02648855593469317,
-    "totalCount": 1,
-    "overlapCount": 1,
-    "areaUnit": "square meters",
-    "sketchAreas": []
+    "name": "Pelagic_Fishing_Zone_Dissolved",
+    "value": 45937300.38209538,
+    "percValue": 0.02648855593469317,
+    "sketchMetrics": [
+      {
+        "id": "61803a1a04baa808681f0a8f",
+        "name": "pelagic-break-partial-no-take",
+        "value": 45937300.38209538,
+        "percValue": 0.02648855593469317,
+        "overlap": true
+      }
+    ]
   }
 }
