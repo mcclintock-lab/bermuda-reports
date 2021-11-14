@@ -16,6 +16,7 @@ import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
 import { Collapse } from "../components/Collapse";
 import { getGroupMetricsSketchAgg } from "../util/metrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
+import { getBreakGroup } from "../util/platformEdge";
 import styled from "styled-components";
 
 const Percent = new Intl.NumberFormat("en", {
@@ -25,6 +26,7 @@ const Percent = new Intl.NumberFormat("en", {
 
 const LAYERS = config.platformEdge.layers;
 const LAYER = LAYERS[0];
+const BREAK_MAP = config.platformEdge.breakMap;
 
 const SmallTableStyled = styled.div`
   .squeeze {
@@ -52,47 +54,65 @@ const PlatformEdge = () => {
     >
       {(data: PlatformEdgeResult) => {
         const classMetric = data.byClass[LAYER.baseFilename];
+
+        // Get aggregate sketch metric stats
         const totalCount = classMetric.sketchMetrics.length;
         const overlapCount = classMetric.sketchMetrics.reduce(
           (sumSoFar, sm) => (sm.overlap ? sumSoFar + 1 : sumSoFar),
           0
         );
+        // get map of [groupName] => group name count
+        const numGroupsMap = classMetric.sketchMetrics.reduce<
+          Record<string, number>
+        >((soFar, sm) => {
+          const breakGroup = getBreakGroup(
+            BREAK_MAP,
+            sm.numFishingRestricted,
+            sm.overlap
+          );
+          return {
+            ...soFar,
+            [breakGroup]: soFar[breakGroup] ? soFar[breakGroup] + 1 : 1,
+          };
+        }, {});
+
+        const highestGroup = Object.keys(numGroupsMap).find(
+          (groupName) => numGroupsMap[groupName] > 0
+        );
+        if (!highestGroup) throw new Error("No highest group map");
 
         let keySection: JSX.Element;
         if (isCollection) {
-          if (!overlapCount) {
+          keySection = (
+            <>
+              This plan would create <b>{overlapCount}</b> breaks in pelagic
+              fisheries access.
+            </>
+          );
+          if (highestGroup !== "no") {
             keySection = (
               <>
-                This plan would <b>not</b> create breaks in pelagic fisheries
-                access.
-              </>
-            );
-          } else {
-            keySection = (
-              <>
-                This plan <b>would</b> create breaks in pelagic fisheries
-                access. <b>{overlapCount}</b> of the <b>{totalCount}</b> MPAs in
-                this plan prohibit some type of fishing activity and overlap
-                with <b>{percentLower(classMetric.percValue)}</b> of the
-                nearshore pelagic fishing zone.
+                {keySection} It overlaps with{" "}
+                <b>{percentLower(classMetric.percValue)}</b> of the nearshore
+                pelagic fishing zone.
               </>
             );
           }
         } else {
-          if (!overlapCount) {
+          keySection = (
+            <>
+              This MPA would create {highestGroup !== "no" ? " a " : ""}{" "}
+              <b>{highestGroup}</b> break in pelagic fisheries access.
+            </>
+          );
+          if (highestGroup !== "no") {
             keySection = (
               <>
-                This MPA would <b>not</b> create a break in pelagic fisheries
-                access.
-              </>
-            );
-          } else {
-            keySection = (
-              <>
-                This MPA <b>would</b> create a break in pelagic fisheries
-                access. At least one fishing activity is prohibited and it
-                overlaps with <b>{percentLower(classMetric.percValue)}</b> of
-                the nearshore pelagic fishing zone.
+                {keySection}{" "}
+                <b>{classMetric.sketchMetrics[0].numFishingRestricted}</b>{" "}
+                fishing activities are restricted and it overlaps with{" "}
+                <b>{percentLower(classMetric.percValue)}</b> of the nearshore
+                pelagic fishing zone.
               </>
             );
           }
@@ -125,19 +145,36 @@ const PlatformEdge = () => {
             <Collapse title="Learn more">
               <p>
                 A <b>break</b> in access is defined as any MPA where at least
-                one fishing activity is restricted, that overlaps with the
-                55-2000m fishing zone of the platform.
+                one fishing activity is restricted, and the boundary overlaps
+                with the 55-2000m fishing zone of the platform.
               </p>
               <p>
-                If all 4 fishing activities are allowed for an MPA, then it is
-                not counted as a break.
+                Fishing activities that breaks are assessed for include:
                 <ul>
-                  <li>Traditional fishing/collection</li>
                   <li>Fishing/collection: recreational (sustainable)</li>
                   <li>
                     Fishing/collection: local fishing (sustainable) Industrial
                   </li>
                   <li>Fishing, industrial scale aquaculture</li>
+                </ul>
+                Fishing activities that breaks are not assessed for include:
+                <ul>
+                  <li>Traditional fishing/collection</li>
+                </ul>
+              </p>
+
+              <p>
+                Breaks are further broken down into 3 levels:
+                <ul>
+                  <li>
+                    <b>Definite</b> break: all 3 fishing activities restricted
+                  </li>
+                  <li>
+                    <b>Partial</b> break: 1-2 fishing activities restricted
+                  </li>
+                  <li>
+                    <b>No</b> break: 0 fishing activities restricted
+                  </li>
                 </ul>
               </p>
             </Collapse>
@@ -170,24 +207,45 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
       definite: (
         <>
           <b>Definite</b> break {singleOrPlural}{" "}
-          <span style={{ color: "#aaa", fontStyle: "italic" }}>
-            (3 activities restricted)
+          <span
+            style={{
+              color: "#aaa",
+              fontStyle: "italic",
+              fontSize: "11px",
+              paddingLeft: 10,
+            }}
+          >
+            (3 fishing activities restricted)
           </span>
         </>
       ),
       partial: (
         <>
           <b>Partial</b> break {singleOrPlural}{" "}
-          <span style={{ color: "#aaa", fontStyle: "italic" }}>
-            (1-2 activities restricted)
+          <span
+            style={{
+              color: "#aaa",
+              fontStyle: "italic",
+              fontSize: "11px",
+              paddingLeft: 10,
+            }}
+          >
+            (1-2 fishing activities restricted)
           </span>
         </>
       ),
       no: (
         <>
           <b>No</b> break {singleOrPlural}{" "}
-          <span style={{ color: "#aaa", fontStyle: "italic" }}>
-            (0 actitivites restricted)
+          <span
+            style={{
+              color: "#aaa",
+              fontStyle: "italic",
+              fontSize: "11px",
+              paddingLeft: 10,
+            }}
+          >
+            (0 fishing actitivites restricted)
           </span>
         </>
       ),

@@ -18,6 +18,7 @@ import config, {
 } from "../_config";
 import { overlapStatsVector } from "../util/sumOverlapVector";
 import { getGroupMetrics } from "../util/metrics";
+import { getBreakGroup } from "../util/platformEdge";
 
 const LAYER = config.platformEdge.layers[0];
 const ACTIVITIES = config.platformEdge.fishingActivities;
@@ -77,19 +78,13 @@ export async function platformEdge(
   // Match sketch to first break group it has at least min number of restricted activities
   // If no overlap then it's always no break
   // Return true if matches current group
-  const sketchFilter = (sketchMetric: EdgeSketchMetric, curGroup: string) => {
-    const sketchGroup = getBreakGroup(
+  const sketchFilter = (sketchMetric: EdgeSketchMetric, curGroup: string) =>
+    curGroup ===
+    getBreakGroup(
+      BREAK_MAP,
       sketchMetric.numFishingRestricted,
       sketchMetric.overlap
     );
-    return sketchGroup === curGroup;
-  };
-  const getBreakGroup = (numFishingRestricted: number, overlap: boolean) => {
-    if (!overlap) return "no";
-    return Object.keys(BREAK_MAP).find(
-      (breakGroup) => numFishingRestricted >= BREAK_MAP[breakGroup]
-    );
-  };
 
   // Edge group metrics
   const edgeGroupMetrics = getGroupMetrics(
