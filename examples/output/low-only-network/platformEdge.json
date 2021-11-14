@@ -1,16 +1,51 @@
 {
-  "edge": {
-    "name": "Pelagic_Fishing_Zone_Dissolved",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "id": "61685a10f3f078352076a1fb",
-        "name": "low-1",
+  "byClass": {
+    "Pelagic_Fishing_Zone_Dissolved": {
+      "name": "Pelagic_Fishing_Zone_Dissolved",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 0,
+          "percValue": 0,
+          "numFishingRestricted": 3,
+          "overlap": false
+        }
+      ]
+    }
+  },
+  "byGroup": {
+    "definite": {
+      "Pelagic_Fishing_Zone_Dissolved": {
         "value": 0,
         "percValue": 0,
-        "overlap": false
+        "sketchMetrics": []
       }
-    ]
+    },
+    "partial": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "no": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "61685a10f3f078352076a1fb",
+            "name": "low-1",
+            "value": 0,
+            "percValue": 0,
+            "numFishingRestricted": 3,
+            "overlap": false
+          }
+        ]
+      }
+    }
   }
 }

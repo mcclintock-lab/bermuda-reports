@@ -2,31 +2,31 @@ import {
   ClassMetricsSketch,
   GroupMetricsSketch,
   GroupMetricSketchAgg,
+  SketchMetric,
 } from "./types";
 import { keyBy } from "@seasketch/geoprocessing";
 
 /**
  * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
- * @param levels
  */
-export const getGroupMetrics = (
+export function getGroupMetrics<T extends SketchMetric>(
   groups: string[],
-  sketchGroupMap: Record<string, string>,
+  sketchFilter: (sketchMetric: T, curGroup: string) => boolean,
   classMetrics: ClassMetricsSketch,
   totalValue: number
-) => {
+): GroupMetricsSketch {
   // For each group
   const groupMetrics = groups.reduce<GroupMetricsSketch>((acc, curGroup) => {
-    // For each class metric, get sketch metrics for just this level
+    // For each class metric, get sketch metrics for just this group
     const newBaseMetrics = Object.keys(classMetrics).reduce(
       (acc, curClassMetricName) => {
         const curClassMetric = classMetrics[curClassMetricName];
-        const levelSketchMetrics = curClassMetric.sketchMetrics.filter(
-          (sketchMetric) => sketchGroupMap[sketchMetric.id] === curGroup
+        const groupSketchMetrics = curClassMetric.sketchMetrics.filter(
+          (sketchMetric) => sketchFilter(sketchMetric as T, curGroup)
         );
 
         // If no sketch metrics found for this level, return empty
-        if (levelSketchMetrics.length === 0) {
+        if (groupSketchMetrics.length === 0) {
           return {
             ...acc,
             [curClassMetricName]: {
@@ -38,7 +38,7 @@ export const getGroupMetrics = (
         }
 
         // Calc the overall stats for this level
-        const levelValue = levelSketchMetrics.reduce(
+        const levelValue = groupSketchMetrics.reduce(
           (sumSoFar, sm) => sm.value + sumSoFar,
           0
         );
@@ -49,7 +49,7 @@ export const getGroupMetrics = (
           [curClassMetricName]: {
             value: levelValue,
             percValue: levelPercValue,
-            sketchMetrics: levelSketchMetrics,
+            sketchMetrics: groupSketchMetrics,
           },
         };
       },
@@ -62,12 +62,12 @@ export const getGroupMetrics = (
     };
   }, {});
   return groupMetrics;
-};
+}
 
 /**
  * Build agg group objects with groupId, percValue for each class, and total percValue across classes per group
  */
-export const getGroupAgg = (
+export const getGroupMetricsAgg = (
   groupData: GroupMetricsSketch,
   totalValue: number
 ) => {
@@ -97,7 +97,7 @@ export const getGroupAgg = (
  * @param classes
  * @returns
  */
-export const getSketchAgg = (
+export const getGroupMetricsSketchAgg = (
   groupData: GroupMetricsSketch,
   totalValue: number,
   classes: Array<{

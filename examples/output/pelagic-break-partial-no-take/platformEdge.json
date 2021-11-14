@@ -1,16 +1,51 @@
 {
-  "edge": {
-    "name": "Pelagic_Fishing_Zone_Dissolved",
-    "value": 45937300.38209538,
-    "percValue": 0.02648855593469317,
-    "sketchMetrics": [
-      {
-        "id": "61803a1a04baa808681f0a8f",
-        "name": "pelagic-break-partial-no-take",
+  "byClass": {
+    "Pelagic_Fishing_Zone_Dissolved": {
+      "name": "Pelagic_Fishing_Zone_Dissolved",
+      "value": 45937300.38209538,
+      "percValue": 0.02648855593469317,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 45937300.38209538,
+          "percValue": 0.02648855593469317,
+          "numFishingRestricted": 2,
+          "overlap": true
+        }
+      ]
+    }
+  },
+  "byGroup": {
+    "definite": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "partial": {
+      "Pelagic_Fishing_Zone_Dissolved": {
         "value": 45937300.38209538,
         "percValue": 0.02648855593469317,
-        "overlap": true
+        "sketchMetrics": [
+          {
+            "id": "61803a1a04baa808681f0a8f",
+            "name": "pelagic-break-partial-no-take",
+            "value": 45937300.38209538,
+            "percValue": 0.02648855593469317,
+            "numFishingRestricted": 2,
+            "overlap": true
+          }
+        ]
       }
-    ]
+    },
+    "no": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    }
   }
 }

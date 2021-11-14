@@ -54,6 +54,23 @@ export const LevelPill: React.FunctionComponent<LevelPillProps> = ({
   );
 };
 
+export interface GroupPillProps {
+  group: string;
+  groupColorMap: Record<string, string>;
+  children: ReactNode;
+}
+
+/**
+ * Pill with colors assigned to each group name
+ */
+export const GroupPill: React.FunctionComponent<GroupPillProps> = ({
+  group,
+  groupColorMap,
+  children,
+}) => {
+  return <Pill color={groupColorMap[group]}>{children}</Pill>;
+};
+
 export const WarningPill: React.FunctionComponent<{ children: ReactNode }> = ({
   children,
 }) => {

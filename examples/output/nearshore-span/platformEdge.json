@@ -1,16 +1,51 @@
 {
-  "edge": {
-    "name": "Pelagic_Fishing_Zone_Dissolved",
-    "value": 128949588.19445494,
-    "percValue": 0.07435544429545485,
-    "sketchMetrics": [
-      {
-        "id": "61649a3c1e0a596510ad8329",
-        "name": "nearshore-span",
+  "byClass": {
+    "Pelagic_Fishing_Zone_Dissolved": {
+      "name": "Pelagic_Fishing_Zone_Dissolved",
+      "value": 128949588.19445494,
+      "percValue": 0.07435544429545485,
+      "sketchMetrics": [
+        {
+          "id": "61649a3c1e0a596510ad8329",
+          "name": "nearshore-span",
+          "value": 128949588.19445494,
+          "percValue": 0.07435544429545485,
+          "numFishingRestricted": 3,
+          "overlap": true
+        }
+      ]
+    }
+  },
+  "byGroup": {
+    "definite": {
+      "Pelagic_Fishing_Zone_Dissolved": {
         "value": 128949588.19445494,
         "percValue": 0.07435544429545485,
-        "overlap": true
+        "sketchMetrics": [
+          {
+            "id": "61649a3c1e0a596510ad8329",
+            "name": "nearshore-span",
+            "value": 128949588.19445494,
+            "percValue": 0.07435544429545485,
+            "numFishingRestricted": 3,
+            "overlap": true
+          }
+        ]
       }
-    ]
+    },
+    "partial": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "no": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    }
   }
 }

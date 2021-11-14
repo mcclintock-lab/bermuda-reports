@@ -14,7 +14,6 @@ import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
 import { ClassMetric } from "../util/types";
 import styled from "styled-components";
-import { getSketchAgg } from "../util/metrics";
 
 const TableStyled = styled.div`
   .styled {

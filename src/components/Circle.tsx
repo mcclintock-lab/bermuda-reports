@@ -62,3 +62,48 @@ export const LevelCircleRow: React.FunctionComponent<LevelCircleRowProps> = ({
     </div>
   );
 };
+
+//// GROUP CIRCLE ////
+
+export interface GroupCircleProps {
+  children: ReactNode;
+  group: string;
+  groupColorMap: Record<string, string>;
+}
+
+/**
+ * Circle with colors assigned to each group name
+ */
+export const GroupCircle: React.FunctionComponent<GroupCircleProps> = ({
+  children,
+  group,
+  groupColorMap,
+}) => {
+  return <Circle color={groupColorMap[group]}>{children}</Circle>;
+};
+
+export interface GroupCircleRowProps {
+  group: string;
+  groupColorMap: Record<string, string>;
+  circleText?: string | number;
+  rowText?: string | ReactNode;
+}
+
+/**
+ * GroupCircle with layout for table row, with colors assigned to each group name
+ */
+export const GroupCircleRow: React.FunctionComponent<GroupCircleRowProps> = ({
+  group,
+  groupColorMap,
+  circleText,
+  rowText,
+}) => {
+  return (
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <GroupCircle group={group} groupColorMap={groupColorMap}>
+        {circleText || " "}
+      </GroupCircle>
+      <span style={{ marginLeft: 5 }}>{rowText || ""}</span>
+    </div>
+  );
+};

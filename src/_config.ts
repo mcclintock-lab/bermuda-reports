@@ -388,14 +388,30 @@ export const habitatNursery = {
 
 //// PLATFORM EDGE ////
 
-// Build up new type with additional sketch property
+// Build up new type with additional property
 export interface EdgeSketchMetric extends SketchMetric {
   overlap: boolean;
+  numFishingRestricted: number;
 }
 export type EdgeClassMetricSketch = ClassMetric & {
   sketchMetrics: EdgeSketchMetric[];
 };
-export type PlatformEdgeResult = Record<"edge", EdgeClassMetricSketch>;
+export interface EdgeClassMetricsSketch {
+  [name: string]: EdgeClassMetricSketch;
+}
+export interface EdgeGroupMetricsSketch {
+  [name: string]: EdgeClassMetricsSketch;
+}
+
+// base for precalc
+export interface PlatformEdgeBaseResult {
+  byClass: ClassMetrics;
+}
+
+export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
+  byClass: EdgeClassMetricsSketch;
+  byGroup: EdgeGroupMetricsSketch;
+}
 
 const platformEdgeLayers = [
   {
@@ -406,10 +422,28 @@ const platformEdgeLayers = [
   },
 ];
 
+const fishingActivities = [
+  // "TRAD_FISH_COLLECT", // not counted
+  "FISH_COLLECT_REC",
+  "FISH_COLLECT_LOCAL",
+  "FISH_AQUA_INDUSTRIAL",
+];
+
+/**
+ * Map break name to minimum number of restricted fishing activities required for membership
+ */
+const breakMap: Record<string, number> = {
+  definite: fishingActivities.length,
+  partial: 1,
+  no: 0,
+};
+
 export const platformEdge = {
   layers: platformEdgeLayers.map((lyr) => {
     return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
   }),
+  fishingActivities,
+  breakMap,
 };
 
 //// Export ////

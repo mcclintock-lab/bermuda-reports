@@ -25,7 +25,7 @@ export const getCategoryForSketches = (sketches: Sketch[]) => {
 /**
  * Return Category name for each sketch keyed by sketchId
  */
-export const getCategoryNameForSketches = (sketches: Sketch[]) => {
+export const getLevelNameForSketches = (sketches: Sketch[]) => {
   const sketchCatMap = getCategoryForSketches(sketches);
   return Object.keys(sketchCatMap).reduce<Record<string, string>>(
     (sofar, sketchId) => ({

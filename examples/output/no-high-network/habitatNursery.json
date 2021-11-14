@@ -6,20 +6,20 @@
   "byClass": {
     "lagoonal_reef_only": {
       "name": "lagoonal_reef_only",
-      "value": 6094345.215716086,
-      "percValue": 0.1261359677522751,
+      "value": 6094345.215671845,
+      "percValue": 0.1261359677513594,
       "sketchMetrics": [
         {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "full mpa",
-          "value": 3721872.841759471,
-          "percValue": 0.07703239907309374
+          "value": 3721872.841758908,
+          "percValue": 0.07703239907308207
         },
         {
           "id": "616f1ae906f1b7772b51f191",
           "name": "low mpa",
-          "value": 2372472.3739566156,
-          "percValue": 0.04910356867918136
+          "value": 2372472.3739129365,
+          "percValue": 0.04910356867827732
         }
       ]
     },
@@ -65,14 +65,14 @@
   "byLevel": {
     "full": {
       "lagoonal_reef_only": {
-        "value": 3721872.841759471,
-        "percValue": 0.07244522759280651,
+        "value": 3721872.841758908,
+        "percValue": 0.07244522759279555,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f18f",
             "name": "full mpa",
-            "value": 3721872.841759471,
-            "percValue": 0.07703239907309374
+            "value": 3721872.841758908,
+            "percValue": 0.07703239907308207
           }
         ]
       },
@@ -120,14 +120,14 @@
     },
     "low": {
       "lagoonal_reef_only": {
-        "value": 2372472.3739566156,
-        "percValue": 0.046179519934292396,
+        "value": 2372472.3739129365,
+        "percValue": 0.046179519933442194,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f191",
             "name": "low mpa",
-            "value": 2372472.3739566156,
-            "percValue": 0.04910356867918136
+            "value": 2372472.3739129365,
+            "percValue": 0.04910356867827732
           }
         ]
       },

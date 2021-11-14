@@ -10,19 +10,18 @@ import {
   keyBy,
 } from "@seasketch/geoprocessing";
 import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
-import { ClassMetricSketch, ClassMetric, SketchMetric } from "../util/types";
 import bbox from "@turf/bbox";
-import config, { PlatformEdgeResult } from "../_config";
+import config, {
+  EdgeGroupMetricsSketch,
+  EdgeSketchMetric,
+  PlatformEdgeResult,
+} from "../_config";
 import { overlapStatsVector } from "../util/sumOverlapVector";
-
-const fishingActivities = [
-  "TRAD_FISH_COLLECT",
-  "FISH_COLLECT_REC",
-  "FISH_COLLECT_LOCAL",
-  "FISH_AQUA_INDUSTRIAL",
-];
+import { getGroupMetrics } from "../util/metrics";
 
 const LAYER = config.platformEdge.layers[0];
+const ACTIVITIES = config.platformEdge.fishingActivities;
+const BREAK_MAP = config.platformEdge.breakMap;
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -42,15 +41,15 @@ export async function platformEdge(
     LAYER.totalArea
   );
 
+  // Edge sketch metrics
   const sketchMetricsById = keyBy(classMetric.sketchMetrics, (item) => item.id);
-
   const edgeSketchMetrics = sketches.map((sketch) => {
     const sketchActivities: string[] = getJsonUserAttribute(
       sketch,
       "ACTIVITIES",
       []
     );
-    const numFishingActivities = fishingActivities.reduce(
+    const numFishingActivities = ACTIVITIES.reduce(
       (hasFishingSoFar, fishingActivity) =>
         sketchActivities.includes(fishingActivity)
           ? hasFishingSoFar + 1
@@ -62,17 +61,47 @@ export async function platformEdge(
 
     return {
       ...curSketchMetric,
+      numFishingRestricted: ACTIVITIES.length - numFishingActivities,
       overlap:
-        curSketchMetric.value > 0 &&
-        numFishingActivities < fishingActivities.length,
+        curSketchMetric.value > 0 && numFishingActivities < ACTIVITIES.length,
     };
   });
 
+  // Edge class metrics
+  const edgeClassMetric = {
+    ...classMetric,
+    sketchMetrics: edgeSketchMetrics,
+  };
+  const edgeClassMetrics = { [edgeClassMetric.name]: edgeClassMetric };
+
+  // Match sketch to first break group it has at least min number of restricted activities
+  // If no overlap then it's always no break
+  // Return true if matches current group
+  const sketchFilter = (sketchMetric: EdgeSketchMetric, curGroup: string) => {
+    const sketchGroup = getBreakGroup(
+      sketchMetric.numFishingRestricted,
+      sketchMetric.overlap
+    );
+    return sketchGroup === curGroup;
+  };
+  const getBreakGroup = (numFishingRestricted: number, overlap: boolean) => {
+    if (!overlap) return "no";
+    return Object.keys(BREAK_MAP).find(
+      (breakGroup) => numFishingRestricted >= BREAK_MAP[breakGroup]
+    );
+  };
+
+  // Edge group metrics
+  const edgeGroupMetrics = getGroupMetrics(
+    Object.keys(BREAK_MAP),
+    sketchFilter,
+    edgeClassMetrics,
+    LAYER.totalArea
+  );
+
   return {
-    edge: {
-      ...classMetric,
-      sketchMetrics: edgeSketchMetrics,
-    },
+    byClass: edgeClassMetrics,
+    byGroup: edgeGroupMetrics as EdgeGroupMetricsSketch,
   };
 }
 

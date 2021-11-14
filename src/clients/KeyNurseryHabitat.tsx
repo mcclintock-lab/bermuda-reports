@@ -34,7 +34,7 @@ import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
 
 import styled from "styled-components";
-import { getGroupAgg, getSketchAgg } from "../util/metrics";
+import { getGroupMetricsAgg, getGroupMetricsSketchAgg } from "../util/metrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
@@ -129,7 +129,7 @@ const genSingle = (
       {genSingleObjective(
         category,
         config.objectives.habitatNursery,
-        getSketchAgg(
+        getGroupMetricsSketchAgg(
           data.byLevel,
           precalcTotals.overall.value,
           config.habitatNursery.layers
@@ -143,14 +143,14 @@ const genSingle = (
 
 const genNetwork = (data: HabitatNurseryLevelResults) => {
   // Build agg group objects with percValue for each class
-  const levelRows: GroupMetricAgg[] = getGroupAgg(
+  const levelRows: GroupMetricAgg[] = getGroupMetricsAgg(
     data.byLevel,
     precalcTotals.overall.value
   );
 
   // Build agg sketch group objects with percValue for each class
   // groupId, sketchId, lagoon, mangrove, seagrass, total
-  const sketchRows = getSketchAgg(
+  const sketchRows = getGroupMetricsSketchAgg(
     data.byLevel,
     precalcTotals.overall.value,
     config.habitatNursery.layers

@@ -13,8 +13,8 @@ import config, {
   HabitatNurseryLevelResults,
 } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
-import { getCategoryNameForSketches } from "../util/iucnHelpers";
-import { ClassMetricsSketch } from "../util/types";
+import { getLevelNameForSketches } from "../util/iucnHelpers";
+import { ClassMetricsSketch, SketchMetric } from "../util/types";
 
 import { overlapStatsVector } from "../util/sumOverlapVector";
 import { getGroupMetrics } from "../util/metrics";
@@ -50,10 +50,14 @@ export async function habitatNursery(
     };
   }, {});
 
-  const sketchCategoryMap = getCategoryNameForSketches(sketches);
+  const sketchCategoryMap = getLevelNameForSketches(sketches);
+
+  const sketchFilter = (sketchMetric: SketchMetric, curGroup: string) =>
+    sketchCategoryMap[sketchMetric.id] === curGroup;
+
   const levelMetrics = getGroupMetrics(
     levels,
-    sketchCategoryMap,
+    sketchFilter,
     classMetrics,
     precalcTotals.overall.value
   );
