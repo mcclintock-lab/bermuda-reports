@@ -4,7 +4,6 @@ import {
   GroupMetricSketchAgg,
   SketchMetric,
 } from "./types";
-import { keyBy } from "@seasketch/geoprocessing";
 
 /**
  * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
@@ -121,9 +120,11 @@ export const getGroupMetricsSketchAgg = (
       // Build up agg percValue for each class
       const classAgg = classes.reduce<Record<string, number>>(
         (classAggSoFar, lyr) => {
-          const groupSketchMetrics = keyBy(
-            classMetrics[lyr.baseFilename].sketchMetrics,
-            (sm) => sm.id
+          const groupSketchMetrics = classMetrics[
+            lyr.baseFilename
+          ].sketchMetrics.reduce<Record<string, SketchMetric>>(
+            (soFar, sm) => ({ ...soFar, [sm.id]: sm }),
+            {}
           );
           return {
             ...classAggSoFar,
