@@ -9,7 +9,6 @@ import {
   ReportError,
   Table,
   Column,
-  capitalize,
 } from "@seasketch/geoprocessing/client";
 import { GroupCircleRow } from "../components/Circle";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
@@ -137,8 +136,9 @@ const PlatformEdge = () => {
           <ReportError>
             <p>
               Plans should allow for spatial continuity of fishing for pelagic
-              species in depths greater than 55 meters out to 2000 meters
-              including the edge of the Bermuda platform and the outlying banks.
+              species in the Nearshore Pelagic Fisheries Zone, defined as depths
+              greater than 55 meters out to 2000 meters including the edge of
+              the Bermuda platform and the outlying banks.
             </p>
             <KeySection>{keySection}</KeySection>
             {isCollection && genGroupTable(groupRows)}
@@ -245,7 +245,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
               paddingLeft: 10,
             }}
           >
-            (0 fishing actitivites restricted)
+            (0 overlap or fishing restricted)
           </span>
         </>
       ),

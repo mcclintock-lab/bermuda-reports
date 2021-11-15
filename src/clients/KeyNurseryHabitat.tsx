@@ -471,10 +471,17 @@ const genHelp = () => (
         species.
       </p>
       <p>
+        To achieve the objective, increase enough MPAs in the plan to{" "}
+        <b>full</b> protection. Or discuss appropriate implementation measures
+        that will ensure the objective can still be met under a <b>high</b>{" "}
+        protection level.
+      </p>
+      <p>
         Strategy: The effectiveness of a plan increases when its MPAs contain a
         mosaic of habitats (two or more types). Strive to include multiple
         habitat types in MPA boundaries.
       </p>
+      <p></p>
     </Collapse>
   </>
 );

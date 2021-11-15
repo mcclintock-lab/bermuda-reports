@@ -7,6 +7,7 @@ import {
   keyBy,
   percentLower,
   ReportError,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
@@ -51,21 +52,24 @@ const SmallTableStyled = styled.div`
   }
 `;
 
-const ProtectionCard = () => (
-  <ResultsCard title="Protection Level" functionName="protection">
-    {(data: ProtectionResult) => {
-      if (data.sketchStats.length === 0)
-        throw new Error("Protection results not found");
-      return (
-        <ReportError>
-          {data.sketchStats.length > 1
-            ? networkProtection(data)
-            : singleProtection(data.sketchStats[0])}
-        </ReportError>
-      );
-    }}
-  </ResultsCard>
-);
+const ProtectionCard = () => {
+  const [{ isCollection, ...rest }] = useSketchProperties();
+  return (
+    <ResultsCard title="Protection Level" functionName="protection">
+      {(data: ProtectionResult) => {
+        if (data.sketchStats.length === 0)
+          throw new Error("Protection results not found");
+        return (
+          <ReportError>
+            {isCollection
+              ? networkProtection(data)
+              : singleProtection(data.sketchStats[0])}
+          </ReportError>
+        );
+      }}
+    </ResultsCard>
+  );
+};
 
 const singleProtection = (sketchCategory: SketchStat) => {
   const category: IucnCategory = iucnCategories[sketchCategory.category];
@@ -254,11 +258,7 @@ const genLearnMore = () => {
     <Collapse title="Learn more">
       <p>
         This report looks at an MPAs allowed activities and assigns the first
-        viable category that allows all of those actitivities.
-      </p>
-      <p>
-        To increase the protection level for an MPA, remove activities that are
-        not allowed for the category you want to achieve.
+        category (1a-6) that allows all of those actitivities.
       </p>
       <p>
         The MPA categories are{" "}
@@ -276,12 +276,28 @@ const genLearnMore = () => {
       <IucnDesignationTable />
 
       <p>
-        <b>Category 1-3</b> offer <i>full</i> protection and are suitable for
-        inclusion in 20% fully protected fisheries replenishment zone.{" "}
-        <b>Category 4-6</b> offer
-        <i>high</i> protection and may be suitable, if allowed uses are aligned
-        with objectives. Those that do not receive a category are not suitable
-        and offer <i>low</i> protection.
+        <b>Category 1-3</b> offer{" "}
+        <b>
+          <i>full</i>
+        </b>{" "}
+        protection and are suitable for inclusion in 20% fully protected
+        fisheries replenishment zone. <b>Category 4-6</b> offer
+        <b>
+          <i>high</i>
+        </b>{" "}
+        protection and may be suitable for inclusion, but only if there are
+        appropriate implementation measures to ensure objectives can still be
+        met. Those that do not receive a category are not suitable and offer{" "}
+        <b>
+          <i>low</i>
+        </b>{" "}
+        protection.
+      </p>
+
+      <p>
+        To increase the category of an MPA from a lower level, edit and remove
+        any activities that are not allowed by the target level (see table
+        below)
       </p>
 
       <p>
@@ -289,14 +305,6 @@ const genLearnMore = () => {
         category are as follows.
       </p>
       <IucnMatrix />
-
-      <p>
-        Categories 2 and 3 have the same allowed activities, so they are
-        grouped. This means they can both be viable options for a given plan and
-        are reported together. The right option will be the one that best
-        matches the objectives. Categories 4 and 6 also have the same allowed
-        activities and are grouped.
-      </p>
 
       <p>
         More information can be found in the{" "}

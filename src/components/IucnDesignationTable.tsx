@@ -14,18 +14,18 @@ const TableStyled = styled.div`
 
 const columns: Column<IucnCategory>[] = [
   {
-    Header: "Protection Level",
-    accessor: (row) => (
-      <LevelPill level={row.level}>{capitalize(row.level)}</LevelPill>
-    ),
-  },
-  {
     Header: "Category",
     accessor: (row) => (
       <span>
         {row.category !== "None" && <Pill>{row.category}</Pill>}
         {` ${row.name}`}
       </span>
+    ),
+  },
+  {
+    Header: "Protection Level",
+    accessor: (row) => (
+      <LevelPill level={row.level}>{capitalize(row.level)}</LevelPill>
     ),
   },
 ];
