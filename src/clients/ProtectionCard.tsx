@@ -152,42 +152,24 @@ const genNetworkObjective = (
   const highPerc = levelMap["high"]?.percPlanningArea || 0;
   const needed = config.objectives.eez - fullPerc - highPerc;
 
-  const lower = percentLower(fullPerc, {
-    lower: 0.001,
-    digits: 1,
-  });
-
   const fullPercDisplay =
-    fullPerc === 0
-      ? Percent.format(fullPerc)
-      : percentLower(fullPerc, {
-          lower: 0.001,
-          digits: 1,
-        });
+    fullPerc === 0 ? Percent.format(fullPerc) : percentLower(fullPerc);
 
   const highPercDisplay =
-    highPerc === 0
-      ? Percent.format(highPerc)
-      : percentLower(highPerc, {
-          lower: 0.001,
-          digits: 1,
-        });
+    highPerc === 0 ? Percent.format(highPerc) : percentLower(highPerc);
 
   const combinedPercDisplay =
     fullPerc + highPerc === 0
       ? Percent.format(fullPerc + highPerc)
-      : percentLower(fullPerc + highPerc, {
-          lower: 0.001,
-          digits: 1,
-        });
+      : percentLower(fullPerc + highPerc);
 
   const progressMsg = (
     <>
       <div style={{ display: "flex", paddingTop: 15 }}>
         <span style={{ paddingBottom: 15, width: 100 }}>So far:</span>
         <span>
-          <LevelPill level="full">{fullPercDisplay}</LevelPill> +{" "}
-          <LevelPill level="high">{highPercDisplay}</LevelPill> ={" "}
+          <LevelPill level="full">{fullPercDisplay} Full</LevelPill> +{" "}
+          <LevelPill level="high">{highPercDisplay} High</LevelPill> ={" "}
           <Pill>{combinedPercDisplay}</Pill>
         </span>
       </div>
@@ -342,9 +324,12 @@ const genLevelTable = (levelStats: LevelStat[]) => {
         <LevelCircleRow
           level={row.level}
           circleText={`${row.numSketches}`}
-          rowText={`${capitalize(row.level)} Protection MPA${
-            row.numSketches === 1 ? "" : "s"
-          }`}
+          rowText={
+            <>
+              <b>{capitalize(row.level)}</b> Protection MPA
+              {row.numSketches === 1 ? "" : "s"}
+            </>
+          }
         />
       ),
     },

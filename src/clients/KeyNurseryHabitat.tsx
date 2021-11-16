@@ -235,6 +235,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
               lower: 0.001,
               digits: 1,
             }),
+      style: { width: "10%" },
     })
   );
 
@@ -245,9 +246,12 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
         <LevelCircleRow
           level={row.groupId}
           circleText={`${row.numSketches}`}
-          rowText={`${capitalize(row.groupId)} Protection MPA${
-            row.numSketches === 1 ? "" : "s"
-          }`}
+          rowText={
+            <>
+              <b>{capitalize(row.groupId)}</b> Protection MPA
+              {row.numSketches === 1 ? "" : "s"}
+            </>
+          }
         />
       ),
     },
