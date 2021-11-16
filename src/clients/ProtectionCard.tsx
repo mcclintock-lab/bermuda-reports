@@ -5,7 +5,8 @@ import {
   Column,
   capitalize,
   keyBy,
-  percentLower,
+  percentWithEdge,
+  percentGoalWithEdge,
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client";
@@ -27,14 +28,7 @@ import { Collapse } from "../components/Collapse";
 import config from "../_config";
 import { IucnDesignationTable } from "../components/IucnDesignationTable";
 
-const Percent = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 1,
-});
-const PercentZero = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 0,
-});
+const EEZ_OBJECTIVE = config.objectives.eez;
 
 const SmallTableStyled = styled.div`
   .squeeze {
@@ -76,7 +70,7 @@ const singleProtection = (sketchCategory: SketchStat) => {
 
   return (
     <>
-      {genSingleObjective(category, config.objectives.eez)}
+      {genSingleObjective(category, EEZ_OBJECTIVE)}
       {genSingleSketchTable([category])}
       {genLearnMore()}
     </>
@@ -87,7 +81,7 @@ const networkProtection = (data: ProtectionResult) => {
   const levelMap = keyBy(data.levelStats, (item) => item.level);
   return (
     <>
-      {genNetworkObjective(levelMap, config.objectives.eez)}
+      {genNetworkObjective(levelMap, EEZ_OBJECTIVE)}
       {genLevelTable(data.levelStats)}
       <Collapse title="Show by MPA">
         {genSketchTable(data.sketchStats)}
@@ -109,7 +103,7 @@ const genSingleObjective = (category: IucnCategory, objective: number) => {
           msg={
             <>
               This MPA <b>is</b> suitable for inclusion in the{" "}
-              <b>{PercentZero.format(objective)}</b> fully protected fisheries
+              <b>{percentWithEdge(objective)}</b> fully protected fisheries
               replenishment zones.
             </>
           }
@@ -122,7 +116,7 @@ const genSingleObjective = (category: IucnCategory, objective: number) => {
           msg={
             <>
               This MPA <b>may be</b> suitable for inclusion in the{" "}
-              <b>{PercentZero.format(objective)}</b> fully protected fisheries
+              <b>{percentWithEdge(objective)}</b> fully protected fisheries
               replenishment zones.
             </>
           }
@@ -135,7 +129,7 @@ const genSingleObjective = (category: IucnCategory, objective: number) => {
           msg={
             <>
               This MPA <b>is not</b> suitable for inclusion in the{" "}
-              <b>{PercentZero.format(objective)}</b> fully protected fisheries
+              <b>{percentWithEdge(objective)}</b> fully protected fisheries
               replenishment zones.
             </>
           }
@@ -150,18 +144,16 @@ const genNetworkObjective = (
 ) => {
   const fullPerc = levelMap["full"]?.percPlanningArea || 0;
   const highPerc = levelMap["high"]?.percPlanningArea || 0;
-  const needed = config.objectives.eez - fullPerc - highPerc;
+  const needed = EEZ_OBJECTIVE - fullPerc - highPerc;
 
-  const fullPercDisplay =
-    fullPerc === 0 ? Percent.format(fullPerc) : percentLower(fullPerc);
+  const fullPercDisplay = percentGoalWithEdge(fullPerc, EEZ_OBJECTIVE);
 
-  const highPercDisplay =
-    highPerc === 0 ? Percent.format(highPerc) : percentLower(highPerc);
+  const highPercDisplay = percentGoalWithEdge(highPerc, EEZ_OBJECTIVE);
 
-  const combinedPercDisplay =
-    fullPerc + highPerc === 0
-      ? Percent.format(fullPerc + highPerc)
-      : percentLower(fullPerc + highPerc);
+  const combinedPercDisplay = percentGoalWithEdge(
+    fullPerc + highPerc,
+    EEZ_OBJECTIVE
+  );
 
   const progressMsg = (
     <>
@@ -177,7 +169,7 @@ const genNetworkObjective = (
         <div style={{ display: "flex" }}>
           <span style={{ width: 100 }}>Still needs:</span>
           <span>
-            <Pill>{percentLower(needed, { lower: 0.1, digits: 1 })}</Pill>
+            <Pill>{percentGoalWithEdge(needed, EEZ_OBJECTIVE)}</Pill>
           </span>
         </div>
       )}
@@ -192,7 +184,7 @@ const genNetworkObjective = (
         msg={
           <>
             This plan meets the objective of designating{" "}
-            <b>{PercentZero.format(objective)}</b> of the Bermuda EEZ as fully
+            <b>{percentWithEdge(objective)}</b> of the Bermuda EEZ as fully
             protected fisheries replenishment zones.
           </>
         }
@@ -206,7 +198,7 @@ const genNetworkObjective = (
           <>
             <div>
               This plan <b>may</b> meet the objective of designating{" "}
-              <b>{PercentZero.format(objective)}</b> of the Bermuda EEZ as fully
+              <b>{percentWithEdge(objective)}</b> of the Bermuda EEZ as fully
               protected fisheries replenishment zones.
             </div>
             {progressMsg}
@@ -222,7 +214,7 @@ const genNetworkObjective = (
           <>
             <div>
               This plan <b>does not</b> meet the objective of designating{" "}
-              <b>{PercentZero.format(objective)}</b> of the Bermuda EEZ as fully
+              <b>{percentWithEdge(objective)}</b> of the Bermuda EEZ as fully
               protected fisheries replenishment zones.
             </div>
             {progressMsg}
@@ -337,12 +329,7 @@ const genLevelTable = (levelStats: LevelStat[]) => {
       Header: "% EEZ",
       accessor: (row) => (
         <LevelPill level={row.level}>
-          {row.percPlanningArea === 0
-            ? Percent.format(row.percPlanningArea)
-            : percentLower(row.percPlanningArea, {
-                lower: 0.001,
-                digits: 1,
-              })}
+          {percentGoalWithEdge(row.percPlanningArea, EEZ_OBJECTIVE)}
         </LevelPill>
       ),
       style: { width: "15%" },
@@ -408,7 +395,7 @@ const genCategoryTable = (categoryStats: CategoryStat[]) => {
     {
       Header: "%EEZ",
       accessor: (row) =>
-        percentLower(row.percPlanningArea, { lower: 0.001, digits: 1 }),
+        percentGoalWithEdge(row.percPlanningArea, EEZ_OBJECTIVE),
       style: { width: "15%" },
     },
   ];
@@ -440,10 +427,7 @@ const genSketchTable = (sketchStats: SketchStat[]) => {
       Header: "% EEZ",
       accessor: (row) => (
         <span className="eezPerc">
-          {percentLower(row.percPlanningArea, {
-            lower: 0.001,
-            digits: 1,
-          })}
+          {percentGoalWithEdge(row.percPlanningArea, EEZ_OBJECTIVE)}
         </span>
       ),
       style: { width: "15%" },

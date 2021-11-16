@@ -6,7 +6,7 @@ import {
   Table,
   Column,
   keyBy,
-  percentLower,
+  percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import config, { HabitatResults, nearshore } from "../_config";
 import { ClassMetric } from "../util/types";
@@ -39,7 +39,7 @@ const HabitatProtection = () => {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
       accessor: (row) => {
-        const percDisplay = percentLower(row.percValue);
+        const percDisplay = percentWithEdge(row.percValue);
         const goal =
           config.nearshore.layers.find((lyr) => lyr.name === row.name)
             ?.goalPerc || 0;
@@ -57,7 +57,7 @@ const HabitatProtection = () => {
         const goalPerc = config.offshore.layers.find(
           (lyr) => lyr.baseFilename === row.name
         )?.goalPerc;
-        return percentLower(goalPerc || 0);
+        return percentWithEdge(goalPerc || 0);
       },
     },
     {
@@ -83,7 +83,7 @@ const HabitatProtection = () => {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
       accessor: (row) => {
-        const percDisplay = percentLower(row.percValue);
+        const percDisplay = percentWithEdge(row.percValue);
         const goal =
           config.nearshore.layers.find((lyr) => lyr.name === row.name)
             ?.goalPerc || 0;
@@ -101,7 +101,7 @@ const HabitatProtection = () => {
         const goalPerc = config.nearshore.layers.find(
           (lyr) => lyr.name === row.name
         )?.goalPerc;
-        return percentLower(goalPerc || 0);
+        return percentWithEdge(goalPerc || 0);
       },
     },
     {

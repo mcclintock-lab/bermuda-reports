@@ -4,7 +4,7 @@ import {
   Skeleton,
   Column,
   Table,
-  percentLower,
+  percentWithEdge,
   LayerToggle,
   keyBy,
   ReportError,
@@ -114,7 +114,7 @@ const genTable = (data: ClassMetric[]) => {
     {
       Header: "% Area Within Plan",
       style: { textAlign: "right", width: "40%" },
-      accessor: (row) => percentLower(row.percValue),
+      accessor: (row) => percentWithEdge(row.percValue),
     },
     {
       Header: "Show Map",

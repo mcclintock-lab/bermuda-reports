@@ -3,7 +3,7 @@ import {
   ResultsCard,
   Skeleton,
   KeySection,
-  percentLower,
+  percentWithEdge,
   LayerToggle,
   useSketchProperties,
   ReportError,
@@ -17,11 +17,6 @@ import { getGroupMetricsSketchAgg } from "../util/metrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
 import { getBreakGroup } from "../util/platformEdge";
 import styled from "styled-components";
-
-const Percent = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 1,
-});
 
 const LAYERS = config.platformEdge.layers;
 const LAYER = LAYERS[0];
@@ -92,7 +87,7 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 {keySection} It overlaps with{" "}
-                <b>{percentLower(classMetric.percValue)}</b> of the nearshore
+                <b>{percentWithEdge(classMetric.percValue)}</b> of the nearshore
                 pelagic fishing zone.
               </>
             );
@@ -110,7 +105,7 @@ const PlatformEdge = () => {
                 {keySection}{" "}
                 <b>{classMetric.sketchMetrics[0].numFishingRestricted}</b>{" "}
                 fishing activities are restricted and it overlaps with{" "}
-                <b>{percentLower(classMetric.percValue)}</b> of the nearshore
+                <b>{percentWithEdge(classMetric.percValue)}</b> of the nearshore
                 pelagic fishing zone.
               </>
             );
@@ -192,13 +187,7 @@ const PlatformEdge = () => {
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   const classColumns: Column<GroupMetricAgg>[] = LAYERS.map((lyr) => ({
     Header: lyr.display,
-    accessor: (row) =>
-      row[lyr.baseFilename] === 0
-        ? Percent.format(row[lyr.baseFilename] as number)
-        : percentLower(row[lyr.baseFilename] as number, {
-            lower: 0.001,
-            digits: 1,
-          }),
+    accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
   }));
 
   const breakTextByGroup = (groupId: string, numSketches: number) => {
@@ -271,7 +260,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
     },
     {
       Header: "% Fishing Zone Overlap",
-      accessor: (row) => percentLower(row.percValue),
+      accessor: (row) => percentWithEdge(row.percValue),
       style: { width: "25%" },
     },
   ];

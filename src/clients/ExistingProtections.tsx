@@ -5,7 +5,7 @@ import {
   Column,
   Table,
   LayerToggle,
-  percentLower,
+  percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import config, {
   OverlapResult,
@@ -13,12 +13,6 @@ import config, {
 } from "../functions/existingProtectionsConfig";
 // Import the results type definition from your functions to type-check your
 // component render functions
-
-const Number = new Intl.NumberFormat("en", { style: "decimal" });
-const Percent = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 1,
-});
 
 const ExistingProtections = () => {
   const columns: Column<OverlapMetric>[] = [
@@ -32,7 +26,7 @@ const ExistingProtections = () => {
       Header: "% Within Plan",
       style: { textAlign: "center" },
       accessor: (row) =>
-        percentLower(row.sketchArea / row.totalArea, {
+        percentWithEdge(row.sketchArea / row.totalArea, {
           lower: 0.01,
           digits: 1,
         }),

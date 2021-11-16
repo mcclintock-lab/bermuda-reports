@@ -4,12 +4,13 @@ import {
   Skeleton,
   ReportError,
   useSketchProperties,
-  percentLower,
+  percentWithEdge,
   UserAttribute,
   Table,
   Column,
   keyBy,
   capitalize,
+  percentGoalWithEdge,
 } from "@seasketch/geoprocessing/client";
 // Import the results type definition from your functions to type-check your
 // component render functions
@@ -38,16 +39,6 @@ import { getGroupMetricsAgg, getGroupMetricsSketchAgg } from "../util/metrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
-
-const Number = new Intl.NumberFormat("en", { style: "decimal" });
-const Percent = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 1,
-});
-const PercentZero = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 0,
-});
 
 const TableStyled = styled.div`
   .styled {
@@ -184,10 +175,7 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   const classColumns: Column<GroupMetricSketchAgg>[] = config.habitatNursery.layers.map(
     (lyr) => ({
       Header: lyr.display,
-      accessor: (row) =>
-        row[lyr.baseFilename] === 0
-          ? Percent.format(row[lyr.baseFilename] as number)
-          : percentLower(row[lyr.baseFilename] as number),
+      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
     })
   );
 
@@ -204,9 +192,7 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
       accessor: (row) => {
         return (
           <LevelPill level={row.groupId}>
-            {row.percValue === 0
-              ? Percent.format(row.percValue)
-              : percentLower(row.percValue as number)}
+            {percentWithEdge(row.percValue as number)}
           </LevelPill>
         );
       },
@@ -228,13 +214,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   const classColumns: Column<GroupMetricAgg>[] = config.habitatNursery.layers.map(
     (lyr) => ({
       Header: lyr.display,
-      accessor: (row) =>
-        row[lyr.baseFilename] === 0
-          ? Percent.format(row[lyr.baseFilename] as number)
-          : percentLower(row[lyr.baseFilename] as number, {
-              lower: 0.001,
-              digits: 1,
-            }),
+      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
       style: { width: "10%" },
     })
   );
@@ -261,12 +241,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
       accessor: (row) => {
         return (
           <LevelPill level={row.groupId}>
-            {row.percValue === 0
-              ? Percent.format(row.percValue)
-              : percentLower(row.percValue as number, {
-                  lower: 0.001,
-                  digits: 1,
-                })}
+            {percentWithEdge(row.percValue as number)}
           </LevelPill>
         );
       },
@@ -297,7 +272,7 @@ const genHabitatTable = (data: ClassMetric[]) => {
     {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => percentLower(row.percValue),
+      accessor: (row, index) => percentWithEdge(row.percValue),
     },
     {
       Header: "Show Map",
@@ -336,9 +311,16 @@ const genSingleObjective = (
           msg={
             <>
               This full protection MPA contains{" "}
-              <b>{percentLower(actual, { digits: 0, lower: 0.001 })}</b> of
-              known key nursery habitat and counts toward protecting{" "}
-              <b>{percentLower(objective, { digits: 0, lower: 0.001 })}</b>{" "}
+              <b>
+                {percentWithEdge(actual, {
+                  digits: 0,
+                  lower: 0.001,
+                  upperBound: objective,
+                  upper: objective - 0.001,
+                })}
+              </b>{" "}
+              of known key nursery habitat and counts toward protecting{" "}
+              <b>{percentWithEdge(objective, { digits: 0, lower: 0.001 })}</b>{" "}
             </>
           }
         />
@@ -350,9 +332,17 @@ const genSingleObjective = (
           msg={
             <>
               This high protection MPA contains{" "}
-              <b>{percentLower(actual, { digits: 0, lower: 0.001 })}</b> of
-              known key nursery habitat and <b>may</b> count towards protecting{" "}
-              <b>{percentLower(objective, { digits: 0, lower: 0.001 })}</b>{" "}
+              <b>
+                {percentWithEdge(actual, {
+                  digits: 0,
+                  lower: 0.001,
+                  upperBound: objective,
+                  upper: objective - 0.001,
+                })}
+              </b>{" "}
+              of known key nursery habitat and <b>may</b> count towards
+              protecting{" "}
+              <b>{percentWithEdge(objective, { digits: 0, lower: 0.001 })}</b>{" "}
             </>
           }
         />
@@ -364,10 +354,17 @@ const genSingleObjective = (
           msg={
             <>
               This low protection MPA contains{" "}
-              <b>{percentLower(actual, { digits: 0, lower: 0.001 })}</b> of
-              known key nursery habitat and <b>does not</b> count towards
+              <b>
+                {percentWithEdge(actual, {
+                  digits: 0,
+                  lower: 0.001,
+                  upperBound: objective,
+                  upper: objective - 0.001,
+                })}
+              </b>{" "}
+              of known key nursery habitat and <b>does not</b> count towards
               protecting{" "}
-              <b>{percentLower(objective, { digits: 0, lower: 0.001 })}</b>{" "}
+              <b>{percentWithEdge(objective, { digits: 0, lower: 0.001 })}</b>{" "}
             </>
           }
         />
@@ -382,20 +379,14 @@ const genNetworkObjective = (
 ) => {
   const fullPerc = getPercValue(data.byLevel.full, precalcTotals.overall.value);
   const highPerc = getPercValue(data.byLevel.high, precalcTotals.overall.value);
-
   const needed = objective - fullPerc - highPerc;
-  const lower = percentLower(fullPerc);
 
-  const fullPercDisplay =
-    fullPerc === 0 ? Percent.format(fullPerc) : percentLower(fullPerc);
-
-  const highPercDisplay =
-    highPerc === 0 ? Percent.format(highPerc) : percentLower(highPerc);
-
-  const combinedPercDisplay =
-    fullPerc + highPerc === 0
-      ? Percent.format(fullPerc + highPerc)
-      : percentLower(fullPerc + highPerc);
+  const fullPercDisplay = percentGoalWithEdge(fullPerc, objective);
+  const highPercDisplay = percentGoalWithEdge(highPerc, objective);
+  const combinedPercDisplay = percentGoalWithEdge(
+    fullPerc + highPerc,
+    objective
+  );
 
   const progressMsg = (
     <>
@@ -411,7 +402,7 @@ const genNetworkObjective = (
         <div style={{ display: "flex" }}>
           <span style={{ width: 100 }}>Still needs:</span>
           <span>
-            <Pill>{percentLower(needed, { lower: 0.1, digits: 1 })}</Pill>
+            <Pill>{percentWithEdge(needed, { lower: 0.1, digits: 1 })}</Pill>
           </span>
         </div>
       )}
@@ -426,7 +417,7 @@ const genNetworkObjective = (
         msg={
           <>
             This plan meets the objective of protecting{" "}
-            <b>{PercentZero.format(objective)}</b> of key nursery habitat.
+            <b>{percentWithEdge(objective)}</b> of key nursery habitat.
           </>
         }
       />
@@ -439,7 +430,7 @@ const genNetworkObjective = (
           <>
             <div>
               This plan <b>may</b> meet the objective of protecting{" "}
-              <b>{PercentZero.format(objective)}</b> of key nursery habitat.
+              <b>{percentWithEdge(objective)}</b> of key nursery habitat.
             </div>
             {progressMsg}
           </>
@@ -454,7 +445,7 @@ const genNetworkObjective = (
           <>
             <div>
               This plan <b>does not</b> meet the objective of protecting{" "}
-              <b>{PercentZero.format(objective)}</b> of key nursery habitat.
+              <b>{percentWithEdge(objective)}</b> of key nursery habitat.
             </div>
             {progressMsg}
           </>

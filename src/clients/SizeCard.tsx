@@ -6,7 +6,7 @@ import {
   Column,
   Table,
   useSketchProperties,
-  percentLower,
+  percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
@@ -15,10 +15,6 @@ import styled from "styled-components";
 import { AreaResult, AreaResultType } from "../functions/area";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
-const Percent = new Intl.NumberFormat("en", {
-  style: "percent",
-  maximumFractionDigits: 2,
-});
 
 export interface RegionResult {
   region: string;
@@ -150,7 +146,7 @@ const genSingleSizeTable = (data: AreaResult) => {
     },
     {
       Header: "% Within Plan",
-      accessor: (row) => percentLower(row.percArea),
+      accessor: (row) => percentWithEdge(row.percArea),
     },
   ];
 
@@ -208,7 +204,7 @@ const genNetworkSizeTable = (data: AreaResult) => {
         {
           Header: "% Area",
           accessor: (row) =>
-            percentLower(row.nearshorePercArea, { lowerOverride: "0.1%" }),
+            percentWithEdge(row.nearshorePercArea, { lowerOverride: "0.1%" }),
         },
       ],
     },
@@ -224,7 +220,7 @@ const genNetworkSizeTable = (data: AreaResult) => {
         },
         {
           Header: "% Area ",
-          accessor: (row) => percentLower(row.offshorePercArea),
+          accessor: (row) => percentWithEdge(row.offshorePercArea),
         },
       ],
     },
@@ -240,7 +236,7 @@ const genNetworkSizeTable = (data: AreaResult) => {
         },
         {
           Header: "% Area  ",
-          accessor: (row) => percentLower(row.overallPercArea),
+          accessor: (row) => percentWithEdge(row.overallPercArea),
         },
       ],
     },

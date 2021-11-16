@@ -6,7 +6,7 @@ import {
   Table,
   Column,
   keyBy,
-  percentLower,
+  percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import config, { RenewableResults } from "../_config";
 import { ClassMetric } from "../util/types";
@@ -37,7 +37,7 @@ const SpeciesProtection = () => {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
       accessor: (row, index) => {
-        return percentLower(row.percValue);
+        return percentWithEdge(row.percValue);
       },
     },
     {

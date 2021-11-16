@@ -6,7 +6,7 @@ import {
   Table,
   Column,
   keyBy,
-  percentLower,
+  percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import config, { ReefIndexResults, nearshore } from "../_config";
 import { ClassMetric } from "../util/types";
@@ -38,7 +38,7 @@ const SpeciesProtection = () => {
       Header: "% Within Plan",
       style: { textAlign: "right", width: "30%" },
       accessor: (row, index) => {
-        const percDisplay = percentLower(row.percValue);
+        const percDisplay = percentWithEdge(row.percValue);
         const goal =
           LAYERS.find((lyr) => lyr.baseFilename === row.name)?.goalPerc || 0;
         if (row.percValue > goal) {
@@ -54,7 +54,7 @@ const SpeciesProtection = () => {
       accessor: (row, index) => {
         const goalPerc = LAYERS.find((lyr) => lyr.baseFilename === row.name)
           ?.goalPerc;
-        return percentLower(goalPerc || 0);
+        return percentWithEdge(goalPerc || 0);
       },
     },
     {

@@ -4,7 +4,7 @@ import {
   Skeleton,
   Table,
   Column,
-  percentLower,
+  percentWithEdge,
   LayerToggle,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
@@ -91,14 +91,14 @@ const genOverallUseTable = (data: SapMapResults) => {
       accessor: (row) => {
         const sector = rasterConfig.find((config) => config.name === row.name);
         const sectorName = sector?.display ? sector.display : "";
-        return sectorName
+        return sectorName;
       },
       style: { width: "65%" },
     },
     {
       Header: "% Value In Plan",
       accessor: (row) => {
-        return percentLower(row.percValue, { lower: 0.01, digits: 1 });
+        return percentWithEdge(row.percValue, { lower: 0.01, digits: 1 });
       },
       style: { width: "20%" },
     },
