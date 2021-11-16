@@ -9,9 +9,7 @@ import {
   loadCogWindow,
   keyBy,
 } from "@seasketch/geoprocessing";
-import dissolve from "@turf/dissolve";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
 import config, { RenewableResults } from "../_config";
 import { sumOverlapRaster } from "../util/sumOverlapRaster";
 
@@ -24,24 +22,19 @@ const LAYERS = config.renewable.layers;
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<RenewableResults> {
-  const sketches = toSketchArray(sketch);
-  const combinedSketch = isSketchCollection(sketch)
-    ? dissolve(sketch)
-    : featureCollection([sketch]);
   const box = sketch.bbox || bbox(sketch);
 
-  rasters = await Promise.all(
-    LAYERS.map((lyr) =>
-      loadCogWindow(`${config.dataBucketUrl}${lyr.filename}`, {
-        windowBox: box,
-        noDataValue: lyr.noDataValue,
-      })
-    )
-  );
-
   const metrics = await Promise.all(
-    rasters.map(async (raster, index) => {
-      const lyr = LAYERS[index];
+    LAYERS.map(async (lyr) => {
+      // start raster load and move on in loop while awaiting finish
+      const raster = await loadCogWindow(
+        `${config.dataBucketUrl}${lyr.filename}`,
+        {
+          windowBox: box,
+          noDataValue: lyr.noDataValue,
+        }
+      );
+      // start analysis as soon as source load done
       return sumOverlapRaster(
         raster,
         lyr.baseFilename,
@@ -59,9 +52,9 @@ export async function renewable(
 export default new GeoprocessingHandler(renewable, {
   title: "renewable",
   description: "high quality reef protection metrics",
-  timeout: 180, // seconds
+  timeout: 240, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
-  memory: 8192,
+  memory: 4096,
 });
