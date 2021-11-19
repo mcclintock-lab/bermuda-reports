@@ -1,119 +1,121 @@
 {
-  "aquaculture_heatmap": {
-    "name": "aquaculture_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
-  },
-  "boating_heatmap": {
-    "name": "boating_heatmap",
-    "value": 1772.1131806676276,
-    "percValue": 0.0041178798567772365,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 1772.1131806676276,
-        "percValue": 0.0041178798567772365
-      }
-    ]
-  },
-  "commercial_fishing_heatmap": {
-    "name": "commercial_fishing_heatmap",
-    "value": 40910.256570832804,
-    "percValue": 0.13807608760024384,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 40910.256570832804,
-        "percValue": 0.13807608760024384
-      }
-    ]
-  },
-  "passiverec_conservation_heatmap": {
-    "name": "passiverec_conservation_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
-  },
-  "recreational_fishing_heatmap": {
-    "name": "recreational_fishing_heatmap",
-    "value": 159.9315665587783,
-    "percValue": 0.0006921923455122415,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 159.9315665587783,
-        "percValue": 0.0006921923455122415
-      }
-    ]
-  },
-  "shipping_heatmap": {
-    "name": "shipping_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
-  },
-  "swim_snorkel_dive_heatmap": {
-    "name": "swim_snorkel_dive_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
-  },
-  "tourism_heatmap": {
-    "name": "tourism_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
-  },
-  "utilities_heatmap": {
-    "name": "utilities_heatmap",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "sketchId": "615ffd9d045840708a6e54e5",
-        "name": "big-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
+  "byClass": {
+    "aquaculture_heatmap": {
+      "name": "aquaculture_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "boating_heatmap": {
+      "name": "boating_heatmap",
+      "value": 1772.1131806676276,
+      "percValue": 0.0041178798567772365,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 1772.1131806676276,
+          "percValue": 0.0041178798567772365
+        }
+      ]
+    },
+    "commercial_fishing_heatmap": {
+      "name": "commercial_fishing_heatmap",
+      "value": 40910.256570832804,
+      "percValue": 0.13807608760024384,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 40910.256570832804,
+          "percValue": 0.13807608760024384
+        }
+      ]
+    },
+    "passiverec_conservation_heatmap": {
+      "name": "passiverec_conservation_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "recreational_fishing_heatmap": {
+      "name": "recreational_fishing_heatmap",
+      "value": 159.9315665587783,
+      "percValue": 0.0006921923455122415,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 159.9315665587783,
+          "percValue": 0.0006921923455122415
+        }
+      ]
+    },
+    "shipping_heatmap": {
+      "name": "shipping_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "swim_snorkel_dive_heatmap": {
+      "name": "swim_snorkel_dive_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "tourism_heatmap": {
+      "name": "tourism_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "utilities_heatmap": {
+      "name": "utilities_heatmap",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
   }
 }

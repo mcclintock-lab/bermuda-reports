@@ -386,6 +386,66 @@ export const habitatNursery = {
   }),
 };
 
+//// OCEAN USE ////
+
+export interface OceanUseResults {
+  byClass: ClassMetrics;
+}
+
+const oceanUseLayers = [
+  {
+    baseFilename: "aquaculture_heatmap",
+    display: "Aquaculture",
+    layerId: "60ef55245bf512cb19da4d04",
+  },
+  {
+    baseFilename: "boating_heatmap",
+    display: "Boating",
+    layerId: "60ef55245bf512cb19da4d0a",
+  },
+  {
+    baseFilename: "commercial_fishing_heatmap",
+    display: "Commercial Fishing",
+    layerId: "61648ab8a04323106537d190",
+  },
+  {
+    baseFilename: "passiverec_conservation_heatmap",
+    display: "Passive Recreation / Conservation",
+    layerId: "60ef55245bf512cb19da4d10",
+  },
+  {
+    baseFilename: "recreational_fishing_heatmap",
+    display: "Recreational Fishing",
+    layerId: "60ef55245bf512cb19da4d02",
+  },
+  {
+    baseFilename: "shipping_heatmap",
+    display: "Shipping",
+    layerId: "61648ab8a04323106537d198",
+  },
+  {
+    baseFilename: "swim_snorkel_dive_heatmap",
+    display: "Swimming / Snorkeling / Diving",
+    layerId: "60ef55245bf512cb19da4d0e",
+  },
+  {
+    baseFilename: "tourism_heatmap",
+    display: "Tourism",
+    layerId: "60ef55245bf512cb19da4d0c",
+  },
+  {
+    baseFilename: "utilities_heatmap",
+    display: "Utilities",
+    layerId: "61648ab8a04323106537d196",
+  },
+];
+
+export const oceanUse = {
+  layers: oceanUseLayers.map((lyr) => {
+    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  }),
+};
+
 //// PLATFORM EDGE ////
 
 // Build up new type with additional property
@@ -459,6 +519,7 @@ export default {
   offshore,
   reefIndex,
   renewable,
+  oceanUse,
   habitatRestore,
   habitatNursery,
   platformEdge,

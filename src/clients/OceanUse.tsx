@@ -6,12 +6,12 @@ import {
   Column,
   percentWithEdge,
   LayerToggle,
+  keyBy,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
-import { WarningPill } from "../components/Pill";
 import styled from "styled-components";
-import { SapMapResults } from "../functions/oceanUse";
-import { rasterConfig } from "../functions/oceanUseConfig";
+import config, { OceanUseResults } from "../_config";
+import { ClassMetric } from "../util/types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
@@ -28,6 +28,8 @@ const OverallUseTableStyled = styled.div`
 }
 `;
 
+const LAYERS = config.oceanUse.layers;
+
 const OceanUse = () => {
   return (
     <>
@@ -36,7 +38,7 @@ const OceanUse = () => {
         functionName="oceanUse"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: SapMapResults) => {
+        {(data: OceanUseResults) => {
           // Overall: one map per row, with show toggle
           // per sketch: one sketch per row
           return (
@@ -83,15 +85,16 @@ const OceanUse = () => {
   );
 };
 
-const genOverallUseTable = (data: SapMapResults) => {
-  const sapResults = Object.keys(data).map((mapName) => data[mapName]);
-  const sapColumns: Column<SapMapResults[0]>[] = [
+const genOverallUseTable = (data: OceanUseResults) => {
+  const classes = keyBy(LAYERS, (lyr) => lyr.baseFilename);
+  const columns: Column<ClassMetric>[] = [
     {
       Header: "Sector",
       accessor: (row) => {
-        const sector = rasterConfig.find((config) => config.name === row.name);
-        const sectorName = sector?.display ? sector.display : "";
-        return sectorName;
+        const sectorName = config.oceanUse.layers.find(
+          (lyr) => lyr.baseFilename === row.name
+        )?.display;
+        return sectorName || "";
       },
       style: { width: "65%" },
     },
@@ -108,8 +111,8 @@ const genOverallUseTable = (data: SapMapResults) => {
         <LayerToggle
           simple
           layerId={
-            rasterConfig.find((config) => config.name === row.name)?.layerId ||
-            ""
+            config.oceanUse.layers.find((lyr) => lyr.baseFilename === row.name)
+              ?.layerId || ""
           }
           style={{ marginTop: 0, paddingLeft: 15 }}
         />
@@ -120,7 +123,11 @@ const genOverallUseTable = (data: SapMapResults) => {
 
   return (
     <OverallUseTableStyled>
-      <Table className="styled" columns={sapColumns} data={sapResults} />
+      <Table
+        className="styled"
+        columns={columns}
+        data={Object.values(data.byClass)}
+      />
     </OverallUseTableStyled>
   );
 };
