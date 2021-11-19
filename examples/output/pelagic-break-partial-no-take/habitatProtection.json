@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 422,
-      "percValue": 0.012219133657632615,
+      "value": 489,
+      "percValue": 0.011650346651418769,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,50 +32,50 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 3,
-      "percValue": 0.024793388429752067,
+      "value": 1,
+      "percValue": 0.005988023952095809,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 9,
-      "percValue": 0.000727802037845706,
+      "value": 13,
+      "percValue": 0.0008677658367265203,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 1722,
-      "percValue": 0.05500718735026354,
+      "value": 2113,
+      "percValue": 0.05562282826155628,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 117,
-      "percValue": 0.004742602351033644,
+      "value": 147,
+      "percValue": 0.0049009801960392075,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
-      "value": 687,
-      "percValue": 0.02194888178913738,
+    "Mesophotic": {
+      "name": "Mesophotic",
+      "value": 811,
+      "percValue": 0.02138374729736856,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 290,
-      "percValue": 0.013883569513596324,
+      "value": 346,
+      "percValue": 0.013583009460997919,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 1704,
-      "percValue": 0.024226569608735215,
+      "value": 2079,
+      "percValue": 0.024361092558090484,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 4991,
-      "percValue": 0.03464672969858525,
+      "value": 6039,
+      "percValue": 0.03454489291598023,
       "sketchMetrics": []
     }
   },
@@ -96,13 +96,13 @@
     "Bathypelagic1": {
       "name": "Bathypelagic1",
       "value": 6,
-      "percValue": 0.05128205128205128,
+      "percValue": 0.04838709677419355,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
           "value": 6,
-          "percValue": 0.05128205128205128
+          "percValue": 0.04838709677419355
         }
       ]
     },
@@ -121,40 +121,40 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 2,
-      "percValue": 0.018691588785046728,
+      "value": 1,
+      "percValue": 0.009708737864077669,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 2,
-          "percValue": 0.018691588785046728
+          "value": 1,
+          "percValue": 0.009708737864077669
         }
       ]
     },
     "Knolls1": {
       "name": "Knolls1",
-      "value": 5,
-      "percValue": 0.0031705770450221942,
+      "value": 4,
+      "percValue": 0.002520478890989288,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 5,
-          "percValue": 0.0031705770450221942
+          "value": 4,
+          "percValue": 0.002520478890989288
         }
       ]
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 7,
-      "percValue": 0.0022443090734209684,
+      "value": 6,
+      "percValue": 0.002014098690835851,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 7,
-          "percValue": 0.0022443090734209684
+          "value": 6,
+          "percValue": 0.002014098690835851
         }
       ]
     },
@@ -187,13 +187,13 @@
     "Plains": {
       "name": "Plains",
       "value": 2,
-      "percValue": 0.00035161744022503517,
+      "percValue": 0.00036489691662105453,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
           "value": 2,
-          "percValue": 0.00035161744022503517
+          "percValue": 0.00036489691662105453
         }
       ]
     },

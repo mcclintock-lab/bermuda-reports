@@ -2,8 +2,8 @@
   "nearshore": {
     "Bays and Coast": {
       "name": "Bays and Coast",
-      "value": 200,
-      "percValue": 0.021581957483543756,
+      "value": 237,
+      "percValue": 0.02094009542321965,
       "sketchMetrics": []
     },
     "Madracis Reef": {
@@ -14,14 +14,14 @@
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
-      "value": 51,
-      "percValue": 0.0020524790727623953,
+      "value": 71,
+      "percValue": 0.0023583338869328373,
       "sketchMetrics": []
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 7638,
-      "percValue": 0.22116052814454482,
+      "value": 9236,
+      "percValue": 0.22004622018916922,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,44 +32,44 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 37,
-      "percValue": 0.30578512396694213,
+      "value": 44,
+      "percValue": 0.2634730538922156,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 2827,
-      "percValue": 0.22861070677664563,
+      "value": 3418,
+      "percValue": 0.2281556638408651,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 3609,
-      "percValue": 0.11528509822712027,
+      "value": 4420,
+      "percValue": 0.11635253237864589,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 2216,
-      "percValue": 0.0898256992298338,
+      "value": 2728,
+      "percValue": 0.09095152363806094,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
-      "value": 1642,
-      "percValue": 0.05246006389776358,
+    "Mesophotic": {
+      "name": "Mesophotic",
+      "value": 1908,
+      "percValue": 0.05030849549121975,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 1743,
-      "percValue": 0.08344504021447721,
+      "value": 2171,
+      "percValue": 0.08522749577984533,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 834,
-      "percValue": 0.0118573703366697,
+      "value": 967,
+      "percValue": 0.011331013229280183,
       "sketchMetrics": []
     },
     "Bathypelagic": {

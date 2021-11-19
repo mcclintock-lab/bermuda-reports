@@ -92,7 +92,7 @@ const nearshoreLayers = [
   },
   {
     class_id: "10",
-    name: "Mesotrophic",
+    name: "Mesophotic",
     goalPerc: 0.2,
   },
   {
@@ -115,7 +115,7 @@ const nearshoreLayers = [
 export const nearshore = {
   baseFilename: nearshoreBaseFilename,
   filename: `${nearshoreBaseFilename}${cogFileSuffix}`,
-  layerId: "60359da253bd7d85675a1bd8",
+  layerId: "614df361c33508c127015a1c",
   layers: nearshoreLayers,
   classIdToName: nearshoreLayers.reduce<Record<string, string>>(
     (acc, lyr) => ({ ...acc, [lyr.class_id]: lyr.name }),

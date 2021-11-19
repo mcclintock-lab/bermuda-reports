@@ -54,8 +54,8 @@
       "percValue": 0,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
+    "Mesophotic": {
+      "name": "Mesophotic",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": []
@@ -82,27 +82,27 @@
   "offshore": {
     "feature_abyssopelagic": {
       "name": "feature_abyssopelagic",
-      "value": 1435,
-      "percValue": 0.22265321955003878,
+      "value": 1364,
+      "percValue": 0.22386344986049564,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 1435,
-          "percValue": 0.22265321955003878
+          "value": 1364,
+          "percValue": 0.22386344986049564
         }
       ]
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 4,
-      "percValue": 0.03418803418803419,
+      "value": 6,
+      "percValue": 0.04838709677419355,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 4,
-          "percValue": 0.03418803418803419
+          "value": 6,
+          "percValue": 0.04838709677419355
         }
       ]
     },
@@ -122,39 +122,39 @@
     "Escarpments1": {
       "name": "Escarpments1",
       "value": 13,
-      "percValue": 0.12149532710280374,
+      "percValue": 0.1262135922330097,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
           "value": 13,
-          "percValue": 0.12149532710280374
+          "percValue": 0.1262135922330097
         }
       ]
     },
     "Knolls1": {
       "name": "Knolls1",
-      "value": 315,
-      "percValue": 0.19974635383639822,
+      "value": 320,
+      "percValue": 0.20163831127914303,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 315,
-          "percValue": 0.19974635383639822
+          "value": 320,
+          "percValue": 0.20163831127914303
         }
       ]
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 1326,
-      "percValue": 0.4251362616223148,
+      "value": 1278,
+      "percValue": 0.42900302114803623,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 1326,
-          "percValue": 0.4251362616223148
+          "value": 1278,
+          "percValue": 0.42900302114803623
         }
       ]
     },
@@ -173,40 +173,40 @@
     },
     "Pelagic zone 3": {
       "name": "Pelagic zone 3",
-      "value": 327,
-      "percValue": 0.12344280860702152,
+      "value": 325,
+      "percValue": 0.1249519415609381,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 327,
-          "percValue": 0.12344280860702152
+          "value": 325,
+          "percValue": 0.1249519415609381
         }
       ]
     },
     "Plains": {
       "name": "Plains",
-      "value": 1304,
-      "percValue": 0.22925457102672292,
+      "value": 1250,
+      "percValue": 0.2280605728881591,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 1304,
-          "percValue": 0.22925457102672292
+          "value": 1250,
+          "percValue": 0.2280605728881591
         }
       ]
     },
     "seamounts_buffered": {
       "name": "seamounts_buffered",
-      "value": 37,
-      "percValue": 0.09560723514211886,
+      "value": 32,
+      "percValue": 0.08443271767810026,
       "sketchMetrics": [
         {
           "id": "615ffd9d045840708a6e54e5",
           "name": "big-1",
-          "value": 37,
-          "percValue": 0.09560723514211886
+          "value": 32,
+          "percValue": 0.08443271767810026
         }
       ]
     }

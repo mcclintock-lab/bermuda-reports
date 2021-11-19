@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 233,
-      "percValue": 0.0067465832754227475,
+      "value": 261,
+      "percValue": 0.006218283182045601,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,50 +32,50 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 4,
-      "percValue": 0.03305785123966942,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 50,
-      "percValue": 0.004043344654698367,
+      "value": 64,
+      "percValue": 0.004272077965422869,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 1478,
-      "percValue": 0.04721290528669542,
+      "value": 1813,
+      "percValue": 0.0477255975571233,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 97,
-      "percValue": 0.003931901094446697,
+      "value": 127,
+      "percValue": 0.004234180169367207,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
-      "value": 569,
-      "percValue": 0.018178913738019168,
+    "Mesophotic": {
+      "name": "Mesophotic",
+      "value": 670,
+      "percValue": 0.017665981121130624,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 229,
-      "percValue": 0.010963232477977786,
+      "value": 272,
+      "percValue": 0.010677972755466572,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 1203,
-      "percValue": 0.017103616924476796,
+      "value": 1469,
+      "percValue": 0.017213297242825838,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 6,
-      "percValue": 0.00004165104752384522,
+      "value": 9,
+      "percValue": 0.000051482701812191104,
       "sketchMetrics": []
     }
   },

@@ -20,8 +20,8 @@
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 1392,
-      "percValue": 0.04030576789437109,
+      "value": 1702,
+      "percValue": 0.04054987730207514,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,20 +32,20 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 1,
-      "percValue": 0.008264462809917356,
+      "value": 4,
+      "percValue": 0.023952095808383235,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 132,
-      "percValue": 0.010674429888403688,
+      "value": 175,
+      "percValue": 0.011681463186703158,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 594,
-      "percValue": 0.018974604695735506,
+      "value": 708,
+      "percValue": 0.01863746446246183,
       "sketchMetrics": []
     },
     "Fore Reef": {
@@ -54,8 +54,8 @@
       "percValue": 0,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
+    "Mesophotic": {
+      "name": "Mesophotic",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": []

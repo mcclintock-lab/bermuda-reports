@@ -54,8 +54,8 @@
       "percValue": 0,
       "sketchMetrics": []
     },
-    "Mesotrophic": {
-      "name": "Mesotrophic",
+    "Mesophotic": {
+      "name": "Mesophotic",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": []
@@ -68,41 +68,41 @@
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 853,
-      "percValue": 0.012127502274795268,
+      "value": 1023,
+      "percValue": 0.011987204274615953,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 13285,
-      "percValue": 0.0922223610590473,
+      "value": 16167,
+      "percValue": 0.09248009335529929,
       "sketchMetrics": []
     }
   },
   "offshore": {
     "feature_abyssopelagic": {
       "name": "feature_abyssopelagic",
-      "value": 1,
-      "percValue": 0.0001551590380139643,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "618abe61e4efd949c23c5899",
           "name": "no-activity-mpa",
-          "value": 1,
-          "percValue": 0.0001551590380139643
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 6,
-      "percValue": 0.05128205128205128,
+      "value": 2,
+      "percValue": 0.016129032258064516,
       "sketchMetrics": [
         {
           "id": "618abe61e4efd949c23c5899",
           "name": "no-activity-mpa",
-          "value": 6,
-          "percValue": 0.05128205128205128
+          "value": 2,
+          "percValue": 0.016129032258064516
         }
       ]
     },
@@ -121,14 +121,14 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 6,
-      "percValue": 0.056074766355140186,
+      "value": 2,
+      "percValue": 0.019417475728155338,
       "sketchMetrics": [
         {
           "id": "618abe61e4efd949c23c5899",
           "name": "no-activity-mpa",
-          "value": 6,
-          "percValue": 0.056074766355140186
+          "value": 2,
+          "percValue": 0.019417475728155338
         }
       ]
     },
@@ -147,14 +147,14 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 6,
-      "percValue": 0.0019236934915036871,
+      "value": 2,
+      "percValue": 0.000671366230278617,
       "sketchMetrics": [
         {
           "id": "618abe61e4efd949c23c5899",
           "name": "no-activity-mpa",
-          "value": 6,
-          "percValue": 0.0019236934915036871
+          "value": 2,
+          "percValue": 0.000671366230278617
         }
       ]
     },
