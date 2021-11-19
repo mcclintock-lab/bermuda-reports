@@ -150,8 +150,8 @@ export async function protection(
 export default new GeoprocessingHandler(protection, {
   title: "protection",
   description: "Calculates IUCN protection levels",
-  timeout: 10, // seconds
-  executionMode: "sync",
+  timeout: 120, // seconds
+  executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

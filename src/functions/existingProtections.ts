@@ -53,7 +53,7 @@ export async function existingProtections(
 export default new GeoprocessingHandler(existingProtections, {
   title: "existingProtections",
   description: "Find which legislated areas the sketch overlaps with",
-  timeout: 30, // seconds
+  timeout: 180, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
