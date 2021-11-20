@@ -1,0 +1,80 @@
+{
+  "renewable": {
+    "float_solar1": {
+      "name": "float_solar1",
+      "value": 665835.5460966756,
+      "percValue": 0.9999546310134109,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 665835.5460966756,
+          "percValue": 0.9999546310134109
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 560817.2274767905,
+          "percValue": 0.8422376772388394
+        }
+      ]
+    },
+    "wind_fixed1": {
+      "name": "wind_fixed1",
+      "value": 475377.38686833484,
+      "percValue": 0.999965740741175,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 475377.38686833484,
+          "percValue": 0.999965740741175
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 421694.7479620129,
+          "percValue": 0.8870432474510824
+        }
+      ]
+    },
+    "wind_float1": {
+      "name": "wind_float1",
+      "value": 142662.08093595132,
+      "percValue": 1,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 142662.08093595132,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 133764.6649377644,
+          "percValue": 0.9376329299291418
+        }
+      ]
+    },
+    "wave_energy1": {
+      "name": "wave_energy1",
+      "value": 235002.93301453642,
+      "percValue": 0.999965613385541,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 235002.93301453642,
+          "percValue": 0.999965613385541
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 222290.76870953292,
+          "percValue": 0.94587383242924
+        }
+      ]
+    }
+  }
+}
