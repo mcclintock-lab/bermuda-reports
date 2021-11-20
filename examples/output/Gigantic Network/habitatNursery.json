@@ -1,0 +1,160 @@
+{
+  "overall": {
+    "value": 51374989.98110728,
+    "percValue": 1
+  },
+  "byClass": {
+    "lagoonal_reef_only": {
+      "name": "lagoonal_reef_only",
+      "value": 76493399.50675851,
+      "percValue": 1.5832002671205225,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 48309451.736592434,
+          "percValue": 0.9998710658304772
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 28183947.770166077,
+          "percValue": 0.5833292012900453
+        }
+      ]
+    },
+    "Mangrove_shp_2012": {
+      "name": "Mangrove_shp_2012",
+      "value": 10599.046396714139,
+      "percValue": 0.06072605057358933,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 10599.046396714139,
+          "percValue": 0.06072605057358933
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Seagrass_2014_50mbuff": {
+      "name": "Seagrass_2014_50mbuff",
+      "value": 3912917.635827196,
+      "percValue": 1.356405413020087,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 2846838.338304913,
+          "percValue": 0.9868510639513052
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 1066079.297522283,
+          "percValue": 0.36955434906878193
+        }
+      ]
+    }
+  },
+  "byLevel": {
+    "full": {
+      "lagoonal_reef_only": {
+        "value": 48309451.736592434,
+        "percValue": 0.940330144188015,
+        "sketchMetrics": [
+          {
+            "id": "617e59f3198e046808b50fb2",
+            "name": "Gigantic MPA",
+            "value": 48309451.736592434,
+            "percValue": 0.9998710658304772
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 10599.046396714139,
+        "percValue": 0.00020630751267517228,
+        "sketchMetrics": [
+          {
+            "id": "617e59f3198e046808b50fb2",
+            "name": "Gigantic MPA",
+            "value": 10599.046396714139,
+            "percValue": 0.06072605057358933
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 2846838.338304913,
+        "percValue": 0.05541292250084747,
+        "sketchMetrics": [
+          {
+            "id": "617e59f3198e046808b50fb2",
+            "name": "Gigantic MPA",
+            "value": 2846838.338304913,
+            "percValue": 0.9868510639513052
+          }
+        ]
+      }
+    },
+    "high": {
+      "lagoonal_reef_only": {
+        "value": 28183947.770166077,
+        "percValue": 0.5485927643106205,
+        "sketchMetrics": [
+          {
+            "id": "619834683ff3e57f7333d93d",
+            "name": "Gigantic MPA 2",
+            "value": 28183947.770166077,
+            "percValue": 0.5833292012900453
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "619834683ff3e57f7333d93d",
+            "name": "Gigantic MPA 2",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 1066079.297522283,
+        "percValue": 0.020750939278320533,
+        "sketchMetrics": [
+          {
+            "id": "619834683ff3e57f7333d93d",
+            "name": "Gigantic MPA 2",
+            "value": 1066079.297522283,
+            "percValue": 0.36955434906878193
+          }
+        ]
+      }
+    },
+    "low": {
+      "lagoonal_reef_only": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    }
+  }
+}

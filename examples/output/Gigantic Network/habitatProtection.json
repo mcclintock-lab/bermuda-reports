@@ -1,0 +1,274 @@
+{
+  "nearshore": {
+    "Bays and Coast": {
+      "name": "Bays and Coast",
+      "value": 11154,
+      "percValue": 0.985509807386464,
+      "sketchMetrics": []
+    },
+    "Madracis Reef": {
+      "name": "Madracis Reef",
+      "value": 7786,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Montastraea Reef": {
+      "name": "Montastraea Reef",
+      "value": 49340,
+      "percValue": 1.6388759715671295,
+      "sketchMetrics": []
+    },
+    "Diploria Porites Reef": {
+      "name": "Diploria Porites Reef",
+      "value": 64723,
+      "percValue": 1.5420151049484192,
+      "sketchMetrics": []
+    },
+    "Castle Harbour Madracis": {
+      "name": "Castle Harbour Madracis",
+      "value": 781,
+      "percValue": 1,
+      "sketchMetrics": []
+    },
+    "Algal Vermetid Reef": {
+      "name": "Algal Vermetid Reef",
+      "value": 235,
+      "percValue": 1.407185628742515,
+      "sketchMetrics": []
+    },
+    "Rim Reef": {
+      "name": "Rim Reef",
+      "value": 27663,
+      "percValue": 1.8465389493358253,
+      "sketchMetrics": []
+    },
+    "Main Terrace Reef": {
+      "name": "Main Terrace Reef",
+      "value": 58663,
+      "percValue": 1.5442508160471728,
+      "sketchMetrics": []
+    },
+    "Fore Reef": {
+      "name": "Fore Reef",
+      "value": 57420,
+      "percValue": 1.914382876575315,
+      "sketchMetrics": []
+    },
+    "Mesophotic": {
+      "name": "Mesophotic",
+      "value": 66466,
+      "percValue": 1.7525180614881612,
+      "sketchMetrics": []
+    },
+    "Rariphotic": {
+      "name": "Rariphotic",
+      "value": 45562,
+      "percValue": 1.7886389510462057,
+      "sketchMetrics": []
+    },
+    "Mesopelagic": {
+      "name": "Mesopelagic",
+      "value": 151556,
+      "percValue": 1.775887322623358,
+      "sketchMetrics": []
+    },
+    "Bathypelagic": {
+      "name": "Bathypelagic",
+      "value": 325533,
+      "percValue": 1.8621464854475562,
+      "sketchMetrics": []
+    }
+  },
+  "offshore": {
+    "feature_abyssopelagic": {
+      "name": "feature_abyssopelagic",
+      "value": 1635,
+      "percValue": 0.26834071885770555,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 904,
+          "percValue": 0.14836697849991795
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 731,
+          "percValue": 0.11997374035778763
+        }
+      ]
+    },
+    "Bathypelagic1": {
+      "name": "Bathypelagic1",
+      "value": 150,
+      "percValue": 1.2096774193548387,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 77,
+          "percValue": 0.6209677419354839
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 73,
+          "percValue": 0.5887096774193549
+        }
+      ]
+    },
+    "Cold water coral1": {
+      "name": "Cold water coral1",
+      "value": 8,
+      "percValue": 0.8888888888888888,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 4,
+          "percValue": 0.4444444444444444
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 4,
+          "percValue": 0.4444444444444444
+        }
+      ]
+    },
+    "Escarpments1": {
+      "name": "Escarpments1",
+      "value": 107,
+      "percValue": 1.0388349514563107,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 59,
+          "percValue": 0.5728155339805825
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 48,
+          "percValue": 0.46601941747572817
+        }
+      ]
+    },
+    "Knolls1": {
+      "name": "Knolls1",
+      "value": 516,
+      "percValue": 0.32514177693761814,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 282,
+          "percValue": 0.1776937618147448
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 234,
+          "percValue": 0.14744801512287334
+        }
+      ]
+    },
+    "Pelagic zone 1": {
+      "name": "Pelagic zone 1",
+      "value": 871,
+      "percValue": 0.2923799932863377,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 505,
+          "percValue": 0.16951997314535078
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 366,
+          "percValue": 0.1228600201409869
+        }
+      ]
+    },
+    "Pelagic zone 2": {
+      "name": "Pelagic zone 2",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Pelagic zone 3": {
+      "name": "Pelagic zone 3",
+      "value": 1179,
+      "percValue": 0.4532871972318339,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 617,
+          "percValue": 0.2372164552095348
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 562,
+          "percValue": 0.21607074202229912
+        }
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "value": 1364,
+      "percValue": 0.2488596971355592,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 748,
+          "percValue": 0.1364714468162744
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 616,
+          "percValue": 0.1123882503192848
+        }
+      ]
+    },
+    "seamounts_buffered": {
+      "name": "seamounts_buffered",
+      "value": 71,
+      "percValue": 0.18733509234828497,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 45,
+          "percValue": 0.11873350923482849
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 26,
+          "percValue": 0.06860158311345646
+        }
+      ]
+    }
+  }
+}

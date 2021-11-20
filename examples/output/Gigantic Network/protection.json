@@ -1,0 +1,56 @@
+{
+  "sketchStats": [
+    {
+      "sketchId": "617e59f3198e046808b50fb2",
+      "name": "Gigantic MPA",
+      "category": "1a",
+      "level": "full",
+      "area": 74441430177.46776,
+      "percPlanningArea": 0.15983570829857782
+    },
+    {
+      "sketchId": "619834683ff3e57f7333d93d",
+      "name": "Gigantic MPA 2",
+      "category": "4/6",
+      "level": "high",
+      "area": 60595104877.38999,
+      "percPlanningArea": 0.13010579571637262
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "1a",
+      "level": "full",
+      "numSketches": 1,
+      "area": 74441430177.46776,
+      "percPlanningArea": 0.15983570829857782
+    },
+    {
+      "category": "4/6",
+      "level": "high",
+      "numSketches": 1,
+      "area": 60595104877.38999,
+      "percPlanningArea": 0.13010579571637262
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 1,
+      "area": 74441430177.46776,
+      "percPlanningArea": 0.15983570829857782
+    },
+    {
+      "level": "high",
+      "numSketches": 1,
+      "area": 60595104877.38999,
+      "percPlanningArea": 0.13010579571637262
+    },
+    {
+      "level": "low",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    }
+  ]
+}
