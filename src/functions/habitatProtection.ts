@@ -19,34 +19,18 @@ import { sumOverlapRaster } from "../util/sumOverlapRaster";
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
 
-// Define at module level for potential cache and reuse by Lambda
-let nearshoreRaster: Georaster;
-let offshoreRasters: Georaster[];
+const OFFSHORE_LAYERS = config.offshore.layers;
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<HabitatResults> {
   const sketches = toSketchArray(sketch);
-  const combinedSketch = isSketchCollection(sketch)
-    ? dissolve(sketch)
-    : featureCollection([sketch]);
   const box = sketch.bbox || bbox(sketch);
 
-  // Fetch raster windows with extent of sketch bbox
-  nearshoreRaster = await loadCogWindow(
+  const nearshoreRaster = await loadCogWindow(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
-
-  offshoreRasters = await Promise.all(
-    config.offshore.layers.map((lyr) =>
-      loadCogWindow(`${config.dataBucketUrl}${lyr.filename}`, {
-        windowBox: box,
-        noDataValue: lyr.noDataValue,
-      })
-    )
-  );
-
   const nearshoreMetrics = await rasterClassStats(
     nearshoreRaster,
     {
@@ -57,8 +41,16 @@ export async function habitatProtection(
   );
 
   const offshoreMetrics = await Promise.all(
-    offshoreRasters.map(async (raster, index) => {
-      const lyr = config.offshore.layers[index];
+    OFFSHORE_LAYERS.map(async (lyr) => {
+      // start raster load and move on in loop while awaiting finish
+      const raster = await loadCogWindow(
+        `${config.dataBucketUrl}${lyr.filename}`,
+        {
+          windowBox: box,
+          noDataValue: lyr.noDataValue,
+        }
+      );
+      // start analysis as soon as source load done
       return sumOverlapRaster(
         raster,
         lyr.baseFilename,

@@ -3,9 +3,6 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  toSketchArray,
-  isSketchCollection,
-  Georaster,
   loadCogWindow,
   keyBy,
 } from "@seasketch/geoprocessing";
@@ -15,8 +12,6 @@ import { sumOverlapRaster } from "../util/sumOverlapRaster";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 
-// Define at module level for potential cache and reuse by Lambda
-let rasters: Georaster[];
 const LAYERS = config.renewable.layers;
 
 export async function renewable(
