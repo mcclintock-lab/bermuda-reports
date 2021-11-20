@@ -18,9 +18,12 @@ import combine from "@turf/combine";
 import { featureEach } from "@turf/meta";
 import { SketchMetric, ClassMetric, ClassMetricSketch } from "./types";
 import dissolve from "@turf/dissolve";
-import turfArea from "@turf/area";
+import area from "@turf/area";
 import length from "@turf/length";
+import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
+// @ts-ignore
+import geoblaze, { Georaster } from "geoblaze";
 
 /**
  * returns overlap metric for feature collection.  If sketch passed, metric is calculated for each sketch and overall
@@ -56,18 +59,37 @@ export async function overlapStatsVector(
   //   combinedSketchValue = sketch.features.length;
   // }
 
+  let sumValue: number = 0;
+  let isOverlap = false;
+
+  // If sketch overlap, calculate overall metric values from dissolve
+  if (sketches.length > 1) {
+    const sketchColl = flatten(
+      featureCollection(sketches as Feature<Polygon | MultiPolygon>[])
+    );
+    const sketchArea = area(sketchColl);
+    const combinedSketch = dissolve(sketchColl);
+    const combinedArea = area(combinedSketch);
+    isOverlap = combinedArea < sketchArea;
+    if (isOverlap) {
+      featureEach(combinedSketch, (feat) => {
+        const curSum = getSketchPolygonIntersectArea(
+          feat,
+          features as Feature<Polygon | MultiPolygon>[]
+        );
+        sumValue += curSum;
+      });
+    }
+  }
+
   const sketchMetrics = sketches.map((curSketch) => {
     let sketchValue: number = 0;
+
     if (isPolygonFeature(curSketch)) {
-      // chunk to avoid blowing up intersect
-      const chunks = chunk(features as Feature<Polygon | MultiPolygon>[], 5000);
-      // intersect and get area of remainder
-      sketchValue = chunks
-        .map((curChunk) => intersect(curSketch, curChunk))
-        .reduce(
-          (sumValue, rem) => (rem ? turfArea(rem) + sumValue : sumValue),
-          0
-        );
+      sketchValue = getSketchPolygonIntersectArea(
+        curSketch,
+        features as Feature<Polygon | MultiPolygon>[]
+      );
     }
     // else if (isLineStringSketchCollection(sketch)) {
     //   // intersect and get area of remainder
@@ -84,15 +106,27 @@ export async function overlapStatsVector(
     };
   });
 
-  const sumSketchValue = sketchMetrics.reduce(
-    (sumSoFar, sm) => sumSoFar + sm.value,
-    0
-  );
+  if (!isOverlap) {
+    sumValue = sketchMetrics.reduce((sumSoFar, sm) => sumSoFar + sm.value, 0);
+  }
 
   return {
     name,
-    value: sumSketchValue,
-    percValue: sumSketchValue / totalValue,
+    value: sumValue,
+    percValue: sumValue / totalValue,
     sketchMetrics,
   };
 }
+
+const getSketchPolygonIntersectArea = (
+  feature: Feature<Polygon>,
+  features: Feature<Polygon | MultiPolygon>[]
+) => {
+  // chunk to avoid blowing up intersect
+  const chunks = chunk(features, 5000);
+  // intersect and get area of remainder
+  const sketchValue = chunks
+    .map((curChunk) => intersect(feature, curChunk))
+    .reduce((sumSoFar, rem) => (rem ? area(rem) + sumSoFar : sumSoFar), 0);
+  return sketchValue;
+};

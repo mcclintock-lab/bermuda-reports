@@ -82,8 +82,8 @@
   "offshore": {
     "feature_abyssopelagic": {
       "name": "feature_abyssopelagic",
-      "value": 1635,
-      "percValue": 0.26834071885770555,
+      "value": 983,
+      "percValue": 0.16133267684227803,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -101,8 +101,8 @@
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 150,
-      "percValue": 1.2096774193548387,
+      "value": 77,
+      "percValue": 0.6209677419354839,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -120,8 +120,8 @@
     },
     "Cold water coral1": {
       "name": "Cold water coral1",
-      "value": 8,
-      "percValue": 0.8888888888888888,
+      "value": 4,
+      "percValue": 0.4444444444444444,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -139,8 +139,8 @@
     },
     "Escarpments1": {
       "name": "Escarpments1",
-      "value": 107,
-      "percValue": 1.0388349514563107,
+      "value": 59,
+      "percValue": 0.5728155339805825,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -158,8 +158,8 @@
     },
     "Knolls1": {
       "name": "Knolls1",
-      "value": 516,
-      "percValue": 0.32514177693761814,
+      "value": 319,
+      "percValue": 0.2010081915563957,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -177,8 +177,8 @@
     },
     "Pelagic zone 1": {
       "name": "Pelagic zone 1",
-      "value": 871,
-      "percValue": 0.2923799932863377,
+      "value": 513,
+      "percValue": 0.17220543806646527,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -215,8 +215,8 @@
     },
     "Pelagic zone 3": {
       "name": "Pelagic zone 3",
-      "value": 1179,
-      "percValue": 0.4532871972318339,
+      "value": 704,
+      "percValue": 0.2706651287966167,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -234,8 +234,8 @@
     },
     "Plains": {
       "name": "Plains",
-      "value": 1364,
-      "percValue": 0.2488596971355592,
+      "value": 806,
+      "percValue": 0.147053457398285,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -253,8 +253,8 @@
     },
     "seamounts_buffered": {
       "name": "seamounts_buffered",
-      "value": 71,
-      "percValue": 0.18733509234828497,
+      "value": 54,
+      "percValue": 0.1424802110817942,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",

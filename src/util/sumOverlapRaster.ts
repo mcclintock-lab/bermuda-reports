@@ -2,41 +2,17 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
-  Feature,
   isSketchCollection,
-  toSketchArray,
-  loadCogWindow,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
 import dissolve from "@turf/dissolve";
 import bbox from "@turf/bbox";
+import area from "@turf/area";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
-import {
-  ClassMetric,
-  ClassMetrics,
-  ClassMetricSketch,
-  SketchMetric,
-} from "./types";
-
-/**
- * calculate class metrics within single raster, conveniently bundling in class name and perc of total
- */
-//  export async function rasterClassStats(
-//   /** raster to search */
-//   raster: Georaster,
-//   config: {
-//     /** Map from class ID to class name */
-//     classIdToName: Record<string, string>;
-//     /** Map from class ID to precalculate class total in raster */
-//     classIdToTotal: Record<string, number>;
-//   },
-//   /** Optional polygon features, if present will calculate overlap for the features and not load the whole raster, otherwise calculates for whole raster  */
-//   features?: Feature<Polygon>[]
-// ): Promise<ClassMetrics> {
-// }
+import { ClassMetricSketch, SketchMetric } from "./types";
 
 /**
  * Returns sum metric for raster.  If sketch passed, sum overlap is also calculated for each sketch polygon.
@@ -51,19 +27,29 @@ export async function sumOverlapRaster(
   /** single sketch or collection. */
   sketch?: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ClassMetricSketch> {
+  let isOverlap = false;
   let sumValue = 0;
   let sketchMetrics: SketchMetric[] = [];
   if (sketch) {
-    //TODO: use for overall value, avoiding sketch overlap
-    const combinedSketch = isSketchCollection(sketch)
-      ? dissolve(sketch)
-      : featureCollection([sketch]);
+    // If sketch overlap, calculate overall metric values from dissolve
+    if (isSketchCollection(sketch)) {
+      const sketchArea = area(sketch);
+      const combinedSketch = dissolve(sketch);
+      const combinedArea = area(combinedSketch);
+      isOverlap = combinedArea < sketchArea;
+      if (isOverlap) {
+        featureEach(combinedSketch, (feat) => {
+          sumValue += geoblaze.sum(raster, feat)[0];
+        });
+      }
+    }
 
     featureEach(sketch, (feat) => {
-      // @ts-ignore
       const sketchValue = geoblaze.sum(raster, feat)[0];
 
-      sumValue += sketchValue;
+      if (!isOverlap) {
+        sumValue += sketchValue;
+      }
       sketchMetrics.push({
         id: feat.properties.id,
         name: feat.properties.name,
@@ -76,7 +62,7 @@ export async function sumOverlapRaster(
   return {
     name,
     value: sumValue,
-    percValue: Math.min(sumValue, totalValue) / totalValue,
+    percValue: sumValue / totalValue,
     sketchMetrics,
   };
 }

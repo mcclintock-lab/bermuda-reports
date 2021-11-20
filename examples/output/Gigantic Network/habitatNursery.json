@@ -6,8 +6,8 @@
   "byClass": {
     "lagoonal_reef_only": {
       "name": "lagoonal_reef_only",
-      "value": 76493399.50675851,
-      "percValue": 1.5832002671205225,
+      "value": 48309451.736592434,
+      "percValue": 0.9998710658304772,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
@@ -44,8 +44,8 @@
     },
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
-      "value": 3912917.635827196,
-      "percValue": 1.356405413020087,
+      "value": 2846838.338304913,
+      "percValue": 0.9868510639513052,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
