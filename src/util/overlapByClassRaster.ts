@@ -1,5 +1,9 @@
 import { Polygon, Feature, Georaster } from "@seasketch/geoprocessing";
-import { ClassMetrics } from "./types";
+import { ClassMetricsSketch } from "./types";
+import flatten from "@turf/flatten";
+import { featureCollection } from "@turf/helpers";
+import dissolve from "@turf/dissolve";
+import area from "@turf/area";
 
 // @ts-ignore
 import geoblaze from "geoblaze";
@@ -19,14 +23,22 @@ export async function rasterClassStats(
   },
   /** Optional polygon features, if present will calculate overlap for the features and not load the whole raster, otherwise calculates for whole raster  */
   features?: Feature<Polygon>[]
-): Promise<ClassMetrics> {
+): Promise<ClassMetricsSketch> {
   if (!config.classIdToName || !config.classIdToTotal)
     throw new Error("Missing classIdToName map in config");
 
   const histograms = (() => {
     if (features) {
+      // If feature overlap, calculate histograms from dissolved features
+      const sketchColl = featureCollection(features);
+      const sketchArea = area(sketchColl);
+      const dissolvedFeatures = dissolve(sketchColl);
+      const combinedArea = area(dissolvedFeatures);
+      const isOverlap = combinedArea < sketchArea;
+      const remFeatures = isOverlap ? dissolvedFeatures.features : features;
+
       // Get count of unique cell IDs in each feature
-      return features.map((feature) => {
+      return remFeatures.map((feature) => {
         return geoblaze.histogram(raster, feature, {
           scaleType: "nominal",
         })[0];

@@ -14,14 +14,14 @@
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
-      "value": 49340,
-      "percValue": 1.6388759715671295,
+      "value": 30106,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
-      "value": 64723,
-      "percValue": 1.5420151049484192,
+      "value": 41977,
+      "percValue": 1.000095299359112,
       "sketchMetrics": []
     },
     "Castle Harbour Madracis": {
@@ -32,50 +32,50 @@
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
-      "value": 235,
-      "percValue": 1.407185628742515,
+      "value": 167,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Rim Reef": {
       "name": "Rim Reef",
-      "value": 27663,
-      "percValue": 1.8465389493358253,
+      "value": 14981,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
-      "value": 58663,
-      "percValue": 1.5442508160471728,
+      "value": 37988,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 57420,
-      "percValue": 1.914382876575315,
+      "value": 29994,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Mesophotic": {
       "name": "Mesophotic",
-      "value": 66466,
-      "percValue": 1.7525180614881612,
+      "value": 37926,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 45562,
-      "percValue": 1.7886389510462057,
+      "value": 25473,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 151556,
-      "percValue": 1.775887322623358,
+      "value": 85341,
+      "percValue": 1,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 325533,
-      "percValue": 1.8621464854475562,
+      "value": 174816,
+      "percValue": 1,
       "sketchMetrics": []
     }
   },
