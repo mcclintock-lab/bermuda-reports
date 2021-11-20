@@ -43,7 +43,11 @@ export async function overlapStatsVector(
    * line - total length all lines
    * polygon - area of outer boundary (typically EEZ or planning area)
    */
-  totalValue: number
+  totalValue: number,
+  options: {
+    /** Whether to calculate individual sketch areas, otherwide just overall */
+    includeSketchMetrics: boolean;
+  } = { includeSketchMetrics: true }
 ): Promise<ClassMetricSketch> {
   // This is incomplete and not yet used
   // let combinedSketch: FeatureCollection;
@@ -82,29 +86,32 @@ export async function overlapStatsVector(
     }
   }
 
-  const sketchMetrics = sketches.map((curSketch) => {
-    let sketchValue: number = 0;
+  // Calc sketchMetrics if enabled
+  const sketchMetrics = !options.includeSketchMetrics
+    ? []
+    : sketches.map((curSketch) => {
+        let sketchValue: number = 0;
 
-    if (isPolygonFeature(curSketch)) {
-      sketchValue = getSketchPolygonIntersectArea(
-        curSketch,
-        features as Feature<Polygon | MultiPolygon>[]
-      );
-    }
-    // else if (isLineStringSketchCollection(sketch)) {
-    //   // intersect and get area of remainder
-    //   sketchValue = length(curSketch);
-    // } else {
-    //   // point in poly and return remainder
-    //   sketchValue = 0;
-    // }
-    return {
-      id: curSketch.properties.id,
-      name: curSketch.properties.name,
-      value: sketchValue,
-      percValue: sketchValue / totalValue,
-    };
-  });
+        if (isPolygonFeature(curSketch)) {
+          sketchValue = getSketchPolygonIntersectArea(
+            curSketch,
+            features as Feature<Polygon | MultiPolygon>[]
+          );
+        }
+        // else if (isLineStringSketchCollection(sketch)) {
+        //   // intersect and get area of remainder
+        //   sketchValue = length(curSketch);
+        // } else {
+        //   // point in poly and return remainder
+        //   sketchValue = 0;
+        // }
+        return {
+          id: curSketch.properties.id,
+          name: curSketch.properties.name,
+          value: sketchValue,
+          percValue: sketchValue / totalValue,
+        };
+      });
 
   if (!isOverlap) {
     sumValue = sketchMetrics.reduce((sumSoFar, sm) => sumSoFar + sm.value, 0);

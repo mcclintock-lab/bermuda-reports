@@ -42,7 +42,7 @@ export async function platformEdge(
     LAYER.totalArea
   );
 
-  // Edge sketch metrics
+  // Sketch metrics
   const sketchMetricsById = keyBy(classMetric.sketchMetrics, (item) => item.id);
   const edgeSketchMetrics = sketches.map((sketch) => {
     const sketchActivities: string[] = getJsonUserAttribute(
@@ -68,14 +68,16 @@ export async function platformEdge(
     };
   });
 
-  // Edge class metrics
+  // Class metrics
   const edgeClassMetric = {
     ...classMetric,
     sketchMetrics: edgeSketchMetrics,
   };
   const edgeClassMetrics = { [edgeClassMetric.name]: edgeClassMetric };
 
-  // Match sketch to first break group it has at least min number of restricted activities
+  // Edge group metrics
+
+  // Match sketch to first break group where it has at least min number of restricted activities
   // If no overlap then it's always no break
   // Return true if matches current group
   const sketchFilter = (sketchMetric: EdgeSketchMetric, curGroup: string) =>
@@ -86,13 +88,41 @@ export async function platformEdge(
       sketchMetric.overlap
     );
 
-  // Edge group metrics
-  const edgeGroupMetrics = getGroupMetrics(
+  let edgeGroupMetrics = getGroupMetrics(
     Object.keys(BREAK_MAP),
     sketchFilter,
     edgeClassMetrics,
     LAYER.totalArea
   );
+
+  // If sketch collection, recalc group overall stats, accounting for overlap
+  if (sketches.length > 1) {
+    Object.keys(BREAK_MAP).forEach((breakName) => {
+      Object.keys(edgeGroupMetrics[breakName]).forEach(async (className) => {
+        // Get sketches in group
+        const sketchIds = edgeGroupMetrics[breakName][
+          className
+        ].sketchMetrics.map((sm) => sm.id);
+        const groupSketches = sketches.filter((sk) =>
+          sketchIds.includes(sk.properties.id)
+        );
+        // only recalc if more than one sketch in group
+        if (groupSketches.length > 1) {
+          const groupOverallMetric = await overlapStatsVector(
+            edgeMultiPoly,
+            LAYER.baseFilename,
+            groupSketches,
+            LAYER.totalArea,
+            { includeSketchMetrics: false }
+          );
+          edgeGroupMetrics[breakName][className].value =
+            groupOverallMetric.value;
+          edgeGroupMetrics[breakName][className].percValue =
+            groupOverallMetric.percValue;
+        }
+      });
+    });
+  }
 
   return {
     byClass: edgeClassMetrics,

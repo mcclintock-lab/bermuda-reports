@@ -7,6 +7,7 @@ import {
 
 /**
  * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
+ * Does not account for overlap!
  */
 export function getGroupMetrics<T extends SketchMetric>(
   groups: string[],
