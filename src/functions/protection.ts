@@ -2,15 +2,18 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
+  MultiPolygon,
+  Feature,
   GeoprocessingHandler,
   toSketchArray,
-  getUserAttribute,
   groupBy,
   keyBy,
   genSampleSketchCollection,
   getJsonUserAttribute,
+  difference,
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
+import flatten from "@turf/flatten";
 import { areaStats } from "../util/areaStats";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
@@ -18,9 +21,6 @@ import {
   iucnCategories,
   levels,
 } from "../util/iucnProtectionLevel";
-
-const linearUnits = "feet";
-const areaUnits = "square feet";
 
 export interface SketchStat {
   sketchId: string;
@@ -90,7 +90,7 @@ export async function protection(
       const catSketches = catSketchStats.map(
         (stat) => sketchMap[stat.sketchId]
       );
-      // Dissolve by category to get true area and %
+      // Calc area stats for each category, accounting for overlap, to get true area and %
       const sc = genSampleSketchCollection(featureCollection(catSketches));
       const catAreaStats = await areaStats(
         sc as SketchCollection<Polygon>,
@@ -110,26 +110,49 @@ export async function protection(
   // rollup to level stats
   const levelGroups = groupBy(sketchStats, (item) => item.level);
   const levelStats: LevelStat[] = await Promise.all(
-    levels.map(async (levelName) => {
+    levels.map(async (levelName, levelIndex) => {
       const levelSketchStats = levelGroups[levelName];
 
-      if (!levelSketchStats)
+      if (!levelSketchStats) {
         return {
           level: levelName,
           numSketches: 0,
           area: 0,
           percPlanningArea: 0,
         };
+      }
 
       const levelSketches = levelSketchStats.map(
         (stat) => sketchMap[stat.sketchId]
       );
-      // Dissolve by category to get true area and %
-      const sl = genSampleSketchCollection(featureCollection(levelSketches));
-      const levelAreaStats = await areaStats(
-        sl as SketchCollection<Polygon>,
-        STUDY_REGION_AREA_SQ_METERS
+
+      // Remove overlap with higher level sketch stats (which trump current level)
+      const otherLevelSketchStats = Object.keys(levelGroups).reduce<
+        SketchStat[]
+      >((otherSketchStats, otherName) => {
+        // Append other stats if higher level (lower index)
+        const otherIndex = levels.findIndex((level) => otherName === level);
+        return otherSketchStats.concat(
+          otherIndex < levelIndex ? levelGroups[otherName] : otherSketchStats
+        );
+      }, []);
+      const otherLevelSketches = otherLevelSketchStats.map(
+        (stat) => sketchMap[stat.sketchId]
       );
+      const nonOverlap = levelSketches
+        .map((levelSketch) => difference(levelSketch, otherLevelSketches))
+        .reduce<Feature<Polygon | MultiPolygon>[]>(
+          (rem, diff) => (diff ? rem.concat(diff) : rem),
+          []
+        );
+      const remFeatures =
+        otherLevelSketches.length > 0 ? nonOverlap : levelSketches;
+
+      // Calc area stats for each level, accounting for overlap, to get true area and %
+      const sl = genSampleSketchCollection(
+        flatten(featureCollection(remFeatures))
+      );
+      const levelAreaStats = await areaStats(sl, STUDY_REGION_AREA_SQ_METERS);
 
       return {
         level: levelName,
