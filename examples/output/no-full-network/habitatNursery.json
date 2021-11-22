@@ -1,32 +1,32 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 6094345.215716086,
-      "percValue": 0.1261359677522751,
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 2930087.938502563,
+      "percValue": 0.1926130188286429,
       "sketchMetrics": [
         {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "MPA 1",
-          "value": 3721872.841759471,
-          "percValue": 0.07703239907309374
+          "value": 2930087.938502563,
+          "percValue": 0.1926130188286429
         },
         {
           "id": "616f1ae906f1b7772b51f191",
           "name": "MPA 2",
-          "value": 2372472.3739566156,
-          "percValue": 0.04910356867918136
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
     "Mangrove_shp_2012": {
       "name": "Mangrove_shp_2012",
       "value": 273.3103637133644,
-      "percValue": 0.0015659011526064452,
+      "percValue": 0.001565901152609213,
       "sketchMetrics": [
         {
           "id": "616f1ae906f1b7772b51f18f",
@@ -38,33 +38,33 @@
           "id": "616f1ae906f1b7772b51f191",
           "name": "MPA 2",
           "value": 273.3103637133644,
-          "percValue": 0.0015659011526064452
+          "percValue": 0.001565901152609213
         }
       ]
     },
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
       "value": 363329.2306128908,
-      "percValue": 0.125947382740543,
+      "percValue": 0.12594738274053213,
       "sketchMetrics": [
         {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "MPA 1",
           "value": 251384.25249094923,
-          "percValue": 0.08714187022611541
+          "percValue": 0.08714187022610788
         },
         {
           "id": "616f1ae906f1b7772b51f191",
           "name": "MPA 2",
           "value": 111944.97812194153,
-          "percValue": 0.0388055125144276
+          "percValue": 0.03880551251442424
         }
       ]
     }
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -81,15 +81,15 @@
       }
     },
     "high": {
-      "lagoonal_reef_only": {
-        "value": 3721872.841759471,
-        "percValue": 0.07244522759280651,
+      "PatchReef_JoannaEdit": {
+        "value": 2930087.938502563,
+        "percValue": 0.16036284635914116,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f18f",
             "name": "MPA 1",
-            "value": 3721872.841759471,
-            "percValue": 0.07703239907309374
+            "value": 2930087.938502563,
+            "percValue": 0.1926130188286429
           }
         ]
       },
@@ -107,51 +107,51 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 251384.25249094923,
-        "percValue": 0.004893125090309384,
+        "percValue": 0.01375818579694767,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f18f",
             "name": "MPA 1",
             "value": 251384.25249094923,
-            "percValue": 0.08714187022611541
+            "percValue": 0.08714187022610788
           }
         ]
       }
     },
     "low": {
-      "lagoonal_reef_only": {
-        "value": 2372472.3739566156,
-        "percValue": 0.046179519934292396,
+      "PatchReef_JoannaEdit": {
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f191",
             "name": "MPA 2",
-            "value": 2372472.3739566156,
-            "percValue": 0.04910356867918136
+            "value": 0,
+            "percValue": 0
           }
         ]
       },
       "Mangrove_shp_2012": {
         "value": 273.3103637133644,
-        "percValue": 0.000005319910793439998,
+        "percValue": 0.000014958195379940098,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f191",
             "name": "MPA 2",
             "value": 273.3103637133644,
-            "percValue": 0.0015659011526064452
+            "percValue": 0.001565901152609213
           }
         ]
       },
       "Seagrass_2014_50mbuff": {
         "value": 111944.97812194153,
-        "percValue": 0.0021789781012727855,
+        "percValue": 0.006126715547117913,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f191",
             "name": "MPA 2",
             "value": 111944.97812194153,
-            "percValue": 0.0388055125144276
+            "percValue": 0.03880551251442424
           }
         ]
       }

@@ -1,19 +1,19 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 4424303.02710018,
-      "percValue": 0.0915707470120773,
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 137142.1231921491,
+      "percValue": 0.009015210093014883,
       "sketchMetrics": [
         {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
-          "value": 4424303.02710018,
-          "percValue": 0.0915707470120773
+          "value": 137142.1231921491,
+          "percValue": 0.009015210093014883
         }
       ]
     },
@@ -33,20 +33,20 @@
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
       "value": 33490.248245668256,
-      "percValue": 0.011609330487276588,
+      "percValue": 0.011609330487275584,
       "sketchMetrics": [
         {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
           "value": 33490.248245668256,
-          "percValue": 0.011609330487276588
+          "percValue": 0.011609330487275584
         }
       ]
     }
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -63,7 +63,7 @@
       }
     },
     "high": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -80,15 +80,15 @@
       }
     },
     "low": {
-      "lagoonal_reef_only": {
-        "value": 4424303.02710018,
-        "percValue": 0.0861178372731008,
+      "PatchReef_JoannaEdit": {
+        "value": 137142.1231921491,
+        "percValue": 0.007505747845256959,
         "sketchMetrics": [
           {
             "id": "61685a10f3f078352076a1fb",
             "name": "low-1",
-            "value": 4424303.02710018,
-            "percValue": 0.0915707470120773
+            "value": 137142.1231921491,
+            "percValue": 0.009015210093014883
           }
         ]
       },
@@ -106,13 +106,13 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 33490.248245668256,
-        "percValue": 0.0006518784384772437,
+        "percValue": 0.0018329113824120463,
         "sketchMetrics": [
           {
             "id": "61685a10f3f078352076a1fb",
             "name": "low-1",
             "value": 33490.248245668256,
-            "percValue": 0.011609330487276588
+            "percValue": 0.011609330487275584
           }
         ]
       }

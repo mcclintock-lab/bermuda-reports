@@ -2,7 +2,7 @@
 
 ## declare an array variable
 declare -a LAYERS=(
-  "lagoonal_reef_only"
+  "PatchReef_JoannaEdit"
   "Mangrove_shp_2012"
   "Seagrass_2014_50mbuff"
 )

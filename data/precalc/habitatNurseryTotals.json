@@ -1,23 +1,23 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 48315681.27883305,
-      "percValue": 0.940451400508316
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 15212304.735794103,
+      "percValue": 0.8325649394541035
     },
     "Mangrove_shp_2012": {
       "name": "Mangrove_shp_2012",
-      "value": 174538.70779674617,
-      "percValue": 0.003397347772932536
+      "value": 174538.70779643767,
+      "percValue": 0.00955245186135518
     },
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
-      "value": 2884769.9944774914,
-      "percValue": 0.0561512517187515
+      "value": 2884769.994477741,
+      "percValue": 0.15788260868454132
     }
   }
 }

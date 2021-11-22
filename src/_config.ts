@@ -364,8 +364,8 @@ export interface HabitatNurseryLevelResults extends HabitatNurseryResults {
 
 const habitatNurseryLayers = [
   {
-    baseFilename: "lagoonal_reef_only",
-    display: "Lagoonal Reef",
+    baseFilename: "PatchReef_JoannaEdit",
+    display: "Nursery Reef",
     layerId: "6185c183cef7c177174651a2",
   },
   {

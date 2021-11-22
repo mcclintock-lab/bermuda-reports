@@ -1,19 +1,19 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 4686261.869023803,
-      "percValue": 0.0969925652497596,
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 4686261.869023803,
-          "percValue": 0.0969925652497596
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
@@ -33,20 +33,20 @@
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
       "value": 172514.14489405323,
-      "percValue": 0.059801698306731085,
+      "percValue": 0.05980169830672591,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
           "value": 172514.14489405323,
-          "percValue": 0.059801698306731085
+          "percValue": 0.05980169830672591
         }
       ]
     }
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -63,15 +63,15 @@
       }
     },
     "high": {
-      "lagoonal_reef_only": {
-        "value": 4686261.869023803,
-        "percValue": 0.09121679382803065,
+      "PatchReef_JoannaEdit": {
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "61649a3c1e0a596510ad8329",
             "name": "nearshore-span",
-            "value": 4686261.869023803,
-            "percValue": 0.0969925652497596
+            "value": 0,
+            "percValue": 0
           }
         ]
       },
@@ -89,19 +89,19 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 172514.14489405323,
-        "percValue": 0.0033579402148300923,
+        "percValue": 0.009441648132431804,
         "sketchMetrics": [
           {
             "id": "61649a3c1e0a596510ad8329",
             "name": "nearshore-span",
             "value": 172514.14489405323,
-            "percValue": 0.059801698306731085
+            "percValue": 0.05980169830672591
           }
         ]
       }
     },
     "low": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []

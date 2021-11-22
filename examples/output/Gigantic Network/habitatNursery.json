@@ -1,38 +1,38 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 48309451.736592434,
-      "percValue": 0.9998710658304772,
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 15208979.268411856,
+      "percValue": 0.9997813962157607,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 48309451.736592434,
-          "percValue": 0.9998710658304772
+          "value": 15208979.268411856,
+          "percValue": 0.9997813962157607
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 28183947.770166077,
-          "percValue": 0.5833292012900453
+          "value": 7186668.301418987,
+          "percValue": 0.4724246868726584
         }
       ]
     },
     "Mangrove_shp_2012": {
       "name": "Mangrove_shp_2012",
       "value": 10599.046396714139,
-      "percValue": 0.06072605057358933,
+      "percValue": 0.06072605057369667,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
           "value": 10599.046396714139,
-          "percValue": 0.06072605057358933
+          "percValue": 0.06072605057369667
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -45,72 +45,72 @@
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
       "value": 2846838.338304913,
-      "percValue": 0.9868510639513052,
+      "percValue": 0.9868510639512198,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
           "value": 2846838.338304913,
-          "percValue": 0.9868510639513052
+          "percValue": 0.9868510639512198
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
           "value": 1066079.297522283,
-          "percValue": 0.36955434906878193
+          "percValue": 0.36955434906874995
         }
       ]
     }
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
-        "value": 48309451.736592434,
-        "percValue": 0.940330144188015,
+      "PatchReef_JoannaEdit": {
+        "value": 15208979.268411856,
+        "percValue": 0.8323829376077139,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
             "name": "Gigantic MPA",
-            "value": 48309451.736592434,
-            "percValue": 0.9998710658304772
+            "value": 15208979.268411856,
+            "percValue": 0.9997813962157607
           }
         ]
       },
       "Mangrove_shp_2012": {
         "value": 10599.046396714139,
-        "percValue": 0.00020630751267517228,
+        "percValue": 0.0005800826748354575,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
             "name": "Gigantic MPA",
             "value": 10599.046396714139,
-            "percValue": 0.06072605057358933
+            "percValue": 0.06072605057369667
           }
         ]
       },
       "Seagrass_2014_50mbuff": {
         "value": 2846838.338304913,
-        "percValue": 0.05541292250084747,
+        "percValue": 0.1558066203597337,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
             "name": "Gigantic MPA",
             "value": 2846838.338304913,
-            "percValue": 0.9868510639513052
+            "percValue": 0.9868510639512198
           }
         ]
       }
     },
     "high": {
-      "lagoonal_reef_only": {
-        "value": 28183947.770166077,
-        "percValue": 0.5485927643106205,
+      "PatchReef_JoannaEdit": {
+        "value": 7186668.301418987,
+        "percValue": 0.39332423082275864,
         "sketchMetrics": [
           {
             "id": "619834683ff3e57f7333d93d",
             "name": "Gigantic MPA 2",
-            "value": 28183947.770166077,
-            "percValue": 0.5833292012900453
+            "value": 7186668.301418987,
+            "percValue": 0.4724246868726584
           }
         ]
       },
@@ -128,19 +128,19 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 1066079.297522283,
-        "percValue": 0.020750939278320533,
+        "percValue": 0.05834620468169183,
         "sketchMetrics": [
           {
             "id": "619834683ff3e57f7333d93d",
             "name": "Gigantic MPA 2",
             "value": 1066079.297522283,
-            "percValue": 0.36955434906878193
+            "percValue": 0.36955434906874995
           }
         ]
       }
     },
     "low": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []

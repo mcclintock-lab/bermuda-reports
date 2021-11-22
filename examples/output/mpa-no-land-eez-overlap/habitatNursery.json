@@ -1,11 +1,11 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -46,7 +46,7 @@
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -84,7 +84,7 @@
       }
     },
     "high": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -101,7 +101,7 @@
       }
     },
     "low": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []

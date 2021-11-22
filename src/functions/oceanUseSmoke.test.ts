@@ -12,7 +12,7 @@ describe("Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof oceanUse).toBe("function");
   });
-  test("tests run against all examples", async () => {
+  test("oceanUseSmoke - tests run against all examples", async () => {
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await oceanUse(example);

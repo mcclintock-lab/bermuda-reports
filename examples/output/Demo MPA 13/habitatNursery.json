@@ -1,19 +1,19 @@
 {
   "overall": {
-    "value": 51374989.98110728,
+    "value": 18271613.43806828,
     "percValue": 1
   },
   "byClass": {
-    "lagoonal_reef_only": {
-      "name": "lagoonal_reef_only",
-      "value": 1270353.4010682444,
-      "percValue": 0.026292776329427073,
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 25010.670950570384,
+      "percValue": 0.0016441079366311282,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
-          "value": 1270353.4010682444,
-          "percValue": 0.026292776329427073
+          "value": 25010.670950570384,
+          "percValue": 0.0016441079366311282
         }
       ]
     },
@@ -33,20 +33,20 @@
     "Seagrass_2014_50mbuff": {
       "name": "Seagrass_2014_50mbuff",
       "value": 86955.40066287706,
-      "percValue": 0.03014292329348323,
+      "percValue": 0.03014292329348062,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
           "value": 86955.40066287706,
-          "percValue": 0.03014292329348323
+          "percValue": 0.03014292329348062
         }
       ]
     }
   },
   "byLevel": {
     "full": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
@@ -63,15 +63,15 @@
       }
     },
     "high": {
-      "lagoonal_reef_only": {
-        "value": 1270353.4010682444,
-        "percValue": 0.024727078322261592,
+      "PatchReef_JoannaEdit": {
+        "value": 25010.670950570384,
+        "percValue": 0.0013688266247173064,
         "sketchMetrics": [
           {
             "id": "617abdf4dc13e871274c3dec",
             "name": "Demo MPA 13",
-            "value": 1270353.4010682444,
-            "percValue": 0.026292776329427073
+            "value": 25010.670950570384,
+            "percValue": 0.0016441079366311282
           }
         ]
       },
@@ -89,19 +89,19 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 86955.40066287706,
-        "percValue": 0.001692562873391395,
+        "percValue": 0.004759043362952746,
         "sketchMetrics": [
           {
             "id": "617abdf4dc13e871274c3dec",
             "name": "Demo MPA 13",
             "value": 86955.40066287706,
-            "percValue": 0.03014292329348323
+            "percValue": 0.03014292329348062
           }
         ]
       }
     },
     "low": {
-      "lagoonal_reef_only": {
+      "PatchReef_JoannaEdit": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
