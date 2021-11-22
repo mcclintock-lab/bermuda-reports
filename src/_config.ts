@@ -366,7 +366,7 @@ const habitatNurseryLayers = [
   {
     baseFilename: "PatchReef_JoannaEdit",
     display: "Nursery Reef",
-    layerId: "6185c183cef7c177174651a2",
+    layerId: "619420a12633975e13933fe0",
   },
   {
     baseFilename: "Mangrove_shp_2012",
