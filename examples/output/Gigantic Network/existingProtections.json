@@ -29,7 +29,7 @@
       "class": "SeasonalPA",
       "totalArea": 86861956.526907,
       "percArea": 0.068808,
-      "sketchArea": 86861956.526902
+      "sketchArea": 86863580.300478
     },
     {
       "class": "MPAExtendedClosure",
@@ -89,7 +89,7 @@
       "class": "CoralPreserve",
       "totalArea": 131462891.607205,
       "percArea": 0.104138,
-      "sketchArea": 131426697.260942
+      "sketchArea": 131426676.533702
     }
   ],
   "areaUnit": "square meters"

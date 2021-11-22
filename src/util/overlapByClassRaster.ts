@@ -2,7 +2,7 @@ import { Polygon, Feature, Georaster } from "@seasketch/geoprocessing";
 import { ClassMetricsSketch } from "./types";
 import flatten from "@turf/flatten";
 import { featureCollection } from "@turf/helpers";
-import dissolve from "@turf/dissolve";
+import { clip } from "../util/clip";
 import area from "@turf/area";
 
 // @ts-ignore
@@ -29,14 +29,16 @@ export async function rasterClassStats(
 
   const histograms = (() => {
     if (features) {
-      // If feature overlap, calculate histograms from dissolved features
+      // If feature overlap, remove with union
       const sketchColl = featureCollection(features);
       const sketchArea = area(sketchColl);
-      const dissolvedFeatures = dissolve(sketchColl);
-      const combinedArea = area(dissolvedFeatures);
-      const isOverlap = combinedArea < sketchArea;
-      const remFeatures = isOverlap ? dissolvedFeatures.features : features;
+      const featureUnion = clip(features, "union");
+      if (!featureUnion)
+        throw new Error("rasterClassStats - something went wrong");
+      const featureUnionArea = area(featureUnion);
+      const isOverlap = featureUnionArea < sketchArea;
 
+      const remFeatures = isOverlap ? flatten(featureUnion).features : features;
       // Get count of unique cell IDs in each feature
       return remFeatures.map((feature) => {
         return geoblaze.histogram(raster, feature, {

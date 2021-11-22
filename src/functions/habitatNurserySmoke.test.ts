@@ -12,7 +12,7 @@ describe("Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof handler.func).toBe("function");
   });
-  test("tests run against all examples", async () => {
+  test("habitatNurserySmoke - tests run against all examples", async () => {
     // data fetch fails if run all sketches, too many requests?
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {

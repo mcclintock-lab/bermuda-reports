@@ -9,10 +9,8 @@ import {
   roundDecimal,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import dissolve from "@turf/dissolve";
 import { featureCollection } from "@turf/helpers";
 import config, {
-  classProperty,
   OverlapFeature,
   OverlapResult,
 } from "./existingProtectionsConfig";
@@ -25,7 +23,7 @@ export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<OverlapResult> {
   const sketchColl = isFeatureCollection(sketch)
-    ? dissolve(sketch)
+    ? sketch
     : featureCollection([sketch]);
   const box = sketch.bbox || bbox(sketch);
 

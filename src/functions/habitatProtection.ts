@@ -4,14 +4,10 @@ import {
   GeoprocessingHandler,
   Polygon,
   toSketchArray,
-  isSketchCollection,
-  Georaster,
   loadCogWindow,
   keyBy,
 } from "@seasketch/geoprocessing";
-import dissolve from "@turf/dissolve";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
 import config, { HabitatResults } from "../_config";
 import { rasterClassStats } from "../util/overlapByClassRaster";
 import { sumOverlapRaster } from "../util/sumOverlapRaster";

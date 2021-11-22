@@ -2,8 +2,8 @@
   "byClass": {
     "aquaculture_heatmap": {
       "name": "aquaculture_heatmap",
-      "value": 1872.5475933551788,
-      "percValue": 0.12506495573440984,
+      "value": 1304.854699909687,
+      "percValue": 0.08714950469784294,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -21,8 +21,8 @@
     },
     "boating_heatmap": {
       "name": "boating_heatmap",
-      "value": 4596.046783617465,
-      "percValue": 0.010679886971967544,
+      "value": 3702.050945759518,
+      "percValue": 0.008602498522449323,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -40,8 +40,8 @@
     },
     "commercial_fishing_heatmap": {
       "name": "commercial_fishing_heatmap",
-      "value": 22699.983035832644,
-      "percValue": 0.07661464651909106,
+      "value": 20207.553394682705,
+      "percValue": 0.06820245450868398,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -59,8 +59,8 @@
     },
     "passiverec_conservation_heatmap": {
       "name": "passiverec_conservation_heatmap",
-      "value": 5270.649431890808,
-      "percValue": 0.022831406664652436,
+      "value": 4125.019669068512,
+      "percValue": 0.017868766037510257,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -78,8 +78,8 @@
     },
     "recreational_fishing_heatmap": {
       "name": "recreational_fishing_heatmap",
-      "value": 11387.76656564977,
-      "percValue": 0.04928686074194115,
+      "value": 7928.668560686521,
+      "percValue": 0.03431570018288887,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -116,8 +116,8 @@
     },
     "swim_snorkel_dive_heatmap": {
       "name": "swim_snorkel_dive_heatmap",
-      "value": 4622.762615740299,
-      "percValue": 0.0075318778374028825,
+      "value": 4356.7028885520995,
+      "percValue": 0.00709838610762836,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -154,8 +154,8 @@
     },
     "utilities_heatmap": {
       "name": "utilities_heatmap",
-      "value": 1811.130152374506,
-      "percValue": 0.11957074221133143,
+      "value": 1481.8991105854511,
+      "percValue": 0.09783492163868218,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",

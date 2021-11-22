@@ -2,8 +2,8 @@
   "byClass": {
     "Pelagic_Fishing_Zone_Dissolved": {
       "name": "Pelagic_Fishing_Zone_Dissolved",
-      "value": 382465699.8783768,
-      "percValue": 0.22053895200769397,
+      "value": 239653565.47493845,
+      "percValue": 0.1381900290445844,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -27,8 +27,8 @@
   "byGroup": {
     "definite": {
       "Pelagic_Fishing_Zone_Dissolved": {
-        "value": 0,
-        "percValue": 0,
+        "value": 239653565.47493845,
+        "percValue": 0.1381900290445844,
         "sketchMetrics": [
           {
             "id": "619a8e39a717c5a0742cafb9",

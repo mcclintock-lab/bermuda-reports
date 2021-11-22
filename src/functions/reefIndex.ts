@@ -3,15 +3,11 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  toSketchArray,
-  isSketchCollection,
   Georaster,
   loadCogWindow,
   keyBy,
 } from "@seasketch/geoprocessing";
-import dissolve from "@turf/dissolve";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
 import config, { ReefIndexResults } from "../_config";
 import { sumOverlapRaster } from "../util/sumOverlapRaster";
 
@@ -24,10 +20,6 @@ const LAYERS = config.reefIndex.layers;
 export async function reefIndex(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ReefIndexResults> {
-  const sketches = toSketchArray(sketch);
-  const combinedSketch = isSketchCollection(sketch)
-    ? dissolve(sketch)
-    : featureCollection([sketch]);
   const box = sketch.bbox || bbox(sketch);
 
   rasters = await Promise.all(

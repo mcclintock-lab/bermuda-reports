@@ -4,10 +4,8 @@ import {
   Polygon,
   isSketchCollection,
 } from "@seasketch/geoprocessing";
-import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
-import dissolve from "@turf/dissolve";
-import bbox from "@turf/bbox";
+import { clip } from "../util/clip";
 import area from "@turf/area";
 
 // @ts-ignore
@@ -34,11 +32,13 @@ export async function sumOverlapRaster(
     // If sketch overlap, calculate overall metric values from dissolve
     if (isSketchCollection(sketch)) {
       const sketchArea = area(sketch);
-      const combinedSketch = dissolve(sketch);
-      const combinedArea = area(combinedSketch);
-      isOverlap = combinedArea < sketchArea;
+      const sketchUnion = clip(sketch.features, "union");
+      if (!sketchUnion)
+        throw new Error("sumOverlapRaster - something went wrong");
+      const sketchUnionArea = area(sketchUnion);
+      isOverlap = sketchUnionArea < sketchArea;
       if (isOverlap) {
-        featureEach(combinedSketch, (feat) => {
+        featureEach(sketchUnion, (feat) => {
           sumValue += geoblaze.sum(raster, feat)[0];
         });
       }

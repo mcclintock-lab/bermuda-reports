@@ -17,13 +17,13 @@ import { featureCollection, MultiPolygon } from "@turf/helpers";
 import combine from "@turf/combine";
 import { featureEach } from "@turf/meta";
 import { SketchMetric, ClassMetric, ClassMetricSketch } from "./types";
-import dissolve from "@turf/dissolve";
 import area from "@turf/area";
 import length from "@turf/length";
 import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
+import { clip } from "../util/clip";
 
 /**
  * returns overlap metric for feature collection.  If sketch passed, metric is calculated for each sketch and overall
@@ -54,7 +54,7 @@ export async function overlapStatsVector(
   // let combinedSketchValue: number = 0;
   // if (isPolygonSketchCollection(sketch)) {
   //   combinedSketch = isSketchCollection(sketch)
-  //     ? dissolve(sketch)
+  //     ? clip(sketch, 'union')
   //     : featureCollection([sketch]);
   //   combinedSketchValue = turfArea(combinedSketch);
   // } else if (isLineStringSketchCollection(sketch)) {
@@ -72,11 +72,16 @@ export async function overlapStatsVector(
       featureCollection(sketches as Feature<Polygon | MultiPolygon>[])
     );
     const sketchArea = area(sketchColl);
-    const combinedSketch = dissolve(sketchColl);
-    const combinedArea = area(combinedSketch);
-    isOverlap = combinedArea < sketchArea;
+    const sketchUnion = clip(sketchColl.features, "union");
+    if (!sketchUnion)
+      throw new Error("rasterClassStats - something went wrong");
+    const sketchUnionArea = area(sketchUnion);
+    isOverlap = sketchUnionArea < sketchArea;
+
+    const remFeatures = flatten(sketchUnion);
+
     if (isOverlap) {
-      featureEach(combinedSketch, (feat) => {
+      featureEach(remFeatures, (feat) => {
         const curSum = getSketchPolygonIntersectArea(
           feat,
           features as Feature<Polygon | MultiPolygon>[]

@@ -50,40 +50,40 @@
     },
     "Fore Reef": {
       "name": "Fore Reef",
-      "value": 7871,
-      "percValue": 0.262419150496766,
+      "value": 6124,
+      "percValue": 0.20417416816696674,
       "sketchMetrics": []
     },
     "Mesophotic": {
       "name": "Mesophotic",
-      "value": 2204,
-      "percValue": 0.05811316774771924,
+      "value": 1536,
+      "percValue": 0.040499920898591994,
       "sketchMetrics": []
     },
     "Rariphotic": {
       "name": "Rariphotic",
-      "value": 1111,
-      "percValue": 0.04361480783574766,
+      "value": 743,
+      "percValue": 0.02916813881364582,
       "sketchMetrics": []
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
-      "value": 12417,
-      "percValue": 0.145498646605969,
+      "value": 7612,
+      "percValue": 0.08919511137671225,
       "sketchMetrics": []
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
-      "value": 30739,
-      "percValue": 0.17583630788943805,
+      "value": 19879,
+      "percValue": 0.11371384770272744,
       "sketchMetrics": []
     }
   },
   "offshore": {
     "feature_abyssopelagic": {
       "name": "feature_abyssopelagic",
-      "value": 152,
-      "percValue": 0.024946660101756113,
+      "value": 149,
+      "percValue": 0.024454291810274083,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -101,8 +101,8 @@
     },
     "Bathypelagic1": {
       "name": "Bathypelagic1",
-      "value": 25,
-      "percValue": 0.20161290322580644,
+      "value": 18,
+      "percValue": 0.14516129032258066,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -120,8 +120,8 @@
     },
     "Cold water coral1": {
       "name": "Cold water coral1",
-      "value": 7,
-      "percValue": 0.7777777777777778,
+      "value": 4,
+      "percValue": 0.4444444444444444,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
@@ -215,8 +215,8 @@
     },
     "Pelagic zone 3": {
       "name": "Pelagic zone 3",
-      "value": 209,
-      "percValue": 0.08035371011149559,
+      "value": 199,
+      "percValue": 0.07650903498654364,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",

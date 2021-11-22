@@ -12,8 +12,6 @@ import {
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
-import dissolve from "@turf/dissolve";
-import flatten from "@turf/flatten";
 import { clip } from "./clip";
 
 export interface AreaMetric {
