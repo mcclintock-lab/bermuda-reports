@@ -1,0 +1,49 @@
+{
+  "sketchStats": [
+    {
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "name": "Large MPA",
+      "category": "1a",
+      "level": "full",
+      "area": 12311918758.318974,
+      "percPlanningArea": 0.02643533648613467
+    },
+    {
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "name": "MPA inside",
+      "category": "1a",
+      "level": "full",
+      "area": 549977869.8554827,
+      "percPlanningArea": 0.0011808760547362767
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "1a",
+      "level": "full",
+      "numSketches": 2,
+      "area": 12311918758.319027,
+      "percPlanningArea": 0.026435336486134785
+    }
+  ],
+  "levelStats": [
+    {
+      "level": "full",
+      "numSketches": 2,
+      "area": 12311918758.319027,
+      "percPlanningArea": 0.026435336486134785
+    },
+    {
+      "level": "high",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    },
+    {
+      "level": "low",
+      "numSketches": 0,
+      "area": 0,
+      "percPlanningArea": 0
+    }
+  ]
+}

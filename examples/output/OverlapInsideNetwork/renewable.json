@@ -1,0 +1,80 @@
+{
+  "renewable": {
+    "float_solar1": {
+      "name": "float_solar1",
+      "value": 21520.125275194645,
+      "percValue": 0.03231901489049547,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 13273.244772195816,
+          "percValue": 0.019933814973291678
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 8246.880502998829,
+          "percValue": 0.01238519991720379
+        }
+      ]
+    },
+    "wind_fixed1": {
+      "name": "wind_fixed1",
+      "value": 7382.672611176968,
+      "percValue": 0.015529597936743819,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 4788.18440580368,
+          "percValue": 0.01007204065321045
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 2594.488205373287,
+          "percValue": 0.005457557283533369
+        }
+      ]
+    },
+    "wind_float1": {
+      "name": "wind_float1",
+      "value": 12925.831075429916,
+      "percValue": 0.09060453198655512,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 7858.4542137384415,
+          "percValue": 0.05508439356963063
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 5067.376861691475,
+          "percValue": 0.03552013841692449
+        }
+      ]
+    },
+    "wave_energy1": {
+      "name": "wave_energy1",
+      "value": 7006.679832935333,
+      "percValue": 0.02981426149478691,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 4412.191627562046,
+          "percValue": 0.018774403581408566
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 2594.488205373287,
+          "percValue": 0.011039857913378344
+        }
+      ]
+    }
+  }
+}

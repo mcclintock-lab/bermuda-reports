@@ -1,0 +1,42 @@
+{
+  "byClass": {
+    "seagrass_restoration_500mbuff": {
+      "name": "seagrass_restoration_500mbuff",
+      "value": 1974.8538384886633,
+      "percValue": 0.000060447841012866505,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 1974.8538384886633,
+          "percValue": 0.000060447841012866505
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "mangrove_restoration_500mbuff": {
+      "name": "mangrove_restoration_500mbuff",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

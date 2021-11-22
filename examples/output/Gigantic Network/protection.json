@@ -22,23 +22,23 @@
       "category": "1a",
       "level": "full",
       "numSketches": 1,
-      "area": 74441430177.46776,
-      "percPlanningArea": 0.15983570829857782
+      "area": 74441430177.46774,
+      "percPlanningArea": 0.1598357082985778
     },
     {
       "category": "4/6",
       "level": "high",
       "numSketches": 1,
-      "area": 60595104877.38999,
-      "percPlanningArea": 0.13010579571637262
+      "area": 60595104877.390015,
+      "percPlanningArea": 0.13010579571637268
     }
   ],
   "levelStats": [
     {
       "level": "full",
       "numSketches": 1,
-      "area": 74441430177.46776,
-      "percPlanningArea": 0.15983570829857782
+      "area": 74441430177.46774,
+      "percPlanningArea": 0.1598357082985778
     },
     {
       "level": "high",

@@ -14,8 +14,8 @@
       "category": "4/6",
       "level": "high",
       "numSketches": 1,
-      "area": 251253216.90383413,
-      "percPlanningArea": 0.0005394742657466582
+      "area": 251253216.9038352,
+      "percPlanningArea": 0.0005394742657466604
     }
   ],
   "levelStats": [
@@ -28,8 +28,8 @@
     {
       "level": "high",
       "numSketches": 1,
-      "area": 251253216.90383413,
-      "percPlanningArea": 0.0005394742657466582
+      "area": 251253216.9038352,
+      "percPlanningArea": 0.0005394742657466604
     },
     {
       "level": "low",

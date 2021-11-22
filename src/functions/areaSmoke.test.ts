@@ -12,7 +12,7 @@ describe("Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof area).toBe("function");
   });
-  test("tests run against all examples", async () => {
+  test("areaSmoke - tests run against all examples", async () => {
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await area(example);

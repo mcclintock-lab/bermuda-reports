@@ -14,6 +14,7 @@ import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
 import dissolve from "@turf/dissolve";
 import flatten from "@turf/flatten";
+import { clip } from "./clip";
 
 export interface AreaMetric {
   /** Total area of sketch input in square meters (after any supported operation and dissolving their overlap) */
@@ -32,7 +33,7 @@ export interface AreaMetric {
 }
 
 /**
- * Returns area stats for sketch input in relation to outer boundary`.
+ * Returns area stats for sketch input in relation to outer boundary.
  * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
  */
 export async function areaStats(
@@ -41,9 +42,12 @@ export async function areaStats(
   /** area of outer boundary (typically EEZ or planning area) */
   outerArea: number
 ): Promise<AreaMetric> {
+  // Union to remove overlap
   const combinedSketch = isSketchCollection(sketch)
-    ? dissolve(sketch)
+    ? clip(sketch.features, "union")
     : featureCollection([sketch]);
+
+  if (!combinedSketch) throw new Error("areaStats - invalid sketch");
 
   const combinedSketchArea = turfArea(combinedSketch);
   let sketchAreas: AreaMetric["sketchAreas"] = [];
@@ -103,18 +107,23 @@ export async function subAreaStats(
     }
   })();
 
-  // calculate area of all subsketches, removing null and overlap
+  // calculate area of all subsketches
   const subsketchArea = (() => {
+    // Remove null
     const allSubsketches = subsketches.reduce<
       Feature<Polygon | MultiPolygon>[]
     >(
-      (subsketches, sketch) =>
-        sketch ? [...subsketches, sketch] : subsketches,
+      (subsketches, subsketch) =>
+        subsketch ? [...subsketches, subsketch] : subsketches,
       []
     );
-    return allSubsketches
-      ? turfArea(dissolve(flatten(featureCollection(allSubsketches))))
-      : 0;
+    // Remove overlap
+    const combinedSketch =
+      allSubsketches.length > 0
+        ? clip(allSubsketches, "union")
+        : featureCollection(allSubsketches);
+
+    return allSubsketches && combinedSketch ? turfArea(combinedSketch) : 0;
   })();
 
   // Choose inner or outer subarea for calculating percentage

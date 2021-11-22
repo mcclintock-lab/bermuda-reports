@@ -12,7 +12,7 @@ describe("Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof handler.func).toBe("function");
   });
-  test("tests run against all examples", async () => {
+  test("reefIndexSmoke - tests run against all examples", async () => {
     // data fetch fails if run all sketches, too many requests?
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
@@ -20,5 +20,5 @@ describe("Basic smoke tests", () => {
       expect(result).toBeTruthy();
       writeResultOutput(result, "reefIndex", example.properties.name);
     }
-  }, 180000);
+  }, 300000);
 });
