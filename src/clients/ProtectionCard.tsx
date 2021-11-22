@@ -47,7 +47,7 @@ const SmallTableStyled = styled.div`
 `;
 
 const ProtectionCard = () => {
-  const [{ isCollection, ...rest }] = useSketchProperties();
+  const [{ isCollection }] = useSketchProperties();
   return (
     <ResultsCard title="Protection Level" functionName="protection">
       {(data: ProtectionResult) => {

@@ -97,12 +97,12 @@ export async function overlapStatsVector(
     : sketches.map((curSketch) => {
         let sketchValue: number = 0;
 
-        if (isPolygonFeature(curSketch)) {
-          sketchValue = getSketchPolygonIntersectArea(
-            curSketch,
-            features as Feature<Polygon | MultiPolygon>[]
-          );
-        }
+        // if (isPolygonFeature(curSketch)) {
+        sketchValue = getSketchPolygonIntersectArea(
+          curSketch as Feature<Polygon | MultiPolygon>,
+          features as Feature<Polygon | MultiPolygon>[]
+        );
+        // }
         // else if (isLineStringSketchCollection(sketch)) {
         //   // intersect and get area of remainder
         //   sketchValue = length(curSketch);
@@ -131,7 +131,7 @@ export async function overlapStatsVector(
 }
 
 const getSketchPolygonIntersectArea = (
-  feature: Feature<Polygon>,
+  feature: Feature<Polygon | MultiPolygon>,
   features: Feature<Polygon | MultiPolygon>[]
 ) => {
   // chunk to avoid blowing up intersect

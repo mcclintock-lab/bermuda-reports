@@ -113,7 +113,7 @@ export async function platformEdge(
             LAYER.baseFilename,
             groupSketches,
             LAYER.totalArea,
-            { includeSketchMetrics: false }
+            { includeSketchMetrics: true }
           );
           edgeGroupMetrics[breakName][className].value =
             groupOverallMetric.value;

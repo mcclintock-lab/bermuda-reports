@@ -137,6 +137,13 @@ const PlatformEdge = () => {
             </p>
             <KeySection>{keySection}</KeySection>
             {isCollection && genGroupTable(groupRows)}
+            {isCollection && (
+              <>
+                <Collapse title="Show by MPA">
+                  {genSketchTable(sketchRows)}
+                </Collapse>
+              </>
+            )}
             <Collapse title="Learn more">
               <p>
                 A <b>break</b> in access is defined as any MPA where at least
@@ -185,11 +192,6 @@ const PlatformEdge = () => {
 };
 
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
-  const classColumns: Column<GroupMetricAgg>[] = LAYERS.map((lyr) => ({
-    Header: lyr.display,
-    accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
-  }));
-
   const breakTextByGroup = (groupId: string, numSketches: number) => {
     const singleOrPlural = numSketches === 1 ? "MPA" : "MPAs";
     const groupMap: Record<string, JSX.Element> = {
@@ -268,6 +270,36 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   return (
     <SmallTableStyled>
       <Table className="squeeze" columns={columns} data={groupRows} />
+    </SmallTableStyled>
+  );
+};
+
+const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
+  const columns: Column<GroupMetricSketchAgg>[] = [
+    {
+      Header: "MPA:",
+      accessor: (row) => (
+        <GroupCircleRow
+          group={row.groupId}
+          groupColorMap={{
+            definite: "#BEE4BE",
+            partial: "#FFE1A3",
+            no: "#F7A6B4",
+          }}
+          rowText={row.sketchName}
+        />
+      ),
+    },
+    {
+      Header: "% Fishing Zone Overlap",
+      accessor: (row) => percentWithEdge(row.percValue),
+      style: { width: "25%" },
+    },
+  ];
+
+  return (
+    <SmallTableStyled>
+      <Table className="squeeze" columns={columns} data={sketchRows} />
     </SmallTableStyled>
   );
 };
