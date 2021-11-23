@@ -106,6 +106,10 @@ const SizeCard = () => {
                 species move different distances as adults and juveniles, so
                 larger areas may include more species.
               </p>
+              <p>
+                If MPA boundaries overlap with each other, the overlap is only
+                counted once when calculating the total size of the network.
+              </p>
             </Collapse>
 
             {genSingleSizeTable(data)}

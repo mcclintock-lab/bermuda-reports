@@ -7,11 +7,13 @@ import {
   percentWithEdge,
   LayerToggle,
   keyBy,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import config, { OceanUseResults } from "../_config";
 import { ClassMetric } from "../util/types";
+import { getGroupMetricsSketchAgg } from "../util/metrics";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
@@ -31,6 +33,7 @@ const OverallUseTableStyled = styled.div`
 const LAYERS = config.oceanUse.layers;
 
 const OceanUse = () => {
+  const [{ isCollection }] = useSketchProperties();
   return (
     <>
       <ResultsCard
@@ -77,6 +80,11 @@ const OceanUse = () => {
               </Collapse>
 
               {genOverallUseTable(data)}
+              {isCollection && (
+                <Collapse title="Show by MPA">
+                  {/* {genSketchTable(data)} */}
+                </Collapse>
+              )}
             </>
           );
         }}
@@ -86,7 +94,6 @@ const OceanUse = () => {
 };
 
 const genOverallUseTable = (data: OceanUseResults) => {
-  const classes = keyBy(LAYERS, (lyr) => lyr.baseFilename);
   const columns: Column<ClassMetric>[] = [
     {
       Header: "Sector",
@@ -131,6 +138,48 @@ const genOverallUseTable = (data: OceanUseResults) => {
     </OverallUseTableStyled>
   );
 };
+
+// const genSketchTable = (data: OceanUseResults) => {
+//   // Build agg sketch group objects with percValue for each class
+//   // groupId, sketchId, lagoon, mangrove, seagrass, total
+//   const sketchRows = getGroupMetricsSketchAgg(
+//     data.byLevel,
+//     precalcTotals.overall.value,
+//     config.habitatNursery.layers
+//   );
+
+//   const columns: Column<SketchStat>[] = [
+//     {
+//       Header: "MPA",
+//       accessor: (row) => (
+//         <LevelCircleRow level={row.level} rowText={row.name} />
+//       ),
+//     },
+//     {
+//       Header: "Category",
+//       accessor: (row) => genCategoryRowText(row),
+//     },
+//     {
+//       Header: "% EEZ",
+//       accessor: (row) => (
+//         <span className="eezPerc">
+//           {percentGoalWithEdge(row.percPlanningArea, EEZ_OBJECTIVE)}
+//         </span>
+//       ),
+//       style: { width: "15%" },
+//     },
+//   ];
+
+//   return (
+//     <SmallTableStyled>
+//       <Table
+//         className="squeeze"
+//         columns={columns}
+//         data={sketchStats.sort((a, b) => a.category.localeCompare(b.category))}
+//       />
+//     </SmallTableStyled>
+//   );
+// };
 
 const LoadingSkeleton = () => (
   <p>

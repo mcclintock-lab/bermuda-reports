@@ -234,6 +234,7 @@ const genLearnMore = () => {
         This report looks at an MPAs allowed activities and assigns the first
         category (1a-6) that allows all of those actitivities.
       </p>
+
       <p>
         The MPA categories are{" "}
         <a
@@ -266,6 +267,13 @@ const genLearnMore = () => {
           <i>low</i>
         </b>{" "}
         protection.
+      </p>
+
+      <p>
+        If MPA boundaries overlap with each other, the overlap is only counted
+        once towards meeting objectives. If the overlapping MPAs have different
+        category or protection levels, the higher category/level applies and the
+        overlap is counted under it.
       </p>
 
       <p>

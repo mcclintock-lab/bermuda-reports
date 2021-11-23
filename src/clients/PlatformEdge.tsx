@@ -9,6 +9,7 @@ import {
   ReportError,
   Table,
   Column,
+  capitalize,
 } from "@seasketch/geoprocessing/client";
 import { GroupCircleRow } from "../components/Circle";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
@@ -179,6 +180,13 @@ const PlatformEdge = () => {
                   </li>
                 </ul>
               </p>
+              <p>
+                In addition, if MPA boundaries within a given break category
+                overlap with each other, the overlap is only counted once
+                towards % fishing zone overlap. If overlapping MPAs fall under
+                different break types, the higher break type applies and the
+                overlap is counted under it.
+              </p>
             </Collapse>
             <LayerToggle
               label="Show Pelagic Fishing Zone Layer"
@@ -289,6 +297,11 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
           rowText={row.sketchName}
         />
       ),
+    },
+    {
+      Header: "Break Type",
+      accessor: (row) => capitalize(row.groupId),
+      style: { width: "20%" },
     },
     {
       Header: "% Fishing Zone Overlap",
