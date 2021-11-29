@@ -140,9 +140,11 @@ const HabitatProtection = () => {
               </p>
               <Collapse title="Learn more">
                 <p>
-                  Goals for each habitat type were established and approved by
-                  the Science Committee. Only MPAs with a Full Protection
-                  designation count towards meeting the objective.
+                  The Steering Committee approved the objective of ensuring a
+                  20% representative coverage of each key habitat type when
+                  designating fully protected MPAs, and higher coverage as
+                  needed to satisfy other objectives. Only MPAs with a Full
+                  Protection designation count towards meeting this objective.
                 </p>
               </Collapse>
               <TableStyled>
