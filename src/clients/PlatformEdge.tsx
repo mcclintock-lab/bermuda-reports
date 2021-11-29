@@ -259,9 +259,9 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
         <GroupCircleRow
           group={row.groupId}
           groupColorMap={{
-            definite: "#BEE4BE",
+            definite: "#F7A6B4",
             partial: "#FFE1A3",
-            no: "#F7A6B4",
+            no: "#BEE4BE",
           }}
           circleText={`${row.numSketches}`}
           rowText={breakTextByGroup(row.groupId, row.numSketches as number)}
@@ -290,9 +290,9 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
         <GroupCircleRow
           group={row.groupId}
           groupColorMap={{
-            definite: "#BEE4BE",
+            definite: "#F7A6B4",
             partial: "#FFE1A3",
-            no: "#F7A6B4",
+            no: "#BEE4BE",
           }}
           rowText={row.sketchName}
         />
