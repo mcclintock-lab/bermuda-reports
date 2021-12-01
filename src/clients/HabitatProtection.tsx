@@ -41,7 +41,7 @@ const HabitatProtection = () => {
       accessor: (row) => {
         const percDisplay = percentWithEdge(row.percValue);
         const goal =
-          config.nearshore.layers.find((lyr) => lyr.name === row.name)
+          config.offshore.layers.find((lyr) => lyr.baseFilename === row.name)
             ?.goalPerc || 0;
         if (row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
