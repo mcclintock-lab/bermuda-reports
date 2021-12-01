@@ -51,9 +51,9 @@ export async function reefIndex(
 export default new GeoprocessingHandler(reefIndex, {
   title: "reefIndex",
   description: "high quality reef protection metrics",
-  timeout: 240, // seconds
+  timeout: 300, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
-  memory: 4096,
+  memory: 6144,
 });
