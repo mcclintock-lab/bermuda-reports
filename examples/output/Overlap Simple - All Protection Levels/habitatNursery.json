@@ -1,0 +1,235 @@
+{
+  "overall": {
+    "value": 18271613.43806828,
+    "percValue": 1
+  },
+  "byClass": {
+    "PatchReef_JoannaEdit": {
+      "name": "PatchReef_JoannaEdit",
+      "value": 2731984.218313735,
+      "percValue": 0.17959042142282733,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 2259418.8210013323,
+          "percValue": 0.1485257401979982
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 1055727.8531308614,
+          "percValue": 0.06939959930244922
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 1055727.8531308614,
+          "percValue": 0.06939959930244922
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 2293399.085140515,
+          "percValue": 0.15075947563318365
+        }
+      ]
+    },
+    "Mangrove_shp_2012": {
+      "name": "Mangrove_shp_2012",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    },
+    "Seagrass_2014_50mbuff": {
+      "name": "Seagrass_2014_50mbuff",
+      "value": 612890.1643095777,
+      "percValue": 0.2124572029946309,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 534740.1102749393,
+          "percValue": 0.1853666362651379
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 474215.38441563497,
+          "percValue": 0.16438585583024512
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 474215.38441563497,
+          "percValue": 0.16438585583024512
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 567783.4986989509,
+          "percValue": 0.19682106365008226
+        }
+      ]
+    }
+  },
+  "byLevel": {
+    "full": {
+      "PatchReef_JoannaEdit": {
+        "value": 1055727.8531308614,
+        "percValue": 0.06939959930244922,
+        "sketchMetrics": [
+          {
+            "id": "61a819ba9942fd4acf0d18d2",
+            "name": "full MPA",
+            "value": 1055727.8531308614,
+            "percValue": 0.06939959930244922
+          },
+          {
+            "id": "61a81aad31c466cf4a062493",
+            "name": "full MPA copy",
+            "value": 1055727.8531308614,
+            "percValue": 0.06939959930244922
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "61a819ba9942fd4acf0d18d2",
+            "name": "full MPA",
+            "value": 0,
+            "percValue": 0
+          },
+          {
+            "id": "61a81aad31c466cf4a062493",
+            "name": "full MPA copy",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 474215.38441563497,
+        "percValue": 0.16438585583024512,
+        "sketchMetrics": [
+          {
+            "id": "61a819ba9942fd4acf0d18d2",
+            "name": "full MPA",
+            "value": 474215.38441563497,
+            "percValue": 0.16438585583024512
+          },
+          {
+            "id": "61a81aad31c466cf4a062493",
+            "name": "full MPA copy",
+            "value": 474215.38441563497,
+            "percValue": 0.16438585583024512
+          }
+        ]
+      }
+    },
+    "high": {
+      "PatchReef_JoannaEdit": {
+        "value": 1619726.9843547414,
+        "percValue": 0.10647479211638272,
+        "sketchMetrics": [
+          {
+            "id": "61a8155531c466cf4a0621a7",
+            "name": "high MPA",
+            "value": 2259418.8210013323,
+            "percValue": 0.1485257401979982
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "61a8155531c466cf4a0621a7",
+            "name": "high MPA",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 105199.70841768029,
+        "percValue": 0.03646727767519145,
+        "sketchMetrics": [
+          {
+            "id": "61a8155531c466cf4a0621a7",
+            "name": "high MPA",
+            "value": 534740.1102749393,
+            "percValue": 0.1853666362651379
+          }
+        ]
+      }
+    },
+    "low": {
+      "PatchReef_JoannaEdit": {
+        "value": 56529.38083691982,
+        "percValue": 0.0037160300045730654,
+        "sketchMetrics": [
+          {
+            "id": "61a932cc9942fd4acf0d1e4a",
+            "name": "low MPA",
+            "value": 2293399.085140515,
+            "percValue": 0.15075947563318365
+          }
+        ]
+      },
+      "Mangrove_shp_2012": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": [
+          {
+            "id": "61a932cc9942fd4acf0d1e4a",
+            "name": "low MPA",
+            "value": 0,
+            "percValue": 0
+          }
+        ]
+      },
+      "Seagrass_2014_50mbuff": {
+        "value": 33475.07147626246,
+        "percValue": 0.011604069489194334,
+        "sketchMetrics": [
+          {
+            "id": "61a932cc9942fd4acf0d1e4a",
+            "name": "low MPA",
+            "value": 567783.4986989509,
+            "percValue": 0.19682106365008226
+          }
+        ]
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import config, { OceanUseResults } from "../_config";
 import { ClassMetric } from "../util/types";
-import { getGroupMetricsSketchAgg } from "../util/metrics";
+import { getGroupMetricsSketchAgg } from "../util/clientMetrics";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 

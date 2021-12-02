@@ -1,0 +1,95 @@
+{
+  "eez": {
+    "area": 388235454.3080779,
+    "percArea": 0.0008335934529739127,
+    "sketchAreas": [
+      {
+        "sketchId": "61a8155531c466cf4a0621a7",
+        "name": "high MPA",
+        "area": 320052736.91190267,
+        "percArea": 0.0006871960382176592
+      },
+      {
+        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "name": "full MPA",
+        "area": 313000393.6112994,
+        "percArea": 0.0006720537137898591
+      },
+      {
+        "sketchId": "61a81aad31c466cf4a062493",
+        "name": "full MPA copy",
+        "area": 313000393.6112994,
+        "percArea": 0.0006720537137898591
+      },
+      {
+        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "name": "low MPA",
+        "area": 332082981.0585949,
+        "percArea": 0.000713026581634239
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "nearshore": {
+    "area": 387436527.6767595,
+    "percArea": 0.1497200581244864,
+    "sketchAreas": [
+      {
+        "sketchId": "61a8155531c466cf4a0621a7",
+        "name": "high MPA",
+        "area": 320040043.62141776,
+        "percArea": 0.12367551975671941
+      },
+      {
+        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "name": "full MPA",
+        "area": 312209929.16688323,
+        "percArea": 0.12064966879144241
+      },
+      {
+        "sketchId": "61a81aad31c466cf4a062493",
+        "name": "full MPA copy",
+        "area": 312209929.16688323,
+        "percArea": 0.12064966879144241
+      },
+      {
+        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "name": "low MPA",
+        "area": 332070287.7681057,
+        "percArea": 0.12832445893572372
+      }
+    ],
+    "areaUnit": "square meters"
+  },
+  "offshore": {
+    "area": 798994.8171893489,
+    "percArea": 0.0000017251339799091477,
+    "sketchAreas": [
+      {
+        "sketchId": "61a8155531c466cf4a0621a7",
+        "name": "high MPA",
+        "area": 12693.290483143715,
+        "percArea": 2.7406469051149356e-8
+      },
+      {
+        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "name": "full MPA",
+        "area": 790532.630277387,
+        "percArea": 0.00000170686301510174
+      },
+      {
+        "sketchId": "61a81aad31c466cf4a062493",
+        "name": "full MPA copy",
+        "area": 790532.630277387,
+        "percArea": 0.00000170686301510174
+      },
+      {
+        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "name": "low MPA",
+        "area": 12693.290483143715,
+        "percArea": 2.7406469051149356e-8
+      }
+    ],
+    "areaUnit": "square meters"
+  }
+}

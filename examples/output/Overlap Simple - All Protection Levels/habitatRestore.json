@@ -1,0 +1,66 @@
+{
+  "byClass": {
+    "seagrass_restoration_500mbuff": {
+      "name": "seagrass_restoration_500mbuff",
+      "value": 5668686.454278964,
+      "percValue": 0.1735115029081236,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 4654827.9498203015,
+          "percValue": 0.1424785441682702
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 4189928.983326363,
+          "percValue": 0.12824856002160653
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 4189928.983326363,
+          "percValue": 0.12824856002160653
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 5066213.166697266,
+          "percValue": 0.1550705384212996
+        }
+      ]
+    },
+    "mangrove_restoration_500mbuff": {
+      "name": "mangrove_restoration_500mbuff",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
+  }
+}

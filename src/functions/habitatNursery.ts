@@ -28,15 +28,19 @@ export async function habitatNursery(
   const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
+  const LAYERS = config.habitatNursery.layers;
+
+  // Class metrics
+  const featuresByClass: Record<string, Feature<Polygon>[]> = {};
   const classMetrics = (
     await Promise.all(
-      config.habitatNursery.layers.map(async (lyr) => {
-        const features = await fgbFetchAll<Feature<Polygon>>(
+      LAYERS.map(async (lyr) => {
+        featuresByClass[lyr.baseFilename] = await fgbFetchAll(
           `${config.dataBucketUrl}${lyr.filename}`,
           box
         );
         return overlapStatsVector(
-          features,
+          featuresByClass[lyr.baseFilename],
           lyr.baseFilename,
           sketches,
           precalcTotals.byClass[lyr.baseFilename].value
@@ -50,16 +54,18 @@ export async function habitatNursery(
     };
   }, {});
 
+  // Level metrics
   const sketchCategoryMap = getLevelNameForSketches(sketches);
-
-  const sketchFilter = (sketchMetric: SketchMetric, curGroup: string) =>
+  const sketchMetricsFilter = (sketchMetric: SketchMetric, curGroup: string) =>
     sketchCategoryMap[sketchMetric.id] === curGroup;
 
   const levelMetrics = getGroupMetrics(
     levels,
-    sketchFilter,
+    sketches,
+    sketchMetricsFilter,
     classMetrics,
-    precalcTotals.overall.value
+    precalcTotals.byClass,
+    featuresByClass
   );
 
   return {

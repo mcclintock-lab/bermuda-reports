@@ -56,8 +56,8 @@
         {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 0,
-          "percValue": 0
+          "value": 16730.549714316072,
+          "percValue": 0.005799613052805956
         }
       ]
     }
@@ -102,7 +102,7 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 22307.916801422172,
-        "percValue": 0.001220905689420092,
+        "percValue": 0.007732996684008009,
         "sketchMetrics": [
           {
             "id": "619a8e39a717c5a0742cafb9",
@@ -113,8 +113,8 @@
           {
             "id": "619a8e39a717c5a0742cafba",
             "name": "MPA inside",
-            "value": 0,
-            "percValue": 0
+            "value": 16730.549714316072,
+            "percValue": 0.005799613052805956
           }
         ]
       }

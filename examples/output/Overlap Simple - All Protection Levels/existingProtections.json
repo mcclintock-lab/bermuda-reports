@@ -5,13 +5,13 @@
       "class": "Ferry Route",
       "totalArea": 6531869.480055,
       "percArea": 0.005174,
-      "sketchArea": 0
+      "sketchArea": 222238.017619
     },
     {
       "class": "Shipping Lane",
       "totalArea": 6404448.404036,
       "percArea": 0.005073,
-      "sketchArea": 0
+      "sketchArea": 1316467.358913
     },
     {
       "class": "CableZone",
@@ -23,31 +23,31 @@
       "class": "SpearfishEx",
       "totalArea": 190898381.115183,
       "percArea": 0.15122,
-      "sketchArea": 0
+      "sketchArea": 325576.474043
     },
     {
       "class": "SeasonalPA",
       "totalArea": 86861956.526907,
       "percArea": 0.068808,
-      "sketchArea": 28575537.380465
+      "sketchArea": 5062168.350022
     },
     {
       "class": "MPAExtendedClosure",
       "totalArea": 16223333.484141,
       "percArea": 0.012851,
-      "sketchArea": 10005963.016041
+      "sketchArea": 4522998.025696
     },
     {
       "class": "Wreck",
       "totalArea": 8346169.285616,
       "percArea": 0.006611,
-      "sketchArea": 283425.118822
+      "sketchArea": 1826496.064308
     },
     {
       "class": "Reef",
       "totalArea": 7244658.235392,
       "percArea": 0.005739,
-      "sketchArea": 0
+      "sketchArea": 4000431.713844
     },
     {
       "class": "Prohibited",
@@ -89,7 +89,7 @@
       "class": "CoralPreserve",
       "totalArea": 131462891.607205,
       "percArea": 0.104138,
-      "sketchArea": 0
+      "sketchArea": 68897637.323795
     }
   ],
   "areaUnit": "square meters"

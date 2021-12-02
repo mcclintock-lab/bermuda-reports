@@ -7,6 +7,7 @@ import {
   Column,
   keyBy,
   percentWithEdge,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
 import config, { RenewableResults } from "../_config";
 import { ClassMetric } from "../util/types";
@@ -25,6 +26,7 @@ const TableStyled = styled.div`
 const LAYERS = config.renewable.layers;
 
 const SpeciesProtection = () => {
+  const [{ isCollection }] = useSketchProperties();
   const classes = keyBy(LAYERS, (lyr) => lyr.baseFilename);
 
   const columns: Column<ClassMetric>[] = [

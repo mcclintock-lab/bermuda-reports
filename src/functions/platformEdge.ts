@@ -80,7 +80,10 @@ export async function platformEdge(
   // Match sketch to first break group where it has at least min number of restricted activities
   // If no overlap then it's always no break
   // Return true if matches current group
-  const sketchFilter = (sketchMetric: EdgeSketchMetric, curGroup: string) =>
+  const sketchMetricsFilter = (
+    sketchMetric: EdgeSketchMetric,
+    curGroup: string
+  ) =>
     curGroup ===
     getBreakGroup(
       BREAK_MAP,
@@ -90,39 +93,12 @@ export async function platformEdge(
 
   let edgeGroupMetrics = getGroupMetrics(
     Object.keys(BREAK_MAP),
-    sketchFilter,
+    sketches,
+    sketchMetricsFilter,
     edgeClassMetrics,
-    LAYER.totalArea
+    { [LAYER.baseFilename]: { value: LAYER.totalArea } },
+    { [LAYER.baseFilename]: edgeMultiPoly }
   );
-
-  // If sketch collection, recalc group overall stats, accounting for overlap
-  if (sketches.length > 1) {
-    Object.keys(BREAK_MAP).forEach((breakName) => {
-      Object.keys(edgeGroupMetrics[breakName]).forEach(async (className) => {
-        // Get sketches in group
-        const sketchIds = edgeGroupMetrics[breakName][
-          className
-        ].sketchMetrics.map((sm) => sm.id);
-        const groupSketches = sketches.filter((sk) =>
-          sketchIds.includes(sk.properties.id)
-        );
-        // only recalc if more than one sketch in group
-        if (groupSketches.length > 1) {
-          const groupOverallMetric = await overlapStatsVector(
-            edgeMultiPoly,
-            LAYER.baseFilename,
-            groupSketches,
-            LAYER.totalArea,
-            { includeSketchMetrics: true }
-          );
-          edgeGroupMetrics[breakName][className].value =
-            groupOverallMetric.value;
-          edgeGroupMetrics[breakName][className].percValue =
-            groupOverallMetric.percValue;
-        }
-      });
-    });
-  }
 
   return {
     byClass: edgeClassMetrics,

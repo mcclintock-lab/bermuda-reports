@@ -66,7 +66,7 @@
     "full": {
       "PatchReef_JoannaEdit": {
         "value": 15208979.268411856,
-        "percValue": 0.8323829376077139,
+        "percValue": 0.9997813962157607,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
@@ -78,7 +78,7 @@
       },
       "Mangrove_shp_2012": {
         "value": 10599.046396714139,
-        "percValue": 0.0005800826748354575,
+        "percValue": 0.06072605057369667,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
@@ -90,7 +90,7 @@
       },
       "Seagrass_2014_50mbuff": {
         "value": 2846838.338304913,
-        "percValue": 0.1558066203597337,
+        "percValue": 0.9868510639512198,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
@@ -103,8 +103,8 @@
     },
     "high": {
       "PatchReef_JoannaEdit": {
-        "value": 7186668.301418987,
-        "percValue": 0.39332423082275864,
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "619834683ff3e57f7333d93d",
@@ -127,8 +127,8 @@
         ]
       },
       "Seagrass_2014_50mbuff": {
-        "value": 1066079.297522283,
-        "percValue": 0.05834620468169183,
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "619834683ff3e57f7333d93d",
