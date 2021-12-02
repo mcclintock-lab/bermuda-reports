@@ -36,8 +36,8 @@ export async function overlapStatsVector(
   features: Feature<Point | LineString | Polygon | MultiPolygon>[],
   /** Name of class */
   name: string,
-  /** single sketch or collection. */
-  sketches: Sketch<Point | LineString | Polygon>[],
+  /** array of sketches.  If empty will return 0 result. */
+  sketches: Sketch<Point | LineString | Polygon | MultiPolygon>[],
   /**
    * point - total number points
    * line - total length all lines
@@ -45,9 +45,9 @@ export async function overlapStatsVector(
    */
   totalValue: number,
   options: {
-    /** Whether to calculate individual sketch areas, otherwide just overall */
-    includeSketchMetrics: boolean;
-  } = { includeSketchMetrics: true }
+    /** Whether to calculate individual sketch metrics, otherwide just overall */
+    calcSketchMetrics: boolean;
+  } = { calcSketchMetrics: true }
 ): Promise<ClassMetricSketch> {
   // This is incomplete and not yet used
   // let combinedSketch: FeatureCollection;
@@ -66,33 +66,33 @@ export async function overlapStatsVector(
   let sumValue: number = 0;
   let isOverlap = false;
 
-  // If sketch overlap, calculate overall metric values from dissolve
-  if (sketches.length > 1) {
+  if (sketches.length > 0) {
     const sketchColl = flatten(
       featureCollection(sketches as Feature<Polygon | MultiPolygon>[])
     );
     const sketchArea = area(sketchColl);
+
+    // If sketch overlap, use union
     const sketchUnion = clip(sketchColl.features, "union");
     if (!sketchUnion)
       throw new Error("rasterClassStats - something went wrong");
     const sketchUnionArea = area(sketchUnion);
     isOverlap = sketchUnionArea < sketchArea;
 
-    const remFeatures = flatten(sketchUnion);
+    const finalSketches =
+      sketches.length > 1 && isOverlap ? flatten(sketchUnion) : sketchColl;
 
-    if (isOverlap) {
-      featureEach(remFeatures, (feat) => {
-        const curSum = getSketchPolygonIntersectArea(
-          feat,
-          features as Feature<Polygon | MultiPolygon>[]
-        );
-        sumValue += curSum;
-      });
-    }
+    featureEach(finalSketches, (feat) => {
+      const curSum = getSketchPolygonIntersectArea(
+        feat,
+        features as Feature<Polygon | MultiPolygon>[]
+      );
+      sumValue += curSum;
+    });
   }
 
   // Calc sketchMetrics if enabled
-  const sketchMetrics = !options.includeSketchMetrics
+  const sketchMetrics = !options.calcSketchMetrics
     ? []
     : sketches.map((curSketch) => {
         let sketchValue: number = 0;
@@ -118,7 +118,7 @@ export async function overlapStatsVector(
         };
       });
 
-  if (!isOverlap) {
+  if (!isOverlap && options.calcSketchMetrics) {
     sumValue = sketchMetrics.reduce((sumSoFar, sm) => sumSoFar + sm.value, 0);
   }
 

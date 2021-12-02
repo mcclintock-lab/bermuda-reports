@@ -1,20 +1,31 @@
+import { ClassMetricsSketch, GroupMetricsSketch, SketchMetric } from "./types";
+import { overlapStatsVector } from "../util/sumOverlapVector";
+
 import {
-  ClassMetricsSketch,
-  GroupMetricsSketch,
-  GroupMetricSketchAgg,
-  SketchMetric,
-} from "./types";
+  difference,
+  Sketch,
+  Feature,
+  Polygon,
+  MultiPolygon,
+  genSampleSketchCollection,
+  keyBy,
+} from "@seasketch/geoprocessing";
+import flatten from "@turf/flatten";
+import { featureCollection } from "@turf/helpers";
 
 /**
  * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
- * Does not account for overlap!
  */
 export function getGroupMetrics<T extends SketchMetric>(
   groups: string[],
-  sketchFilter: (sketchMetric: T, curGroup: string) => boolean,
+  sketches: Sketch<Polygon>[],
+  sketchMetricsFilter: (sketchMetric: T, curGroup: string) => boolean,
   classMetrics: ClassMetricsSketch,
-  totalValue: number
+  classTotals: Record<string, { value: number }>,
+  featuresByClass: Record<string, Feature<Polygon>[]>
 ): GroupMetricsSketch {
+  const sketchMap = keyBy(sketches, (item) => item.properties.id);
+
   // For each group
   const groupMetrics = groups.reduce<GroupMetricsSketch>((acc, curGroup) => {
     // For each class metric, get sketch metrics for just this group
@@ -22,7 +33,7 @@ export function getGroupMetrics<T extends SketchMetric>(
       (acc, curClassMetricName) => {
         const curClassMetric = classMetrics[curClassMetricName];
         const groupSketchMetrics = curClassMetric.sketchMetrics.filter(
-          (sketchMetric) => sketchFilter(sketchMetric as T, curGroup)
+          (sketchMetric) => sketchMetricsFilter(sketchMetric as T, curGroup)
         );
 
         // If no sketch metrics found for this level, return empty
@@ -42,7 +53,8 @@ export function getGroupMetrics<T extends SketchMetric>(
           (sumSoFar, sm) => sm.value + sumSoFar,
           0
         );
-        const levelPercValue = levelValue / totalValue;
+        const levelPercValue =
+          levelValue / classTotals[curClassMetricName].value;
 
         return {
           ...acc,
@@ -61,147 +73,72 @@ export function getGroupMetrics<T extends SketchMetric>(
       [curGroup]: newBaseMetrics,
     };
   }, {});
-  return groupMetrics;
-}
 
-/**
- * Build agg group objects with groupId, percValue for each class, and total percValue across classes per group
- */
-export const getGroupMetricsAgg = (
-  groupData: GroupMetricsSketch,
-  totalValue: number
-) => {
-  return Object.keys(groupData).map((groupName) => {
-    const levelClassMetrics = groupData[groupName];
-    const classAgg = Object.keys(levelClassMetrics).reduce(
-      (rowSoFar, className) => ({
-        ...rowSoFar,
-        [className]: levelClassMetrics[className].percValue,
-        numSketches: levelClassMetrics[className].sketchMetrics.length,
-        value: rowSoFar.value + levelClassMetrics[className].value,
-      }),
-      { value: 0 }
-    );
-    return {
-      groupId: groupName,
-      percValue: classAgg.value / totalValue,
-      ...classAgg,
-    };
-  });
-};
+  // If sketch collection, recalc group overall stats, accounting for overlap
+  if (sketches.length > 1) {
+    groups.forEach((groupName, groupIndex) => {
+      // For each class in group
+      Object.keys(groupMetrics[groupName]).forEach(async (className) => {
+        // Get sketch metrics for current group and convert to sketches
+        const sketchIds = groupMetrics[groupName][className].sketchMetrics.map(
+          (sm) => sm.id
+        );
+        const groupSketches = sketches.filter((sk) =>
+          sketchIds.includes(sk.properties.id)
+        );
 
-/**
- * Build agg sketch objects with groupId, sketchId, sketchName, percValue for each class, and total percValue across classes per sketch
- * @param groupData
- * @param totalValue
- * @param classes
- * @returns
- */
-export const getGroupMetricsSketchAgg = (
-  groupData: GroupMetricsSketch,
-  totalValue: number,
-  classes: Array<{
-    filename: string;
-    baseFilename: string;
-    display: string;
-    layerId: string;
-  }>
-) => {
-  // For each group
-  let sketchRows: GroupMetricSketchAgg[] = [];
-  Object.keys(groupData).forEach((groupId) => {
-    const classMetrics = groupData[groupId];
-    // Inspect first class to get list of sketches in this group
-    const sketchesInGroup = Object.values(
-      classMetrics
-    )[0].sketchMetrics.map((sm) => ({ id: sm.id, name: sm.name }));
+        // Get sketch metrics from higher groups (lower index value) and convert to sketches
+        const otherGroupSketchMetrics = groups.reduce<SketchMetric[]>(
+          (otherSketchStats, otherGroupName) => {
+            // Append if lower index than current group
+            const otherIndex = groups.findIndex(
+              (findGroupName) => otherGroupName === findGroupName
+            );
+            return otherIndex < groupIndex
+              ? otherSketchStats.concat(
+                  groupMetrics[otherGroupName][className].sketchMetrics
+                )
+              : otherSketchStats;
+          },
+          []
+        );
+        const otherGroupSketches = otherGroupSketchMetrics.map(
+          (stat) => sketchMap[stat.id]
+        );
 
-    // For each sketch
-    sketchesInGroup.forEach((sketchInGroup) => {
-      // Build up agg percValue for each class
-      const classAgg = classes.reduce<Record<string, number>>(
-        (classAggSoFar, lyr) => {
-          const groupSketchMetrics = classMetrics[
-            lyr.baseFilename
-          ].sketchMetrics.reduce<Record<string, SketchMetric>>(
-            (soFar, sm) => ({ ...soFar, [sm.id]: sm }),
-            {}
+        // only recalc if more than one sketch in group
+        if (groupSketches.length > 1 || otherGroupSketches.length > 0) {
+          // Given current group sketches, subtract area of sketches in higher groups
+
+          // HIGH IS NOT GETTING FULL SUBTRACTED PROPERLY!!!!!
+          const otherOverlap = groupSketches
+            .map((groupSketch) => difference(groupSketch, otherGroupSketches))
+            .reduce<Feature<Polygon | MultiPolygon>[]>(
+              (rem, diff) => (diff ? rem.concat(diff) : rem),
+              []
+            );
+          const otherRemSketches = genSampleSketchCollection(
+            featureCollection(flatten(featureCollection(otherOverlap)).features)
+          ).features;
+
+          // Choose final sketch features
+          const finalFeatures =
+            otherGroupSketches.length > 0 ? otherRemSketches : groupSketches;
+
+          const groupOverallMetric = await overlapStatsVector(
+            featuresByClass[className],
+            className,
+            finalFeatures,
+            classTotals[className].value,
+            { calcSketchMetrics: false }
           );
-          return {
-            ...classAggSoFar,
-            value:
-              classAggSoFar.value + groupSketchMetrics[sketchInGroup.id].value,
-            [lyr.baseFilename]: groupSketchMetrics[sketchInGroup.id].percValue,
-          };
-        },
-        { value: 0 }
-      );
-
-      sketchRows.push({
-        groupId,
-        sketchId: sketchInGroup.id,
-        sketchName: sketchInGroup.name,
-        percValue: classAgg.value / totalValue,
-        ...classAgg,
+          groupMetrics[groupName][className].value = groupOverallMetric.value;
+          groupMetrics[groupName][className].percValue =
+            groupOverallMetric.percValue;
+        }
       });
     });
-  });
-  return sketchRows;
-};
+  }
 
-// /**
-//  * Build agg sketch objects with groupId, sketchId, sketchName, percValue for each class, and total percValue across classes per sketch
-//  * @param groupData
-//  * @param totalValue
-//  * @param classes
-//  * @returns
-//  */
-//  export const getClassAgg = (
-//   groupData: ClassMetricsSketch,
-//   totalValue: number,
-//   classes: Array<{
-//     filename: string;
-//     baseFilename: string;
-//     display: string;
-//     layerId: string;
-//   }>
-// ) => {
-//   // For each group
-//   let sketchRows: GroupMetricSketchAgg[] = [];
-//   Object.keys(groupData).forEach((groupId) => {
-//     const classMetrics = groupData[groupId];
-//     // Inspect first class to get list of sketches in this group
-//     const sketchesInGroup = Object.values(
-//       classMetrics
-//     )[0].sketchMetrics.map((sm) => ({ id: sm.id, name: sm.name }));
-
-//     // For each sketch
-//     sketchesInGroup.forEach((sketchInGroup) => {
-//       // Build up agg percValue for each class
-//       const classAgg = classes.reduce<Record<string, number>>(
-//         (classAggSoFar, lyr) => {
-//           const groupSketchMetrics = keyBy(
-//             classMetrics[lyr.baseFilename].sketchMetrics,
-//             (sm) => sm.id
-//           );
-//           return {
-//             ...classAggSoFar,
-//             value:
-//               classAggSoFar.value + groupSketchMetrics[sketchInGroup.id].value,
-//             [lyr.baseFilename]: groupSketchMetrics[sketchInGroup.id].percValue,
-//           };
-//         },
-//         { value: 0 }
-//       );
-
-//       sketchRows.push({
-//         groupId,
-//         sketchId: sketchInGroup.id,
-//         sketchName: sketchInGroup.name,
-//         percValue: classAgg.value / totalValue,
-//         ...classAgg,
-//       });
-//     });
-//   });
-//   return sketchRows;
-// };
+  return groupMetrics;
+}

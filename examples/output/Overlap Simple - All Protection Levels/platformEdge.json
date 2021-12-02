@@ -1,0 +1,99 @@
+{
+  "byClass": {
+    "Pelagic_Fishing_Zone_Dissolved": {
+      "name": "Pelagic_Fishing_Zone_Dissolved",
+      "value": 111151749.90734842,
+      "percValue": 0.06409278125118954,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 77170842.5276741,
+          "percValue": 0.04449857004697698,
+          "numFishingRestricted": 3,
+          "overlap": true
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 106868024.43853466,
+          "percValue": 0.06162268177329839,
+          "numFishingRestricted": 3,
+          "overlap": true
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 106868024.43853466,
+          "percValue": 0.06162268177329839,
+          "numFishingRestricted": 3,
+          "overlap": true
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 74022243.02788582,
+          "percValue": 0.04268301159507903,
+          "numFishingRestricted": 3,
+          "overlap": true
+        }
+      ]
+    }
+  },
+  "byGroup": {
+    "definite": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 111151749.90734842,
+        "percValue": 0.06409278125118954,
+        "sketchMetrics": [
+          {
+            "id": "61a8155531c466cf4a0621a7",
+            "name": "high MPA",
+            "value": 77170842.5276741,
+            "percValue": 0.04449857004697698,
+            "numFishingRestricted": 3,
+            "overlap": true
+          },
+          {
+            "id": "61a819ba9942fd4acf0d18d2",
+            "name": "full MPA",
+            "value": 106868024.43853466,
+            "percValue": 0.06162268177329839,
+            "numFishingRestricted": 3,
+            "overlap": true
+          },
+          {
+            "id": "61a81aad31c466cf4a062493",
+            "name": "full MPA copy",
+            "value": 106868024.43853466,
+            "percValue": 0.06162268177329839,
+            "numFishingRestricted": 3,
+            "overlap": true
+          },
+          {
+            "id": "61a932cc9942fd4acf0d1e4a",
+            "name": "low MPA",
+            "value": 74022243.02788582,
+            "percValue": 0.04268301159507903,
+            "numFishingRestricted": 3,
+            "overlap": true
+          }
+        ]
+      }
+    },
+    "partial": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    },
+    "no": {
+      "Pelagic_Fishing_Zone_Dissolved": {
+        "value": 0,
+        "percValue": 0,
+        "sketchMetrics": []
+      }
+    }
+  }
+}
