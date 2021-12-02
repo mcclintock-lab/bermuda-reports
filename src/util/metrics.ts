@@ -110,7 +110,6 @@ export function getGroupMetrics<T extends SketchMetric>(
         if (groupSketches.length > 1 || otherGroupSketches.length > 0) {
           // Given current group sketches, subtract area of sketches in higher groups
 
-          // HIGH IS NOT GETTING FULL SUBTRACTED PROPERLY!!!!!
           const otherOverlap = groupSketches
             .map((groupSketch) => difference(groupSketch, otherGroupSketches))
             .reduce<Feature<Polygon | MultiPolygon>[]>(
