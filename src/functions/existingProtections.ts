@@ -53,6 +53,7 @@ export default new GeoprocessingHandler(existingProtections, {
   description: "Find which legislated areas the sketch overlaps with",
   timeout: 180, // seconds
   executionMode: "async",
+  memory: 4096,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

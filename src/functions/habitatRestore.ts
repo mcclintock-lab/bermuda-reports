@@ -55,6 +55,7 @@ export default new GeoprocessingHandler(habitatRestore, {
   description: "habitat restoration area within sketch",
   timeout: 120, // seconds
   executionMode: "async",
+  memory: 4096,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

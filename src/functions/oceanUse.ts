@@ -53,5 +53,5 @@ export default new GeoprocessingHandler(oceanUse, {
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
-  memory: 2048,
+  memory: 8192,
 });

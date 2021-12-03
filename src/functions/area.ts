@@ -45,6 +45,6 @@ export default new GeoprocessingHandler(area, {
   timeout: 120, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
-  memory: 4096,
+  memory: 8192,
   requiresProperties: [],
 });

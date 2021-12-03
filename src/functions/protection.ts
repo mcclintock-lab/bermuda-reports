@@ -175,6 +175,7 @@ export default new GeoprocessingHandler(protection, {
   description: "Calculates IUCN protection levels",
   timeout: 120, // seconds
   executionMode: "async",
+  memory: 4096,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });
