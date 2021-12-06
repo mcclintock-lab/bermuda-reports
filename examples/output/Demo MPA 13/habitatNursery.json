@@ -6,14 +6,14 @@
   "byClass": {
     "PatchReef_JoannaEdit": {
       "name": "PatchReef_JoannaEdit",
-      "value": 25010.670950570384,
-      "percValue": 0.0016441079366311282,
+      "value": 0,
+      "percValue": 0,
       "sketchMetrics": [
         {
           "id": "617abdf4dc13e871274c3dec",
           "name": "Demo MPA 13",
-          "value": 25010.670950570384,
-          "percValue": 0.0016441079366311282
+          "value": 0,
+          "percValue": 0
         }
       ]
     },
@@ -64,14 +64,14 @@
     },
     "high": {
       "PatchReef_JoannaEdit": {
-        "value": 25010.670950570384,
-        "percValue": 0.0016441079366311282,
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "617abdf4dc13e871274c3dec",
             "name": "Demo MPA 13",
-            "value": 25010.670950570384,
-            "percValue": 0.0016441079366311282
+            "value": 0,
+            "percValue": 0
           }
         ]
       },

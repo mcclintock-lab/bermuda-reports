@@ -6,14 +6,14 @@
   "byClass": {
     "PatchReef_JoannaEdit": {
       "name": "PatchReef_JoannaEdit",
-      "value": 2930087.938502563,
-      "percValue": 0.1926130188286429,
+      "value": 1662934.5983589217,
+      "percValue": 0.10931509900969087,
       "sketchMetrics": [
         {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "full mpa",
-          "value": 2930087.938502563,
-          "percValue": 0.1926130188286429
+          "value": 1662934.5983589217,
+          "percValue": 0.10931509900969087
         },
         {
           "id": "616f1ae906f1b7772b51f191",
@@ -65,14 +65,14 @@
   "byLevel": {
     "full": {
       "PatchReef_JoannaEdit": {
-        "value": 2930087.938502563,
-        "percValue": 0.1926130188286429,
+        "value": 1662934.5983589217,
+        "percValue": 0.10931509900969087,
         "sketchMetrics": [
           {
             "id": "616f1ae906f1b7772b51f18f",
             "name": "full mpa",
-            "value": 2930087.938502563,
-            "percValue": 0.1926130188286429
+            "value": 1662934.5983589217,
+            "percValue": 0.10931509900969087
           }
         ]
       },
