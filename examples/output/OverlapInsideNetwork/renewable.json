@@ -2,77 +2,77 @@
   "renewable": {
     "float_solar1": {
       "name": "float_solar1",
-      "value": 13273.244772195816,
-      "percValue": 0.019933814973291678,
+      "value": 36584.82142364979,
+      "percValue": 0.023516315338551575,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 13273.244772195816,
-          "percValue": 0.019933814973291678
+          "value": 36584.82142364979,
+          "percValue": 0.023516315338551575
         },
         {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 8246.880502998829,
-          "percValue": 0.01238519991720379
+          "value": 30464.308173060417,
+          "percValue": 0.019582117656733726
         }
       ]
     },
     "wind_fixed1": {
       "name": "wind_fixed1",
-      "value": 4788.18440580368,
-      "percValue": 0.01007204065321045,
+      "value": 13404.252264142036,
+      "percValue": 0.01352397644516902,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 4788.18440580368,
-          "percValue": 0.01007204065321045
+          "value": 13404.252264142036,
+          "percValue": 0.01352397644516902
         },
         {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 2594.488205373287,
-          "percValue": 0.005457557283533369
+          "value": 10476.672956585884,
+          "percValue": 0.010570248567138233
         }
       ]
     },
     "wind_float1": {
       "name": "wind_float1",
-      "value": 7858.4542137384415,
-      "percValue": 0.05508439356963063,
+      "value": 21546.501202106476,
+      "percValue": 0.04842578212066628,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 7858.4542137384415,
-          "percValue": 0.05508439356963063
+          "value": 21546.501202106476,
+          "percValue": 0.04842578212066628
         },
         {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 5067.376861691475,
-          "percValue": 0.03552013841692449
+          "value": 18422.07023859024,
+          "percValue": 0.04140362053298779
         }
       ]
     },
     "wave_energy1": {
       "name": "wave_energy1",
-      "value": 4412.191627562046,
-      "percValue": 0.018774403581408566,
+      "value": 12590.404203176498,
+      "percValue": 0.027929735645133447,
       "sketchMetrics": [
         {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 4412.191627562046,
-          "percValue": 0.018774403581408566
+          "value": 12590.404203176498,
+          "percValue": 0.027929735645133447
         },
         {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 2594.488205373287,
-          "percValue": 0.011039857913378344
+          "value": 9951.907910168171,
+          "percValue": 0.02207666669077892
         }
       ]
     }

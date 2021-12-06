@@ -2,125 +2,125 @@
   "renewable": {
     "float_solar1": {
       "name": "float_solar1",
-      "value": 353974.7078176066,
-      "percValue": 0.5316007089420876,
+      "value": 726788.9599319696,
+      "percValue": 0.46717184070467016,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 332420.9200330004,
-          "percValue": 0.49923113955300014
+          "value": 666133.8323354125,
+          "percValue": 0.4281834009103829
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 317089.896699965,
-          "percValue": 0.47620694405921143
+          "value": 638114.151085794,
+          "percValue": 0.41017266218566745
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 317089.896699965,
-          "percValue": 0.47620694405921143
+          "value": 638114.151085794,
+          "percValue": 0.41017266218566745
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 341214.64437838644,
-          "percValue": 0.5124375918587882
+          "value": 694084.12806499,
+          "percValue": 0.44614953939637325
         }
       ]
     },
     "wind_fixed1": {
       "name": "wind_fixed1",
-      "value": 313846.253860943,
-      "percValue": 0.6601818058456022,
+      "value": 608028.3074120283,
+      "percValue": 0.6134590983067106,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 302170.3406003937,
-          "percValue": 0.6356212912419728
+          "value": 580554.5871322155,
+          "percValue": 0.5857399880867917
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 279308.72772860527,
-          "percValue": 0.5875314361471033
+          "value": 525541.4057992101,
+          "percValue": 0.5302354396897389
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 279308.72772860527,
-          "percValue": 0.5875314361471033
+          "value": 525541.4057992101,
+          "percValue": 0.5302354396897389
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 305580.10113760084,
-          "percValue": 0.642793790009321
+          "value": 590015.6387547255,
+          "percValue": 0.5952855439871113
         }
       ]
     },
     "wind_float1": {
       "name": "wind_float1",
-      "value": 37308.31828826666,
-      "percValue": 0.2615153097690785,
+      "value": 112251.8232600689,
+      "percValue": 0.2522860804569143,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 27673.675057947636,
-          "percValue": 0.19398059299563866
+          "value": 79459.33030414581,
+          "percValue": 0.1785849210815924
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 35379.690064013004,
-          "percValue": 0.24799645310022395
+          "value": 107279.04773044586,
+          "percValue": 0.24110976268384762
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 35379.690064013004,
-          "percValue": 0.24799645310022395
+          "value": 107279.04773044586,
+          "percValue": 0.24110976268384762
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 32852.8372964859,
-          "percValue": 0.23028429895982874
+          "value": 97599.6030368805,
+          "percValue": 0.21935520144984966
         }
       ]
     },
     "wave_energy1": {
       "name": "wave_energy1",
-      "value": 148938.2091397047,
-      "percValue": 0.633749910047788,
+      "value": 255061.52926844358,
+      "percValue": 0.5658119446168215,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 145172.35357812047,
-          "percValue": 0.6177257438033267
+          "value": 244330.15925997496,
+          "percValue": 0.5420061697894316
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 140335.15449768305,
-          "percValue": 0.5971428826301073
+          "value": 232295.68001836538,
+          "percValue": 0.515309662002954
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 140335.15449768305,
-          "percValue": 0.5971428826301073
+          "value": 232295.68001836538,
+          "percValue": 0.515309662002954
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 147525.50953051448,
-          "percValue": 0.6277387040891541
+          "value": 250522.18930476904,
+          "percValue": 0.5557421674164331
         }
       ]
     }

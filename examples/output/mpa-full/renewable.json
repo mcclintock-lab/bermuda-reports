@@ -2,27 +2,27 @@
   "renewable": {
     "float_solar1": {
       "name": "float_solar1",
-      "value": 8383.389752417803,
-      "percValue": 0.01259021008365238,
+      "value": 17171.597364604473,
+      "percValue": 0.011037711345275023,
       "sketchMetrics": [
         {
           "id": "615bbbe9aac8c8285d50db2d",
           "name": "mpa-full",
-          "value": 8383.389752417803,
-          "percValue": 0.01259021008365238
+          "value": 17171.597364604473,
+          "percValue": 0.011037711345275023
         }
       ]
     },
     "wind_fixed1": {
       "name": "wind_fixed1",
-      "value": 3573.089302420616,
-      "percValue": 0.0075160640571635,
+      "value": 8687.752108514309,
+      "percValue": 0.008765349425071817,
       "sketchMetrics": [
         {
           "id": "615bbbe9aac8c8285d50db2d",
           "name": "mpa-full",
-          "value": 3573.089302420616,
-          "percValue": 0.0075160640571635
+          "value": 8687.752108514309,
+          "percValue": 0.008765349425071817
         }
       ]
     },
@@ -41,14 +41,14 @@
     },
     "wave_energy1": {
       "name": "wave_energy1",
-      "value": 1766.8996696770191,
-      "percValue": 0.007518369619114499,
+      "value": 3627.8118220567703,
+      "percValue": 0.008047702323549866,
       "sketchMetrics": [
         {
           "id": "615bbbe9aac8c8285d50db2d",
           "name": "mpa-full",
-          "value": 1766.8996696770191,
-          "percValue": 0.007518369619114499
+          "value": 3627.8118220567703,
+          "percValue": 0.008047702323549866
         }
       ]
     }

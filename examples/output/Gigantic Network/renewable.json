@@ -2,77 +2,77 @@
   "renewable": {
     "float_solar1": {
       "name": "float_solar1",
-      "value": 665835.5460966756,
-      "percValue": 0.9999546310134109,
+      "value": 1554532.872649908,
+      "percValue": 0.9992363995454121,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 665835.5460966756,
-          "percValue": 0.9999546310134109
+          "value": 1554532.872649908,
+          "percValue": 0.9992363995454121
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 560817.2274767905,
-          "percValue": 0.8422376772388394
+          "value": 1254996.874171406,
+          "percValue": 0.8066979991552747
         }
       ]
     },
     "wind_fixed1": {
       "name": "wind_fixed1",
-      "value": 475377.38686833484,
-      "percValue": 0.999965740741175,
+      "value": 990678.5033819079,
+      "percValue": 0.9995270515993813,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 475377.38686833484,
-          "percValue": 0.999965740741175
+          "value": 990678.5033819079,
+          "percValue": 0.9995270515993813
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 421694.7479620129,
-          "percValue": 0.8870432474510824
+          "value": 833147.2661019266,
+          "percValue": 0.8405887758663885
         }
       ]
     },
     "wind_float1": {
       "name": "wind_float1",
-      "value": 142662.08093595132,
+      "value": 444938.63100481033,
       "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 142662.08093595132,
+          "value": 444938.63100481033,
           "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 133764.6649377644,
-          "percValue": 0.9376329299291418
+          "value": 408207.01623010635,
+          "percValue": 0.917445660558283
         }
       ]
     },
     "wave_energy1": {
       "name": "wave_energy1",
-      "value": 235002.93301453642,
-      "percValue": 0.999965613385541,
+      "value": 449853.9981176257,
+      "percValue": 0.9979269166880069,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 235002.93301453642,
-          "percValue": 0.999965613385541
+          "value": 449853.9981176257,
+          "percValue": 0.9979269166880069
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 222290.76870953292,
-          "percValue": 0.94587383242924
+          "value": 411888.2518416345,
+          "percValue": 0.9137061688909571
         }
       ]
     }
