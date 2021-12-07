@@ -6,32 +6,32 @@
   "byClass": {
     "PatchReef_JoannaEdit": {
       "name": "PatchReef_JoannaEdit",
-      "value": 2731984.218313735,
-      "percValue": 0.17959042142282733,
+      "value": 2027271.8351702024,
+      "percValue": 0.13326526587388773,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 2259418.8210013323,
-          "percValue": 0.1485257401979982
+          "value": 1611235.8186861514,
+          "percValue": 0.1059166146530684
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 1055727.8531308614,
-          "percValue": 0.06939959930244922
+          "value": 973920.3334244265,
+          "percValue": 0.06402187902092316
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 1055727.8531308614,
-          "percValue": 0.06939959930244922
+          "value": 973920.3334244265,
+          "percValue": 0.06402187902092316
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 2293399.085140515,
-          "percValue": 0.15075947563318365
+          "value": 1596930.4856124802,
+          "percValue": 0.10497623557691098
         }
       ]
     },
@@ -101,20 +101,20 @@
   "byLevel": {
     "full": {
       "PatchReef_JoannaEdit": {
-        "value": 1055727.8531308614,
-        "percValue": 0.06939959930244922,
+        "value": 973920.3334244265,
+        "percValue": 0.06402187902092316,
         "sketchMetrics": [
           {
             "id": "61a819ba9942fd4acf0d18d2",
             "name": "full MPA",
-            "value": 1055727.8531308614,
-            "percValue": 0.06939959930244922
+            "value": 973920.3334244265,
+            "percValue": 0.06402187902092316
           },
           {
             "id": "61a81aad31c466cf4a062493",
             "name": "full MPA copy",
-            "value": 1055727.8531308614,
-            "percValue": 0.06939959930244922
+            "value": 973920.3334244265,
+            "percValue": 0.06402187902092316
           }
         ]
       },
@@ -157,14 +157,14 @@
     },
     "high": {
       "PatchReef_JoannaEdit": {
-        "value": 1619726.9843547414,
-        "percValue": 0.10647479211638272,
+        "value": 1053351.501745521,
+        "percValue": 0.06924338685294781,
         "sketchMetrics": [
           {
             "id": "61a8155531c466cf4a0621a7",
             "name": "high MPA",
-            "value": 2259418.8210013323,
-            "percValue": 0.1485257401979982
+            "value": 1611235.8186861514,
+            "percValue": 0.1059166146530684
           }
         ]
       },
@@ -195,14 +195,14 @@
     },
     "low": {
       "PatchReef_JoannaEdit": {
-        "value": 56529.38083691982,
-        "percValue": 0.0037160300045730654,
+        "value": 0,
+        "percValue": 0,
         "sketchMetrics": [
           {
             "id": "61a932cc9942fd4acf0d1e4a",
             "name": "low MPA",
-            "value": 2293399.085140515,
-            "percValue": 0.15075947563318365
+            "value": 1596930.4856124802,
+            "percValue": 0.10497623557691098
           }
         ]
       },

@@ -1,1 +1,77 @@
-{"type": "FeatureCollection", "properties": {"id":"61685a19b503392035ed519c","name":"low-only-network","updatedAt":"2021-10-19T23:05:03.182Z","createdAt":"2021-10-14T16:26:01.633Z","sketchClassId":"615b65a2aac8c8285d50d9f3","isCollection":true,"userAttributes":[]}, "features": [{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-64.67536851019531,32.413508548731976],[-64.67536851019531,32.42857863764303],[-64.61357041449216,32.42857863764303],[-64.6108238324609,32.39843594260134],[-64.62593003363278,32.40655227403999],[-64.67536851019531,32.413508548731976]]],"bbox":[-64.67536851019531,32.39843594260134,-64.6108238324609,32.42857863764303]},"properties":{"id":"61685a10f3f078352076a1fb","name":"low-1","updatedAt":"2021-10-14T16:26:05.166Z","createdAt":"2021-10-08T00:06:24.521Z","sketchClassId":"615b59e1aac8c8285d50d9b8","isCollection":false,"userAttributes":[{"label":"Allowed Activities","fieldType":"ChoiceField","exportId":"ACTIVITIES","value":"[\"WORKS\",\"UNTREATED_WATER\",\"HABITATION\"]"}]},"id":"1","bbox":[-64.67536851019531,32.39843594260134,-64.6108238324609,32.42857863764303]}]}
+{
+    "type": "FeatureCollection",
+    "properties": {
+        "id": "61685a19b503392035ed519c",
+        "name": "low-only-network",
+        "updatedAt": "2021-10-19T23:05:03.182Z",
+        "createdAt": "2021-10-14T16:26:01.633Z",
+        "sketchClassId": "615b65a2aac8c8285d50d9f3",
+        "isCollection": true,
+        "userAttributes": []
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -64.67536851019531,
+                            32.413508548731976
+                        ],
+                        [
+                            -64.67536851019531,
+                            32.42857863764303
+                        ],
+                        [
+                            -64.61357041449216,
+                            32.42857863764303
+                        ],
+                        [
+                            -64.6108238324609,
+                            32.39843594260134
+                        ],
+                        [
+                            -64.62593003363278,
+                            32.40655227403999
+                        ],
+                        [
+                            -64.67536851019531,
+                            32.413508548731976
+                        ]
+                    ]
+                ],
+                "bbox": [
+                    -64.67536851019531,
+                    32.39843594260134,
+                    -64.6108238324609,
+                    32.42857863764303
+                ]
+            },
+            "properties": {
+                "id": "61685a10f3f078352076a1fb",
+                "name": "low-1",
+                "updatedAt": "2021-10-14T16:26:05.166Z",
+                "createdAt": "2021-10-08T00:06:24.521Z",
+                "sketchClassId": "615b59e1aac8c8285d50d9b8",
+                "isCollection": false,
+                "userAttributes": [
+                    {
+                        "label": "Allowed Activities",
+                        "fieldType": "ChoiceField",
+                        "exportId": "ACTIVITIES",
+                        "value": "[\"WORKS\",\"UNTREATED_WATER\",\"HABITATION\"]"
+                    }
+                ]
+            },
+            "id": "1",
+            "bbox": [
+                -64.67536851019531,
+                32.39843594260134,
+                -64.6108238324609,
+                32.42857863764303
+            ]
+        }
+    ]
+}

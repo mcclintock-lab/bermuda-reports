@@ -2,14 +2,14 @@
   "renewable": {
     "float_solar1": {
       "name": "float_solar1",
-      "value": 49130.99291163683,
-      "percValue": 0.03158085449774297,
+      "value": 49128.152675926685,
+      "percValue": 0.03157902882589338,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 49130.99291163683,
-          "percValue": 0.03158085449774297
+          "value": 49128.152675926685,
+          "percValue": 0.03157902882589338
         }
       ]
     },
