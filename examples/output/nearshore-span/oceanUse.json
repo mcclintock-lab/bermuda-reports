@@ -67,40 +67,40 @@
     },
     "shipping_heatmap": {
       "name": "shipping_heatmap",
-      "value": 424.4018843770027,
-      "percValue": 0.028737499281677754,
+      "value": 423.6451639533043,
+      "percValue": 0.028686259517122076,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 424.4018843770027,
-          "percValue": 0.028737499281677754
+          "value": 423.6451639533043,
+          "percValue": 0.028686259517122076
         }
       ]
     },
     "swim_snorkel_dive_heatmap": {
       "name": "swim_snorkel_dive_heatmap",
-      "value": 59732.08216327429,
-      "percValue": 0.09732161982439294,
+      "value": 59601.02239459753,
+      "percValue": 0.09710808383971778,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 59732.08216327429,
-          "percValue": 0.09732161982439294
+          "value": 59601.02239459753,
+          "percValue": 0.09710808383971778
         }
       ]
     },
     "tourism_heatmap": {
       "name": "tourism_heatmap",
-      "value": 711.8624566197395,
-      "percValue": 0.03522894963172145,
+      "value": 700.3974488377571,
+      "percValue": 0.034661564488815244,
       "sketchMetrics": [
         {
           "id": "61649a3c1e0a596510ad8329",
           "name": "nearshore-span",
-          "value": 711.8624566197395,
-          "percValue": 0.03522894963172145
+          "value": 700.3974488377571,
+          "percValue": 0.034661564488815244
         }
       ]
     },

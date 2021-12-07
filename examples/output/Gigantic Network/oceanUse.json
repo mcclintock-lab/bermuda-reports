@@ -2,14 +2,14 @@
   "byClass": {
     "aquaculture_heatmap": {
       "name": "aquaculture_heatmap",
-      "value": 15442.911008685827,
-      "percValue": 1.031411425036815,
+      "value": 14972.600296854973,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 15442.911008685827,
-          "percValue": 1.031411425036815
+          "value": 14972.600296854973,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -21,14 +21,14 @@
     },
     "boating_heatmap": {
       "name": "boating_heatmap",
-      "value": 438539.2677699779,
-      "percValue": 1.0190387594067172,
+      "value": 427039.62420813786,
+      "percValue": 0.9923169048998967,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 438425.2677645632,
-          "percValue": 1.0187738562780169
+          "value": 426925.62420272315,
+          "percValue": 0.9920520017711965
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -40,14 +40,14 @@
     },
     "commercial_fishing_heatmap": {
       "name": "commercial_fishing_heatmap",
-      "value": 184249.15676517412,
-      "percValue": 0.6218587914678864,
+      "value": 183984.78191943094,
+      "percValue": 0.6209665006973083,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 181551.02984447964,
-          "percValue": 0.6127523511693918
+          "value": 181286.65499873646,
+          "percValue": 0.6118600603988136
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -59,14 +59,14 @@
     },
     "passiverec_conservation_heatmap": {
       "name": "passiverec_conservation_heatmap",
-      "value": 235040.264446571,
-      "percValue": 1.0181477500054468,
+      "value": 230850.84109385265,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 235040.264446571,
-          "percValue": 1.0181477500054468
+          "value": 230850.84109385265,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -78,14 +78,14 @@
     },
     "recreational_fishing_heatmap": {
       "name": "recreational_fishing_heatmap",
-      "value": 233970.60878595617,
-      "percValue": 1.0126372670585764,
+      "value": 230817.5786500862,
+      "percValue": 0.9989907845524696,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 233945.5437865164,
-          "percValue": 1.0125287844048654
+          "value": 230792.51365064643,
+          "percValue": 0.9988823018987586
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -97,14 +97,14 @@
     },
     "shipping_heatmap": {
       "name": "shipping_heatmap",
-      "value": 15086.644342005253,
-      "percValue": 1.0215610413175555,
+      "value": 14768.226010799408,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 15086.644342005253,
-          "percValue": 1.0215610413175555
+          "value": 14768.226010799408,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -116,14 +116,14 @@
     },
     "swim_snorkel_dive_heatmap": {
       "name": "swim_snorkel_dive_heatmap",
-      "value": 623869.0730106942,
-      "percValue": 1.016471325707006,
+      "value": 613759.638105642,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 623869.0730106942,
-          "percValue": 1.016471325707006
+          "value": 613759.638105642,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -135,14 +135,14 @@
     },
     "tourism_heatmap": {
       "name": "tourism_heatmap",
-      "value": 20835.624350937083,
-      "percValue": 1.0311221697097117,
+      "value": 20206.746555360034,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 20835.624350937083,
-          "percValue": 1.0311221697097117
+          "value": 20206.746555360034,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",
@@ -154,14 +154,14 @@
     },
     "utilities_heatmap": {
       "name": "utilities_heatmap",
-      "value": 15574.782408714294,
-      "percValue": 1.0282465288032332,
+      "value": 15146.934098422527,
+      "percValue": 1,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 15574.782408714294,
-          "percValue": 1.0282465288032332
+          "value": 15146.934098422527,
+          "percValue": 1
         },
         {
           "id": "619834683ff3e57f7333d93d",

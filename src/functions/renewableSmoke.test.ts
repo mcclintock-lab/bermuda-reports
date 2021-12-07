@@ -20,5 +20,5 @@ describe("Basic smoke tests", () => {
       expect(result).toBeTruthy();
       writeResultOutput(result, "renewable", example.properties.name);
     }
-  }, 300000);
+  }, 360000);
 });

@@ -15,40 +15,40 @@
     },
     "boating_heatmap": {
       "name": "boating_heatmap",
-      "value": 3807.950564634055,
-      "percValue": 0.008848578689428021,
+      "value": 3802.0274279229343,
+      "percValue": 0.008834815028270401,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 3807.950564634055,
-          "percValue": 0.008848578689428021
+          "value": 3802.0274279229343,
+          "percValue": 0.008834815028270401
         }
       ]
     },
     "commercial_fishing_heatmap": {
       "name": "commercial_fishing_heatmap",
-      "value": 3297.840440750122,
-      "percValue": 0.011130531650424482,
+      "value": 3294.543529510498,
+      "percValue": 0.011119404254918067,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 3297.840440750122,
-          "percValue": 0.011130531650424482
+          "value": 3294.543529510498,
+          "percValue": 0.011119404254918067
         }
       ]
     },
     "passiverec_conservation_heatmap": {
       "name": "passiverec_conservation_heatmap",
-      "value": 9863.22203614004,
-      "percValue": 0.042725519168154716,
+      "value": 9775.465261237696,
+      "percValue": 0.04234537424649655,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 9863.22203614004,
-          "percValue": 0.042725519168154716
+          "value": 9775.465261237696,
+          "percValue": 0.04234537424649655
         }
       ]
     },
@@ -93,14 +93,14 @@
     },
     "tourism_heatmap": {
       "name": "tourism_heatmap",
-      "value": 359.3579382300377,
-      "percValue": 0.017784057282329527,
+      "value": 348.446845471859,
+      "percValue": 0.017244084519852113,
       "sketchMetrics": [
         {
           "id": "61803a1a04baa808681f0a8f",
           "name": "pelagic-break-partial-no-take",
-          "value": 359.3579382300377,
-          "percValue": 0.017784057282329527
+          "value": 348.446845471859,
+          "percValue": 0.017244084519852113
         }
       ]
     },
