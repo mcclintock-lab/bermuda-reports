@@ -1,126 +1,18 @@
 import React from "react";
 import {
-  LayerToggle,
   ResultsCard,
   Skeleton,
-  Table,
-  Column,
-  keyBy,
-  percentWithEdge,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
-import config, { HabitatResults, nearshore } from "../_config";
-import { ClassMetric } from "../util/types";
+import config, { HabitatResults } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { GreenPill } from "../components/Pill";
-import styled from "styled-components";
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
+import { flattenSketchAllClass } from "../util/clientMetrics";
+import SketchClassTable from "../components/SketchClassTable";
+import { ClassTable } from "../components/ClassTable";
+import { CategoricalClassTable } from "../components/CategoricalClassTable";
 
 const HabitatProtection = () => {
-  const offshoreClasses = keyBy(
-    config.offshore.layers,
-    (lyr) => lyr.baseFilename
-  );
-
-  const offshoreColumns: Column<ClassMetric>[] = [
-    {
-      Header: "Offshore",
-      accessor: (row) => offshoreClasses[row.name].display,
-      style: { width: "30%" },
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "right", width: "30%" },
-      accessor: (row) => {
-        const percDisplay = percentWithEdge(row.percValue);
-        const goal =
-          config.offshore.layers.find((lyr) => lyr.baseFilename === row.name)
-            ?.goalPerc || 0;
-        if (row.percValue > goal) {
-          return <GreenPill>{percDisplay}</GreenPill>;
-        } else {
-          return percDisplay;
-        }
-      },
-    },
-    {
-      Header: "Goal",
-      style: { textAlign: "right", width: "20%" },
-      accessor: (row) => {
-        const goalPerc = config.offshore.layers.find(
-          (lyr) => lyr.baseFilename === row.name
-        )?.goalPerc;
-        return percentWithEdge(goalPerc || 0);
-      },
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={offshoreClasses[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "20%" },
-    },
-  ];
-
-  const nearshoreColumns: Column<ClassMetric>[] = [
-    {
-      Header: "Nearshore/Platform",
-      accessor: (row) => row.name,
-      style: { width: "30%" },
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "right", width: "30%" },
-      accessor: (row) => {
-        const percDisplay = percentWithEdge(row.percValue);
-        const goal =
-          config.nearshore.layers.find((lyr) => lyr.name === row.name)
-            ?.goalPerc || 0;
-        if (row.percValue > goal) {
-          return <GreenPill>{percDisplay}</GreenPill>;
-        } else {
-          return percDisplay;
-        }
-      },
-    },
-    {
-      Header: "Goal",
-      style: { textAlign: "right", width: "20%" },
-      accessor: (row, index) => {
-        const goalPerc = config.nearshore.layers.find(
-          (lyr) => lyr.name === row.name
-        )?.goalPerc;
-        return percentWithEdge(goalPerc || 0);
-      },
-    },
-    {
-      Header: "Show Map",
-      accessor: (row, index) => {
-        return index == 0 ? (
-          <LayerToggle
-            simple
-            layerId={nearshore.layerId}
-            style={{ marginTop: 0, marginLeft: 15 }}
-          />
-        ) : (
-          <></>
-        );
-      },
-      style: { width: "20%" },
-    },
-  ];
-
+  const [{ isCollection }] = useSketchProperties();
   return (
     <>
       <ResultsCard
@@ -129,8 +21,6 @@ const HabitatProtection = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: HabitatResults) => {
-          const nearshore = Object.values(data.nearshore);
-          const offshore = Object.values(data.offshore);
           return (
             <>
               <p>
@@ -147,25 +37,40 @@ const HabitatProtection = () => {
                   Protection designation count towards meeting this objective.
                 </p>
               </Collapse>
-              <TableStyled>
-                <Table
-                  className="styled"
-                  columns={nearshoreColumns}
-                  data={nearshore}
-                />
-              </TableStyled>
-              <TableStyled>
-                <Table
-                  className="styled"
-                  columns={offshoreColumns}
-                  data={offshore}
-                />
-              </TableStyled>
+              <CategoricalClassTable
+                titleText="Nearshore/Platform"
+                layerId={config.nearshore.layerId}
+                rows={Object.values(data.nearshore)}
+                classes={config.nearshore.layers}
+                showGoal
+              />
+              <ClassTable
+                titleText="Offshore"
+                rows={Object.values(data.offshore)}
+                classes={config.offshore.layers}
+                showGoal
+              />
+              {isCollection && (
+                <Collapse title="Show Offshore by MPA">
+                  {genSketchTable(data)}
+                </Collapse>
+              )}
             </>
           );
         }}
       </ResultsCard>
     </>
+  );
+};
+
+const genSketchTable = (data: HabitatResults) => {
+  // Build agg sketch group objects with percValue for each class
+  const sketchRows = flattenSketchAllClass(
+    data.offshore,
+    config.offshore.layers
+  );
+  return (
+    <SketchClassTable rows={sketchRows} classes={config.offshore.layers} />
   );
 };
 

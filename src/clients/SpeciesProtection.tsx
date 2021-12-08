@@ -1,75 +1,17 @@
 import React from "react";
 import {
-  LayerToggle,
   ResultsCard,
   Skeleton,
-  Table,
-  Column,
-  keyBy,
-  percentWithEdge,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
-import config, { ReefIndexResults, nearshore } from "../_config";
-import { ClassMetric } from "../util/types";
+import config, { ReefIndexResults } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { GreenPill } from "../components/Pill";
-import styled from "styled-components";
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
-
-const LAYERS = config.reefIndex.layers;
+import { flattenSketchAllClass } from "../util/clientMetrics";
+import SketchClassTable from "../components/SketchClassTable";
+import { ClassTable } from "../components/ClassTable";
 
 const SpeciesProtection = () => {
-  const classes = keyBy(LAYERS, (lyr) => lyr.baseFilename);
-
-  const columns: Column<ClassMetric>[] = [
-    {
-      Header: "Indicator",
-      accessor: (row) => classes[row.name].display,
-      style: { width: "30%" },
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => {
-        const percDisplay = percentWithEdge(row.percValue);
-        const goal =
-          LAYERS.find((lyr) => lyr.baseFilename === row.name)?.goalPerc || 0;
-        if (row.percValue > goal) {
-          return <GreenPill>{percDisplay}</GreenPill>;
-        } else {
-          return percDisplay;
-        }
-      },
-    },
-    {
-      Header: "Goal",
-      style: { textAlign: "right", width: "20%" },
-      accessor: (row, index) => {
-        const goalPerc = LAYERS.find((lyr) => lyr.baseFilename === row.name)
-          ?.goalPerc;
-        return percentWithEdge(goalPerc || 0);
-      },
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={classes[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "20%" },
-    },
-  ];
-
+  const [{ isCollection }] = useSketchProperties();
   return (
     <>
       <ResultsCard
@@ -108,14 +50,31 @@ const SpeciesProtection = () => {
                   plan.
                 </p>
               </Collapse>
-              <TableStyled>
-                <Table className="styled" columns={columns} data={results} />
-              </TableStyled>
+              <ClassTable
+                titleText="Indicator"
+                rows={results}
+                classes={config.reefIndex.layers}
+                showGoal
+              />
+              {isCollection && (
+                <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
+              )}
             </>
           );
         }}
       </ResultsCard>
     </>
+  );
+};
+
+const genSketchTable = (data: ReefIndexResults) => {
+  // Build agg sketch group objects with percValue for each class
+  const sketchRows = flattenSketchAllClass(
+    data.reefIndex,
+    config.reefIndex.layers
+  );
+  return (
+    <SketchClassTable rows={sketchRows} classes={config.reefIndex.layers} />
   );
 };
 

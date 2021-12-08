@@ -1,60 +1,12 @@
 import React from "react";
-import {
-  LayerToggle,
-  ResultsCard,
-  Skeleton,
-  Table,
-  Column,
-  keyBy,
-  percentWithEdge,
-  useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+import { ResultsCard, Skeleton } from "@seasketch/geoprocessing/client";
 import config, { RenewableResults } from "../_config";
-import { ClassMetric } from "../util/types";
 import { Collapse } from "../components/Collapse";
-import styled from "styled-components";
+import { ClassTable } from "../components/ClassTable";
 
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
-
-const LAYERS = config.renewable.layers;
+const CLASSES = config.renewable.layers;
 
 const SpeciesProtection = () => {
-  const [{ isCollection }] = useSketchProperties();
-  const classes = keyBy(LAYERS, (lyr) => lyr.baseFilename);
-
-  const columns: Column<ClassMetric>[] = [
-    {
-      Header: "Type",
-      accessor: (row) => classes[row.name].display,
-      style: { width: "50%" },
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => {
-        return percentWithEdge(row.percValue);
-      },
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={classes[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "20%" },
-    },
-  ];
-
   return (
     <>
       <ResultsCard
@@ -63,7 +15,6 @@ const SpeciesProtection = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: RenewableResults) => {
-          const results = Object.values(data.renewable);
           return (
             <>
               <p>
@@ -92,9 +43,11 @@ const SpeciesProtection = () => {
                   total value of all cells in the EEZ.
                 </p>
               </Collapse>
-              <TableStyled>
-                <Table className="styled" columns={columns} data={results} />
-              </TableStyled>
+              <ClassTable
+                titleText="Type"
+                rows={Object.values(data.renewable)}
+                classes={CLASSES}
+              />
             </>
           );
         }}

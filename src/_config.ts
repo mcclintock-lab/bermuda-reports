@@ -39,7 +39,7 @@ export const objectives = {
 
 export interface HabitatResults {
   nearshore: ClassMetrics;
-  offshore: ClassMetrics;
+  offshore: ClassMetricsSketch;
 }
 
 const nearshoreBaseFilename = "Habitat Zones1";
@@ -205,7 +205,7 @@ export const offshore = {
 //// REEF INDEX ////
 
 export interface ReefIndexResults {
-  reefIndex: ClassMetrics;
+  reefIndex: ClassMetricsSketch;
 }
 
 export const reefIndexLayers = [
@@ -323,7 +323,7 @@ export const renewable = {
 
 // base for precalc
 export interface HabitatRestoreResults {
-  byClass: ClassMetrics;
+  byClass: ClassMetricsSketch;
 }
 
 export interface HabitatRestoreLevelResults extends HabitatRestoreResults {
@@ -389,7 +389,7 @@ export const habitatNursery = {
 //// OCEAN USE ////
 
 export interface OceanUseResults {
-  byClass: ClassMetrics;
+  byClass: ClassMetricsSketch;
 }
 
 const oceanUseLayers = [
