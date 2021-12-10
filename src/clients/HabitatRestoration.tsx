@@ -14,7 +14,6 @@ import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 
 const LAYERS = config.habitatRestore.layers;
-const CLASSES = keyBy(LAYERS, (lyr) => lyr.baseFilename);
 
 const HabitatRestoration = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -96,23 +95,15 @@ const genTable = (data: ClassMetric[]) => {
       titleText="RestorationType"
       percText="% Area Within Plan"
       rows={data}
-      classes={config.habitatRestore.layers}
+      classes={LAYERS}
     />
   );
 };
 
 const genSketchTable = (data: HabitatRestoreResults) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(
-    data.byClass,
-    config.habitatRestore.layers
-  );
-  return (
-    <SketchClassTable
-      rows={sketchRows}
-      classes={config.habitatRestore.layers}
-    />
-  );
+  const sketchRows = flattenSketchAllClass(data.byClass, LAYERS);
+  return <SketchClassTable rows={sketchRows} classes={LAYERS} />;
 };
 
 const LoadingSkeleton = () => (

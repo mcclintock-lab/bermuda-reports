@@ -24,8 +24,8 @@ export interface ClassTableProps {
   percText?: string;
   rows: ClassMetric[] | ClassMetricSketch[];
   classes: Array<{
-    filename: string;
-    baseFilename: string;
+    baseFilename?: string;
+    name?: string;
     display: string;
     layerId: string;
     goalPerc?: number;
@@ -70,7 +70,10 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(classes, (curClass) => curClass.baseFilename);
+  const classesByName = keyBy(
+    classes,
+    (curClass) => curClass?.baseFilename || curClass?.name || "placeholder"
+  );
   const columns: Column<ClassMetric>[] = [
     {
       Header: titleText,

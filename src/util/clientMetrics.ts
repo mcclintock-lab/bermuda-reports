@@ -4,7 +4,20 @@ import {
   GroupMetricSketchAgg,
   SketchMetric,
   ClassMetricsSketch,
+  ClassConfig,
 } from "./types";
+
+/**
+ * Sort function to sort ClassConfig alphabetically by display name
+ * @param a
+ * @param b
+ * @returns
+ */
+const classSortAlphaDisplay = (a: ClassConfig, b: ClassConfig) => {
+  const aName = a.display;
+  const bName = b.display;
+  return aName.localeCompare(bName);
+};
 
 /**
  * Flattens group metrics into an array of objects, one for each group.
@@ -51,12 +64,7 @@ export const flattenGroup = (
 export const flattenGroupSketch = (
   groupMetrics: GroupMetricsSketch,
   totalValue: number,
-  classes: Array<{
-    filename: string;
-    baseFilename: string;
-    display: string;
-    layerId: string;
-  }>
+  classes: ClassConfig[]
 ): GroupMetricSketchAgg[] => {
   // For each group
   let sketchRows: GroupMetricSketchAgg[] = [];
@@ -71,9 +79,11 @@ export const flattenGroupSketch = (
     sketchesInGroup.forEach((sketchInGroup) => {
       // Build up agg percValue for each class
       const classAgg = classes.reduce<Record<string, number>>(
-        (classAggSoFar, lyr) => {
+        (classAggSoFar, curClass) => {
+          const curClassName =
+            curClass.baseFilename || curClass.name || "unknown";
           const groupSketchMetrics = classMetrics[
-            lyr.baseFilename
+            curClassName
           ].sketchMetrics.reduce<Record<string, SketchMetric>>(
             (soFar, sm) => ({ ...soFar, [sm.id]: sm }),
             {}
@@ -82,7 +92,7 @@ export const flattenGroupSketch = (
             ...classAggSoFar,
             value:
               classAggSoFar.value + groupSketchMetrics[sketchInGroup.id].value,
-            [lyr.baseFilename]: groupSketchMetrics[sketchInGroup.id].percValue,
+            [curClassName]: groupSketchMetrics[sketchInGroup.id].percValue,
           };
         },
         { value: 0 }
@@ -109,12 +119,7 @@ export const flattenGroupSketch = (
  */
 export const flattenClassSketch = (
   classMetrics: ClassMetricsSketch,
-  classes: Array<{
-    filename: string;
-    baseFilename: string;
-    display: string;
-    layerId: string;
-  }>
+  classes: ClassConfig[]
 ) => {
   // Inspect first class to get list of sketches
   const sketches = Object.values(classMetrics)[0].sketchMetrics.map((sm) => ({
@@ -126,12 +131,10 @@ export const flattenClassSketch = (
   sketches.forEach((curSketch) => {
     classes.forEach((curClass) => {
       // sketchMetrics keyBy id.  Avoid importing keyBy from gp package for client use
-      const sketchMetricsById = classMetrics[
-        curClass.baseFilename
-      ].sketchMetrics.reduce<Record<string, SketchMetric>>(
-        (soFar, sm) => ({ ...soFar, [sm.id]: sm }),
-        {}
-      );
+      const curClassName = curClass.baseFilename || curClass.name || "unknown";
+      const sketchMetricsById = classMetrics[curClassName].sketchMetrics.reduce<
+        Record<string, SketchMetric>
+      >((soFar, sm) => ({ ...soFar, [sm.id]: sm }), {});
       const curMetric = sketchMetricsById[curSketch.id];
       sketchRows.push({
         sketchId: curMetric.id,
@@ -152,12 +155,9 @@ export const flattenClassSketch = (
  */
 export const flattenSketchAllClass = (
   classMetrics: ClassMetricsSketch,
-  classes: Array<{
-    filename: string;
-    baseFilename: string;
-    display: string;
-    layerId: string;
-  }>
+  classes: ClassConfig[],
+  /** function to sort class configs using Array.sort, defaults to alphabetical by display name */
+  sortFn?: (a: ClassConfig, b: ClassConfig) => number
 ) => {
   // Inspect first class to get list of sketches
   const sketches = Object.values(classMetrics)[0].sketchMetrics.map((sm) => ({
@@ -167,11 +167,14 @@ export const flattenSketchAllClass = (
 
   let sketchRows: Record<string, string | number>[] = [];
   sketches.forEach((curSketch) => {
-    const classMetricAgg = classes.reduce<Record<string, number>>(
-      (aggSoFar, curClass) => {
+    const classMetricAgg = classes
+      .sort(sortFn || classSortAlphaDisplay)
+      .reduce<Record<string, number>>((aggSoFar, curClass) => {
         // sketchMetrics keyBy id.  Avoid importing keyBy from gp package for client use
+        const curClassName =
+          curClass.baseFilename || curClass.name || "unknown";
         const sketchMetricsById = classMetrics[
-          curClass.baseFilename
+          curClassName
         ].sketchMetrics.reduce<Record<string, SketchMetric>>(
           (soFar, sm) => ({ ...soFar, [sm.id]: sm }),
           {}
@@ -179,12 +182,10 @@ export const flattenSketchAllClass = (
         return {
           ...aggSoFar,
           ...{
-            [curClass.baseFilename]: sketchMetricsById[curSketch.id].percValue,
+            [curClassName]: sketchMetricsById[curSketch.id].percValue,
           },
         };
-      },
-      {}
-    );
+      }, {});
     sketchRows.push({
       sketchId: curSketch.id,
       sketchName: curSketch.name,

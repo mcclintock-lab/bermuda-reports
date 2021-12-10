@@ -2,6 +2,17 @@
 // It can related to a class of data or a sketch
 //
 
+export interface ClassConfig {
+  /** filename of dataset, sans extension.  Also used as unique name for class in some cases, ToDo stop using this way */
+  baseFilename?: string;
+  /** Unique name for class.  ToDo: consolidate on this for unique name */
+  name?: string;
+  /** Name of class suitable for user display */
+  display: string;
+  /** ID of map layer associated with this class, used for ToggleLayer */
+  layerId: string;
+}
+
 /** Properties for representing metric value and perc value, such as area or sum */
 export interface ValueMetric {
   /** The raw metric value, the heart of it all */

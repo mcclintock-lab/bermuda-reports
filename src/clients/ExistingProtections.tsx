@@ -2,50 +2,21 @@ import React from "react";
 import {
   ResultsCard,
   Skeleton,
-  Column,
-  Table,
-  LayerToggle,
-  percentWithEdge,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client";
-import config, {
-  OverlapResult,
-  OverlapMetric,
-} from "../functions/existingProtectionsConfig";
+import { Collapse } from "../components/Collapse";
+import { ClassTable } from "../components/ClassTable";
+import SketchClassTable from "../components/SketchClassTable";
+import config from "../functions/existingProtectionsConfig";
+import { ExistingProtectionResults } from "../_config";
+import { flattenSketchAllClass } from "../util/clientMetrics";
 // Import the results type definition from your functions to type-check your
 // component render functions
 
+const CONFIG = config.existingProtection;
+
 const ExistingProtections = () => {
-  const columns: Column<OverlapMetric>[] = [
-    {
-      Header: "Area Type",
-      accessor: (row) =>
-        config.legislatedLayers.find((layer) => layer.name === row.class)
-          ?.display,
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "center" },
-      accessor: (row) =>
-        percentWithEdge(row.sketchArea / row.totalArea, {
-          lower: 0.01,
-          digits: 1,
-        }),
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={
-            config.legislatedLayers.find((layer) => layer.name === row.class)
-              ?.layerId || ""
-          }
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "20%" },
-    },
-  ];
+  const [{ isCollection }] = useSketchProperties();
 
   return (
     <>
@@ -54,7 +25,8 @@ const ExistingProtections = () => {
         functionName="existingProtections"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: OverlapResult) => {
+        {(data: ExistingProtectionResults) => {
+          const sketchRows = flattenSketchAllClass(data.byClass, CONFIG.layers);
           return (
             <>
               <p>
@@ -62,12 +34,18 @@ const ExistingProtections = () => {
                 protected areas. This report summarizes the percentage of
                 currently legislated areas that overlap with this plan.
               </p>
-              <Table
-                columns={columns}
-                data={data.areaByClass.sort((a, b) =>
-                  a.class.localeCompare(b.class)
+              <ClassTable
+                titleText="Area Type"
+                rows={Object.values(data.byClass).sort((a, b) =>
+                  a.name.localeCompare(b.name)
                 )}
+                classes={CONFIG.layers}
               />
+              {isCollection && (
+                <Collapse title="Show by MPA">
+                  <SketchClassTable rows={sketchRows} classes={CONFIG.layers} />
+                </Collapse>
+              )}
             </>
           );
         }}

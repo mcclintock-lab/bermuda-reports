@@ -41,8 +41,8 @@ const SmallTableStyled = styled.div`
 export interface SketchClassTableProps {
   rows: Record<string, string | number>[];
   classes: Array<{
-    filename: string;
-    baseFilename: string;
+    baseFilename?: string;
+    name?: string;
     display: string;
     layerId: string;
   }>;
@@ -56,7 +56,9 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => {
-        return percentWithEdge(row[curClass.baseFilename] as number);
+        return percentWithEdge(
+          row[curClass.baseFilename || curClass.name || "uknown"] as number
+        );
       },
     })
   );

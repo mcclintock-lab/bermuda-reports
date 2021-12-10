@@ -1,96 +1,469 @@
 {
-  "totalArea": 1262386534.014525,
-  "areaByClass": [
-    {
-      "class": "Ferry Route",
-      "totalArea": 6531869.480055,
-      "percArea": 0.005174,
-      "sketchArea": 222238.017619
+  "byClass": {
+    "Ferry Route": {
+      "name": "Ferry Route",
+      "value": 222238.01761865205,
+      "percValue": 0.034023646415048944,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 222238.01761865205,
+          "percValue": 0.034023646415048944
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 222238.01761865205,
+          "percValue": 0.034023646415048944
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Shipping Lane",
-      "totalArea": 6404448.404036,
-      "percArea": 0.005073,
-      "sketchArea": 1316467.358913
+    "Shipping Lane": {
+      "name": "Shipping Lane",
+      "value": 1316467.3589130547,
+      "percValue": 0.20555515102339086,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 1125971.148601246,
+          "percValue": 0.17581079236921357
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 1316467.3589130547,
+          "percValue": 0.20555515102339086
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 1316467.3589130547,
+          "percValue": 0.20555515102339086
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 1097218.3029083905,
+          "percValue": 0.1713212807237239
+        }
+      ]
     },
-    {
-      "class": "CableZone",
-      "totalArea": 724129832.714296,
-      "percArea": 0.57362,
-      "sketchArea": 0
+    "CableZone": {
+      "name": "CableZone",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "SpearfishEx",
-      "totalArea": 190898381.115183,
-      "percArea": 0.15122,
-      "sketchArea": 325576.474043
+    "SpearfishEx": {
+      "name": "SpearfishEx",
+      "value": 325576.4740433601,
+      "percValue": 0.001705496254821125,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 325576.4740433601,
+          "percValue": 0.001705496254821125
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 249309.04929717907,
+          "percValue": 0.001305977807882786
+        }
+      ]
     },
-    {
-      "class": "SeasonalPA",
-      "totalArea": 86861956.526907,
-      "percArea": 0.068808,
-      "sketchArea": 5062168.350022
+    "SeasonalPA": {
+      "name": "SeasonalPA",
+      "value": 5062168.350021749,
+      "percValue": 0.0582783136879225,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 1618344.7277224245,
+          "percValue": 0.018631225825786253
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 5032581.716598495,
+          "percValue": 0.05793769698290862
+        }
+      ]
     },
-    {
-      "class": "MPAExtendedClosure",
-      "totalArea": 16223333.484141,
-      "percArea": 0.012851,
-      "sketchArea": 4522998.025696
+    "MPAExtendedClosure": {
+      "name": "MPAExtendedClosure",
+      "value": 4522998.025696037,
+      "percValue": 0.2787958485916293,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 1617421.6346201084,
+          "percValue": 0.09969724386182556
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 4493411.392273336,
+          "percValue": 0.2769721399529809
+        }
+      ]
     },
-    {
-      "class": "Wreck",
-      "totalArea": 8346169.285616,
-      "percArea": 0.006611,
-      "sketchArea": 1826496.064308
+    "Wreck": {
+      "name": "Wreck",
+      "value": 1826496.0643083546,
+      "percValue": 0.2188424415804943,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 1265041.705377901,
+          "percValue": 0.1515715368436263
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 1284719.2658566604,
+          "percValue": 0.1539292125395497
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 1284719.2658566604,
+          "percValue": 0.1539292125395497
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 1826416.763083077,
+          "percValue": 0.2188329400687751
+        }
+      ]
     },
-    {
-      "class": "Reef",
-      "totalArea": 7244658.235392,
-      "percArea": 0.005739,
-      "sketchArea": 4000431.713844
+    "Reef": {
+      "name": "Reef",
+      "value": 4000431.713843762,
+      "percValue": 0.5521905359593785,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 4000431.713843762,
+          "percValue": 0.5521905359593785
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 3717006.434507977,
+          "percValue": 0.5130685691078338
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 3717006.434507977,
+          "percValue": 0.5130685691078338
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 4000431.713843762,
+          "percValue": 0.5521905359593785
+        }
+      ]
     },
-    {
-      "class": "Prohibited",
-      "totalArea": 415252.02291,
-      "percArea": 0.000329,
-      "sketchArea": 0
+    "Prohibited": {
+      "name": "Prohibited",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoNetFish",
-      "totalArea": 478936.71521,
-      "percArea": 0.000379,
-      "sketchArea": 0
+    "NoNetFish": {
+      "name": "NoNetFish",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoLobsterFish",
-      "totalArea": 81967128.629064,
-      "percArea": 0.06493,
-      "sketchArea": 0
+    "NoLobsterFish": {
+      "name": "NoLobsterFish",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Amenity Park",
-      "totalArea": 893250.188421,
-      "percArea": 0.000708,
-      "sketchArea": 0
+    "Amenity Park": {
+      "name": "Amenity Park",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Recreational Park",
-      "totalArea": 45354.238667,
-      "percArea": 0.000036,
-      "sketchArea": 0
+    "Recreational Park": {
+      "name": "Recreational Park",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Nature Reserve",
-      "totalArea": 483071.367423,
-      "percArea": 0.000383,
-      "sketchArea": 0
+    "Nature Reserve": {
+      "name": "Nature Reserve",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "CoralPreserve",
-      "totalArea": 131462891.607205,
-      "percArea": 0.104138,
-      "sketchArea": 68897637.323795
+    "CoralPreserve": {
+      "name": "CoralPreserve",
+      "value": 68897638.60184914,
+      "percValue": 0.5240843081993587,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 62586829.630286574,
+          "percValue": 0.47607981891413514
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 68897638.60184914,
+          "percValue": 0.5240843081993587
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 68897638.60184914,
+          "percValue": 0.5240843081993587
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 62406819.76383543,
+          "percValue": 0.4747105361891743
+        }
+      ]
     }
-  ],
-  "areaUnit": "square meters"
+  }
 }

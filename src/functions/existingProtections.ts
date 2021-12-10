@@ -2,49 +2,73 @@ import {
   Sketch,
   SketchCollection,
   GeoprocessingHandler,
+  Feature,
   Polygon,
-  isFeatureCollection,
   fgbFetchAll,
-  areaOverlapByClassVector,
-  roundDecimal,
+  toSketchArray,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
+import { overlapStatsVector } from "../util/sumOverlapVector";
+import { ClassMetricsSketch } from "../util/types";
 import config, {
-  OverlapFeature,
-  OverlapResult,
-} from "./existingProtectionsConfig";
-import legislatedAreaStats from "../../data/precalc/legislated.json";
+  ExistingProtectionBaseResults,
+  ExistingProtectionResults,
+} from "../_config";
+import legislatedAreaTotals from "../../data/precalc/existingProtectionTotals.json";
 
-// Defined at module level for potential caching/reuse by serverless process
-let featuresToIntersect: OverlapFeature[] = [];
+// Multi-class vector dataset
+export type ExistingProtectionProperties = {
+  ["Name"]: string;
+  ["Type"]: string;
+};
+export type ExistingProtectionFeature = Feature<
+  Polygon,
+  ExistingProtectionProperties
+>;
+
+const precalcTotals = legislatedAreaTotals as ExistingProtectionBaseResults;
+const CONFIG = config.existingProtection;
+
+// use areaStats - like protection.ts?
 
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<OverlapResult> {
-  const sketchColl = isFeatureCollection(sketch)
-    ? sketch
-    : featureCollection([sketch]);
+): Promise<ExistingProtectionResults> {
+  const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
-
-  featuresToIntersect = await fgbFetchAll<OverlapFeature>(
-    `${config.dataBucketUrl}${config.filename}`,
+  const features = await fgbFetchAll<ExistingProtectionFeature>(
+    `${config.dataBucketUrl}${CONFIG.filename}`,
     box
   );
 
-  const areaByClass = await areaOverlapByClassVector(
-    sketchColl,
-    featuresToIntersect,
-    config.classProperty
-  );
+  const classMetrics = (
+    await Promise.all(
+      CONFIG.layers.map(async (curClass) => {
+        // Filter out single class, exclude null geometry too
+        const classFeatures = features.filter(
+          (feat: any) =>
+            feat.geometry &&
+            feat.properties[config.existingProtection.classProperty] ===
+              curClass.name,
+          []
+        );
+        return overlapStatsVector(
+          classFeatures,
+          curClass.name,
+          sketches,
+          precalcTotals.byClass[curClass.name].value
+        );
+      })
+    )
+  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
+    return {
+      ...metricsSoFar,
+      [metric.name]: metric,
+    };
+  }, {});
 
   return {
-    ...legislatedAreaStats,
-    areaByClass: legislatedAreaStats.areaByClass.map((ac) => ({
-      ...ac,
-      sketchArea: roundDecimal(areaByClass[ac.class] || 0, 6),
-    })),
-    areaUnit: "square meters",
+    byClass: classMetrics,
   };
 }
 
