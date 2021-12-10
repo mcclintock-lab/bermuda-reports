@@ -381,8 +381,12 @@ export const reefIndex = {
 
 //// RENEWABLE ENERGY ////
 
-export interface RenewableResults {
+export interface RenewableBaseResults {
   renewable: ClassMetrics;
+}
+
+export interface RenewableResults {
+  renewable: ClassMetricsSketch;
 }
 
 export const renewableLayers = [

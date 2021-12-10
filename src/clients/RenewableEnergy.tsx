@@ -1,12 +1,19 @@
 import React from "react";
-import { ResultsCard, Skeleton } from "@seasketch/geoprocessing/client";
+import {
+  ResultsCard,
+  Skeleton,
+  useSketchProperties,
+} from "@seasketch/geoprocessing/client";
 import config, { RenewableResults } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
+import SketchClassTable from "../components/SketchClassTable";
+import { flattenSketchAllClass } from "../util/clientMetrics";
 
-const CLASSES = config.renewable.layers;
+const CONFIG = config.renewable;
 
 const SpeciesProtection = () => {
+  const [{ isCollection }] = useSketchProperties();
   return (
     <>
       <ResultsCard
@@ -15,6 +22,10 @@ const SpeciesProtection = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: RenewableResults) => {
+          const sketchRows = flattenSketchAllClass(
+            data.renewable,
+            CONFIG.layers
+          );
           return (
             <>
               <p>
@@ -46,8 +57,13 @@ const SpeciesProtection = () => {
               <ClassTable
                 titleText="Type"
                 rows={Object.values(data.renewable)}
-                classes={CLASSES}
+                classes={CONFIG.layers}
               />
+              {isCollection && (
+                <Collapse title="Show by MPA">
+                  <SketchClassTable rows={sketchRows} classes={CONFIG.layers} />
+                </Collapse>
+              )}
             </>
           );
         }}
