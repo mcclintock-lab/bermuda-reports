@@ -4,79 +4,170 @@
       "name": "Bays and Coast",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Madracis Reef": {
       "name": "Madracis Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
       "value": 261,
       "percValue": 0.006218283182045601,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 261,
+          "percValue": 0.006218283182045601
+        }
+      ]
     },
     "Castle Harbour Madracis": {
       "name": "Castle Harbour Madracis",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Rim Reef": {
       "name": "Rim Reef",
       "value": 64,
       "percValue": 0.004272077965422869,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 64,
+          "percValue": 0.004272077965422869
+        }
+      ]
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
       "value": 1813,
       "percValue": 0.0477255975571233,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 1813,
+          "percValue": 0.0477255975571233
+        }
+      ]
     },
     "Fore Reef": {
       "name": "Fore Reef",
       "value": 127,
       "percValue": 0.004234180169367207,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 127,
+          "percValue": 0.004234180169367207
+        }
+      ]
     },
     "Mesophotic": {
       "name": "Mesophotic",
       "value": 670,
       "percValue": 0.017665981121130624,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 670,
+          "percValue": 0.017665981121130624
+        }
+      ]
     },
     "Rariphotic": {
       "name": "Rariphotic",
       "value": 272,
       "percValue": 0.010677972755466572,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 272,
+          "percValue": 0.010677972755466572
+        }
+      ]
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
       "value": 1469,
       "percValue": 0.017213297242825838,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 1469,
+          "percValue": 0.017213297242825838
+        }
+      ]
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
       "value": 9,
       "percValue": 0.000051482701812191104,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615bbc28aac8c8285d50db2f",
+          "name": "mpa-high",
+          "value": 9,
+          "percValue": 0.000051482701812191104
+        }
+      ]
     }
   },
   "offshore": {
