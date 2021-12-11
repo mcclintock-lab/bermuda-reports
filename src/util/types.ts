@@ -10,7 +10,8 @@ export interface ClassConfig {
   /** Name of class suitable for user display */
   display: string;
   /** ID of map layer associated with this class, used for ToggleLayer */
-  layerId: string;
+  layerId?: string;
+  goalPerc?: number;
 }
 
 /** Properties for representing metric value and perc value, such as area or sum */

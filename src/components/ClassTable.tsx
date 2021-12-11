@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { GreenPill } from "../components/Pill";
-import { ClassMetric, ClassMetricSketch } from "../util/types";
+import { ClassConfig, ClassMetric, ClassMetricSketch } from "../util/types";
 
 const TableStyled = styled.div`
   .styled {
@@ -23,13 +23,7 @@ export interface ClassTableProps {
   titleText: string;
   percText?: string;
   rows: ClassMetric[] | ClassMetricSketch[];
-  classes: Array<{
-    baseFilename?: string;
-    name?: string;
-    display: string;
-    layerId: string;
-    goalPerc?: number;
-  }>;
+  classes: ClassConfig[];
   showGoal?: boolean;
   options?: {
     classColWidth?: string;
@@ -97,13 +91,18 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
     },
     {
       Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={classesByName[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
+      accessor: (row) => {
+        const layerId = classesByName[row.name].layerId;
+        return layerId ? (
+          <LayerToggle
+            simple
+            layerId={layerId}
+            style={{ marginTop: 0, marginLeft: 15 }}
+          />
+        ) : (
+          <></>
+        );
+      },
       style: { width: colWidths.showMapWidth },
     },
   ];

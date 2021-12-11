@@ -10,6 +10,7 @@ import { flattenSketchAllClass } from "../util/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
 import { CategoricalClassTable } from "../components/CategoricalClassTable";
+import { ClassMetricSketch } from "../util/types";
 
 const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -40,10 +41,19 @@ const HabitatProtection = () => {
               <CategoricalClassTable
                 titleText="Nearshore/Platform"
                 layerId={config.nearshore.layerId}
-                rows={Object.values(data.nearshore)}
+                rows={Object.values(
+                  data.nearshore
+                ).sort((a: ClassMetricSketch, b: ClassMetricSketch) =>
+                  a.name.localeCompare(b.name)
+                )}
                 classes={config.nearshore.layers}
                 showGoal
               />
+              {isCollection && (
+                <Collapse title="Show Nearshore by MPA">
+                  {genNearshoreSketchTable(data)}
+                </Collapse>
+              )}
               <ClassTable
                 titleText="Offshore"
                 rows={Object.values(data.offshore)}
@@ -52,7 +62,7 @@ const HabitatProtection = () => {
               />
               {isCollection && (
                 <Collapse title="Show Offshore by MPA">
-                  {genSketchTable(data)}
+                  {genOffshoreSketchTable(data)}
                 </Collapse>
               )}
             </>
@@ -63,7 +73,18 @@ const HabitatProtection = () => {
   );
 };
 
-const genSketchTable = (data: HabitatResults) => {
+const genNearshoreSketchTable = (data: HabitatResults) => {
+  // Build agg sketch group objects with percValue for each class
+  const sketchRows = flattenSketchAllClass(
+    data.nearshore,
+    config.nearshore.layers
+  );
+  return (
+    <SketchClassTable rows={sketchRows} classes={config.nearshore.layers} />
+  );
+};
+
+const genOffshoreSketchTable = (data: HabitatResults) => {
   // Build agg sketch group objects with percValue for each class
   const sketchRows = flattenSketchAllClass(
     data.offshore,

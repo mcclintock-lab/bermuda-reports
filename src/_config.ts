@@ -137,7 +137,7 @@ export const existingProtection = {
 //// HABITAT ////
 
 export interface HabitatResults {
-  nearshore: ClassMetrics;
+  nearshore: ClassMetricsSketch;
   offshore: ClassMetricsSketch;
 }
 
@@ -145,68 +145,81 @@ export interface HabitatResults {
 const nearshoreBaseFilename = "Habitat Zones1";
 const nearshoreLayers = [
   {
-    class_id: "1",
+    classId: "1",
     name: "Bays and Coast",
+    display: "Bays and Coast",
     goalPerc: 0.2,
   },
   {
-    class_id: "2",
+    classId: "2",
     name: "Madracis Reef",
+    display: "Madracis Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "3",
+    classId: "3",
     name: "Montastraea Reef",
+    display: "Montastraea Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "4",
+    classId: "4",
     name: "Diploria Porites Reef",
+    display: "Diploria Porites Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "5",
+    classId: "5",
     name: "Castle Harbour Madracis",
+    display: "Castle Harbour Madracis",
     goalPerc: 0.2,
   },
   {
-    class_id: "6",
+    classId: "6",
     name: "Algal Vermetid Reef",
+    display: "Algal Vermetid Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "7",
+    classId: "7",
     name: "Rim Reef",
+    display: "Rim Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "8",
+    classId: "8",
     name: "Main Terrace Reef",
+    display: "Main Terrace Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "9",
+    classId: "9",
     name: "Fore Reef",
+    display: "Fore Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "10",
+    classId: "10",
     name: "Mesophotic",
+    display: "Mesophotic",
     goalPerc: 0.2,
   },
   {
-    class_id: "11",
+    classId: "11",
     name: "Rariphotic",
+    display: "Rariphotic",
     goalPerc: 0.2,
   },
   {
-    class_id: "12",
+    classId: "12",
     name: "Mesopelagic",
+    display: "Mesopelagic",
     goalPerc: 0.2,
   },
   {
-    class_id: "13",
+    classId: "13",
     name: "Bathypelagic",
+    display: "Bathypelagic",
     goalPerc: 0.2,
   },
 ];
@@ -217,7 +230,7 @@ export const nearshore = {
   layerId: "614df361c33508c127015a1c",
   layers: nearshoreLayers,
   classIdToName: nearshoreLayers.reduce<Record<string, string>>(
-    (acc, lyr) => ({ ...acc, [lyr.class_id]: lyr.name }),
+    (acc, lyr) => ({ ...acc, [lyr.classId]: lyr.name }),
     {}
   ),
 };

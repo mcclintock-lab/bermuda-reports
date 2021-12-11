@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { GreenPill } from "./Pill";
-import { ClassMetric, ClassMetricSketch } from "../util/types";
+import { ClassConfig, ClassMetric, ClassMetricSketch } from "../util/types";
 
 const TableStyled = styled.div`
   .styled {
@@ -23,11 +23,7 @@ export interface CategoricalClassTableProps {
   titleText: string;
   layerId: string;
   rows: ClassMetric[] | ClassMetricSketch[];
-  classes: Array<{
-    class_id: string;
-    name: string;
-    goalPerc?: number;
-  }>;
+  classes: ClassConfig[];
   showGoal: boolean;
   options?: {
     classColWidth?: string;
@@ -68,7 +64,10 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(classes, (curClass) => curClass.name);
+  const classesByName = keyBy(
+    classes,
+    (curClass) => curClass.name || "unknown"
+  );
   const columns: Column<ClassMetric>[] = [
     {
       Header: titleText,

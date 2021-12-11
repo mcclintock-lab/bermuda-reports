@@ -51,17 +51,17 @@ export async function countByClass(
   const ids = Object.keys(config.classIdToName);
   // Initialize the total counts
   let countByClass = ids.reduce<Record<string, number>>(
-    (acc, class_id) => ({
+    (acc, classId) => ({
       ...acc,
-      [class_id]: 0,
+      [classId]: 0,
     }),
     {}
   );
 
   // Migrate the total counts, skip nodata
-  Object.keys(histogram).forEach((class_id) => {
-    if (ids.includes(class_id)) {
-      countByClass[class_id] += histogram[class_id];
+  Object.keys(histogram).forEach((classId) => {
+    if (ids.includes(classId)) {
+      countByClass[classId] += histogram[classId];
     }
   });
 

@@ -5,6 +5,7 @@ import {
   percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
+import { ClassConfig } from "../util/types";
 
 const SmallTableStyled = styled.div`
   & {
@@ -40,12 +41,7 @@ const SmallTableStyled = styled.div`
 
 export interface SketchClassTableProps {
   rows: Record<string, string | number>[];
-  classes: Array<{
-    baseFilename?: string;
-    name?: string;
-    display: string;
-    layerId: string;
-  }>;
+  classes: ClassConfig[];
 }
 
 const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
