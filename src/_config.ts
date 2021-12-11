@@ -35,79 +35,191 @@ export const objectives = {
 
 //// SIZE ////
 
+//// EXISTING PROTECTIONS ////
+
+export interface ExistingProtectionBaseResults {
+  byClass: ClassMetrics;
+}
+
+export interface ExistingProtectionResults {
+  byClass: ClassMetricsSketch;
+}
+
+// Single vector with multiple classes
+// Individual map layers for viz
+const existingProtectionBaseFilename = "existingProtections";
+export const existingProtectionLayers = [
+  {
+    name: "Ferry Route",
+    display: "Ferry Routes",
+    layerId: "5dc07170cae3e4074e651716",
+  },
+  {
+    name: "Shipping Lane",
+    display: "Shipping Lanes",
+    layerId: "5dc07170cae3e4074e65172e",
+  },
+  {
+    name: "CableZone",
+    display: "Cable Zones",
+    layerId: "5e6acf64bef390124c2b4952",
+  },
+  {
+    name: "SpearfishEx",
+    display: "Spearfish Exclusion Zones",
+    layerId: "615b214142b883e66c1a6cb3",
+  },
+  {
+    name: "SeasonalPA",
+    display: "Seasonally Protected Areas",
+    layerId: "615b207f42b883e66c1a6c0d",
+  },
+  {
+    name: "MPAExtendedClosure",
+    display: "MPA Extended Closures",
+    layerId: "61538b8cd5974aea32a4a5e6",
+  },
+  {
+    name: "Wreck",
+    display: "Wrecks",
+    layerId: "5dc07170cae3e4074e651722",
+  },
+  {
+    name: "Reef",
+    display: "Protected Dive Sites",
+    layerId: "615b204f42b883e66c1a6bf3",
+  },
+  {
+    name: "Prohibited",
+    display: "Prohibited Marine Board Notice Areas",
+    layerId: "61538b8cd5974aea32a4a5e8",
+  },
+  {
+    name: "NoNetFish",
+    display: "No Net Fishing Areas",
+    layerId: "615b211242b883e66c1a6c99",
+  },
+  {
+    name: "NoLobsterFish",
+    display: "No Lobster Fishing Areas",
+    layerId: "615b216242b883e66c1a6ccb",
+  },
+  {
+    name: "Amenity Park",
+    display: "Amenity Parks",
+    layerId: "615b209a42b883e66c1a6c20",
+  },
+  {
+    name: "Recreational Park",
+    display: "Recreational Parks",
+    layerId: "615b209a42b883e66c1a6c20",
+  },
+  {
+    name: "Nature Reserve",
+    display: "Nature Reserves",
+    layerId: "615b209a42b883e66c1a6c20",
+  },
+  {
+    name: "CoralPreserve",
+    display: "Coral Preserves",
+    layerId: "615b202642b883e66c1a6b8b",
+  },
+];
+
+export const existingProtection = {
+  baseFilename: existingProtectionBaseFilename,
+  filename: `${existingProtectionBaseFilename}${fgbFileSuffix}`,
+  layers: existingProtectionLayers,
+  nameProperty: "Name",
+  classProperty: "Type",
+};
+
 //// HABITAT ////
 
 export interface HabitatResults {
-  nearshore: ClassMetrics;
-  offshore: ClassMetrics;
+  nearshore: ClassMetricsSketch;
+  offshore: ClassMetricsSketch;
 }
 
+// Categorical raster
 const nearshoreBaseFilename = "Habitat Zones1";
-
 const nearshoreLayers = [
   {
-    class_id: "1",
+    classId: "1",
     name: "Bays and Coast",
+    display: "Bays and Coast",
     goalPerc: 0.2,
   },
   {
-    class_id: "2",
+    classId: "2",
     name: "Madracis Reef",
+    display: "Madracis Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "3",
+    classId: "3",
     name: "Montastraea Reef",
+    display: "Montastraea Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "4",
+    classId: "4",
     name: "Diploria Porites Reef",
+    display: "Diploria Porites Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "5",
+    classId: "5",
     name: "Castle Harbour Madracis",
+    display: "Castle Harbour Madracis",
     goalPerc: 0.2,
   },
   {
-    class_id: "6",
+    classId: "6",
     name: "Algal Vermetid Reef",
+    display: "Algal Vermetid Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "7",
+    classId: "7",
     name: "Rim Reef",
+    display: "Rim Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "8",
+    classId: "8",
     name: "Main Terrace Reef",
+    display: "Main Terrace Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "9",
+    classId: "9",
     name: "Fore Reef",
+    display: "Fore Reef",
     goalPerc: 0.2,
   },
   {
-    class_id: "10",
+    classId: "10",
     name: "Mesophotic",
+    display: "Mesophotic",
     goalPerc: 0.2,
   },
   {
-    class_id: "11",
+    classId: "11",
     name: "Rariphotic",
+    display: "Rariphotic",
     goalPerc: 0.2,
   },
   {
-    class_id: "12",
+    classId: "12",
     name: "Mesopelagic",
+    display: "Mesopelagic",
     goalPerc: 0.2,
   },
   {
-    class_id: "13",
+    classId: "13",
     name: "Bathypelagic",
+    display: "Bathypelagic",
     goalPerc: 0.2,
   },
 ];
@@ -118,7 +230,7 @@ export const nearshore = {
   layerId: "614df361c33508c127015a1c",
   layers: nearshoreLayers,
   classIdToName: nearshoreLayers.reduce<Record<string, string>>(
-    (acc, lyr) => ({ ...acc, [lyr.class_id]: lyr.name }),
+    (acc, lyr) => ({ ...acc, [lyr.classId]: lyr.name }),
     {}
   ),
 };
@@ -205,7 +317,7 @@ export const offshore = {
 //// REEF INDEX ////
 
 export interface ReefIndexResults {
-  reefIndex: ClassMetrics;
+  reefIndex: ClassMetricsSketch;
 }
 
 export const reefIndexLayers = [
@@ -282,8 +394,12 @@ export const reefIndex = {
 
 //// RENEWABLE ENERGY ////
 
-export interface RenewableResults {
+export interface RenewableBaseResults {
   renewable: ClassMetrics;
+}
+
+export interface RenewableResults {
+  renewable: ClassMetricsSketch;
 }
 
 export const renewableLayers = [
@@ -322,11 +438,11 @@ export const renewable = {
 //// HABITAT RESTORATION ////
 
 // base for precalc
-export interface HabitatRestoreResults {
+export interface HabitatRestoreBaseResults {
   byClass: ClassMetrics;
 }
 
-export interface HabitatRestoreLevelResults extends HabitatRestoreResults {
+export interface HabitatRestoreResults extends HabitatRestoreBaseResults {
   byClass: ClassMetricsSketch;
 }
 
@@ -389,7 +505,7 @@ export const habitatNursery = {
 //// OCEAN USE ////
 
 export interface OceanUseResults {
-  byClass: ClassMetrics;
+  byClass: ClassMetricsSketch;
 }
 
 const oceanUseLayers = [
@@ -515,6 +631,7 @@ export default {
   localDataUrl,
   dataBucketUrl,
   objectives,
+  existingProtection,
   nearshore,
   offshore,
   reefIndex,

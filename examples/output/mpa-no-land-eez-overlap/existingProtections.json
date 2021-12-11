@@ -1,96 +1,199 @@
 {
-  "totalArea": 1262386534.014525,
-  "areaByClass": [
-    {
-      "class": "Ferry Route",
-      "totalArea": 6531869.480055,
-      "percArea": 0.005174,
-      "sketchArea": 0
+  "byClass": {
+    "Ferry Route": {
+      "name": "Ferry Route",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Shipping Lane",
-      "totalArea": 6404448.404036,
-      "percArea": 0.005073,
-      "sketchArea": 0
+    "Shipping Lane": {
+      "name": "Shipping Lane",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "CableZone",
-      "totalArea": 724129832.714296,
-      "percArea": 0.57362,
-      "sketchArea": 0
+    "CableZone": {
+      "name": "CableZone",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "SpearfishEx",
-      "totalArea": 190898381.115183,
-      "percArea": 0.15122,
-      "sketchArea": 956935.163832
+    "SpearfishEx": {
+      "name": "SpearfishEx",
+      "value": 956935.1638317418,
+      "percValue": 0.0050127987374306415,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 956935.1638317418,
+          "percValue": 0.0050127987374306415
+        }
+      ]
     },
-    {
-      "class": "SeasonalPA",
-      "totalArea": 86861956.526907,
-      "percArea": 0.068808,
-      "sketchArea": 0
+    "SeasonalPA": {
+      "name": "SeasonalPA",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "MPAExtendedClosure",
-      "totalArea": 16223333.484141,
-      "percArea": 0.012851,
-      "sketchArea": 0
+    "MPAExtendedClosure": {
+      "name": "MPAExtendedClosure",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Wreck",
-      "totalArea": 8346169.285616,
-      "percArea": 0.006611,
-      "sketchArea": 0
+    "Wreck": {
+      "name": "Wreck",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Reef",
-      "totalArea": 7244658.235392,
-      "percArea": 0.005739,
-      "sketchArea": 0
+    "Reef": {
+      "name": "Reef",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Prohibited",
-      "totalArea": 415252.02291,
-      "percArea": 0.000329,
-      "sketchArea": 0
+    "Prohibited": {
+      "name": "Prohibited",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoNetFish",
-      "totalArea": 478936.71521,
-      "percArea": 0.000379,
-      "sketchArea": 0
+    "NoNetFish": {
+      "name": "NoNetFish",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoLobsterFish",
-      "totalArea": 81967128.629064,
-      "percArea": 0.06493,
-      "sketchArea": 0
+    "NoLobsterFish": {
+      "name": "NoLobsterFish",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Amenity Park",
-      "totalArea": 893250.188421,
-      "percArea": 0.000708,
-      "sketchArea": 0
+    "Amenity Park": {
+      "name": "Amenity Park",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Recreational Park",
-      "totalArea": 45354.238667,
-      "percArea": 0.000036,
-      "sketchArea": 0
+    "Recreational Park": {
+      "name": "Recreational Park",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Nature Reserve",
-      "totalArea": 483071.367423,
-      "percArea": 0.000383,
-      "sketchArea": 0
+    "Nature Reserve": {
+      "name": "Nature Reserve",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "CoralPreserve",
-      "totalArea": 131462891.607205,
-      "percArea": 0.104138,
-      "sketchArea": 0
+    "CoralPreserve": {
+      "name": "CoralPreserve",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "615bbbe9aac8c8285d50db2d",
+          "name": "mpa-no-land-eez-overlap",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     }
-  ],
-  "areaUnit": "square meters"
+  }
 }

@@ -4,79 +4,248 @@
       "name": "Bays and Coast",
       "value": 11154,
       "percValue": 0.985509807386464,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 11154,
+          "percValue": 0.985509807386464
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Madracis Reef": {
       "name": "Madracis Reef",
       "value": 7786,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 7786,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
       "value": 30106,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 30106,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 19234,
+          "percValue": 0.6388759715671295
+        }
+      ]
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
       "value": 41977,
       "percValue": 1.000095299359112,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 41977,
+          "percValue": 1.000095299359112
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 22746,
+          "percValue": 0.5419198055893074
+        }
+      ]
     },
     "Castle Harbour Madracis": {
       "name": "Castle Harbour Madracis",
       "value": 781,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 781,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
       "value": 167,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 167,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 68,
+          "percValue": 0.40718562874251496
+        }
+      ]
     },
     "Rim Reef": {
       "name": "Rim Reef",
       "value": 14981,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 14981,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 12682,
+          "percValue": 0.8465389493358254
+        }
+      ]
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
       "value": 37988,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 37988,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 20675,
+          "percValue": 0.5442508160471727
+        }
+      ]
     },
     "Fore Reef": {
       "name": "Fore Reef",
       "value": 29994,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 29994,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 27426,
+          "percValue": 0.914382876575315
+        }
+      ]
     },
     "Mesophotic": {
       "name": "Mesophotic",
       "value": 37926,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 37926,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 28540,
+          "percValue": 0.7525180614881611
+        }
+      ]
     },
     "Rariphotic": {
       "name": "Rariphotic",
       "value": 25473,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 25473,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 20089,
+          "percValue": 0.7886389510462057
+        }
+      ]
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
       "value": 85341,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 85341,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 66215,
+          "percValue": 0.775887322623358
+        }
+      ]
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
       "value": 174816,
       "percValue": 1,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 174816,
+          "percValue": 1
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 150717,
+          "percValue": 0.8621464854475562
+        }
+      ]
     }
   },
   "offshore": {

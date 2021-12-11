@@ -1,0 +1,79 @@
+{
+  "byClass": {
+    "Ferry Route": {
+      "name": "Ferry Route",
+      "value": 6531869.4800553275,
+      "percValue": 0.005174223032372881
+    },
+    "Shipping Lane": {
+      "name": "Shipping Lane",
+      "value": 6404448.404035611,
+      "percValue": 0.005073286375820863
+    },
+    "CableZone": {
+      "name": "CableZone",
+      "value": 724129832.7142962,
+      "percValue": 0.5736197378559523
+    },
+    "SpearfishEx": {
+      "name": "SpearfishEx",
+      "value": 190898381.11518282,
+      "percValue": 0.1512202292812055
+    },
+    "SeasonalPA": {
+      "name": "SeasonalPA",
+      "value": 86861956.52690658,
+      "percValue": 0.06880773375384178
+    },
+    "MPAExtendedClosure": {
+      "name": "MPAExtendedClosure",
+      "value": 16223333.48414083,
+      "percValue": 0.012851320136114635
+    },
+    "Wreck": {
+      "name": "Wreck",
+      "value": 8346169.285616089,
+      "percValue": 0.006611421352122928
+    },
+    "Reef": {
+      "name": "Reef",
+      "value": 7244658.235392232,
+      "percValue": 0.0057388589312288045
+    },
+    "Prohibited": {
+      "name": "Prohibited",
+      "value": 415252.02290973207,
+      "percValue": 0.000328942056748012
+    },
+    "NoNetFish": {
+      "name": "NoNetFish",
+      "value": 478936.7152099035,
+      "percValue": 0.0003793899113347107
+    },
+    "NoLobsterFish": {
+      "name": "NoLobsterFish",
+      "value": 81967128.62906441,
+      "percValue": 0.06493029386839236
+    },
+    "Amenity Park": {
+      "name": "Amenity Park",
+      "value": 893250.188420536,
+      "percValue": 0.0007075884955615806
+    },
+    "Recreational Park": {
+      "name": "Recreational Park",
+      "value": 45354.238667298945,
+      "percValue": 0.00003592737837837004
+    },
+    "Nature Reserve": {
+      "name": "Nature Reserve",
+      "value": 483071.3674229983,
+      "percValue": 0.00038266517774613717
+    },
+    "CoralPreserve": {
+      "name": "CoralPreserve",
+      "value": 131462891.60720466,
+      "percValue": 0.10413838239317913
+    }
+  }
+}

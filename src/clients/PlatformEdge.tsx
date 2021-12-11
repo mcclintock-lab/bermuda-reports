@@ -14,7 +14,7 @@ import {
 import { GroupCircleRow } from "../components/Circle";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
 import { Collapse } from "../components/Collapse";
-import { getGroupMetricsSketchAgg } from "../util/clientMetrics";
+import { flattenGroupSketch } from "../util/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
 import { getBreakGroup } from "../util/platformEdge";
 import styled from "styled-components";
@@ -121,7 +121,7 @@ const PlatformEdge = () => {
 
           // Build agg sketch group objects with percValue for each class
           // groupId, sketchId, lagoon, mangrove, seagrass, total
-          sketchRows = getGroupMetricsSketchAgg(
+          sketchRows = flattenGroupSketch(
             data.byGroup,
             LAYER.totalArea,
             LAYERS

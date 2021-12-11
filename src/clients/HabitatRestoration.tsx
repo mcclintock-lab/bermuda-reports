@@ -2,10 +2,6 @@ import React from "react";
 import {
   ResultsCard,
   Skeleton,
-  Column,
-  Table,
-  percentWithEdge,
-  LayerToggle,
   keyBy,
   ReportError,
   useSketchProperties,
@@ -13,22 +9,14 @@ import {
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
 import { ClassMetric } from "../util/types";
-import styled from "styled-components";
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
+import { flattenSketchAllClass } from "../util/clientMetrics";
+import { ClassTable } from "../components/ClassTable";
+import SketchClassTable from "../components/SketchClassTable";
 
 const LAYERS = config.habitatRestore.layers;
-const CLASSES = keyBy(LAYERS, (lyr) => lyr.baseFilename);
 
 const HabitatRestoration = () => {
-  const [{ isCollection, userAttributes }] = useSketchProperties();
+  const [{ isCollection }] = useSketchProperties();
 
   return (
     <>
@@ -93,47 +81,29 @@ const genSingle = (data: HabitatRestoreResults) => {
 };
 
 const genNetwork = (data: HabitatRestoreResults) => {
-  // Build agg sketch group objects with percValue for each class
-  // groupId, sketchId, lagoon, mangrove, seagrass, total
-  // const sketchRows = getSketchAgg(
-  //   data.byClass,
-  //   precalcTotals.overall.value,
-  //   config.habitatNursery.layers
-  // );
-
-  return <>{genTable(Object.values(data.byClass))}</>;
+  return (
+    <>
+      {genTable(Object.values(data.byClass))}
+      <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
+    </>
+  );
 };
 
 const genTable = (data: ClassMetric[]) => {
-  const columns: Column<ClassMetric>[] = [
-    {
-      Header: "Restoration Type",
-      accessor: (row) => CLASSES[row.name].display,
-      style: { width: "30%" },
-    },
-    {
-      Header: "% Area Within Plan",
-      style: { textAlign: "right", width: "40%" },
-      accessor: (row) => percentWithEdge(row.percValue),
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={CLASSES[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "30%" },
-    },
-  ];
-
   return (
-    <TableStyled>
-      <Table className="styled" columns={columns} data={data} />
-    </TableStyled>
+    <ClassTable
+      titleText="RestorationType"
+      percText="% Area Within Plan"
+      rows={data}
+      classes={LAYERS}
+    />
   );
+};
+
+const genSketchTable = (data: HabitatRestoreResults) => {
+  // Build agg sketch group objects with percValue for each class
+  const sketchRows = flattenSketchAllClass(data.byClass, LAYERS);
+  return <SketchClassTable rows={sketchRows} classes={LAYERS} />;
 };
 
 const LoadingSkeleton = () => (

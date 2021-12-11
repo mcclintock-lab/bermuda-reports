@@ -4,79 +4,170 @@
       "name": "Bays and Coast",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Madracis Reef": {
       "name": "Madracis Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Castle Harbour Madracis": {
       "name": "Castle Harbour Madracis",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Rim Reef": {
       "name": "Rim Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Fore Reef": {
       "name": "Fore Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Mesophotic": {
       "name": "Mesophotic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Rariphotic": {
       "name": "Rariphotic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "615ffd9d045840708a6e54e5",
+          "name": "big-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     }
   },
   "offshore": {

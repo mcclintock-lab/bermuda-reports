@@ -4,79 +4,170 @@
       "name": "Bays and Coast",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Madracis Reef": {
       "name": "Madracis Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Montastraea Reef": {
       "name": "Montastraea Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Diploria Porites Reef": {
       "name": "Diploria Porites Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Castle Harbour Madracis": {
       "name": "Castle Harbour Madracis",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Algal Vermetid Reef": {
       "name": "Algal Vermetid Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Rim Reef": {
       "name": "Rim Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Main Terrace Reef": {
       "name": "Main Terrace Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Fore Reef": {
       "name": "Fore Reef",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Mesophotic": {
       "name": "Mesophotic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Rariphotic": {
       "name": "Rariphotic",
       "value": 0,
       "percValue": 0,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
     "Mesopelagic": {
       "name": "Mesopelagic",
       "value": 1023,
       "percValue": 0.011987204274615953,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 1023,
+          "percValue": 0.011987204274615953
+        }
+      ]
     },
     "Bathypelagic": {
       "name": "Bathypelagic",
       "value": 16167,
       "percValue": 0.09248009335529929,
-      "sketchMetrics": []
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 16167,
+          "percValue": 0.09248009335529929
+        }
+      ]
     }
   },
   "offshore": {

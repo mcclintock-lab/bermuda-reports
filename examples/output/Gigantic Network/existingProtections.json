@@ -1,96 +1,289 @@
 {
-  "totalArea": 1262386534.014525,
-  "areaByClass": [
-    {
-      "class": "Ferry Route",
-      "totalArea": 6531869.480055,
-      "percArea": 0.005174,
-      "sketchArea": 5793986.512276
+  "byClass": {
+    "Ferry Route": {
+      "name": "Ferry Route",
+      "value": 5793986.512276105,
+      "percValue": 0.8870334182224087,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 5793986.512276105,
+          "percValue": 0.8870334182224087
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 864424.031748337,
+          "percValue": 0.13233945264641372
+        }
+      ]
     },
-    {
-      "class": "Shipping Lane",
-      "totalArea": 6404448.404036,
-      "percArea": 0.005073,
-      "sketchArea": 6271707.046422
+    "Shipping Lane": {
+      "name": "Shipping Lane",
+      "value": 6271707.046421573,
+      "percValue": 0.9792735690507874,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 6271707.046421573,
+          "percValue": 0.9792735690507874
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 2173855.128343856,
+          "percValue": 0.33942893926259954
+        }
+      ]
     },
-    {
-      "class": "CableZone",
-      "totalArea": 724129832.714296,
-      "percArea": 0.57362,
-      "sketchArea": 724128747.669979
+    "CableZone": {
+      "name": "CableZone",
+      "value": 724128747.669979,
+      "percValue": 0.9999985015887093,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 724128747.669979,
+          "percValue": 0.9999985015887093
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 681623613.2488914,
+          "percValue": 0.9413002785618203
+        }
+      ]
     },
-    {
-      "class": "SpearfishEx",
-      "totalArea": 190898381.115183,
-      "percArea": 0.15122,
-      "sketchArea": 190081628.10755
+    "SpearfishEx": {
+      "name": "SpearfishEx",
+      "value": 190081628.10754952,
+      "percValue": 0.9957215299424645,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 190081628.10754952,
+          "percValue": 0.9957215299424645
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 4024899.130400064,
+          "percValue": 0.02108398775771467
+        }
+      ]
     },
-    {
-      "class": "SeasonalPA",
-      "totalArea": 86861956.526907,
-      "percArea": 0.068808,
-      "sketchArea": 86863580.300478
+    "SeasonalPA": {
+      "name": "SeasonalPA",
+      "value": 86861956.52690163,
+      "percValue": 0.999999999999943,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 86861956.52690163,
+          "percValue": 0.999999999999943
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 70961211.43885589,
+          "percValue": 0.8169423563107834
+        }
+      ]
     },
-    {
-      "class": "MPAExtendedClosure",
-      "totalArea": 16223333.484141,
-      "percArea": 0.012851,
-      "sketchArea": 16218320.371388
+    "MPAExtendedClosure": {
+      "name": "MPAExtendedClosure",
+      "value": 16218320.371387575,
+      "percValue": 0.9996909936692014,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 16218320.371387575,
+          "percValue": 0.9996909936692014
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 14953266.401160296,
+          "percValue": 0.92171355632786
+        }
+      ]
     },
-    {
-      "class": "Wreck",
-      "totalArea": 8346169.285616,
-      "percArea": 0.006611,
-      "sketchArea": 7287411.178443
+    "Wreck": {
+      "name": "Wreck",
+      "value": 7287411.178442622,
+      "percValue": 0.8731444245927115,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 7287411.178442622,
+          "percValue": 0.8731444245927115
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 3726325.6544368756,
+          "percValue": 0.44647137230476264
+        }
+      ]
     },
-    {
-      "class": "Reef",
-      "totalArea": 7244658.235392,
-      "percArea": 0.005739,
-      "sketchArea": 7182575.367109
+    "Reef": {
+      "name": "Reef",
+      "value": 7182575.367109155,
+      "percValue": 0.9914305318117307,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 7182575.367109155,
+          "percValue": 0.9914305318117307
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 5417832.097897539,
+          "percValue": 0.7478381894441722
+        }
+      ]
     },
-    {
-      "class": "Prohibited",
-      "totalArea": 415252.02291,
-      "percArea": 0.000329,
-      "sketchArea": 386261.992664
+    "Prohibited": {
+      "name": "Prohibited",
+      "value": 386261.9926639586,
+      "percValue": 0.9301869018177538,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 386261.9926639586,
+          "percValue": 0.9301869018177538
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoNetFish",
-      "totalArea": 478936.71521,
-      "percArea": 0.000379,
-      "sketchArea": 465235.130832
+    "NoNetFish": {
+      "name": "NoNetFish",
+      "value": 465235.1308321782,
+      "percValue": 0.9713916600197997,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 465235.1308321782,
+          "percValue": 0.9713916600197997
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "NoLobsterFish",
-      "totalArea": 81967128.629064,
-      "percArea": 0.06493,
-      "sketchArea": 81331771.251545
+    "NoLobsterFish": {
+      "name": "NoLobsterFish",
+      "value": 81331771.25154501,
+      "percValue": 0.9922486320047313,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 81331771.25154501,
+          "percValue": 0.9922486320047313
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 1190303.9465370416,
+          "percValue": 0.014521723115660981
+        }
+      ]
     },
-    {
-      "class": "Amenity Park",
-      "totalArea": 893250.188421,
-      "percArea": 0.000708,
-      "sketchArea": 795616.491056
+    "Amenity Park": {
+      "name": "Amenity Park",
+      "value": 795616.4910561156,
+      "percValue": 0.890698374732998,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 795616.4910561156,
+          "percValue": 0.890698374732998
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Recreational Park",
-      "totalArea": 45354.238667,
-      "percArea": 0.000036,
-      "sketchArea": 31056.195011
+    "Recreational Park": {
+      "name": "Recreational Park",
+      "value": 31056.195011479544,
+      "percValue": 0.6847473560144116,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 31056.195011479544,
+          "percValue": 0.6847473560144116
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "Nature Reserve",
-      "totalArea": 483071.367423,
-      "percArea": 0.000383,
-      "sketchArea": 436568.685101
+    "Nature Reserve": {
+      "name": "Nature Reserve",
+      "value": 436568.68510147516,
+      "percValue": 0.9037353785433461,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 436568.68510147516,
+          "percValue": 0.9037353785433461
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
     },
-    {
-      "class": "CoralPreserve",
-      "totalArea": 131462891.607205,
-      "percArea": 0.104138,
-      "sketchArea": 131426676.533702
+    "CoralPreserve": {
+      "name": "CoralPreserve",
+      "value": 131426697.26094219,
+      "percValue": 0.9997246801297311,
+      "sketchMetrics": [
+        {
+          "id": "617e59f3198e046808b50fb2",
+          "name": "Gigantic MPA",
+          "value": 131426697.26094219,
+          "percValue": 0.9997246801297311
+        },
+        {
+          "id": "619834683ff3e57f7333d93d",
+          "name": "Gigantic MPA 2",
+          "value": 82718521.67240939,
+          "percValue": 0.6292157479660678
+        }
+      ]
     }
-  ],
-  "areaUnit": "square meters"
+  }
 }

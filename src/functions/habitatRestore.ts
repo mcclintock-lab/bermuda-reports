@@ -8,13 +8,16 @@ import {
   toSketchArray,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { HabitatRestoreResults } from "../_config";
+import config, {
+  HabitatRestoreBaseResults,
+  HabitatRestoreResults,
+} from "../_config";
 import { ClassMetricsSketch } from "../util/types";
 
 import { overlapStatsVector } from "../util/sumOverlapVector";
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
-const precalcTotals = habitatRestoreTotals as HabitatRestoreResults;
 
+const precalcTotals = habitatRestoreTotals as HabitatRestoreBaseResults;
 const LAYERS = config.habitatRestore.layers;
 
 export async function habitatRestore(
