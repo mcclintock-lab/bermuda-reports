@@ -43,35 +43,41 @@ export const IucnMatrix = () => {
   return (
     <MatrixStyled>
       <table>
-        <tr>
-          <th></th>
-          <th className="full" colSpan={4}>
-            Full
-          </th>
-          <th className="high" colSpan={3}>
-            High
-          </th>
-        </tr>
-        <tr>
-          <th>Activity</th>
-          {Object.keys(iucnCategoriesList)
-            .sort()
-            .map((cat) => (
-              <th className={iucnCategoriesList[cat].level}>
-                {iucnCategoriesList[cat].category}
-              </th>
-            ))}
-        </tr>
-        {Object.values(iucnActivities).map((act) => {
-          return (
-            <tr>
-              <td>{act.display}</td>
-              {iucnActivityCategories[act.id].map((rank) => {
-                return <td className={rank}>{activityRanks[rank].display}</td>;
-              })}
-            </tr>
-          );
-        })}
+        <thead>
+          <tr>
+            <th></th>
+            <th className="full" colSpan={4}>
+              Full
+            </th>
+            <th className="high" colSpan={3}>
+              High
+            </th>
+          </tr>
+          <tr>
+            <th>Activity</th>
+            {Object.keys(iucnCategoriesList)
+              .sort()
+              .map((cat) => (
+                <th className={iucnCategoriesList[cat].level}>
+                  {iucnCategoriesList[cat].category}
+                </th>
+              ))}
+          </tr>
+        </thead>
+        <tbody>
+          {Object.values(iucnActivities).map((act) => {
+            return (
+              <tr>
+                <td>{act.display}</td>
+                {iucnActivityCategories[act.id].map((rank) => {
+                  return (
+                    <td className={rank}>{activityRanks[rank].display}</td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </MatrixStyled>
   );
