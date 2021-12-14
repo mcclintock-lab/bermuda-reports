@@ -15,8 +15,8 @@ describe("Basic smoke tests", () => {
     expect(typeof clipToOceanEez).toBe("function");
   });
 
-  test("clipToOceanEez", async () => {
-    const examples = await getExamplePolygonSketches();
+  test("clipToOceanEezSmoke", async () => {
+    const examples = await getExamplePolygonSketches("all");
     for (const example of examples) {
       try {
         const result = await clipToOceanEez(example);

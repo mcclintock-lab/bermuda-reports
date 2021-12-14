@@ -1,7 +1,11 @@
 /**
  * @group smoke
  */
-import { area, NEARSHORE_AREA, OFFSHORE_AREA } from "./area";
+import {
+  area,
+  NEARSHORE_AREA_SQ_METERS,
+  OFFSHORE_AREA_SQ_METERS,
+} from "./area";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
   getExamplePolygonSketchAll,
@@ -18,8 +22,10 @@ describe("Basic smoke tests", () => {
       const result = await area(example);
       expect(result.eez.area).toBeGreaterThan(0);
       expect(result.eez.area).toBeLessThanOrEqual(STUDY_REGION_AREA_SQ_METERS);
-      expect(result.nearshore.area).toBeLessThanOrEqual(NEARSHORE_AREA);
-      expect(result.offshore.area).toBeLessThanOrEqual(OFFSHORE_AREA);
+      expect(result.nearshore.area).toBeLessThanOrEqual(
+        NEARSHORE_AREA_SQ_METERS
+      );
+      expect(result.offshore.area).toBeLessThanOrEqual(OFFSHORE_AREA_SQ_METERS);
       writeResultOutput(result, "area", example.properties.name);
     }
   });

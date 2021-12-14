@@ -12,8 +12,10 @@ import {
  * sketch in seasketch project, exporting the resulting sketch, calling turf/area function on it and converting square
  * meters to square miles */
 export const STUDY_REGION_AREA_SQ_METERS = 465737168307.9038;
-export const STUDY_REGION_AREA_SQ_KM = STUDY_REGION_AREA_SQ_METERS / 1000;
-24031748;
+
+export const NEARSHORE_AREA_SQ_METERS = 2587739629.079098;
+export const OFFSHORE_AREA_SQ_METERS =
+  STUDY_REGION_AREA_SQ_METERS - NEARSHORE_AREA_SQ_METERS;
 
 export const units = "imperial";
 
@@ -625,7 +627,6 @@ export const platformEdge = {
 //// Export ////
 
 export default {
-  STUDY_REGION_AREA_SQ_KM,
   STUDY_REGION_AREA_SQ_METERS,
   units,
   localDataUrl,

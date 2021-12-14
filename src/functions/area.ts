@@ -12,9 +12,6 @@ import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 // Multipolygon Feature Collection
 import nearshoreFC from "../../data/dist/nearshore_dissolved.json";
 
-export const NEARSHORE_AREA = 2585036229.0963717; // Calculated manually with turf
-export const OFFSHORE_AREA = STUDY_REGION_AREA_SQ_METERS - NEARSHORE_AREA;
-
 export type AreaResultType = "eez" | "nearshore" | "offshore";
 export type AreaResult = Record<AreaResultType, AreaMetric>;
 

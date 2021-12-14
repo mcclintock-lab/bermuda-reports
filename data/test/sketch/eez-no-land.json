@@ -1,0 +1,47 @@
+{
+  "type": "Feature",
+  "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+            [
+                -70.29722301710406,
+                36.495474292657285
+            ],
+            [
+                -58.62974254835714,
+                36.65428615489672
+            ],
+            [
+                -58.87144176710709,
+                28.288867960721802
+            ],
+            [
+                -70.75864879835393,
+                28.50148781456626
+            ],
+            [
+                -70.29722301710406,
+                36.495474292657285
+            ]
+        ]
+      ]
+  },
+  "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "eez-no-land",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+          {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
+          }
+      ]
+  },
+  "id": "1"
+}
