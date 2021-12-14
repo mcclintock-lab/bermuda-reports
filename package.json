@@ -43,6 +43,7 @@
     "@turf/flatten": "^6.3.0",
     "@turf/helpers": "^6.3.0",
     "@turf/invariant": "^6.3.0",
+    "@turf/kinks": "^6.3.0",
     "geoblaze": "^0.3.2",
     "georaster": "1.0.3",
     "simple-statistics": "^7.7.0",
