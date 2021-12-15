@@ -1,59 +1,59 @@
 {
   "eez": {
-    "area": 12311918758.319027,
-    "percArea": 0.026435336486134785,
-    "sketchAreas": [
+    "name": "eez",
+    "value": 12311918758.319027,
+    "percValue": 0.026435336486134785,
+    "sketchMetrics": [
       {
-        "sketchId": "619a8e39a717c5a0742cafb9",
+        "id": "619a8e39a717c5a0742cafb9",
         "name": "Large MPA",
-        "area": 12311918758.318974,
-        "percArea": 0.02643533648613467
+        "value": 12311918758.318974,
+        "percValue": 0.02643533648613467
       },
       {
-        "sketchId": "619a8e39a717c5a0742cafba",
+        "id": "619a8e39a717c5a0742cafba",
         "name": "MPA inside",
-        "area": 673240597.1411997,
-        "percArea": 0.0014455376185396334
+        "value": 673240597.1411997,
+        "percValue": 0.0014455376185396334
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "nearshore": {
-    "area": 205766069.87605166,
-    "percArea": 0.08023645005863031,
-    "sketchAreas": [
+    "name": "nearshore",
+    "value": 205766069.87605166,
+    "percValue": 0.08023645005863031,
+    "sketchMetrics": [
       {
-        "sketchId": "619a8e39a717c5a0742cafb9",
+        "id": "619a8e39a717c5a0742cafb9",
         "name": "Large MPA",
-        "area": 205766069.87605166,
-        "percArea": 0.08023645005863031
+        "value": 205766069.87605166,
+        "percValue": 0.08023645005863031
       },
       {
-        "sketchId": "619a8e39a717c5a0742cafba",
+        "id": "619a8e39a717c5a0742cafba",
         "name": "MPA inside",
-        "area": 144652685.80328757,
-        "percArea": 0.056405888528140914
+        "value": 144652685.80328757,
+        "percValue": 0.056405888528140914
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "offshore": {
-    "area": 12106093033.805384,
-    "percArea": 0.026137321483700904,
-    "sketchAreas": [
+    "name": "offshore",
+    "value": 12106093033.805384,
+    "percValue": 0.026137321483700904,
+    "sketchMetrics": [
       {
-        "sketchId": "619a8e39a717c5a0742cafb9",
+        "id": "619a8e39a717c5a0742cafb9",
         "name": "Large MPA",
-        "area": 12106093033.805384,
-        "percArea": 0.026137321483700904
+        "value": 12106093033.805384,
+        "percValue": 0.026137321483700904
       },
       {
-        "sketchId": "619a8e39a717c5a0742cafba",
+        "id": "619a8e39a717c5a0742cafba",
         "name": "MPA inside",
-        "area": 528582653.74453104,
-        "percArea": 0.0011412215909004774
+        "value": 528582653.74453104,
+        "percValue": 0.0011412215909004774
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   }
 }

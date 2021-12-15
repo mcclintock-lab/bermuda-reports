@@ -1,59 +1,59 @@
 {
   "eez": {
-    "area": 80684770294.54762,
-    "percArea": 0.1732409946745029,
-    "sketchAreas": [
+    "name": "eez",
+    "value": 80684770294.54762,
+    "percValue": 0.1732409946745029,
+    "sketchMetrics": [
       {
-        "sketchId": "617e59f3198e046808b50fb2",
+        "id": "617e59f3198e046808b50fb2",
         "name": "Gigantic MPA",
-        "area": 74441430177.46776,
-        "percArea": 0.15983570829857782
+        "value": 74441430177.46776,
+        "percValue": 0.15983570829857782
       },
       {
-        "sketchId": "619834683ff3e57f7333d93d",
+        "id": "619834683ff3e57f7333d93d",
         "name": "Gigantic MPA 2",
-        "area": 60595104877.38999,
-        "percArea": 0.13010579571637262
+        "value": 60595104877.38999,
+        "percValue": 0.13010579571637262
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "nearshore": {
-    "area": 2564477386.49068,
-    "percArea": 0.9999926706652543,
-    "sketchAreas": [
+    "name": "nearshore",
+    "value": 2564477386.49068,
+    "percValue": 0.9999926706652543,
+    "sketchMetrics": [
       {
-        "sketchId": "617e59f3198e046808b50fb2",
+        "id": "617e59f3198e046808b50fb2",
         "name": "Gigantic MPA",
-        "area": 2564477386.490682,
-        "percArea": 0.9999926706652551
+        "value": 2564477386.490682,
+        "percValue": 0.9999926706652551
       },
       {
-        "sketchId": "619834683ff3e57f7333d93d",
+        "id": "619834683ff3e57f7333d93d",
         "name": "Gigantic MPA 2",
-        "area": 1874517003.482576,
-        "percArea": 0.7309494224416251
+        "value": 1874517003.482576,
+        "percValue": 0.7309494224416251
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "offshore": {
-    "area": 78120292908.15387,
-    "percArea": 0.16866343290437016,
-    "sketchAreas": [
+    "name": "offshore",
+    "value": 78120292908.15387,
+    "percValue": 0.16866343290437016,
+    "sketchMetrics": [
       {
-        "sketchId": "617e59f3198e046808b50fb2",
+        "id": "617e59f3198e046808b50fb2",
         "name": "Gigantic MPA",
-        "area": 71876952791.07402,
-        "percArea": 0.15518392408872478
+        "value": 71876952791.07402,
+        "percValue": 0.15518392408872478
       },
       {
-        "sketchId": "619834683ff3e57f7333d93d",
+        "id": "619834683ff3e57f7333d93d",
         "name": "Gigantic MPA 2",
-        "area": 58720269943.97343,
-        "percArea": 0.12677835606000568
+        "value": 58720269943.97343,
+        "percValue": 0.12677835606000568
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   }
 }

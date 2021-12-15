@@ -18,8 +18,8 @@ const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
 export interface RegionResult {
   region: string;
-  area: number;
-  percArea: number;
+  value: number;
+  percValue: number;
 }
 
 const regionLabels: Record<string, string> = {
@@ -146,11 +146,11 @@ const genSingleSizeTable = (data: AreaResult) => {
     {
       Header: "Area Within Plan",
       accessor: (row) =>
-        Number.format(Math.round(squareMeterToMile(row.area))) + " sq. mi.",
+        Number.format(Math.round(squareMeterToMile(row.value))) + " sq. mi.",
     },
     {
       Header: "% Within Plan",
-      accessor: (row) => percentWithEdge(row.percArea),
+      accessor: (row) => percentWithEdge(row.percValue),
     },
   ];
 
@@ -173,19 +173,19 @@ const genNetworkSizeTable = (data: AreaResult) => {
     offshorePercArea: number;
   };
 
-  const rows: MergedAreaResult[] = data.eez.sketchAreas.map(
+  const rows: MergedAreaResult[] = data.eez.sketchMetrics.map(
     (eezArea, index) => {
-      const nearshoreArea = data.nearshore.sketchAreas[index];
-      const offshoreArea = data.offshore.sketchAreas[index];
+      const nearshoreArea = data.nearshore.sketchMetrics[index];
+      const offshoreArea = data.offshore.sketchMetrics[index];
       return {
-        sketchId: eezArea.sketchId,
+        sketchId: eezArea.id,
         name: eezArea.name,
-        overallArea: eezArea.area,
-        overallPercArea: eezArea.percArea,
-        nearshoreArea: nearshoreArea.area,
-        nearshorePercArea: nearshoreArea.percArea,
-        offshoreArea: offshoreArea.area,
-        offshorePercArea: offshoreArea.percArea,
+        overallArea: eezArea.value,
+        overallPercArea: eezArea.percValue,
+        nearshoreArea: nearshoreArea.value,
+        nearshorePercArea: nearshoreArea.percValue,
+        offshoreArea: offshoreArea.value,
+        offshorePercArea: offshoreArea.percValue,
       };
     }
   );

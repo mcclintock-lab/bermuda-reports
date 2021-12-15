@@ -1,41 +1,41 @@
 {
   "eez": {
-    "area": 471997272.05642706,
-    "percArea": 0.0010134412801350323,
-    "sketchAreas": [
+    "name": "eez",
+    "value": 471997272.05642706,
+    "percValue": 0.0010134412801350323,
+    "sketchMetrics": [
       {
-        "sketchId": "618abe61e4efd949c23c5899",
+        "id": "618abe61e4efd949c23c5899",
         "name": "no-activity-mpa",
-        "area": 471997272.05642706,
-        "percArea": 0.0010134412801350323
+        "value": 471997272.05642706,
+        "percValue": 0.0010134412801350323
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "nearshore": {
-    "area": 88303118.39811556,
-    "percArea": 0.03443293033511124,
-    "sketchAreas": [
+    "name": "nearshore",
+    "value": 88303118.39811556,
+    "percValue": 0.03443293033511124,
+    "sketchMetrics": [
       {
-        "sketchId": "618abe61e4efd949c23c5899",
+        "id": "618abe61e4efd949c23c5899",
         "name": "no-activity-mpa",
-        "area": 88303118.39811556,
-        "percArea": 0.03443293033511124
+        "value": 88303118.39811556,
+        "percValue": 0.03443293033511124
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "offshore": {
-    "area": 383702044.71772295,
-    "percArea": 0.0008284211651715718,
-    "sketchAreas": [
+    "name": "offshore",
+    "value": 383702044.71772295,
+    "percValue": 0.0008284211651715718,
+    "sketchMetrics": [
       {
-        "sketchId": "618abe61e4efd949c23c5899",
+        "id": "618abe61e4efd949c23c5899",
         "name": "no-activity-mpa",
-        "area": 383702044.71772295,
-        "percArea": 0.0008284211651715718
+        "value": 383702044.71772295,
+        "percValue": 0.0008284211651715718
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   }
 }

@@ -1,59 +1,59 @@
 {
   "eez": {
-    "area": 129760135.88214482,
-    "percArea": 0.0002786123691900815,
-    "sketchAreas": [
+    "name": "eez",
+    "value": 129760135.88214482,
+    "percValue": 0.0002786123691900815,
+    "sketchMetrics": [
       {
-        "sketchId": "616f1ae906f1b7772b51f18f",
+        "id": "616f1ae906f1b7772b51f18f",
         "name": "full mpa",
-        "area": 98813282.51586914,
-        "percArea": 0.00021216533538620785
+        "value": 98813282.51586914,
+        "percValue": 0.00021216533538620785
       },
       {
-        "sketchId": "616f1ae906f1b7772b51f191",
+        "id": "616f1ae906f1b7772b51f191",
         "name": "low mpa",
-        "area": 30946853.366245817,
-        "percArea": 0.00006644703380380953
+        "value": 30946853.366245817,
+        "percValue": 0.00006644703380380953
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "nearshore": {
-    "area": 129760018.35105023,
-    "percArea": 0.050598639699453905,
-    "sketchAreas": [
+    "name": "nearshore",
+    "value": 129760018.35105023,
+    "percValue": 0.050598639699453905,
+    "sketchMetrics": [
       {
-        "sketchId": "616f1ae906f1b7772b51f18f",
+        "id": "616f1ae906f1b7772b51f18f",
         "name": "full mpa",
-        "area": 98813282.51586914,
-        "percArea": 0.038531265200767786
+        "value": 98813282.51586914,
+        "percValue": 0.038531265200767786
       },
       {
-        "sketchId": "616f1ae906f1b7772b51f191",
+        "id": "616f1ae906f1b7772b51f191",
         "name": "low mpa",
-        "area": 30946735.83518108,
-        "percArea": 0.012067374498686117
+        "value": 30946735.83518108,
+        "percValue": 0.012067374498686117
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "offshore": {
-    "area": 117.54897254908393,
-    "percArea": 2.5379082062351933e-10,
-    "sketchAreas": [
+    "name": "offshore",
+    "value": 117.54897254908393,
+    "percValue": 2.5379082062351933e-10,
+    "sketchMetrics": [
       {
-        "sketchId": "616f1ae906f1b7772b51f18f",
+        "id": "616f1ae906f1b7772b51f18f",
         "name": "full mpa",
-        "area": 0,
-        "percArea": 0
+        "value": 0,
+        "percValue": 0
       },
       {
-        "sketchId": "616f1ae906f1b7772b51f191",
+        "id": "616f1ae906f1b7772b51f191",
         "name": "low mpa",
-        "area": 117.54897254908393,
-        "percArea": 2.5379082062351933e-10
+        "value": 117.54897254908393,
+        "percValue": 2.5379082062351933e-10
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   }
 }

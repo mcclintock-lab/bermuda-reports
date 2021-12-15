@@ -1,95 +1,95 @@
 {
   "eez": {
-    "area": 388235454.3080779,
-    "percArea": 0.0008335934529739127,
-    "sketchAreas": [
+    "name": "eez",
+    "value": 388235454.3080779,
+    "percValue": 0.0008335934529739127,
+    "sketchMetrics": [
       {
-        "sketchId": "61a8155531c466cf4a0621a7",
+        "id": "61a8155531c466cf4a0621a7",
         "name": "high MPA",
-        "area": 320052736.91190267,
-        "percArea": 0.0006871960382176592
+        "value": 320052736.91190267,
+        "percValue": 0.0006871960382176592
       },
       {
-        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "id": "61a819ba9942fd4acf0d18d2",
         "name": "full MPA",
-        "area": 313000393.6112994,
-        "percArea": 0.0006720537137898591
+        "value": 313000393.6112994,
+        "percValue": 0.0006720537137898591
       },
       {
-        "sketchId": "61a81aad31c466cf4a062493",
+        "id": "61a81aad31c466cf4a062493",
         "name": "full MPA copy",
-        "area": 313000393.6112994,
-        "percArea": 0.0006720537137898591
+        "value": 313000393.6112994,
+        "percValue": 0.0006720537137898591
       },
       {
-        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "id": "61a932cc9942fd4acf0d1e4a",
         "name": "low MPA",
-        "area": 332082981.0585949,
-        "percArea": 0.000713026581634239
+        "value": 332082981.0585949,
+        "percValue": 0.000713026581634239
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "nearshore": {
-    "area": 387282939.33869296,
-    "percArea": 0.15101716351742012,
-    "sketchAreas": [
+    "name": "nearshore",
+    "value": 387282939.33869296,
+    "percValue": 0.15101716351742012,
+    "sketchMetrics": [
       {
-        "sketchId": "61a8155531c466cf4a0621a7",
+        "id": "61a8155531c466cf4a0621a7",
         "name": "high MPA",
-        "area": 320052736.9119009,
-        "percArea": 0.12480140898267925
+        "value": 320052736.9119009,
+        "percValue": 0.12480140898267925
       },
       {
-        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "id": "61a819ba9942fd4acf0d18d2",
         "name": "full MPA",
-        "area": 312047878.6419047,
-        "percArea": 0.12167999342960067
+        "value": 312047878.6419047,
+        "percValue": 0.12167999342960067
       },
       {
-        "sketchId": "61a81aad31c466cf4a062493",
+        "id": "61a81aad31c466cf4a062493",
         "name": "full MPA copy",
-        "area": 312047878.6419047,
-        "percArea": 0.12167999342960067
+        "value": 312047878.6419047,
+        "percValue": 0.12167999342960067
       },
       {
-        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "id": "61a932cc9942fd4acf0d1e4a",
         "name": "low MPA",
-        "area": 332082981.0585888,
-        "percArea": 0.12949248406736308
+        "value": 332082981.0585888,
+        "percValue": 0.12949248406736308
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   },
   "offshore": {
-    "area": 952643.5828112711,
-    "percArea": 0.000002056778476242719,
-    "sketchAreas": [
+    "name": "offshore",
+    "value": 952643.5828112711,
+    "percValue": 0.000002056778476242719,
+    "sketchMetrics": [
       {
-        "sketchId": "61a8155531c466cf4a0621a7",
+        "id": "61a8155531c466cf4a0621a7",
         "name": "high MPA",
-        "area": 0,
-        "percArea": 0
+        "value": 0,
+        "percValue": 0
       },
       {
-        "sketchId": "61a819ba9942fd4acf0d18d2",
+        "id": "61a819ba9942fd4acf0d18d2",
         "name": "full MPA",
-        "area": 952643.5828112711,
-        "percArea": 0.000002056778476242719
+        "value": 952643.5828112711,
+        "percValue": 0.000002056778476242719
       },
       {
-        "sketchId": "61a81aad31c466cf4a062493",
+        "id": "61a81aad31c466cf4a062493",
         "name": "full MPA copy",
-        "area": 952643.5828112711,
-        "percArea": 0.000002056778476242719
+        "value": 952643.5828112711,
+        "percValue": 0.000002056778476242719
       },
       {
-        "sketchId": "61a932cc9942fd4acf0d1e4a",
+        "id": "61a932cc9942fd4acf0d1e4a",
         "name": "low MPA",
-        "area": 0,
-        "percArea": 0
+        "value": 0,
+        "percValue": 0
       }
-    ],
-    "areaUnit": "square meters"
+    ]
   }
 }

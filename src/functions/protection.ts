@@ -62,6 +62,7 @@ export async function protection(
 
   // TODO: convert to square meters
   const planningAreaStats = await areaStats(
+    "eez",
     sketch,
     STUDY_REGION_AREA_SQ_METERS
   );
@@ -77,8 +78,8 @@ export async function protection(
       name: s.properties.name,
       category: category.category,
       level,
-      area: planningAreaStats.sketchAreas[index].area,
-      percPlanningArea: planningAreaStats.sketchAreas[index].percArea,
+      area: planningAreaStats.sketchMetrics[index].value,
+      percPlanningArea: planningAreaStats.sketchMetrics[index].percValue,
     };
   });
 
@@ -93,6 +94,7 @@ export async function protection(
       // Calc area stats for each category, accounting for overlap, to get true area and %
       const sc = genSampleSketchCollection(featureCollection(catSketches));
       const catAreaStats = await areaStats(
+        "eez",
         sc as SketchCollection<Polygon>,
         STUDY_REGION_AREA_SQ_METERS
       );
@@ -101,8 +103,8 @@ export async function protection(
         category: categoryName,
         level: iucnCategories[categoryName].level,
         numSketches: catGroups[categoryName].length,
-        area: catAreaStats.area,
-        percPlanningArea: catAreaStats.percArea,
+        area: catAreaStats.value,
+        percPlanningArea: catAreaStats.percValue,
       };
     })
   );
@@ -152,13 +154,17 @@ export async function protection(
       const sl = genSampleSketchCollection(
         flatten(featureCollection(remFeatures))
       );
-      const levelAreaStats = await areaStats(sl, STUDY_REGION_AREA_SQ_METERS);
+      const levelAreaStats = await areaStats(
+        "eez",
+        sl,
+        STUDY_REGION_AREA_SQ_METERS
+      );
 
       return {
         level: levelName,
         numSketches: levelGroups[levelName].length,
-        area: levelAreaStats.area,
-        percPlanningArea: levelAreaStats.percArea,
+        area: levelAreaStats.value,
+        percPlanningArea: levelAreaStats.percValue,
       };
     })
   );

@@ -6,12 +6,13 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
 } from "@seasketch/geoprocessing";
-import { areaStats, subAreaStats, AreaMetric } from "../util/areaStats";
+import { areaStats, subAreaStats } from "../util/areaStats";
 import config, { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import bbox from "@turf/bbox";
+import { ClassMetricSketch } from "../util/types";
 
 export type AreaResultType = "eez" | "nearshore" | "offshore";
-export type AreaResult = Record<AreaResultType, AreaMetric>;
+export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
 
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -22,12 +23,14 @@ export async function area(
     box
   );
 
-  const eez = await areaStats(sketch, STUDY_REGION_AREA_SQ_METERS);
+  const eez = await areaStats("eez", sketch, STUDY_REGION_AREA_SQ_METERS);
   const nearshore = await subAreaStats(
+    "nearshore",
     sketch,
     nearshorePolys[0] as Feature<Polygon>
   );
   const offshore = await subAreaStats(
+    "offshore",
     sketch,
     nearshorePolys[0] as Feature<Polygon>,
     { operation: "difference", outerArea: STUDY_REGION_AREA_SQ_METERS }
