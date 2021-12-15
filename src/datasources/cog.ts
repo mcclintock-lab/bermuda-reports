@@ -1,7 +1,7 @@
 import { BBox } from "@turf/helpers";
 // @ts-ignore
 import parseGeoraster from "georaster";
-import { maxWidth } from "./width";
+import { maxWidth } from "../util/width";
 import buffer from "@turf/buffer";
 import bboxPolygon from "@turf/bbox-polygon";
 import bbox from "@turf/bbox";

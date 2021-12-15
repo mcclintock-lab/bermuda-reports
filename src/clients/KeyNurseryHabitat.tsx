@@ -35,7 +35,7 @@ import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
 
 import styled from "styled-components";
-import { flattenGroup, flattenGroupSketch } from "../util/clientMetrics";
+import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;

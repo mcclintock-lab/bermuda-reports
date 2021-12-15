@@ -14,7 +14,7 @@ import {
 import { GroupCircleRow } from "../components/Circle";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
 import { Collapse } from "../components/Collapse";
-import { flattenGroupSketch } from "../util/clientMetrics";
+import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
 import { getBreakGroup } from "../util/platformEdge";
 import styled from "styled-components";

@@ -9,7 +9,7 @@ import {
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
 import { ClassMetric } from "../util/types";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 

@@ -9,7 +9,7 @@ import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 import config from "../functions/existingProtectionsConfig";
 import { ExistingProtectionResults } from "../_config";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 // Import the results type definition from your functions to type-check your
 // component render functions
 

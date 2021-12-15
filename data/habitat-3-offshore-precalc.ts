@@ -9,7 +9,7 @@ import geoblaze from "geoblaze";
 
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
 
 async function main() {

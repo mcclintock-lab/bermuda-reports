@@ -8,6 +8,10 @@ import {
 } from "./types";
 
 /**
+ * Helper methods for using metrics in browser client
+ */
+
+/**
  * Sort function to sort ClassConfig alphabetically by display name
  * @param a
  * @param b

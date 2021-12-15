@@ -5,7 +5,7 @@ import fs from "fs";
 import config from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 
 import { strict as assert } from "assert";
 

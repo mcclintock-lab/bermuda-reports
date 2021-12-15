@@ -1,7 +1,7 @@
 import fs from "fs";
 import config from "../src/_config";
 // @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";

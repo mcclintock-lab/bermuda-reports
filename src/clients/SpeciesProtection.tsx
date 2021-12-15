@@ -6,7 +6,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import config, { ReefIndexResults } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
 
