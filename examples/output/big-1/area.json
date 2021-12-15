@@ -27,13 +27,13 @@
   },
   "offshore": {
     "area": 100500428268.71336,
-    "percArea": 0.21699352745700207,
+    "percArea": 0.21698263804629636,
     "sketchAreas": [
       {
         "sketchId": "615ffd9d045840708a6e54e5",
         "name": "big-1",
         "area": 100500428268.71336,
-        "percArea": 0.21699352745700207
+        "percArea": 0.21698263804629636
       }
     ],
     "areaUnit": "square meters"

@@ -13,27 +13,27 @@
     "areaUnit": "square meters"
   },
   "nearshore": {
-    "area": 211141688.19939974,
-    "percArea": 0.08159309608538126,
+    "area": 224096911.34016454,
+    "percArea": 0.08738438094224944,
     "sketchAreas": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "area": 211141688.19939974,
-        "percArea": 0.08159309608538126
+        "area": 224096911.34016454,
+        "percArea": 0.08738438094224944
       }
     ],
     "areaUnit": "square meters"
   },
   "offshore": {
-    "area": 1352076177.1563764,
-    "percArea": 0.002919308744508862,
+    "area": 1339128223.69728,
+    "percArea": 0.0028912073278253166,
     "sketchAreas": [
       {
         "sketchId": "61649a3c1e0a596510ad8329",
         "name": "nearshore-span",
-        "area": 1352076177.1563764,
-        "percArea": 0.002919308744508862
+        "area": 1339128223.69728,
+        "percArea": 0.0028912073278253166
       }
     ],
     "areaUnit": "square meters"

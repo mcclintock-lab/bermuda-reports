@@ -14,13 +14,13 @@
   },
   "nearshore": {
     "area": 13281509.242890002,
-    "percArea": 0.005132475112118026,
+    "percArea": 0.005178993571254523,
     "sketchAreas": [
       {
         "sketchId": "61685a10f3f078352076a1fb",
         "name": "low-1",
         "area": 13281509.242890002,
-        "percArea": 0.005132475112118026
+        "percArea": 0.005178993571254523
       }
     ],
     "areaUnit": "square meters"

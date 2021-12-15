@@ -1,12 +1,12 @@
 /**
  * @group smoke
  */
+import { area } from "./area";
 import {
-  area,
+  STUDY_REGION_AREA_SQ_METERS,
   NEARSHORE_AREA_SQ_METERS,
   OFFSHORE_AREA_SQ_METERS,
-} from "./area";
-import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
+} from "../_config";
 import {
   getExamplePolygonSketchAll,
   writeResultOutput,

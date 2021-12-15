@@ -19,39 +19,39 @@
     "areaUnit": "square meters"
   },
   "nearshore": {
-    "area": 2585036229.0963717,
-    "percArea": 0.9989553044856802,
+    "area": 2564477386.49068,
+    "percArea": 0.9999926706652543,
     "sketchAreas": [
       {
         "sketchId": "617e59f3198e046808b50fb2",
         "name": "Gigantic MPA",
-        "area": 2585036229.0963717,
-        "percArea": 0.9989553044856802
+        "area": 2564477386.490682,
+        "percArea": 0.9999926706652551
       },
       {
         "sketchId": "619834683ff3e57f7333d93d",
         "name": "Gigantic MPA 2",
-        "area": 1908796880.932766,
-        "percArea": 0.7376309654507442
+        "area": 1874517003.482576,
+        "percArea": 0.7309494224416251
       }
     ],
     "areaUnit": "square meters"
   },
   "offshore": {
-    "area": 78099734065.6661,
-    "percArea": 0.16862750816394745,
+    "area": 78120292908.15387,
+    "percArea": 0.16866343290437016,
     "sketchAreas": [
       {
         "sketchId": "617e59f3198e046808b50fb2",
         "name": "Gigantic MPA",
-        "area": 71856393948.58623,
-        "percArea": 0.15514732287064034
+        "area": 71876952791.07402,
+        "percArea": 0.15518392408872478
       },
       {
         "sketchId": "619834683ff3e57f7333d93d",
         "name": "Gigantic MPA 2",
-        "area": 58686001121.189995,
-        "percArea": 0.1267107276556447
+        "area": 58720269943.97343,
+        "percArea": 0.12677835606000568
       }
     ],
     "areaUnit": "square meters"

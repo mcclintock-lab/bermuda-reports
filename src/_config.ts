@@ -37,6 +37,13 @@ export const objectives = {
 
 //// SIZE ////
 
+const sizeNearshoreBaseFilename = "nearshore_dissolved";
+export const size = {
+  baseFilename: sizeNearshoreBaseFilename,
+  filename: `${sizeNearshoreBaseFilename}${fgbFileSuffix}`,
+  layerId: "6164aebea04323106537eb5a",
+};
+
 //// EXISTING PROTECTIONS ////
 
 export interface ExistingProtectionBaseResults {
@@ -628,6 +635,7 @@ export const platformEdge = {
 
 export default {
   STUDY_REGION_AREA_SQ_METERS,
+  size,
   units,
   localDataUrl,
   dataBucketUrl,
