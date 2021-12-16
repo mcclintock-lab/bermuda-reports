@@ -16,7 +16,7 @@ import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { Collapse } from "../components/Collapse";
 import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
-import { getBreakGroup } from "../util/platformEdge";
+import { getBreakGroup } from "../util/getBreakGroup";
 import styled from "styled-components";
 
 const LAYERS = config.platformEdge.layers;

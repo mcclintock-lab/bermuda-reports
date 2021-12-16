@@ -29,8 +29,6 @@ export type ExistingProtectionFeature = Feature<
 const precalcTotals = legislatedAreaTotals as ExistingProtectionBaseResults;
 const CONFIG = config.existingProtection;
 
-// use areaStats - like protection.ts?
-
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ExistingProtectionResults> {

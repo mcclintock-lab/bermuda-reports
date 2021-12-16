@@ -1,10 +1,14 @@
 import {
   ClassMetrics,
   ClassMetricsSketch,
+  ClassMetricSketch,
   GroupMetricsSketch,
   ValueMetric,
   SketchMetric,
   ClassMetric,
+  SketchStat,
+  CategoryStat,
+  LevelStat,
 } from "../src/metrics/types";
 
 /**
@@ -37,12 +41,23 @@ export const objectives = {
 
 //// SIZE ////
 
+export type AreaResultType = "eez" | "nearshore" | "offshore";
+export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
+
 const sizeNearshoreBaseFilename = "nearshore_dissolved";
 export const size = {
   baseFilename: sizeNearshoreBaseFilename,
   filename: `${sizeNearshoreBaseFilename}${fgbFileSuffix}`,
   layerId: "6164aebea04323106537eb5a",
 };
+
+//// PROTECTION ////
+
+export interface ProtectionResult {
+  sketchStats: SketchStat[];
+  categoryStats: CategoryStat[];
+  levelStats: LevelStat[];
+}
 
 //// EXISTING PROTECTIONS ////
 

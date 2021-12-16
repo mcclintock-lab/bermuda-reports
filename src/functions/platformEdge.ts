@@ -2,7 +2,6 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
-  MultiPolygon,
   Feature,
   GeoprocessingHandler,
   fgbFetchAll,
@@ -18,9 +17,9 @@ import config, {
 } from "../_config";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { getGroupMetrics } from "../metrics/metrics";
-import { getBreakGroup } from "../util/platformEdge";
+import { getBreakGroup } from "../util/getBreakGroup";
 
-const LAYER = config.platformEdge.layers[0];
+const CLASS = config.platformEdge.layers[0];
 const ACTIVITIES = config.platformEdge.fishingActivities;
 const BREAK_MAP = config.platformEdge.breakMap;
 
@@ -31,15 +30,15 @@ export async function platformEdge(
   const box = sketch.bbox || bbox(sketch);
 
   const edgeMultiPoly = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${LAYER.filename}`,
+    `${config.dataBucketUrl}${CLASS.filename}`,
     box
   );
 
   const classMetric = await overlapFeatures(
     edgeMultiPoly,
-    LAYER.baseFilename,
+    CLASS.baseFilename,
     sketches,
-    LAYER.totalArea
+    CLASS.totalArea
   );
 
   // Sketch metrics
@@ -96,8 +95,8 @@ export async function platformEdge(
     sketches,
     sketchMetricsFilter,
     edgeClassMetrics,
-    { [LAYER.baseFilename]: { value: LAYER.totalArea } },
-    { [LAYER.baseFilename]: edgeMultiPoly }
+    { [CLASS.baseFilename]: { value: CLASS.totalArea } },
+    { [CLASS.baseFilename]: edgeMultiPoly }
   );
 
   return {

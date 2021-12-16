@@ -15,18 +15,13 @@ import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Pill, LevelPill } from "../components/Pill";
 import { LevelCircleRow } from "../components/Circle";
 import { IucnMatrix } from "../components/IucnMatrix";
+import { Collapse } from "../components/Collapse";
+import { IucnDesignationTable } from "../components/IucnDesignationTable";
 
 // Import type definitions from function
-import {
-  ProtectionResult,
-  SketchStat,
-  CategoryStat,
-  LevelStat,
-} from "../functions/protection";
+import { SketchStat, CategoryStat, LevelStat } from "../metrics/types";
+import config, { ProtectionResult } from "../_config";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
-import { Collapse } from "../components/Collapse";
-import config from "../_config";
-import { IucnDesignationTable } from "../components/IucnDesignationTable";
 
 const EEZ_OBJECTIVE = config.objectives.eez;
 

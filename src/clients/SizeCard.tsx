@@ -10,9 +10,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
-
-// Import type definitions from function
-import { AreaResult, AreaResultType } from "../functions/area";
+import { AreaResult, AreaResultType } from "../_config";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 

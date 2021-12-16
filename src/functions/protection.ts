@@ -15,44 +15,13 @@ import {
 import { featureCollection } from "@turf/helpers";
 import flatten from "@turf/flatten";
 import { overlapArea } from "../metrics/overlapArea";
-import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
+import { STUDY_REGION_AREA_SQ_METERS, ProtectionResult } from "../_config";
+import { SketchStat, CategoryStat, LevelStat } from "../metrics/types";
 import {
   getCategoryForActivities,
   iucnCategories,
   levels,
 } from "../util/iucnProtectionLevel";
-
-export interface SketchStat {
-  sketchId: string;
-  name: string;
-  // category stats
-  category: string;
-  level: string;
-  // area stats
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface CategoryStat {
-  category: string;
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface LevelStat {
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface ProtectionResult {
-  sketchStats: SketchStat[];
-  categoryStats: CategoryStat[];
-  levelStats: LevelStat[];
-}
 
 export async function protection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>

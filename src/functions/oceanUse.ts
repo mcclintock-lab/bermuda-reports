@@ -14,7 +14,7 @@ import config, { OceanUseResults } from "../_config";
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
 
 // Define at module level for potential cache and reuse by Lambda
-const LAYERS = config.oceanUse.layers;
+const CLASSES = config.oceanUse.layers;
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -23,10 +23,10 @@ export async function oceanUse(
   let rasters: Georaster[];
 
   const metrics = await Promise.all(
-    LAYERS.map(async (lyr) => {
+    CLASSES.map(async (curClass) => {
       // start raster load and move on in loop while awaiting finish
       const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${lyr.filename}`,
+        `${config.dataBucketUrl}${curClass.filename}`,
         {
           windowBox: box,
         }
@@ -34,8 +34,8 @@ export async function oceanUse(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        lyr.baseFilename,
-        (oceanUseTotals as Record<string, number>)[lyr.baseFilename],
+        curClass.baseFilename,
+        (oceanUseTotals as Record<string, number>)[curClass.baseFilename],
         sketch
       );
     })

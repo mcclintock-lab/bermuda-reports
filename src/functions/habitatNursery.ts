@@ -20,7 +20,9 @@ import { overlapFeatures } from "../metrics/overlapFeatures";
 import { getGroupMetrics } from "../metrics/metrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
+
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
+const LAYERS = config.habitatNursery.layers;
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -28,22 +30,20 @@ export async function habitatNursery(
   const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
-  const LAYERS = config.habitatNursery.layers;
-
   // Class metrics
   const featuresByClass: Record<string, Feature<Polygon>[]> = {};
   const classMetrics = (
     await Promise.all(
-      LAYERS.map(async (lyr) => {
-        featuresByClass[lyr.baseFilename] = await fgbFetchAll(
-          `${config.dataBucketUrl}${lyr.filename}`,
+      LAYERS.map(async (curClass) => {
+        featuresByClass[curClass.baseFilename] = await fgbFetchAll(
+          `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
         return overlapFeatures(
-          featuresByClass[lyr.baseFilename],
-          lyr.baseFilename,
+          featuresByClass[curClass.baseFilename],
+          curClass.baseFilename,
           sketches,
-          precalcTotals.byClass[lyr.baseFilename].value
+          precalcTotals.byClass[curClass.baseFilename].value
         );
       })
     )

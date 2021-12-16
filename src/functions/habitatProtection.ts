@@ -15,7 +15,7 @@ import { overlapRaster } from "../metrics/overlapRaster";
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
 
-const OFFSHORE_LAYERS = config.offshore.layers;
+const OFFSHORE_CLASSES = config.offshore.layers;
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -37,20 +37,22 @@ export async function habitatProtection(
   );
 
   const offshoreMetrics = await Promise.all(
-    OFFSHORE_LAYERS.map(async (lyr) => {
+    OFFSHORE_CLASSES.map(async (curClass) => {
       // start raster load and move on in loop while awaiting finish
       const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${lyr.filename}`,
+        `${config.dataBucketUrl}${curClass.filename}`,
         {
           windowBox: box,
-          noDataValue: lyr.noDataValue,
+          noDataValue: curClass.noDataValue,
         }
       );
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        lyr.baseFilename,
-        (offshoreHabitatTotals as Record<string, number>)[lyr.baseFilename],
+        curClass.baseFilename,
+        (offshoreHabitatTotals as Record<string, number>)[
+          curClass.baseFilename
+        ],
         sketch
       );
     })

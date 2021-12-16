@@ -108,3 +108,31 @@ export type GroupMetricSketchAgg = GroupMetricAgg & {
   sketchId: string;
   sketchName: string;
 };
+
+// Deprecated
+
+export interface SketchStat {
+  sketchId: string;
+  name: string;
+  // category stats
+  category: string;
+  level: string;
+  // area stats
+  area: number;
+  percPlanningArea: number;
+}
+
+export interface CategoryStat {
+  category: string;
+  level: string;
+  numSketches: number;
+  area: number;
+  percPlanningArea: number;
+}
+
+export interface LevelStat {
+  level: string;
+  numSketches: number;
+  area: number;
+  percPlanningArea: number;
+}
