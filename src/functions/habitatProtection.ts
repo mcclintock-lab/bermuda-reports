@@ -9,8 +9,8 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { HabitatResults } from "../_config";
-import { rasterClassStats } from "../util/overlapByClassRaster";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRasterClass } from "../metrics/overlapRasterClass";
+import { overlapRaster } from "../metrics/overlapRaster";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
@@ -27,7 +27,7 @@ export async function habitatProtection(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
-  const nearshoreMetrics = await rasterClassStats(
+  const nearshoreMetrics = await overlapRasterClass(
     nearshoreRaster,
     {
       classIdToName: config.nearshore.classIdToName,
@@ -47,7 +47,7 @@ export async function habitatProtection(
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
         lyr.baseFilename,
         (offshoreHabitatTotals as Record<string, number>)[lyr.baseFilename],

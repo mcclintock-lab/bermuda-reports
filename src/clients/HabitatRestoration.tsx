@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
-import { ClassMetric } from "../util/types";
+import { ClassMetric } from "../metrics/types";
 import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";

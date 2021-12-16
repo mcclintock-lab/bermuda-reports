@@ -16,8 +16,8 @@ import config, {
   EdgeSketchMetric,
   PlatformEdgeResult,
 } from "../_config";
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { getGroupMetrics } from "../util/metrics";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { getGroupMetrics } from "../metrics/metrics";
 import { getBreakGroup } from "../util/platformEdge";
 
 const LAYER = config.platformEdge.layers[0];
@@ -35,7 +35,7 @@ export async function platformEdge(
     box
   );
 
-  const classMetric = await overlapStatsVector(
+  const classMetric = await overlapFeatures(
     edgeMultiPoly,
     LAYER.baseFilename,
     sketches,

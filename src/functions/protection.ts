@@ -14,7 +14,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import flatten from "@turf/flatten";
-import { areaStats } from "../util/areaStats";
+import { overlapArea } from "../metrics/overlapArea";
 import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import {
   getCategoryForActivities,
@@ -60,8 +60,7 @@ export async function protection(
   const sketches = toSketchArray(sketch);
   const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
-  // TODO: convert to square meters
-  const planningAreaStats = await areaStats(
+  const planningAreaStats = await overlapArea(
     "eez",
     sketch,
     STUDY_REGION_AREA_SQ_METERS
@@ -93,7 +92,7 @@ export async function protection(
       );
       // Calc area stats for each category, accounting for overlap, to get true area and %
       const sc = genSampleSketchCollection(featureCollection(catSketches));
-      const catAreaStats = await areaStats(
+      const catAreaStats = await overlapArea(
         "eez",
         sc as SketchCollection<Polygon>,
         STUDY_REGION_AREA_SQ_METERS
@@ -154,7 +153,7 @@ export async function protection(
       const sl = genSampleSketchCollection(
         flatten(featureCollection(remFeatures))
       );
-      const levelAreaStats = await areaStats(
+      const levelAreaStats = await overlapArea(
         "eez",
         sl,
         STUDY_REGION_AREA_SQ_METERS

@@ -5,7 +5,7 @@ import {
   percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
-import { ClassConfig } from "../util/types";
+import { ClassConfig } from "../metrics/types";
 
 const SmallTableStyled = styled.div`
   & {

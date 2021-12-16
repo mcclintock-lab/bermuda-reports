@@ -1,5 +1,5 @@
 import { ClassMetricsSketch, GroupMetricsSketch, SketchMetric } from "./types";
-import { overlapStatsVector } from "../util/sumOverlapVector";
+import { overlapFeatures } from "../metrics/overlapFeatures";
 
 import {
   difference,
@@ -124,7 +124,7 @@ export function getGroupMetrics<T extends SketchMetric>(
           const finalFeatures =
             otherGroupSketches.length > 0 ? otherRemSketches : groupSketches;
 
-          const groupOverallMetric = await overlapStatsVector(
+          const groupOverallMetric = await overlapFeatures(
             featuresByClass[className],
             className,
             finalFeatures,

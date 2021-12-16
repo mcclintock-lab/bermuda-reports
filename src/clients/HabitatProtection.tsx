@@ -10,7 +10,7 @@ import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
 import { CategoricalClassTable } from "../components/CategoricalClassTable";
-import { ClassMetricSketch } from "../util/types";
+import { ClassMetricSketch } from "../metrics/types";
 
 const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();

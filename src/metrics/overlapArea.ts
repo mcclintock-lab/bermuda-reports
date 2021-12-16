@@ -12,14 +12,14 @@ import {
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
-import { clip } from "./clip";
+import { clip } from "../util/clip";
 import { ClassMetricSketch } from "./types";
 
 /**
- * Returns area stats for sketch input in relation to outer boundary.
- * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
+ * Assuming sketches are within some outer boundary with size outerArea,
+ * calculates the area of each sketch and the proportion of outerArea they take up.
  */
-export async function areaStats(
+export async function overlapArea(
   /** Name of class */
   name: string,
   /** single sketch or collection. */
@@ -76,7 +76,7 @@ export async function areaStats(
  * Returns area stats for sketch input after performing overlay operation against a subarea feature.
  * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
  */
-export async function subAreaStats(
+export async function overlapSubarea(
   /** Name of class */
   name: string,
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,

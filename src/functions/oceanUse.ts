@@ -8,7 +8,7 @@ import {
   keyBy,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRaster } from "../metrics/overlapRaster";
 import config, { OceanUseResults } from "../_config";
 
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
@@ -32,7 +32,7 @@ export async function oceanUse(
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
         lyr.baseFilename,
         (oceanUseTotals as Record<string, number>)[lyr.baseFilename],

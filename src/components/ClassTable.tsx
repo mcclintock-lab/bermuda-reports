@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { GreenPill } from "../components/Pill";
-import { ClassConfig, ClassMetric, ClassMetricSketch } from "../util/types";
+import { ClassConfig, ClassMetric, ClassMetricSketch } from "../metrics/types";
 
 const TableStyled = styled.div`
   .styled {

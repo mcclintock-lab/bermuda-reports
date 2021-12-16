@@ -12,9 +12,9 @@ import config, {
   HabitatRestoreBaseResults,
   HabitatRestoreResults,
 } from "../_config";
-import { ClassMetricsSketch } from "../util/types";
+import { ClassMetricsSketch } from "../metrics/types";
 
-import { overlapStatsVector } from "../util/sumOverlapVector";
+import { overlapFeatures } from "../metrics/overlapFeatures";
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 
 const precalcTotals = habitatRestoreTotals as HabitatRestoreBaseResults;
@@ -33,7 +33,7 @@ export async function habitatRestore(
           `${config.dataBucketUrl}${lyr.filename}`,
           box
         );
-        return overlapStatsVector(
+        return overlapFeatures(
           features,
           lyr.baseFilename,
           sketches,

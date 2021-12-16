@@ -5,7 +5,7 @@ import {
   ValueMetric,
   SketchMetric,
   ClassMetric,
-} from "../src/util/types";
+} from "../src/metrics/types";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing

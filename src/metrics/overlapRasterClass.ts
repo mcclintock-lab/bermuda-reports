@@ -9,10 +9,10 @@ import area from "@turf/area";
 import geoblaze from "geoblaze";
 
 /**
- * Returns sum metric for all classes within a single raster.
- * Conveniently bundles into result the class name and perc of total
+ * Calculates sum of overlap between sketches and feature classes in raster
+ * Includes overall and per sketch for each class
  */
-export async function rasterClassStats(
+export async function overlapRasterClass(
   /** raster to search */
   raster: Georaster,
   config: {

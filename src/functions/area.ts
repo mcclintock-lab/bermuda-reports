@@ -6,10 +6,10 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
 } from "@seasketch/geoprocessing";
-import { areaStats, subAreaStats } from "../util/areaStats";
+import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import bbox from "@turf/bbox";
-import { ClassMetricSketch } from "../util/types";
+import { ClassMetricSketch } from "../metrics/types";
 
 export type AreaResultType = "eez" | "nearshore" | "offshore";
 export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
@@ -23,13 +23,13 @@ export async function area(
     box
   );
 
-  const eez = await areaStats("eez", sketch, STUDY_REGION_AREA_SQ_METERS);
-  const nearshore = await subAreaStats(
+  const eez = await overlapArea("eez", sketch, STUDY_REGION_AREA_SQ_METERS);
+  const nearshore = await overlapSubarea(
     "nearshore",
     sketch,
     nearshorePolys[0] as Feature<Polygon>
   );
-  const offshore = await subAreaStats(
+  const offshore = await overlapSubarea(
     "offshore",
     sketch,
     nearshorePolys[0] as Feature<Polygon>,

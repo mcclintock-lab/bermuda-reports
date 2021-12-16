@@ -8,8 +8,8 @@ import {
   toSketchArray,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { ClassMetricsSketch } from "../util/types";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { ClassMetricsSketch } from "../metrics/types";
 import config, {
   ExistingProtectionBaseResults,
   ExistingProtectionResults,
@@ -52,7 +52,7 @@ export async function existingProtections(
               curClass.name,
           []
         );
-        return overlapStatsVector(
+        return overlapFeatures(
           classFeatures,
           curClass.name,
           sketches,

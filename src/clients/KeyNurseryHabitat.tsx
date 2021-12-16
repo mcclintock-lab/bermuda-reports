@@ -22,7 +22,7 @@ import {
   ClassMetrics,
   GroupMetricAgg,
   GroupMetricSketchAgg,
-} from "../util/types";
+} from "../metrics/types";
 import {
   IucnCategory,
   getCategoryForActivities,
@@ -30,7 +30,7 @@ import {
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
 import { Pill, LevelPill } from "../components/Pill";
-import { ClassMetric } from "../util/types";
+import { ClassMetric } from "../metrics/types";
 import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
 

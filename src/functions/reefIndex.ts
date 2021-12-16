@@ -9,7 +9,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { ReefIndexResults } from "../_config";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRaster } from "../metrics/overlapRaster";
 
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
 
@@ -34,7 +34,7 @@ export async function reefIndex(
   const metrics = await Promise.all(
     rasters.map(async (raster, index) => {
       const lyr = LAYERS[index];
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
         lyr.baseFilename,
         (reefIndexTotals as Record<string, number>)[lyr.baseFilename],

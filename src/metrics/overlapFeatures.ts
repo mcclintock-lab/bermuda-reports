@@ -8,12 +8,12 @@ import { chunk } from "../util/chunk";
 import { clip } from "../util/clip";
 
 /**
- * Calculates overlap between sketches and features, overall and per sketch
+ * Calculates overlap between sketches and features, including overall and per sketch
  * point - sum of points
  * linestring - sum of length
  * polygon - sum of area
  */
-export async function overlapStatsVector(
+export async function overlapFeatures(
   /** features to intersect and get overlap stats */
   features: Feature<Polygon | MultiPolygon>[],
   /** Name of class */

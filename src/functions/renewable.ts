@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { RenewableResults } from "../_config";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRaster } from "../metrics/overlapRaster";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 
@@ -30,7 +30,7 @@ export async function renewable(
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
         lyr.baseFilename,
         (renewableTotals as Record<string, number>)[lyr.baseFilename],

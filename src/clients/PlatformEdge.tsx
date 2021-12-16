@@ -12,7 +12,7 @@ import {
   capitalize,
 } from "@seasketch/geoprocessing/client";
 import { GroupCircleRow } from "../components/Circle";
-import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
+import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { Collapse } from "../components/Collapse";
 import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";

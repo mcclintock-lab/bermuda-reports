@@ -14,10 +14,10 @@ import config, {
 } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
-import { ClassMetricsSketch, SketchMetric } from "../util/types";
+import { ClassMetricsSketch, SketchMetric } from "../metrics/types";
 
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { getGroupMetrics } from "../util/metrics";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { getGroupMetrics } from "../metrics/metrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
@@ -39,7 +39,7 @@ export async function habitatNursery(
           `${config.dataBucketUrl}${lyr.filename}`,
           box
         );
-        return overlapStatsVector(
+        return overlapFeatures(
           featuresByClass[lyr.baseFilename],
           lyr.baseFilename,
           sketches,
