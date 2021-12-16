@@ -18,9 +18,12 @@ import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
 import { getBreakGroup } from "../util/getBreakGroup";
 import styled from "styled-components";
+import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 
-const LAYERS = config.platformEdge.layers;
-const LAYER = LAYERS[0];
+const precalcTotals = platformEdgeTotals as Record<string, number>;
+
+const CLASSES = config.platformEdge.classes;
+const CLASS = CLASSES[0];
 const BREAK_MAP = config.platformEdge.breakMap;
 
 const SmallTableStyled = styled.div`
@@ -48,7 +51,7 @@ const PlatformEdge = () => {
       skeleton={<LoadingSkeleton />}
     >
       {(data: PlatformEdgeResult) => {
-        const classMetric = data.byClass[LAYER.baseFilename];
+        const classMetric = data.byClass[CLASS.name];
 
         // Get aggregate sketch metric stats
         const totalCount = classMetric.sketchMetrics.length;
@@ -117,14 +120,17 @@ const PlatformEdge = () => {
         let sketchRows: GroupMetricSketchAgg[] = [];
         if (isCollection) {
           // Build agg group objects with percValue for each class
-          groupRows = getBreakGroupMetricsAgg(data.byGroup, LAYER.totalArea);
+          groupRows = getBreakGroupMetricsAgg(
+            data.byGroup,
+            precalcTotals[CLASS.name]
+          );
 
           // Build agg sketch group objects with percValue for each class
           // groupId, sketchId, lagoon, mangrove, seagrass, total
           sketchRows = flattenGroupSketch(
             data.byGroup,
-            LAYER.totalArea,
-            LAYERS
+            precalcTotals[CLASS.name],
+            CLASSES
           );
         }
 

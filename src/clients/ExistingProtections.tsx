@@ -26,7 +26,10 @@ const ExistingProtections = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: ExistingProtectionResults) => {
-          const sketchRows = flattenSketchAllClass(data.byClass, CONFIG.layers);
+          const sketchRows = flattenSketchAllClass(
+            data.byClass,
+            CONFIG.classes
+          );
           return (
             <>
               <p>
@@ -39,11 +42,14 @@ const ExistingProtections = () => {
                 rows={Object.values(data.byClass).sort((a, b) =>
                   a.name.localeCompare(b.name)
                 )}
-                classes={CONFIG.layers}
+                classes={CONFIG.classes}
               />
               {isCollection && (
                 <Collapse title="Show by MPA">
-                  <SketchClassTable rows={sketchRows} classes={CONFIG.layers} />
+                  <SketchClassTable
+                    rows={sketchRows}
+                    classes={CONFIG.classes}
+                  />
                 </Collapse>
               )}
             </>

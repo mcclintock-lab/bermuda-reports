@@ -11,14 +11,14 @@ import fetch from "node-fetch";
 
 import { strict as assert } from "assert";
 
-const LAYERS = config.reefIndex.layers;
+const LAYERS = config.reefIndex.classes;
 const DATASET = "reefIndex";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
   const totals = await Promise.all(
-    LAYERS.map(async (lyr) => {
-      const url = `${config.localDataUrl}${lyr.filename}`;
+    LAYERS.map(async (curClass) => {
+      const url = `${config.localDataUrl}${curClass.filename}`;
       const response = await fetch(url);
       const rasterBuf = await response.arrayBuffer();
       const raster = await parseGeoraster(rasterBuf);
@@ -30,7 +30,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [LAYERS[index].baseFilename]: total,
+      [LAYERS[index].name]: total,
     }),
     {}
   );

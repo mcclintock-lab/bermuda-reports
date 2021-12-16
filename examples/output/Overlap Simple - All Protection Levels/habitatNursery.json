@@ -1,42 +1,42 @@
 {
   "overall": {
-    "value": 18271613.43806828,
+    "value": 14710961.795261733,
     "percValue": 1
   },
   "byClass": {
-    "PatchReef_JoannaEdit": {
-      "name": "PatchReef_JoannaEdit",
+    "Nursery Reef": {
+      "name": "Nursery Reef",
       "value": 2027271.8351702024,
-      "percValue": 0.13326526587388773,
+      "percValue": 0.1739900612377739,
       "sketchMetrics": [
         {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
           "value": 1611235.8186861514,
-          "percValue": 0.1059166146530684
+          "percValue": 0.13828388176574358
         },
         {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
           "value": 973920.3334244265,
-          "percValue": 0.06402187902092316
+          "percValue": 0.0835864512659214
         },
         {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
           "value": 973920.3334244265,
-          "percValue": 0.06402187902092316
+          "percValue": 0.0835864512659214
         },
         {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
           "value": 1596930.4856124802,
-          "percValue": 0.10497623557691098
+          "percValue": 0.13705613039351291
         }
       ]
     },
-    "Mangrove_shp_2012": {
-      "name": "Mangrove_shp_2012",
+    "Mangrove": {
+      "name": "Mangrove",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -66,8 +66,8 @@
         }
       ]
     },
-    "Seagrass_2014_50mbuff": {
-      "name": "Seagrass_2014_50mbuff",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 612890.1643095777,
       "percValue": 0.2124572029946309,
       "sketchMetrics": [
@@ -100,25 +100,25 @@
   },
   "byLevel": {
     "full": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 973920.3334244265,
-        "percValue": 0.06402187902092316,
+        "percValue": 0.0835864512659214,
         "sketchMetrics": [
           {
             "id": "61a819ba9942fd4acf0d18d2",
             "name": "full MPA",
             "value": 973920.3334244265,
-            "percValue": 0.06402187902092316
+            "percValue": 0.0835864512659214
           },
           {
             "id": "61a81aad31c466cf4a062493",
             "name": "full MPA copy",
             "value": 973920.3334244265,
-            "percValue": 0.06402187902092316
+            "percValue": 0.0835864512659214
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -136,7 +136,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 474215.38441563497,
         "percValue": 0.16438585583024512,
         "sketchMetrics": [
@@ -156,19 +156,19 @@
       }
     },
     "high": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 1053351.501745521,
-        "percValue": 0.06924338685294781,
+        "percValue": 0.09040360997183065,
         "sketchMetrics": [
           {
             "id": "61a8155531c466cf4a0621a7",
             "name": "high MPA",
             "value": 1611235.8186861514,
-            "percValue": 0.1059166146530684
+            "percValue": 0.13828388176574358
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 105199.70841768029,
         "percValue": 0.03646727767519145,
         "sketchMetrics": [
@@ -194,7 +194,7 @@
       }
     },
     "low": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -202,11 +202,11 @@
             "id": "61a932cc9942fd4acf0d1e4a",
             "name": "low MPA",
             "value": 1596930.4856124802,
-            "percValue": 0.10497623557691098
+            "percValue": 0.13705613039351291
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -218,7 +218,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 33475.07147626246,
         "percValue": 0.011604069489194334,
         "sketchMetrics": [

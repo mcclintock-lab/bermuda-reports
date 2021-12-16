@@ -1,7 +1,7 @@
 {
   "byClass": {
-    "aquaculture_heatmap": {
-      "name": "aquaculture_heatmap",
+    "Aquaculture": {
+      "name": "Aquaculture",
       "value": 199.8930206298828,
       "percValue": 0.013350588185531859,
       "sketchMetrics": [
@@ -13,8 +13,8 @@
         }
       ]
     },
-    "boating_heatmap": {
-      "name": "boating_heatmap",
+    "Boating": {
+      "name": "Boating",
       "value": 16687.99516574852,
       "percValue": 0.03877808702779493,
       "sketchMetrics": [
@@ -26,8 +26,8 @@
         }
       ]
     },
-    "commercial_fishing_heatmap": {
-      "name": "commercial_fishing_heatmap",
+    "CommercialFishing": {
+      "name": "CommercialFishing",
       "value": 15161.36348934099,
       "percValue": 0.05117107368096787,
       "sketchMetrics": [
@@ -39,8 +39,8 @@
         }
       ]
     },
-    "passiverec_conservation_heatmap": {
-      "name": "passiverec_conservation_heatmap",
+    "PassiveRecreation_Conservation": {
+      "name": "PassiveRecreation_Conservation",
       "value": 10295.292414323427,
       "percValue": 0.0445971622435539,
       "sketchMetrics": [
@@ -52,8 +52,8 @@
         }
       ]
     },
-    "recreational_fishing_heatmap": {
-      "name": "recreational_fishing_heatmap",
+    "Recreational Fishing": {
+      "name": "Recreational Fishing",
       "value": 35717.26711301319,
       "percValue": 0.1545862360396347,
       "sketchMetrics": [
@@ -65,8 +65,8 @@
         }
       ]
     },
-    "shipping_heatmap": {
-      "name": "shipping_heatmap",
+    "Shipping": {
+      "name": "Shipping",
       "value": 423.6451639533043,
       "percValue": 0.028686259517122076,
       "sketchMetrics": [
@@ -78,8 +78,8 @@
         }
       ]
     },
-    "swim_snorkel_dive_heatmap": {
-      "name": "swim_snorkel_dive_heatmap",
+    "Swimming_Snorkeling_Diving": {
+      "name": "Swimming_Snorkeling_Diving",
       "value": 59601.02239459753,
       "percValue": 0.09710808383971778,
       "sketchMetrics": [
@@ -91,8 +91,8 @@
         }
       ]
     },
-    "tourism_heatmap": {
-      "name": "tourism_heatmap",
+    "Tourism": {
+      "name": "Tourism",
       "value": 700.3974488377571,
       "percValue": 0.034661564488815244,
       "sketchMetrics": [
@@ -104,8 +104,8 @@
         }
       ]
     },
-    "utilities_heatmap": {
-      "name": "utilities_heatmap",
+    "Utilities": {
+      "name": "Utilities",
       "value": 3.745968818664551,
       "percValue": 0.00024730871569941495,
       "sketchMetrics": [

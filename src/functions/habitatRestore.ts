@@ -18,7 +18,7 @@ import { overlapFeatures } from "../metrics/overlapFeatures";
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 
 const precalcTotals = habitatRestoreTotals as HabitatRestoreBaseResults;
-const LAYERS = config.habitatRestore.layers;
+const CLASSES = config.habitatRestore.classes;
 
 export async function habitatRestore(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -28,16 +28,16 @@ export async function habitatRestore(
 
   const classMetrics = (
     await Promise.all(
-      LAYERS.map(async (lyr) => {
+      CLASSES.map(async (curClass) => {
         const features = await fgbFetchAll<Feature<Polygon>>(
-          `${config.dataBucketUrl}${lyr.filename}`,
+          `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
         return overlapFeatures(
           features,
-          lyr.baseFilename,
+          curClass.name,
           sketches,
-          precalcTotals.byClass[lyr.baseFilename].value
+          precalcTotals.byClass[curClass.name].value
         );
       })
     )

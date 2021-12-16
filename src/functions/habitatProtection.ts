@@ -15,7 +15,7 @@ import { overlapRaster } from "../metrics/overlapRaster";
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
 
-const OFFSHORE_CLASSES = config.offshore.layers;
+const OFFSHORE_CLASSES = config.offshore.classes;
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -49,10 +49,8 @@ export async function habitatProtection(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        curClass.baseFilename,
-        (offshoreHabitatTotals as Record<string, number>)[
-          curClass.baseFilename
-        ],
+        curClass.name,
+        (offshoreHabitatTotals as Record<string, number>)[curClass.name],
         sketch
       );
     })

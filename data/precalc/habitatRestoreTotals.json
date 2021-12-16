@@ -4,13 +4,13 @@
     "percValue": 1
   },
   "byClass": {
-    "seagrass_restoration_500mbuff": {
-      "name": "seagrass_restoration_500mbuff",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 32670378.385694697,
       "percValue": 0.0784249834193706
     },
-    "mangrove_restoration_500mbuff": {
-      "name": "mangrove_restoration_500mbuff",
+    "Mangrove_Saltmarsh": {
+      "name": "Mangrove_Saltmarsh",
       "value": 383910881.3258027,
       "percValue": 0.9215750165806295
     }

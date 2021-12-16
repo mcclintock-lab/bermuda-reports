@@ -9,10 +9,10 @@ import {
 import bbox from "@turf/bbox";
 import config, { RenewableResults } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
-
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 
-const CLASSES = config.renewable.layers;
+const precalcTotals = renewableTotals as Record<string, number>;
+const CLASSES = config.renewable.classes;
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -32,8 +32,8 @@ export async function renewable(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        curClass.baseFilename,
-        (renewableTotals as Record<string, number>)[curClass.baseFilename],
+        curClass.name,
+        precalcTotals[curClass.name],
         sketch
       );
     })

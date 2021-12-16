@@ -9,6 +9,7 @@ import {
   SketchStat,
   CategoryStat,
   LevelStat,
+  MetricClassConfig,
 } from "../src/metrics/types";
 
 /**
@@ -47,6 +48,7 @@ export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
 const sizeNearshoreBaseFilename = "nearshore_dissolved";
 export const size = {
   baseFilename: sizeNearshoreBaseFilename,
+  name: "Nearshore",
   filename: `${sizeNearshoreBaseFilename}${fgbFileSuffix}`,
   layerId: "6164aebea04323106537eb5a",
 };
@@ -70,9 +72,8 @@ export interface ExistingProtectionResults {
 }
 
 // Single vector with multiple classes
-// Individual map layers for viz
 const existingProtectionBaseFilename = "existingProtections";
-export const existingProtectionLayers = [
+export const existingProtectionClasses: MetricClassConfig[] = [
   {
     name: "Ferry Route",
     display: "Ferry Routes",
@@ -153,7 +154,7 @@ export const existingProtectionLayers = [
 export const existingProtection = {
   baseFilename: existingProtectionBaseFilename,
   filename: `${existingProtectionBaseFilename}${fgbFileSuffix}`,
-  layers: existingProtectionLayers,
+  classes: existingProtectionClasses,
   nameProperty: "Name",
   classProperty: "Type",
 };
@@ -167,7 +168,7 @@ export interface HabitatResults {
 
 // Categorical raster
 const nearshoreBaseFilename = "Habitat Zones1";
-const nearshoreLayers = [
+const nearshoreClasses: MetricClassConfig[] = [
   {
     classId: "1",
     name: "Bays and Coast",
@@ -252,17 +253,21 @@ export const nearshore = {
   baseFilename: nearshoreBaseFilename,
   filename: `${nearshoreBaseFilename}${cogFileSuffix}`,
   layerId: "614df361c33508c127015a1c",
-  layers: nearshoreLayers,
-  classIdToName: nearshoreLayers.reduce<Record<string, string>>(
-    (acc, lyr) => ({ ...acc, [lyr.classId]: lyr.name }),
+  classes: nearshoreClasses,
+  classIdToName: nearshoreClasses.reduce<Record<string, string>>(
+    (acc, curClass) => ({
+      ...acc,
+      ...(curClass.classId ? { [curClass.classId]: curClass.name } : {}),
+    }),
     {}
   ),
 };
 
-export const offshoreLayers = [
+export const offshoreClasses: MetricClassConfig[] = [
   {
     baseFilename: "feature_abyssopelagic",
     noDataValue: -3.39999995214436425e38,
+    name: "Abyssopelagic",
     display: "Abyssopelagic",
     layerId: "61771f5ae9125f452fe759f8",
     goalPerc: 0.2,
@@ -270,6 +275,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Bathypelagic1",
     noDataValue: -3.39999995214436425e38,
+    name: "Bathypelagic",
     display: "Bathypelagic",
     layerId: "614df361c33508c1270159f2",
     goalPerc: 0.2,
@@ -277,6 +283,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Cold water coral1",
     noDataValue: -3.39999995214436425e38,
+    name: "Cold water coral",
     display: "Cold water coral",
     layerId: "614df361c33508c1270159f4",
     goalPerc: 1,
@@ -284,6 +291,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Escarpments1",
     noDataValue: -3.39999995214436425e38,
+    name: "Escarpments",
     display: "Escarpments",
     layerId: "614df361c33508c1270159f6",
     goalPerc: 0.2,
@@ -291,6 +299,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Knolls1",
     noDataValue: -3.39999995214436425e38,
+    name: "Knolls",
     display: "Knolls",
     layerId: "614df361c33508c1270159f8",
     goalPerc: 0.2,
@@ -298,6 +307,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Pelagic zone 1",
     noDataValue: -3.39999995214436425e38,
+    name: "Pelagic zone 1",
     display: "Pelagic zone 1",
     layerId: "614df361c33508c1270159fc",
     goalPerc: 0.2,
@@ -305,6 +315,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Pelagic zone 2",
     noDataValue: -3.39999995214436425e38,
+    name: "Pelagic zone 2",
     display: "Pelagic zone 2",
     layerId: "614df361c33508c1270159fe",
     goalPerc: 0.2,
@@ -312,6 +323,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Pelagic zone 3",
     noDataValue: -3.39999995214436425e38,
+    name: "Pelagic zone 3",
     display: "Pelagic zone 3",
     layerId: "614df361c33508c127015a00",
     goalPerc: 0.2,
@@ -319,6 +331,7 @@ export const offshoreLayers = [
   {
     baseFilename: "Plains",
     noDataValue: -3.39999995214436425e38,
+    name: "Plains",
     display: "Plains",
     layerId: "614df361c33508c127015a02a",
     goalPerc: 0.1,
@@ -326,6 +339,7 @@ export const offshoreLayers = [
   {
     baseFilename: "seamounts_buffered",
     noDataValue: -3.39999995214436425e38,
+    name: "Seamounts",
     display: "Seamounts",
     layerId: "61771fcde9125f452fe75b01",
     goalPerc: 0.4,
@@ -333,8 +347,11 @@ export const offshoreLayers = [
 ];
 
 export const offshore = {
-  layers: offshoreLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  classes: offshoreClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${cogFileSuffix}`,
+    };
   }),
 };
 
@@ -344,10 +361,11 @@ export interface ReefIndexResults {
   reefIndex: ClassMetricsSketch;
 }
 
-export const reefIndexLayers = [
+export const reefIndexClasses: MetricClassConfig[] = [
   {
     baseFilename: "wgs84_Coral cover1",
     noDataValue: -3.39999995214436425e38,
+    name: "Coral Cover",
     display: "Coral Cover",
     layerId: "614df361c33508c127015a20",
     goalPerc: 0.2,
@@ -355,6 +373,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Coral diversity (richness)1",
     noDataValue: -3.39999995214436425e38,
+    name: "Coral Diversity",
     display: "Coral Diversity (richness)",
     layerId: "614df361c33508c127015a22",
     goalPerc: 0.2,
@@ -362,6 +381,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Coral recruit density1",
     noDataValue: -3.39999995214436425e38,
+    name: "Coral Recruit Density",
     display: "Coral Recruit Density",
     layerId: "614df361c33508c127015a24",
     goalPerc: 0.2,
@@ -369,6 +389,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Rugosity1",
     noDataValue: -3.39999995214436425e38,
+    name: "Rugosity",
     display: "Rugosity (complexity)",
     layerId: "614df361c33508c127015a26",
     goalPerc: 0.2,
@@ -376,6 +397,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Fish diversity (BRUVs data)1",
     noDataValue: -3.39999995214436425e38,
+    name: "Fish Diversity BRUV",
     display: "Fish Diversity (BRUV)",
     layerId: "614df361c33508c127015a14",
     goalPerc: 0.2,
@@ -383,6 +405,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Fish density1",
     noDataValue: -3.39999995214436425e38,
+    name: "Fish Density",
     display: "Fish Density",
     layerId: "614df361c33508c127015a18",
     goalPerc: 0.2,
@@ -390,6 +413,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Fish diversity (BREAM data)1",
     noDataValue: -3.39999995214436425e38,
+    name: "Fish Diversity BREAM",
     display: "Fish Diversity (BREAM)",
     layerId: "614df361c33508c127015a16",
     goalPerc: 0.2,
@@ -397,6 +421,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Fish recruit density1",
     noDataValue: -3.39999995214436425e38,
+    name: "Fish Recruit Density",
     display: "Fish Recruit Density",
     layerId: "614df361c33508c127015a1a",
     goalPerc: 0.2,
@@ -404,6 +429,7 @@ export const reefIndexLayers = [
   {
     baseFilename: "wgs84_Seagrass Index Value1",
     noDataValue: -3.39999995214436425e38,
+    name: "Seagrass",
     display: "Seagrass",
     layerId: "614df361c33508c127015a1e",
     goalPerc: 0.5,
@@ -411,8 +437,11 @@ export const reefIndexLayers = [
 ];
 
 export const reefIndex = {
-  layers: reefIndexLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  classes: reefIndexClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${cogFileSuffix}`,
+    };
   }),
 };
 
@@ -426,36 +455,43 @@ export interface RenewableResults {
   renewable: ClassMetricsSketch;
 }
 
-export const renewableLayers = [
+export const renewableClasses: MetricClassConfig[] = [
   {
     baseFilename: "float_solar1",
     noDataValue: -3.39999995214436425e38,
+    name: "Floating Solar",
     display: "Floating Solar",
     layerId: "6185c0f7cef7c17717464da5",
   },
   {
     baseFilename: "wind_fixed1",
     noDataValue: -3.39999995214436425e38,
+    name: "Fixed Offshore Wind",
     display: "Fixed Offshore Wind",
     layerId: "6185c0f7cef7c17717464da3",
   },
   {
     baseFilename: "wind_float1",
     noDataValue: -3.39999995214436425e38,
+    name: "Floating Offshore Wind",
     display: "Floating Offshore Wind",
     layerId: "6185c0f7cef7c17717464da1",
   },
   {
     baseFilename: "wave_energy1",
     noDataValue: -3.39999995214436425e38,
+    name: "Wave Energy",
     display: "Wave Energy",
     layerId: "6185c0f7cef7c17717464d9f",
   },
 ];
 
 export const renewable = {
-  layers: renewableLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  classes: renewableClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${cogFileSuffix}`,
+    };
   }),
 };
 
@@ -470,22 +506,27 @@ export interface HabitatRestoreResults extends HabitatRestoreBaseResults {
   byClass: ClassMetricsSketch;
 }
 
-const habitatRestoreLayers = [
+const habitatRestoreClasses: MetricClassConfig[] = [
   {
     baseFilename: "seagrass_restoration_500mbuff",
+    name: "Seagrass",
     display: "Seagrass",
     layerId: "6185c0f7cef7c17717464d9d",
   },
   {
     baseFilename: "mangrove_restoration_500mbuff",
+    name: "Mangrove_Saltmarsh",
     display: "Mangrove/Saltmarsh",
     layerId: "6185c0f7cef7c17717464d9b",
   },
 ];
 
 export const habitatRestore = {
-  layers: habitatRestoreLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
+  classes: habitatRestoreClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+    };
   }),
 };
 
@@ -502,27 +543,33 @@ export interface HabitatNurseryLevelResults extends HabitatNurseryResults {
   byLevel: GroupMetricsSketch;
 }
 
-const habitatNurseryLayers = [
+const habitatNurseryClasses: MetricClassConfig[] = [
   {
     baseFilename: "PatchReef_JoannaEdit",
+    name: "Nursery Reef",
     display: "Nursery Reef",
     layerId: "619420a12633975e13933fe0",
   },
   {
     baseFilename: "Mangrove_shp_2012",
+    name: "Mangrove",
     display: "Mangrove",
     layerId: "5dc07170cae3e4074e65170b",
   },
   {
     baseFilename: "Seagrass_2014_50mbuff",
+    name: "Seagrass",
     display: "Seagrass",
     layerId: "5dc07170cae3e4074e651711",
   },
 ];
 
 export const habitatNursery = {
-  layers: habitatNurseryLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
+  classes: habitatNurseryClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+    };
   }),
 };
 
@@ -532,57 +579,69 @@ export interface OceanUseResults {
   byClass: ClassMetricsSketch;
 }
 
-const oceanUseLayers = [
+const oceanUseClasses: MetricClassConfig[] = [
   {
     baseFilename: "aquaculture_heatmap",
+    name: "Aquaculture",
     display: "Aquaculture",
     layerId: "60ef55245bf512cb19da4d04",
   },
   {
     baseFilename: "boating_heatmap",
+    name: "Boating",
     display: "Boating",
     layerId: "60ef55245bf512cb19da4d0a",
   },
   {
     baseFilename: "commercial_fishing_heatmap",
+    name: "CommercialFishing",
     display: "Commercial Fishing",
     layerId: "61648ab8a04323106537d190",
   },
   {
     baseFilename: "passiverec_conservation_heatmap",
+    name: "PassiveRecreation_Conservation",
     display: "Passive Recreation / Conservation",
     layerId: "60ef55245bf512cb19da4d10",
   },
   {
     baseFilename: "recreational_fishing_heatmap",
+    name: "Recreational Fishing",
     display: "Recreational Fishing",
     layerId: "60ef55245bf512cb19da4d02",
   },
   {
     baseFilename: "shipping_heatmap",
+    name: "Shipping",
     display: "Shipping",
     layerId: "61648ab8a04323106537d198",
   },
   {
     baseFilename: "swim_snorkel_dive_heatmap",
+    name: "Swimming_Snorkeling_Diving",
     display: "Swimming / Snorkeling / Diving",
     layerId: "60ef55245bf512cb19da4d0e",
   },
   {
     baseFilename: "tourism_heatmap",
+    name: "Tourism",
     display: "Tourism",
     layerId: "60ef55245bf512cb19da4d0c",
   },
   {
     baseFilename: "utilities_heatmap",
+    name: "Utilities",
     display: "Utilities",
     layerId: "61648ab8a04323106537d196",
   },
 ];
 
 export const oceanUse = {
-  layers: oceanUseLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${cogFileSuffix}` };
+  classes: oceanUseClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${cogFileSuffix}`,
+    };
   }),
 };
 
@@ -613,12 +672,12 @@ export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
   byGroup: EdgeGroupMetricsSketch;
 }
 
-const platformEdgeLayers = [
+const platformEdgeClasses: MetricClassConfig[] = [
   {
     baseFilename: "Pelagic_Fishing_Zone_Dissolved",
+    name: "Platform Edge",
     display: "Platform Edge",
     layerId: "6164aebea04323106537eb5c",
-    totalArea: 1734231963.998059,
   },
 ];
 
@@ -639,8 +698,11 @@ const breakMap: Record<string, number> = {
 };
 
 export const platformEdge = {
-  layers: platformEdgeLayers.map((lyr) => {
-    return { ...lyr, filename: `${lyr.baseFilename}${fgbFileSuffix}` };
+  classes: platformEdgeClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+    };
   }),
   fishingActivities,
   breakMap,

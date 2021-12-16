@@ -24,7 +24,7 @@ const SpeciesProtection = () => {
         {(data: RenewableResults) => {
           const sketchRows = flattenSketchAllClass(
             data.renewable,
-            CONFIG.layers
+            CONFIG.classes
           );
           return (
             <>
@@ -57,11 +57,14 @@ const SpeciesProtection = () => {
               <ClassTable
                 titleText="Type"
                 rows={Object.values(data.renewable)}
-                classes={CONFIG.layers}
+                classes={CONFIG.classes}
               />
               {isCollection && (
                 <Collapse title="Show by MPA">
-                  <SketchClassTable rows={sketchRows} classes={CONFIG.layers} />
+                  <SketchClassTable
+                    rows={sketchRows}
+                    classes={CONFIG.classes}
+                  />
                 </Collapse>
               )}
             </>

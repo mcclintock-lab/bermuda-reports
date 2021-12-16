@@ -46,7 +46,7 @@ const HabitatProtection = () => {
                 ).sort((a: ClassMetricSketch, b: ClassMetricSketch) =>
                   a.name.localeCompare(b.name)
                 )}
-                classes={config.nearshore.layers}
+                classes={config.nearshore.classes}
                 showGoal
               />
               {isCollection && (
@@ -57,7 +57,7 @@ const HabitatProtection = () => {
               <ClassTable
                 titleText="Offshore"
                 rows={Object.values(data.offshore)}
-                classes={config.offshore.layers}
+                classes={config.offshore.classes}
                 showGoal
               />
               {isCollection && (
@@ -77,10 +77,10 @@ const genNearshoreSketchTable = (data: HabitatResults) => {
   // Build agg sketch group objects with percValue for each class
   const sketchRows = flattenSketchAllClass(
     data.nearshore,
-    config.nearshore.layers
+    config.nearshore.classes
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.nearshore.layers} />
+    <SketchClassTable rows={sketchRows} classes={config.nearshore.classes} />
   );
 };
 
@@ -88,10 +88,10 @@ const genOffshoreSketchTable = (data: HabitatResults) => {
   // Build agg sketch group objects with percValue for each class
   const sketchRows = flattenSketchAllClass(
     data.offshore,
-    config.offshore.layers
+    config.offshore.classes
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.offshore.layers} />
+    <SketchClassTable rows={sketchRows} classes={config.offshore.classes} />
   );
 };
 

@@ -15,7 +15,7 @@ import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
 
 // Define at module level for potential cache and reuse by Lambda
 let rasters: Georaster[];
-const CLASSES = config.reefIndex.layers;
+const CLASSES = config.reefIndex.classes;
 
 export async function reefIndex(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -36,8 +36,8 @@ export async function reefIndex(
       const curClass = CLASSES[index];
       return overlapRaster(
         raster,
-        curClass.baseFilename,
-        (reefIndexTotals as Record<string, number>)[curClass.baseFilename],
+        curClass.name,
+        (reefIndexTotals as Record<string, number>)[curClass.name],
         sketch
       );
     })

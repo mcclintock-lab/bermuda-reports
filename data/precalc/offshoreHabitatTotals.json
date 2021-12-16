@@ -1,12 +1,12 @@
 {
-  "feature_abyssopelagic": 6093,
-  "Bathypelagic1": 124,
-  "Cold water coral1": 9,
-  "Escarpments1": 103,
-  "Knolls1": 1587,
+  "Abyssopelagic": 6093,
+  "Bathypelagic": 124,
+  "Cold water coral": 9,
+  "Escarpments": 103,
+  "Knolls": 1587,
   "Pelagic zone 1": 2979,
   "Pelagic zone 2": 1529,
   "Pelagic zone 3": 2601,
   "Plains": 5481,
-  "seamounts_buffered": 379
+  "Seamounts": 379
 }

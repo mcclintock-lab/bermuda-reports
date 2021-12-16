@@ -1,30 +1,30 @@
 {
   "overall": {
-    "value": 18271613.43806828,
+    "value": 14710961.795261733,
     "percValue": 1
   },
   "byClass": {
-    "PatchReef_JoannaEdit": {
-      "name": "PatchReef_JoannaEdit",
+    "Nursery Reef": {
+      "name": "Nursery Reef",
       "value": 11648327.62559769,
-      "percValue": 0.7657174785744016,
+      "percValue": 0.9997145926536496,
       "sketchMetrics": [
         {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
           "value": 11648327.62559769,
-          "percValue": 0.7657174785744016
+          "percValue": 0.9997145926536496
         },
         {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
           "value": 4062595.4425024344,
-          "percValue": 0.26705982512585796
+          "percValue": 0.34867116366067163
         }
       ]
     },
-    "Mangrove_shp_2012": {
-      "name": "Mangrove_shp_2012",
+    "Mangrove": {
+      "name": "Mangrove",
       "value": 10599.046396714139,
       "percValue": 0.06072605057369667,
       "sketchMetrics": [
@@ -42,8 +42,8 @@
         }
       ]
     },
-    "Seagrass_2014_50mbuff": {
-      "name": "Seagrass_2014_50mbuff",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 2846838.338304913,
       "percValue": 0.9868510639512198,
       "sketchMetrics": [
@@ -64,19 +64,19 @@
   },
   "byLevel": {
     "full": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 11648327.62559769,
-        "percValue": 0.7657174785744016,
+        "percValue": 0.9997145926536496,
         "sketchMetrics": [
           {
             "id": "617e59f3198e046808b50fb2",
             "name": "Gigantic MPA",
             "value": 11648327.62559769,
-            "percValue": 0.7657174785744016
+            "percValue": 0.9997145926536496
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 10599.046396714139,
         "percValue": 0.06072605057369667,
         "sketchMetrics": [
@@ -88,7 +88,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 2846838.338304913,
         "percValue": 0.9868510639512198,
         "sketchMetrics": [
@@ -102,7 +102,7 @@
       }
     },
     "high": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -110,11 +110,11 @@
             "id": "619834683ff3e57f7333d93d",
             "name": "Gigantic MPA 2",
             "value": 4062595.4425024344,
-            "percValue": 0.26705982512585796
+            "percValue": 0.34867116366067163
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -126,7 +126,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -140,17 +140,17 @@
       }
     },
     "low": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []

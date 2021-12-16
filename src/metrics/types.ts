@@ -1,20 +1,28 @@
-// ValueMetric is the core metric representation
-// It can related to a class of data or a sketch
-//
-
-export interface ClassConfig {
-  /** filename of dataset, sans extension.  Also used as unique name for class in some cases, ToDo stop using this way */
-  baseFilename?: string;
+/**
+ * Defines a single class of data and its representation, which may be a
+ * single standalone dataset or part of a larger multi-class dataset
+ */
+export interface MetricClassConfig {
   /** Unique name for class.  ToDo: consolidate on this for unique name */
-  name?: string;
+  name: string;
   /** Name of class suitable for user display */
   display: string;
-  /** ID of map layer associated with this class, used for ToggleLayer */
+  /** Optional filename of dataset, sans extension.  Also used as unique name for class in some cases, ToDo stop using this way */
+  baseFilename?: string;
+  /** Optional unique integer used by raster datasets to represent class */
+  classId?: string;
+  /** Optional ID of map layer associated with this class */
   layerId?: string;
+  /** Optional nodata value used by raster dataset */
+  noDataValue?: number;
+  /** Optional project specific goal for this class */
   goalPerc?: number;
 }
 
-/** Properties for representing metric value and perc value, such as area or sum */
+/**
+ * Properties for representing metric value and perc value, such as area or sum
+ * ValueMetric is the core metric representation. It can related to a class of data or a sketch
+ */
 export interface ValueMetric {
   /** The raw metric value, the heart of it all */
   value: number;

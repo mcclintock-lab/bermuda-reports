@@ -14,7 +14,7 @@ import config, {
   ExistingProtectionBaseResults,
   ExistingProtectionResults,
 } from "../_config";
-import legislatedAreaTotals from "../../data/precalc/existingProtectionTotals.json";
+import legislatedAreaTotals from "../../data/precalc/existingProtectionsTotals.json";
 
 // Multi-class vector dataset
 export type ExistingProtectionProperties = {
@@ -41,7 +41,7 @@ export async function existingProtections(
 
   const classMetrics = (
     await Promise.all(
-      CONFIG.layers.map(async (curClass) => {
+      CONFIG.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
         const classFeatures = features.filter(
           (feat: any) =>

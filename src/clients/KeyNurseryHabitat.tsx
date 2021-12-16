@@ -40,6 +40,8 @@ import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
+const CONFIG = config.habitatNursery;
+
 const TableStyled = styled.div`
   .styled {
     td {
@@ -123,7 +125,7 @@ const genSingle = (
         flattenGroupSketch(
           data.byLevel,
           precalcTotals.overall.value,
-          config.habitatNursery.layers
+          CONFIG.classes
         )[0].percValue
       )}
       {genHabitatTable(Object.values(data.byClass))}
@@ -144,7 +146,7 @@ const genNetwork = (data: HabitatNurseryLevelResults) => {
   const sketchRows = flattenGroupSketch(
     data.byLevel,
     precalcTotals.overall.value,
-    config.habitatNursery.layers
+    CONFIG.classes
   );
 
   return (
@@ -161,10 +163,10 @@ const genNetwork = (data: HabitatNurseryLevelResults) => {
 const genHabitatToggles = () => {
   return (
     <>
-      {config.habitatNursery.layers.map((lyr) => (
+      {CONFIG.classes.map((curClass) => (
         <LayerToggle
-          label={`Show ${lyr.display} Layer`}
-          layerId={lyr.layerId}
+          label={`Show ${curClass.display} Layer`}
+          layerId={curClass.layerId}
         />
       ))}
     </>
@@ -172,10 +174,10 @@ const genHabitatToggles = () => {
 };
 
 const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
-  const classColumns: Column<GroupMetricSketchAgg>[] = config.habitatNursery.layers.map(
-    (lyr) => ({
-      Header: lyr.display,
-      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
+  const classColumns: Column<GroupMetricSketchAgg>[] = CONFIG.classes.map(
+    (curClass) => ({
+      Header: curClass.display,
+      accessor: (row) => percentWithEdge(row[curClass.name] as number),
     })
   );
 
@@ -211,10 +213,10 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
 };
 
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
-  const classColumns: Column<GroupMetricAgg>[] = config.habitatNursery.layers.map(
-    (lyr) => ({
-      Header: lyr.display,
-      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
+  const classColumns: Column<GroupMetricAgg>[] = CONFIG.classes.map(
+    (curClass) => ({
+      Header: curClass.display,
+      accessor: (row) => percentWithEdge(row[curClass.name] as number),
       style: { width: "10%" },
     })
   );
@@ -260,8 +262,8 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
 };
 
 const genHabitatTable = (data: ClassMetric[]) => {
-  const layers = config.habitatNursery.layers;
-  const classConfig = keyBy(layers, (lyr) => lyr.baseFilename);
+  const layers = CONFIG.classes;
+  const classConfig = keyBy(layers, (curClass) => curClass.name);
 
   const columns: Column<ClassMetric>[] = [
     {

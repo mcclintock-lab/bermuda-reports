@@ -7,7 +7,7 @@ import { strict as assert } from "assert";
 import area from "@turf/area";
 import { featureCollection } from "@turf/helpers";
 
-const CLASSES = config.existingProtection.layers;
+const CLASSES = config.existingProtection.classes;
 const DATASET = `existingProtections`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
 

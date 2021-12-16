@@ -14,7 +14,7 @@ import config, { OceanUseResults } from "../_config";
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
 
 // Define at module level for potential cache and reuse by Lambda
-const CLASSES = config.oceanUse.layers;
+const CLASSES = config.oceanUse.classes;
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -34,8 +34,8 @@ export async function oceanUse(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        curClass.baseFilename,
-        (oceanUseTotals as Record<string, number>)[curClass.baseFilename],
+        curClass.name,
+        (oceanUseTotals as Record<string, number>)[curClass.name],
         sketch
       );
     })

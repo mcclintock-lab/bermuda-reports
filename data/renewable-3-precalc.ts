@@ -9,15 +9,17 @@ import { loadCogWindow } from "../src/datasources/cog";
 
 import { strict as assert } from "assert";
 
-const LAYERS = config.renewable.layers;
+const LAYERS = config.renewable.classes;
 const DATASET = "renewable";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
   const totals = await Promise.all(
-    LAYERS.map(async (lyr) => {
-      const url = `${config.localDataUrl}${lyr.filename}`;
-      const raster = await loadCogWindow(url, { noDataValue: lyr.noDataValue }); // Load wole raster
+    LAYERS.map(async (curClass) => {
+      const url = `${config.localDataUrl}${curClass.filename}`;
+      const raster = await loadCogWindow(url, {
+        noDataValue: curClass.noDataValue,
+      }); // Load wole raster
       const sum = geoblaze.sum(raster)[0] as number;
       return sum;
     })
@@ -26,7 +28,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [LAYERS[index].baseFilename]: total,
+      [LAYERS[index].name]: total,
     }),
     {}
   );
