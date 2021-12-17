@@ -1,14 +1,37 @@
 /**
- * Defines a single class of data and its representation, which may be a
- * single standalone dataset or part of a larger multi-class dataset
+ * Represents a grouping of data, used by a report to calculate a metric.
+ * This interface is murky but it supports a variety of scenarios
+ * for mapping one or more feature classes to datasources:
+ * - Vector dataset with one feature class
+ * - Vector dataset with multiple feature class, each with their own datasource for analysis, and possibly only one layerId for display
+ * - Vector dataset with multiple feature classes, in one datasource, each class with its own layerId
+ * - Raster with multiple feature classes represented by unique integer values
  */
-export interface MetricClassConfig {
+export interface DataGroup {
+  /** data classes used by report group */
+  classes: DataClass[];
+  /** Optional filename of dataset, sans extension. May contain data for one or more classes */
+  baseFilename?: string;
+  /** Optional filename of dataset for use by GP function, with extension */
+  filename?: string;
+  /** Optional ID of map layer associated with this metric */
+  layerId?: string;
+  /** Optional mapping of class integer ID to its name */
+  classIdToName?: Record<string, string>;
+}
+
+/**
+ * Represents a single class of data and its source
+ */
+export interface DataClass {
   /** Unique name for class.  ToDo: consolidate on this for unique name */
   name: string;
   /** Name of class suitable for user display */
   display: string;
-  /** Optional filename of dataset, sans extension.  Also used as unique name for class in some cases, ToDo stop using this way */
+  /** Optional filename of dataset used for metric class, sans extension. */
   baseFilename?: string;
+  /** Optional filename of dataset for metric class for use by GP function, with extension. */
+  filename?: string;
   /** Optional unique integer used by raster datasets to represent class */
   classId?: string;
   /** Optional ID of map layer associated with this class */

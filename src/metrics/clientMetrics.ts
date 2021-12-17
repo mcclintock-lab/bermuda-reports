@@ -4,7 +4,7 @@ import {
   GroupMetricSketchAgg,
   SketchMetric,
   ClassMetricsSketch,
-  MetricClassConfig,
+  DataClass,
 } from "./types";
 
 /**
@@ -12,12 +12,12 @@ import {
  */
 
 /**
- * Sort function to sort MetricClassConfig alphabetically by display name
+ * Sort function to sort report data classes alphabetically by display name
  * @param a
  * @param b
  * @returns
  */
-const classSortAlphaDisplay = (a: MetricClassConfig, b: MetricClassConfig) => {
+const classSortAlphaDisplay = (a: DataClass, b: DataClass) => {
   const aName = a.display;
   const bName = b.display;
   return aName.localeCompare(bName);
@@ -68,7 +68,7 @@ export const flattenGroup = (
 export const flattenGroupSketch = (
   groupMetrics: GroupMetricsSketch,
   totalValue: number,
-  classes: MetricClassConfig[]
+  classes: DataClass[]
 ): GroupMetricSketchAgg[] => {
   // For each group
   let sketchRows: GroupMetricSketchAgg[] = [];
@@ -122,7 +122,7 @@ export const flattenGroupSketch = (
  */
 export const flattenClassSketch = (
   classMetrics: ClassMetricsSketch,
-  classes: MetricClassConfig[]
+  classes: DataClass[]
 ) => {
   // Inspect first class to get list of sketches
   const sketches = Object.values(classMetrics)[0].sketchMetrics.map((sm) => ({
@@ -158,9 +158,9 @@ export const flattenClassSketch = (
  */
 export const flattenSketchAllClass = (
   classMetrics: ClassMetricsSketch,
-  classes: MetricClassConfig[],
+  classes: DataClass[],
   /** function to sort class configs using Array.sort, defaults to alphabetical by display name */
-  sortFn?: (a: MetricClassConfig, b: MetricClassConfig) => number
+  sortFn?: (a: DataClass, b: DataClass) => number
 ) => {
   // Inspect first class to get list of sketches
   const sketches = Object.values(classMetrics)[0].sketchMetrics.map((sm) => ({

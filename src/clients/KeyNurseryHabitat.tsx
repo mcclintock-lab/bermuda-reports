@@ -262,13 +262,12 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
 };
 
 const genHabitatTable = (data: ClassMetric[]) => {
-  const layers = CONFIG.classes;
-  const classConfig = keyBy(layers, (curClass) => curClass.name);
+  const classesByName = keyBy(CONFIG.classes, (curClass) => curClass.name);
 
   const columns: Column<ClassMetric>[] = [
     {
       Header: "Habitat Type",
-      accessor: (row) => classConfig[row.name].display,
+      accessor: (row) => classesByName[row.name].display,
       style: { width: "30%" },
     },
     {
@@ -281,7 +280,7 @@ const genHabitatTable = (data: ClassMetric[]) => {
       accessor: (row) => (
         <LayerToggle
           simple
-          layerId={classConfig[row.name].layerId}
+          layerId={classesByName[row.name].layerId}
           style={{ marginTop: 0, marginLeft: 15 }}
         />
       ),

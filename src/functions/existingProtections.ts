@@ -17,9 +17,11 @@ import config, {
 import legislatedAreaTotals from "../../data/precalc/existingProtectionsTotals.json";
 
 // Multi-class vector dataset
+export const nameProperty = "Name";
+export const classProperty = "Type";
 export type ExistingProtectionProperties = {
-  ["Name"]: string;
-  ["Type"]: string;
+  [nameProperty]: string;
+  [classProperty]: string;
 };
 export type ExistingProtectionFeature = Feature<
   Polygon,
@@ -43,13 +45,11 @@ export async function existingProtections(
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
-        const classFeatures = features.filter(
-          (feat: any) =>
-            feat.geometry &&
-            feat.properties[config.existingProtection.classProperty] ===
-              curClass.name,
-          []
-        );
+        const classFeatures = features.filter((feat) => {
+          return (
+            feat.geometry && feat.properties[classProperty] === curClass.name
+          );
+        }, []);
         return overlapFeatures(
           classFeatures,
           curClass.name,

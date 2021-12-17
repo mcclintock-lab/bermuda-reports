@@ -7,7 +7,7 @@ import {
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
-import config from "../functions/existingProtectionsConfig";
+import config from "../_config";
 import { ExistingProtectionResults } from "../_config";
 import { flattenSketchAllClass } from "../metrics/clientMetrics";
 // Import the results type definition from your functions to type-check your

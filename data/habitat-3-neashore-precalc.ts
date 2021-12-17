@@ -14,6 +14,9 @@ async function main() {
 
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
+    if (!CONFIG.classIdToName) {
+      throw new Error("Expected classIdToName to be configured");
+    }
     const stats = await countByClass(raster, {
       classIdToName: CONFIG.classIdToName,
     });

@@ -9,7 +9,8 @@ import {
   SketchStat,
   CategoryStat,
   LevelStat,
-  MetricClassConfig,
+  DataGroup,
+  DataClass,
 } from "../src/metrics/types";
 
 /**
@@ -45,12 +46,22 @@ export const objectives = {
 export type AreaResultType = "eez" | "nearshore" | "offshore";
 export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
 
-const sizeNearshoreBaseFilename = "nearshore_dissolved";
-export const size = {
-  baseFilename: sizeNearshoreBaseFilename,
-  name: "Nearshore",
-  filename: `${sizeNearshoreBaseFilename}${fgbFileSuffix}`,
-  layerId: "6164aebea04323106537eb5a",
+const sizeClasses: DataClass[] = [
+  {
+    baseFilename: "nearshore_dissolved",
+    name: "Nearshore",
+    display: "Nearshore",
+    layerId: "6164aebea04323106537eb5a",
+  },
+];
+
+export const size: DataGroup = {
+  classes: sizeClasses.map((curClass) => {
+    return {
+      ...curClass,
+      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+    };
+  }),
 };
 
 //// PROTECTION ////
@@ -73,7 +84,7 @@ export interface ExistingProtectionResults {
 
 // Single vector with multiple classes
 const existingProtectionBaseFilename = "existingProtections";
-export const existingProtectionClasses: MetricClassConfig[] = [
+export const existingProtectionClasses: DataClass[] = [
   {
     name: "Ferry Route",
     display: "Ferry Routes",
@@ -151,12 +162,10 @@ export const existingProtectionClasses: MetricClassConfig[] = [
   },
 ];
 
-export const existingProtection = {
+export const existingProtection: DataGroup = {
   baseFilename: existingProtectionBaseFilename,
   filename: `${existingProtectionBaseFilename}${fgbFileSuffix}`,
   classes: existingProtectionClasses,
-  nameProperty: "Name",
-  classProperty: "Type",
 };
 
 //// HABITAT ////
@@ -168,7 +177,7 @@ export interface HabitatResults {
 
 // Categorical raster
 const nearshoreBaseFilename = "Habitat Zones1";
-const nearshoreClasses: MetricClassConfig[] = [
+const nearshoreClasses: DataClass[] = [
   {
     classId: "1",
     name: "Bays and Coast",
@@ -249,7 +258,7 @@ const nearshoreClasses: MetricClassConfig[] = [
   },
 ];
 
-export const nearshore = {
+export const nearshore: DataGroup = {
   baseFilename: nearshoreBaseFilename,
   filename: `${nearshoreBaseFilename}${cogFileSuffix}`,
   layerId: "614df361c33508c127015a1c",
@@ -263,7 +272,7 @@ export const nearshore = {
   ),
 };
 
-export const offshoreClasses: MetricClassConfig[] = [
+export const offshoreClasses: DataClass[] = [
   {
     baseFilename: "feature_abyssopelagic",
     noDataValue: -3.39999995214436425e38,
@@ -346,7 +355,7 @@ export const offshoreClasses: MetricClassConfig[] = [
   },
 ];
 
-export const offshore = {
+export const offshore: DataGroup = {
   classes: offshoreClasses.map((curClass) => {
     return {
       ...curClass,
@@ -361,7 +370,7 @@ export interface ReefIndexResults {
   reefIndex: ClassMetricsSketch;
 }
 
-export const reefIndexClasses: MetricClassConfig[] = [
+export const reefIndexClasses: DataClass[] = [
   {
     baseFilename: "wgs84_Coral cover1",
     noDataValue: -3.39999995214436425e38,
@@ -436,7 +445,7 @@ export const reefIndexClasses: MetricClassConfig[] = [
   },
 ];
 
-export const reefIndex = {
+export const reefIndex: DataGroup = {
   classes: reefIndexClasses.map((curClass) => {
     return {
       ...curClass,
@@ -455,7 +464,7 @@ export interface RenewableResults {
   renewable: ClassMetricsSketch;
 }
 
-export const renewableClasses: MetricClassConfig[] = [
+export const renewableClasses: DataClass[] = [
   {
     baseFilename: "float_solar1",
     noDataValue: -3.39999995214436425e38,
@@ -486,7 +495,7 @@ export const renewableClasses: MetricClassConfig[] = [
   },
 ];
 
-export const renewable = {
+export const renewable: DataGroup = {
   classes: renewableClasses.map((curClass) => {
     return {
       ...curClass,
@@ -506,7 +515,7 @@ export interface HabitatRestoreResults extends HabitatRestoreBaseResults {
   byClass: ClassMetricsSketch;
 }
 
-const habitatRestoreClasses: MetricClassConfig[] = [
+const habitatRestoreClasses: DataClass[] = [
   {
     baseFilename: "seagrass_restoration_500mbuff",
     name: "Seagrass",
@@ -521,7 +530,7 @@ const habitatRestoreClasses: MetricClassConfig[] = [
   },
 ];
 
-export const habitatRestore = {
+export const habitatRestore: DataGroup = {
   classes: habitatRestoreClasses.map((curClass) => {
     return {
       ...curClass,
@@ -543,7 +552,7 @@ export interface HabitatNurseryLevelResults extends HabitatNurseryResults {
   byLevel: GroupMetricsSketch;
 }
 
-const habitatNurseryClasses: MetricClassConfig[] = [
+const habitatNurseryClasses: DataClass[] = [
   {
     baseFilename: "PatchReef_JoannaEdit",
     name: "Nursery Reef",
@@ -564,7 +573,7 @@ const habitatNurseryClasses: MetricClassConfig[] = [
   },
 ];
 
-export const habitatNursery = {
+export const habitatNursery: DataGroup = {
   classes: habitatNurseryClasses.map((curClass) => {
     return {
       ...curClass,
@@ -579,7 +588,7 @@ export interface OceanUseResults {
   byClass: ClassMetricsSketch;
 }
 
-const oceanUseClasses: MetricClassConfig[] = [
+const oceanUseClasses: DataClass[] = [
   {
     baseFilename: "aquaculture_heatmap",
     name: "Aquaculture",
@@ -636,7 +645,7 @@ const oceanUseClasses: MetricClassConfig[] = [
   },
 ];
 
-export const oceanUse = {
+export const oceanUse: DataGroup = {
   classes: oceanUseClasses.map((curClass) => {
     return {
       ...curClass,
@@ -646,6 +655,11 @@ export const oceanUse = {
 };
 
 //// PLATFORM EDGE ////
+
+export type EdgeReportData = DataGroup & {
+  fishingActivities: string[];
+  breakMap: Record<string, number>;
+};
 
 // Build up new type with additional property
 export interface EdgeSketchMetric extends SketchMetric {
@@ -672,7 +686,7 @@ export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
   byGroup: EdgeGroupMetricsSketch;
 }
 
-const platformEdgeClasses: MetricClassConfig[] = [
+const platformEdgeClasses: DataClass[] = [
   {
     baseFilename: "Pelagic_Fishing_Zone_Dissolved",
     name: "Platform Edge",
@@ -697,7 +711,7 @@ const breakMap: Record<string, number> = {
   no: 0,
 };
 
-export const platformEdge = {
+export const platformEdge: EdgeReportData = {
   classes: platformEdgeClasses.map((curClass) => {
     return {
       ...curClass,
@@ -712,11 +726,11 @@ export const platformEdge = {
 
 export default {
   STUDY_REGION_AREA_SQ_METERS,
-  size,
   units,
   localDataUrl,
   dataBucketUrl,
   objectives,
+  size,
   existingProtection,
   nearshore,
   offshore,

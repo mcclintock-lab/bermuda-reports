@@ -27,6 +27,9 @@ export async function habitatProtection(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
+  if (!config.nearshore.classIdToName) {
+    throw new Error("Expected classIdToName to be configured");
+  }
   const nearshoreMetrics = await overlapRasterClass(
     nearshoreRaster,
     {

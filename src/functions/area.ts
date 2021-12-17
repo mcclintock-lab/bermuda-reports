@@ -10,12 +10,15 @@ import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, AreaResult } from "../_config";
 import bbox from "@turf/bbox";
 
+const CONFIG = config.size;
+const CLASS = CONFIG.classes[0];
+
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<AreaResult> {
   const box = sketch.bbox || bbox(sketch);
   const nearshorePolys = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${config.size.filename}`,
+    `${config.dataBucketUrl}${CLASS.filename}`,
     box
   );
 

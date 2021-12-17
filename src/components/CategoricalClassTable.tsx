@@ -8,11 +8,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { GreenPill } from "./Pill";
-import {
-  MetricClassConfig,
-  ClassMetric,
-  ClassMetricSketch,
-} from "../metrics/types";
+import { DataClass, ClassMetric, ClassMetricSketch } from "../metrics/types";
 
 const TableStyled = styled.div`
   .styled {
@@ -25,9 +21,9 @@ const TableStyled = styled.div`
 
 export interface CategoricalClassTableProps {
   titleText: string;
-  layerId: string;
+  layerId?: string;
   rows: ClassMetric[] | ClassMetricSketch[];
-  classes: MetricClassConfig[];
+  classes: DataClass[];
   showGoal: boolean;
   options?: {
     classColWidth?: string;
