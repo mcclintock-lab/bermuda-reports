@@ -1,41 +1,43 @@
 {
-  "eez": {
-    "name": "eez",
-    "value": 471997272.05642706,
-    "percValue": 0.0010134412801350323,
-    "sketchMetrics": [
-      {
-        "id": "618abe61e4efd949c23c5899",
-        "name": "no-activity-mpa",
-        "value": 471997272.05642706,
-        "percValue": 0.0010134412801350323
-      }
-    ]
-  },
-  "nearshore": {
-    "name": "nearshore",
-    "value": 88303118.39811556,
-    "percValue": 0.03443293033511124,
-    "sketchMetrics": [
-      {
-        "id": "618abe61e4efd949c23c5899",
-        "name": "no-activity-mpa",
-        "value": 88303118.39811556,
-        "percValue": 0.03443293033511124
-      }
-    ]
-  },
-  "offshore": {
-    "name": "offshore",
-    "value": 383702044.71772295,
-    "percValue": 0.0008284211651715718,
-    "sketchMetrics": [
-      {
-        "id": "618abe61e4efd949c23c5899",
-        "name": "no-activity-mpa",
-        "value": 383702044.71772295,
-        "percValue": 0.0008284211651715718
-      }
-    ]
+  "byClass": {
+    "eez": {
+      "name": "eez",
+      "value": 471997272.05642706,
+      "percValue": 0.0010134412801350323,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 471997272.05642706,
+          "percValue": 0.0010134412801350323
+        }
+      ]
+    },
+    "nearshore": {
+      "name": "nearshore",
+      "value": 88303118.39811556,
+      "percValue": 0.03443293033511124,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 88303118.39811556,
+          "percValue": 0.03443293033511124
+        }
+      ]
+    },
+    "offshore": {
+      "name": "offshore",
+      "value": 383702044.71772295,
+      "percValue": 0.0008284211651715718,
+      "sketchMetrics": [
+        {
+          "id": "618abe61e4efd949c23c5899",
+          "name": "no-activity-mpa",
+          "value": 383702044.71772295,
+          "percValue": 0.0008284211651715718
+        }
+      ]
+    }
   }
 }

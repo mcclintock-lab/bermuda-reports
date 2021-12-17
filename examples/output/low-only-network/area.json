@@ -1,41 +1,43 @@
 {
-  "eez": {
-    "name": "eez",
-    "value": 13281509.242890002,
-    "percValue": 0.000028517176954426482,
-    "sketchMetrics": [
-      {
-        "id": "61685a10f3f078352076a1fb",
-        "name": "low-1",
-        "value": 13281509.242890002,
-        "percValue": 0.000028517176954426482
-      }
-    ]
-  },
-  "nearshore": {
-    "name": "nearshore",
-    "value": 13281509.242890002,
-    "percValue": 0.005178993571254523,
-    "sketchMetrics": [
-      {
-        "id": "61685a10f3f078352076a1fb",
-        "name": "low-1",
-        "value": 13281509.242890002,
-        "percValue": 0.005178993571254523
-      }
-    ]
-  },
-  "offshore": {
-    "name": "offshore",
-    "value": 0,
-    "percValue": 0,
-    "sketchMetrics": [
-      {
-        "id": "61685a10f3f078352076a1fb",
-        "name": "low-1",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
+  "byClass": {
+    "eez": {
+      "name": "eez",
+      "value": 13281509.242890002,
+      "percValue": 0.000028517176954426482,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 13281509.242890002,
+          "percValue": 0.000028517176954426482
+        }
+      ]
+    },
+    "nearshore": {
+      "name": "nearshore",
+      "value": 13281509.242890002,
+      "percValue": 0.005178993571254523,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 13281509.242890002,
+          "percValue": 0.005178993571254523
+        }
+      ]
+    },
+    "offshore": {
+      "name": "offshore",
+      "value": 0,
+      "percValue": 0,
+      "sketchMetrics": [
+        {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
   }
 }

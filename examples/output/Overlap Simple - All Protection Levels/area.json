@@ -1,95 +1,97 @@
 {
-  "eez": {
-    "name": "eez",
-    "value": 388235454.3080779,
-    "percValue": 0.0008335934529739127,
-    "sketchMetrics": [
-      {
-        "id": "61a8155531c466cf4a0621a7",
-        "name": "high MPA",
-        "value": 320052736.91190267,
-        "percValue": 0.0006871960382176592
-      },
-      {
-        "id": "61a819ba9942fd4acf0d18d2",
-        "name": "full MPA",
-        "value": 313000393.6112994,
-        "percValue": 0.0006720537137898591
-      },
-      {
-        "id": "61a81aad31c466cf4a062493",
-        "name": "full MPA copy",
-        "value": 313000393.6112994,
-        "percValue": 0.0006720537137898591
-      },
-      {
-        "id": "61a932cc9942fd4acf0d1e4a",
-        "name": "low MPA",
-        "value": 332082981.0585949,
-        "percValue": 0.000713026581634239
-      }
-    ]
-  },
-  "nearshore": {
-    "name": "nearshore",
-    "value": 387282939.33869296,
-    "percValue": 0.15101716351742012,
-    "sketchMetrics": [
-      {
-        "id": "61a8155531c466cf4a0621a7",
-        "name": "high MPA",
-        "value": 320052736.9119009,
-        "percValue": 0.12480140898267925
-      },
-      {
-        "id": "61a819ba9942fd4acf0d18d2",
-        "name": "full MPA",
-        "value": 312047878.6419047,
-        "percValue": 0.12167999342960067
-      },
-      {
-        "id": "61a81aad31c466cf4a062493",
-        "name": "full MPA copy",
-        "value": 312047878.6419047,
-        "percValue": 0.12167999342960067
-      },
-      {
-        "id": "61a932cc9942fd4acf0d1e4a",
-        "name": "low MPA",
-        "value": 332082981.0585888,
-        "percValue": 0.12949248406736308
-      }
-    ]
-  },
-  "offshore": {
-    "name": "offshore",
-    "value": 952643.5828112711,
-    "percValue": 0.000002056778476242719,
-    "sketchMetrics": [
-      {
-        "id": "61a8155531c466cf4a0621a7",
-        "name": "high MPA",
-        "value": 0,
-        "percValue": 0
-      },
-      {
-        "id": "61a819ba9942fd4acf0d18d2",
-        "name": "full MPA",
-        "value": 952643.5828112711,
-        "percValue": 0.000002056778476242719
-      },
-      {
-        "id": "61a81aad31c466cf4a062493",
-        "name": "full MPA copy",
-        "value": 952643.5828112711,
-        "percValue": 0.000002056778476242719
-      },
-      {
-        "id": "61a932cc9942fd4acf0d1e4a",
-        "name": "low MPA",
-        "value": 0,
-        "percValue": 0
-      }
-    ]
+  "byClass": {
+    "eez": {
+      "name": "eez",
+      "value": 388235454.3080779,
+      "percValue": 0.0008335934529739127,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 320052736.91190267,
+          "percValue": 0.0006871960382176592
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 313000393.6112994,
+          "percValue": 0.0006720537137898591
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 313000393.6112994,
+          "percValue": 0.0006720537137898591
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 332082981.0585949,
+          "percValue": 0.000713026581634239
+        }
+      ]
+    },
+    "nearshore": {
+      "name": "nearshore",
+      "value": 387282939.33869296,
+      "percValue": 0.15101716351742012,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 320052736.9119009,
+          "percValue": 0.12480140898267925
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 312047878.6419047,
+          "percValue": 0.12167999342960067
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 312047878.6419047,
+          "percValue": 0.12167999342960067
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 332082981.0585888,
+          "percValue": 0.12949248406736308
+        }
+      ]
+    },
+    "offshore": {
+      "name": "offshore",
+      "value": 952643.5828112711,
+      "percValue": 0.000002056778476242719,
+      "sketchMetrics": [
+        {
+          "id": "61a8155531c466cf4a0621a7",
+          "name": "high MPA",
+          "value": 0,
+          "percValue": 0
+        },
+        {
+          "id": "61a819ba9942fd4acf0d18d2",
+          "name": "full MPA",
+          "value": 952643.5828112711,
+          "percValue": 0.000002056778476242719
+        },
+        {
+          "id": "61a81aad31c466cf4a062493",
+          "name": "full MPA copy",
+          "value": 952643.5828112711,
+          "percValue": 0.000002056778476242719
+        },
+        {
+          "id": "61a932cc9942fd4acf0d1e4a",
+          "name": "low MPA",
+          "value": 0,
+          "percValue": 0
+        }
+      ]
+    }
   }
 }
