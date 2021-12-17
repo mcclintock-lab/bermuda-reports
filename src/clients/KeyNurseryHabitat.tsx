@@ -33,39 +33,14 @@ import { Pill, LevelPill } from "../components/Pill";
 import { ClassMetric } from "../metrics/types";
 import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
-
-import styled from "styled-components";
 import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
+import { ReportTableStyled } from "../components/ReportTableStyled";
+import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
 const CONFIG = config.habitatNursery;
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
-
-const SmallTableStyled = styled.div`
-  .squeeze {
-    font-size: 13px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
-`;
 
 const sumValue = (metrics: ClassMetrics) =>
   Object.values(metrics).reduce(
@@ -202,13 +177,13 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={sketchRows.sort((a, b) => a.groupId.localeCompare(b.groupId))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
@@ -251,13 +226,13 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={groupRows.sort((a, b) => a.groupId.localeCompare(b.groupId))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
@@ -289,9 +264,9 @@ const genHabitatTable = (data: ClassMetric[]) => {
   ];
 
   return (
-    <TableStyled>
+    <ReportTableStyled>
       <Table className="styled" columns={columns} data={data} />
-    </TableStyled>
+    </ReportTableStyled>
   );
 };
 

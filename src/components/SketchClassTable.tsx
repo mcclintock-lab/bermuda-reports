@@ -6,6 +6,7 @@ import {
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
 import { DataClass } from "../metrics/types";
+import { SmallReportTableStyled } from "./SmallReportTableStyled";
 
 const SmallTableStyled = styled.div`
   & {
@@ -68,15 +69,15 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={rows.sort((a, b) =>
           (a.sketchName as string).localeCompare(b.sketchName as string)
         )}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 

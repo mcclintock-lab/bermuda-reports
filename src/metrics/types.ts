@@ -1,7 +1,7 @@
 /**
- * Represents a grouping of data, used by a report to calculate a metric.
- * This interface is murky but it supports a variety of scenarios
- * for mapping one or more feature classes to datasources:
+ * Represents a grouping of data, used by GP functions to calculate and report
+ * metrics based on them. This interface is murky but it supports a variety of
+ * scenarios for mapping one or more feature classes to datasources:
  * - Vector dataset with one feature class
  * - Vector dataset with multiple feature class, each with their own datasource for analysis, and possibly only one layerId for display
  * - Vector dataset with multiple feature classes, in one datasource, each class with its own layerId

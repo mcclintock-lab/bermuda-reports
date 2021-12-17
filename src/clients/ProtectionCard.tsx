@@ -17,6 +17,7 @@ import { LevelCircleRow } from "../components/Circle";
 import { IucnMatrix } from "../components/IucnMatrix";
 import { Collapse } from "../components/Collapse";
 import { IucnDesignationTable } from "../components/IucnDesignationTable";
+import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
 // Import type definitions from function
 import { SketchStat, CategoryStat, LevelStat } from "../metrics/types";
@@ -24,22 +25,6 @@ import config, { ProtectionResult } from "../_config";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 
 const EEZ_OBJECTIVE = config.objectives.eez;
-
-const SmallTableStyled = styled.div`
-  .squeeze {
-    font-size: 13px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
-`;
 
 const ProtectionCard = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -340,13 +325,13 @@ const genLevelTable = (levelStats: LevelStat[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={levelStats.sort((a, b) => a.level.localeCompare(b.level))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
@@ -404,13 +389,13 @@ const genCategoryTable = (categoryStats: CategoryStat[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={categoryStats.sort((a, b) => a.level.localeCompare(b.level))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
@@ -438,13 +423,13 @@ const genSketchTable = (sketchStats: SketchStat[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={sketchStats.sort((a, b) => a.category.localeCompare(b.category))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 

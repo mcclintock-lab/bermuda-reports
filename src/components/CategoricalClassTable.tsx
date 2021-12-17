@@ -6,18 +6,9 @@ import {
   keyBy,
   LayerToggle,
 } from "@seasketch/geoprocessing/client";
-import styled from "styled-components";
 import { GreenPill } from "./Pill";
 import { DataClass, ClassMetric, ClassMetricSketch } from "../metrics/types";
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
+import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface CategoricalClassTableProps {
   titleText: string;
@@ -119,8 +110,8 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
   }
 
   return (
-    <TableStyled>
+    <ReportTableStyled>
       <Table className="styled" columns={columns} data={rows} />
-    </TableStyled>
+    </ReportTableStyled>
   );
 };

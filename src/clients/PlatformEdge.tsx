@@ -17,30 +17,14 @@ import { Collapse } from "../components/Collapse";
 import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
 import { getBreakGroup } from "../util/getBreakGroup";
-import styled from "styled-components";
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
+import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
 const precalcTotals = platformEdgeTotals as Record<string, number>;
 
 const CLASSES = config.platformEdge.classes;
 const CLASS = CLASSES[0];
 const BREAK_MAP = config.platformEdge.breakMap;
-
-const SmallTableStyled = styled.div`
-  .squeeze {
-    font-size: 13px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
-`;
 
 const PlatformEdge = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
@@ -282,9 +266,9 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
-      <Table className="squeeze" columns={columns} data={groupRows} />
-    </SmallTableStyled>
+    <SmallReportTableStyled>
+      <Table className="styled" columns={columns} data={groupRows} />
+    </SmallReportTableStyled>
   );
 };
 
@@ -317,9 +301,9 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
-      <Table className="squeeze" columns={columns} data={sketchRows} />
-    </SmallTableStyled>
+    <SmallReportTableStyled>
+      <Table className="styled" columns={columns} data={sketchRows} />
+    </SmallReportTableStyled>
   );
 };
 

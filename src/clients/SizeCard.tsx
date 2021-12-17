@@ -11,6 +11,7 @@ import {
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import { AreaResult, AreaResultType } from "../_config";
+import { ReportTableStyled } from "../components/ReportTableStyled";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
@@ -36,7 +37,7 @@ const SingleTableStyled = styled.span`
   }
 `;
 
-const TableStyled = styled.div`
+const TableStyled = styled(ReportTableStyled)`
   font-size: 12px;
   td {
     text-align: right;
