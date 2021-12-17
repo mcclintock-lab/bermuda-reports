@@ -43,8 +43,9 @@ export const objectives = {
 
 //// SIZE ////
 
-export type AreaResultType = "eez" | "nearshore" | "offshore";
-export type AreaResult = Record<AreaResultType, ClassMetricSketch>;
+export interface AreaResults {
+  byClass: ClassMetricsSketch;
+}
 
 const sizeClasses: DataClass[] = [
   {

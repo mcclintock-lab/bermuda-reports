@@ -113,7 +113,7 @@ export interface GroupMetricsSketch {
  * Useful for rendering table rows with the values of multiple classes for a group
  */
 export interface ClassMetricAgg {
-  // Add value too?
+  value: number;
   percValue: number;
   [className: string]: string | number;
 }
@@ -130,7 +130,7 @@ export type ClassMetricSketchAgg = ClassMetricAgg & {
 
 export type GroupMetricAgg = {
   groupId: string;
-  // Add value too?
+  value: number;
   percValue: number;
   [className: string]: string | number;
 };

@@ -105,6 +105,7 @@ export const flattenGroupSketch = (
         groupId,
         sketchId: sketchInGroup.id,
         sketchName: sketchInGroup.name,
+        value: classAgg.value,
         percValue: classAgg.value / totalValue,
         ...classAgg,
       });
