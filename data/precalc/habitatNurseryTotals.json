@@ -1,23 +1,23 @@
 {
   "overall": {
-    "value": 18271613.43806828,
+    "value": 14710961.795261733,
     "percValue": 1
   },
   "byClass": {
-    "PatchReef_JoannaEdit": {
-      "name": "PatchReef_JoannaEdit",
-      "value": 15212304.735794103,
-      "percValue": 0.8325649394541035
+    "Nursery Reef": {
+      "name": "Nursery Reef",
+      "value": 11651653.092987554,
+      "percValue": 0.7920388384626521
     },
-    "Mangrove_shp_2012": {
-      "name": "Mangrove_shp_2012",
+    "Mangrove": {
+      "name": "Mangrove",
       "value": 174538.70779643767,
-      "percValue": 0.00955245186135518
+      "percValue": 0.011864534095429096
     },
-    "Seagrass_2014_50mbuff": {
-      "name": "Seagrass_2014_50mbuff",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 2884769.994477741,
-      "percValue": 0.15788260868454132
+      "percValue": 0.1960966274419188
     }
   }
 }

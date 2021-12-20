@@ -1,24 +1,24 @@
 {
   "overall": {
-    "value": 18271613.43806828,
+    "value": 14710961.795261733,
     "percValue": 1
   },
   "byClass": {
-    "PatchReef_JoannaEdit": {
-      "name": "PatchReef_JoannaEdit",
+    "Nursery Reef": {
+      "name": "Nursery Reef",
       "value": 718.5345853272506,
-      "percValue": 0.00004723377540791436,
+      "percValue": 0.00006166803796790812,
       "sketchMetrics": [
         {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
           "value": 718.5345853272506,
-          "percValue": 0.00004723377540791436
+          "percValue": 0.00006166803796790812
         }
       ]
     },
-    "Mangrove_shp_2012": {
-      "name": "Mangrove_shp_2012",
+    "Mangrove": {
+      "name": "Mangrove",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -30,8 +30,8 @@
         }
       ]
     },
-    "Seagrass_2014_50mbuff": {
-      "name": "Seagrass_2014_50mbuff",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 33490.248245668256,
       "percValue": 0.011609330487275584,
       "sketchMetrics": [
@@ -46,53 +46,53 @@
   },
   "byLevel": {
     "full": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       }
     },
     "high": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       }
     },
     "low": {
-      "PatchReef_JoannaEdit": {
+      "Nursery Reef": {
         "value": 718.5345853272506,
-        "percValue": 0.00004723377540791436,
+        "percValue": 0.00006166803796790812,
         "sketchMetrics": [
           {
             "id": "61685a10f3f078352076a1fb",
             "name": "low-1",
             "value": 718.5345853272506,
-            "percValue": 0.00004723377540791436
+            "percValue": 0.00006166803796790812
           }
         ]
       },
-      "Mangrove_shp_2012": {
+      "Mangrove": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": [
@@ -104,7 +104,7 @@
           }
         ]
       },
-      "Seagrass_2014_50mbuff": {
+      "Seagrass": {
         "value": 33490.248245668256,
         "percValue": 0.011609330487275584,
         "sketchMetrics": [

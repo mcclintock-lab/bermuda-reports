@@ -1,41 +1,43 @@
 {
-  "eez": {
-    "area": 1562787998.1749337,
-    "percArea": 0.003355514879460421,
-    "sketchAreas": [
-      {
-        "sketchId": "61649a3c1e0a596510ad8329",
-        "name": "nearshore-span",
-        "area": 1562787998.1749337,
-        "percArea": 0.003355514879460421
-      }
-    ],
-    "areaUnit": "square meters"
-  },
-  "nearshore": {
-    "area": 224096911.34016454,
-    "percArea": 0.08738438094224944,
-    "sketchAreas": [
-      {
-        "sketchId": "61649a3c1e0a596510ad8329",
-        "name": "nearshore-span",
-        "area": 224096911.34016454,
-        "percArea": 0.08738438094224944
-      }
-    ],
-    "areaUnit": "square meters"
-  },
-  "offshore": {
-    "area": 1339128223.69728,
-    "percArea": 0.0028912073278253166,
-    "sketchAreas": [
-      {
-        "sketchId": "61649a3c1e0a596510ad8329",
-        "name": "nearshore-span",
-        "area": 1339128223.69728,
-        "percArea": 0.0028912073278253166
-      }
-    ],
-    "areaUnit": "square meters"
+  "byClass": {
+    "eez": {
+      "name": "eez",
+      "value": 1562787998.1749337,
+      "percValue": 0.003355514879460421,
+      "sketchMetrics": [
+        {
+          "id": "61649a3c1e0a596510ad8329",
+          "name": "nearshore-span",
+          "value": 1562787998.1749337,
+          "percValue": 0.003355514879460421
+        }
+      ]
+    },
+    "nearshore": {
+      "name": "nearshore",
+      "value": 224096911.34016454,
+      "percValue": 0.08738438094224944,
+      "sketchMetrics": [
+        {
+          "id": "61649a3c1e0a596510ad8329",
+          "name": "nearshore-span",
+          "value": 224096911.34016454,
+          "percValue": 0.08738438094224944
+        }
+      ]
+    },
+    "offshore": {
+      "name": "offshore",
+      "value": 1339128223.69728,
+      "percValue": 0.0028912073278253166,
+      "sketchMetrics": [
+        {
+          "id": "61649a3c1e0a596510ad8329",
+          "name": "nearshore-span",
+          "value": 1339128223.69728,
+          "percValue": 0.0028912073278253166
+        }
+      ]
+    }
   }
 }

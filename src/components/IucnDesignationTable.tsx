@@ -2,15 +2,7 @@ import React from "react";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 import { Table, Column, capitalize } from "@seasketch/geoprocessing/client";
 import { LevelPill, Pill } from "./Pill";
-import styled from "styled-components";
-
-const TableStyled = styled.div`
-  .table {
-    td {
-      padding: 5px 5px;
-    }
-  }
-`;
+import { ReportTableStyled } from "./ReportTableStyled";
 
 const columns: Column<IucnCategory>[] = [
   {
@@ -45,12 +37,12 @@ export const IucnDesignationTable = () => {
         });
   }, []);
   return (
-    <TableStyled>
+    <ReportTableStyled>
       <Table
         className="table"
         columns={columns}
         data={categories.sort((a, b) => a.category.localeCompare(b.category))}
       />
-    </TableStyled>
+    </ReportTableStyled>
   );
 };

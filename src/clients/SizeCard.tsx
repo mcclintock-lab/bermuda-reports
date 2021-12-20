@@ -10,17 +10,11 @@ import {
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
-
-// Import type definitions from function
-import { AreaResult, AreaResultType } from "../functions/area";
+import { AreaResults } from "../_config";
+import { ReportTableStyled } from "../components/ReportTableStyled";
+import { ClassMetricSketch } from "../metrics/types";
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
-
-export interface RegionResult {
-  region: string;
-  area: number;
-  percArea: number;
-}
 
 const regionLabels: Record<string, string> = {
   eez: "EEZ",
@@ -38,7 +32,7 @@ const SingleTableStyled = styled.span`
   }
 `;
 
-const TableStyled = styled.div`
+const TableStyled = styled(ReportTableStyled)`
   font-size: 12px;
   td {
     text-align: right;
@@ -75,7 +69,7 @@ const SizeCard = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <ResultsCard title="Size" functionName="area">
-      {(data: AreaResult) => {
+      {(data: AreaResults) => {
         if (Object.keys(data).length === 0)
           throw new Error("Protection results not found");
 
@@ -131,37 +125,32 @@ const SizeCard = () => {
   );
 };
 
-const genSingleSizeTable = (data: AreaResult) => {
-  const regionResults: RegionResult[] = Object.keys(data).map((key) => {
-    return {
-      region: key,
-      ...data[key as AreaResultType],
-    };
-  });
-  const areaColumns: Column<RegionResult>[] = [
+const genSingleSizeTable = (data: AreaResults) => {
+  const rows = Object.values(data.byClass);
+  const areaColumns: Column<ClassMetricSketch>[] = [
     {
       Header: " ",
-      accessor: (row) => <b>{regionLabels[row.region]}</b>,
+      accessor: (row) => <b>{regionLabels[row.name]}</b>,
     },
     {
       Header: "Area Within Plan",
       accessor: (row) =>
-        Number.format(Math.round(squareMeterToMile(row.area))) + " sq. mi.",
+        Number.format(Math.round(squareMeterToMile(row.value))) + " sq. mi.",
     },
     {
       Header: "% Within Plan",
-      accessor: (row) => percentWithEdge(row.percArea),
+      accessor: (row) => percentWithEdge(row.percValue),
     },
   ];
 
   return (
     <SingleTableStyled>
-      <Table columns={areaColumns} data={regionResults} />
+      <Table columns={areaColumns} data={rows} />
     </SingleTableStyled>
   );
 };
 
-const genNetworkSizeTable = (data: AreaResult) => {
+const genNetworkSizeTable = (data: AreaResults) => {
   type MergedAreaResult = {
     sketchId: string;
     name: string;
@@ -173,19 +162,19 @@ const genNetworkSizeTable = (data: AreaResult) => {
     offshorePercArea: number;
   };
 
-  const rows: MergedAreaResult[] = data.eez.sketchAreas.map(
+  const rows: MergedAreaResult[] = data.byClass.eez.sketchMetrics.map(
     (eezArea, index) => {
-      const nearshoreArea = data.nearshore.sketchAreas[index];
-      const offshoreArea = data.offshore.sketchAreas[index];
+      const nearshoreArea = data.byClass.nearshore.sketchMetrics[index];
+      const offshoreArea = data.byClass.offshore.sketchMetrics[index];
       return {
-        sketchId: eezArea.sketchId,
+        sketchId: eezArea.id,
         name: eezArea.name,
-        overallArea: eezArea.area,
-        overallPercArea: eezArea.percArea,
-        nearshoreArea: nearshoreArea.area,
-        nearshorePercArea: nearshoreArea.percArea,
-        offshoreArea: offshoreArea.area,
-        offshorePercArea: offshoreArea.percArea,
+        overallArea: eezArea.value,
+        overallPercArea: eezArea.percValue,
+        nearshoreArea: nearshoreArea.value,
+        nearshorePercArea: nearshoreArea.percValue,
+        offshoreArea: offshoreArea.value,
+        offshorePercArea: offshoreArea.percValue,
       };
     }
   );

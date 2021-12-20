@@ -8,11 +8,11 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { RenewableResults } from "../_config";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
-
+import { overlapRaster } from "../metrics/overlapRaster";
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 
-const LAYERS = config.renewable.layers;
+const precalcTotals = renewableTotals as Record<string, number>;
+const CLASSES = config.renewable.classes;
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -20,20 +20,20 @@ export async function renewable(
   const box = sketch.bbox || bbox(sketch);
 
   const metrics = await Promise.all(
-    LAYERS.map(async (lyr) => {
+    CLASSES.map(async (curClass) => {
       // start raster load and move on in loop while awaiting finish
       const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${lyr.filename}`,
+        `${config.dataBucketUrl}${curClass.filename}`,
         {
           windowBox: box,
-          noDataValue: lyr.noDataValue,
+          noDataValue: curClass.noDataValue,
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
-        lyr.baseFilename,
-        (renewableTotals as Record<string, number>)[lyr.baseFilename],
+        curClass.name,
+        precalcTotals[curClass.name],
         sketch
       );
     })

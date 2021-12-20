@@ -5,7 +5,8 @@ import {
   percentWithEdge,
 } from "@seasketch/geoprocessing/client";
 import styled from "styled-components";
-import { ClassConfig } from "../util/types";
+import { DataClass } from "../metrics/types";
+import { SmallReportTableStyled } from "./SmallReportTableStyled";
 
 const SmallTableStyled = styled.div`
   & {
@@ -41,7 +42,7 @@ const SmallTableStyled = styled.div`
 
 export interface SketchClassTableProps {
   rows: Record<string, string | number>[];
-  classes: ClassConfig[];
+  classes: DataClass[];
 }
 
 const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
@@ -52,9 +53,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => {
-        return percentWithEdge(
-          row[curClass.baseFilename || curClass.name || "uknown"] as number
-        );
+        return percentWithEdge(row[curClass.name] as number);
       },
     })
   );
@@ -70,15 +69,15 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={rows.sort((a, b) =>
           (a.sketchName as string).localeCompare(b.sketchName as string)
         )}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 

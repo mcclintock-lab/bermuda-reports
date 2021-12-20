@@ -6,9 +6,11 @@ import {
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import config, { OceanUseResults } from "../_config";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
+
+const CONFIG = config.oceanUse;
 
 const OceanUse = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -73,20 +75,15 @@ const genOverallUseTable = (data: OceanUseResults) => {
       titleText="Sector"
       percText="% Value In Plan"
       rows={Object.values(data.byClass)}
-      classes={config.oceanUse.layers}
+      classes={CONFIG.classes}
     />
   );
 };
 
 const genSketchTable = (data: OceanUseResults) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(
-    data.byClass,
-    config.oceanUse.layers
-  );
-  return (
-    <SketchClassTable rows={sketchRows} classes={config.oceanUse.layers} />
-  );
+  const sketchRows = flattenSketchAllClass(data.byClass, CONFIG.classes);
+  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
 };
 
 const LoadingSkeleton = () => (

@@ -1,7 +1,7 @@
 {
   "renewable": {
-    "float_solar1": {
-      "name": "float_solar1",
+    "Floating Solar": {
+      "name": "Floating Solar",
       "value": 6980.383213639259,
       "percValue": 0.004486912507648822,
       "sketchMetrics": [
@@ -13,8 +13,8 @@
         }
       ]
     },
-    "wind_fixed1": {
-      "name": "wind_fixed1",
+    "Fixed Offshore Wind": {
+      "name": "Fixed Offshore Wind",
       "value": 652.3174185752869,
       "percValue": 0.0006581437912195473,
       "sketchMetrics": [
@@ -26,8 +26,8 @@
         }
       ]
     },
-    "wind_float1": {
-      "name": "wind_float1",
+    "Floating Offshore Wind": {
+      "name": "Floating Offshore Wind",
       "value": 5830.431042671204,
       "percValue": 0.013103899361366465,
       "sketchMetrics": [
@@ -39,8 +39,8 @@
         }
       ]
     },
-    "wave_energy1": {
-      "name": "wave_energy1",
+    "Wave Energy": {
+      "name": "Wave Energy",
       "value": 913.7374368906021,
       "percValue": 0.0020269758341021045,
       "sketchMetrics": [

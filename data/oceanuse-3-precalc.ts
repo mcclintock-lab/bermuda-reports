@@ -9,17 +9,17 @@ import geoblaze from "geoblaze";
 
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
 
-const CLASSES = config.oceanUse.layers;
+const CLASSES = config.oceanUse.classes;
 const DATASET = "oceanUse";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
   const totals = await Promise.all(
-    CLASSES.map(async (lyr) => {
-      const url = `${config.localDataUrl}${lyr.filename}`;
+    CLASSES.map(async (curClass) => {
+      const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {});
       const sum = geoblaze.sum(raster)[0] as number;
       return sum;
@@ -29,7 +29,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [CLASSES[index].baseFilename]: total,
+      [CLASSES[index].name]: total,
     }),
     {}
   );

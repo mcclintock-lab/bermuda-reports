@@ -12,32 +12,19 @@ import {
   capitalize,
 } from "@seasketch/geoprocessing/client";
 import { GroupCircleRow } from "../components/Circle";
-import { GroupMetricAgg, GroupMetricSketchAgg } from "../util/types";
+import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { Collapse } from "../components/Collapse";
-import { flattenGroupSketch } from "../util/clientMetrics";
+import { flattenGroupSketch } from "../metrics/clientMetrics";
 import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
-import { getBreakGroup } from "../util/platformEdge";
-import styled from "styled-components";
+import { getBreakGroup } from "../util/getBreakGroup";
+import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
+import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
-const LAYERS = config.platformEdge.layers;
-const LAYER = LAYERS[0];
+const precalcTotals = platformEdgeTotals as Record<string, number>;
+
+const CLASSES = config.platformEdge.classes;
+const CLASS = CLASSES[0];
 const BREAK_MAP = config.platformEdge.breakMap;
-
-const SmallTableStyled = styled.div`
-  .squeeze {
-    font-size: 13px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
-`;
 
 const PlatformEdge = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
@@ -48,7 +35,7 @@ const PlatformEdge = () => {
       skeleton={<LoadingSkeleton />}
     >
       {(data: PlatformEdgeResult) => {
-        const classMetric = data.byClass[LAYER.baseFilename];
+        const classMetric = data.byClass[CLASS.name];
 
         // Get aggregate sketch metric stats
         const totalCount = classMetric.sketchMetrics.length;
@@ -117,14 +104,17 @@ const PlatformEdge = () => {
         let sketchRows: GroupMetricSketchAgg[] = [];
         if (isCollection) {
           // Build agg group objects with percValue for each class
-          groupRows = getBreakGroupMetricsAgg(data.byGroup, LAYER.totalArea);
+          groupRows = getBreakGroupMetricsAgg(
+            data.byGroup,
+            precalcTotals[CLASS.name]
+          );
 
           // Build agg sketch group objects with percValue for each class
           // groupId, sketchId, lagoon, mangrove, seagrass, total
           sketchRows = flattenGroupSketch(
             data.byGroup,
-            LAYER.totalArea,
-            LAYERS
+            precalcTotals[CLASS.name],
+            CLASSES
           );
         }
 
@@ -276,9 +266,9 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
-      <Table className="squeeze" columns={columns} data={groupRows} />
-    </SmallTableStyled>
+    <SmallReportTableStyled>
+      <Table className="styled" columns={columns} data={groupRows} />
+    </SmallReportTableStyled>
   );
 };
 
@@ -311,9 +301,9 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
-      <Table className="squeeze" columns={columns} data={sketchRows} />
-    </SmallTableStyled>
+    <SmallReportTableStyled>
+      <Table className="styled" columns={columns} data={sketchRows} />
+    </SmallReportTableStyled>
   );
 };
 

@@ -1,47 +1,29 @@
-import {
-  SketchCollection,
-  Sketch,
-  Point,
-  LineString,
-  Polygon,
-  Feature,
-  FeatureCollection,
-  isSketchCollection,
-  isPolygonSketchCollection,
-  isPolygonFeature,
-  isLineStringSketchCollection,
-  intersect,
-  toSketchArray,
-} from "@seasketch/geoprocessing";
+import { Sketch, Polygon, Feature, intersect } from "@seasketch/geoprocessing";
 import { featureCollection, MultiPolygon } from "@turf/helpers";
-import combine from "@turf/combine";
 import { featureEach } from "@turf/meta";
-import { SketchMetric, ClassMetric, ClassMetricSketch } from "./types";
+import { ClassMetricSketch } from "./types";
 import area from "@turf/area";
-import length from "@turf/length";
 import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
-// @ts-ignore
-import geoblaze, { Georaster } from "geoblaze";
 import { clip } from "../util/clip";
 
 /**
- * returns overlap metric for feature collection.  If sketch passed, metric is calculated for each sketch and overall
+ * Calculates overlap between sketches and features, including overall and per sketch
  * point - sum of points
  * linestring - sum of length
  * polygon - sum of area
  */
-export async function overlapStatsVector(
-  /** collection of features to intersect and get overlap stats */
-  features: Feature<Point | LineString | Polygon | MultiPolygon>[],
+export async function overlapFeatures(
+  /** features to intersect and get overlap stats */
+  features: Feature<Polygon | MultiPolygon>[],
   /** Name of class */
   name: string,
-  /** array of sketches.  If empty will return 0 result. */
-  sketches: Sketch<Point | LineString | Polygon | MultiPolygon>[],
+  /** sketches.  If empty will return 0 result. */
+  sketches: Sketch<Polygon | MultiPolygon>[],
   /**
-   * point - total number points
-   * line - total length all lines
-   * polygon - area of outer boundary (typically EEZ or planning area)
+   * point - total number point features
+   * line - total length all line features
+   * polygon - total area of features
    */
   totalValue: number,
   options: {
@@ -49,27 +31,11 @@ export async function overlapStatsVector(
     calcSketchMetrics: boolean;
   } = { calcSketchMetrics: true }
 ): Promise<ClassMetricSketch> {
-  // This is incomplete and not yet used
-  // let combinedSketch: FeatureCollection;
-  // let combinedSketchValue: number = 0;
-  // if (isPolygonSketchCollection(sketch)) {
-  //   combinedSketch = isSketchCollection(sketch)
-  //     ? clip(sketch, 'union')
-  //     : featureCollection([sketch]);
-  //   combinedSketchValue = turfArea(combinedSketch);
-  // } else if (isLineStringSketchCollection(sketch)) {
-  //   combinedSketchValue = length(sketch);
-  // } else {
-  //   combinedSketchValue = sketch.features.length;
-  // }
-
   let sumValue: number = 0;
   let isOverlap = false;
 
   if (sketches.length > 0) {
-    const sketchColl = flatten(
-      featureCollection(sketches as Feature<Polygon | MultiPolygon>[])
-    );
+    const sketchColl = flatten(featureCollection(sketches));
     const sketchArea = area(sketchColl);
 
     // If sketch overlap, use union
@@ -97,19 +63,10 @@ export async function overlapStatsVector(
     : sketches.map((curSketch) => {
         let sketchValue: number = 0;
 
-        // if (isPolygonFeature(curSketch)) {
         sketchValue = getSketchPolygonIntersectArea(
           curSketch as Feature<Polygon | MultiPolygon>,
           features as Feature<Polygon | MultiPolygon>[]
         );
-        // }
-        // else if (isLineStringSketchCollection(sketch)) {
-        //   // intersect and get area of remainder
-        //   sketchValue = length(curSketch);
-        // } else {
-        //   // point in poly and return remainder
-        //   sketchValue = 0;
-        // }
         return {
           id: curSketch.properties.id,
           name: curSketch.properties.name,

@@ -1,11 +1,11 @@
 {
-  "wgs84_Coral cover1": 219142.73238153942,
-  "wgs84_Coral diversity (richness)1": 231924.1468730762,
-  "wgs84_Coral recruit density1": 73405.34650501853,
-  "wgs84_Rugosity1": 72297.22302708979,
-  "wgs84_Fish diversity (BRUVs data)1": 194649.20529744774,
-  "wgs84_Fish density1": 253383.98754745774,
-  "wgs84_Fish diversity (BREAM data)1": 333552.74660776486,
-  "wgs84_Fish recruit density1": 75390.81803614809,
-  "wgs84_Seagrass Index Value1": 2892.556873383932
+  "Coral Cover": 219142.73238153942,
+  "Coral Diversity": 231924.1468730762,
+  "Coral Recruit Density": 73405.34650501853,
+  "Rugosity": 72297.22302708979,
+  "Fish Diversity BRUV": 194649.20529744774,
+  "Fish Density": 253383.98754745774,
+  "Fish Diversity BREAM": 333552.74660776486,
+  "Fish Recruit Density": 75390.81803614809,
+  "Seagrass": 2892.556873383932
 }

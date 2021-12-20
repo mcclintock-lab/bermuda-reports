@@ -14,13 +14,15 @@ import config, {
 } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
-import { ClassMetricsSketch, SketchMetric } from "../util/types";
+import { ClassMetricsSketch, SketchMetric } from "../metrics/types";
 
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { getGroupMetrics } from "../util/metrics";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { getGroupMetrics } from "../metrics/metrics";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
+
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
+const CONFIG = config.habitatNursery;
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -28,22 +30,20 @@ export async function habitatNursery(
   const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
-  const LAYERS = config.habitatNursery.layers;
-
   // Class metrics
   const featuresByClass: Record<string, Feature<Polygon>[]> = {};
   const classMetrics = (
     await Promise.all(
-      LAYERS.map(async (lyr) => {
-        featuresByClass[lyr.baseFilename] = await fgbFetchAll(
-          `${config.dataBucketUrl}${lyr.filename}`,
+      CONFIG.classes.map(async (curClass) => {
+        featuresByClass[curClass.name] = await fgbFetchAll(
+          `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
-        return overlapStatsVector(
-          featuresByClass[lyr.baseFilename],
-          lyr.baseFilename,
+        return overlapFeatures(
+          featuresByClass[curClass.name],
+          curClass.name,
           sketches,
-          precalcTotals.byClass[lyr.baseFilename].value
+          precalcTotals.byClass[curClass.name].value
         );
       })
     )

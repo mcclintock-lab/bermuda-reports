@@ -20,12 +20,16 @@ describe("Basic smoke tests", () => {
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await area(example);
-      expect(result.eez.area).toBeGreaterThan(0);
-      expect(result.eez.area).toBeLessThanOrEqual(STUDY_REGION_AREA_SQ_METERS);
-      expect(result.nearshore.area).toBeLessThanOrEqual(
+      expect(result.byClass.eez.value).toBeGreaterThan(0);
+      expect(result.byClass.eez.value).toBeLessThanOrEqual(
+        STUDY_REGION_AREA_SQ_METERS
+      );
+      expect(result.byClass.nearshore.value).toBeLessThanOrEqual(
         NEARSHORE_AREA_SQ_METERS
       );
-      expect(result.offshore.area).toBeLessThanOrEqual(OFFSHORE_AREA_SQ_METERS);
+      expect(result.byClass.offshore.value).toBeLessThanOrEqual(
+        OFFSHORE_AREA_SQ_METERS
+      );
       writeResultOutput(result, "area", example.properties.name);
     }
   });

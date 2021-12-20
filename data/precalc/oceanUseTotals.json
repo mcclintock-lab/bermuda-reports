@@ -1,11 +1,11 @@
 {
-  "aquaculture_heatmap": 14972.600296854973,
-  "boating_heatmap": 430346.0135562408,
-  "commercial_fishing_heatmap": 296287.77351568406,
-  "passiverec_conservation_heatmap": 230850.84109385265,
-  "recreational_fishing_heatmap": 231050.7586448742,
-  "shipping_heatmap": 14768.226010799408,
-  "swim_snorkel_dive_heatmap": 613759.638105642,
-  "tourism_heatmap": 20206.746555360034,
-  "utilities_heatmap": 15146.934098422527
+  "Aquaculture": 14972.600296854973,
+  "Boating": 430346.0135562408,
+  "CommercialFishing": 296287.77351568406,
+  "PassiveRecreation_Conservation": 230850.84109385265,
+  "Recreational Fishing": 231050.7586448742,
+  "Shipping": 14768.226010799408,
+  "Swimming_Snorkeling_Diving": 613759.638105642,
+  "Tourism": 20206.746555360034,
+  "Utilities": 15146.934098422527
 }

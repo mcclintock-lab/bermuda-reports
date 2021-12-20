@@ -7,15 +7,17 @@ import config from "../src/_config";
 import { strict as assert } from "assert";
 import area from "@turf/area";
 
-const CLASSES = config.habitatRestore.layers;
+const CLASSES = config.habitatRestore.classes;
 const DATASET = "habitatRestore";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
   const totals = await Promise.all(
-    CLASSES.map(async (lyr) => {
+    CLASSES.map(async (curClass) => {
       const fc = JSON.parse(
-        fs.readFileSync(`${__dirname}/dist/${lyr.baseFilename}`).toString()
+        fs
+          .readFileSync(`${__dirname}/dist/${curClass.baseFilename}.json`)
+          .toString()
       );
       return area(fc);
     })
@@ -31,8 +33,8 @@ async function main() {
     byClass: CLASSES.reduce(
       (soFar, curClass, index) => ({
         ...soFar,
-        [curClass.baseFilename]: {
-          name: curClass.baseFilename,
+        [curClass.name]: {
+          name: curClass.name,
           value: totals[index],
           percValue: totals[index] / totalArea,
         },

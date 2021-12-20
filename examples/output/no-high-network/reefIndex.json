@@ -1,7 +1,7 @@
 {
   "reefIndex": {
-    "wgs84_Coral cover1": {
-      "name": "wgs84_Coral cover1",
+    "Coral Cover": {
+      "name": "Coral Cover",
       "value": 25719.26516082883,
       "percValue": 0.11736307602503646,
       "sketchMetrics": [
@@ -19,8 +19,8 @@
         }
       ]
     },
-    "wgs84_Coral diversity (richness)1": {
-      "name": "wgs84_Coral diversity (richness)1",
+    "Coral Diversity": {
+      "name": "Coral Diversity",
       "value": 24975.420911490917,
       "percValue": 0.10768788523412817,
       "sketchMetrics": [
@@ -38,8 +38,8 @@
         }
       ]
     },
-    "wgs84_Coral recruit density1": {
-      "name": "wgs84_Coral recruit density1",
+    "Coral Recruit Density": {
+      "name": "Coral Recruit Density",
       "value": 5420.747193533985,
       "percValue": 0.07384676255377914,
       "sketchMetrics": [
@@ -57,8 +57,8 @@
         }
       ]
     },
-    "wgs84_Rugosity1": {
-      "name": "wgs84_Rugosity1",
+    "Rugosity": {
+      "name": "Rugosity",
       "value": 6253.270216986537,
       "percValue": 0.08649391989293193,
       "sketchMetrics": [
@@ -76,8 +76,8 @@
         }
       ]
     },
-    "wgs84_Fish diversity (BRUVs data)1": {
-      "name": "wgs84_Fish diversity (BRUVs data)1",
+    "Fish Diversity BRUV": {
+      "name": "Fish Diversity BRUV",
       "value": 12759.84696650505,
       "percValue": 0.06555303910440552,
       "sketchMetrics": [
@@ -95,8 +95,8 @@
         }
       ]
     },
-    "wgs84_Fish density1": {
-      "name": "wgs84_Fish density1",
+    "Fish Density": {
+      "name": "Fish Density",
       "value": 28111.0870360104,
       "percValue": 0.11094263417393459,
       "sketchMetrics": [
@@ -114,8 +114,8 @@
         }
       ]
     },
-    "wgs84_Fish diversity (BREAM data)1": {
-      "name": "wgs84_Fish diversity (BREAM data)1",
+    "Fish Diversity BREAM": {
+      "name": "Fish Diversity BREAM",
       "value": 45210.03184568882,
       "percValue": 0.13554087713405255,
       "sketchMetrics": [
@@ -133,8 +133,8 @@
         }
       ]
     },
-    "wgs84_Fish recruit density1": {
-      "name": "wgs84_Fish recruit density1",
+    "Fish Recruit Density": {
+      "name": "Fish Recruit Density",
       "value": 5677.342019669712,
       "percValue": 0.07530548371218843,
       "sketchMetrics": [
@@ -152,8 +152,8 @@
         }
       ]
     },
-    "wgs84_Seagrass Index Value1": {
-      "name": "wgs84_Seagrass Index Value1",
+    "Seagrass": {
+      "name": "Seagrass",
       "value": 225.32707726210356,
       "percValue": 0.07789892718634739,
       "sketchMetrics": [

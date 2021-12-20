@@ -6,24 +6,15 @@ import {
   keyBy,
   LayerToggle,
 } from "@seasketch/geoprocessing/client";
-import styled from "styled-components";
 import { GreenPill } from "../components/Pill";
-import { ClassConfig, ClassMetric, ClassMetricSketch } from "../util/types";
-
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
+import { DataClass, ClassMetric, ClassMetricSketch } from "../metrics/types";
+import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface ClassTableProps {
   titleText: string;
   percText?: string;
   rows: ClassMetric[] | ClassMetricSketch[];
-  classes: ClassConfig[];
+  classes: DataClass[];
   showGoal?: boolean;
   options?: {
     classColWidth?: string;
@@ -64,10 +55,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(
-    classes,
-    (curClass) => curClass?.baseFilename || curClass?.name || "placeholder"
-  );
+  const classesByName = keyBy(classes, (curClass) => curClass.name);
   const columns: Column<ClassMetric>[] = [
     {
       Header: titleText,
@@ -80,8 +68,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       accessor: (row) => {
         const percDisplay = percentWithEdge(row.percValue);
         const goal =
-          classes.find((curClass) => curClass.baseFilename === row.name)
-            ?.goalPerc || 0;
+          classes.find((curClass) => curClass.name === row.name)?.goalPerc || 0;
         if (showGoal && row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
@@ -113,17 +100,16 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       Header: "Goal",
       style: { textAlign: "right", width: colWidths.goalWidth },
       accessor: (row) => {
-        const goalPerc = classes.find(
-          (curClass) => curClass.baseFilename === row.name
-        )?.goalPerc;
+        const goalPerc = classes.find((curClass) => curClass.name === row.name)
+          ?.goalPerc;
         return percentWithEdge(goalPerc || 0);
       },
     });
   }
 
   return (
-    <TableStyled>
+    <ReportTableStyled>
       <Table className="styled" columns={columns} data={rows} />
-    </TableStyled>
+    </ReportTableStyled>
   );
 };

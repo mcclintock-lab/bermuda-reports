@@ -2,7 +2,7 @@
  * @group unit
  */
 
-import { areaStats, subAreaStats } from "./areaStats";
+import { overlapArea, overlapSubarea } from "./overlapArea";
 import {
   genSampleSketch,
   genSampleSketchCollection,
@@ -85,7 +85,7 @@ const scArea = area(sc);
 
 describe("Area stats tool", () => {
   test("function is present", () => {
-    expect(typeof areaStats).toBe("function");
+    expect(typeof overlapArea).toBe("function");
   });
 
   test("outerArea", () => {
@@ -97,65 +97,67 @@ describe("Area stats tool", () => {
 
   // sketch always assumed to be within outer boundary.  outerArea is passed as pre-calculated area avoiding need to compute it on the fly
   test("overall - single polygon fully inside", async () => {
-    const stats = await areaStats(sketch1, outerArea);
-    expect(stats.area).toBeCloseTo(12391399902.071104);
-    expect(stats.percArea).toBeCloseTo(0.25); // takes up bottom left quadrant of outer
+    const stats = await overlapArea("test", sketch1, outerArea);
+    expect(stats.value).toBeCloseTo(12391399902.071104);
+    expect(stats.percValue).toBeCloseTo(0.25); // takes up bottom left quadrant of outer
   });
 
   test("subarea intersect - single polygon fully inside", async () => {
-    const stats = await subAreaStats(sketch1, outer);
-    expect(stats.area).toBeCloseTo(12391399902.071104);
-    expect(stats.percArea).toBeCloseTo(0.25);
+    const stats = await overlapSubarea("test", sketch1, outer);
+    expect(stats.value).toBeCloseTo(12391399902.071104);
+    expect(stats.percValue).toBeCloseTo(0.25);
   });
 
   test("subarea difference - single polygon fully inside", async () => {
-    const stats = await subAreaStats(sketch1, outer, {
+    const stats = await overlapSubarea("test", sketch1, outer, {
       operation: "difference",
       outerArea,
     });
-    expect(stats.area).toBeCloseTo(0);
-    expect(stats.percArea).toBeCloseTo(0);
+    expect(stats.value).toBeCloseTo(0);
+    expect(stats.percValue).toBeCloseTo(0);
   });
 
   test("subarea intersect - single polygon fully outside", async () => {
-    const stats = await subAreaStats(sketch3, outer);
-    expect(stats.area).toBeCloseTo(0);
-    expect(stats.percArea).toBeCloseTo(0);
+    const stats = await overlapSubarea("test", sketch3, outer);
+    expect(stats.value).toBeCloseTo(0);
+    expect(stats.percValue).toBeCloseTo(0);
   });
 
   test("subarea difference - single polygon fully outside outer, inside of outerOuter", async () => {
-    const stats = await subAreaStats(sketch3, outer, {
+    const stats = await overlapSubarea("test", sketch3, outer, {
       operation: "difference",
       outerArea: outerOuterArea,
     });
-    expect(stats.area).toBeCloseTo(12368758407.838667);
-    expect(stats.percArea).toBeCloseTo(0.08326); // should be 1 square of 16 in outerOuter
+    expect(stats.value).toBeCloseTo(12368758407.838667);
+    expect(stats.percValue).toBeCloseTo(0.08326); // should be 1 square of 16 in outerOuter
   });
 
   // sketch always assumed to be within outer boundary.  outerArea is passed as pre-calculated area avoiding need to compute it on the fly
   test("overall - network", async () => {
-    const stats = await areaStats(sc, outerOuterArea);
-    expect(stats.area).toBeCloseTo(49527861102.020134);
-    expect(stats.percArea).toBeCloseTo(0.25); // takes up 4 out of 16 squares of outerOuter
-    expect(stats.sketchAreas.length).toBe(sc.features.length);
+    const stats = await overlapArea("test", sc, outerOuterArea);
+    expect(stats.value).toBeCloseTo(49527861102.020134);
+    expect(stats.percValue).toBeCloseTo(0.25); // takes up 4 out of 16 squares of outerOuter
+    expect(stats.sketchMetrics.length).toBe(sc.features.length);
   });
 
   test("subarea intersect - network, half inside and outside", async () => {
-    const stats = await subAreaStats(sc, outer);
+    const stats = await overlapSubarea("test", sc, outer);
     expect(scArea).toBe(49527861102.020134);
-    expect(stats.area).toBeCloseTo(24779025263.69385); // Expect about half, but not exactly same as inside
-    expect(stats.percArea).toBeCloseTo(2 / 4); // 2 of 4 squares in outer
-    expect(stats.sketchAreas.length).toBe(sc.features.length);
+    expect(stats.value).toBeCloseTo(24779025263.69385); // Expect about half, but not exactly same as inside
+    expect(stats.percValue).toBeCloseTo(2 / 4); // 2 of 4 squares in outer
+    expect(stats.sketchMetrics.length).toBe(sc.features.length);
   });
 
   test("subarea difference - network, half inside and outside", async () => {
-    const stats = await subAreaStats(sc, outer, {
+    const stats = await overlapSubarea("test", sc, outer, {
       operation: "difference",
       outerArea: outerOuterArea,
     });
     expect(scArea).toBe(49527861102.020134);
-    expect(stats.area).toBeCloseTo(24748835838.326283); // Expect about half, but not exactly same as inside
-    expect(stats.percArea).toBeCloseTo(2 / 12.0); // 2 of 12 squares in outerOuter
-    expect(stats.sketchAreas.length).toBe(sc.features.length);
+    expect(stats.value).toBeCloseTo(24748835838.326283); // Expect about half, but not exactly same as inside
+    expect(stats.percValue).toBeCloseTo(2 / 12.0); // 2 of 12 squares in outerOuter
+    expect(stats.sketchMetrics.length).toBe(sc.features.length);
   });
+
+  //ToDo: test for undefined feat, feat properties, and null geometry
 });

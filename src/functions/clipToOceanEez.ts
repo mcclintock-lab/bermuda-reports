@@ -16,7 +16,7 @@ import combine from "@turf/combine";
 import flatten from "@turf/flatten";
 import kinks from "@turf/kinks";
 
-const MAX_SIZE = 1000000 * 1000 ** 2;
+const MAX_SKETCH_SIZE = 1000000 * 1000 ** 2;
 
 type OsmLandFeature = Feature<Polygon, { gid: number }>;
 type EezLandUnion = Feature<Polygon, { gid: number; UNION: string }>;
@@ -68,7 +68,7 @@ export async function clipToOceanEez(
     throw new ValidationError("Input must be a polygon");
   }
 
-  if (area(feature) > MAX_SIZE) {
+  if (area(feature) > MAX_SKETCH_SIZE) {
     throw new ValidationError(
       "Please limit sketches to under 1,000,000 square km"
     );

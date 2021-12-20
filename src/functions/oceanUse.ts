@@ -8,13 +8,13 @@ import {
   keyBy,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRaster } from "../metrics/overlapRaster";
 import config, { OceanUseResults } from "../_config";
 
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
 
 // Define at module level for potential cache and reuse by Lambda
-const LAYERS = config.oceanUse.layers;
+const CLASSES = config.oceanUse.classes;
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -23,19 +23,19 @@ export async function oceanUse(
   let rasters: Georaster[];
 
   const metrics = await Promise.all(
-    LAYERS.map(async (lyr) => {
+    CLASSES.map(async (curClass) => {
       // start raster load and move on in loop while awaiting finish
       const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${lyr.filename}`,
+        `${config.dataBucketUrl}${curClass.filename}`,
         {
           windowBox: box,
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
-        lyr.baseFilename,
-        (oceanUseTotals as Record<string, number>)[lyr.baseFilename],
+        curClass.name,
+        (oceanUseTotals as Record<string, number>)[curClass.name],
         sketch
       );
     })

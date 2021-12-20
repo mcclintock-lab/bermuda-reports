@@ -9,14 +9,14 @@ import geoblaze from "geoblaze";
 
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
 
 async function main() {
   //Offshore
   const DEST_PATH = `${__dirname}/precalc/offshoreHabitatTotals.json`;
   const totals = await Promise.all(
-    config.offshore.layers.map(async (lyr) => {
+    config.offshore.classes.map(async (lyr) => {
       const url = `${config.localDataUrl}${lyr.filename}`;
       const raster = await loadCogWindow(url, { noDataValue: lyr.noDataValue });
       const sum = geoblaze.sum(raster)[0] as number;
@@ -28,7 +28,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [config.offshore.layers[index].baseFilename]: total,
+      [config.offshore.classes[index].name]: total,
     }),
     {}
   );
@@ -38,7 +38,7 @@ async function main() {
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(totalMap).length === config.offshore.layers.length);
+  assert(Object.keys(totalMap).length === config.offshore.classes.length);
 }
 
 main();

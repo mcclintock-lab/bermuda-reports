@@ -22,7 +22,7 @@ import {
   ClassMetrics,
   GroupMetricAgg,
   GroupMetricSketchAgg,
-} from "../util/types";
+} from "../metrics/types";
 import {
   IucnCategory,
   getCategoryForActivities,
@@ -30,40 +30,17 @@ import {
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
 import { Pill, LevelPill } from "../components/Pill";
-import { ClassMetric } from "../util/types";
+import { ClassMetric } from "../metrics/types";
 import { LayerToggle } from "@seasketch/geoprocessing/client";
 import { LevelCircleRow } from "../components/Circle";
-
-import styled from "styled-components";
-import { flattenGroup, flattenGroupSketch } from "../util/clientMetrics";
+import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
+import { ReportTableStyled } from "../components/ReportTableStyled";
+import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
 
-const TableStyled = styled.div`
-  .styled {
-    td {
-      padding: 5px 5px;
-    }
-  }
-}
-`;
-
-const SmallTableStyled = styled.div`
-  .squeeze {
-    font-size: 13px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
-`;
+const CONFIG = config.habitatNursery;
 
 const sumValue = (metrics: ClassMetrics) =>
   Object.values(metrics).reduce(
@@ -123,7 +100,7 @@ const genSingle = (
         flattenGroupSketch(
           data.byLevel,
           precalcTotals.overall.value,
-          config.habitatNursery.layers
+          CONFIG.classes
         )[0].percValue
       )}
       {genHabitatTable(Object.values(data.byClass))}
@@ -144,7 +121,7 @@ const genNetwork = (data: HabitatNurseryLevelResults) => {
   const sketchRows = flattenGroupSketch(
     data.byLevel,
     precalcTotals.overall.value,
-    config.habitatNursery.layers
+    CONFIG.classes
   );
 
   return (
@@ -161,10 +138,10 @@ const genNetwork = (data: HabitatNurseryLevelResults) => {
 const genHabitatToggles = () => {
   return (
     <>
-      {config.habitatNursery.layers.map((lyr) => (
+      {CONFIG.classes.map((curClass) => (
         <LayerToggle
-          label={`Show ${lyr.display} Layer`}
-          layerId={lyr.layerId}
+          label={`Show ${curClass.display} Layer`}
+          layerId={curClass.layerId}
         />
       ))}
     </>
@@ -172,10 +149,10 @@ const genHabitatToggles = () => {
 };
 
 const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
-  const classColumns: Column<GroupMetricSketchAgg>[] = config.habitatNursery.layers.map(
-    (lyr) => ({
-      Header: lyr.display,
-      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
+  const classColumns: Column<GroupMetricSketchAgg>[] = CONFIG.classes.map(
+    (curClass) => ({
+      Header: curClass.display,
+      accessor: (row) => percentWithEdge(row[curClass.name] as number),
     })
   );
 
@@ -200,21 +177,21 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={sketchRows.sort((a, b) => a.groupId.localeCompare(b.groupId))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
-  const classColumns: Column<GroupMetricAgg>[] = config.habitatNursery.layers.map(
-    (lyr) => ({
-      Header: lyr.display,
-      accessor: (row) => percentWithEdge(row[lyr.baseFilename] as number),
+  const classColumns: Column<GroupMetricAgg>[] = CONFIG.classes.map(
+    (curClass) => ({
+      Header: curClass.display,
+      accessor: (row) => percentWithEdge(row[curClass.name] as number),
       style: { width: "10%" },
     })
   );
@@ -249,24 +226,23 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   ];
 
   return (
-    <SmallTableStyled>
+    <SmallReportTableStyled>
       <Table
-        className="squeeze"
+        className="styled"
         columns={columns}
         data={groupRows.sort((a, b) => a.groupId.localeCompare(b.groupId))}
       />
-    </SmallTableStyled>
+    </SmallReportTableStyled>
   );
 };
 
 const genHabitatTable = (data: ClassMetric[]) => {
-  const layers = config.habitatNursery.layers;
-  const classConfig = keyBy(layers, (lyr) => lyr.baseFilename);
+  const classesByName = keyBy(CONFIG.classes, (curClass) => curClass.name);
 
   const columns: Column<ClassMetric>[] = [
     {
       Header: "Habitat Type",
-      accessor: (row) => classConfig[row.name].display,
+      accessor: (row) => classesByName[row.name].display,
       style: { width: "30%" },
     },
     {
@@ -279,7 +255,7 @@ const genHabitatTable = (data: ClassMetric[]) => {
       accessor: (row) => (
         <LayerToggle
           simple
-          layerId={classConfig[row.name].layerId}
+          layerId={classesByName[row.name].layerId}
           style={{ marginTop: 0, marginLeft: 15 }}
         />
       ),
@@ -288,9 +264,9 @@ const genHabitatTable = (data: ClassMetric[]) => {
   ];
 
   return (
-    <TableStyled>
+    <ReportTableStyled>
       <Table className="styled" columns={columns} data={data} />
-    </TableStyled>
+    </ReportTableStyled>
   );
 };
 

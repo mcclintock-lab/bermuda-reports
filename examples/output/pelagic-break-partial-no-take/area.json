@@ -1,41 +1,43 @@
 {
-  "eez": {
-    "area": 251253216.90383413,
-    "percArea": 0.0005394742657466582,
-    "sketchAreas": [
-      {
-        "sketchId": "61803a1a04baa808681f0a8f",
-        "name": "pelagic-break-partial-no-take",
-        "area": 251253216.90383413,
-        "percArea": 0.0005394742657466582
-      }
-    ],
-    "areaUnit": "square meters"
-  },
-  "nearshore": {
-    "area": 62228333.88027496,
-    "percArea": 0.024265325214327615,
-    "sketchAreas": [
-      {
-        "sketchId": "61803a1a04baa808681f0a8f",
-        "name": "pelagic-break-partial-no-take",
-        "area": 62228333.88027496,
-        "percArea": 0.024265325214327615
-      }
-    ],
-    "areaUnit": "square meters"
-  },
-  "offshore": {
-    "area": 188999666.4793882,
-    "percArea": 0.000408054442443948,
-    "sketchAreas": [
-      {
-        "sketchId": "61803a1a04baa808681f0a8f",
-        "name": "pelagic-break-partial-no-take",
-        "area": 188999666.4793882,
-        "percArea": 0.000408054442443948
-      }
-    ],
-    "areaUnit": "square meters"
+  "byClass": {
+    "eez": {
+      "name": "eez",
+      "value": 251253216.90383413,
+      "percValue": 0.0005394742657466582,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 251253216.90383413,
+          "percValue": 0.0005394742657466582
+        }
+      ]
+    },
+    "nearshore": {
+      "name": "nearshore",
+      "value": 62228333.88027496,
+      "percValue": 0.024265325214327615,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 62228333.88027496,
+          "percValue": 0.024265325214327615
+        }
+      ]
+    },
+    "offshore": {
+      "name": "offshore",
+      "value": 188999666.4793882,
+      "percValue": 0.000408054442443948,
+      "sketchMetrics": [
+        {
+          "id": "61803a1a04baa808681f0a8f",
+          "name": "pelagic-break-partial-no-take",
+          "value": 188999666.4793882,
+          "percValue": 0.000408054442443948
+        }
+      ]
+    }
   }
 }

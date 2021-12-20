@@ -6,9 +6,11 @@ import {
 } from "@seasketch/geoprocessing/client";
 import config, { ReefIndexResults } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
+
+const CONFIG = config.reefIndex;
 
 const SpeciesProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -53,7 +55,7 @@ const SpeciesProtection = () => {
               <ClassTable
                 titleText="Indicator"
                 rows={results}
-                classes={config.reefIndex.layers}
+                classes={CONFIG.classes}
                 showGoal
               />
               {isCollection && (
@@ -69,13 +71,8 @@ const SpeciesProtection = () => {
 
 const genSketchTable = (data: ReefIndexResults) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(
-    data.reefIndex,
-    config.reefIndex.layers
-  );
-  return (
-    <SketchClassTable rows={sketchRows} classes={config.reefIndex.layers} />
-  );
+  const sketchRows = flattenSketchAllClass(data.reefIndex, CONFIG.classes);
+  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
 };
 
 const LoadingSkeleton = () => (

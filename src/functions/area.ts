@@ -6,37 +6,39 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
 } from "@seasketch/geoprocessing";
-import { areaStats, subAreaStats, AreaMetric } from "../util/areaStats";
-import config, { STUDY_REGION_AREA_SQ_METERS } from "../_config";
+import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
+import config, { STUDY_REGION_AREA_SQ_METERS, AreaResults } from "../_config";
 import bbox from "@turf/bbox";
 
-export type AreaResultType = "eez" | "nearshore" | "offshore";
-export type AreaResult = Record<AreaResultType, AreaMetric>;
+const CONFIG = config.size;
+const CLASS = CONFIG.classes[0];
 
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<AreaResult> {
+): Promise<AreaResults> {
   const box = sketch.bbox || bbox(sketch);
   const nearshorePolys = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${config.size.filename}`,
+    `${config.dataBucketUrl}${CLASS.filename}`,
     box
   );
 
-  const eez = await areaStats(sketch, STUDY_REGION_AREA_SQ_METERS);
-  const nearshore = await subAreaStats(
+  const eez = await overlapArea("eez", sketch, STUDY_REGION_AREA_SQ_METERS);
+  const nearshore = await overlapSubarea(
+    "nearshore",
     sketch,
-    nearshorePolys[0] as Feature<Polygon>
+    nearshorePolys[0]
   );
-  const offshore = await subAreaStats(
-    sketch,
-    nearshorePolys[0] as Feature<Polygon>,
-    { operation: "difference", outerArea: STUDY_REGION_AREA_SQ_METERS }
-  );
+  const offshore = await overlapSubarea("offshore", sketch, nearshorePolys[0], {
+    operation: "difference",
+    outerArea: STUDY_REGION_AREA_SQ_METERS,
+  });
 
   return {
-    eez,
-    nearshore,
-    offshore,
+    byClass: {
+      eez,
+      nearshore,
+      offshore,
+    },
   };
 }
 

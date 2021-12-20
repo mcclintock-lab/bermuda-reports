@@ -1,20 +1,24 @@
 import fs from "fs";
 import config from "../src/_config";
 // @ts-ignore
-import { loadCogWindow } from "../src/util/cog";
+import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";
 
 const DEST_PATH = `${__dirname}/precalc/nearshoreHabitatTotals.json`;
+const CONFIG = config.nearshore;
 
 async function main() {
-  const url = `${config.localDataUrl}${config.nearshore.filename}`;
+  const url = `${config.localDataUrl}${CONFIG.filename}`;
 
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
+    if (!CONFIG.classIdToName) {
+      throw new Error("Expected classIdToName to be configured");
+    }
     const stats = await countByClass(raster, {
-      classIdToName: config.nearshore.classIdToName,
+      classIdToName: CONFIG.classIdToName,
     });
 
     fs.writeFile(DEST_PATH, JSON.stringify(stats, null, 2), (err) =>

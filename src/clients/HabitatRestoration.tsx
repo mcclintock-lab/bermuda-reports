@@ -2,18 +2,17 @@ import React from "react";
 import {
   ResultsCard,
   Skeleton,
-  keyBy,
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client";
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
-import { ClassMetric } from "../util/types";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { ClassMetric } from "../metrics/types";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 
-const LAYERS = config.habitatRestore.layers;
+const CLASSES = config.habitatRestore.classes;
 
 const HabitatRestoration = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -95,15 +94,15 @@ const genTable = (data: ClassMetric[]) => {
       titleText="RestorationType"
       percText="% Area Within Plan"
       rows={data}
-      classes={LAYERS}
+      classes={CLASSES}
     />
   );
 };
 
 const genSketchTable = (data: HabitatRestoreResults) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.byClass, LAYERS);
-  return <SketchClassTable rows={sketchRows} classes={LAYERS} />;
+  const sketchRows = flattenSketchAllClass(data.byClass, CLASSES);
+  return <SketchClassTable rows={sketchRows} classes={CLASSES} />;
 };
 
 const LoadingSkeleton = () => (

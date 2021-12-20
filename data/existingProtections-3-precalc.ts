@@ -7,7 +7,9 @@ import { strict as assert } from "assert";
 import area from "@turf/area";
 import { featureCollection } from "@turf/helpers";
 
-const CLASSES = config.existingProtection.layers;
+export const nameProperty = "Name";
+export const classProperty = "Type";
+const CLASSES = config.existingProtection.classes;
 const DATASET = `existingProtections`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
 
@@ -19,13 +21,11 @@ async function main() {
   const totals = await Promise.all(
     CLASSES.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
-      const classFeatures = allFc.features.filter(
-        (feat: any) =>
-          feat.geometry &&
-          feat.properties[config.existingProtection.classProperty] ===
-            curClass.name,
-        []
-      );
+      const classFeatures = allFc.features.filter((feat: any) => {
+        return (
+          feat.geometry && feat.properties[classProperty] === curClass.name
+        );
+      }, []);
       const classFC = featureCollection(classFeatures);
       return area(classFC);
     })

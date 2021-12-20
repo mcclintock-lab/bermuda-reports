@@ -1,7 +1,7 @@
 {
   "byClass": {
-    "Pelagic_Fishing_Zone_Dissolved": {
-      "name": "Pelagic_Fishing_Zone_Dissolved",
+    "Platform Edge": {
+      "name": "Platform Edge",
       "value": 128949588.19445494,
       "percValue": 0.07435544429545485,
       "sketchMetrics": [
@@ -18,7 +18,7 @@
   },
   "byGroup": {
     "definite": {
-      "Pelagic_Fishing_Zone_Dissolved": {
+      "Platform Edge": {
         "value": 128949588.19445494,
         "percValue": 0.07435544429545485,
         "sketchMetrics": [
@@ -34,14 +34,14 @@
       }
     },
     "partial": {
-      "Pelagic_Fishing_Zone_Dissolved": {
+      "Platform Edge": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []
       }
     },
     "no": {
-      "Pelagic_Fishing_Zone_Dissolved": {
+      "Platform Edge": {
         "value": 0,
         "percValue": 0,
         "sketchMetrics": []

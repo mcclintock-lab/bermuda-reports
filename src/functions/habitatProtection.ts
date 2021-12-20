@@ -9,13 +9,13 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { HabitatResults } from "../_config";
-import { rasterClassStats } from "../util/overlapByClassRaster";
-import { sumOverlapRaster } from "../util/sumOverlapRaster";
+import { overlapRasterClass } from "../metrics/overlapRasterClass";
+import { overlapRaster } from "../metrics/overlapRaster";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
 
-const OFFSHORE_LAYERS = config.offshore.layers;
+const OFFSHORE_CLASSES = config.offshore.classes;
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -27,7 +27,10 @@ export async function habitatProtection(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
-  const nearshoreMetrics = await rasterClassStats(
+  if (!config.nearshore.classIdToName) {
+    throw new Error("Expected classIdToName to be configured");
+  }
+  const nearshoreMetrics = await overlapRasterClass(
     nearshoreRaster,
     {
       classIdToName: config.nearshore.classIdToName,
@@ -37,20 +40,20 @@ export async function habitatProtection(
   );
 
   const offshoreMetrics = await Promise.all(
-    OFFSHORE_LAYERS.map(async (lyr) => {
+    OFFSHORE_CLASSES.map(async (curClass) => {
       // start raster load and move on in loop while awaiting finish
       const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${lyr.filename}`,
+        `${config.dataBucketUrl}${curClass.filename}`,
         {
           windowBox: box,
-          noDataValue: lyr.noDataValue,
+          noDataValue: curClass.noDataValue,
         }
       );
       // start analysis as soon as source load done
-      return sumOverlapRaster(
+      return overlapRaster(
         raster,
-        lyr.baseFilename,
-        (offshoreHabitatTotals as Record<string, number>)[lyr.baseFilename],
+        curClass.name,
+        (offshoreHabitatTotals as Record<string, number>)[curClass.name],
         sketch
       );
     })

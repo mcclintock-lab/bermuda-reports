@@ -8,18 +8,20 @@ import {
   toSketchArray,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { ClassMetricsSketch } from "../util/types";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { ClassMetricsSketch } from "../metrics/types";
 import config, {
   ExistingProtectionBaseResults,
   ExistingProtectionResults,
 } from "../_config";
-import legislatedAreaTotals from "../../data/precalc/existingProtectionTotals.json";
+import legislatedAreaTotals from "../../data/precalc/existingProtectionsTotals.json";
 
 // Multi-class vector dataset
+export const nameProperty = "Name";
+export const classProperty = "Type";
 export type ExistingProtectionProperties = {
-  ["Name"]: string;
-  ["Type"]: string;
+  [nameProperty]: string;
+  [classProperty]: string;
 };
 export type ExistingProtectionFeature = Feature<
   Polygon,
@@ -28,8 +30,6 @@ export type ExistingProtectionFeature = Feature<
 
 const precalcTotals = legislatedAreaTotals as ExistingProtectionBaseResults;
 const CONFIG = config.existingProtection;
-
-// use areaStats - like protection.ts?
 
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -43,16 +43,14 @@ export async function existingProtections(
 
   const classMetrics = (
     await Promise.all(
-      CONFIG.layers.map(async (curClass) => {
+      CONFIG.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
-        const classFeatures = features.filter(
-          (feat: any) =>
-            feat.geometry &&
-            feat.properties[config.existingProtection.classProperty] ===
-              curClass.name,
-          []
-        );
-        return overlapStatsVector(
+        const classFeatures = features.filter((feat) => {
+          return (
+            feat.geometry && feat.properties[classProperty] === curClass.name
+          );
+        }, []);
+        return overlapFeatures(
           classFeatures,
           curClass.name,
           sketches,

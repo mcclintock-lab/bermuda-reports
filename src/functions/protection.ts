@@ -14,45 +14,14 @@ import {
 } from "@seasketch/geoprocessing";
 import { featureCollection } from "@turf/helpers";
 import flatten from "@turf/flatten";
-import { areaStats } from "../util/areaStats";
-import { STUDY_REGION_AREA_SQ_METERS } from "../_config";
+import { overlapArea } from "../metrics/overlapArea";
+import { STUDY_REGION_AREA_SQ_METERS, ProtectionResult } from "../_config";
+import { SketchStat, CategoryStat, LevelStat } from "../metrics/types";
 import {
   getCategoryForActivities,
   iucnCategories,
   levels,
 } from "../util/iucnProtectionLevel";
-
-export interface SketchStat {
-  sketchId: string;
-  name: string;
-  // category stats
-  category: string;
-  level: string;
-  // area stats
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface CategoryStat {
-  category: string;
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface LevelStat {
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface ProtectionResult {
-  sketchStats: SketchStat[];
-  categoryStats: CategoryStat[];
-  levelStats: LevelStat[];
-}
 
 export async function protection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -60,8 +29,8 @@ export async function protection(
   const sketches = toSketchArray(sketch);
   const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
-  // TODO: convert to square meters
-  const planningAreaStats = await areaStats(
+  const planningAreaStats = await overlapArea(
+    "eez",
     sketch,
     STUDY_REGION_AREA_SQ_METERS
   );
@@ -77,8 +46,8 @@ export async function protection(
       name: s.properties.name,
       category: category.category,
       level,
-      area: planningAreaStats.sketchAreas[index].area,
-      percPlanningArea: planningAreaStats.sketchAreas[index].percArea,
+      area: planningAreaStats.sketchMetrics[index].value,
+      percPlanningArea: planningAreaStats.sketchMetrics[index].percValue,
     };
   });
 
@@ -92,7 +61,8 @@ export async function protection(
       );
       // Calc area stats for each category, accounting for overlap, to get true area and %
       const sc = genSampleSketchCollection(featureCollection(catSketches));
-      const catAreaStats = await areaStats(
+      const catAreaStats = await overlapArea(
+        "eez",
         sc as SketchCollection<Polygon>,
         STUDY_REGION_AREA_SQ_METERS
       );
@@ -101,8 +71,8 @@ export async function protection(
         category: categoryName,
         level: iucnCategories[categoryName].level,
         numSketches: catGroups[categoryName].length,
-        area: catAreaStats.area,
-        percPlanningArea: catAreaStats.percArea,
+        area: catAreaStats.value,
+        percPlanningArea: catAreaStats.percValue,
       };
     })
   );
@@ -152,13 +122,17 @@ export async function protection(
       const sl = genSampleSketchCollection(
         flatten(featureCollection(remFeatures))
       );
-      const levelAreaStats = await areaStats(sl, STUDY_REGION_AREA_SQ_METERS);
+      const levelAreaStats = await overlapArea(
+        "eez",
+        sl,
+        STUDY_REGION_AREA_SQ_METERS
+      );
 
       return {
         level: levelName,
         numSketches: levelGroups[levelName].length,
-        area: levelAreaStats.area,
-        percPlanningArea: levelAreaStats.percArea,
+        area: levelAreaStats.value,
+        percPlanningArea: levelAreaStats.percValue,
       };
     })
   );

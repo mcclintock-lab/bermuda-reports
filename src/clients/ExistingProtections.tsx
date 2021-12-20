@@ -7,9 +7,9 @@ import {
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
-import config from "../functions/existingProtectionsConfig";
+import config from "../_config";
 import { ExistingProtectionResults } from "../_config";
-import { flattenSketchAllClass } from "../util/clientMetrics";
+import { flattenSketchAllClass } from "../metrics/clientMetrics";
 // Import the results type definition from your functions to type-check your
 // component render functions
 
@@ -26,7 +26,10 @@ const ExistingProtections = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: ExistingProtectionResults) => {
-          const sketchRows = flattenSketchAllClass(data.byClass, CONFIG.layers);
+          const sketchRows = flattenSketchAllClass(
+            data.byClass,
+            CONFIG.classes
+          );
           return (
             <>
               <p>
@@ -39,11 +42,14 @@ const ExistingProtections = () => {
                 rows={Object.values(data.byClass).sort((a, b) =>
                   a.name.localeCompare(b.name)
                 )}
-                classes={CONFIG.layers}
+                classes={CONFIG.classes}
               />
               {isCollection && (
                 <Collapse title="Show by MPA">
-                  <SketchClassTable rows={sketchRows} classes={CONFIG.layers} />
+                  <SketchClassTable
+                    rows={sketchRows}
+                    classes={CONFIG.classes}
+                  />
                 </Collapse>
               )}
             </>

@@ -7,7 +7,6 @@ import {
 import { featureEach } from "@turf/meta";
 import { clip } from "../util/clip";
 import area from "@turf/area";
-import { featureCollection } from "@turf/helpers";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
@@ -29,7 +28,7 @@ function removeSketchCollPolygonHoles(sketchColl: SketchCollection<Polygon>) {
  * Holes are removed by default from sketch polygons to prevent an apparent bug with Geoblaze overcounting when present.
  * Make sure that raster data is already clipped to land for example, to ensure it does not overcount.
  */
-export async function sumOverlapRaster(
+export async function overlapRaster(
   raster: Georaster,
   /** name/identifier for the raster */
   name: string,
@@ -53,8 +52,7 @@ export async function sumOverlapRaster(
         ? removeSketchCollPolygonHoles(sketch)
         : sketch.features;
       const sketchUnion = clip(remSketches, "union");
-      if (!sketchUnion)
-        throw new Error("sumOverlapRaster - something went wrong");
+      if (!sketchUnion) throw new Error("overlapRaster - something went wrong");
       const sketchUnionArea = area(sketchUnion);
       isOverlap = sketchUnionArea < sketchArea;
       if (isOverlap) {

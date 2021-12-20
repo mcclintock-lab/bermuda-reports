@@ -249,8 +249,8 @@
     }
   },
   "offshore": {
-    "feature_abyssopelagic": {
-      "name": "feature_abyssopelagic",
+    "Abyssopelagic": {
+      "name": "Abyssopelagic",
       "value": 983,
       "percValue": 0.16133267684227803,
       "sketchMetrics": [
@@ -268,8 +268,8 @@
         }
       ]
     },
-    "Bathypelagic1": {
-      "name": "Bathypelagic1",
+    "Bathypelagic": {
+      "name": "Bathypelagic",
       "value": 77,
       "percValue": 0.6209677419354839,
       "sketchMetrics": [
@@ -287,8 +287,8 @@
         }
       ]
     },
-    "Cold water coral1": {
-      "name": "Cold water coral1",
+    "Cold water coral": {
+      "name": "Cold water coral",
       "value": 4,
       "percValue": 0.4444444444444444,
       "sketchMetrics": [
@@ -306,8 +306,8 @@
         }
       ]
     },
-    "Escarpments1": {
-      "name": "Escarpments1",
+    "Escarpments": {
+      "name": "Escarpments",
       "value": 59,
       "percValue": 0.5728155339805825,
       "sketchMetrics": [
@@ -325,8 +325,8 @@
         }
       ]
     },
-    "Knolls1": {
-      "name": "Knolls1",
+    "Knolls": {
+      "name": "Knolls",
       "value": 319,
       "percValue": 0.2010081915563957,
       "sketchMetrics": [
@@ -420,8 +420,8 @@
         }
       ]
     },
-    "seamounts_buffered": {
-      "name": "seamounts_buffered",
+    "Seamounts": {
+      "name": "Seamounts",
       "value": 54,
       "percValue": 0.1424802110817942,
       "sketchMetrics": [

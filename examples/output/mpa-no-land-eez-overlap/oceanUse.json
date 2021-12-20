@@ -1,7 +1,7 @@
 {
   "byClass": {
-    "aquaculture_heatmap": {
-      "name": "aquaculture_heatmap",
+    "Aquaculture": {
+      "name": "Aquaculture",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -13,8 +13,8 @@
         }
       ]
     },
-    "boating_heatmap": {
-      "name": "boating_heatmap",
+    "Boating": {
+      "name": "Boating",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -26,8 +26,8 @@
         }
       ]
     },
-    "commercial_fishing_heatmap": {
-      "name": "commercial_fishing_heatmap",
+    "CommercialFishing": {
+      "name": "CommercialFishing",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -39,8 +39,8 @@
         }
       ]
     },
-    "passiverec_conservation_heatmap": {
-      "name": "passiverec_conservation_heatmap",
+    "PassiveRecreation_Conservation": {
+      "name": "PassiveRecreation_Conservation",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -52,8 +52,8 @@
         }
       ]
     },
-    "recreational_fishing_heatmap": {
-      "name": "recreational_fishing_heatmap",
+    "Recreational Fishing": {
+      "name": "Recreational Fishing",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -65,8 +65,8 @@
         }
       ]
     },
-    "shipping_heatmap": {
-      "name": "shipping_heatmap",
+    "Shipping": {
+      "name": "Shipping",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -78,8 +78,8 @@
         }
       ]
     },
-    "swim_snorkel_dive_heatmap": {
-      "name": "swim_snorkel_dive_heatmap",
+    "Swimming_Snorkeling_Diving": {
+      "name": "Swimming_Snorkeling_Diving",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -91,8 +91,8 @@
         }
       ]
     },
-    "tourism_heatmap": {
-      "name": "tourism_heatmap",
+    "Tourism": {
+      "name": "Tourism",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [
@@ -104,8 +104,8 @@
         }
       ]
     },
-    "utilities_heatmap": {
-      "name": "utilities_heatmap",
+    "Utilities": {
+      "name": "Utilities",
       "value": 0,
       "percValue": 0,
       "sketchMetrics": [

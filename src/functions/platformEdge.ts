@@ -2,7 +2,6 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
-  MultiPolygon,
   Feature,
   GeoprocessingHandler,
   fgbFetchAll,
@@ -16,13 +15,14 @@ import config, {
   EdgeSketchMetric,
   PlatformEdgeResult,
 } from "../_config";
-import { overlapStatsVector } from "../util/sumOverlapVector";
-import { getGroupMetrics } from "../util/metrics";
-import { getBreakGroup } from "../util/platformEdge";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { getGroupMetrics } from "../metrics/metrics";
+import { getBreakGroup } from "../util/getBreakGroup";
+import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 
-const LAYER = config.platformEdge.layers[0];
-const ACTIVITIES = config.platformEdge.fishingActivities;
-const BREAK_MAP = config.platformEdge.breakMap;
+const precalcTotals = platformEdgeTotals as Record<string, number>;
+const CONFIG = config.platformEdge;
+const CLASS = CONFIG.classes[0];
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -31,15 +31,15 @@ export async function platformEdge(
   const box = sketch.bbox || bbox(sketch);
 
   const edgeMultiPoly = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${LAYER.filename}`,
+    `${config.dataBucketUrl}${CLASS.filename}`,
     box
   );
 
-  const classMetric = await overlapStatsVector(
+  const classMetric = await overlapFeatures(
     edgeMultiPoly,
-    LAYER.baseFilename,
+    CLASS.name,
     sketches,
-    LAYER.totalArea
+    precalcTotals[CLASS.name]
   );
 
   // Sketch metrics
@@ -50,7 +50,7 @@ export async function platformEdge(
       "ACTIVITIES",
       []
     );
-    const numFishingActivities = ACTIVITIES.reduce(
+    const numFishingActivities = CONFIG.fishingActivities.reduce(
       (hasFishingSoFar, fishingActivity) =>
         sketchActivities.includes(fishingActivity)
           ? hasFishingSoFar + 1
@@ -62,9 +62,11 @@ export async function platformEdge(
 
     return {
       ...curSketchMetric,
-      numFishingRestricted: ACTIVITIES.length - numFishingActivities,
+      numFishingRestricted:
+        CONFIG.fishingActivities.length - numFishingActivities,
       overlap:
-        curSketchMetric.value > 0 && numFishingActivities < ACTIVITIES.length,
+        curSketchMetric.value > 0 &&
+        numFishingActivities < CONFIG.fishingActivities.length,
     };
   });
 
@@ -86,18 +88,18 @@ export async function platformEdge(
   ) =>
     curGroup ===
     getBreakGroup(
-      BREAK_MAP,
+      CONFIG.breakMap,
       sketchMetric.numFishingRestricted,
       sketchMetric.overlap
     );
 
   let edgeGroupMetrics = getGroupMetrics(
-    Object.keys(BREAK_MAP),
+    Object.keys(CONFIG.breakMap),
     sketches,
     sketchMetricsFilter,
     edgeClassMetrics,
-    { [LAYER.baseFilename]: { value: LAYER.totalArea } },
-    { [LAYER.baseFilename]: edgeMultiPoly }
+    { [CLASS.name]: { value: precalcTotals[CLASS.name] } },
+    { [CLASS.name]: edgeMultiPoly }
   );
 
   return {

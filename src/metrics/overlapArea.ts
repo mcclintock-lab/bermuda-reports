@@ -12,34 +12,21 @@ import {
 import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
-import { clip } from "./clip";
-
-export interface AreaMetric {
-  /** Total area of sketch input in square meters (after any supported operation and dissolving their overlap) */
-  area: number;
-  /** Proportion of sketch area to outer area */
-  percArea: number;
-  /** Area stats calculated per sketch polygon */
-  sketchAreas: {
-    sketchId: string;
-    name: string;
-    area: number;
-    percArea: number;
-  }[];
-  /** Unit of measurement for area values */
-  areaUnit: string;
-}
+import { clip } from "../util/clip";
+import { ClassMetricSketch } from "./types";
 
 /**
- * Returns area stats for sketch input in relation to outer boundary.
- * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
+ * Assuming sketches are within some outer boundary with size outerArea,
+ * calculates the area of each sketch and the proportion of outerArea they take up.
  */
-export async function areaStats(
+export async function overlapArea(
+  /** Name of class */
+  name: string,
   /** single sketch or collection. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** area of outer boundary (typically EEZ or planning area) */
   outerArea: number
-): Promise<AreaMetric> {
+): Promise<ClassMetricSketch> {
   // Union to remove overlap
   const combinedSketch = isSketchCollection(sketch)
     ? clip(sketch.features, "union")
@@ -48,24 +35,40 @@ export async function areaStats(
   if (!combinedSketch) throw new Error("areaStats - invalid sketch");
 
   const combinedSketchArea = turfArea(combinedSketch);
-  let sketchAreas: AreaMetric["sketchAreas"] = [];
+  let sketchMetrics: ClassMetricSketch["sketchMetrics"] = [];
   if (sketch) {
     featureEach(sketch, (feat) => {
-      const sketchArea = turfArea(feat);
-      sketchAreas.push({
-        sketchId: feat.properties.id,
-        name: feat.properties.name,
-        area: sketchArea,
-        percArea: sketchArea / outerArea,
-      });
+      if (!feat || !feat.properties) {
+        console.log(
+          "Warning: feature or its properties are undefined, skipped"
+        );
+      } else if (!feat.geometry) {
+        console.log(
+          `Warning: feature is missing geometry, skipped: sketchId:${feat.properties.id}, name:${feat.properties.name}`
+        );
+        sketchMetrics.push({
+          id: feat.properties.id,
+          name: feat.properties.name,
+          value: 0,
+          percValue: 0 / outerArea,
+        });
+      } else {
+        const sketchArea = turfArea(feat);
+        sketchMetrics.push({
+          id: feat.properties.id,
+          name: feat.properties.name,
+          value: sketchArea,
+          percValue: sketchArea / outerArea,
+        });
+      }
     });
   }
 
   return {
-    area: combinedSketchArea,
-    percArea: combinedSketchArea / outerArea,
-    sketchAreas,
-    areaUnit: "square meters",
+    name,
+    value: combinedSketchArea,
+    percValue: combinedSketchArea / outerArea,
+    sketchMetrics,
   };
 }
 
@@ -73,7 +76,9 @@ export async function areaStats(
  * Returns area stats for sketch input after performing overlay operation against a subarea feature.
  * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
  */
-export async function subAreaStats(
+export async function overlapSubarea(
+  /** Name of class */
+  name: string,
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** subarea feature */
   subareaFeature: Feature<Polygon | MultiPolygon> | Polygon | MultiPolygon,
@@ -83,7 +88,7 @@ export async function subAreaStats(
     /** area of outer boundary.  Use for total area of the subarea for intersection when you don't have the whole feature, or use for the total area of the boundar outside of the subarea for difference (typically EEZ or planning area) */
     outerArea?: number | undefined;
   }
-): Promise<AreaMetric> {
+): Promise<ClassMetricSketch> {
   const operation = options?.operation || "intersect";
   const subareaArea =
     options?.outerArea && operation === "intersect"
@@ -133,31 +138,31 @@ export async function subAreaStats(
     }
   })();
 
-  let subSketchAreas: AreaMetric["sketchAreas"] = [];
+  let sketchMetrics: ClassMetricSketch["sketchMetrics"] = [];
   if (subsketches)
     subsketches.forEach((feat, index) => {
       if (feat) {
         const subsketchArea = turfArea(feat);
-        subSketchAreas.push({
-          sketchId: sketches[index].properties.id,
+        sketchMetrics.push({
+          id: sketches[index].properties.id,
           name: sketches[index].properties.name,
-          area: subsketchArea,
-          percArea: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
+          value: subsketchArea,
+          percValue: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
         });
       } else {
-        subSketchAreas.push({
-          sketchId: sketches[index].properties.id,
+        sketchMetrics.push({
+          id: sketches[index].properties.id,
           name: sketches[index].properties.name,
-          area: 0,
-          percArea: 0,
+          value: 0,
+          percValue: 0,
         });
       }
     });
 
   return {
-    area: subsketchArea,
-    percArea: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
-    sketchAreas: subSketchAreas,
-    areaUnit: "square meters",
+    name,
+    value: subsketchArea,
+    percValue: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
+    sketchMetrics,
   };
 }
