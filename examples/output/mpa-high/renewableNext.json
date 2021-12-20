@@ -1,0 +1,32 @@
+{
+  "renewable": [
+    {
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "sketchName": "mpa-high",
+      "value": 7336.127771854401,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "sketchName": "mpa-high",
+      "value": 652.3174185752869,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "sketchName": "mpa-high",
+      "value": 5056.116574764252,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "sketchName": "mpa-high",
+      "value": 1733.900220990181,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    }
+  ]
+}

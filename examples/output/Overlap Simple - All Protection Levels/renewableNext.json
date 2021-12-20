@@ -1,0 +1,156 @@
+{
+  "renewable": [
+    {
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "sketchName": "high MPA",
+      "value": 666133.8323354125,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "sketchName": "full MPA",
+      "value": 638114.151085794,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "61a81aad31c466cf4a062493",
+      "sketchName": "full MPA copy",
+      "value": 638114.151085794,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "sketchName": "low MPA",
+      "value": 694084.12806499,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "sketchName": "Overlap Simple - All Protection Levels",
+      "value": 726788.9599319696,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "sketchName": "high MPA",
+      "value": 580554.5871322155,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "sketchName": "full MPA",
+      "value": 525541.4057992101,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "61a81aad31c466cf4a062493",
+      "sketchName": "full MPA copy",
+      "value": 525541.4057992101,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "sketchName": "low MPA",
+      "value": 590015.6387547255,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "sketchName": "Overlap Simple - All Protection Levels",
+      "value": 608028.3074120283,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "sketchName": "high MPA",
+      "value": 79459.33030414581,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "sketchName": "full MPA",
+      "value": 107279.04773044586,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "61a81aad31c466cf4a062493",
+      "sketchName": "full MPA copy",
+      "value": 107279.04773044586,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "sketchName": "low MPA",
+      "value": 97599.6030368805,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "sketchName": "Overlap Simple - All Protection Levels",
+      "value": 112251.8232600689,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "sketchName": "high MPA",
+      "value": 244330.15925997496,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "sketchName": "full MPA",
+      "value": 232295.68001836538,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "61a81aad31c466cf4a062493",
+      "sketchName": "full MPA copy",
+      "value": 232295.68001836538,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "sketchName": "low MPA",
+      "value": 250522.18930476904,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "sketchName": "Overlap Simple - All Protection Levels",
+      "value": 255061.52926844358,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "renewable": [
+    {
+      "sketchId": "617e59f3198e046808b50fb2",
+      "sketchName": "Gigantic MPA",
+      "value": 1555720.8217766285,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "619834683ff3e57f7333d93d",
+      "sketchName": "Gigantic MPA 2",
+      "value": 1254996.874171406,
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "619834743ff3e57f7333d93e",
+      "sketchName": "Gigantic Network",
+      "value": 1555720.8217766285,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Floating Solar"
+    },
+    {
+      "sketchId": "617e59f3198e046808b50fb2",
+      "sketchName": "Gigantic MPA",
+      "value": 991147.264895618,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "619834683ff3e57f7333d93d",
+      "sketchName": "Gigantic MPA 2",
+      "value": 833147.2661019266,
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "619834743ff3e57f7333d93e",
+      "sketchName": "Gigantic Network",
+      "value": 991147.264895618,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "sketchId": "617e59f3198e046808b50fb2",
+      "sketchName": "Gigantic MPA",
+      "value": 444938.63100481033,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "619834683ff3e57f7333d93d",
+      "sketchName": "Gigantic MPA 2",
+      "value": 408207.01623010635,
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "619834743ff3e57f7333d93e",
+      "sketchName": "Gigantic Network",
+      "value": 444938.63100481033,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "sketchId": "617e59f3198e046808b50fb2",
+      "sketchName": "Gigantic MPA",
+      "value": 450788.52027624846,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "619834683ff3e57f7333d93d",
+      "sketchName": "Gigantic MPA 2",
+      "value": 411888.2518416345,
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    },
+    {
+      "sketchId": "619834743ff3e57f7333d93e",
+      "sketchName": "Gigantic Network",
+      "value": 450788.52027624846,
+      "keywords": [
+        "collection"
+      ],
+      "metricId": "renewable",
+      "classId": "Wave Energy"
+    }
+  ]
+}

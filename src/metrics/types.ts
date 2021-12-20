@@ -43,6 +43,34 @@ export interface DataClass {
 }
 
 /**
+ * Metric result for a single sketch
+ */
+export interface SketchMetricBase {
+  /** ID of sketch or sketch collection the metric is calculated for. */
+  sketchId: string;
+  /** Name of sketch metric calculated for. ToDo: remove once client can access directly for collections  */
+  sketchName: string;
+  /** The metric value */
+  value: number;
+  /** Helpful keywords for interpretation  */
+  keywords?: string[];
+}
+
+/**
+ * Metric result for a single sketch with additional properties supporting stratification.
+ */
+export interface SketchMetricSet extends SketchMetricBase {
+  /** Name of the metric */
+  metricId: string;
+  /** Optional, if metric is for specific classification - typically data class */
+  classId?: string;
+  /** Optional. if metric is for specific group - e.g. protection level*/
+  groupId?: string;
+  /** Optional, if metric is for specfic geography */
+  geographyId?: string;
+}
+
+/**
  * Properties for representing metric value and perc value, such as area or sum
  * ValueMetric is the core metric representation. It can related to a class of data or a sketch
  */

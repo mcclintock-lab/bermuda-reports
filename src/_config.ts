@@ -1,4 +1,5 @@
 import {
+  SketchMetricSet,
   ClassMetrics,
   ClassMetricsSketch,
   ClassMetricSketch,
@@ -462,7 +463,7 @@ export interface RenewableBaseResults {
 }
 
 export interface RenewableResults {
-  renewable: ClassMetricsSketch;
+  renewable: SketchMetricSet[];
 }
 
 export const renewableClasses: DataClass[] = [
