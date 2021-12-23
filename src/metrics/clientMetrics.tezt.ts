@@ -8,11 +8,11 @@ import { NullSketch } from "@seasketch/geoprocessing/client";
 
 const CLASSES = [
   {
-    name: "Class1",
+    classId: "Class1",
     display: "Class1",
   },
   {
-    name: "Class2",
+    classId: "Class2",
     display: "Class2",
   },
 ];

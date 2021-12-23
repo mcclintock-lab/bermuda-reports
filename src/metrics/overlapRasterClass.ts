@@ -16,16 +16,16 @@ export async function overlapRasterClass(
   /** raster to search */
   raster: Georaster,
   config: {
-    /** Map from class ID to class name */
-    classIdToName: Record<string, string>;
+    /** Map from numeric class ID to string */
+    classIdMapping: Record<string, string>;
     /** Map from class ID to precalculate class total in raster */
     classIdToTotal: Record<string, number>;
   },
   /** Optional polygon sketches, if present will calculate overlap for the features  */
   sketches?: Sketch<Polygon>[]
 ): Promise<ClassMetricsSketch> {
-  if (!config.classIdToName || !config.classIdToTotal)
-    throw new Error("Missing classIdToName map in config");
+  if (!config.classIdMapping || !config.classIdToTotal)
+    throw new Error("Missing classIdMapping in config");
 
   // overallHistograms account for sketch overlap, sketchHistograms do not
   // histogram will exclude a class in result if not in raster, rather than return zero
@@ -75,7 +75,7 @@ export async function overlapRasterClass(
     };
   })();
 
-  const classIds = Object.keys(config.classIdToName);
+  const classIds = Object.keys(config.classIdMapping);
   // Initialize the counts by class to 0
   let countByClass = classIds.reduce<Record<string, number>>(
     (acc, classId) => ({
@@ -138,8 +138,8 @@ export async function overlapRasterClass(
   return Object.keys(countByClass).reduce((metricsSoFar, classId) => {
     return {
       ...metricsSoFar,
-      [config.classIdToName[classId]]: {
-        name: config.classIdToName[classId],
+      [config.classIdMapping[classId]]: {
+        name: config.classIdMapping[classId],
         value: countByClass[classId],
         percValue: countByClass[classId] / config.classIdToTotal[classId],
         sketchMetrics: sketchMetricsByClass[classId],

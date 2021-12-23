@@ -101,7 +101,7 @@ export const flattenGroupSketch = (
       // Build up agg percValue for each class
       const classAgg = classes.reduce<Record<string, number>>(
         (classAggSoFar, curClass) => {
-          const curClassName = curClass.name;
+          const curClassName = curClass.classId;
           const groupSketchMetrics = classMetrics[
             curClassName
           ].sketchMetrics.reduce<Record<string, SketchMetric>>(
@@ -151,7 +151,7 @@ export const flattenClassSketch = (
   let sketchRows: ClassMetricSketchAgg[] = [];
   sketches.forEach((curSketch) => {
     classes.forEach((curClass) => {
-      const curClassName = curClass.name;
+      const curClassName = curClass.classId;
       const sketchMetricsById = classMetrics[curClassName].sketchMetrics.reduce<
         Record<string, SketchMetric>
       >((soFar, sm) => ({ ...soFar, [sm.id]: sm }), {});
@@ -191,7 +191,7 @@ export const flattenSketchAllClass = (
       .sort(sortFn || classSortAlphaDisplay)
       .reduce<Record<string, number>>((aggSoFar, curClass) => {
         // sketchMetrics keyBy id.  Avoid importing keyBy from gp package for client use
-        const curClassName = curClass.name;
+        const curClassName = curClass.classId;
         const sketchMetricsById = classMetrics[
           curClassName
         ].sketchMetrics.reduce<Record<string, SketchMetric>>(
@@ -271,13 +271,14 @@ export const flattenSketchAllClassNext = (
     const classMetricAgg = classes
       .sort(sortFn || classSortAlphaDisplay)
       .reduce<Record<string, number>>((aggSoFar, curClass) => {
-        const sketchMetricsById = metricsByClass[curClass.name].reduce<
+        const sketchMetricsById = metricsByClass[curClass.classId].reduce<
           Record<string, ExtendedSketchMetric>
         >((soFar, sm) => ({ ...soFar, [sm.sketchId || "missing"]: sm }), {});
         return {
           ...aggSoFar,
           ...{
-            [curClass.name]: sketchMetricsById[curSketch.properties.id].value,
+            [curClass.classId]:
+              sketchMetricsById[curSketch.properties.id].value,
           },
         };
       }, {});

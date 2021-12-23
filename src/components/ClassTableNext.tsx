@@ -59,7 +59,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(classes, (curClass) => curClass.name);
+  const classesByName = keyBy(classes, (curClass) => curClass.classId);
   const columns: Column<ExtendedMetric>[] = [
     {
       Header: titleText,
@@ -73,8 +73,8 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       accessor: (row) => {
         const percDisplay = percentWithEdge(row.value);
         const goal =
-          classes.find((curClass) => curClass.name === row.classId)?.goalPerc ||
-          0;
+          classes.find((curClass) => curClass.classId === row.classId)
+            ?.goalPerc || 0;
         if (showGoal && row.value > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
@@ -107,7 +107,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       style: { textAlign: "right", width: colWidths.goalWidth },
       accessor: (row) => {
         const goalPerc = classes.find(
-          (curClass) => curClass.name === row.classId
+          (curClass) => curClass.classId === row.classId
         )?.goalPerc;
         return percentWithEdge(goalPerc || 0);
       },

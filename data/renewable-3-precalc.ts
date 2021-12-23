@@ -23,7 +23,7 @@ async function main() {
       }); // Load wole raster
       const sum = geoblaze.sum(raster)[0] as number;
       return {
-        classId: curClass.name,
+        classId: curClass.classId,
         metricId: "renewable",
         value: sum,
       };

@@ -36,8 +36,8 @@ export async function reefIndex(
       const curClass = CLASSES[index];
       return overlapRaster(
         raster,
-        curClass.name,
-        (reefIndexTotals as Record<string, number>)[curClass.name],
+        curClass.classId,
+        (reefIndexTotals as Record<string, number>)[curClass.classId],
         sketch
       );
     })

@@ -30,7 +30,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [LAYERS[index].name]: total,
+      [LAYERS[index].classId]: total,
     }),
     {}
   );

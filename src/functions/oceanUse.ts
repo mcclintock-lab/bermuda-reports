@@ -34,8 +34,8 @@ export async function oceanUse(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        curClass.name,
-        (oceanUseTotals as Record<string, number>)[curClass.name],
+        curClass.classId,
+        (oceanUseTotals as Record<string, number>)[curClass.classId],
         sketch
       );
     })

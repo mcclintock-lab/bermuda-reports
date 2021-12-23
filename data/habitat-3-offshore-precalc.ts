@@ -28,7 +28,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [config.offshore.classes[index].name]: total,
+      [config.offshore.classes[index].classId]: total,
     }),
     {}
   );

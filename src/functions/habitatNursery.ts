@@ -35,15 +35,15 @@ export async function habitatNursery(
   const classMetrics = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
-        featuresByClass[curClass.name] = await fgbFetchAll(
+        featuresByClass[curClass.classId] = await fgbFetchAll(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
         return overlapFeatures(
-          featuresByClass[curClass.name],
-          curClass.name,
+          featuresByClass[curClass.classId],
+          curClass.classId,
           sketches,
-          precalcTotals.byClass[curClass.name].value
+          precalcTotals.byClass[curClass.classId].value
         );
       })
     )

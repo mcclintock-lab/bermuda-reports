@@ -5,6 +5,7 @@ import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";
+import { groupClassIdMapping } from "../src/metrics/classId";
 
 const DEST_PATH = `${__dirname}/precalc/nearshoreHabitatTotals.json`;
 const CONFIG = config.nearshore;
@@ -14,11 +15,8 @@ async function main() {
 
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
-    if (!CONFIG.classIdToName) {
-      throw new Error("Expected classIdToName to be configured");
-    }
     const stats = await countByClass(raster, {
-      classIdToName: CONFIG.classIdToName,
+      classIdToName: groupClassIdMapping(config.nearshore),
     });
 
     fs.writeFile(DEST_PATH, JSON.stringify(stats, null, 2), (err) =>

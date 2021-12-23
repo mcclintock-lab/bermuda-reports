@@ -37,9 +37,9 @@ export async function platformEdge(
 
   const classMetric = await overlapFeatures(
     edgeMultiPoly,
-    CLASS.name,
+    CLASS.classId,
     sketches,
-    precalcTotals[CLASS.name]
+    precalcTotals[CLASS.classId]
   );
 
   // Sketch metrics
@@ -98,8 +98,8 @@ export async function platformEdge(
     sketches,
     sketchMetricsFilter,
     edgeClassMetrics,
-    { [CLASS.name]: { value: precalcTotals[CLASS.name] } },
-    { [CLASS.name]: edgeMultiPoly }
+    { [CLASS.classId]: { value: precalcTotals[CLASS.classId] } },
+    { [CLASS.classId]: edgeMultiPoly }
   );
 
   return {

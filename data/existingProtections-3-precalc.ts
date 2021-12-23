@@ -23,7 +23,7 @@ async function main() {
       // Filter out single class, exclude null geometry too
       const classFeatures = allFc.features.filter((feat: any) => {
         return (
-          feat.geometry && feat.properties[classProperty] === curClass.name
+          feat.geometry && feat.properties[classProperty] === curClass.classId
         );
       }, []);
       const classFC = featureCollection(classFeatures);
@@ -37,8 +37,8 @@ async function main() {
     byClass: CLASSES.reduce(
       (soFar, curClass, index) => ({
         ...soFar,
-        [curClass.name]: {
-          name: curClass.name,
+        [curClass.classId]: {
+          name: curClass.classId,
           value: totals[index],
           percValue: totals[index] / totalArea,
         },

@@ -14,6 +14,7 @@ import { overlapRaster } from "../metrics/overlapRaster";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
+import { groupClassIdMapping } from "../metrics/classId";
 
 const OFFSHORE_CLASSES = config.offshore.classes;
 
@@ -27,13 +28,10 @@ export async function habitatProtection(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
-  if (!config.nearshore.classIdToName) {
-    throw new Error("Expected classIdToName to be configured");
-  }
   const nearshoreMetrics = await overlapRasterClass(
     nearshoreRaster,
     {
-      classIdToName: config.nearshore.classIdToName,
+      classIdMapping: groupClassIdMapping(config.nearshore),
       classIdToTotal: nearshoreHabitatTotals,
     },
     sketches
@@ -52,8 +50,8 @@ export async function habitatProtection(
       // start analysis as soon as source load done
       return overlapRaster(
         raster,
-        curClass.name,
-        (offshoreHabitatTotals as Record<string, number>)[curClass.name],
+        curClass.classId,
+        (offshoreHabitatTotals as Record<string, number>)[curClass.classId],
         sketch
       );
     })

@@ -29,7 +29,7 @@ async function main() {
   const totalMap = totals.reduce(
     (totalMap, total, index) => ({
       ...totalMap,
-      [CLASSES[index].name]: total,
+      [CLASSES[index].classId]: total,
     }),
     {}
   );

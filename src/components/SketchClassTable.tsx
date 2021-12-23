@@ -53,7 +53,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => {
-        return percentWithEdge(row[curClass.name] as number);
+        return percentWithEdge(row[curClass.classId] as number);
       },
     })
   );

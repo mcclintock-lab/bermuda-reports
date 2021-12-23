@@ -47,14 +47,14 @@ export async function existingProtections(
         // Filter out single class, exclude null geometry too
         const classFeatures = features.filter((feat) => {
           return (
-            feat.geometry && feat.properties[classProperty] === curClass.name
+            feat.geometry && feat.properties[classProperty] === curClass.classId
           );
         }, []);
         return overlapFeatures(
           classFeatures,
-          curClass.name,
+          curClass.classId,
           sketches,
-          precalcTotals.byClass[curClass.name].value
+          precalcTotals.byClass[curClass.classId].value
         );
       })
     )

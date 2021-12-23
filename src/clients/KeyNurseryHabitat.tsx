@@ -152,7 +152,7 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   const classColumns: Column<GroupMetricSketchAgg>[] = CONFIG.classes.map(
     (curClass) => ({
       Header: curClass.display,
-      accessor: (row) => percentWithEdge(row[curClass.name] as number),
+      accessor: (row) => percentWithEdge(row[curClass.classId] as number),
     })
   );
 
@@ -191,7 +191,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   const classColumns: Column<GroupMetricAgg>[] = CONFIG.classes.map(
     (curClass) => ({
       Header: curClass.display,
-      accessor: (row) => percentWithEdge(row[curClass.name] as number),
+      accessor: (row) => percentWithEdge(row[curClass.classId] as number),
       style: { width: "10%" },
     })
   );
@@ -237,7 +237,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
 };
 
 const genHabitatTable = (data: ClassMetric[]) => {
-  const classesByName = keyBy(CONFIG.classes, (curClass) => curClass.name);
+  const classesByName = keyBy(CONFIG.classes, (curClass) => curClass.classId);
 
   const columns: Column<ClassMetric>[] = [
     {

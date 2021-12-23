@@ -36,7 +36,7 @@ export async function renewable(
         return overlapResult.map((classMetrics) => ({
           ...classMetrics,
           metricId: "renewable",
-          classId: curClass.name,
+          classId: curClass.classId,
         }));
       })
     )

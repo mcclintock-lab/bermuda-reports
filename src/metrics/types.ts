@@ -4,15 +4,15 @@
  */
 export interface DataClass {
   /** Unique name for class */
-  name: string;
+  classId: string;
   /** Name of class suitable for user display */
   display: string;
   /** Optional filename of dataset used for metric class, sans extension. */
   baseFilename?: string;
   /** Optional filename of dataset for metric class for use by GP function, with extension. */
   filename?: string;
-  /** Optional unique integer used by raster datasets to represent class */
-  classId?: string;
+  /** Optional unique number used by some datasets (e.g. raster) to represent data class instead of string */
+  numericClassId?: number;
   /** Optional ID of map layer associated with this class */
   layerId?: string;
   /** Optional nodata value used by raster dataset */
@@ -39,8 +39,6 @@ export interface DataGroup {
   filename?: string;
   /** Optional ID of map layer associated with this metric */
   layerId?: string;
-  /** Optional mapping of class integer ID to its name */
-  classIdToName?: Record<string, string>;
 }
 
 /** Single value metric */

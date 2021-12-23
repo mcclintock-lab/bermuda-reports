@@ -35,9 +35,9 @@ export async function habitatRestore(
         );
         return overlapFeatures(
           features,
-          curClass.name,
+          curClass.classId,
           sketches,
-          precalcTotals.byClass[curClass.name].value
+          precalcTotals.byClass[curClass.classId].value
         );
       })
     )

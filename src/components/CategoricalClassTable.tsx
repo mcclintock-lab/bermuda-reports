@@ -57,12 +57,12 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
   };
   const classesByName = keyBy(
     classes,
-    (curClass) => curClass.name || "unknown"
+    (curClass) => curClass.classId || "unknown"
   );
   const columns: Column<ClassMetric>[] = [
     {
       Header: titleText,
-      accessor: (row) => classesByName[row.name].name,
+      accessor: (row) => classesByName[row.name].classId,
       style: { width: colWidths.classColWidth },
     },
     {
@@ -71,7 +71,8 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
       accessor: (row) => {
         const percDisplay = percentWithEdge(row.percValue);
         const goal =
-          classes.find((curClass) => curClass.name === row.name)?.goalPerc || 0;
+          classes.find((curClass) => curClass.classId === row.name)?.goalPerc ||
+          0;
         if (row.percValue > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
@@ -102,8 +103,9 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
       Header: "Goal",
       style: { textAlign: "right", width: colWidths.goalWidth },
       accessor: (row) => {
-        const goalPerc = classes.find((curClass) => curClass.name === row.name)
-          ?.goalPerc;
+        const goalPerc = classes.find(
+          (curClass) => curClass.classId === row.name
+        )?.goalPerc;
         return percentWithEdge(goalPerc || 0);
       },
     });

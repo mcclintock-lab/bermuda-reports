@@ -35,7 +35,7 @@ const PlatformEdge = () => {
       skeleton={<LoadingSkeleton />}
     >
       {(data: PlatformEdgeResult) => {
-        const classMetric = data.byClass[CLASS.name];
+        const classMetric = data.byClass[CLASS.classId];
 
         // Get aggregate sketch metric stats
         const totalCount = classMetric.sketchMetrics.length;
@@ -106,14 +106,14 @@ const PlatformEdge = () => {
           // Build agg group objects with percValue for each class
           groupRows = getBreakGroupMetricsAgg(
             data.byGroup,
-            precalcTotals[CLASS.name]
+            precalcTotals[CLASS.classId]
           );
 
           // Build agg sketch group objects with percValue for each class
           // groupId, sketchId, lagoon, mangrove, seagrass, total
           sketchRows = flattenGroupSketch(
             data.byGroup,
-            precalcTotals[CLASS.name],
+            precalcTotals[CLASS.classId],
             CLASSES
           );
         }

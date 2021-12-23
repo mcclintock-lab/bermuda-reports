@@ -33,8 +33,8 @@ async function main() {
     byClass: CLASSES.reduce(
       (soFar, curClass, index) => ({
         ...soFar,
-        [curClass.name]: {
-          name: curClass.name,
+        [curClass.classId]: {
+          name: curClass.classId,
           value: totals[index],
           percValue: totals[index] / totalArea,
         },
