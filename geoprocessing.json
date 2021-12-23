@@ -61,7 +61,6 @@
     "src/functions/platformEdge.ts",
     "src/functions/reefIndex.ts",
     "src/functions/renewable.ts",
-    "src/functions/renewableNext.ts",
     "src/functions/habitatRestore.ts",
     "src/functions/habitatNursery.ts"
   ]

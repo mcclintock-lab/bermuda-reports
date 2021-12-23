@@ -10,7 +10,7 @@ import area from "@turf/area";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
-import { SketchMetricBase } from "./types";
+import { SimpleSketchMetric } from "./types";
 
 function removeSketchPolygonHoles(sketch: Sketch<Polygon>) {
   const newSk: Sketch<Polygon> = { ...sketch };
@@ -29,6 +29,7 @@ function removeSketchCollPolygonHoles(sketchColl: SketchCollection<Polygon>) {
  * Make sure that raster data is already clipped to land for example, to ensure it does not overcount.
  */
 export async function overlapRaster(
+  metricId: string,
   raster: Georaster,
   /** single sketch or collection. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
@@ -36,7 +37,7 @@ export async function overlapRaster(
     /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them */
     removeSketchHoles: boolean;
   } = { removeSketchHoles: true }
-): Promise<SketchMetricBase[]> {
+): Promise<SimpleSketchMetric[]> {
   let isOverlap = false;
   let sumValue = 0;
 
@@ -62,7 +63,7 @@ export async function overlapRaster(
 
   // Get raster sum for each feature
   // If there was no overlap found above, accumulate collection sumValue here instead
-  let sketchMetrics: SketchMetricBase[] = [];
+  let sketchMetrics: SimpleSketchMetric[] = [];
   featureEach(sketch, (feat) => {
     const remSketch = options.removeSketchHoles
       ? removeSketchPolygonHoles(feat)
@@ -73,19 +74,25 @@ export async function overlapRaster(
       sumValue += sketchValue;
     }
     sketchMetrics.push({
+      metricId,
       sketchId: feat.properties.id,
-      sketchName: feat.properties.name,
       value: sketchValue,
+      extra: {
+        sketchName: feat.properties.name,
+      },
     });
   });
 
   if (isSketchCollection(sketch)) {
     // Push collection with accumulated sumValue
     sketchMetrics.push({
+      metricId,
       sketchId: sketch.properties.id,
-      sketchName: sketch.properties.name,
       value: sumValue,
-      keywords: ["collection"],
+      extra: {
+        sketchName: sketch.properties.name,
+        isCollection: true,
+      },
     });
   }
 

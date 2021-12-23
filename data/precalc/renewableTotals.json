@@ -1,6 +1,24 @@
 {
-  "Floating Solar": 1555720.8217766285,
-  "Fixed Offshore Wind": 991147.264895618,
-  "Floating Offshore Wind": 444938.63100481033,
-  "Wave Energy": 450788.52027624846
+  "metrics": [
+    {
+      "classId": "Floating Solar",
+      "metricId": "renewable",
+      "value": 1555720.8217766285
+    },
+    {
+      "classId": "Fixed Offshore Wind",
+      "metricId": "renewable",
+      "value": 991147.264895618
+    },
+    {
+      "classId": "Floating Offshore Wind",
+      "metricId": "renewable",
+      "value": 444938.63100481033
+    },
+    {
+      "classId": "Wave Energy",
+      "metricId": "renewable",
+      "value": 450788.52027624846
+    }
+  ]
 }

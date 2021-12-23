@@ -1,56 +1,67 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 6980.383213639259,
-      "percValue": 0.004486912507648822,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6980.383213639259,
-          "percValue": 0.004486912507648822
-        }
-      ]
-    },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 652.3174185752869,
-      "percValue": 0.0006581437912195473,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 652.3174185752869,
-          "percValue": 0.0006581437912195473
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 6980.383213639259,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 5830.431042671204,
-      "percValue": 0.013103899361366465,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 913.7374368906021,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      },
+      "classId": "Wave Energy"
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 5830.431042671204,
-          "percValue": 0.013103899361366465
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
         }
       ]
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
-      "value": 913.7374368906021,
-      "percValue": 0.0020269758341021045,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 913.7374368906021,
-          "percValue": 0.0020269758341021045
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

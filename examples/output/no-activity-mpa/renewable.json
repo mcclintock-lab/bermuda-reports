@@ -1,56 +1,67 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      },
+      "classId": "Floating Solar"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      },
+      "classId": "Floating Offshore Wind"
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
+    {
+      "metricId": "renewable",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      },
+      "classId": "Wave Energy"
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "618abe61e4efd949c23c5899",
+      "name": "no-activity-mpa",
+      "updatedAt": "2021-11-09T18:30:57.892Z",
+      "createdAt": "2021-11-09T18:30:57.892Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": ""
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.61027849772681,
+      32.19068339515532,
+      -64.33287371257072,
+      32.41123101229184
+    ],
+    "geometry": null
   }
 }

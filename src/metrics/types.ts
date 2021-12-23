@@ -1,30 +1,9 @@
 /**
- * Represents a grouping of data, used by GP functions to calculate and report
- * metrics based on them. This interface is murky but it supports a variety of
- * scenarios for mapping one or more feature classes to datasources:
- * - Vector dataset with one feature class
- * - Vector dataset with multiple feature class, each with their own datasource for analysis, and possibly only one layerId for display
- * - Vector dataset with multiple feature classes, in one datasource, each class with its own layerId
- * - Raster with multiple feature classes represented by unique integer values
- */
-export interface DataGroup {
-  /** data classes used by report group */
-  classes: DataClass[];
-  /** Optional filename of dataset, sans extension. May contain data for one or more classes */
-  baseFilename?: string;
-  /** Optional filename of dataset for use by GP function, with extension */
-  filename?: string;
-  /** Optional ID of map layer associated with this metric */
-  layerId?: string;
-  /** Optional mapping of class integer ID to its name */
-  classIdToName?: Record<string, string>;
-}
-
-/**
- * Represents a single class of data and its source
+ * Represents a single class of data within a report.
+ * Used to access the data, calculate and report metrics based on them.
  */
 export interface DataClass {
-  /** Unique name for class.  ToDo: consolidate on this for unique name */
+  /** Unique name for class */
   name: string;
   /** Name of class suitable for user display */
   display: string;
@@ -43,25 +22,39 @@ export interface DataClass {
 }
 
 /**
- * Metric result for a single sketch
+ * Represents a group of data classes.
+ * Used to access the data, calculate and report metrics based on them.
+ * This interface is murky but it supports a variety of scenarios:
+ * - Vector dataset with one feature class
+ * - Vector dataset with multiple feature class, each with their own file datasource, and possibly only one layerId to display them all
+ * - Vector dataset with multiple feature classes, all in one file datasource, each class with its own layerId
+ * - Raster with multiple feature classes represented by unique integer values that map to class names
  */
-export interface SketchMetricBase {
-  /** ID of sketch or sketch collection the metric is calculated for. */
-  sketchId: string;
-  /** Name of sketch metric calculated for. ToDo: remove once client can access directly for collections  */
-  sketchName: string;
-  /** The metric value */
-  value: number;
-  /** Helpful keywords for interpretation  */
-  keywords?: string[];
+export interface DataGroup {
+  /** data classes used by report group */
+  classes: DataClass[];
+  /** Optional filename of dataset, sans extension. May contain data for one or more classes */
+  baseFilename?: string;
+  /** Optional filename of dataset for use by GP function, with extension */
+  filename?: string;
+  /** Optional ID of map layer associated with this metric */
+  layerId?: string;
+  /** Optional mapping of class integer ID to its name */
+  classIdToName?: Record<string, string>;
 }
 
-/**
- * Metric result for a single sketch with additional properties supporting stratification.
- */
-export interface SketchMetricSet extends SketchMetricBase {
+/** Single value metric */
+export interface SimpleMetric {
   /** Name of the metric */
   metricId: string;
+  /** The metric value */
+  value: number;
+  /** Additional ad-hoc properties, often used to ease interpretation */
+  extra?: Record<string, string | number | boolean>;
+}
+
+/** Metric with specific additional properties for stratification */
+export interface ExtendedMetric extends SimpleMetric {
   /** Optional, if metric is for specific classification - typically data class */
   classId?: string;
   /** Optional. if metric is for specific group - e.g. protection level*/
@@ -69,6 +62,22 @@ export interface SketchMetricSet extends SketchMetricBase {
   /** Optional, if metric is for specfic geography */
   geographyId?: string;
 }
+
+/**
+ * Metric for a single sketch
+ */
+export interface SimpleSketchMetric extends SimpleMetric {
+  /** ID of sketch or sketch collection the metric is calculated for. */
+  sketchId: string;
+}
+
+/**
+ * Metric for a single sketch with additional properties supporting stratification.
+ * ToDo: can this just extend MetricBase also?
+ */
+export type ExtendedSketchMetric = SimpleSketchMetric & ExtendedMetric;
+
+//// DEPRECATED ////
 
 /**
  * Properties for representing metric value and perc value, such as area or sum

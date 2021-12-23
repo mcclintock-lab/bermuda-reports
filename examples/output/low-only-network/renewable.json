@@ -1,56 +1,121 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 17.094531178474426,
-      "percValue": 0.000010988174060017094,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 17.094531178474426,
-          "percValue": 0.000010988174060017094
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a19b503392035ed519c",
       "value": 17.094531178474426,
-      "percValue": 0.000017247216214913055,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 17.094531178474426,
-          "percValue": 0.000017247216214913055
-        }
-      ]
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a10f3f078352076a1fb",
+      "value": 17.094531178474426,
+      "extra": {
+        "sketchName": "low-1"
+      },
+      "classId": "Floating Solar"
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 17.094531178474426,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a10f3f078352076a1fb",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-1"
+      },
+      "classId": "Wave Energy"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      },
+      "classId": "Wave Energy"
     }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "61685a19b503392035ed519c",
+      "name": "low-only-network",
+      "updatedAt": "2021-10-19T23:05:03.182Z",
+      "createdAt": "2021-10-14T16:26:01.633Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "61685a10f3f078352076a1fb",
+          "name": "low-1",
+          "updatedAt": "2021-10-14T16:26:05.166Z",
+          "createdAt": "2021-10-08T00:06:24.521Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\",\"UNTREATED_WATER\",\"HABITATION\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.67536851019531,
+          32.39843594260134,
+          -64.6108238324609,
+          32.42857863764303
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

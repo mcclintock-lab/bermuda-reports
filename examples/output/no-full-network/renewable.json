@@ -1,80 +1,184 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 243906.94664865732,
-      "percValue": 0.15678066606456828,
-      "sketchMetrics": [
-        {
-          "id": "616f1ae906f1b7772b51f18f",
-          "name": "MPA 1",
-          "value": 235383.8625344038,
-          "percValue": 0.15130212261708764
-        },
-        {
-          "id": "616f1ae906f1b7772b51f191",
-          "name": "MPA 2",
-          "value": 8523.084114253521,
-          "percValue": 0.005478543447480624
-        }
-      ]
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 184032.32487618923,
+      "extra": {
+        "sketchName": "MPA 1"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 5598.515486896038,
+      "extra": {
+        "sketchName": "MPA 2"
+      },
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f190",
       "value": 189630.84036308527,
-      "percValue": 0.19132458624405943,
-      "sketchMetrics": [
-        {
-          "id": "616f1ae906f1b7772b51f18f",
-          "name": "MPA 1",
-          "value": 184032.32487618923,
-          "percValue": 0.18567606590285096
-        },
-        {
-          "id": "616f1ae906f1b7772b51f191",
-          "name": "MPA 2",
-          "value": 5598.515486896038,
-          "percValue": 0.00564852034120847
-        }
-      ]
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 235383.8625344038,
+      "extra": {
+        "sketchName": "MPA 1"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 8523.084114253521,
+      "extra": {
+        "sketchName": "MPA 2"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 243906.94664865732,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 48478.884567976,
+      "extra": {
+        "sketchName": "MPA 1"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 2544.217495918274,
+      "extra": {
+        "sketchName": "MPA 2"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f190",
       "value": 51023.10206389427,
-      "percValue": 0.1146744708335803,
-      "sketchMetrics": [
-        {
-          "id": "616f1ae906f1b7772b51f18f",
-          "name": "MPA 1",
-          "value": 48478.884567976,
-          "percValue": 0.10895633957091014
-        },
-        {
-          "id": "616f1ae906f1b7772b51f191",
-          "name": "MPA 2",
-          "value": 2544.217495918274,
-          "percValue": 0.0057181312626701725
-        }
-      ]
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      },
+      "classId": "Floating Offshore Wind"
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 100517.59170222282,
+      "extra": {
+        "sketchName": "MPA 1"
+      },
+      "classId": "Wave Energy"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 5423.940856397152,
+      "extra": {
+        "sketchName": "MPA 2"
+      },
+      "classId": "Wave Energy"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "616f1ae906f1b7772b51f190",
       "value": 105941.53255861998,
-      "percValue": 0.23501382087924017,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      },
+      "classId": "Wave Energy"
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-full-network",
+      "updatedAt": "2021-10-19T19:25:31.562Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "MPA 1",
-          "value": 100517.59170222282,
-          "percValue": 0.22298170246355092
+          "updatedAt": "2021-10-19T19:22:17.900Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESEARCH\"]"
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f191",
           "name": "MPA 2",
-          "value": 5423.940856397152,
-          "percValue": 0.012032118415689241
-        }
-      ]
-    }
+          "updatedAt": "2021-10-19T19:22:17.905Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"FISH_AQUA_INDUSTRIAL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

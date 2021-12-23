@@ -5,11 +5,28 @@ import {
   SketchMetric,
   ClassMetricsSketch,
   DataClass,
+  ExtendedSketchMetric,
+  ExtendedMetric,
 } from "./types";
+
+import {
+  Sketch,
+  SketchCollection,
+  NullSketch,
+  NullSketchCollection,
+} from "@seasketch/geoprocessing";
+import { groupBy, keyBy } from "@seasketch/geoprocessing/client";
 
 /**
  * Helper methods for using metrics in browser client
  */
+
+/**
+ * Returns IDs of sketches in the collection
+ */
+export const getSketchCollectionIds = (
+  collection: SketchCollection | NullSketchCollection
+) => collection.features.map((sk) => sk.properties.id);
 
 /**
  * Sort function to sort report data classes alphabetically by display name
@@ -134,7 +151,6 @@ export const flattenClassSketch = (
   let sketchRows: ClassMetricSketchAgg[] = [];
   sketches.forEach((curSketch) => {
     classes.forEach((curClass) => {
-      // sketchMetrics keyBy id.  Avoid importing keyBy from gp package for client use
       const curClassName = curClass.name;
       const sketchMetricsById = classMetrics[curClassName].sketchMetrics.reduce<
         Record<string, SketchMetric>
@@ -192,6 +208,82 @@ export const flattenSketchAllClass = (
     sketchRows.push({
       sketchId: curSketch.id,
       sketchName: curSketch.name,
+      ...classMetricAgg,
+    });
+  });
+  return sketchRows;
+};
+
+/**
+ * Given sketch metrics and the maximum value for those metrics, returns new sketch metrics with percentage of total value
+ * If metrics and totals are additionally stratified by classId, then that will be used
+ */
+export const sketchMetricPercent = (
+  metrics: ExtendedSketchMetric[],
+  totals: ExtendedMetric[],
+  /** Caller specified property to key by */
+  keyProperty?: string
+): ExtendedSketchMetric[] => {
+  const totalsByKey = (() => {
+    return keyBy(totals, (total) =>
+      total.classId ? total.classId : total.metricId
+    );
+  })();
+  return metrics.map((curMetric) => ({
+    ...curMetric,
+    value:
+      curMetric.value /
+      totalsByKey[curMetric.classId ? curMetric.classId : curMetric.metricId]
+        .value,
+  }));
+};
+
+/**
+ * Filters metrics to specific sketches
+ * @param sketchIds
+ * @param metrics
+ * @returns
+ */
+export const sketchMetricFilter = (
+  sketchIds: string[],
+  metrics: ExtendedSketchMetric[]
+) => metrics.filter((m) => sketchIds.includes(m.sketchId));
+
+/**
+ * Flattens class sketch metrics into array of objects, one for each sketch, where each object contains all class metrics values
+ * @param classMetrics - class metric data with sketch
+ * @param classes
+ * @returns
+ */
+export const flattenSketchAllClassNext = (
+  metrics: ExtendedSketchMetric[],
+  classes: DataClass[],
+  sketches: Sketch[] | NullSketch[],
+  /** function to sort class configs using Array.sort, defaults to alphabetical by display name */
+  sortFn?: (a: DataClass, b: DataClass) => number
+): Record<string, string | number>[] => {
+  const metricsByClass = groupBy(
+    metrics,
+    (metric) => metric.classId || "error"
+  );
+  let sketchRows: Record<string, string | number>[] = [];
+  sketches.forEach((curSketch) => {
+    const classMetricAgg = classes
+      .sort(sortFn || classSortAlphaDisplay)
+      .reduce<Record<string, number>>((aggSoFar, curClass) => {
+        const sketchMetricsById = metricsByClass[curClass.name].reduce<
+          Record<string, ExtendedSketchMetric>
+        >((soFar, sm) => ({ ...soFar, [sm.sketchId || "missing"]: sm }), {});
+        return {
+          ...aggSoFar,
+          ...{
+            [curClass.name]: sketchMetricsById[curSketch.properties.id].value,
+          },
+        };
+      }, {});
+    sketchRows.push({
+      sketchId: curSketch.properties.id,
+      sketchName: curSketch.properties.name,
       ...classMetricAgg,
     });
   });

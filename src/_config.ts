@@ -1,5 +1,6 @@
 import {
-  SketchMetricSet,
+  ExtendedMetric,
+  ExtendedSketchMetric,
   ClassMetrics,
   ClassMetricsSketch,
   ClassMetricSketch,
@@ -13,6 +14,8 @@ import {
   DataGroup,
   DataClass,
 } from "../src/metrics/types";
+
+import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing
@@ -459,27 +462,29 @@ export const reefIndex: DataGroup = {
 //// RENEWABLE ENERGY ////
 
 export interface RenewableBaseResults {
-  renewable: ClassMetrics;
+  metrics: ExtendedMetric[];
 }
 
 export interface RenewableResults {
-  renewable: SketchMetricSet[];
+  metrics: ExtendedSketchMetric[];
+  /** The sketch used, without geometry */
+  sketch: NullSketch | NullSketchCollection;
 }
 
 export const renewableClasses: DataClass[] = [
-  {
-    baseFilename: "float_solar1",
-    noDataValue: -3.39999995214436425e38,
-    name: "Floating Solar",
-    display: "Floating Solar",
-    layerId: "6185c0f7cef7c17717464da5",
-  },
   {
     baseFilename: "wind_fixed1",
     noDataValue: -3.39999995214436425e38,
     name: "Fixed Offshore Wind",
     display: "Fixed Offshore Wind",
     layerId: "6185c0f7cef7c17717464da3",
+  },
+  {
+    baseFilename: "float_solar1",
+    noDataValue: -3.39999995214436425e38,
+    name: "Floating Solar",
+    display: "Floating Solar",
+    layerId: "6185c0f7cef7c17717464da5",
   },
   {
     baseFilename: "wind_float1",

@@ -1,56 +1,67 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 7336.127771854401,
-      "percValue": 0.004715581143586267,
-      "sketchMetrics": [
-        {
-          "id": "615bbc28aac8c8285d50db2f",
-          "name": "mpa-high",
-          "value": 7336.127771854401,
-          "percValue": 0.004715581143586267
-        }
-      ]
-    },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 652.3174185752869,
-      "percValue": 0.0006581437912195473,
-      "sketchMetrics": [
-        {
-          "id": "615bbc28aac8c8285d50db2f",
-          "name": "mpa-high",
-          "value": 652.3174185752869,
-          "percValue": 0.0006581437912195473
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-high"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 7336.127771854401,
+      "extra": {
+        "sketchName": "mpa-high"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 5056.116574764252,
-      "percValue": 0.01136362685196824,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-high"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 1733.900220990181,
+      "extra": {
+        "sketchName": "mpa-high"
+      },
+      "classId": "Wave Energy"
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbc28aac8c8285d50db2f",
+      "name": "mpa-high",
+      "updatedAt": "2021-10-05T02:44:56.968Z",
+      "createdAt": "2021-10-05T02:44:56.968Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbc28aac8c8285d50db2f",
-          "name": "mpa-high",
-          "value": 5056.116574764252,
-          "percValue": 0.01136362685196824
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"TOURISM\"]"
         }
       ]
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
-      "value": 1733.900220990181,
-      "percValue": 0.003846371730867562,
-      "sketchMetrics": [
-        {
-          "id": "615bbc28aac8c8285d50db2f",
-          "name": "mpa-high",
-          "value": 1733.900220990181,
-          "percValue": 0.003846371730867562
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.86625596136682,
+      32.20595207620439,
+      -64.76875229925741,
+      32.250097107343166
+    ],
+    "geometry": null
   }
 }

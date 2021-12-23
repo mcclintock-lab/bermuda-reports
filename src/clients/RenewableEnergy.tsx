@@ -1,18 +1,29 @@
 import React from "react";
 import {
+  isNullSketchCollection,
+  NullSketchCollection,
   ResultsCard,
   Skeleton,
+  toNullSketchArray,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client";
-import config, { RenewableResults } from "../_config";
+import config, { RenewableResults, RenewableBaseResults } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { ClassTable } from "../components/ClassTable";
+import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
+import {
+  flattenSketchAllClassNext,
+  sketchMetricFilter,
+  getSketchCollectionIds,
+} from "../metrics/clientMetrics";
+import { sketchMetricPercent } from "../metrics/clientMetrics";
+
+import renewableTotals from "../../data/precalc/renewableTotals.json";
+const precalcTotals = renewableTotals as RenewableBaseResults;
 
 const CONFIG = config.renewable;
 
-const SpeciesProtection = () => {
+const RenewableEnergy = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
@@ -22,10 +33,16 @@ const SpeciesProtection = () => {
         skeleton={<LoadingSkeleton />}
       >
         {(data: RenewableResults) => {
-          const sketchRows = flattenSketchAllClass(
-            data.renewable,
-            CONFIG.classes
+          // Derive percent metrics from raw area overlap metrics
+          const percMetrics = sketchMetricPercent(
+            data.metrics,
+            precalcTotals.metrics
           );
+          const collectionMetrics = sketchMetricFilter(
+            [data.sketch.properties.id],
+            percMetrics
+          );
+
           return (
             <>
               <p>
@@ -56,22 +73,36 @@ const SpeciesProtection = () => {
               </Collapse>
               <ClassTable
                 titleText="Type"
-                rows={Object.values(data.renewable)}
+                rows={Object.values(collectionMetrics)}
                 classes={CONFIG.classes}
               />
-              {isCollection && (
-                <Collapse title="Show by MPA">
-                  <SketchClassTable
-                    rows={sketchRows}
-                    classes={CONFIG.classes}
-                  />
-                </Collapse>
-              )}
+              {isCollection &&
+                isNullSketchCollection(data.sketch) &&
+                genCollection(percMetrics, data.sketch)}
             </>
           );
         }}
       </ResultsCard>
     </>
+  );
+};
+
+const genCollection = (
+  metrics: RenewableResults["metrics"],
+  sketch: NullSketchCollection
+) => {
+  const subSketches = toNullSketchArray(sketch);
+  const subSketchIds = getSketchCollectionIds(sketch);
+  const subSketchMetrics = sketchMetricFilter(subSketchIds, metrics);
+  const sketchRows = flattenSketchAllClassNext(
+    subSketchMetrics,
+    CONFIG.classes,
+    subSketches
+  );
+  return (
+    <Collapse title="Show by MPA">
+      <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />
+    </Collapse>
   );
 };
 
@@ -81,4 +112,4 @@ const LoadingSkeleton = () => (
   </p>
 );
 
-export default SpeciesProtection;
+export default RenewableEnergy;

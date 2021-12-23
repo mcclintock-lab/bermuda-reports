@@ -1,80 +1,184 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 1555720.8217766285,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 1555720.8217766285,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 1254996.874171406,
-          "percValue": 0.8066979991552747
-        }
-      ]
-    },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+  "metrics": [
+    {
+      "metricId": "renewable",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 991147.264895618,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 991147.264895618,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 833147.2661019266,
-          "percValue": 0.8405887758663885
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      },
+      "classId": "Fixed Offshore Wind"
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "renewable",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 833147.2661019266,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      },
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 991147.264895618,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      },
+      "classId": "Fixed Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 1555720.8217766285,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 1254996.874171406,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 1555720.8217766285,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      },
+      "classId": "Floating Solar"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 444938.63100481033,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 444938.63100481033,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 408207.01623010635,
-          "percValue": 0.917445660558283
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      },
+      "classId": "Floating Offshore Wind"
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
+    {
+      "metricId": "renewable",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 408207.01623010635,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 444938.63100481033,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      },
+      "classId": "Floating Offshore Wind"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 450788.52027624846,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      },
+      "classId": "Wave Energy"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 411888.2518416345,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      },
+      "classId": "Wave Energy"
+    },
+    {
+      "metricId": "renewable",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 450788.52027624846,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      },
+      "classId": "Wave Energy"
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619834743ff3e57f7333d93e",
+      "name": "Gigantic Network",
+      "updatedAt": "2021-11-20T00:00:34.269Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 450788.52027624846,
-          "percValue": 1
+          "updatedAt": "2021-11-20T00:00:34.365Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.82155643515347,
+          31.12299873603807,
+          -62.698478088902476,
+          33.86373197667135
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 411888.2518416345,
-          "percValue": 0.9137061688909571
-        }
-      ]
-    }
+          "updatedAt": "2021-11-19T23:59:16.315Z",
+          "createdAt": "2021-11-19T23:34:00.777Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -65.92172084860616,
+          31.426079167891885,
+          -63.197111473606924,
+          34.14549731338192
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

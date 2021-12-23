@@ -4,14 +4,13 @@ import {
   GeoprocessingHandler,
   Polygon,
   loadCogWindow,
-  keyBy,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { RenewableResults } from "../_config";
-import { overlapRaster } from "../metrics/overlapRaster";
-import renewableTotals from "../../data/precalc/renewableTotals.json";
+import { overlapRaster } from "../metrics/overlapRasterNext";
+import { ExtendedSketchMetric } from "../metrics/types";
 
-const precalcTotals = renewableTotals as Record<string, number>;
 const CLASSES = config.renewable.classes;
 
 export async function renewable(
@@ -19,28 +18,36 @@ export async function renewable(
 ): Promise<RenewableResults> {
   const box = sketch.bbox || bbox(sketch);
 
-  const metrics = await Promise.all(
-    CLASSES.map(async (curClass) => {
-      // start raster load and move on in loop while awaiting finish
-      const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${curClass.filename}`,
-        {
-          windowBox: box,
-          noDataValue: curClass.noDataValue,
-        }
-      );
-      // start analysis as soon as source load done
-      return overlapRaster(
-        raster,
-        curClass.name,
-        precalcTotals[curClass.name],
-        sketch
-      );
-    })
+  // Calc metrics for each class and merge the result
+  const metrics: ExtendedSketchMetric[] = (
+    await Promise.all(
+      CLASSES.map(async (curClass) => {
+        // start load for class and move on to next while awaiting finish
+        const raster = await loadCogWindow(
+          `${config.dataBucketUrl}${curClass.filename}`,
+          {
+            windowBox: box,
+            noDataValue: curClass.noDataValue,
+          }
+        );
+        // start analysis as soon as source load done
+        const overlapResult = await overlapRaster("renewable", raster, sketch);
+        // merge remaining IDs
+        return overlapResult.map((classMetrics) => ({
+          ...classMetrics,
+          metricId: "renewable",
+          classId: curClass.name,
+        }));
+      })
+    )
+  ).reduce(
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
   return {
-    renewable: keyBy(metrics, (metric) => metric.name),
+    metrics,
+    sketch: toNullSketch(sketch, true),
   };
 }
 
