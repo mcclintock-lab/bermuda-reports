@@ -4,7 +4,7 @@ import {
   Skeleton,
   ReportError,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
 import config, { HabitatRestoreResults } from "../_config";
 import { ClassMetric } from "../metrics/types";

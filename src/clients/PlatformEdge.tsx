@@ -1,20 +1,22 @@
 import React from "react";
 import {
-  ResultsCard,
-  Skeleton,
-  KeySection,
   percentWithEdge,
-  LayerToggle,
-  useSketchProperties,
-  ReportError,
-  Table,
-  Column,
   capitalize,
   toNullSketchArray,
   keyBy,
   isSketchCollection,
   NullSketch,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-core";
+import {
+  ResultsCard,
+  Skeleton,
+  KeySection,
+  LayerToggle,
+  useSketchProperties,
+  ReportError,
+  Table,
+  Column,
+} from "@seasketch/geoprocessing/client-ui";
 import { getBreakGroup } from "../util/getBreakGroup";
 import { GroupCircleRow } from "../components/Circle";
 import {

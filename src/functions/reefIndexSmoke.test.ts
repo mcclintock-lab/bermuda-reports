@@ -14,7 +14,7 @@ describe("Basic smoke tests", () => {
   });
   test("reefIndexSmoke - tests run against all examples", async () => {
     // data fetch fails if run all sketches, too many requests?
-    const examples = await getExamplePolygonSketchAll();
+    const examples = await getExamplePolygonSketchAll("Gigantic Network");
     for (const example of examples) {
       const result = await handler.func(example);
       expect(result).toBeTruthy();

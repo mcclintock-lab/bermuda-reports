@@ -3,7 +3,7 @@ import {
   ResultsCard,
   Skeleton,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
 import config, { OceanUseResults } from "../_config";
 import { flattenSketchAllClass } from "../metrics/clientMetrics";

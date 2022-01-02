@@ -1,15 +1,17 @@
 import React from "react";
 import {
-  ResultsCard,
-  Table,
-  Column,
   capitalize,
   keyBy,
   percentWithEdge,
   percentGoalWithEdge,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  ResultsCard,
+  Table,
+  Column,
   ReportError,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import styled from "styled-components";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Pill, LevelPill } from "../components/Pill";

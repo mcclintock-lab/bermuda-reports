@@ -1,13 +1,15 @@
 import React from "react";
 import {
-  ResultsCard,
   squareMeterToMile,
+  percentWithEdge,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  ResultsCard,
   LayerToggle,
   Column,
   Table,
   useSketchProperties,
-  percentWithEdge,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import { AreaResults } from "../_config";

@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  Column,
-  Table,
-  percentWithEdge,
-} from "@seasketch/geoprocessing/client";
+import { percentWithEdge } from "@seasketch/geoprocessing/client-core";
+import { Column, Table } from "@seasketch/geoprocessing/client-ui";
 import styled from "styled-components";
 import { DataClass } from "../metrics/types";
 import { SmallReportTableStyled } from "./SmallReportTableStyled";

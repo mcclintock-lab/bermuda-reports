@@ -1,5 +1,5 @@
 import React from "react";
-import { SketchAttributesCard } from "@seasketch/geoprocessing/client";
+import { SketchAttributesCard } from "@seasketch/geoprocessing/client-ui";
 import { iucnActivities } from "../util/iucnProtectionLevel";
 
 const AttributesCard = () => {

@@ -16,8 +16,8 @@ import {
   SketchCollection,
   NullSketch,
   NullSketchCollection,
-} from "@seasketch/geoprocessing";
-import { groupBy, keyBy } from "@seasketch/geoprocessing";
+} from "@seasketch/geoprocessing/client-core";
+import { groupBy, keyBy } from "@seasketch/geoprocessing/client-core";
 
 import deepCopy from "../util/deepCopy";
 

@@ -1,11 +1,6 @@
 import React from "react";
-import {
-  Column,
-  Table,
-  percentWithEdge,
-  keyBy,
-  LayerToggle,
-} from "@seasketch/geoprocessing/client";
+import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
+import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { GreenPill } from "../components/Pill";
 import {
   DataClass,

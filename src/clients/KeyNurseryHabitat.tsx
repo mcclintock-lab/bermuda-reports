@@ -1,17 +1,19 @@
 import React from "react";
 import {
+  percentWithEdge,
+  keyBy,
+  capitalize,
+  percentGoalWithEdge,
+  UserAttribute,
+} from "@seasketch/geoprocessing/client-core";
+import {
   ResultsCard,
   Skeleton,
   ReportError,
   useSketchProperties,
-  percentWithEdge,
-  UserAttribute,
   Table,
   Column,
-  keyBy,
-  capitalize,
-  percentGoalWithEdge,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 // Import the results type definition from your functions to type-check your
 // component render functions
 import config, {
@@ -31,7 +33,7 @@ import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
 import { Pill, LevelPill } from "../components/Pill";
 import { ClassMetric } from "../metrics/types";
-import { LayerToggle } from "@seasketch/geoprocessing/client";
+import { LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { LevelCircleRow } from "../components/Circle";
 import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
 import { ReportTableStyled } from "../components/ReportTableStyled";

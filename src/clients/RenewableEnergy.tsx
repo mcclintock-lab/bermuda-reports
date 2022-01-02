@@ -2,11 +2,13 @@ import React from "react";
 import {
   isNullSketchCollection,
   NullSketchCollection,
+  toNullSketchArray,
+} from "@seasketch/geoprocessing/client-core";
+import {
   ResultsCard,
   Skeleton,
-  toNullSketchArray,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import config, { RenewableResult, RenewableBaseResult } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTableNext";

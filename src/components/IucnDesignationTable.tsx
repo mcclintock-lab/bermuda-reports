@@ -1,6 +1,7 @@
 import React from "react";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
-import { Table, Column, capitalize } from "@seasketch/geoprocessing/client";
+import { capitalize } from "@seasketch/geoprocessing/client-core";
+import { Table, Column } from "@seasketch/geoprocessing/client-ui";
 import { LevelPill, Pill } from "./Pill";
 import { ReportTableStyled } from "./ReportTableStyled";
 
