@@ -1,51 +1,79 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-full",
+        "numFishingRestricted": 3,
+        "overlapEdge": false
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "partial",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "no",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-full",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 0,
-          "percValue": 0,
-          "numFishingRestricted": 3,
-          "overlap": false
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
         }
       ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
     },
-    "partial": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": [
-          {
-            "id": "615bbbe9aac8c8285d50db2d",
-            "name": "mpa-full",
-            "value": 0,
-            "percValue": 0,
-            "numFishingRestricted": 3,
-            "overlap": false
-          }
-        ]
-      }
-    }
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

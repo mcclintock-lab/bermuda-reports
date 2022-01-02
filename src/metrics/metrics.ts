@@ -1,4 +1,9 @@
-import { ClassMetricsSketch, GroupMetricsSketch, SketchMetric } from "./types";
+import {
+  ClassMetricsSketch,
+  GroupMetricsSketch,
+  SimpleMetric,
+  SketchMetric,
+} from "./types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 
 import {
@@ -14,16 +19,41 @@ import flatten from "@turf/flatten";
 import { featureCollection } from "@turf/helpers";
 
 /**
- * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
+ * Returns new sketchMetrics array with first sketchMetric matched set with new value.
+ * If no match, returns copy of sketchMetrics.  Does not mutate array in place.
  */
-export function getGroupMetrics<T extends SketchMetric>(
+export const findAndUpdateMetricValue = <T extends SimpleMetric>(
+  sketchMetrics: T[],
+  matcher: (sk: T) => boolean,
+  value: number
+) => {
+  const index = sketchMetrics.findIndex(matcher);
+  if (index === -1) {
+    return [...sketchMetrics];
+  } else {
+    return [
+      ...sketchMetrics.slice(0, index),
+      {
+        ...sketchMetrics[index],
+        value,
+      },
+      ...sketchMetrics.slice(index + 1),
+    ];
+  }
+};
+
+/**
+ * Given ClassMetricsSketch, identifies group for each sketch and reaggregates
+ * @deprecated
+ */
+export const getGroupMetrics = <T extends SketchMetric>(
   groups: string[],
   sketches: Sketch<Polygon>[],
   sketchMetricsFilter: (sketchMetric: T, curGroup: string) => boolean,
   classMetrics: ClassMetricsSketch,
   classTotals: Record<string, { value: number }>,
   featuresByClass: Record<string, Feature<Polygon>[]>
-): GroupMetricsSketch {
+): GroupMetricsSketch => {
   const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
   // For each group
@@ -140,4 +170,4 @@ export function getGroupMetrics<T extends SketchMetric>(
   }
 
   return groupMetrics;
-}
+};

@@ -1,3 +1,10 @@
 {
-  "Platform Edge": 1734231963.998059
+  "metrics": [{
+    "metricId": "areaOverlap",
+    "value": 1734231963.998059
+  }, {
+    "classId": "Platform Edge",
+    "metricId": "areaOverlap",
+    "value": 1734231963.998059
+  }]
 }

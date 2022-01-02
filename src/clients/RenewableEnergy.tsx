@@ -7,19 +7,19 @@ import {
   toNullSketchArray,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client";
-import config, { RenewableResults, RenewableBaseResults } from "../_config";
+import config, { RenewableResult, RenewableBaseResult } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
 import {
   flattenSketchAllClassNext,
-  sketchMetricFilter,
-  getSketchCollectionIds,
+  metricsWithSketchId,
+  getSketchCollectionChildIds,
 } from "../metrics/clientMetrics";
 import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
-const precalcTotals = renewableTotals as RenewableBaseResults;
+const precalcTotals = renewableTotals as RenewableBaseResult;
 
 const CONFIG = config.renewable;
 
@@ -32,16 +32,15 @@ const RenewableEnergy = () => {
         functionName="renewable"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: RenewableResults) => {
+        {(data: RenewableResult) => {
           // Derive percent metrics from raw area overlap metrics
           const percMetrics = sketchMetricPercent(
             data.metrics,
             precalcTotals.metrics
           );
-          const collectionMetrics = sketchMetricFilter(
-            [data.sketch.properties.id],
-            percMetrics
-          );
+          const collectionMetrics = metricsWithSketchId(percMetrics, [
+            data.sketch.properties.id,
+          ]);
 
           return (
             <>
@@ -88,12 +87,12 @@ const RenewableEnergy = () => {
 };
 
 const genCollection = (
-  metrics: RenewableResults["metrics"],
+  metrics: RenewableResult["metrics"],
   sketch: NullSketchCollection
 ) => {
   const subSketches = toNullSketchArray(sketch);
-  const subSketchIds = getSketchCollectionIds(sketch);
-  const subSketchMetrics = sketchMetricFilter(subSketchIds, metrics);
+  const subSketchIds = getSketchCollectionChildIds(sketch);
+  const subSketchMetrics = metricsWithSketchId(metrics, subSketchIds);
   const sketchRows = flattenSketchAllClassNext(
     subSketchMetrics,
     CONFIG.classes,

@@ -1,99 +1,265 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 77170842.5276741,
+      "extra": {
+        "sketchName": "high MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 106868024.43853466,
+      "extra": {
+        "sketchName": "full MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 106868024.43853466,
+      "extra": {
+        "sketchName": "full MPA copy",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 74022243.02788582,
+      "extra": {
+        "sketchName": "low MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
       "value": 111151749.90734842,
-      "percValue": 0.06409278125118954,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 77170842.5276741,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 106868024.43853466,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 106868024.43853466,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 74022243.02788582,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 111151749.90734842,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "partial",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "no",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "61a8155531c466cf4a0621a8",
+      "name": "Overlap Simple - All Protection Levels",
+      "updatedAt": "2021-12-02T20:58:38.860Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 77170842.5276741,
-          "percValue": 0.04449857004697698,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-12-02T00:55:33.476Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -64.9054676226361,
+          32.40233390905704,
+          -64.65896188533189,
+          32.52963933577871
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 106868024.43853466,
-          "percValue": 0.06162268177329839,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-12-02T00:56:34.937Z",
+          "createdAt": "2021-12-02T00:56:26.925Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "2",
+        "bbox": [
+          -64.9171405962689,
+          32.39522956231973,
+          -64.70290719783169,
+          32.54179583348821
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 106868024.43853466,
-          "percValue": 0.06162268177329839,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-12-02T01:00:42.286Z",
+          "createdAt": "2021-12-02T00:56:26.925Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "3",
+        "bbox": [
+          -64.9171405962689,
+          32.39522956231973,
+          -64.70290719783169,
+          32.54179583348821
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 74022243.02788582,
-          "percValue": 0.04268301159507903,
-          "numFishingRestricted": 3,
-          "overlap": true
-        }
-      ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 111151749.90734842,
-        "percValue": 0.06409278125118954,
-        "sketchMetrics": [
-          {
-            "id": "61a8155531c466cf4a0621a7",
-            "name": "high MPA",
-            "value": 77170842.5276741,
-            "percValue": 0.04449857004697698,
-            "numFishingRestricted": 3,
-            "overlap": true
-          },
-          {
-            "id": "61a819ba9942fd4acf0d18d2",
-            "name": "full MPA",
-            "value": 106868024.43853466,
-            "percValue": 0.06162268177329839,
-            "numFishingRestricted": 3,
-            "overlap": true
-          },
-          {
-            "id": "61a81aad31c466cf4a062493",
-            "name": "full MPA copy",
-            "value": 106868024.43853466,
-            "percValue": 0.06162268177329839,
-            "numFishingRestricted": 3,
-            "overlap": true
-          },
-          {
-            "id": "61a932cc9942fd4acf0d1e4a",
-            "name": "low MPA",
-            "value": 74022243.02788582,
-            "percValue": 0.04268301159507903,
-            "numFishingRestricted": 3,
-            "overlap": true
-          }
-        ]
+          "updatedAt": "2021-12-02T20:55:44.802Z",
+          "createdAt": "2021-12-02T20:55:40.422Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "4",
+        "bbox": [
+          -64.91181909358328,
+          32.40233164445144,
+          -64.64540063655238,
+          32.52457364279864
+        ],
+        "geometry": null
       }
-    },
-    "partial": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    ]
   }
 }

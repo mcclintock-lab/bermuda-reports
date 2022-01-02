@@ -2,7 +2,7 @@
 // Precalculates overall stats used by habitat function
 
 import fs from "fs";
-import config, { RenewableBaseResults } from "../src/_config";
+import config, { RenewableBaseResult } from "../src/_config";
 import { ExtendedMetric } from "../src/metrics/types";
 // @ts-ignore
 import geoblaze from "geoblaze";
@@ -30,7 +30,7 @@ async function main() {
     })
   );
 
-  const result: RenewableBaseResults = {
+  const result: RenewableBaseResult = {
     metrics,
   };
 

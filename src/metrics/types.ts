@@ -51,18 +51,26 @@ export interface SimpleMetric {
   extra?: Record<string, string | number | boolean>;
 }
 
-/** Metric with specific additional properties for stratification */
+/**
+ * Catch-all representation of various types of metrics with one or more
+ * optional properties used for stratification and handling time
+ */
 export interface ExtendedMetric extends SimpleMetric {
+  reportId: string;
   /** Optional, if metric is for specific classification - typically data class */
   classId?: string;
   /** Optional. if metric is for specific group - e.g. protection level*/
   groupId?: string;
   /** Optional, if metric is for specfic geography */
   geographyId?: string;
+  /** Optional, if metric covers specific time period */
+  duration?: string;
+  /** Optional, if metric covers specific time period, milliseconds since epoch  */
+  startTime?: number;
 }
 
 /**
- * Metric for a single sketch
+ * Metric for sketch or sketch collection
  */
 export interface SimpleSketchMetric extends SimpleMetric {
   /** ID of sketch or sketch collection the metric is calculated for. */
@@ -70,8 +78,17 @@ export interface SimpleSketchMetric extends SimpleMetric {
 }
 
 /**
+ * Metric for sketch or sketch collection as member of a group
+ */
+export interface GroupSketchMetric extends SimpleSketchMetric {
+  /** Optional. if metric is for specific group - e.g. protection level*/
+  groupId: string;
+  /** Optional, if metric is for specific classification - typically data class */
+  classId?: string;
+}
+
+/**
  * Metric for a single sketch with additional properties supporting stratification.
- * ToDo: can this just extend MetricBase also?
  */
 export type ExtendedSketchMetric = SimpleSketchMetric & ExtendedMetric;
 
@@ -172,7 +189,8 @@ export type GroupMetricAgg = {
 
 export type GroupMetricSketchAgg = GroupMetricAgg & {
   sketchId: string;
-  sketchName: string;
+  /** Deprecated */
+  sketchName?: string;
 };
 
 // Deprecated

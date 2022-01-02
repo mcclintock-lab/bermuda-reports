@@ -1,67 +1,165 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 239653565.47493845,
-      "percValue": 0.1381900290445844,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Large MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 161290260.76581994,
+      "extra": {
+        "sketchName": "MPA inside",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 239653565.47493845,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "value": 239653565.47493845,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 161290260.76581994,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 239653565.47493845,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "partial",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "no",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619a8e39a717c5a0742cafb8",
+      "name": "OverlapInsideNetwork",
+      "updatedAt": "2021-11-30T00:27:09.918Z",
+      "createdAt": "2021-10-28T17:43:51.029Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 239653565.47493845,
-          "percValue": 0.1381900290445844,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-11-21T18:26:41.435Z",
+          "createdAt": "2021-10-28T17:34:24.300Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -64.69359098486977,
+          32.44980942063518,
+          -63.603991852331994,
+          33.55643352377083
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 161290260.76581994,
-          "percValue": 0.09300385652792664,
-          "numFishingRestricted": 3,
-          "overlap": true
-        }
-      ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 239653565.47493845,
-        "percValue": 0.1381900290445844,
-        "sketchMetrics": [
-          {
-            "id": "619a8e39a717c5a0742cafb9",
-            "name": "Large MPA",
-            "value": 239653565.47493845,
-            "percValue": 0.1381900290445844,
-            "numFishingRestricted": 3,
-            "overlap": true
-          },
-          {
-            "id": "619a8e39a717c5a0742cafba",
-            "name": "MPA inside",
-            "value": 161290260.76581994,
-            "percValue": 0.09300385652792664,
-            "numFishingRestricted": 3,
-            "overlap": true
-          }
-        ]
+          "updatedAt": "2021-11-30T00:27:09.924Z",
+          "createdAt": "2021-11-03T14:28:36.389Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.68357919967069,
+          32.45363443027919,
+          -64.53976093344767,
+          32.944735150647226
+        ],
+        "geometry": null
       }
-    },
-    "partial": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    ]
   }
 }

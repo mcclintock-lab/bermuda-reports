@@ -1,116 +1,128 @@
 {
   "metrics": [
     {
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
       "metricId": "renewable",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 991147.264895618,
       "extra": {
         "sketchName": "Gigantic MPA"
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
       "metricId": "renewable",
       "sketchId": "619834683ff3e57f7333d93d",
       "value": 833147.2661019266,
       "extra": {
         "sketchName": "Gigantic MPA 2"
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
       "metricId": "renewable",
       "sketchId": "619834743ff3e57f7333d93e",
       "value": 991147.264895618,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Solar",
       "metricId": "renewable",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 1555720.8217766285,
       "extra": {
         "sketchName": "Gigantic MPA"
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Solar",
       "metricId": "renewable",
       "sketchId": "619834683ff3e57f7333d93d",
       "value": 1254996.874171406,
       "extra": {
         "sketchName": "Gigantic MPA 2"
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Solar",
       "metricId": "renewable",
       "sketchId": "619834743ff3e57f7333d93e",
       "value": 1555720.8217766285,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
       "metricId": "renewable",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 444938.63100481033,
       "extra": {
         "sketchName": "Gigantic MPA"
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
       "metricId": "renewable",
       "sketchId": "619834683ff3e57f7333d93d",
       "value": 408207.01623010635,
       "extra": {
         "sketchName": "Gigantic MPA 2"
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
       "metricId": "renewable",
       "sketchId": "619834743ff3e57f7333d93e",
       "value": 444938.63100481033,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Wave Energy",
       "metricId": "renewable",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 450788.52027624846,
       "extra": {
         "sketchName": "Gigantic MPA"
-      },
-      "classId": "Wave Energy"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Wave Energy",
       "metricId": "renewable",
       "sketchId": "619834683ff3e57f7333d93d",
       "value": 411888.2518416345,
       "extra": {
         "sketchName": "Gigantic MPA 2"
-      },
-      "classId": "Wave Energy"
+      }
     },
     {
+      "reportId": "renewable",
+      "classId": "Wave Energy",
       "metricId": "renewable",
       "sketchId": "619834743ff3e57f7333d93e",
       "value": 450788.52027624846,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
-      },
-      "classId": "Wave Energy"
+      }
     }
   ],
   "sketch": {

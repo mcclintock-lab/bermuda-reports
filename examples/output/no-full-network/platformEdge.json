@@ -1,68 +1,165 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "MPA 1",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "MPA 2",
+        "numFishingRestricted": 1,
+        "overlapEdge": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
       "value": 21517894.43305575,
-      "percValue": 0.012407737188425985,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "definite",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "partial",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "partial",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "platformEdge",
+      "groupId": "no",
+      "classId": "Platform Edge",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 0,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-full-network",
+      "updatedAt": "2021-10-19T19:25:31.562Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "MPA 1",
-          "value": 12160320.09128951,
-          "percValue": 0.007011934010981658,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-10-19T19:22:17.900Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESEARCH\"]"
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f191",
           "name": "MPA 2",
-          "value": 9357574.341766244,
-          "percValue": 0.005395803177444328,
-          "numFishingRestricted": 1,
-          "overlap": true
-        }
-      ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 12160320.09128951,
-        "percValue": 0.007011934010981658,
-        "sketchMetrics": [
-          {
-            "id": "616f1ae906f1b7772b51f18f",
-            "name": "MPA 1",
-            "value": 12160320.09128951,
-            "percValue": 0.007011934010981658,
-            "numFishingRestricted": 3,
-            "overlap": true
-          }
-        ]
+          "updatedAt": "2021-10-19T19:22:17.905Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"FISH_AQUA_INDUSTRIAL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
       }
-    },
-    "partial": {
-      "Platform Edge": {
-        "value": 9357574.341766244,
-        "percValue": 0.005395803177444328,
-        "sketchMetrics": [
-          {
-            "id": "616f1ae906f1b7772b51f191",
-            "name": "MPA 2",
-            "value": 9357574.341766244,
-            "percValue": 0.005395803177444328,
-            "numFishingRestricted": 1,
-            "overlap": true
-          }
-        ]
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    ]
   }
 }

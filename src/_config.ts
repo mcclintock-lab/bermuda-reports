@@ -454,11 +454,11 @@ export const reefIndex: DataGroup = {
 
 //// RENEWABLE ENERGY ////
 
-export interface RenewableBaseResults {
+export interface RenewableBaseResult {
   metrics: ExtendedMetric[];
 }
 
-export interface RenewableResults {
+export interface RenewableResult {
   metrics: ExtendedSketchMetric[];
   /** The sketch used, without geometry */
   sketch: NullSketch | NullSketchCollection;
@@ -656,35 +656,52 @@ export const oceanUse: DataGroup = {
 
 //// PLATFORM EDGE ////
 
-export type EdgeReportData = DataGroup & {
+export interface PlatformEdgeBaseResult {
+  metrics: ExtendedMetric[];
+}
+
+export interface PlatformEdgeResult {
+  metrics: ExtendedSketchMetric[];
+  /** The sketch used, without geometry */
+  sketch: NullSketch | NullSketchCollection;
+}
+
+export type PlatformEdgeDataGroup = DataGroup & {
   fishingActivities: string[];
   breakMap: Record<string, number>;
 };
 
+export interface EdgeSketchMetric extends ExtendedSketchMetric {
+  extra: {
+    numFishingRestricted: number;
+    overlapEdge: boolean;
+  };
+}
+
 // Build up new type with additional property
-export interface EdgeSketchMetric extends SketchMetric {
-  overlap: boolean;
-  numFishingRestricted: number;
-}
-export type EdgeClassMetricSketch = ClassMetric & {
-  sketchMetrics: EdgeSketchMetric[];
-};
-export interface EdgeClassMetricsSketch {
-  [name: string]: EdgeClassMetricSketch;
-}
-export interface EdgeGroupMetricsSketch {
-  [name: string]: EdgeClassMetricsSketch;
-}
+// export interface EdgeSketchMetric extends SketchMetric {
+//   overlap: boolean;
+//   numFishingRestricted: number;
+// }
+// export type EdgeClassMetricSketch = ClassMetric & {
+//   sketchMetrics: EdgeSketchMetric[];
+// };
+// export interface EdgeClassMetricsSketch {
+//   [name: string]: EdgeClassMetricSketch;
+// }
+// export interface EdgeGroupMetricsSketch {
+//   [name: string]: EdgeClassMetricsSketch;
+// }
 
 // base for precalc
-export interface PlatformEdgeBaseResult {
-  byClass: ClassMetrics;
-}
+// export interface PlatformEdgeBaseResult {
+//   byClass: ClassMetrics;
+// }
 
-export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
-  byClass: EdgeClassMetricsSketch;
-  byGroup: EdgeGroupMetricsSketch;
-}
+// export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
+//   byClass: EdgeClassMetricsSketch;
+//   byGroup: EdgeGroupMetricsSketch;
+// }
 
 const platformEdgeClasses: DataClass[] = [
   {
@@ -711,7 +728,7 @@ const breakMap: Record<string, number> = {
   no: 0,
 };
 
-export const platformEdge: EdgeReportData = {
+export const platformEdge: PlatformEdgeDataGroup = {
   classes: platformEdgeClasses.map((curClass) => {
     return {
       ...curClass,
