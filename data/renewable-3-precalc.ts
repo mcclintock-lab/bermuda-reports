@@ -12,6 +12,7 @@ import { strict as assert } from "assert";
 
 const LAYERS = config.renewable.classes;
 const DATASET = "renewable";
+const REPORT_ID = "renewable";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
@@ -23,6 +24,7 @@ async function main() {
       }); // Load wole raster
       const sum = geoblaze.sum(raster)[0] as number;
       return {
+        reportId: REPORT_ID,
         classId: curClass.classId,
         metricId: "renewable",
         value: sum,
