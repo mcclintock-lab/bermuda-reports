@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { DataClass } from "../metrics/types";
 import { SmallReportTableStyled } from "./SmallReportTableStyled";
 
-const SmallTableStyled = styled.div`
+const SketchClassTableStyled = styled(SmallReportTableStyled)`
   & {
     width: 100%;
     overflow-x: scroll;
@@ -22,19 +22,8 @@ const SmallTableStyled = styled.div`
   & td {
   }
 
-  .squeeze {
+  .styled {
     font-size: 12px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
 `;
 
 export interface SketchClassTableProps {
@@ -66,7 +55,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   ];
 
   return (
-    <SmallReportTableStyled>
+    <SketchClassTableStyled>
       <Table
         className="styled"
         columns={columns}
@@ -74,7 +63,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
           (a.sketchName as string).localeCompare(b.sketchName as string)
         )}
       />
-    </SmallReportTableStyled>
+    </SketchClassTableStyled>
   );
 };
 
