@@ -22,7 +22,6 @@ export async function renewable(
   const metrics: ExtendedSketchMetric[] = (
     await Promise.all(
       CLASSES.map(async (curClass) => {
-        // start load for class and move on to next while awaiting finish
         const raster = await loadCogWindow(
           `${config.dataBucketUrl}${curClass.filename}`,
           {
@@ -30,19 +29,18 @@ export async function renewable(
             noDataValue: curClass.noDataValue,
           }
         );
-        // start analysis as soon as source load done
         const overlapResult = await overlapRaster("renewable", raster, sketch);
-        // merge remaining IDs
         return overlapResult.map(
-          (classMetrics): ExtendedSketchMetric => ({
+          (metrics): ExtendedSketchMetric => ({
             reportId: "renewable",
             classId: curClass.classId,
-            ...classMetrics,
+            ...metrics,
           })
         );
       })
     )
   ).reduce(
+    // merge
     (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
     []
   );

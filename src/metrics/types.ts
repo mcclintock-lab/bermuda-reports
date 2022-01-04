@@ -52,8 +52,9 @@ export interface SimpleMetric {
 }
 
 /**
- * Catch-all representation of various types of metrics with one or more
+ * Catch-all representation of metrics with one or more
  * optional properties used for stratification and handling time
+ * Use when mixing metrics or need to support a variety
  */
 export interface ExtendedMetric extends SimpleMetric {
   reportId: string;
@@ -78,10 +79,18 @@ export interface SimpleSketchMetric extends SimpleMetric {
 }
 
 /**
+ * Metric for sketch or sketch collection as member of a class
+ */
+export interface ClassSketchMetric extends SimpleSketchMetric {
+  /** Optional, if metric is for specific classification - typically data class */
+  classId: string;
+}
+
+/**
  * Metric for sketch or sketch collection as member of a group
  */
 export interface GroupSketchMetric extends SimpleSketchMetric {
-  /** Optional. if metric is for specific group - e.g. protection level*/
+  /** metric group - e.g. protection level*/
   groupId: string;
   /** Optional, if metric is for specific classification - typically data class */
   classId?: string;

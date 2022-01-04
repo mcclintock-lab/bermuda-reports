@@ -6,20 +6,23 @@ import { loadCogWindow } from "../src/datasources/cog";
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";
 import { groupClassIdMapping } from "../src/metrics/classId";
+import { ExtendedMetric } from "../src/metrics/types";
 
 const DEST_PATH = `${__dirname}/precalc/nearshoreHabitatTotals.json`;
 const CONFIG = config.nearshore;
+const REPORT_ID = "habitatProtection";
+const METRIC_ID = "nearshore";
 
 async function main() {
   const url = `${config.localDataUrl}${CONFIG.filename}`;
 
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
-    const stats = await countByClass(raster, {
+    const metrics: ExtendedMetric[] = await countByClass(raster, {
       classIdToName: groupClassIdMapping(config.nearshore),
     });
 
-    fs.writeFile(DEST_PATH, JSON.stringify(stats, null, 2), (err) =>
+    fs.writeFile(DEST_PATH, JSON.stringify(metrics, null, 2), (err) =>
       err
         ? console.error("Error", err)
         : console.info(`Successfully wrote ${DEST_PATH}`)
@@ -37,12 +40,13 @@ async function main() {
 
 /**
  * Implements the raster-based areaByClass calculation
+ * ToDo: migrate to overlapRasterClass non-sketch
  */
-export async function countByClass(
+async function countByClass(
   /** raster to search */
   raster: Georaster,
   config: { classIdToName: Record<string, string> }
-): Promise<Record<string, number>> {
+): Promise<ExtendedMetric[]> {
   if (!config.classIdToName)
     throw new Error("Missing classIdToName map in config");
 
@@ -50,22 +54,26 @@ export async function countByClass(
     scaleType: "nominal",
   })[0];
 
-  const ids = Object.keys(config.classIdToName);
-  // Initialize the total counts
-  let countByClass = ids.reduce<Record<string, number>>(
-    (acc, classId) => ({
-      ...acc,
-      [classId]: 0,
-    }),
-    {}
-  );
+  const numericClassIds = Object.keys(config.classIdToName);
 
   // Migrate the total counts, skip nodata
-  Object.keys(histogram).forEach((classId) => {
-    if (ids.includes(classId)) {
-      countByClass[classId] += histogram[classId];
+  let metrics: ExtendedMetric[] = [];
+  numericClassIds.forEach((numericClassId) => {
+    if (numericClassIds.includes(numericClassId) && histogram[numericClassId]) {
+      metrics.push({
+        reportId: REPORT_ID,
+        metricId: METRIC_ID,
+        classId: config.classIdToName[numericClassId],
+        value: histogram[numericClassId],
+      });
+    } else {
+      metrics.push({
+        reportId: REPORT_ID,
+        metricId: METRIC_ID,
+        classId: config.classIdToName[numericClassId],
+        value: 0,
+      });
     }
   });
-
-  return countByClass;
+  return metrics;
 }

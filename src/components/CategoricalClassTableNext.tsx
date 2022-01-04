@@ -1,7 +1,7 @@
 import React from "react";
 import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
 import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
-import { GreenPill } from "../components/Pill";
+import { GreenPill } from "./Pill";
 import {
   DataClass,
   ExtendedMetric,
@@ -9,13 +9,13 @@ import {
 } from "../metrics/types";
 import { ReportTableStyled } from "./ReportTableStyled";
 
-export interface ClassTableProps {
+export interface CategoricalClassTableProps {
   titleText: string;
-  percText?: string;
-  // Metrics with percent value
+  layerId?: string;
+  /** Metrics with percent value */
   rows: ExtendedMetric[] | ExtendedSketchMetric[];
   classes: DataClass[];
-  showGoal?: boolean;
+  showGoal: boolean;
   options?: {
     classColWidth?: string;
     percColWidth?: string;
@@ -24,12 +24,12 @@ export interface ClassTableProps {
   };
 }
 
-export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
+export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTableProps> = ({
   titleText,
-  percText = "% Within Plan",
+  layerId,
   rows,
   classes,
-  showGoal = false,
+  showGoal = true,
   options,
 }) => {
   // Use user-defined width, otherwise sane default depending on whether goal
@@ -64,14 +64,14 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       style: { width: colWidths.classColWidth },
     },
     {
-      Header: percText,
+      Header: "% Within Plan",
       style: { textAlign: "right", width: colWidths.percColWidth },
       accessor: (row) => {
         const percDisplay = percentWithEdge(row.value);
         const goal =
           classes.find((curClass) => curClass.classId === row.classId)
             ?.goalPerc || 0;
-        if (showGoal && row.value > goal) {
+        if (row.value > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
           return percDisplay;
@@ -80,9 +80,8 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
     },
     {
       Header: "Show Map",
-      accessor: (row) => {
-        const layerId = classesByName[row.classId || "missing"].layerId;
-        return layerId ? (
+      accessor: (row, index) => {
+        return index == 0 ? (
           <LayerToggle
             simple
             layerId={layerId}

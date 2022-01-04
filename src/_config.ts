@@ -3,11 +3,8 @@ import {
   ExtendedSketchMetric,
   ClassMetrics,
   ClassMetricsSketch,
-  ClassMetricSketch,
   GroupMetricsSketch,
   ValueMetric,
-  SketchMetric,
-  ClassMetric,
   SketchStat,
   CategoryStat,
   LevelStat,
@@ -175,9 +172,10 @@ export const existingProtection: DataGroup = {
 
 //// HABITAT ////
 
-export interface HabitatResults {
-  nearshore: ClassMetricsSketch;
-  offshore: ClassMetricsSketch;
+export interface HabitatResult {
+  metrics: ExtendedSketchMetric[];
+  /** The sketch used, without geometry */
+  sketch: NullSketch | NullSketchCollection;
 }
 
 // Categorical raster

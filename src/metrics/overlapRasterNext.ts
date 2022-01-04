@@ -7,20 +7,14 @@ import {
 import { featureEach } from "@turf/meta";
 import { clip } from "../util/clip";
 import area from "@turf/area";
+import {
+  removeSketchPolygonHoles,
+  removeSketchCollPolygonHoles,
+} from "../util/removeHoles";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
 import { SimpleSketchMetric } from "./types";
-
-function removeSketchPolygonHoles(sketch: Sketch<Polygon>) {
-  const newSk: Sketch<Polygon> = { ...sketch };
-  newSk.geometry.coordinates = [sketch.geometry.coordinates[0]];
-  return newSk;
-}
-
-function removeSketchCollPolygonHoles(sketchColl: SketchCollection<Polygon>) {
-  return sketchColl.features.map((sk) => removeSketchPolygonHoles(sk));
-}
 
 /**
  * Returns sum metric for raster.  If sketch parameter provided, sum overlap is also calculated for each sketch polygon.
@@ -34,7 +28,7 @@ export async function overlapRaster(
   /** single sketch or collection. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   options: {
-    /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them */
+    /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them.  Default to true */
     removeSketchHoles: boolean;
   } = { removeSketchHoles: true }
 ): Promise<SimpleSketchMetric[]> {

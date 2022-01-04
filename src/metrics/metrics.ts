@@ -3,6 +3,7 @@ import {
   GroupMetricsSketch,
   SimpleMetric,
   SketchMetric,
+  ExtendedSketchMetric,
 } from "./types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 
@@ -17,6 +18,21 @@ import {
 } from "@seasketch/geoprocessing";
 import flatten from "@turf/flatten";
 import { featureCollection } from "@turf/helpers";
+
+/**
+ * Sorts metrics by reportId, then metricId, classId, sketchId.
+ * Use to produce consistent metric data that is grouped for ease of
+ * scanning for accuracy
+ */
+export const metricSort = (metrics: ExtendedSketchMetric[]) => {
+  return metrics.sort(
+    (a, b) =>
+      a.reportId.localeCompare(b.reportId) ||
+      a.metricId.localeCompare(b.metricId) ||
+      a.classId?.localeCompare(b?.classId || "missing") ||
+      a.sketchId.localeCompare(b.sketchId)
+  );
+};
 
 /**
  * Returns new sketchMetrics array with first sketchMetric matched set with new value.

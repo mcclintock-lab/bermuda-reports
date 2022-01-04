@@ -1,12 +1,62 @@
-{
-  "Abyssopelagic": 6093,
-  "Bathypelagic": 124,
-  "Cold water coral": 9,
-  "Escarpments": 103,
-  "Knolls": 1587,
-  "Pelagic zone 1": 2979,
-  "Pelagic zone 2": 1529,
-  "Pelagic zone 3": 2601,
-  "Plains": 5481,
-  "Seamounts": 379
-}
+[
+  {
+    "reportId": "habitatProtection",
+    "classId": "Abyssopelagic",
+    "metricId": "offshore",
+    "value": 6093
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Bathypelagic",
+    "metricId": "offshore",
+    "value": 124
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Cold water coral",
+    "metricId": "offshore",
+    "value": 9
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Escarpments",
+    "metricId": "offshore",
+    "value": 103
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Knolls",
+    "metricId": "offshore",
+    "value": 1587
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Pelagic zone 1",
+    "metricId": "offshore",
+    "value": 2979
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Pelagic zone 2",
+    "metricId": "offshore",
+    "value": 1529
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Pelagic zone 3",
+    "metricId": "offshore",
+    "value": 2601
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Plains",
+    "metricId": "offshore",
+    "value": 5481
+  },
+  {
+    "reportId": "habitatProtection",
+    "classId": "Seamounts",
+    "metricId": "offshore",
+    "value": 379
+  }
+]

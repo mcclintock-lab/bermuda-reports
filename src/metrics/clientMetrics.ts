@@ -114,22 +114,38 @@ const classSortAlphaDisplay = (a: DataClass, b: DataClass) => {
  */
 export const sketchMetricPercent = (
   metrics: ExtendedSketchMetric[],
-  totals: ExtendedMetric[],
-  /** Caller specified property to key by */
-  keyProperty?: string
+  totals: ExtendedMetric[]
 ): ExtendedSketchMetric[] => {
   const totalsByKey = (() => {
     return keyBy(totals, (total) =>
       total.classId ? total.classId : total.metricId
     );
   })();
-  return metrics.map((curMetric) => ({
-    ...deepCopy(curMetric),
-    value:
-      curMetric.value /
-      totalsByKey[curMetric.classId ? curMetric.classId : curMetric.metricId]
-        .value,
-  }));
+  return metrics.map((curMetric) => {
+    if (!curMetric || curMetric.value === undefined)
+      throw new Error(`Malformed metrics: ${JSON.stringify(curMetric)}`);
+
+    const idProperty = curMetric.classId ? "classId" : "metricId";
+
+    const idValue = curMetric[idProperty];
+    if (!idValue) throw new Error(`Missing total index: ${idValue}`);
+
+    const value = curMetric[idProperty];
+    if (!value)
+      throw new Error(
+        `Missing metric id property ${idProperty}, ${JSON.stringify(curMetric)}`
+      );
+    const totalMetric = totalsByKey[idValue];
+    if (!totalMetric) {
+      throw new Error(
+        `Missing total: ${idProperty}: ${JSON.stringify(curMetric)}`
+      );
+    }
+    return {
+      ...deepCopy(curMetric),
+      value: curMetric.value / totalMetric.value,
+    };
+  });
 };
 
 /**

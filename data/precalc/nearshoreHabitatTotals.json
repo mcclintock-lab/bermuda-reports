@@ -1,15 +1,80 @@
-{
-  "1": 11318,
-  "2": 7786,
-  "3": 30106,
-  "4": 41973,
-  "5": 781,
-  "6": 167,
-  "7": 14981,
-  "8": 37988,
-  "9": 29994,
-  "10": 37926,
-  "11": 25473,
-  "12": 85341,
-  "13": 174816
-}
+[
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Bays and Coast",
+    "value": 11318
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Madracis Reef",
+    "value": 7786
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Montastraea Reef",
+    "value": 30106
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Diploria Porites Reef",
+    "value": 41973
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Castle Harbour Madracis",
+    "value": 781
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Algal Vermetid Reef",
+    "value": 167
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Rim Reef",
+    "value": 14981
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Main Terrace Reef",
+    "value": 37988
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Fore Reef",
+    "value": 29994
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Mesophotic",
+    "value": 37926
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Rariphotic",
+    "value": 25473
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Mesopelagic",
+    "value": 85341
+  },
+  {
+    "reportId": "habitatProtection",
+    "metricId": "nearshore",
+    "classId": "Bathypelagic",
+    "value": 174816
+  }
+]
