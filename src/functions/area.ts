@@ -5,40 +5,71 @@ import {
   Polygon,
   GeoprocessingHandler,
   fgbFetchAll,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
-import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
-import config, { STUDY_REGION_AREA_SQ_METERS, AreaResults } from "../_config";
+import { overlapArea, overlapSubarea } from "../metrics/overlapAreaNext";
+import config, { STUDY_REGION_AREA_SQ_METERS, MetricResult } from "../_config";
 import bbox from "@turf/bbox";
+import { ExtendedSketchMetric } from "../metrics/types";
+import { metricSort } from "../metrics/metrics";
 
 const CONFIG = config.size;
-const CLASS = CONFIG.classes[0];
+const REPORT_ID = "size";
+const METRIC_ID = "area";
+const PERC_METRIC_ID = "areaPerc";
 
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<AreaResults> {
+): Promise<MetricResult> {
   const box = sketch.bbox || bbox(sketch);
   const nearshorePolys = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${CLASS.filename}`,
+    `${config.dataBucketUrl}${CONFIG.filename}`,
     box
   );
 
-  const eez = await overlapArea("eez", sketch, STUDY_REGION_AREA_SQ_METERS);
-  const nearshore = await overlapSubarea(
-    "nearshore",
-    sketch,
-    nearshorePolys[0]
+  const eez = (
+    await overlapArea(
+      METRIC_ID,
+      PERC_METRIC_ID,
+      sketch,
+      STUDY_REGION_AREA_SQ_METERS
+    )
+  ).map(
+    (metrics): ExtendedSketchMetric => ({
+      reportId: REPORT_ID,
+      classId: "eez",
+      ...metrics,
+    })
   );
-  const offshore = await overlapSubarea("offshore", sketch, nearshorePolys[0], {
-    operation: "difference",
-    outerArea: STUDY_REGION_AREA_SQ_METERS,
-  });
+
+  const nearshore = (
+    await overlapSubarea(METRIC_ID, PERC_METRIC_ID, sketch, nearshorePolys[0])
+  ).map(
+    (metrics): ExtendedSketchMetric => ({
+      reportId: REPORT_ID,
+      classId: "nearshore",
+      ...metrics,
+    })
+  );
+
+  const offshore = (
+    await overlapSubarea(METRIC_ID, PERC_METRIC_ID, sketch, nearshorePolys[0], {
+      operation: "difference",
+      outerArea: STUDY_REGION_AREA_SQ_METERS,
+    })
+  ).map(
+    (metrics): ExtendedSketchMetric => ({
+      reportId: REPORT_ID,
+      classId: "offshore",
+      ...metrics,
+    })
+  );
+
+  const metrics = metricSort([...eez, ...nearshore, ...offshore]);
 
   return {
-    byClass: {
-      eez,
-      nearshore,
-      offshore,
-    },
+    metrics,
+    sketch: toNullSketch(sketch, true),
   };
 }
 

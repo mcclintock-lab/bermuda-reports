@@ -1,97 +1,432 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 320052736.91190267,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a8",
       "value": 388235454.3080779,
-      "percValue": 0.0008335934529739127,
-      "sketchMetrics": [
-        {
-          "id": "61a8155531c466cf4a0621a7",
-          "name": "high MPA",
-          "value": 320052736.91190267,
-          "percValue": 0.0006871960382176592
-        },
-        {
-          "id": "61a819ba9942fd4acf0d18d2",
-          "name": "full MPA",
-          "value": 313000393.6112994,
-          "percValue": 0.0006720537137898591
-        },
-        {
-          "id": "61a81aad31c466cf4a062493",
-          "name": "full MPA copy",
-          "value": 313000393.6112994,
-          "percValue": 0.0006720537137898591
-        },
-        {
-          "id": "61a932cc9942fd4acf0d1e4a",
-          "name": "low MPA",
-          "value": 332082981.0585949,
-          "percValue": 0.000713026581634239
-        }
-      ]
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 332082981.0585949,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 320052736.9119009,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a8",
       "value": 387282939.33869296,
-      "percValue": 0.15101716351742012,
-      "sketchMetrics": [
-        {
-          "id": "61a8155531c466cf4a0621a7",
-          "name": "high MPA",
-          "value": 320052736.9119009,
-          "percValue": 0.12480140898267925
-        },
-        {
-          "id": "61a819ba9942fd4acf0d18d2",
-          "name": "full MPA",
-          "value": 312047878.6419047,
-          "percValue": 0.12167999342960067
-        },
-        {
-          "id": "61a81aad31c466cf4a062493",
-          "name": "full MPA copy",
-          "value": 312047878.6419047,
-          "percValue": 0.12167999342960067
-        },
-        {
-          "id": "61a932cc9942fd4acf0d1e4a",
-          "name": "low MPA",
-          "value": 332082981.0585888,
-          "percValue": 0.12949248406736308
-        }
-      ]
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
     },
-    "offshore": {
-      "name": "offshore",
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 312047878.6419047,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 312047878.6419047,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 332082981.0585888,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 0,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61a8155531c466cf4a0621a8",
       "value": 952643.5828112711,
-      "percValue": 0.000002056778476242719,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 952643.5828112711,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 952643.5828112711,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 0,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 0.0006871960382176592,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 0.0008335934529739127,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 0.0006720537137898591,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 0.0006720537137898591,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 0.000713026581634239,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 0.12480140898267925,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 0.15101716351742012,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 0.12167999342960067,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 0.12167999342960067,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 0.12949248406736308,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "value": 0,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "value": 0.000002056778476242719,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "value": 0.000002056778476242719,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "value": 0.000002056778476242719,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "value": 0,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "61a8155531c466cf4a0621a8",
+      "name": "Overlap Simple - All Protection Levels",
+      "updatedAt": "2021-12-02T20:58:38.860Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a8155531c466cf4a0621a7",
           "name": "high MPA",
-          "value": 0,
-          "percValue": 0
+          "updatedAt": "2021-12-02T00:55:33.476Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -64.9054676226361,
+          32.40233390905704,
+          -64.65896188533189,
+          32.52963933577871
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a819ba9942fd4acf0d18d2",
           "name": "full MPA",
-          "value": 952643.5828112711,
-          "percValue": 0.000002056778476242719
+          "updatedAt": "2021-12-02T00:56:34.937Z",
+          "createdAt": "2021-12-02T00:56:26.925Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "2",
+        "bbox": [
+          -64.9171405962689,
+          32.39522956231973,
+          -64.70290719783169,
+          32.54179583348821
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a81aad31c466cf4a062493",
           "name": "full MPA copy",
-          "value": 952643.5828112711,
-          "percValue": 0.000002056778476242719
+          "updatedAt": "2021-12-02T01:00:42.286Z",
+          "createdAt": "2021-12-02T00:56:26.925Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "3",
+        "bbox": [
+          -64.9171405962689,
+          32.39522956231973,
+          -64.70290719783169,
+          32.54179583348821
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61a932cc9942fd4acf0d1e4a",
           "name": "low MPA",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    }
+          "updatedAt": "2021-12-02T20:55:44.802Z",
+          "createdAt": "2021-12-02T20:55:40.422Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "4",
+        "bbox": [
+          -64.91181909358328,
+          32.40233164445144,
+          -64.64540063655238,
+          32.52457364279864
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

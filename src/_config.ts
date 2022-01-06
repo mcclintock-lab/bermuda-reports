@@ -35,6 +35,12 @@ export const dataBucketUrl =
 export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
 
+export interface MetricResult {
+  metrics: ExtendedSketchMetric[];
+  /** The sketch used, without geometry */
+  sketch: NullSketch | NullSketchCollection;
+}
+
 //// OBJECTIVES ////
 
 export const objectives = {
@@ -44,26 +50,27 @@ export const objectives = {
 
 //// SIZE ////
 
-export interface AreaResults {
-  byClass: ClassMetricsSketch;
-}
-
 const sizeClasses: DataClass[] = [
   {
-    baseFilename: "nearshore_dissolved",
-    classId: "Nearshore",
+    classId: "eez",
+    display: "EEZ",
+  },
+  {
+    classId: "nearshore",
     display: "Nearshore",
-    layerId: "6164aebea04323106537eb5a",
+  },
+  {
+    classId: "offshore",
+    display: "Offshore",
   },
 ];
 
+const sizeBaseFilename = "nearshore_dissolved";
 export const size: DataGroup = {
-  classes: sizeClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
-    };
-  }),
+  baseFilename: sizeBaseFilename,
+  filename: `${sizeBaseFilename}${fgbFileSuffix}`,
+  classes: sizeClasses,
+  layerId: "6164aebea04323106537eb5a",
 };
 
 //// PROTECTION ////

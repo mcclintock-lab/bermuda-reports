@@ -45,8 +45,10 @@
     "@turf/helpers": "^6.3.0",
     "@turf/invariant": "^6.3.0",
     "@turf/kinks": "^6.3.0",
+    "@types/lodash": "^4.14.178",
     "geoblaze": "^0.3.2",
     "georaster": "1.0.3",
+    "lodash": "^4.17.21",
     "simple-statistics": "^7.7.0",
     "union-subdivided-polygons": "^0.9.1"
   },

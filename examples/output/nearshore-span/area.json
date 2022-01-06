@@ -1,43 +1,91 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "value": 1562787998.1749337,
-      "percValue": 0.003355514879460421,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 1562787998.1749337,
-          "percValue": 0.003355514879460421
-        }
-      ]
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "value": 224096911.34016454,
-      "percValue": 0.08738438094224944,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "value": 1339128223.69728,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "value": 0.003355514879460421,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "value": 0.08738438094224944,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "value": 0.0028912073278253166,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61649a3c1e0a596510ad8329",
+      "name": "nearshore-span",
+      "updatedAt": "2021-10-11T20:10:36.004Z",
+      "createdAt": "2021-10-11T20:10:36.004Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 224096911.34016454,
-          "percValue": 0.08738438094224944
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\"]"
         }
       ]
     },
-    "offshore": {
-      "name": "offshore",
-      "value": 1339128223.69728,
-      "percValue": 0.0028912073278253166,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 1339128223.69728,
-          "percValue": 0.0028912073278253166
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -65.09902878851547,
+      31.50541071353797,
+      -64.79380174261453,
+      32.28908133136779
+    ],
+    "geometry": null
   }
 }

@@ -1,43 +1,91 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 251253216.90383413,
-      "percValue": 0.0005394742657466582,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 251253216.90383413,
-          "percValue": 0.0005394742657466582
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 62228333.88027496,
-      "percValue": 0.024265325214327615,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 188999666.4793882,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0.0005394742657466582,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0.024265325214327615,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0.000408054442443948,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 62228333.88027496,
-          "percValue": 0.024265325214327615
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
         }
       ]
     },
-    "offshore": {
-      "name": "offshore",
-      "value": 188999666.4793882,
-      "percValue": 0.000408054442443948,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 188999666.4793882,
-          "percValue": 0.000408054442443948
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

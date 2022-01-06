@@ -1,43 +1,91 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 471997272.05642706,
-      "percValue": 0.0010134412801350323,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 471997272.05642706,
-          "percValue": 0.0010134412801350323
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
       "value": 88303118.39811556,
-      "percValue": 0.03443293033511124,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 383702044.71772295,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 0.0010134412801350323,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 0.03443293033511124,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 0.0008284211651715718,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "618abe61e4efd949c23c5899",
+      "name": "no-activity-mpa",
+      "updatedAt": "2021-11-09T18:30:57.892Z",
+      "createdAt": "2021-11-09T18:30:57.892Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 88303118.39811556,
-          "percValue": 0.03443293033511124
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": ""
         }
       ]
     },
-    "offshore": {
-      "name": "offshore",
-      "value": 383702044.71772295,
-      "percValue": 0.0008284211651715718,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 383702044.71772295,
-          "percValue": 0.0008284211651715718
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.61027849772681,
+      32.19068339515532,
+      -64.33287371257072,
+      32.41123101229184
+    ],
+    "geometry": null
   }
 }

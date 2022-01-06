@@ -41,6 +41,14 @@ export interface DataGroup {
   layerId?: string;
 }
 
+export type MetricIdNames =
+  | "metricId"
+  | "classId"
+  | "groupId"
+  | "reportId"
+  | "geographyId";
+export type MetricIdTypes = string | number;
+
 /** Single value metric */
 export interface SimpleMetric {
   /** Name of the metric */

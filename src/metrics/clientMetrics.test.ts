@@ -6,6 +6,7 @@ import {
   flattenByGroup,
   flattenByGroupSketch,
   flattenSketchAllClassNext,
+  nestMetrics,
 } from "./clientMetrics";
 import { ExtendedSketchMetric } from "./types";
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
@@ -389,4 +390,52 @@ test("flattenByGroupSketch", async () => {
   ];
 
   expect(rows).toEqual(answer);
+});
+
+test("nestMetrics", async () => {
+  const result = nestMetrics(
+    groupMetrics.filter((m) => m.sketchId === "AAAA"),
+    ["sketchId", "classId", "groupId"]
+  );
+
+  const answer = {
+    AAAA: {
+      class1: {
+        group1: [
+          {
+            reportId: "report1",
+            groupId: "group1",
+            classId: "class1",
+            metricId: "metric1",
+            sketchId: "AAAA",
+            value: 15,
+          },
+        ],
+      },
+      class2: {
+        group1: [
+          {
+            reportId: "report1",
+            groupId: "group1",
+            classId: "class2",
+            metricId: "metric1",
+            sketchId: "AAAA",
+            value: 15,
+          },
+        ],
+        group3: [
+          {
+            reportId: "report1",
+            groupId: "group3",
+            classId: "class2",
+            metricId: "metric1",
+            sketchId: "AAAA",
+            value: 20,
+          },
+        ],
+      },
+    },
+  };
+
+  expect(result).toEqual(answer);
 });

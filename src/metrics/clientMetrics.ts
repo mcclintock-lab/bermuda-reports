@@ -9,6 +9,8 @@ import {
   ExtendedMetric,
   SimpleMetric,
   SimpleSketchMetric,
+  MetricIdNames,
+  MetricIdTypes,
 } from "./types";
 
 import {
@@ -16,10 +18,15 @@ import {
   SketchCollection,
   NullSketch,
   NullSketchCollection,
+  isNullSketchCollection,
+  isSketch,
+  isSketchCollection,
+  isNullSketch,
 } from "@seasketch/geoprocessing/client-core";
 import { groupBy, keyBy } from "@seasketch/geoprocessing/client-core";
 
 import deepCopy from "../util/deepCopy";
+import reduce from "lodash/reduce";
 
 /**
  * Helper methods for using metrics in browser client
@@ -41,6 +48,27 @@ export const sketchToId = (
   Array.isArray(sketch)
     ? sketch.map((sk) => sk.properties.id)
     : sketch.properties.id;
+
+/**
+ * Returns a shorthand Sketch array given a Sketch or SketchCollection.
+ * Includes the collection as a shorthand sketch also
+ */
+export const toSketchShortAll = (
+  input: Sketch | SketchCollection | NullSketch | NullSketchCollection
+): { id: string; name: string }[] => {
+  if (isSketch(input) || isNullSketch(input)) {
+    return [{ id: input.properties.id, name: input.properties.name }];
+  } else if (isSketchCollection(input) || isNullSketchCollection(input)) {
+    return [
+      { id: input.properties.id, name: input.properties.name },
+      ...input.features.map((sk) => ({
+        id: sk.properties.id,
+        name: sk.properties.name,
+      })),
+    ];
+  }
+  throw new Error("invalid input, must be Sketch or SketchCollection");
+};
 
 /**
  * Returns metrics with matching sketchId (can be an array of sketchids)
@@ -149,6 +177,29 @@ export const sketchMetricPercent = (
 };
 
 /**
+ * Recursively groups metrics by ID in order of ids specified to create arbitrary nested hierarchy for fast lookup.
+ */
+export const nestMetrics = (
+  metrics: any[],
+  ids: string[]
+): Record<string, any> => {
+  const grouped = groupBy(metrics, (m) => m[ids[0]]);
+  if (ids.length === 1) {
+    return grouped;
+  }
+  return reduce(
+    grouped,
+    (result, groupMetrics, curId) => {
+      return {
+        ...result,
+        [curId]: nestMetrics(groupMetrics, ids.slice(1)),
+      };
+    },
+    {}
+  );
+};
+
+/**
  * Flattens class sketch metrics into array of objects, one for each sketch, where each object contains all class metrics values
  * @param classMetrics - class metric data with sketch
  * @param classes
@@ -187,6 +238,67 @@ export const flattenSketchAllClassNext = (
       ...classMetricAgg,
     });
   });
+  return sketchRows;
+};
+
+/**
+ * Returns aggregate sketch metric, containing all metric values using metricId property
+ * @param metrics - class metric data with sketch
+ * @param extraFlatProperty - optional id property to cross flatten with metric.  Properties will be keyed extraId_metricId
+ */
+export const flattenSketchMetric = (
+  metrics: ExtendedSketchMetric[],
+  flatProperty: MetricIdNames,
+  options: {
+    extraFlatProperty?: MetricIdNames;
+    // groupProperty?: "classId" | "groupId" | "reportId" | "geographyId",
+  } = {}
+): Record<string, MetricIdTypes>[] => {
+  const { extraFlatProperty } = options;
+  const flatMetrics = groupBy(metrics, (m) => {
+    if (m[flatProperty]) {
+      return m[flatProperty] as MetricIdTypes;
+    }
+    throw new Error(
+      `Metric is missing flatProperty ${flatProperty}: ${JSON.stringify(m)}`
+    );
+  });
+
+  const metricsBySketchId = groupBy(metrics, (metric) => metric.sketchId);
+
+  const sketchRows = Object.keys(metricsBySketchId).reduce<
+    Record<string, MetricIdTypes>[]
+  >((rowsSoFar, curSketchId) => {
+    const metricAgg = Object.keys(flatMetrics).reduce<
+      Record<string, string | number>
+    >((aggSoFar, curMetricId) => {
+      // GET ONE OR GET MULTIPLE BY GROUP
+      const curMetric = metricsBySketchId[curSketchId].find(
+        (m) => m.metricId === curMetricId
+      );
+
+      if (curMetric === undefined) return aggSoFar;
+      const prop = extraFlatProperty
+        ? `${curMetric[extraFlatProperty]}_${curMetric?.metricId}`
+        : curMetric?.metricId;
+
+      // RETURN ONE OR RETURN MULTIPLE BY SAY CLASS
+      return {
+        ...aggSoFar,
+        ...{
+          [prop]: curMetric?.value || 0,
+        },
+      };
+    }, {});
+
+    return [
+      ...rowsSoFar,
+      {
+        sketchId: curSketchId,
+        ...metricAgg,
+      },
+    ];
+  }, []);
   return sketchRows;
 };
 
@@ -480,7 +592,6 @@ export const flattenSketchAllClass = (
     const classMetricAgg = classes
       .sort(sortFn || classSortAlphaDisplay)
       .reduce<Record<string, number>>((aggSoFar, curClass) => {
-        // sketchMetrics keyBy id.  Avoid importing keyBy from gp package for client use
         const curClassName = curClass.classId;
         const sketchMetricsById = classMetrics[
           curClassName

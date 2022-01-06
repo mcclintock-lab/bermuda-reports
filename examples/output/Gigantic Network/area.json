@@ -1,61 +1,258 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 74441430177.46776,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 60595104877.38999,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 80684770294.54762,
-      "percValue": 0.1732409946745029,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 74441430177.46776,
-          "percValue": 0.15983570829857782
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 60595104877.38999,
-          "percValue": 0.13010579571637262
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 2564477386.490682,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 1874517003.482576,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "area",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 2564477386.49068,
-      "percValue": 0.9999926706652543,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 2564477386.490682,
-          "percValue": 0.9999926706652551
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 1874517003.482576,
-          "percValue": 0.7309494224416251
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "offshore": {
-      "name": "offshore",
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 71876952791.07402,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 58720269943.97343,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "area",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 78120292908.15387,
-      "percValue": 0.16866343290437016,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 0.15983570829857782,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 0.13010579571637262,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 0.1732409946745029,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 0.9999926706652551,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 0.7309494224416251,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "nearshore",
+      "metricId": "areaPerc",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 0.9999926706652543,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 0.15518392408872478,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 0.12677835606000568,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "size",
+      "classId": "offshore",
+      "metricId": "areaPerc",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 0.16866343290437016,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619834743ff3e57f7333d93e",
+      "name": "Gigantic Network",
+      "updatedAt": "2021-11-20T00:00:34.269Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 71876952791.07402,
-          "percValue": 0.15518392408872478
+          "updatedAt": "2021-11-20T00:00:34.365Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.82155643515347,
+          31.12299873603807,
+          -62.698478088902476,
+          33.86373197667135
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 58720269943.97343,
-          "percValue": 0.12677835606000568
-        }
-      ]
-    }
+          "updatedAt": "2021-11-19T23:59:16.315Z",
+          "createdAt": "2021-11-19T23:34:00.777Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -65.92172084860616,
+          31.426079167891885,
+          -63.197111473606924,
+          34.14549731338192
+        ],
+        "geometry": null
+      }
+    ]
   }
 }
