@@ -35,6 +35,10 @@ export const dataBucketUrl =
 export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
 
+export interface MetricResultBase {
+  metrics: ExtendedMetric[];
+}
+
 export interface MetricResult {
   metrics: ExtendedSketchMetric[];
   /** The sketch used, without geometry */
@@ -82,14 +86,6 @@ export interface ProtectionResult {
 }
 
 //// EXISTING PROTECTIONS ////
-
-export interface ExistingProtectionBaseResults {
-  byClass: ClassMetrics;
-}
-
-export interface ExistingProtectionResults {
-  byClass: ClassMetricsSketch;
-}
 
 // Single vector with multiple classes
 const existingProtectionBaseFilename = "existingProtections";

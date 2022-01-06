@@ -1,199 +1,181 @@
 {
-  "byClass": {
-    "Ferry Route": {
-      "name": "Ferry Route",
+  "metrics": [
+    {
+      "reportId": "existingProtections",
+      "classId": "Amenity Park",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
     },
-    "Shipping Lane": {
-      "name": "Shipping Lane",
+    {
+      "reportId": "existingProtections",
+      "classId": "CableZone",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
     },
-    "CableZone": {
-      "name": "CableZone",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "SpearfishEx": {
-      "name": "SpearfishEx",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "SeasonalPA": {
-      "name": "SeasonalPA",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "MPAExtendedClosure": {
-      "name": "MPAExtendedClosure",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Wreck": {
-      "name": "Wreck",
-      "value": 566852.1876707978,
-      "percValue": 0.06791764799783288,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 566852.1876707978,
-          "percValue": 0.06791764799783288
-        }
-      ]
-    },
-    "Reef": {
-      "name": "Reef",
-      "value": 566853.7221531128,
-      "percValue": 0.07824437036710301,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 566853.7221531128,
-          "percValue": 0.07824437036710301
-        }
-      ]
-    },
-    "Prohibited": {
-      "name": "Prohibited",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "NoNetFish": {
-      "name": "NoNetFish",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "NoLobsterFish": {
-      "name": "NoLobsterFish",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Amenity Park": {
-      "name": "Amenity Park",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Recreational Park": {
-      "name": "Recreational Park",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Nature Reserve": {
-      "name": "Nature Reserve",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "CoralPreserve": {
-      "name": "CoralPreserve",
+    {
+      "reportId": "existingProtections",
+      "classId": "CoralPreserve",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
       "value": 24097078.49856039,
-      "percValue": 0.18329947108237638,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Ferry Route",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "MPAExtendedClosure",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Nature Reserve",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "NoLobsterFish",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "NoNetFish",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Prohibited",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Recreational Park",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Reef",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 566853.7221531128,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "SeasonalPA",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Shipping Lane",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "SpearfishEx",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Wreck",
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
+      "value": 566852.1876707978,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615c6af3aac8c8285d50dc42",
+      "name": "mpa-no-desig",
+      "updatedAt": "2021-10-05T15:10:43.225Z",
+      "createdAt": "2021-10-05T15:10:43.225Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615c6af3aac8c8285d50dc42",
-          "name": "mpa-no-desig",
-          "value": 24097078.49856039,
-          "percValue": 0.18329947108237638
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"WORKS\",\"UNTREATED_WATER\",\"MINING_OIL_GAS\"]"
         }
       ]
-    }
+    },
+    "id": "1",
+    "bbox": [
+      -64.85801621527351,
+      32.41672484133282,
+      -64.77561875433597,
+      32.48046342491662
+    ],
+    "geometry": null
   }
 }
