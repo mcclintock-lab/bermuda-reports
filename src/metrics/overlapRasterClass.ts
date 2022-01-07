@@ -1,9 +1,19 @@
-import { Polygon, Sketch, Georaster } from "@seasketch/geoprocessing";
-import { ClassMetricsSketch, ClassMetricSketch, SketchMetric } from "./types";
+import {
+  Polygon,
+  Sketch,
+  SketchCollection,
+  Georaster,
+  toSketchArray,
+  isSketchCollection,
+} from "@seasketch/geoprocessing";
+import { ClassSketchMetric } from "./types";
 import flatten from "@turf/flatten";
-import { feature, featureCollection } from "@turf/helpers";
 import { clip } from "../util/clip";
 import area from "@turf/area";
+import {
+  removeSketchPolygonHoles,
+  removeSketchCollPolygonHoles,
+} from "../util/removeHoles";
 
 // @ts-ignore
 import geoblaze from "geoblaze";
@@ -13,42 +23,57 @@ import geoblaze from "geoblaze";
  * Includes overall and per sketch for each class
  */
 export async function overlapRasterClass(
+  metricId: string,
   /** raster to search */
   raster: Georaster,
-  config: {
+  /** single sketch or collection. */
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
+  options: {
     /** Map from numeric class ID to string */
     classIdMapping: Record<string, string>;
-    /** Map from class ID to precalculate class total in raster */
-    classIdToTotal: Record<string, number>;
-  },
-  /** Optional polygon sketches, if present will calculate overlap for the features  */
-  sketches?: Sketch<Polygon>[]
-): Promise<ClassMetricsSketch> {
-  if (!config.classIdMapping || !config.classIdToTotal)
+    /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them. Default to true */
+    removeSketchHoles?: boolean;
+  } = { classIdMapping: {}, removeSketchHoles: true }
+): Promise<ClassSketchMetric[]> {
+  if (!options.classIdMapping)
     throw new Error("Missing classIdMapping in config");
+  const sketches = toSketchArray(sketch);
+  const sketchArea = area(sketch);
+  const classIds = Object.keys(options.classIdMapping);
 
   // overallHistograms account for sketch overlap, sketchHistograms do not
   // histogram will exclude a class in result if not in raster, rather than return zero
   // histogram will be undefined if no raster cells are found within sketch feature
-  // ToDo: this function should normalize the result to include zeros, rather than downstream
   const { sketchHistograms, overallHistograms } = (() => {
     let overallHistograms: any[] = [];
     let sketchHistograms: any[] = [];
-    if (sketches) {
+    if (sketch) {
       // Get histogram for each feature
       // If feature overlap, remove with union
-      const sketchColl = featureCollection(sketches);
-      const sketchArea = area(sketchColl);
-      const featureUnion = clip(sketches, "union");
-      if (!featureUnion)
-        throw new Error("rasterClassStats - something went wrong");
-      const featureUnionArea = area(featureUnion);
-      const isOverlap = featureUnionArea < sketchArea;
+      // Optionally remove polygon holes (geoblaze polygon hole bug)
 
-      const remsketches = isOverlap ? flatten(featureUnion).features : sketches;
+      const holeSketches = (() => {
+        if (options.removeSketchHoles) {
+          if (isSketchCollection(sketch)) {
+            return removeSketchCollPolygonHoles(sketch);
+          } else {
+            return [removeSketchPolygonHoles(sketch)];
+          }
+        }
+        return sketches;
+      })();
+
+      const sketchUnion = clip(holeSketches, "union");
+      if (!sketchUnion)
+        throw new Error(`rasterClassStats ${metricId} - something went wrong`);
+      const sketchUnionArea = area(sketchUnion);
+      const isOverlap = sketchUnionArea < sketchArea;
+      const clippedSketches = isOverlap
+        ? flatten(sketchUnion).features
+        : sketches;
 
       // Get count of unique cell IDs in each feature
-      overallHistograms = remsketches.map((feature) => {
+      overallHistograms = clippedSketches.map((feature) => {
         return geoblaze.histogram(raster, feature, {
           scaleType: "nominal",
         })[0];
@@ -75,59 +100,34 @@ export async function overlapRasterClass(
     };
   })();
 
-  const classIds = Object.keys(config.classIdMapping);
-  // Initialize the counts by class to 0
-  let countByClass = classIds.reduce<Record<string, number>>(
-    (acc, classId) => ({
-      ...acc,
-      [classId]: 0,
-    }),
-    {}
-  );
+  let sketchMetrics: ClassSketchMetric[] = [];
 
-  // Sum the counts by class for each histogram
-  overallHistograms.forEach((overallHist) => {
-    if (!overallHist) {
-      return; // skip undefined result
-    }
-    classIds.forEach((classId) => {
-      if (classIds.includes(classId)) {
-        countByClass[classId] += overallHist[classId] || 0;
-      }
-    });
-  });
-
-  // Sum the counts by class for each histogram
-  // Initialize the sketch metrics by class to empty
-  let sketchMetricsByClass = classIds.reduce<Record<string, SketchMetric[]>>(
-    (acc, classId) => ({
-      ...acc,
-      [classId]: [],
-    }),
-    {}
-  );
   if (sketches) {
     sketchHistograms.forEach((sketchHist, index) => {
       if (!sketchHist) {
         // push zero result for sketch for all classes
         classIds.forEach((classId) =>
-          sketchMetricsByClass[classId].push({
-            id: sketches[index].properties.id,
-            name: sketches[index].properties.name,
+          sketchMetrics.push({
+            metricId,
+            classId: options.classIdMapping[classId],
+            sketchId: sketches[index].properties.id,
             value: 0,
-            percValue: 0,
+            extra: {
+              sketchName: sketches[index].properties.name,
+            },
           })
         );
       } else {
         classIds.forEach((classId) => {
           if (classIds.includes(classId)) {
-            sketchMetricsByClass[classId].push({
-              id: sketches[index].properties.id,
-              name: sketches[index].properties.name,
+            sketchMetrics.push({
+              metricId,
+              classId: options.classIdMapping[classId],
+              sketchId: sketches[index].properties.id,
               value: sketchHist[classId] || 0,
-              percValue: sketchHist[classId]
-                ? sketchHist[classId] / config.classIdToTotal[classId]
-                : 0,
+              extra: {
+                sketchName: sketches[index].properties.name,
+              },
             });
           }
         });
@@ -135,15 +135,28 @@ export async function overlapRasterClass(
     });
   }
 
-  return Object.keys(countByClass).reduce((metricsSoFar, classId) => {
-    return {
-      ...metricsSoFar,
-      [config.classIdMapping[classId]]: {
-        name: config.classIdMapping[classId],
-        value: countByClass[classId],
-        percValue: countByClass[classId] / config.classIdToTotal[classId],
-        sketchMetrics: sketchMetricsByClass[classId],
-      },
-    };
-  }, {});
+  // Sum the counts by class for each histogram
+  if (isSketchCollection(sketch)) {
+    overallHistograms.forEach((overallHist) => {
+      if (!overallHist) {
+        return; // skip undefined result
+      }
+      classIds.forEach((classId) => {
+        if (classIds.includes(classId)) {
+          sketchMetrics.push({
+            metricId,
+            classId: options.classIdMapping[classId],
+            sketchId: sketch.properties.id,
+            value: overallHist[classId] || 0,
+            extra: {
+              sketchName: sketch.properties.name,
+              isCollection: true,
+            },
+          });
+        }
+      });
+    });
+  }
+
+  return sketchMetrics;
 }
