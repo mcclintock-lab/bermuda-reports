@@ -7,21 +7,23 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { RenewableResult } from "../_config";
+import config, { MetricResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRasterNext";
 import { ExtendedSketchMetric } from "../metrics/types";
 
-const CLASSES = config.renewable.classes;
+const CONFIG = config.renewable;
+const REPORT_ID = "renewable";
+const METRIC_ID = "areaOverlap";
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<RenewableResult> {
+): Promise<MetricResult> {
   const box = sketch.bbox || bbox(sketch);
 
   // Calc metrics for each class and merge the result
   const metrics: ExtendedSketchMetric[] = (
     await Promise.all(
-      CLASSES.map(async (curClass) => {
+      CONFIG.classes.map(async (curClass) => {
         const raster = await loadCogWindow(
           `${config.dataBucketUrl}${curClass.filename}`,
           {
@@ -29,10 +31,10 @@ export async function renewable(
             noDataValue: curClass.noDataValue,
           }
         );
-        const overlapResult = await overlapRaster("renewable", raster, sketch);
+        const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
         return overlapResult.map(
           (metrics): ExtendedSketchMetric => ({
-            reportId: "renewable",
+            reportId: REPORT_ID,
             classId: curClass.classId,
             ...metrics,
           })

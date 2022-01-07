@@ -1,121 +1,121 @@
 {
-  "byClass": {
-    "Aquaculture": {
-      "name": "Aquaculture",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Boating": {
-      "name": "Boating",
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "CommercialFishing": {
-      "name": "CommercialFishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "PassiveRecreation_Conservation": {
-      "name": "PassiveRecreation_Conservation",
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Recreational Fishing": {
-      "name": "Recreational Fishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Shipping": {
-      "name": "Shipping",
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Swimming_Snorkeling_Diving": {
-      "name": "Swimming_Snorkeling_Diving",
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Tourism": {
-      "name": "Tourism",
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Utilities": {
-      "name": "Utilities",
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-no-land-eez-overlap",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

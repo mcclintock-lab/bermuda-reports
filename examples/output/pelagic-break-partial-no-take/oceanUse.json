@@ -1,121 +1,121 @@
 {
-  "byClass": {
-    "Aquaculture": {
-      "name": "Aquaculture",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 133.64044189453125,
-      "percValue": 0.008925666834411036,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 133.64044189453125,
-          "percValue": 0.008925666834411036
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Boating": {
-      "name": "Boating",
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 3802.0274279229343,
-      "percValue": 0.008834815028270401,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 3802.0274279229343,
-          "percValue": 0.008834815028270401
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "CommercialFishing": {
-      "name": "CommercialFishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 3294.543529510498,
-      "percValue": 0.011119404254918067,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 3294.543529510498,
-          "percValue": 0.011119404254918067
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "PassiveRecreation_Conservation": {
-      "name": "PassiveRecreation_Conservation",
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 9775.465261237696,
-      "percValue": 0.04234537424649655,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 9775.465261237696,
-          "percValue": 0.04234537424649655
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Recreational Fishing": {
-      "name": "Recreational Fishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 3924.9022018164396,
-      "percValue": 0.016987185953580994,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 3924.9022018164396,
-          "percValue": 0.016987185953580994
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Shipping": {
-      "name": "Shipping",
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 900.2259992361069,
-      "percValue": 0.06095694896447332,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 900.2259992361069,
-          "percValue": 0.06095694896447332
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Swimming_Snorkeling_Diving": {
-      "name": "Swimming_Snorkeling_Diving",
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 26660.67877505347,
-      "percValue": 0.043438305681587616,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 26660.67877505347,
-          "percValue": 0.043438305681587616
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Tourism": {
-      "name": "Tourism",
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 348.446845471859,
-      "percValue": 0.017244084519852113,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 116.12503337860107,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 348.446845471859,
-          "percValue": 0.017244084519852113
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
         }
       ]
     },
-    "Utilities": {
-      "name": "Utilities",
-      "value": 116.12503337860107,
-      "percValue": 0.007666570186681863,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 116.12503337860107,
-          "percValue": 0.007666570186681863
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

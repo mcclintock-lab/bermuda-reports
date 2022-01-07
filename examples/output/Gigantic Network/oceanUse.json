@@ -1,175 +1,351 @@
 {
-  "byClass": {
-    "Aquaculture": {
-      "name": "Aquaculture",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 14972.600296854973,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 14972.600296854973,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 1642.6003056913614,
-          "percValue": 0.10970708314683277
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Boating": {
-      "name": "Boating",
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 1642.6003056913614,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 14972.600296854973,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 426925.62420272315,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 43763.55872530374,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 427039.62420813786,
-      "percValue": 0.9923169048998967,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 426925.62420272315,
-          "percValue": 0.9920520017711965
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 43763.55872530374,
-          "percValue": 0.1016938866556606
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "CommercialFishing": {
-      "name": "CommercialFishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 181286.65499873646,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 125767.89007508755,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 183984.78191943094,
-      "percValue": 0.6209665006973083,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 181286.65499873646,
-          "percValue": 0.6118600603988136
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 125767.89007508755,
-          "percValue": 0.42447883887598215
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "PassiveRecreation_Conservation": {
-      "name": "PassiveRecreation_Conservation",
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 230850.84109385265,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 230850.84109385265,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 48486.17270811414,
-          "percValue": 0.21003247152303872
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Recreational Fishing": {
-      "name": "Recreational Fishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 48486.17270811414,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 230850.84109385265,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 230792.51365064643,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 103463.48065350112,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
       "value": 230817.5786500862,
-      "percValue": 0.9989907845524696,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 230792.51365064643,
-          "percValue": 0.9988823018987586
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 103463.48065350112,
-          "percValue": 0.4477954595791864
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "Shipping": {
-      "name": "Shipping",
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 14768.226010799408,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 14768.226010799408,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 758.891068905592,
-          "percValue": 0.051386745324092785
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Swimming_Snorkeling_Diving": {
-      "name": "Swimming_Snorkeling_Diving",
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 758.891068905592,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 14768.226010799408,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 613759.638105642,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 613759.638105642,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 113225.84537600353,
-          "percValue": 0.18447913213301717
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Tourism": {
-      "name": "Tourism",
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 113225.84537600353,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 613759.638105642,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 20206.746555360034,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 20206.746555360034,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 1059.8661341387779,
-          "percValue": 0.05245110246892458
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Utilities": {
-      "name": "Utilities",
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 1059.8661341387779,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 20206.746555360034,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 15146.934098422527,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 3536.5324890613556,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 15146.934098422527,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619834743ff3e57f7333d93e",
+      "name": "Gigantic Network",
+      "updatedAt": "2021-11-20T00:00:34.269Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 15146.934098422527,
-          "percValue": 1
+          "updatedAt": "2021-11-20T00:00:34.365Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.82155643515347,
+          31.12299873603807,
+          -62.698478088902476,
+          33.86373197667135
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 3536.5324890613556,
-          "percValue": 0.23348173736556144
-        }
-      ]
-    }
+          "updatedAt": "2021-11-19T23:59:16.315Z",
+          "createdAt": "2021-11-19T23:34:00.777Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -65.92172084860616,
+          31.426079167891885,
+          -63.197111473606924,
+          34.14549731338192
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

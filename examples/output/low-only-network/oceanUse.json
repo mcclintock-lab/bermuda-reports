@@ -1,121 +1,234 @@
 {
-  "byClass": {
-    "Aquaculture": {
-      "name": "Aquaculture",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Boating": {
-      "name": "Boating",
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 759.3441792726517,
-      "percValue": 0.001764496835924367,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 759.3441792726517,
-          "percValue": 0.001764496835924367
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "CommercialFishing": {
-      "name": "CommercialFishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 759.3441792726517,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 1995.586995124817,
-      "percValue": 0.006735299845301176,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 1995.586995124817,
-          "percValue": 0.006735299845301176
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "PassiveRecreation_Conservation": {
-      "name": "PassiveRecreation_Conservation",
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 1995.586995124817,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 2003.5355859398842,
-      "percValue": 0.00867891828527211,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 2003.5355859398842,
-          "percValue": 0.00867891828527211
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Recreational Fishing": {
-      "name": "Recreational Fishing",
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 2003.5355859398842,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 1345.2165312767029,
-      "percValue": 0.005822168856603086,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 1345.2165312767029,
-          "percValue": 0.005822168856603086
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Shipping": {
-      "name": "Shipping",
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 1345.2165312767029,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 0.9337697625160217,
-      "percValue": 0.00006322829579078717,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0.9337697625160217,
-          "percValue": 0.00006322829579078717
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Swimming_Snorkeling_Diving": {
-      "name": "Swimming_Snorkeling_Diving",
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0.9337697625160217,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 353.0757955610752,
-      "percValue": 0.0005752672115273615,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 353.0757955610752,
-          "percValue": 0.0005752672115273615
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Tourism": {
-      "name": "Tourism",
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 353.0757955610752,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Utilities": {
-      "name": "Utilities",
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 204.9499797821045,
-      "percValue": 0.013530789693172887,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "low-1"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 204.9499797821045,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "61685a19b503392035ed519c",
+      "name": "low-only-network",
+      "updatedAt": "2021-10-19T23:05:03.182Z",
+      "createdAt": "2021-10-14T16:26:01.633Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
-          "value": 204.9499797821045,
-          "percValue": 0.013530789693172887
-        }
-      ]
-    }
+          "updatedAt": "2021-10-14T16:26:05.166Z",
+          "createdAt": "2021-10-08T00:06:24.521Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\",\"UNTREATED_WATER\",\"HABITATION\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.67536851019531,
+          32.39843594260134,
+          -64.6108238324609,
+          32.42857863764303
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

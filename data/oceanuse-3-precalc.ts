@@ -10,36 +10,38 @@ import geoblaze from "geoblaze";
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
 import { loadCogWindow } from "../src/datasources/cog";
-import { strict as assert } from "assert";
+import { ExtendedMetric } from "../src/metrics/types";
 
 const CLASSES = config.oceanUse.classes;
 const DATASET = "oceanUse";
+const REPORT_ID = "oceanUse";
+const METRIC_ID = "valueOverlap";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-  const totals = await Promise.all(
+  const metrics: ExtendedMetric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {});
-      const sum = geoblaze.sum(raster)[0] as number;
-      return sum;
+      const value = geoblaze.sum(raster)[0] as number;
+      return {
+        reportId: REPORT_ID,
+        classId: curClass.classId,
+        metricId: METRIC_ID,
+        value,
+      };
     })
   );
 
-  const totalMap = totals.reduce(
-    (totalMap, total, index) => ({
-      ...totalMap,
-      [CLASSES[index].classId]: total,
-    }),
-    {}
-  );
+  const result = {
+    metrics,
+  };
 
-  fs.writeFile(DEST_PATH, JSON.stringify(totalMap, null, 2), (err) =>
+  fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
     err
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(totalMap).length === CLASSES.length);
 }
 
 main();

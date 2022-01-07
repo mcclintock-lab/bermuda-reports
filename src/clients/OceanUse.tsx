@@ -5,10 +5,18 @@ import {
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
-import config, { OceanUseResults } from "../_config";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
-import { ClassTable } from "../components/ClassTable";
+import config, { MetricResult, MetricResultBase } from "../_config";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
+import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
+
+import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+const precalcTotals = oceanUseTotals as MetricResultBase;
 
 const CONFIG = config.oceanUse;
 
@@ -21,7 +29,13 @@ const OceanUse = () => {
         functionName="oceanUse"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: OceanUseResults) => {
+        {(data: MetricResult) => {
+          // Single sketch or collection top-level
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            [data.sketch.properties.id]
+          );
+
           return (
             <>
               <p>
@@ -57,7 +71,12 @@ const OceanUse = () => {
                 </p>
               </Collapse>
 
-              {genOverallUseTable(data)}
+              <ClassTable
+                titleText="Sector"
+                percText="% Value In Plan"
+                rows={parentMetrics}
+                classes={CONFIG.classes}
+              />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
               )}
@@ -69,20 +88,19 @@ const OceanUse = () => {
   );
 };
 
-const genOverallUseTable = (data: OceanUseResults) => {
-  return (
-    <ClassTable
-      titleText="Sector"
-      percText="% Value In Plan"
-      rows={Object.values(data.byClass)}
-      classes={CONFIG.classes}
-    />
+const genSketchTable = (data: MetricResult) => {
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(data.metrics, childSketchIds),
+    precalcTotals.metrics
   );
-};
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    CONFIG.classes,
+    childSketches
+  );
 
-const genSketchTable = (data: OceanUseResults) => {
-  // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.byClass, CONFIG.classes);
   return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
 };
 

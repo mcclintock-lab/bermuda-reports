@@ -455,16 +455,6 @@ export const reefIndex: DataGroup = {
 
 //// RENEWABLE ENERGY ////
 
-export interface RenewableBaseResult {
-  metrics: ExtendedMetric[];
-}
-
-export interface RenewableResult {
-  metrics: ExtendedSketchMetric[];
-  /** The sketch used, without geometry */
-  sketch: NullSketch | NullSketchCollection;
-}
-
 export const renewableClasses: DataClass[] = [
   {
     baseFilename: "wind_fixed1",
@@ -575,10 +565,6 @@ export const habitatNursery: DataGroup = {
 };
 
 //// OCEAN USE ////
-
-export interface OceanUseResults {
-  byClass: ClassMetricsSketch;
-}
 
 const oceanUseClasses: DataClass[] = [
   {

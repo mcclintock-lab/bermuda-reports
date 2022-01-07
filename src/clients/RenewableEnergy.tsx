@@ -9,19 +9,18 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import config, { RenewableResult, RenewableBaseResult } from "../_config";
+import config, { MetricResult, MetricResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
 import {
   flattenSketchAllClassNext,
   metricsWithSketchId,
-  getSketchCollectionChildIds,
 } from "../metrics/clientMetrics";
 import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
-const precalcTotals = renewableTotals as RenewableBaseResult;
+const precalcTotals = renewableTotals as MetricResultBase;
 
 const CONFIG = config.renewable;
 
@@ -34,15 +33,12 @@ const RenewableEnergy = () => {
         functionName="renewable"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: RenewableResult) => {
-          // Derive percent metrics from raw area overlap metrics
-          const percMetrics = sketchMetricPercent(
-            data.metrics,
-            precalcTotals.metrics
+        {(data: MetricResult) => {
+          // Single sketch or collection top-level
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            [data.sketch.properties.id]
           );
-          const collectionMetrics = metricsWithSketchId(percMetrics, [
-            data.sketch.properties.id,
-          ]);
 
           return (
             <>
@@ -74,12 +70,12 @@ const RenewableEnergy = () => {
               </Collapse>
               <ClassTable
                 titleText="Type"
-                rows={Object.values(collectionMetrics)}
+                rows={Object.values(parentMetrics)}
                 classes={CONFIG.classes}
               />
               {isCollection &&
                 isNullSketchCollection(data.sketch) &&
-                genCollection(percMetrics, data.sketch)}
+                genSketchTable(data)}
             </>
           );
         }}
@@ -88,18 +84,19 @@ const RenewableEnergy = () => {
   );
 };
 
-const genCollection = (
-  metrics: RenewableResult["metrics"],
-  sketch: NullSketchCollection
-) => {
-  const subSketches = toNullSketchArray(sketch);
-  const subSketchIds = getSketchCollectionChildIds(sketch);
-  const subSketchMetrics = metricsWithSketchId(metrics, subSketchIds);
-  const sketchRows = flattenSketchAllClassNext(
-    subSketchMetrics,
-    CONFIG.classes,
-    subSketches
+const genSketchTable = (data: MetricResult) => {
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(data.metrics, childSketchIds),
+    precalcTotals.metrics
   );
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    CONFIG.classes,
+    childSketches
+  );
+
   return (
     <Collapse title="Show by MPA">
       <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />

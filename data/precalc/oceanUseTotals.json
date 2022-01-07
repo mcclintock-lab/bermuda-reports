@@ -1,11 +1,58 @@
 {
-  "Aquaculture": 14972.600296854973,
-  "Boating": 430346.0135562408,
-  "CommercialFishing": 296287.77351568406,
-  "PassiveRecreation_Conservation": 230850.84109385265,
-  "Recreational Fishing": 231050.7586448742,
-  "Shipping": 14768.226010799408,
-  "Swimming_Snorkeling_Diving": 613759.638105642,
-  "Tourism": 20206.746555360034,
-  "Utilities": 15146.934098422527
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Aquaculture",
+      "metricId": "valueOverlap",
+      "value": 14972.600296854973
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Boating",
+      "metricId": "valueOverlap",
+      "value": 430346.0135562408
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "CommercialFishing",
+      "metricId": "valueOverlap",
+      "value": 296287.77351568406
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "PassiveRecreation_Conservation",
+      "metricId": "valueOverlap",
+      "value": 230850.84109385265
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Recreational Fishing",
+      "metricId": "valueOverlap",
+      "value": 231050.7586448742
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Shipping",
+      "metricId": "valueOverlap",
+      "value": 14768.226010799408
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Swimming_Snorkeling_Diving",
+      "metricId": "valueOverlap",
+      "value": 613759.638105642
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Tourism",
+      "metricId": "valueOverlap",
+      "value": 20206.746555360034
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Utilities",
+      "metricId": "valueOverlap",
+      "value": 15146.934098422527
+    }
+  ]
 }

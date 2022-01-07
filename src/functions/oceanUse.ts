@@ -6,43 +6,52 @@ import {
   Georaster,
   loadCogWindow,
   keyBy,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { overlapRaster } from "../metrics/overlapRaster";
-import config, { OceanUseResults } from "../_config";
-
-import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
+import { overlapRaster } from "../metrics/overlapRasterNext";
+import { ExtendedSketchMetric } from "../metrics/types";
+import config, { MetricResult } from "../_config";
 
 // Define at module level for potential cache and reuse by Lambda
-const CLASSES = config.oceanUse.classes;
+const CONFIG = config.oceanUse;
+const REPORT_ID = "oceanUse";
+const METRIC_ID = "valueOverlap";
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<OceanUseResults> {
+): Promise<MetricResult> {
   const box = sketch.bbox || bbox(sketch);
-  let rasters: Georaster[];
-
-  const metrics = await Promise.all(
-    CLASSES.map(async (curClass) => {
-      // start raster load and move on in loop while awaiting finish
-      const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${curClass.filename}`,
-        {
-          windowBox: box,
-        }
-      );
-      // start analysis as soon as source load done
-      return overlapRaster(
-        raster,
-        curClass.classId,
-        (oceanUseTotals as Record<string, number>)[curClass.classId],
-        sketch
-      );
-    })
+  const metrics: ExtendedSketchMetric[] = (
+    await Promise.all(
+      CONFIG.classes.map(async (curClass) => {
+        // start raster load and move on in loop while awaiting finish
+        const raster = await loadCogWindow(
+          `${config.dataBucketUrl}${curClass.filename}`,
+          {
+            windowBox: box,
+          }
+        );
+        // start analysis as soon as source load done
+        const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
+        return overlapResult.map(
+          (metrics): ExtendedSketchMetric => ({
+            reportId: REPORT_ID,
+            classId: curClass.classId,
+            ...metrics,
+          })
+        );
+      })
+    )
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
   return {
-    byClass: keyBy(metrics, (metric) => metric.name),
+    metrics,
+    sketch: toNullSketch(sketch, true),
   };
 }
 
