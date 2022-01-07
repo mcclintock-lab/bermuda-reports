@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { MetricResult } from "../_config";
-import { overlapRaster } from "../metrics/overlapRasterNext";
+import { overlapRaster } from "../metrics/overlapRaster";
 import { ExtendedSketchMetric } from "../metrics/types";
 
 const CONFIG = config.renewable;

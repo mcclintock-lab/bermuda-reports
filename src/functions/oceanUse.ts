@@ -7,7 +7,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { overlapRaster } from "../metrics/overlapRasterNext";
+import { overlapRaster } from "../metrics/overlapRaster";
 import { ExtendedSketchMetric } from "../metrics/types";
 import config, { MetricResult } from "../_config";
 

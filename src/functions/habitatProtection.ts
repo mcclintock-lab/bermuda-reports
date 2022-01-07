@@ -11,7 +11,7 @@ import {
 import bbox from "@turf/bbox";
 import config, { HabitatResult } from "../_config";
 import { overlapRasterClass } from "../metrics/overlapRasterClass";
-import { overlapRaster } from "../metrics/overlapRasterNext";
+import { overlapRaster } from "../metrics/overlapRaster";
 import { metricSort } from "../metrics/metrics";
 
 import { groupClassIdMapping } from "../metrics/classId";

@@ -7,20 +7,14 @@ import {
 import { featureEach } from "@turf/meta";
 import { clip } from "../util/clip";
 import area from "@turf/area";
+import {
+  removeSketchPolygonHoles,
+  removeSketchCollPolygonHoles,
+} from "../util/removeHoles";
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
-import { ClassMetricSketch, SketchMetric } from "./types";
-
-function removeSketchPolygonHoles(sketch: Sketch<Polygon>) {
-  const newSk: Sketch<Polygon> = { ...sketch };
-  newSk.geometry.coordinates = [sketch.geometry.coordinates[0]];
-  return newSk;
-}
-
-function removeSketchCollPolygonHoles(sketchColl: SketchCollection<Polygon>) {
-  return sketchColl.features.map((sk) => removeSketchPolygonHoles(sk));
-}
+import { SimpleSketchMetric } from "./types";
 
 /**
  * Returns sum metric for raster.  If sketch parameter provided, sum overlap is also calculated for each sketch polygon.
@@ -29,61 +23,72 @@ function removeSketchCollPolygonHoles(sketchColl: SketchCollection<Polygon>) {
  * Make sure that raster data is already clipped to land for example, to ensure it does not overcount.
  */
 export async function overlapRaster(
+  metricId: string,
   raster: Georaster,
-  /** name/identifier for the raster */
-  name: string,
-  /** total sum value of raster, precalculated to avoid loading whole raster */
-  totalValue: number,
   /** single sketch or collection. */
-  sketch?: Sketch<Polygon> | SketchCollection<Polygon>,
+  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   options: {
-    /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them */
+    /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them.  Default to true */
     removeSketchHoles: boolean;
   } = { removeSketchHoles: true }
-): Promise<ClassMetricSketch> {
+): Promise<SimpleSketchMetric[]> {
   let isOverlap = false;
   let sumValue = 0;
-  let sketchMetrics: SketchMetric[] = [];
-  if (sketch) {
-    // If sketch overlap, calculate overall metric values from dissolve
-    if (isSketchCollection(sketch)) {
-      const sketchArea = area(sketch);
-      const remSketches = options.removeSketchHoles
-        ? removeSketchCollPolygonHoles(sketch)
-        : sketch.features;
-      const sketchUnion = clip(remSketches, "union");
-      if (!sketchUnion) throw new Error("overlapRaster - something went wrong");
-      const sketchUnionArea = area(sketchUnion);
-      isOverlap = sketchUnionArea < sketchArea;
-      if (isOverlap) {
-        featureEach(sketchUnion, (feat) => {
-          sumValue += geoblaze.sum(raster, feat)[0];
-        });
-      }
-    }
 
-    featureEach(sketch, (feat) => {
-      const remSketch = options.removeSketchHoles
-        ? removeSketchPolygonHoles(feat)
-        : feat;
-      const sketchValue = geoblaze.sum(raster, remSketch)[0];
-
-      if (!isOverlap) {
-        sumValue += sketchValue;
-      }
-      sketchMetrics.push({
-        id: feat.properties.id,
-        name: feat.properties.name,
-        value: sketchValue,
-        percValue: sketchValue / totalValue,
+  // If sketch collection and they overlap, accumulate collection total value using union
+  if (isSketchCollection(sketch)) {
+    const sketchArea = area(sketch);
+    // Remove polygon holes (geoblaze polygon hole bug)
+    const remSketches = options.removeSketchHoles
+      ? removeSketchCollPolygonHoles(sketch)
+      : sketch.features;
+    // Remove overlap
+    const sketchUnion = clip(remSketches, "union");
+    if (!sketchUnion) throw new Error("overlapRaster - something went wrong");
+    const sketchUnionArea = area(sketchUnion);
+    // If there was overlap, use the union for accumulating sumValue
+    isOverlap = sketchUnionArea < sketchArea;
+    if (isOverlap) {
+      featureEach(sketchUnion, (feat) => {
+        sumValue += geoblaze.sum(raster, feat)[0];
       });
+    }
+  }
+
+  // Get raster sum for each feature
+  // If there was no overlap found above, accumulate collection sumValue here instead
+  let sketchMetrics: SimpleSketchMetric[] = [];
+  featureEach(sketch, (feat) => {
+    const remSketch = options.removeSketchHoles
+      ? removeSketchPolygonHoles(feat)
+      : feat;
+    const sketchValue = geoblaze.sum(raster, remSketch)[0];
+
+    if (!isOverlap) {
+      sumValue += sketchValue;
+    }
+    sketchMetrics.push({
+      metricId,
+      sketchId: feat.properties.id,
+      value: sketchValue,
+      extra: {
+        sketchName: feat.properties.name,
+      },
+    });
+  });
+
+  if (isSketchCollection(sketch)) {
+    // Push collection with accumulated sumValue
+    sketchMetrics.push({
+      metricId,
+      sketchId: sketch.properties.id,
+      value: sumValue,
+      extra: {
+        sketchName: sketch.properties.name,
+        isCollection: true,
+      },
     });
   }
 
-  return {
-    name,
-    value: sumValue,
-    percValue: sumValue / totalValue,
-    sketchMetrics,
-  };
+  return sketchMetrics;
 }
