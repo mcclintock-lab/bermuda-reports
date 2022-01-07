@@ -181,7 +181,7 @@ describe("Area stats tool", () => {
       metrics,
       (m) => m.sketchId === "CCCC" && m.metricId === "test"
     );
-    expect(collAreaMetric.value).toBeCloseTo(24779025263.69385); // Expect about half, but not exactly same as inside
+    expect(collAreaMetric.value).toBeCloseTo(24748835838.326283); // Expect about half, but not exactly same as inside
 
     const collAreaPercMetric = firstMatchingMetric(
       metrics,
