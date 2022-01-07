@@ -4,11 +4,19 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import config, { ReefIndexResults } from "../_config";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
+import config, { MetricResult, MetricResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTable";
+import { ClassTable } from "../components/ClassTableNext";
+
+import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
+const precalcTotals = reefIndexTotals as MetricResultBase;
 
 const CONFIG = config.reefIndex;
 
@@ -21,8 +29,12 @@ const SpeciesProtection = () => {
         functionName="reefIndex"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: ReefIndexResults) => {
-          const results = Object.values(data.reefIndex);
+        {(data: MetricResult) => {
+          // Single sketch or collection top-level
+          const topMetrics = metricsWithSketchId(
+            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            [data.sketch.properties.id]
+          );
           return (
             <>
               <p>
@@ -54,7 +66,7 @@ const SpeciesProtection = () => {
               </Collapse>
               <ClassTable
                 titleText="Indicator"
-                rows={results}
+                rows={topMetrics}
                 classes={CONFIG.classes}
                 showGoal
               />
@@ -69,9 +81,19 @@ const SpeciesProtection = () => {
   );
 };
 
-const genSketchTable = (data: ReefIndexResults) => {
-  // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.reefIndex, CONFIG.classes);
+const genSketchTable = (data: MetricResult) => {
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(data.metrics, childSketchIds),
+    precalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    CONFIG.classes,
+    childSketches
+  );
+
   return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
 };
 

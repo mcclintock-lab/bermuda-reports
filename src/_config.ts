@@ -365,10 +365,6 @@ export const offshore: DataGroup = {
 
 //// REEF INDEX ////
 
-export interface ReefIndexResults {
-  reefIndex: ClassMetricsSketch;
-}
-
 export const reefIndexClasses: DataClass[] = [
   {
     baseFilename: "wgs84_Coral cover1",

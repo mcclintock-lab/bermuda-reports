@@ -4,6 +4,7 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import { Collapse } from "../components/Collapse";
 import config, { MetricResult, MetricResultBase } from "../_config";
 import {
@@ -15,7 +16,6 @@ import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
 
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 const precalcTotals = oceanUseTotals as MetricResultBase;
 
 const CONFIG = config.oceanUse;

@@ -1,11 +1,58 @@
 {
-  "Coral Cover": 219142.73238153942,
-  "Coral Diversity": 231924.1468730762,
-  "Coral Recruit Density": 73405.34650501853,
-  "Rugosity": 72297.22302708979,
-  "Fish Diversity BRUV": 194649.20529744774,
-  "Fish Density": 253383.98754745774,
-  "Fish Diversity BREAM": 333552.74660776486,
-  "Fish Recruit Density": 75390.81803614809,
-  "Seagrass": 2892.556873383932
+  "metrics": [
+    {
+      "reportId": "reefIndex",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "value": 219142.73238153942
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "value": 231924.1468730762
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "value": 73405.34650501853
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "value": 72297.22302708979
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "value": 194649.20529744774
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "value": 253383.98754745774
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "value": 333552.74660776486
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "value": 75390.81803614809
+    },
+    {
+      "reportId": "reefIndex",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "value": 2892.556873383932
+    }
+  ]
 }

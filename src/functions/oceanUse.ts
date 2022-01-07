@@ -3,9 +3,7 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  Georaster,
   loadCogWindow,
-  keyBy,
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
@@ -13,7 +11,6 @@ import { overlapRaster } from "../metrics/overlapRasterNext";
 import { ExtendedSketchMetric } from "../metrics/types";
 import config, { MetricResult } from "../_config";
 
-// Define at module level for potential cache and reuse by Lambda
 const CONFIG = config.oceanUse;
 const REPORT_ID = "oceanUse";
 const METRIC_ID = "valueOverlap";

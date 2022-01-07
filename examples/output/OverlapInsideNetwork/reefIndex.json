@@ -1,175 +1,351 @@
 {
-  "reefIndex": {
-    "Coral Cover": {
-      "name": "Coral Cover",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 16841.244941592216,
-      "percValue": 0.07685057477640049,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 16841.244941592216,
-          "percValue": 0.07685057477640049
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 13837.836255073547,
-          "percValue": 0.0631453122113177
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Coral Diversity": {
-      "name": "Coral Diversity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 13837.836255073547,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 16841.244941592216,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 27326.654546380043,
-      "percValue": 0.11782582760274178,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 27326.654546380043,
-          "percValue": 0.11782582760274178
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 21366.952484369278,
-          "percValue": 0.09212905500548266
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Coral Recruit Density": {
-      "name": "Coral Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 21366.952484369278,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 27326.654546380043,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 7388.662909865379,
-      "percValue": 0.10065565059842385,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 7388.662909865379,
-          "percValue": 0.10065565059842385
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 6305.962461590767,
-          "percValue": 0.08590603766388658
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Rugosity": {
-      "name": "Rugosity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 6305.962461590767,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 7388.662909865379,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 8686.759731411934,
-      "percValue": 0.12015343560508546,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 8686.759731411934,
-          "percValue": 0.12015343560508546
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 7300.652177453041,
-          "percValue": 0.10098108712581512
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Fish Diversity BRUV": {
-      "name": "Fish Diversity BRUV",
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 7300.652177453041,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 8686.759731411934,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 11151.273458048701,
-      "percValue": 0.05728907775918322,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 11151.273458048701,
-          "percValue": 0.05728907775918322
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 7956.130954429507,
-          "percValue": 0.04087420209227964
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Fish Density": {
-      "name": "Fish Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 7956.130954429507,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 11151.273458048701,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 8245.377106845379,
-      "percValue": 0.03254103460385813,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 8245.377106845379,
-          "percValue": 0.03254103460385813
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 6834.137480556965,
-          "percValue": 0.026971465508557283
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Fish Diversity BREAM": {
-      "name": "Fish Diversity BREAM",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 6834.137480556965,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 8245.377106845379,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 9371.055747032166,
-      "percValue": 0.028094674207710495,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 9371.055747032166,
-          "percValue": 0.028094674207710495
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 6641.326219558716,
-          "percValue": 0.019910872529460714
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Fish Recruit Density": {
-      "name": "Fish Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 6641.326219558716,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 9371.055747032166,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 916.3589556850493,
-      "percValue": 0.012154781968882167,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 916.3589556850493,
-          "percValue": 0.012154781968882167
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 722.5729753151536,
-          "percValue": 0.00958436311128362
-        }
-      ]
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
-    "Seagrass": {
-      "name": "Seagrass",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 722.5729753151536,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 916.3589556850493,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 34.2000013589859,
-      "percValue": 0.011823449928912254,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 30.000001192092896,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 34.2000013589859,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619a8e39a717c5a0742cafb8",
+      "name": "OverlapInsideNetwork",
+      "updatedAt": "2021-11-30T00:27:09.918Z",
+      "createdAt": "2021-10-28T17:43:51.029Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 34.2000013589859,
-          "percValue": 0.011823449928912254
+          "updatedAt": "2021-11-21T18:26:41.435Z",
+          "createdAt": "2021-10-28T17:34:24.300Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -64.69359098486977,
+          32.44980942063518,
+          -63.603991852331994,
+          33.55643352377083
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 30.000001192092896,
-          "percValue": 0.01037144730606338
-        }
-      ]
-    }
+          "updatedAt": "2021-11-30T00:27:09.924Z",
+          "createdAt": "2021-11-03T14:28:36.389Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.68357919967069,
+          32.45363443027919,
+          -64.53976093344767,
+          32.944735150647226
+        ],
+        "geometry": null
+      }
+    ]
   }
 }
