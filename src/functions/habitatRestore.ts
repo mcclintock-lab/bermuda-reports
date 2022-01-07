@@ -6,50 +6,54 @@ import {
   Polygon,
   fgbFetchAll,
   toSketchArray,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, {
-  HabitatRestoreBaseResults,
-  HabitatRestoreResults,
-} from "../_config";
-import { ClassMetricsSketch } from "../metrics/types";
+import config, { MetricResult } from "../_config";
+import { ExtendedSketchMetric } from "../metrics/types";
+import { overlapFeatures } from "../metrics/overlapFeaturesNext";
+import { metricSort } from "../metrics/metrics";
 
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
-
-const precalcTotals = habitatRestoreTotals as HabitatRestoreBaseResults;
-const CLASSES = config.habitatRestore.classes;
+const CONFIG = config.habitatRestore;
+const REPORT_ID = "existingProtections";
+const METRIC_ID = "areaOverlap";
 
 export async function habitatRestore(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<HabitatRestoreResults> {
-  const sketches = toSketchArray(sketch);
+): Promise<MetricResult> {
   const box = sketch.bbox || bbox(sketch);
 
-  const classMetrics = (
+  const metrics = (
     await Promise.all(
-      CLASSES.map(async (curClass) => {
+      CONFIG.classes.map(async (curClass) => {
         const features = await fgbFetchAll<Feature<Polygon>>(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
-        return overlapFeatures(
+        const overlapResult = await overlapFeatures(
+          METRIC_ID,
           features,
-          curClass.classId,
-          sketches,
-          precalcTotals.byClass[curClass.classId].value
+          sketch
+        );
+        // Transform from simple to extended metric
+        return overlapResult.map(
+          (metric): ExtendedSketchMetric => ({
+            reportId: REPORT_ID,
+            classId: curClass.classId,
+            ...metric,
+          })
         );
       })
     )
-  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
-    return {
-      ...metricsSoFar,
-      [metric.name]: metric,
-    };
-  }, {});
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
+  );
 
   return {
-    byClass: classMetrics,
+    metrics: metricSort(metrics),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

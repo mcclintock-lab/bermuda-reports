@@ -6,13 +6,21 @@ import {
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
-import config, { HabitatRestoreResults } from "../_config";
-import { ClassMetric } from "../metrics/types";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
-import { ClassTable } from "../components/ClassTable";
+import config, { MetricResult, MetricResultBase } from "../_config";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
+import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
 
-const CLASSES = config.habitatRestore.classes;
+import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+const precalcTotals = habitatRestoreTotals as MetricResultBase;
+
+const CONFIG = config.habitatRestore;
+const METRIC_ID = "areaOverlap";
 
 const HabitatRestoration = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -24,8 +32,16 @@ const HabitatRestoration = () => {
         functionName="habitatRestore"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: HabitatRestoreResults) => {
-          const results = Object.values(data.byClass);
+        {(data: MetricResult) => {
+          // Collection or single sketch
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(
+              data.metrics.filter((m) => m.metricId === METRIC_ID),
+              precalcTotals.metrics
+            ),
+            [data.sketch.properties.id]
+          );
+
           return (
             <>
               <p>
@@ -65,7 +81,13 @@ const HabitatRestoration = () => {
                 </p>
               </Collapse>
               <ReportError>
-                {isCollection ? genNetwork(data) : genSingle(data)}
+                <ClassTable
+                  titleText="RestorationType"
+                  percText="% Area Within Plan"
+                  rows={parentMetrics}
+                  classes={CONFIG.classes}
+                />
+                {isCollection && genSketchTable(data)}
               </ReportError>
             </>
           );
@@ -75,34 +97,27 @@ const HabitatRestoration = () => {
   );
 };
 
-const genSingle = (data: HabitatRestoreResults) => {
-  return <>{genTable(Object.values(data.byClass))}</>;
-};
-
-const genNetwork = (data: HabitatRestoreResults) => {
-  return (
-    <>
-      {genTable(Object.values(data.byClass))}
-      <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
-    </>
+const genSketchTable = (data: MetricResult) => {
+  // Build agg metric objects for each child sketch in collection with percValue for each class
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(
+      data.metrics.filter((m) => m.metricId === METRIC_ID),
+      childSketchIds
+    ),
+    precalcTotals.metrics
   );
-};
-
-const genTable = (data: ClassMetric[]) => {
-  return (
-    <ClassTable
-      titleText="RestorationType"
-      percText="% Area Within Plan"
-      rows={data}
-      classes={CLASSES}
-    />
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    CONFIG.classes,
+    childSketches
   );
-};
-
-const genSketchTable = (data: HabitatRestoreResults) => {
-  // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.byClass, CLASSES);
-  return <SketchClassTable rows={sketchRows} classes={CLASSES} />;
+  return (
+    <Collapse title="Show by MPA">
+      <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />
+    </Collapse>
+  );
 };
 
 const LoadingSkeleton = () => (

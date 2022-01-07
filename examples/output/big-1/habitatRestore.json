@@ -1,30 +1,51 @@
 {
-  "byClass": {
-    "Seagrass": {
-      "name": "Seagrass",
+  "metrics": [
+    {
+      "reportId": "existingProtections",
+      "classId": "Mangrove_Saltmarsh",
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "big-1"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "value": 0,
+      "extra": {
+        "sketchName": "big-1"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615ffd9d045840708a6e54e5",
+      "name": "big-1",
+      "updatedAt": "2021-10-10T15:30:59.004Z",
+      "createdAt": "2021-10-08T08:13:17.626Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\"]"
         }
       ]
     },
-    "Mangrove_Saltmarsh": {
-      "name": "Mangrove_Saltmarsh",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -68.73444933466465,
+      31.020518609240725,
+      -64.37667771429706,
+      35.11592304895137
+    ],
+    "geometry": null
   }
 }

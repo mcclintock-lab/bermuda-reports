@@ -1,18 +1,16 @@
 {
-  "overall": {
-    "value": 416581259.71149737,
-    "percValue": 1
-  },
-  "byClass": {
-    "Seagrass": {
-      "name": "Seagrass",
-      "value": 32670378.385694697,
-      "percValue": 0.0784249834193706
+  "metrics": [
+    {
+      "reportId": "habitatRestore",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "value": 32670378.385694697
     },
-    "Mangrove_Saltmarsh": {
-      "name": "Mangrove_Saltmarsh",
-      "value": 383910881.3258027,
-      "percValue": 0.9215750165806295
+    {
+      "reportId": "habitatRestore",
+      "classId": "Mangrove_Saltmarsh",
+      "metricId": "areaOverlap",
+      "value": 383910881.3258027
     }
-  }
+  ]
 }

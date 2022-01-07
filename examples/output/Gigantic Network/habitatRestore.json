@@ -1,42 +1,134 @@
 {
-  "byClass": {
-    "Seagrass": {
-      "name": "Seagrass",
-      "value": 25013296.619259488,
-      "percValue": 0.7656261682666033,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 25013296.619259488,
-          "percValue": 0.7656261682666033
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 6967553.988755156,
-          "percValue": 0.2132682366423409
-        }
-      ]
-    },
-    "Mangrove_Saltmarsh": {
-      "name": "Mangrove_Saltmarsh",
+  "metrics": [
+    {
+      "reportId": "existingProtections",
+      "classId": "Mangrove_Saltmarsh",
+      "metricId": "areaOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "value": 43692908.67310843,
-      "percValue": 0.1138100293542574,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Mangrove_Saltmarsh",
+      "metricId": "areaOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 0,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Mangrove_Saltmarsh",
+      "metricId": "areaOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 43692908.67310843,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "value": 25013296.619259488,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "value": 6967553.988755156,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "existingProtections",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 25013296.619259488,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619834743ff3e57f7333d93e",
+      "name": "Gigantic Network",
+      "updatedAt": "2021-11-20T00:00:34.269Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 43692908.67310843,
-          "percValue": 0.1138100293542574
+          "updatedAt": "2021-11-20T00:00:34.365Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.82155643515347,
+          31.12299873603807,
+          -62.698478088902476,
+          33.86373197667135
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    }
+          "updatedAt": "2021-11-19T23:59:16.315Z",
+          "createdAt": "2021-11-19T23:34:00.777Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -65.92172084860616,
+          31.426079167891885,
+          -63.197111473606924,
+          34.14549731338192
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

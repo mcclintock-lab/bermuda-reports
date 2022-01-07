@@ -507,15 +507,6 @@ export const renewable: DataGroup = {
 
 //// HABITAT RESTORATION ////
 
-// base for precalc
-export interface HabitatRestoreBaseResults {
-  byClass: ClassMetrics;
-}
-
-export interface HabitatRestoreResults extends HabitatRestoreBaseResults {
-  byClass: ClassMetricsSketch;
-}
-
 const habitatRestoreClasses: DataClass[] = [
   {
     baseFilename: "seagrass_restoration_500mbuff",

@@ -33,7 +33,6 @@ const METRIC_ID = "areaOverlap";
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<MetricResult> {
-  const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
   const features = await fgbFetchAll<ExistingProtectionFeature>(
     `${config.dataBucketUrl}${CONFIG.filename}`,
