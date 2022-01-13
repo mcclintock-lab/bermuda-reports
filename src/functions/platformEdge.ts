@@ -12,7 +12,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import bbox from "@turf/bbox";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapFeatures } from "../metrics/overlapFeaturesNext";
 import { overlapGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { getBreakGroup } from "../util/getBreakGroup";
@@ -25,7 +25,7 @@ const METRIC_ID = "areaOverlap";
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const sketches = toSketchArray(sketch);
   const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
   const box = sketch.bbox || bbox(sketch);

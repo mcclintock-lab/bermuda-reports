@@ -9,7 +9,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
 import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
@@ -23,7 +23,7 @@ const METRIC_ID = "areaOverlap";
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const sketches = toSketchArray(sketch);
 

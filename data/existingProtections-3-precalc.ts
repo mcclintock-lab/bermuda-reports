@@ -5,7 +5,8 @@ import config from "../src/_config";
 import { strict as assert } from "assert";
 import area from "@turf/area";
 import { featureCollection } from "@turf/helpers";
-import { ExtendedMetric } from "../src/metrics/types";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 
 export const nameProperty = "Name";
 export const classProperty = "Type";
@@ -21,7 +22,7 @@ const allFc = JSON.parse(
 );
 
 async function main() {
-  const metrics: ExtendedMetric[] = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
       const classFeatures = allFc.features.filter((feat: any) => {
@@ -40,7 +41,7 @@ async function main() {
     })
   );
 
-  const result = {
+  const result: ReportResultBase = {
     metrics,
   };
 

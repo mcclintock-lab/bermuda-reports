@@ -15,7 +15,7 @@ import {
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import { ReportTableStyled } from "../components/ReportTableStyled";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { nestMetrics } from "../metrics/clientMetrics";
 
 const CONFIG = config.size;
@@ -69,7 +69,7 @@ const SizeCard = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <ResultsCard title="Size" functionName="area">
-      {(data: MetricResult) => {
+      {(data: ReportResult) => {
         if (Object.keys(data).length === 0)
           throw new Error("Protection results not found");
 
@@ -123,7 +123,7 @@ const SizeCard = () => {
   );
 };
 
-const genSingleSizeTable = (data: MetricResult) => {
+const genSingleSizeTable = (data: ReportResult) => {
   const classesById = keyBy(CONFIG.classes, (c) => c.classId);
   const singleMetrics = data.metrics.filter(
     (m) => m.sketchId === data.sketch.properties.id
@@ -158,7 +158,7 @@ const genSingleSizeTable = (data: MetricResult) => {
   );
 };
 
-const genNetworkSizeTable = (data: MetricResult) => {
+const genNetworkSizeTable = (data: ReportResult) => {
   const sketches = toNullSketchArray(data.sketch);
   const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
   const sketchIds = sketches.map((sk) => sk.properties.id);

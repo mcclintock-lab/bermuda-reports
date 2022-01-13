@@ -10,13 +10,13 @@ import {
   metricsWithSketchId,
   sketchMetricPercent,
 } from "../metrics/clientMetrics";
-import config, { MetricResult, MetricResultBase } from "../_config";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTableNext";
 
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
-const precalcTotals = reefIndexTotals as MetricResultBase;
+const precalcTotals = reefIndexTotals as ReportResultBase;
 
 const CONFIG = config.reefIndex;
 
@@ -29,7 +29,7 @@ const SpeciesProtection = () => {
         functionName="reefIndex"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: MetricResult) => {
+        {(data: ReportResult) => {
           // Single sketch or collection top-level
           const topMetrics = metricsWithSketchId(
             sketchMetricPercent(data.metrics, precalcTotals.metrics),
@@ -81,7 +81,7 @@ const SpeciesProtection = () => {
   );
 };
 
-const genSketchTable = (data: MetricResult) => {
+const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = sketchMetricPercent(

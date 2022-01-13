@@ -10,7 +10,8 @@ import geoblaze from "geoblaze";
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
 import { loadCogWindow } from "../src/datasources/cog";
-import { ExtendedMetric } from "../src/metrics/types";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 
 const CLASSES = config.oceanUse.classes;
 const DATASET = "oceanUse";
@@ -19,7 +20,7 @@ const METRIC_ID = "valueOverlap";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-  const metrics: ExtendedMetric[] = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {});
@@ -33,7 +34,7 @@ async function main() {
     })
   );
 
-  const result = {
+  const result: ReportResultBase = {
     metrics,
   };
 

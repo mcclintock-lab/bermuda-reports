@@ -7,7 +7,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
 import { ReportSketchMetric } from "../metrics/types";
 
@@ -17,7 +17,7 @@ const METRIC_ID = "areaOverlap";
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
 
   // Calc metrics for each class and merge the result

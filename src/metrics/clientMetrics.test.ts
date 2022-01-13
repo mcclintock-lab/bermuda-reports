@@ -8,7 +8,7 @@ import {
   flattenSketchAllClassNext,
   nestMetrics,
 } from "./clientMetrics";
-import { ExtendedSketchMetric } from "./types";
+import { ReportSketchMetric } from "./types";
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
 
 const CLASSES = [
@@ -106,7 +106,7 @@ const collection: NullSketchCollection = {
   features: sketches,
 };
 
-const metrics: ExtendedSketchMetric[] = [
+const metrics: ReportSketchMetric[] = [
   {
     reportId: "report1",
     metricId: "metric1",
@@ -346,7 +346,7 @@ describe("flattenSketchAllClass", () => {
 });
 
 test("flattenByGroupSketch", async () => {
-  const rows = flattenByGroupSketch(collection, groupMetrics, PRECALC_TOTALS);
+  const rows = flattenByGroupSketch(sketches, groupMetrics, PRECALC_TOTALS);
 
   const answer = [
     {

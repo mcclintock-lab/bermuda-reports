@@ -32,15 +32,15 @@ import {
   metricsForSketch,
 } from "../metrics/clientMetrics";
 import config, {
-  MetricResultBase,
-  MetricResult,
+  ReportResultBase,
+  ReportResult,
   EdgeSketchMetric,
 } from "../_config";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
-const precalcTotals = platformEdgeTotals as MetricResultBase;
+const precalcTotals = platformEdgeTotals as ReportResultBase;
 
 const CLASS = config.platformEdge.classes[0];
 const BREAK_MAP = config.platformEdge.breakMap;
@@ -69,7 +69,7 @@ const PlatformEdge = () => {
       functionName="platformEdge"
       skeleton={<LoadingSkeleton />}
     >
-      {(data: MetricResult) => {
+      {(data: ReportResult) => {
         const sketches = toNullSketchArray(data.sketch);
         const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 

@@ -8,7 +8,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import { overlapArea, overlapSubarea } from "../metrics/overlapAreaNext";
-import config, { STUDY_REGION_AREA_SQ_METERS, MetricResult } from "../_config";
+import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import bbox from "@turf/bbox";
 import { ReportSketchMetric } from "../metrics/types";
 import { metricSort } from "../metrics/metrics";
@@ -20,7 +20,7 @@ const PERC_METRIC_ID = "areaPerc";
 
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const nearshorePolys = await fgbFetchAll<Feature<Polygon>>(
     `${config.dataBucketUrl}${CONFIG.filename}`,

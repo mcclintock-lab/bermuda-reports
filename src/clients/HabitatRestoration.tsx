@@ -6,7 +6,7 @@ import {
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
-import config, { MetricResult, MetricResultBase } from "../_config";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import {
   flattenSketchAllClassNext,
   metricsWithSketchId,
@@ -17,7 +17,7 @@ import SketchClassTable from "../components/SketchClassTable";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
-const precalcTotals = habitatRestoreTotals as MetricResultBase;
+const precalcTotals = habitatRestoreTotals as ReportResultBase;
 
 const CONFIG = config.habitatRestore;
 const METRIC_ID = "areaOverlap";
@@ -32,7 +32,7 @@ const HabitatRestoration = () => {
         functionName="habitatRestore"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: MetricResult) => {
+        {(data: ReportResult) => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
             sketchMetricPercent(
@@ -97,7 +97,7 @@ const HabitatRestoration = () => {
   );
 };
 
-const genSketchTable = (data: MetricResult) => {
+const genSketchTable = (data: ReportResult) => {
   // Build agg metric objects for each child sketch in collection with percValue for each class
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);

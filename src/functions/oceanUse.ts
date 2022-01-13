@@ -9,7 +9,7 @@ import {
 import bbox from "@turf/bbox";
 import { overlapRaster } from "../metrics/overlapRaster";
 import { ReportSketchMetric } from "../metrics/types";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 
 const CONFIG = config.oceanUse;
 const REPORT_ID = "oceanUse";
@@ -17,7 +17,7 @@ const METRIC_ID = "valueOverlap";
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const metrics: ReportSketchMetric[] = (
     await Promise.all(

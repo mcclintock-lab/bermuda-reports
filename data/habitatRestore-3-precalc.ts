@@ -3,10 +3,9 @@
 
 import fs from "fs";
 import config from "../src/_config";
-
-import { strict as assert } from "assert";
 import area from "@turf/area";
-import { ExtendedMetric } from "../src/metrics/types";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 
 const CLASSES = config.habitatRestore.classes;
 const DATASET = "habitatRestore";
@@ -15,7 +14,7 @@ const REPORT_ID = "habitatRestore";
 const METRIC_ID = "areaOverlap";
 
 async function main() {
-  const metrics: ExtendedMetric[] = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
       const fc = JSON.parse(
@@ -33,7 +32,7 @@ async function main() {
     })
   );
 
-  const result = {
+  const result: ReportResultBase = {
     metrics,
   };
 

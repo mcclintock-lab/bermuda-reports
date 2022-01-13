@@ -9,7 +9,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { MetricResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { ReportSketchMetric } from "../metrics/types";
 import { overlapFeatures } from "../metrics/overlapFeaturesNext";
 import { metricSort } from "../metrics/metrics";
@@ -20,7 +20,7 @@ const METRIC_ID = "areaOverlap";
 
 export async function habitatRestore(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
 
   const metrics = (

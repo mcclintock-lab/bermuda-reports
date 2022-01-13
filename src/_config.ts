@@ -37,11 +37,11 @@ export const dataBucketUrl =
 export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
 
-export interface MetricResultBase {
+export interface ReportResultBase {
   metrics: ReportMetric[];
 }
 
-export interface MetricResult {
+export interface ReportResult {
   metrics: ReportSketchMetric[];
   /** The sketch used, without geometry */
   sketch: NullSketch | NullSketchCollection;
@@ -176,12 +176,6 @@ export const existingProtection: DataGroup = {
 };
 
 //// HABITAT ////
-
-export interface HabitatResult {
-  metrics: ExtendedSketchMetric[];
-  /** The sketch used, without geometry */
-  sketch: NullSketch | NullSketchCollection;
-}
 
 // Categorical raster
 const nearshoreBaseFilename = "Habitat Zones1";
@@ -521,17 +515,6 @@ export const habitatRestore: DataGroup = {
 
 //// KEY NURSERY HABITAT ////
 
-// base for precalc
-export interface HabitatNurseryResults {
-  byClass: ClassMetrics;
-  overall: ValueMetric;
-}
-
-export interface HabitatNurseryLevelResults extends HabitatNurseryResults {
-  byClass: ClassMetricsSketch;
-  byLevel: GroupMetricsSketch;
-}
-
 const habitatNurseryClasses: DataClass[] = [
   {
     baseFilename: "PatchReef_JoannaEdit",
@@ -643,31 +626,6 @@ export interface EdgeSketchMetric extends ExtendedSketchMetric {
     overlapEdge: boolean;
   };
 }
-
-// Build up new type with additional property
-// export interface EdgeSketchMetric extends SketchMetric {
-//   overlap: boolean;
-//   numFishingRestricted: number;
-// }
-// export type EdgeClassMetricSketch = ClassMetric & {
-//   sketchMetrics: EdgeSketchMetric[];
-// };
-// export interface EdgeClassMetricsSketch {
-//   [name: string]: EdgeClassMetricSketch;
-// }
-// export interface EdgeGroupMetricsSketch {
-//   [name: string]: EdgeClassMetricsSketch;
-// }
-
-// base for precalc
-// export interface PlatformEdgeBaseResult {
-//   byClass: ClassMetrics;
-// }
-
-// export interface PlatformEdgeResult extends PlatformEdgeBaseResult {
-//   byClass: EdgeClassMetricsSketch;
-//   byGroup: EdgeGroupMetricsSketch;
-// }
 
 const platformEdgeClasses: DataClass[] = [
   {

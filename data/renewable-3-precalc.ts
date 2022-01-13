@@ -2,8 +2,8 @@
 // Precalculates overall stats used by habitat protection function
 
 import fs from "fs";
-import config, { MetricResultBase } from "../src/_config";
-import { ExtendedMetric, ReportMetric } from "../src/metrics/types";
+import config, { ReportResultBase } from "../src/_config";
+import { ReportMetric } from "../src/metrics/types";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
@@ -31,7 +31,7 @@ async function main() {
     })
   );
 
-  const result: MetricResultBase = {
+  const result: ReportResultBase = {
     metrics,
   };
 

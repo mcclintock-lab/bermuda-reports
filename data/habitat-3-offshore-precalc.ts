@@ -3,7 +3,8 @@
 
 import fs from "fs";
 import config from "../src/_config";
-import { ExtendedMetric } from "../src/metrics/types";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
@@ -14,7 +15,7 @@ const REPORT_ID = "habitatProtection";
 const METRIC_ID = "offshore";
 
 async function main() {
-  const metrics: ExtendedMetric[] = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     CONFIG.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {
@@ -30,7 +31,11 @@ async function main() {
     })
   );
 
-  fs.writeFile(DEST_PATH, JSON.stringify(metrics, null, 2), (err) =>
+  const result: ReportResultBase = {
+    metrics,
+  };
+
+  fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
     err
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)

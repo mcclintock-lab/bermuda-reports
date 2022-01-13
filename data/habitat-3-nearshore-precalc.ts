@@ -6,7 +6,8 @@ import { loadCogWindow } from "../src/datasources/cog";
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";
 import { groupClassIdMapping } from "../src/metrics/classId";
-import { ExtendedMetric } from "../src/metrics/types";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 
 const DEST_PATH = `${__dirname}/precalc/nearshoreHabitatTotals.json`;
 const CONFIG = config.nearshore;
@@ -18,11 +19,15 @@ async function main() {
 
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
-    const metrics: ExtendedMetric[] = await countByClass(raster, {
+    const metrics: ReportMetric[] = await countByClass(raster, {
       classIdToName: groupClassIdMapping(config.nearshore),
     });
 
-    fs.writeFile(DEST_PATH, JSON.stringify(metrics, null, 2), (err) =>
+    const result: ReportResultBase = {
+      metrics,
+    };
+
+    fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
       err
         ? console.error("Error", err)
         : console.info(`Successfully wrote ${DEST_PATH}`)
@@ -46,7 +51,7 @@ async function countByClass(
   /** raster to search */
   raster: Georaster,
   config: { classIdToName: Record<string, string> }
-): Promise<ExtendedMetric[]> {
+): Promise<ReportMetric[]> {
   if (!config.classIdToName)
     throw new Error("Missing classIdToName map in config");
 
@@ -57,7 +62,7 @@ async function countByClass(
   const numericClassIds = Object.keys(config.classIdToName);
 
   // Migrate the total counts, skip nodata
-  let metrics: ExtendedMetric[] = [];
+  let metrics: ReportMetric[] = [];
   numericClassIds.forEach((numericClassId) => {
     if (numericClassIds.includes(numericClassId) && histogram[numericClassId]) {
       metrics.push({
@@ -75,5 +80,6 @@ async function countByClass(
       });
     }
   });
+
   return metrics;
 }

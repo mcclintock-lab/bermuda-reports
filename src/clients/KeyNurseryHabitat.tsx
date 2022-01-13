@@ -19,7 +19,7 @@ import {
 } from "@seasketch/geoprocessing/client-ui";
 // Import the results type definition from your functions to type-check your
 // component render functions
-import config, { MetricResult, MetricResultBase } from "../_config";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { getCategoryForActivities } from "../util/iucnProtectionLevel";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
@@ -36,7 +36,7 @@ import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import { ClassTable } from "../components/ClassTableNext";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
-const precalcTotals = habitatNurseryTotals as MetricResultBase;
+const precalcTotals = habitatNurseryTotals as ReportResultBase;
 
 const CONFIG = config.habitatNursery;
 
@@ -50,7 +50,7 @@ const KeyNurseryHabitat = () => {
         functionName="habitatNursery"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: MetricResult) => {
+        {(data: ReportResult) => {
           return (
             <ReportError>
               {isCollection
@@ -64,7 +64,7 @@ const KeyNurseryHabitat = () => {
   );
 };
 
-const genSingle = (data: MetricResult, userAttributes: UserAttribute[]) => {
+const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
   // Lookup group ID
   const activityProp = userAttributes.find(
     (a) => a.exportId === "ACTIVITIES"
@@ -116,7 +116,7 @@ const genSingle = (data: MetricResult, userAttributes: UserAttribute[]) => {
   );
 };
 
-const genNetwork = (data: MetricResult) => {
+const genNetwork = (data: ReportResult) => {
   const sketches = toNullSketchArray(data.sketch);
   const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 

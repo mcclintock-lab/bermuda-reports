@@ -9,7 +9,7 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import config, { MetricResult, MetricResultBase } from "../_config";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
@@ -20,7 +20,7 @@ import {
 import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
-const precalcTotals = renewableTotals as MetricResultBase;
+const precalcTotals = renewableTotals as ReportResultBase;
 
 const CONFIG = config.renewable;
 
@@ -33,7 +33,7 @@ const RenewableEnergy = () => {
         functionName="renewable"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: MetricResult) => {
+        {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
             sketchMetricPercent(data.metrics, precalcTotals.metrics),
@@ -84,7 +84,7 @@ const RenewableEnergy = () => {
   );
 };
 
-const genSketchTable = (data: MetricResult) => {
+const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = sketchMetricPercent(

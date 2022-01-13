@@ -6,7 +6,7 @@ import {
 } from "@seasketch/geoprocessing/client-ui";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import { Collapse } from "../components/Collapse";
-import config, { MetricResult, MetricResultBase } from "../_config";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import {
   flattenSketchAllClassNext,
   metricsWithSketchId,
@@ -16,7 +16,7 @@ import { ClassTable } from "../components/ClassTableNext";
 import SketchClassTable from "../components/SketchClassTable";
 
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
-const precalcTotals = oceanUseTotals as MetricResultBase;
+const precalcTotals = oceanUseTotals as ReportResultBase;
 
 const CONFIG = config.oceanUse;
 
@@ -29,7 +29,7 @@ const OceanUse = () => {
         functionName="oceanUse"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: MetricResult) => {
+        {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
             sketchMetricPercent(data.metrics, precalcTotals.metrics),
@@ -88,7 +88,7 @@ const OceanUse = () => {
   );
 };
 
-const genSketchTable = (data: MetricResult) => {
+const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = sketchMetricPercent(

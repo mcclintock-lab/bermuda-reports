@@ -10,8 +10,8 @@ import {
 import bbox from "@turf/bbox";
 import { metricSort } from "../metrics/metrics";
 import { overlapFeatures } from "../metrics/overlapFeaturesNext";
-import { ExtendedSketchMetric } from "../metrics/types";
-import config, { MetricResult } from "../_config";
+import { ReportSketchMetric } from "../metrics/types";
+import config, { ReportResult } from "../_config";
 
 // Multi-class vector dataset
 export const nameProperty = "Name";
@@ -31,14 +31,14 @@ const METRIC_ID = "areaOverlap";
 
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<MetricResult> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const features = await fgbFetchAll<ExistingProtectionFeature>(
     `${config.dataBucketUrl}${CONFIG.filename}`,
     box
   );
 
-  const metrics: ExtendedSketchMetric[] = (
+  const metrics: ReportSketchMetric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
@@ -54,7 +54,7 @@ export async function existingProtections(
         );
         // Transform from simple to extended metric
         return overlapResult.map(
-          (metric): ExtendedSketchMetric => ({
+          (metric): ReportSketchMetric => ({
             reportId: REPORT_ID,
             classId: curClass.classId,
             ...metric,

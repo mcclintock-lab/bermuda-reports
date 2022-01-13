@@ -8,6 +8,8 @@ import geoblaze from "geoblaze";
 // @ts-ignore
 import parseGeoraster from "georaster";
 import fetch from "node-fetch";
+import { ReportMetric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
 
 const CONFIG = config.reefIndex;
 const DATASET = "reefIndex";
@@ -16,7 +18,7 @@ const METRIC_ID = "valueOverlap";
 
 async function main() {
   const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-  const metrics = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     CONFIG.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const response = await fetch(url);
@@ -32,7 +34,7 @@ async function main() {
     })
   );
 
-  const result = { metrics };
+  const result: ReportResultBase = { metrics };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
     err

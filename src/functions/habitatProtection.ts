@@ -9,7 +9,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { HabitatResult } from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapRasterClass } from "../metrics/overlapRasterClass";
 import { overlapRaster } from "../metrics/overlapRaster";
 import { metricSort } from "../metrics/metrics";
@@ -24,7 +24,7 @@ const OFFSHORE_METRIC_ID = "offshore";
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<HabitatResult> {
+): Promise<ReportResult> {
   const sketches = toSketchArray(sketch);
   const box = sketch.bbox || bbox(sketch);
 
