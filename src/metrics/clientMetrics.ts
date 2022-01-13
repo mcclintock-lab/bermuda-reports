@@ -22,11 +22,12 @@ import {
   isSketch,
   isSketchCollection,
   isNullSketch,
+  groupBy,
+  keyBy,
 } from "@seasketch/geoprocessing/client-core";
-import { groupBy, keyBy } from "@seasketch/geoprocessing/client-core";
 
-import deepCopy from "../util/deepCopy";
 import reduce from "lodash/reduce";
+import cloneDeep from "lodash/cloneDeep";
 
 /**
  * Helper methods for using metrics in browser client
@@ -170,7 +171,7 @@ export const sketchMetricPercent = (
       );
     }
     return {
-      ...deepCopy(curMetric),
+      ...cloneDeep(curMetric),
       value: curMetric.value / totalMetric.value,
     };
   });
@@ -178,9 +179,11 @@ export const sketchMetricPercent = (
 
 /**
  * Recursively groups metrics by ID in order of ids specified to create arbitrary nested hierarchy for fast lookup.
+ * Caller responsible for all metrics having the ID properties defined
+ * If an id property is not defined on a metric, then 'undefined' will be used for the key
  */
 export const nestMetrics = (
-  metrics: any[],
+  metrics: Record<string, any>[],
   ids: string[]
 ): Record<string, any> => {
   const grouped = groupBy(metrics, (m) => m[ids[0]]);
@@ -377,16 +380,16 @@ export const flattenByGroup = (
  * @param groupMetrics - group metric data
  * @param totalValue - total value with classes combined
  * @param classes - class config
- * @returns
  */
 export const flattenByGroupSketch = (
-  collection: SketchCollection | NullSketchCollection,
+  /** ToDo: is this needed? can the caller just pre-filter groupMetrics? */
+  sketches: Sketch[] | NullSketch[],
   /** Group metrics for collection and its child sketches */
   groupMetrics: ExtendedSketchMetric[],
   /** Totals by class */
   totals: ExtendedMetric[]
 ): GroupMetricSketchAgg[] => {
-  const sketchIds = collection.features.map((sk) => sk.properties.id);
+  const sketchIds = sketches.map((sk) => sk.properties.id);
   let sketchRows: GroupMetricSketchAgg[] = [];
 
   // Stratify in order by Group -> Sketch -> Class. Then flatten
@@ -441,14 +444,12 @@ export const flattenByGroupSketch = (
   return sketchRows;
 };
 
-//// DEPRECATED?
-
 /**
  * Flattens group metrics into an array of objects, one for each group.
  * Each object includes the count of sketches in the group and total percValue across classes
  * @param groupMetrics - group metric data
  * @param totalValue  - total value with classes combined
- * @returns
+ * @deprecated
  */
 export const flattenGroup = (
   groupMetrics: GroupMetricsSketch,
@@ -483,7 +484,7 @@ export const flattenGroup = (
  * @param groupMetrics - group metric data
  * @param totalValue - total value with classes combined
  * @param classes - class config
- * @returns
+ * @deprecated
  */
 export const flattenGroupSketch = (
   groupMetrics: GroupMetricsSketch,

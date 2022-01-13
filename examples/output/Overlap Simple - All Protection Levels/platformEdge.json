@@ -61,52 +61,60 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
       "value": 77170842.5276741,
       "extra": {
-        "sketchName": "high MPA"
+        "sketchName": "high MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
       "value": 106868024.43853466,
       "extra": {
-        "sketchName": "full MPA"
+        "sketchName": "full MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
       "value": 106868024.43853466,
       "extra": {
-        "sketchName": "full MPA copy"
+        "sketchName": "full MPA copy",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
       "value": 74022243.02788582,
       "extra": {
-        "sketchName": "low MPA"
+        "sketchName": "low MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
       "value": 111151749.90734842,
@@ -117,8 +125,8 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "partial",
       "classId": "Platform Edge",
+      "groupId": "partial",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
       "value": 0,
@@ -129,8 +137,8 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "no",
       "classId": "Platform Edge",
+      "groupId": "no",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
       "value": 0,

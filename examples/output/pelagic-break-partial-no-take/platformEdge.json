@@ -14,38 +14,37 @@
     },
     {
       "reportId": "platformEdge",
+      "classId": "Platform Edge",
       "groupId": "definite",
-      "classId": "Platform Edge",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 0,
       "extra": {
-        "sketchName": "pelagic-break-partial-no-take",
-        "isCollection": true
+        "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
       "reportId": "platformEdge",
+      "classId": "Platform Edge",
       "groupId": "partial",
-      "classId": "Platform Edge",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
-      "value": 0,
+      "value": 45937300.38209538,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take",
-        "isCollection": true
+        "numFishingRestricted": 2,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "no",
       "classId": "Platform Edge",
+      "groupId": "no",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 0,
       "extra": {
-        "sketchName": "pelagic-break-partial-no-take",
-        "isCollection": true
+        "sketchName": "pelagic-break-partial-no-take"
       }
     }
   ],

@@ -10,7 +10,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { MetricResult } from "../_config";
-import { ExtendedSketchMetric } from "../metrics/types";
+import { ReportSketchMetric } from "../metrics/types";
 import { overlapFeatures } from "../metrics/overlapFeaturesNext";
 import { metricSort } from "../metrics/metrics";
 
@@ -37,7 +37,7 @@ export async function habitatRestore(
         );
         // Transform from simple to extended metric
         return overlapResult.map(
-          (metric): ExtendedSketchMetric => ({
+          (metric): ReportSketchMetric => ({
             reportId: REPORT_ID,
             classId: curClass.classId,
             ...metric,

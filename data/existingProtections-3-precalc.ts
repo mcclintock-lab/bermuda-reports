@@ -9,6 +9,7 @@ import { ExtendedMetric } from "../src/metrics/types";
 
 export const nameProperty = "Name";
 export const classProperty = "Type";
+
 const CLASSES = config.existingProtection.classes;
 const DATASET = `existingProtections`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;

@@ -1,116 +1,128 @@
 {
   "metrics": [
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "value": 184032.32487618923,
       "extra": {
         "sketchName": "full mpa"
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 5598.515486896038,
       "extra": {
         "sketchName": "low mpa"
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Fixed Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 189630.84036308527,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
-      },
-      "classId": "Fixed Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Solar",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "value": 235383.8625344038,
       "extra": {
         "sketchName": "full mpa"
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Solar",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 8523.084114253521,
       "extra": {
         "sketchName": "low mpa"
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Solar",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 243906.94664865732,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
-      },
-      "classId": "Floating Solar"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "value": 48478.884567976,
       "extra": {
         "sketchName": "full mpa"
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 2544.217495918274,
       "extra": {
         "sketchName": "low mpa"
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Floating Offshore Wind",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 51023.10206389427,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
-      },
-      "classId": "Floating Offshore Wind"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Wave Energy",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "value": 100517.59170222282,
       "extra": {
         "sketchName": "full mpa"
-      },
-      "classId": "Wave Energy"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Wave Energy",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 5423.940856397152,
       "extra": {
         "sketchName": "low mpa"
-      },
-      "classId": "Wave Energy"
+      }
     },
     {
-      "metricId": "renewable",
+      "reportId": "renewable",
+      "classId": "Wave Energy",
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 105941.53255861998,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
-      },
-      "classId": "Wave Energy"
+      }
     }
   ],
   "sketch": {

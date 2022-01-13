@@ -10,6 +10,8 @@ import {
   LevelStat,
   DataGroup,
   DataClass,
+  ReportMetric,
+  ReportSketchMetric,
 } from "../src/metrics/types";
 
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
@@ -36,11 +38,11 @@ export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
 
 export interface MetricResultBase {
-  metrics: ExtendedMetric[];
+  metrics: ReportMetric[];
 }
 
 export interface MetricResult {
-  metrics: ExtendedSketchMetric[];
+  metrics: ReportSketchMetric[];
   /** The sketch used, without geometry */
   sketch: NullSketch | NullSketchCollection;
 }
@@ -629,16 +631,6 @@ export const oceanUse: DataGroup = {
 };
 
 //// PLATFORM EDGE ////
-
-export interface PlatformEdgeBaseResult {
-  metrics: ExtendedMetric[];
-}
-
-export interface PlatformEdgeResult {
-  metrics: ExtendedSketchMetric[];
-  /** The sketch used, without geometry */
-  sketch: NullSketch | NullSketchCollection;
-}
 
 export type PlatformEdgeDataGroup = DataGroup & {
   fishingActivities: string[];

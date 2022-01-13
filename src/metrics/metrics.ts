@@ -3,7 +3,7 @@ import {
   GroupMetricsSketch,
   SimpleMetric,
   SketchMetric,
-  ExtendedSketchMetric,
+  ReportSketchMetric,
 } from "./types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 
@@ -24,7 +24,7 @@ import { featureCollection } from "@turf/helpers";
  * Use to produce consistent metric data that is grouped for ease of
  * scanning for accuracy
  */
-export const metricSort = (metrics: ExtendedSketchMetric[]) => {
+export const metricSort = (metrics: ReportSketchMetric[]) => {
   return metrics.sort(
     (a, b) =>
       a.reportId.localeCompare(b.reportId) ||

@@ -47,6 +47,8 @@ export type MetricIdNames =
   | "groupId"
   | "reportId"
   | "geographyId";
+
+export type MetricIdNames = "metricId" | "classId" | "groupId" | "geographyId";
 export type MetricIdTypes = string | number;
 
 /** Single value metric */
@@ -65,12 +67,11 @@ export interface SimpleMetric {
  * Use when mixing metrics or need to support a variety
  */
 export interface ExtendedMetric extends SimpleMetric {
-  reportId: string;
   /** Optional, if metric is for specific classification - typically data class */
   classId?: string;
   /** Optional. if metric is for specific group - e.g. protection level*/
   groupId?: string;
-  /** Optional, if metric is for specfic geography */
+  /** Optional, if metric is for specific geography */
   geographyId?: string;
   /** Optional, if metric covers specific time period */
   duration?: string;
@@ -105,9 +106,19 @@ export interface GroupSketchMetric extends SimpleSketchMetric {
 }
 
 /**
- * Metric for a single sketch with additional properties supporting stratification.
+ * Metric for a sketch or sketch collection with additional properties supporting stratification.
  */
 export type ExtendedSketchMetric = SimpleSketchMetric & ExtendedMetric;
+
+/**
+ * Extended metric with additional report ID
+ */
+export type ReportMetric = ExtendedMetric & { reportId: string };
+
+/**
+ * ExtendedSketchMetric with additional report ID.
+ */
+export type ReportSketchMetric = SimpleSketchMetric & ReportMetric;
 
 //// DEPRECATED ////
 

@@ -1,121 +1,160 @@
 {
-  "overall": {
-    "value": 14710961.795261733,
-    "percValue": 1
-  },
-  "byClass": {
-    "Nursery Reef": {
-      "name": "Nursery Reef",
+  "metrics": [
+    {
+      "reportId": "habitatNursery",
+      "classId": "Nursery Reef",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-full"
+      }
     },
-    "Mangrove": {
-      "name": "Mangrove",
+    {
+      "reportId": "habitatNursery",
+      "classId": "Mangrove",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-full"
+      }
     },
-    "Seagrass": {
-      "name": "Seagrass",
+    {
+      "reportId": "habitatNursery",
+      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
       "value": 91601.42597206871,
-      "percValue": 0.03175345907903214,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Mangrove",
+      "groupId": "full",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Nursery Reef",
+      "groupId": "full",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Seagrass",
+      "groupId": "full",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 91601.42597206871,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Mangrove",
+      "groupId": "high",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Nursery Reef",
+      "groupId": "high",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Seagrass",
+      "groupId": "high",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Mangrove",
+      "groupId": "low",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Nursery Reef",
+      "groupId": "low",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "reportId": "habitatNursery",
+      "classId": "Seagrass",
+      "groupId": "low",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-full",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 91601.42597206871,
-          "percValue": 0.03175345907903214
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
         }
       ]
-    }
-  },
-  "byLevel": {
-    "full": {
-      "Nursery Reef": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": [
-          {
-            "id": "615bbbe9aac8c8285d50db2d",
-            "name": "mpa-full",
-            "value": 0,
-            "percValue": 0
-          }
-        ]
-      },
-      "Mangrove": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": [
-          {
-            "id": "615bbbe9aac8c8285d50db2d",
-            "name": "mpa-full",
-            "value": 0,
-            "percValue": 0
-          }
-        ]
-      },
-      "Seagrass": {
-        "value": 91601.42597206871,
-        "percValue": 0.03175345907903214,
-        "sketchMetrics": [
-          {
-            "id": "615bbbe9aac8c8285d50db2d",
-            "name": "mpa-full",
-            "value": 91601.42597206871,
-            "percValue": 0.03175345907903214
-          }
-        ]
-      }
     },
-    "high": {
-      "Nursery Reef": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      },
-      "Mangrove": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      },
-      "Seagrass": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    },
-    "low": {
-      "Nursery Reef": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      },
-      "Mangrove": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      },
-      "Seagrass": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

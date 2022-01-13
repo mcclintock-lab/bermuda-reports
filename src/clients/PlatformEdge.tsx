@@ -32,15 +32,15 @@ import {
   metricsForSketch,
 } from "../metrics/clientMetrics";
 import config, {
-  PlatformEdgeBaseResult,
-  PlatformEdgeResult,
+  MetricResultBase,
+  MetricResult,
   EdgeSketchMetric,
 } from "../_config";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
-const precalcTotals = platformEdgeTotals as PlatformEdgeBaseResult;
+const precalcTotals = platformEdgeTotals as MetricResultBase;
 
 const CLASS = config.platformEdge.classes[0];
 const BREAK_MAP = config.platformEdge.breakMap;
@@ -69,7 +69,7 @@ const PlatformEdge = () => {
       functionName="platformEdge"
       skeleton={<LoadingSkeleton />}
     >
-      {(data: PlatformEdgeResult) => {
+      {(data: MetricResult) => {
         const sketches = toNullSketchArray(data.sketch);
         const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 
@@ -169,9 +169,9 @@ const PlatformEdge = () => {
           );
 
           // Build agg sketch group objects with percValue for each class
-          // groupId, sketchId, lagoon, mangrove, seagrass, total
+          // groupId, sketchId, class1, class2, ..., total
           sketchRows = flattenByGroupSketch(
-            data.sketch,
+            sketches,
             groupMetrics,
             precalcTotals.metrics
           );

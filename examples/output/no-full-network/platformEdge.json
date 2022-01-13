@@ -37,19 +37,21 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "value": 12160320.09128951,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "MPA 1",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "definite",
       "classId": "Platform Edge",
+      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 12160320.09128951,
@@ -60,19 +62,21 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "partial",
       "classId": "Platform Edge",
+      "groupId": "partial",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 9357574.341766244,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "MPA 2",
+        "numFishingRestricted": 1,
+        "overlapEdge": true
       }
     },
     {
       "reportId": "platformEdge",
-      "groupId": "partial",
       "classId": "Platform Edge",
+      "groupId": "partial",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 9357574.341766244,
@@ -83,8 +87,8 @@
     },
     {
       "reportId": "platformEdge",
-      "groupId": "no",
       "classId": "Platform Edge",
+      "groupId": "no",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 0,

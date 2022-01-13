@@ -2,8 +2,8 @@
 // Precalculates overall stats used by habitat protection function
 
 import fs from "fs";
-import config, { RenewableBaseResult } from "../src/_config";
-import { ExtendedMetric } from "../src/metrics/types";
+import config, { MetricResultBase } from "../src/_config";
+import { ExtendedMetric, ReportMetric } from "../src/metrics/types";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
@@ -15,7 +15,7 @@ const REPORT_ID = "renewable";
 const METRIC_ID = "renewable";
 
 async function main() {
-  const metrics: ExtendedMetric[] = await Promise.all(
+  const metrics: ReportMetric[] = await Promise.all(
     LAYERS.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {
@@ -31,7 +31,7 @@ async function main() {
     })
   );
 
-  const result: RenewableBaseResult = {
+  const result: MetricResultBase = {
     metrics,
   };
 

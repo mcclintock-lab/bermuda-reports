@@ -5,7 +5,6 @@ import {
   Feature,
   Polygon,
   fgbFetchAll,
-  toSketchArray,
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";

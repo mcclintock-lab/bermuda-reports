@@ -8,7 +8,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { ExtendedSketchMetric } from "../metrics/types";
+import { ReportSketchMetric } from "../metrics/types";
 import config, { MetricResult } from "../_config";
 
 const CONFIG = config.oceanUse;
@@ -19,7 +19,7 @@ export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<MetricResult> {
   const box = sketch.bbox || bbox(sketch);
-  const metrics: ExtendedSketchMetric[] = (
+  const metrics: ReportSketchMetric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         // start raster load and move on in loop while awaiting finish
@@ -32,7 +32,7 @@ export async function oceanUse(
         // start analysis as soon as source load done
         const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
         return overlapResult.map(
-          (metrics): ExtendedSketchMetric => ({
+          (metrics): ReportSketchMetric => ({
             reportId: REPORT_ID,
             classId: curClass.classId,
             ...metrics,

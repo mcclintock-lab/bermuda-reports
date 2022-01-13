@@ -25,8 +25,8 @@ export async function overlapFeatures(
   metricId: string,
   /** features to intersect and get overlap stats */
   features: Feature<Polygon | MultiPolygon>[],
-  /** sketches.  If empty will return 0 result. */
-  sketch: Sketch<Polygon> | SketchCollection<Polygon>,
+  /** the sketches.  If empty will return 0 result. */
+  sketch: Sketch<Polygon> | SketchCollection<Polygon> | Sketch<Polygon>[],
   options: {
     /** Whether to calculate individual sketch metrics, otherwide just overall */
     calcSketchMetrics: boolean;
@@ -34,7 +34,7 @@ export async function overlapFeatures(
 ): Promise<SimpleSketchMetric[]> {
   let sumValue: number = 0;
   let isOverlap = false;
-  const sketches = toSketchArray(sketch);
+  const sketches = Array.isArray(sketch) ? sketch : toSketchArray(sketch);
 
   if (sketches.length > 0) {
     const sketchColl = flatten(featureCollection(sketches));

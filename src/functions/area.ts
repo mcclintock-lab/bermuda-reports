@@ -10,7 +10,7 @@ import {
 import { overlapArea, overlapSubarea } from "../metrics/overlapAreaNext";
 import config, { STUDY_REGION_AREA_SQ_METERS, MetricResult } from "../_config";
 import bbox from "@turf/bbox";
-import { ExtendedSketchMetric } from "../metrics/types";
+import { ReportSketchMetric } from "../metrics/types";
 import { metricSort } from "../metrics/metrics";
 
 const CONFIG = config.size;
@@ -35,7 +35,7 @@ export async function area(
       STUDY_REGION_AREA_SQ_METERS
     )
   ).map(
-    (metrics): ExtendedSketchMetric => ({
+    (metrics): ReportSketchMetric => ({
       reportId: REPORT_ID,
       classId: "eez",
       ...metrics,
@@ -45,7 +45,7 @@ export async function area(
   const nearshore = (
     await overlapSubarea(METRIC_ID, PERC_METRIC_ID, sketch, nearshorePolys[0])
   ).map(
-    (metrics): ExtendedSketchMetric => ({
+    (metrics): ReportSketchMetric => ({
       reportId: REPORT_ID,
       classId: "nearshore",
       ...metrics,
@@ -58,7 +58,7 @@ export async function area(
       outerArea: STUDY_REGION_AREA_SQ_METERS,
     })
   ).map(
-    (metrics): ExtendedSketchMetric => ({
+    (metrics): ReportSketchMetric => ({
       reportId: REPORT_ID,
       classId: "offshore",
       ...metrics,
