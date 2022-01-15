@@ -41,12 +41,14 @@ export interface DataGroup {
   layerId?: string;
 }
 
-export type MetricIdNames =
-  | "metricId"
-  | "classId"
-  | "groupId"
-  | "reportId"
-  | "geographyId";
+export interface MetricGroup extends DataGroup {
+  metricId: string;
+}
+
+export interface ReportGroup {
+  reportId: string;
+  metrics: MetricGroup[];
+}
 
 export type MetricIdNames = "metricId" | "classId" | "groupId" | "geographyId";
 export type MetricIdTypes = string | number;
@@ -192,22 +194,6 @@ export interface GroupMetricsSketch {
  * Single flattened metric with class values keyed by class name
  * Useful for rendering table rows with the values of multiple classes for a group
  */
-export interface ClassMetricAgg {
-  value: number;
-  percValue: number;
-  [className: string]: string | number;
-}
-
-export type ClassMetricSketchAgg = ClassMetricAgg & {
-  sketchId: string;
-  sketchName: string;
-};
-
-/**
- * Single flattened metric with class values keyed by class name
- * Useful for rendering table rows with the values of multiple classes for a group
- */
-
 export type GroupMetricAgg = {
   groupId: string;
   value: number;
@@ -217,34 +203,6 @@ export type GroupMetricAgg = {
 
 export type GroupMetricSketchAgg = GroupMetricAgg & {
   sketchId: string;
-  /** Deprecated */
+  /** @deprecated */
   sketchName?: string;
 };
-
-// Deprecated
-
-export interface SketchStat {
-  sketchId: string;
-  name: string;
-  // category stats
-  category: string;
-  level: string;
-  // area stats
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface CategoryStat {
-  category: string;
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface LevelStat {
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}

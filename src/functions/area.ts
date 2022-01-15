@@ -7,7 +7,7 @@ import {
   fgbFetchAll,
   toNullSketch,
 } from "@seasketch/geoprocessing";
-import { overlapArea, overlapSubarea } from "../metrics/overlapAreaNext";
+import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import bbox from "@turf/bbox";
 import { ReportSketchMetric } from "../metrics/types";

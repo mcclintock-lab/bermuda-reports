@@ -2,7 +2,7 @@
  * @group unit
  */
 
-import { overlapArea, overlapSubarea } from "./overlapAreaNext";
+import { overlapArea, overlapSubarea } from "./overlapArea";
 import { genSampleSketch, SketchCollection } from "@seasketch/geoprocessing";
 import { feature, Feature, Polygon, polygon } from "@turf/helpers";
 import area from "@turf/area";
@@ -103,18 +103,18 @@ describe("Area stats tool", () => {
 
   // sketch always assumed to be within outer boundary.  outerArea is passed as pre-calculated area avoiding need to compute it on the fly
   test("overall - single polygon fully inside", async () => {
-    const metrics = await overlapArea("test", "testPerc", sketch1, outerArea);
+    const metrics = await overlapArea("test", sketch1, outerArea);
     expect(metrics[0].value).toBeCloseTo(12391399902.071104);
     expect(metrics[1].value).toBeCloseTo(0.25); // takes up bottom left quadrant of outer
   });
   test("subarea intersect - single polygon fully inside", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sketch1, outer);
+    const metrics = await overlapSubarea("test", sketch1, outer);
     expect(metrics[0].value).toBeCloseTo(12391399902.071104);
     expect(metrics[1].value).toBeCloseTo(0.25);
   });
 
   test("subarea difference - single polygon fully inside", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sketch1, outer, {
+    const metrics = await overlapSubarea("test", sketch1, outer, {
       operation: "difference",
       outerArea,
     });
@@ -123,13 +123,13 @@ describe("Area stats tool", () => {
   });
 
   test("subarea intersect - single polygon fully outside", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sketch3, outer);
+    const metrics = await overlapSubarea("test", sketch3, outer);
     expect(metrics[0].value).toBeCloseTo(0);
     expect(metrics[1].value).toBeCloseTo(0);
   });
 
   test("subarea difference - single polygon fully outside outer, inside of outerOuter", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sketch3, outer, {
+    const metrics = await overlapSubarea("test", sketch3, outer, {
       operation: "difference",
       outerArea: outerOuterArea,
     });
@@ -139,7 +139,7 @@ describe("Area stats tool", () => {
 
   // sketch always assumed to be within outer boundary.  outerArea is passed as pre-calculated area avoiding need to compute it on the fly
   test("overall - network", async () => {
-    const metrics = await overlapArea("test", "testPerc", sc, outerOuterArea);
+    const metrics = await overlapArea("test", sc, outerOuterArea);
     const collPercMetric = firstMatchingMetric(
       metrics,
       (m) => m.sketchId === "CCCC" && m.metricId === "testPerc"
@@ -152,7 +152,7 @@ describe("Area stats tool", () => {
   });
 
   test("subarea intersect - network, half inside and outside", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sc, outer);
+    const metrics = await overlapSubarea("test", sc, outer);
     expect(area(sc)).toBe(49527861102.020134);
 
     const collAreaMetric = firstMatchingMetric(
@@ -172,7 +172,7 @@ describe("Area stats tool", () => {
   });
 
   test("subarea difference - network, half inside and outside", async () => {
-    const metrics = await overlapSubarea("test", "testPerc", sc, outer, {
+    const metrics = await overlapSubarea("test", sc, outer, {
       operation: "difference",
       outerArea: outerOuterArea,
     });

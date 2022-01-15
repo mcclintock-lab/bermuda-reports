@@ -15,7 +15,7 @@ import { getLevelNameForSketches } from "../util/iucnHelpers";
 import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
 
 import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
-import { overlapFeatures } from "../metrics/overlapFeaturesNext";
+import { overlapFeatures } from "../metrics/overlapFeatures";
 
 const CONFIG = config.habitatNursery;
 const REPORT_ID = "habitatNursery";

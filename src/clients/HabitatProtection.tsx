@@ -13,8 +13,8 @@ import {
   sketchMetricPercent,
 } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTableNext";
-import { CategoricalClassTable } from "../components/CategoricalClassTableNext";
+import { ClassTable } from "../components/ClassTable";
+import { CategoricalClassTable } from "../components/CategoricalClassTable";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;

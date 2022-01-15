@@ -11,7 +11,7 @@ import {
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { ReportSketchMetric } from "../metrics/types";
-import { overlapFeatures } from "../metrics/overlapFeaturesNext";
+import { overlapFeatures } from "../metrics/overlapFeatures";
 import { metricSort } from "../metrics/metrics";
 
 const CONFIG = config.habitatRestore;

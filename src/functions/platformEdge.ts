@@ -13,8 +13,8 @@ import {
 import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
-import { overlapFeatures } from "../metrics/overlapFeaturesNext";
-import { overlapGroupMetrics } from "../metrics/overlapGroupMetrics";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { getBreakGroup } from "../util/getBreakGroup";
 import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
 
@@ -97,14 +97,14 @@ export async function platformEdge(
   })();
 
   const groupMetrics: ReportSketchMetric[] = (
-    await overlapGroupMetrics(
-      METRIC_ID,
-      Object.keys(CONFIG.breakMap),
+    await overlapFeaturesGroupMetrics({
+      metricId: METRIC_ID,
+      groupIds: Object.keys(CONFIG.breakMap),
       sketch,
       metricToGroup,
-      sketchMetrics,
-      { [CLASS.classId]: edgeMultiPoly }
-    )
+      metrics: sketchMetrics,
+      featuresByClass: { [CLASS.classId]: edgeMultiPoly },
+    })
   ).map((gm) => ({
     reportId: REPORT_ID,
     ...gm,

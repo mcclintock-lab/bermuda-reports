@@ -33,7 +33,7 @@ import {
   flattenByGroup,
 } from "../metrics/clientMetrics";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
-import { ClassTable } from "../components/ClassTableNext";
+import { ClassTable } from "../components/ClassTable";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as ReportResultBase;

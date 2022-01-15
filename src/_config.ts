@@ -1,13 +1,5 @@
 import {
-  ExtendedMetric,
   ExtendedSketchMetric,
-  ClassMetrics,
-  ClassMetricsSketch,
-  GroupMetricsSketch,
-  ValueMetric,
-  SketchStat,
-  CategoryStat,
-  LevelStat,
   DataGroup,
   DataClass,
   ReportMetric,
@@ -80,12 +72,6 @@ export const size: DataGroup = {
 };
 
 //// PROTECTION ////
-
-export interface ProtectionResult {
-  sketchStats: SketchStat[];
-  categoryStats: CategoryStat[];
-  levelStats: LevelStat[];
-}
 
 //// EXISTING PROTECTIONS ////
 

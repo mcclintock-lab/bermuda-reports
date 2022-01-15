@@ -12,7 +12,7 @@ import {
   metricsWithSketchId,
   sketchMetricPercent,
 } from "../metrics/clientMetrics";
-import { ClassTable } from "../components/ClassTableNext";
+import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";

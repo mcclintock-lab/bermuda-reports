@@ -9,7 +9,7 @@ import {
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import { metricSort } from "../metrics/metrics";
-import { overlapFeatures } from "../metrics/overlapFeaturesNext";
+import { overlapFeatures } from "../metrics/overlapFeatures";
 import { ReportSketchMetric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
 

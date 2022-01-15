@@ -1,6 +1,6 @@
 import { ExtendedSketchMetric, GroupSketchMetric } from "./types";
-import { overlapFeatures } from "../metrics/overlapFeaturesNext";
-import { overlapArea } from "./overlapAreaNext";
+import { overlapFeatures } from "../metrics/overlapFeatures";
+import { overlapArea } from "./overlapArea";
 
 import {
   difference,

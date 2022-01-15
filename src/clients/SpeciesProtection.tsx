@@ -13,7 +13,7 @@ import {
 import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTableNext";
+import { ClassTable } from "../components/ClassTable";
 
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
 const precalcTotals = reefIndexTotals as ReportResultBase;

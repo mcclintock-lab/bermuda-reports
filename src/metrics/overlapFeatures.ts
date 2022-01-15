@@ -1,7 +1,15 @@
-import { Sketch, Polygon, Feature, intersect } from "@seasketch/geoprocessing";
+import {
+  Sketch,
+  SketchCollection,
+  Polygon,
+  Feature,
+  intersect,
+  toSketchArray,
+  isSketchCollection,
+} from "@seasketch/geoprocessing";
 import { featureCollection, MultiPolygon } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
-import { ClassMetricSketch } from "./types";
+import { SimpleSketchMetric } from "./types";
 import area from "@turf/area";
 import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
@@ -14,25 +22,19 @@ import { clip } from "../util/clip";
  * polygon - sum of area
  */
 export async function overlapFeatures(
+  metricId: string,
   /** features to intersect and get overlap stats */
   features: Feature<Polygon | MultiPolygon>[],
-  /** Name of class */
-  name: string,
-  /** sketches.  If empty will return 0 result. */
-  sketches: Sketch<Polygon | MultiPolygon>[],
-  /**
-   * point - total number point features
-   * line - total length all line features
-   * polygon - total area of features
-   */
-  totalValue: number,
+  /** the sketches.  If empty will return 0 result. */
+  sketch: Sketch<Polygon> | SketchCollection<Polygon> | Sketch<Polygon>[],
   options: {
     /** Whether to calculate individual sketch metrics, otherwide just overall */
     calcSketchMetrics: boolean;
   } = { calcSketchMetrics: true }
-): Promise<ClassMetricSketch> {
+): Promise<SimpleSketchMetric[]> {
   let sumValue: number = 0;
   let isOverlap = false;
+  const sketches = Array.isArray(sketch) ? sketch : toSketchArray(sketch);
 
   if (sketches.length > 0) {
     const sketchColl = flatten(featureCollection(sketches));
@@ -40,8 +42,7 @@ export async function overlapFeatures(
 
     // If sketch overlap, use union
     const sketchUnion = clip(sketchColl.features, "union");
-    if (!sketchUnion)
-      throw new Error("rasterClassStats - something went wrong");
+    if (!sketchUnion) throw new Error("overlapFeatures - something went wrong");
     const sketchUnionArea = area(sketchUnion);
     isOverlap = sketchUnionArea < sketchArea;
 
@@ -58,7 +59,7 @@ export async function overlapFeatures(
   }
 
   // Calc sketchMetrics if enabled
-  const sketchMetrics = !options.calcSketchMetrics
+  let sketchMetrics: SimpleSketchMetric[] = !options.calcSketchMetrics
     ? []
     : sketches.map((curSketch) => {
         let sketchValue: number = 0;
@@ -68,10 +69,12 @@ export async function overlapFeatures(
           features as Feature<Polygon | MultiPolygon>[]
         );
         return {
-          id: curSketch.properties.id,
-          name: curSketch.properties.name,
+          metricId,
+          sketchId: curSketch.properties.id,
           value: sketchValue,
-          percValue: sketchValue / totalValue,
+          extra: {
+            sketchName: curSketch.properties.name,
+          },
         };
       });
 
@@ -79,12 +82,20 @@ export async function overlapFeatures(
     sumValue = sketchMetrics.reduce((sumSoFar, sm) => sumSoFar + sm.value, 0);
   }
 
-  return {
-    name,
-    value: sumValue,
-    percValue: sumValue / totalValue,
-    sketchMetrics,
-  };
+  if (isSketchCollection(sketch)) {
+    // Push collection with accumulated sumValue
+    sketchMetrics.push({
+      metricId,
+      sketchId: sketch.properties.id,
+      value: sumValue,
+      extra: {
+        sketchName: sketch.properties.name,
+        isCollection: true,
+      },
+    });
+  }
+
+  return sketchMetrics;
 }
 
 const getSketchPolygonIntersectArea = (

@@ -7,7 +7,7 @@ import {
   keyBy,
   toNullSketch,
 } from "@seasketch/geoprocessing";
-import { overlapArea } from "../metrics/overlapAreaNext";
+import { overlapArea } from "../metrics/overlapArea";
 import { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import { ReportSketchMetric, ExtendedSketchMetric } from "../metrics/types";
 import { iucnCategories, levels } from "../util/iucnProtectionLevel";
