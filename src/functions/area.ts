@@ -28,12 +28,7 @@ export async function area(
   );
 
   const eez = (
-    await overlapArea(
-      METRIC_ID,
-      PERC_METRIC_ID,
-      sketch,
-      STUDY_REGION_AREA_SQ_METERS
-    )
+    await overlapArea(METRIC_ID, sketch, STUDY_REGION_AREA_SQ_METERS)
   ).map(
     (metrics): ReportSketchMetric => ({
       reportId: REPORT_ID,
@@ -43,7 +38,7 @@ export async function area(
   );
 
   const nearshore = (
-    await overlapSubarea(METRIC_ID, PERC_METRIC_ID, sketch, nearshorePolys[0])
+    await overlapSubarea(METRIC_ID, sketch, nearshorePolys[0])
   ).map(
     (metrics): ReportSketchMetric => ({
       reportId: REPORT_ID,
@@ -53,7 +48,7 @@ export async function area(
   );
 
   const offshore = (
-    await overlapSubarea(METRIC_ID, PERC_METRIC_ID, sketch, nearshorePolys[0], {
+    await overlapSubarea(METRIC_ID, sketch, nearshorePolys[0], {
       operation: "difference",
       outerArea: STUDY_REGION_AREA_SQ_METERS,
     })

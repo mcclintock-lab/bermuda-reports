@@ -1,56 +1,218 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "616f1ae906f1b7772b51f18f",
-      "name": "full mpa",
-      "category": "1a",
-      "level": "full",
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "full mpa"
+      }
     },
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "616f1ae906f1b7772b51f191",
-      "name": "low mpa",
-      "category": "None",
-      "level": "low",
-      "area": 30946853.366245817,
-      "percPlanningArea": 0.00006644703380380953
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 129760135.88214482,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 0.0002786123691900815,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "None",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "None",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 30946853.36627568,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "high",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 0,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 30946853.36627568,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
     }
   ],
-  "categoryStats": [
-    {
-      "category": "1a",
-      "level": "full",
-      "numSketches": 1,
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-high-network",
+      "updatedAt": "2021-10-19T23:07:10.877Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
     },
-    {
-      "category": "None",
-      "level": "low",
-      "numSketches": 1,
-      "area": 30946853.36627568,
-      "percPlanningArea": 0.00006644703380387366
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 1,
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
-    },
-    {
-      "level": "high",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    },
-    {
-      "level": "low",
-      "numSketches": 1,
-      "area": 30946853.36627568,
-      "percPlanningArea": 0.00006644703380387366
-    }
-  ]
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "updatedAt": "2021-10-19T23:06:50.458Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "updatedAt": "2021-10-19T23:07:10.884Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
+      }
+    ]
+  }
 }

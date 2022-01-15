@@ -1,41 +1,85 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 251253216.90383413,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "4/6",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 251253216.90383413,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "high",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 251253216.90383413,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
       "name": "pelagic-break-partial-no-take",
-      "category": "4/6",
-      "level": "high",
-      "area": 251253216.90383413,
-      "percPlanningArea": 0.0005394742657466582
-    }
-  ],
-  "categoryStats": [
-    {
-      "category": "4/6",
-      "level": "high",
-      "numSketches": 1,
-      "area": 251253216.9038352,
-      "percPlanningArea": 0.0005394742657466604
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
+        }
+      ]
     },
-    {
-      "level": "high",
-      "numSketches": 1,
-      "area": 251253216.9038352,
-      "percPlanningArea": 0.0005394742657466604
-    },
-    {
-      "level": "low",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    }
-  ]
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
+  }
 }

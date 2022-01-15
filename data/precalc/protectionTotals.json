@@ -1,0 +1,10 @@
+{
+  "metrics": [{
+    "metricId": "areaOverlap",
+    "value": 465737168307.9038
+  }, {
+    "classId": "eez",
+    "metricId": "areaOverlap",
+    "value": 465737168307.9038
+  }]
+}

@@ -14,7 +14,7 @@ import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
 import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
 
-import { overlapGroupMetrics } from "../metrics/overlapGroupMetrics";
+import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { overlapFeatures } from "../metrics/overlapFeaturesNext";
 
 const CONFIG = config.habitatNursery;
@@ -65,14 +65,14 @@ export async function habitatNursery(
     sketchCategoryMap[sketchMetric.sketchId];
 
   const groupMetrics = (
-    await overlapGroupMetrics(
-      METRIC_ID,
-      levels,
+    await overlapFeaturesGroupMetrics({
+      metricId: METRIC_ID,
+      groupIds: levels,
       sketch,
       metricToGroup,
-      classMetrics,
-      featuresByClass
-    )
+      metrics: classMetrics,
+      featuresByClass,
+    })
   ).map(
     (gm): ReportSketchMetric => ({
       reportId: REPORT_ID,

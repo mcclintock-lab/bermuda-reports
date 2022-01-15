@@ -2,7 +2,6 @@
  * @group smoke
  */
 import { protection } from "./protection";
-import { iucnCategories } from "../util/iucnProtectionLevel";
 import {
   getExamplePolygonSketchAll,
   writeResultOutput,
@@ -17,15 +16,6 @@ describe("Basic smoke tests", () => {
     for (const example of examples) {
       const result = await protection(example);
       expect(result).toBeTruthy();
-      result.sketchStats.forEach((sStat) => {
-        expect(
-          typeof sStat.category === "string" || sStat.category === null
-        ).toBe(true);
-        expect(
-          typeof sStat.sketchId === "string" || sStat.sketchId === null
-        ).toBe(true);
-        expect(sStat.percPlanningArea).toBeGreaterThanOrEqual(0);
-      });
       writeResultOutput(result, "protection", example.properties.name);
     }
   });

@@ -16,8 +16,8 @@ import { clip } from "../util/clip";
 import { ClassMetricSketch } from "./types";
 
 /**
- * Assuming sketches are within some outer boundary with size outerArea,
- * calculates the area of each sketch and the proportion of outerArea they take up.
+ * Returns the area of each sketch and the proportion of outerArea they take up
+ * Assumes sketches are completely within outerArea so that a clip operation is not necessary.
  */
 export async function overlapArea(
   /** Name of class */

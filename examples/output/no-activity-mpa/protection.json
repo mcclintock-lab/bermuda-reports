@@ -1,41 +1,85 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "618abe61e4efd949c23c5899",
+      "value": 471997272.05642706,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 471997272.05642706,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 471997272.05642706,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "high",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "618abe61e4efd949c23c5899",
       "name": "no-activity-mpa",
-      "category": "1a",
-      "level": "full",
-      "area": 471997272.05642706,
-      "percPlanningArea": 0.0010134412801350323
-    }
-  ],
-  "categoryStats": [
-    {
-      "category": "1a",
-      "level": "full",
-      "numSketches": 1,
-      "area": 471997272.05642265,
-      "percPlanningArea": 0.001013441280135023
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 1,
-      "area": 471997272.05642265,
-      "percPlanningArea": 0.001013441280135023
+      "updatedAt": "2021-11-09T18:30:57.892Z",
+      "createdAt": "2021-11-09T18:30:57.892Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": ""
+        }
+      ]
     },
-    {
-      "level": "high",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    },
-    {
-      "level": "low",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    }
-  ]
+    "id": "1",
+    "bbox": [
+      -64.61027849772681,
+      32.19068339515532,
+      -64.33287371257072,
+      32.41123101229184
+    ],
+    "geometry": null
+  }
 }

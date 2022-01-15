@@ -1,41 +1,85 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 24031748.116384912,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "4/6",
+      "metricId": "area",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 24031748.116384912,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "high",
+      "metricId": "area",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 24031748.116384912,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbc28aac8c8285d50db2f",
       "name": "mpa-high",
-      "category": "4/6",
-      "level": "high",
-      "area": 24031748.116384912,
-      "percPlanningArea": 0.00005159937782869257
-    }
-  ],
-  "categoryStats": [
-    {
-      "category": "4/6",
-      "level": "high",
-      "numSketches": 1,
-      "area": 24031748.116382703,
-      "percPlanningArea": 0.00005159937782868783
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
+      "updatedAt": "2021-10-05T02:44:56.968Z",
+      "createdAt": "2021-10-05T02:44:56.968Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"TOURISM\"]"
+        }
+      ]
     },
-    {
-      "level": "high",
-      "numSketches": 1,
-      "area": 24031748.116382703,
-      "percPlanningArea": 0.00005159937782868783
-    },
-    {
-      "level": "low",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    }
-  ]
+    "id": "1",
+    "bbox": [
+      -64.86625596136682,
+      32.20595207620439,
+      -64.76875229925741,
+      32.250097107343166
+    ],
+    "geometry": null
+  }
 }

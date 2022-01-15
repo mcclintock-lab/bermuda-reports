@@ -22,13 +22,13 @@ import { SimpleSketchMetric } from "./types";
 export async function overlapArea(
   /** Metric identifier */
   metricId: string,
-  /** Percent metric identifier */
-  percMetricId: string,
   /** single sketch or collection. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** area of outer boundary (typically EEZ or planning area) */
-  outerArea: number
+  outerArea: number,
+  includePercMetric: boolean = true
 ): Promise<SimpleSketchMetric[]> {
+  const percMetricId = `${metricId}Perc`;
   // Union to remove overlap
   const combinedSketch = isSketchCollection(sketch)
     ? clip(sketch.features, "union")
@@ -56,14 +56,16 @@ export async function overlapArea(
             sketchName: curSketch.properties.name,
           },
         });
-        metrics.push({
-          metricId: percMetricId,
-          sketchId: curSketch.properties.id,
-          value: 0,
-          extra: {
-            sketchName: curSketch.properties.name,
-          },
-        });
+        if (includePercMetric) {
+          metrics.push({
+            metricId: percMetricId,
+            sketchId: curSketch.properties.id,
+            value: 0,
+            extra: {
+              sketchName: curSketch.properties.name,
+            },
+          });
+        }
       } else {
         const sketchArea = turfArea(curSketch);
         metrics.push({
@@ -74,14 +76,16 @@ export async function overlapArea(
             sketchName: curSketch.properties.name,
           },
         });
-        metrics.push({
-          metricId: percMetricId,
-          sketchId: curSketch.properties.id,
-          value: sketchArea / outerArea,
-          extra: {
-            sketchName: curSketch.properties.name,
-          },
-        });
+        if (includePercMetric) {
+          metrics.push({
+            metricId: percMetricId,
+            sketchId: curSketch.properties.id,
+            value: sketchArea / outerArea,
+            extra: {
+              sketchName: curSketch.properties.name,
+            },
+          });
+        }
       }
     });
   }
@@ -112,13 +116,12 @@ export async function overlapArea(
 
 /**
  * Returns area stats for sketch input after performing overlay operation against a subarea feature.
+ * Includes both area overlap and percent area overlap metrics, because calculating percent later would be too complicated
  * For sketch collections, dissolve is used when calculating total sketch area to prevent double counting
  */
 export async function overlapSubarea(
   /** Metric identifier */
   metricId: string,
-  /** Percent metric identifier */
-  percMetricId: string,
   /** Single sketch or collection */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** subarea feature */
@@ -130,6 +133,7 @@ export async function overlapSubarea(
     outerArea?: number | undefined;
   }
 ): Promise<SimpleSketchMetric[]> {
+  const percMetricId = `${metricId}Perc`;
   const operation = options?.operation || "intersect";
   const subareaArea =
     options?.outerArea && operation === "intersect"

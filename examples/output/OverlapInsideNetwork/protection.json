@@ -1,49 +1,206 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "619a8e39a717c5a0742cafb9",
-      "name": "Large MPA",
-      "category": "1a",
-      "level": "full",
-      "area": 12311918758.318974,
-      "percPlanningArea": 0.02643533648613467
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
     },
     {
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
       "sketchId": "619a8e39a717c5a0742cafba",
-      "name": "MPA inside",
-      "category": "1a",
-      "level": "full",
-      "area": 673240597.1411997,
-      "percPlanningArea": 0.0014455376185396334
-    }
-  ],
-  "categoryStats": [
-    {
-      "category": "1a",
-      "level": "full",
-      "numSketches": 2,
-      "area": 12311918758.319027,
-      "percPlanningArea": 0.026435336486134785
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 2,
-      "area": 12311918758.319027,
-      "percPlanningArea": 0.026435336486134785
+      "value": 673240597.1411997,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
     },
     {
-      "level": "high",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 12311918758.319027,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
     },
     {
-      "level": "low",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
+      "reportId": "protection",
+      "classId": "eez",
+      "metricId": "areaPerc",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0.026435336486134785,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 673240597.1411997,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "1a",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "value": 673240597.1411997,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "full",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "high",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "protection",
+      "classId": "eez",
+      "groupId": "low",
+      "metricId": "area",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
     }
-  ]
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619a8e39a717c5a0742cafb8",
+      "name": "OverlapInsideNetwork",
+      "updatedAt": "2021-11-30T00:27:09.918Z",
+      "createdAt": "2021-10-28T17:43:51.029Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "updatedAt": "2021-11-21T18:26:41.435Z",
+          "createdAt": "2021-10-28T17:34:24.300Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69359098486977,
+          32.44980942063518,
+          -63.603991852331994,
+          33.55643352377083
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "updatedAt": "2021-11-30T00:27:09.924Z",
+          "createdAt": "2021-11-03T14:28:36.389Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.68357919967069,
+          32.45363443027919,
+          -64.53976093344767,
+          32.944735150647226
+        ],
+        "geometry": null
+      }
+    ]
+  }
 }
