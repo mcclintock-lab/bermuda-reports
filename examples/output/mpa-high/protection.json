@@ -3,7 +3,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 24031748.116384912,
       "extra": {
@@ -14,7 +14,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "4/6",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 24031748.116384912,
       "extra": {
@@ -25,7 +25,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 0,
       "extra": {
@@ -36,7 +36,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "high",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 24031748.116384912,
       "extra": {
@@ -47,7 +47,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "low",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
       "value": 0,
       "extra": {

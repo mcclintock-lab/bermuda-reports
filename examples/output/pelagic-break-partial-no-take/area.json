@@ -1,9 +1,9 @@
 {
   "metrics": [
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 251253216.90383413,
       "extra": {
@@ -11,9 +11,9 @@
       }
     },
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "nearshore",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 62228333.88027496,
       "extra": {
@@ -21,9 +21,9 @@
       }
     },
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "offshore",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 188999666.4793882,
       "extra": {
@@ -31,9 +31,9 @@
       }
     },
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "eez",
-      "metricId": "areaPerc",
+      "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 0.0005394742657466582,
       "extra": {
@@ -41,9 +41,9 @@
       }
     },
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "nearshore",
-      "metricId": "areaPerc",
+      "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 0.024265325214327615,
       "extra": {
@@ -51,9 +51,9 @@
       }
     },
     {
-      "reportId": "size",
+      "reportId": "area",
       "classId": "offshore",
-      "metricId": "areaPerc",
+      "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
       "value": 0.000408054442443948,
       "extra": {

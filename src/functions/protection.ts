@@ -4,11 +4,10 @@ import {
   Polygon,
   GeoprocessingHandler,
   toSketchArray,
-  keyBy,
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import { overlapArea } from "../metrics/overlapArea";
-import { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
+import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import { ReportSketchMetric, ExtendedSketchMetric } from "../metrics/types";
 import { iucnCategories, levels } from "../util/iucnProtectionLevel";
 import {
@@ -17,8 +16,11 @@ import {
 } from "../util/iucnHelpers";
 import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
 
-const REPORT_ID = "protection";
-const METRIC_ID = "area";
+const CONFIG = config;
+const REPORT = CONFIG.protection;
+const METRIC = REPORT.metrics.areaOverlap;
+if (!CONFIG || !REPORT || !METRIC)
+  throw new Error("Problem accessing report config");
 
 /**
  * Calculates area of overlap between each sketch/collection and eez.
@@ -32,10 +34,15 @@ export async function protection(
   const sketches = toSketchArray(sketch);
 
   const classMetrics = (
-    await overlapArea(METRIC_ID, sketch, STUDY_REGION_AREA_SQ_METERS, false)
+    await overlapArea(
+      METRIC.metricId,
+      sketch,
+      STUDY_REGION_AREA_SQ_METERS,
+      false
+    )
   ).map(
     (metrics): ReportSketchMetric => ({
-      reportId: REPORT_ID,
+      reportId: REPORT.reportId,
       classId: "eez",
       ...metrics,
     })
@@ -48,7 +55,7 @@ export async function protection(
 
   const categoryMetrics = (
     await overlapAreaGroupMetrics({
-      metricId: METRIC_ID,
+      metricId: METRIC.metricId,
       groupIds: Object.keys(iucnCategories),
       sketch,
       metricToGroup: metricToCategory,
@@ -59,7 +66,7 @@ export async function protection(
     })
   ).map(
     (gm): ReportSketchMetric => ({
-      reportId: REPORT_ID,
+      reportId: REPORT.reportId,
       ...gm,
     })
   );
@@ -71,7 +78,7 @@ export async function protection(
 
   const levelMetrics = (
     await overlapAreaGroupMetrics({
-      metricId: METRIC_ID,
+      metricId: METRIC.metricId,
       groupIds: levels,
       sketch,
       metricToGroup: metricToLevel,
@@ -81,7 +88,7 @@ export async function protection(
     })
   ).map(
     (gm): ReportSketchMetric => ({
-      reportId: REPORT_ID,
+      reportId: REPORT.reportId,
       ...gm,
     })
   );

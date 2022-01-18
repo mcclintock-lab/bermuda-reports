@@ -20,7 +20,7 @@ import {
 import { getBreakGroup } from "../util/getBreakGroup";
 import { GroupCircleRow } from "../components/Circle";
 import {
-  ExtendedSketchMetric,
+  ReportMetric,
   GroupMetricAgg,
   GroupMetricSketchAgg,
 } from "../metrics/types";
@@ -45,12 +45,7 @@ const precalcTotals = platformEdgeTotals as ReportResultBase;
 const CLASS = config.platformEdge.classes[0];
 const BREAK_MAP = config.platformEdge.breakMap;
 
-const isEdgeSketchMetric = (
-  metric: ExtendedSketchMetric
-): metric is EdgeSketchMetric =>
-  !!metric?.extra?.numFishingRestricted && !!metric?.extra?.overlapEdge;
-
-const toEdgeSketchMetric = (metric: ExtendedSketchMetric): EdgeSketchMetric => {
+const toEdgeSketchMetric = (metric: ReportMetric): EdgeSketchMetric => {
   if (
     metric?.extra?.numFishingRestricted !== undefined &&
     metric?.extra?.overlapEdge !== undefined

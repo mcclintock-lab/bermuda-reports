@@ -18,7 +18,14 @@ import { ReportTableStyled } from "../components/ReportTableStyled";
 import config, { ReportResult } from "../_config";
 import { nestMetrics } from "../metrics/clientMetrics";
 
-const CONFIG = config.size;
+const METRIC_NAME = "areaOverlap";
+const PERC_METRIC_NAME = "areaOverlapPerc";
+
+const CONFIG = config;
+const REPORT = CONFIG.size;
+const METRIC = REPORT.metrics[METRIC_NAME];
+if (!CONFIG || !REPORT || !METRIC)
+  throw new Error("Problem accessing report config");
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
 
@@ -124,7 +131,7 @@ const SizeCard = () => {
 };
 
 const genSingleSizeTable = (data: ReportResult) => {
-  const classesById = keyBy(CONFIG.classes, (c) => c.classId);
+  const classesById = keyBy(METRIC.classes, (c) => c.classId);
   const singleMetrics = data.metrics.filter(
     (m) => m.sketchId === data.sketch.properties.id
   );
@@ -140,14 +147,14 @@ const genSingleSizeTable = (data: ReportResult) => {
     {
       Header: "Area Within Plan",
       accessor: (row) => {
-        const value = aggMetrics[row.classId].area[0].value;
+        const value = aggMetrics[row.classId][METRIC_NAME][0].value;
         return Number.format(Math.round(squareMeterToMile(value))) + " sq. mi.";
       },
     },
     {
       Header: "% Within Plan",
       accessor: (row) =>
-        percentWithEdge(aggMetrics[row.classId].areaPerc[0].value),
+        percentWithEdge(aggMetrics[row.classId][PERC_METRIC_NAME][0].value),
     },
   ];
 
@@ -175,7 +182,7 @@ const genNetworkSizeTable = (data: ReportResult) => {
     sketchId,
   }));
 
-  const classColumns: Column<{ sketchId: string }>[] = CONFIG.classes.map(
+  const classColumns: Column<{ sketchId: string }>[] = METRIC.classes.map(
     (curClass, index) => ({
       Header: curClass.display,
       style: { color: "#777" },
@@ -184,8 +191,8 @@ const genNetworkSizeTable = (data: ReportResult) => {
           Header: "Area" + " ".repeat(index),
           accessor: (row) => {
             const value =
-              aggMetrics[row.sketchId][curClass.classId as string].area[0]
-                .value;
+              aggMetrics[row.sketchId][curClass.classId as string]
+                .areaOverlap[0].value;
             return (
               Number.format(Math.round(squareMeterToMile(value))) + " sq. mi."
             );
@@ -195,8 +202,9 @@ const genNetworkSizeTable = (data: ReportResult) => {
           Header: "% Area" + " ".repeat(index),
           accessor: (row) => {
             const value =
-              aggMetrics[row.sketchId][curClass.classId as string].areaPerc[0]
-                .value;
+              aggMetrics[row.sketchId][curClass.classId as string][
+                PERC_METRIC_NAME
+              ][0].value;
             return percentWithEdge(value);
           },
         },

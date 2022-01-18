@@ -3,7 +3,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
       "value": 13281509.242890002,
       "extra": {
@@ -13,7 +13,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
       "value": 13281509.242890002,
       "extra": {
@@ -24,7 +24,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "areaPerc",
+      "metricId": "areaOverlapPerc",
       "sketchId": "61685a19b503392035ed519c",
       "value": 0.000028517176954426482,
       "extra": {
@@ -36,7 +36,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "None",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
       "value": 13281509.242890002,
       "extra": {
@@ -47,7 +47,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "None",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
       "value": 13281509.242890002,
       "extra": {
@@ -59,7 +59,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
       "value": 0,
       "extra": {
@@ -71,7 +71,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "high",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
       "value": 0,
       "extra": {
@@ -83,7 +83,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "low",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
       "value": 13281509.242890002,
       "extra": {
@@ -94,7 +94,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "low",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
       "value": 13281509.242890002,
       "extra": {

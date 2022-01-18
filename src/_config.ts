@@ -1,9 +1,10 @@
 import {
-  ExtendedSketchMetric,
   DataGroup,
   DataClass,
+  Report,
   ReportMetric,
   ReportSketchMetric,
+  MetricGroup,
 } from "../src/metrics/types";
 
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
@@ -46,32 +47,50 @@ export const objectives = {
   habitatNursery: 0.5,
 };
 
-//// SIZE ////
+//// AREA ////
 
-const sizeClasses: DataClass[] = [
-  {
-    classId: "eez",
-    display: "EEZ",
+const sizeReport: Report = {
+  reportId: "area",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      baseFilename: "nearshore_dissolved",
+      filename: "nearshore_dissolved.fgb",
+      classes: [
+        {
+          classId: "eez",
+          display: "EEZ",
+        },
+        {
+          classId: "nearshore",
+          display: "Nearshore",
+        },
+        {
+          classId: "offshore",
+          display: "Offshore",
+        },
+      ],
+      layerId: "6164aebea04323106537eb5a",
+    },
   },
-  {
-    classId: "nearshore",
-    display: "Nearshore",
-  },
-  {
-    classId: "offshore",
-    display: "Offshore",
-  },
-];
-
-const sizeBaseFilename = "nearshore_dissolved";
-export const size: DataGroup = {
-  baseFilename: sizeBaseFilename,
-  filename: `${sizeBaseFilename}${fgbFileSuffix}`,
-  classes: sizeClasses,
-  layerId: "6164aebea04323106537eb5a",
 };
 
 //// PROTECTION ////
+
+const protectionReport: Report = {
+  reportId: "protection",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      classes: [
+        {
+          classId: "eez",
+          display: "EEZ",
+        },
+      ],
+    },
+  },
+};
 
 //// EXISTING PROTECTIONS ////
 
@@ -606,7 +625,7 @@ export type PlatformEdgeDataGroup = DataGroup & {
   breakMap: Record<string, number>;
 };
 
-export interface EdgeSketchMetric extends ExtendedSketchMetric {
+export interface EdgeSketchMetric extends ReportMetric {
   extra: {
     numFishingRestricted: number;
     overlapEdge: boolean;
@@ -657,7 +676,8 @@ export default {
   localDataUrl,
   dataBucketUrl,
   objectives,
-  size,
+  size: sizeReport,
+  protection: protectionReport,
   existingProtection,
   nearshore,
   offshore,

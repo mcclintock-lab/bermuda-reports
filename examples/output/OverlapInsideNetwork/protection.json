@@ -3,7 +3,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 12311918758.318974,
       "extra": {
@@ -13,7 +13,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "value": 673240597.1411997,
       "extra": {
@@ -23,7 +23,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 12311918758.319027,
       "extra": {
@@ -34,7 +34,7 @@
     {
       "reportId": "protection",
       "classId": "eez",
-      "metricId": "areaPerc",
+      "metricId": "areaOverlapPerc",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 0.026435336486134785,
       "extra": {
@@ -46,7 +46,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "1a",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 12311918758.318974,
       "extra": {
@@ -57,7 +57,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "1a",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "value": 673240597.1411997,
       "extra": {
@@ -68,7 +68,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "1a",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 12311918758.318974,
       "extra": {
@@ -80,7 +80,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 12311918758.318974,
       "extra": {
@@ -91,7 +91,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "value": 673240597.1411997,
       "extra": {
@@ -102,7 +102,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 12311918758.318974,
       "extra": {
@@ -114,7 +114,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "high",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 0,
       "extra": {
@@ -126,7 +126,7 @@
       "reportId": "protection",
       "classId": "eez",
       "groupId": "low",
-      "metricId": "area",
+      "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "value": 0,
       "extra": {

@@ -41,13 +41,18 @@ export interface DataGroup {
   layerId?: string;
 }
 
+/** Represents a single metric, having one DataGroup */
 export interface MetricGroup extends DataGroup {
+  /** Unique identifier for metric */
   metricId: string;
 }
 
-export interface ReportGroup {
+/** Represents a single report */
+export interface Report {
+  /** unique identifier for report */
   reportId: string;
-  metrics: MetricGroup[];
+  /** report metrics keyed by metricId for easy retrieval */
+  metrics: Record<string, MetricGroup>;
 }
 
 export type MetricIdNames = "metricId" | "classId" | "groupId" | "geographyId";

@@ -6,6 +6,7 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
   toNullSketch,
+  keyBy,
 } from "@seasketch/geoprocessing";
 import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
@@ -13,49 +14,51 @@ import bbox from "@turf/bbox";
 import { ReportSketchMetric } from "../metrics/types";
 import { metricSort } from "../metrics/metrics";
 
-const CONFIG = config.size;
-const REPORT_ID = "size";
-const METRIC_ID = "area";
-const PERC_METRIC_ID = "areaPerc";
+const CONFIG = config;
+const REPORT = CONFIG.size;
+const METRIC = REPORT.metrics.areaOverlap;
+if (!CONFIG || !REPORT || !METRIC)
+  throw new Error("Problem accessing report config");
 
 export async function area(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const nearshorePolys = await fgbFetchAll<Feature<Polygon>>(
-    `${config.dataBucketUrl}${CONFIG.filename}`,
+    `${CONFIG.dataBucketUrl}${METRIC.filename}`,
     box
   );
+  const classesById = keyBy(METRIC.classes, (c) => c.classId);
 
   const eez = (
-    await overlapArea(METRIC_ID, sketch, STUDY_REGION_AREA_SQ_METERS)
+    await overlapArea(METRIC.metricId, sketch, STUDY_REGION_AREA_SQ_METERS)
   ).map(
     (metrics): ReportSketchMetric => ({
-      reportId: REPORT_ID,
-      classId: "eez",
+      reportId: REPORT.reportId,
+      classId: classesById.eez.classId,
       ...metrics,
     })
   );
 
   const nearshore = (
-    await overlapSubarea(METRIC_ID, sketch, nearshorePolys[0])
+    await overlapSubarea(METRIC.metricId, sketch, nearshorePolys[0])
   ).map(
     (metrics): ReportSketchMetric => ({
-      reportId: REPORT_ID,
-      classId: "nearshore",
+      reportId: REPORT.reportId,
+      classId: classesById.nearshore.classId,
       ...metrics,
     })
   );
 
   const offshore = (
-    await overlapSubarea(METRIC_ID, sketch, nearshorePolys[0], {
+    await overlapSubarea(METRIC.metricId, sketch, nearshorePolys[0], {
       operation: "difference",
       outerArea: STUDY_REGION_AREA_SQ_METERS,
     })
   ).map(
     (metrics): ReportSketchMetric => ({
-      reportId: REPORT_ID,
-      classId: "offshore",
+      reportId: REPORT.reportId,
+      classId: classesById.offshore.classId,
       ...metrics,
     })
   );
