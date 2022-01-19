@@ -57,28 +57,25 @@ const HabitatRestoration = () => {
                   A suitability analysis was conducted for multiple habitat
                   types and identified areas with restoration potential.
                 </p>
-                <p>
-                  Objectives:
-                  <ul>
-                    <li>
-                      Establish active restoration of areas that were formerly
-                      seagrass habitats (100m2) through turtle exclusion.
-                    </li>
-                    <li>
-                      Inventory and assess past, present and potential salt
-                      marsh and mangrove habitat areas and develop a strategic
-                      plan for conservation and restoration.
-                    </li>
-                    <li>
-                      Initiate active restoration of threatened mangrove
-                      habitats.
-                    </li>
-                    <li>
-                      Initiate active restoration of damaged and/or degraded
-                      coral habitats in protected areas.
-                    </li>
-                  </ul>
-                </p>
+                <p>Objectives:</p>
+                <ul>
+                  <li>
+                    Establish active restoration of areas that were formerly
+                    seagrass habitats (100m2) through turtle exclusion.
+                  </li>
+                  <li>
+                    Inventory and assess past, present and potential salt marsh
+                    and mangrove habitat areas and develop a strategic plan for
+                    conservation and restoration.
+                  </li>
+                  <li>
+                    Initiate active restoration of threatened mangrove habitats.
+                  </li>
+                  <li>
+                    Initiate active restoration of damaged and/or degraded coral
+                    habitats in protected areas.
+                  </li>
+                </ul>
               </Collapse>
               <ReportError>
                 <ClassTable
@@ -121,9 +118,9 @@ const genSketchTable = (data: ReportResult) => {
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default HabitatRestoration;

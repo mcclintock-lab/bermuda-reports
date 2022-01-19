@@ -159,6 +159,7 @@ const genHabitatToggles = () => {
     <>
       {CONFIG.classes.map((curClass) => (
         <LayerToggle
+          key={curClass.layerId}
           label={`Show ${curClass.display} Layer`}
           layerId={curClass.layerId}
         />
@@ -450,9 +451,9 @@ const genHelp = () => (
 );
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default KeyNurseryHabitat;

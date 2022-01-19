@@ -84,9 +84,9 @@ const genSketchTable = (data: ReportResult) => {
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default ExistingProtections;

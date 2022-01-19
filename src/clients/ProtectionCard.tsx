@@ -433,32 +433,36 @@ const genCategoryRowText = (categoryAgg: GroupMetricAgg) => {
   const cats = iucnCategories[categoryAgg.groupId].categories;
   if (cats) {
     return cats
-      .map((cat) => {
+      .map((cat, index) => {
         return (
-          <>
+          <span key={index}>
             <span>
               {cat.category !== "None" && <Pill>{cat.category}</Pill>}
             </span>{" "}
             <span>{cat.name}</span>
-          </>
+          </span>
         );
       })
       .reduce<JSX.Element[]>(
         (acc, catEl, index) => [
           ...acc,
           catEl,
-          index === cats.length - 1 ? <></> : <span> or </span>,
+          index === cats.length - 1 ? (
+            <span key="keyA"></span>
+          ) : (
+            <span key="keyB"> or </span>
+          ),
         ],
         []
       );
   } else {
     return (
-      <>
+      <span key="keyC">
         <span>
           {categoryAgg.groupId !== "None" && <Pill>{categoryAgg.groupId}</Pill>}
         </span>{" "}
         <span>{iucnCategories[categoryAgg.groupId].name}</span>
-      </>
+      </span>
     );
   }
 };

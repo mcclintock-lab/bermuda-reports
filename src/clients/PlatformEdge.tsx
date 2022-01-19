@@ -195,35 +195,30 @@ const PlatformEdge = () => {
                 one fishing activity is restricted, and the boundary overlaps
                 with the 55-2000m fishing zone of the platform.
               </p>
-              <p>
-                Fishing activities that breaks are assessed for include:
-                <ul>
-                  <li>Fishing/collection: recreational (sustainable)</li>
-                  <li>
-                    Fishing/collection: local fishing (sustainable) Industrial
-                  </li>
-                  <li>Fishing, industrial scale aquaculture</li>
-                </ul>
-                Fishing activities that breaks are not assessed for include:
-                <ul>
-                  <li>Traditional fishing/collection</li>
-                </ul>
-              </p>
-
-              <p>
-                Breaks are further broken down into 3 levels:
-                <ul>
-                  <li>
-                    <b>Definite</b> break: all 3 fishing activities restricted
-                  </li>
-                  <li>
-                    <b>Partial</b> break: 1-2 fishing activities restricted
-                  </li>
-                  <li>
-                    <b>No</b> break: 0 fishing activities restricted
-                  </li>
-                </ul>
-              </p>
+              <p>Fishing activities that breaks are assessed for include:</p>
+              <ul>
+                <li>Fishing/collection: recreational (sustainable)</li>
+                <li>
+                  Fishing/collection: local fishing (sustainable) Industrial
+                </li>
+                <li>Fishing, industrial scale aquaculture</li>
+              </ul>
+              Fishing activities that breaks are not assessed for include:
+              <ul>
+                <li>Traditional fishing/collection</li>
+              </ul>
+              <p>Breaks are further broken down into 3 levels:</p>
+              <ul>
+                <li>
+                  <b>Definite</b> break: all 3 fishing activities restricted
+                </li>
+                <li>
+                  <b>Partial</b> break: 1-2 fishing activities restricted
+                </li>
+                <li>
+                  <b>No</b> break: 0 fishing activities restricted
+                </li>
+              </ul>
               <p>
                 In addition, if MPA boundaries within a given break category
                 overlap with each other, the overlap is only counted once
@@ -365,9 +360,9 @@ const genSketchTable = (
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default PlatformEdge;

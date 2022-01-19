@@ -57,21 +57,23 @@ export const IucnMatrix = () => {
             <th>Activity</th>
             {Object.keys(iucnCategoriesList)
               .sort()
-              .map((cat) => (
-                <th className={iucnCategoriesList[cat].level}>
+              .map((cat, index) => (
+                <th key={index} className={iucnCategoriesList[cat].level}>
                   {iucnCategoriesList[cat].category}
                 </th>
               ))}
           </tr>
         </thead>
         <tbody>
-          {Object.values(iucnActivities).map((act) => {
+          {Object.values(iucnActivities).map((act, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{act.display}</td>
-                {iucnActivityCategories[act.id].map((rank) => {
+                {iucnActivityCategories[act.id].map((rank, index) => {
                   return (
-                    <td className={rank}>{activityRanks[rank].display}</td>
+                    <td key={index} className={rank}>
+                      {activityRanks[rank].display}
+                    </td>
                   );
                 })}
               </tr>
