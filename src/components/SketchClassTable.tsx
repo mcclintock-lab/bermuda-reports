@@ -36,7 +36,7 @@ export interface SketchClassTableProps {
 const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   rows,
   classes,
-  usePerc = false,
+  usePerc = true,
 }) => {
   const classColumns: Column<Record<string, string | number>>[] = classes.map(
     (curClass) => ({

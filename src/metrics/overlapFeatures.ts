@@ -110,7 +110,7 @@ const doIntersect = (
     sumProperty?: string;
   }
 ) => {
-  const { operation = "sum" } = options;
+  const { operation = "area" } = options;
   switch (operation) {
     case "sum":
       return getSketchPolygonIntersectSumValue(
