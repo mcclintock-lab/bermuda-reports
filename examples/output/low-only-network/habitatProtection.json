@@ -34,17 +34,6 @@
     {
       "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bathypelagic",
-      "sketchId": "61685a19b503392035ed519c",
-      "value": 0,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
       "classId": "Bays and Coast",
       "sketchId": "61685a10f3f078352076a1fb",
       "value": 0,
@@ -260,6 +249,16 @@
       "value": 175,
       "extra": {
         "sketchName": "low-1"
+      }
+    },
+    {
+      "reportId": "habitatProtection",
+      "metricId": "nearshore",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
       }
     },
     {

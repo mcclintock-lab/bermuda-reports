@@ -633,7 +633,7 @@ const shipwreckReport: Report = {
           display: "Shipwrecks",
         },
       ],
-      layerId: "6164aebea04323106537eb5a",
+      layerId: "61538b8cd5974aea32a4a5ea",
     },
   },
 };

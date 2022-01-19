@@ -15,18 +15,7 @@
       "metricId": "nearshore",
       "classId": "Algal Vermetid Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 1,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 43,
+      "value": 44,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -56,28 +45,6 @@
       "reportId": "habitatProtection",
       "metricId": "nearshore",
       "classId": "Bathypelagic",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Bathypelagic",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Bathypelagic",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 0,
       "extra": {
@@ -92,17 +59,6 @@
       "value": 0,
       "extra": {
         "sketchName": "full mpa"
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Bays and Coast",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
       }
     },
     {
@@ -151,17 +107,6 @@
       "reportId": "habitatProtection",
       "metricId": "nearshore",
       "classId": "Castle Harbour Madracis",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Castle Harbour Madracis",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 0,
       "extra": {
@@ -183,18 +128,7 @@
       "metricId": "nearshore",
       "classId": "Diploria Porites Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 8297,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Diploria Porites Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 939,
+      "value": 9236,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -225,18 +159,7 @@
       "metricId": "nearshore",
       "classId": "Fore Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 2381,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Fore Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 347,
+      "value": 2728,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -276,7 +199,6 @@
     {
       "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 0,
       "extra": {
@@ -309,18 +231,7 @@
       "metricId": "nearshore",
       "classId": "Main Terrace Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 2228,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 2192,
+      "value": 4420,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -344,17 +255,6 @@
       "value": 0,
       "extra": {
         "sketchName": "full mpa"
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Mesopelagic",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
       }
     },
     {
@@ -393,18 +293,7 @@
       "metricId": "nearshore",
       "classId": "Mesophotic",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 1022,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Mesophotic",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 886,
+      "value": 1908,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -445,17 +334,6 @@
       "reportId": "habitatProtection",
       "metricId": "nearshore",
       "classId": "Montastraea Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "616f1ae906f1b7772b51f191",
       "value": 0,
       "extra": {
@@ -477,18 +355,7 @@
       "metricId": "nearshore",
       "classId": "Rariphotic",
       "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 1782,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Rariphotic",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 389,
+      "value": 2171,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -520,17 +387,6 @@
       "classId": "Rim Reef",
       "sketchId": "616f1ae906f1b7772b51f190",
       "value": 3418,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Rim Reef",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "value": 0,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true

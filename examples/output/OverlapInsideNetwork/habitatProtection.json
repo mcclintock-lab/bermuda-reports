@@ -14,6 +14,27 @@
     {
       "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "classId": "Fore Reef",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 6124,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "habitatProtection",
+      "metricId": "nearshore",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "habitatProtection",
+      "metricId": "nearshore",
       "classId": "Algal Vermetid Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "value": 6,
@@ -29,17 +50,6 @@
       "value": 6,
       "extra": {
         "sketchName": "MPA inside"
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Bathypelagic",
-      "sketchId": "619a8e39a717c5a0742cafb8",
-      "value": 19879,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
       }
     },
     {
@@ -153,17 +163,6 @@
       "value": 297,
       "extra": {
         "sketchName": "MPA inside"
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Fore Reef",
-      "sketchId": "619a8e39a717c5a0742cafb8",
-      "value": 6124,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
       }
     },
     {

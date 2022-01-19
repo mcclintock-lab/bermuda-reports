@@ -32,7 +32,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Mangrove",
+      "classId": "Nursery Reef",
       "groupId": "full",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
@@ -43,7 +43,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
+      "classId": "Mangrove",
       "groupId": "full",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
@@ -65,7 +65,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Mangrove",
+      "classId": "Nursery Reef",
       "groupId": "high",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
@@ -76,7 +76,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
+      "classId": "Mangrove",
       "groupId": "high",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
@@ -98,7 +98,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Mangrove",
+      "classId": "Nursery Reef",
       "groupId": "low",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
@@ -109,7 +109,7 @@
     },
     {
       "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
+      "classId": "Mangrove",
       "groupId": "low",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",

@@ -54,17 +54,6 @@
     {
       "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bathypelagic",
-      "sketchId": "619834743ff3e57f7333d93e",
-      "value": 174816,
-      "extra": {
-        "sketchName": "Gigantic Network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
       "classId": "Bays and Coast",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 11154,
@@ -364,17 +353,6 @@
     {
       "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
-      "sketchId": "619834743ff3e57f7333d93e",
-      "value": 25473,
-      "extra": {
-        "sketchName": "Gigantic Network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
       "classId": "Rim Reef",
       "sketchId": "617e59f3198e046808b50fb2",
       "value": 14981,
@@ -390,6 +368,27 @@
       "value": 12682,
       "extra": {
         "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "reportId": "habitatProtection",
+      "metricId": "nearshore",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 0,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "habitatProtection",
+      "metricId": "nearshore",
+      "classId": "Rariphotic",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "value": 25473,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
       }
     },
     {
