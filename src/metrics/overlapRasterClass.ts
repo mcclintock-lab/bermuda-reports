@@ -137,23 +137,29 @@ export async function overlapRasterClass(
 
   // Sum the counts by class for each histogram
   if (isSketchCollection(sketch)) {
+    const sumByClass: Record<string, number> = {};
     overallHistograms.forEach((overallHist) => {
       if (!overallHist) {
         return; // skip undefined result
       }
       classIds.forEach((classId) => {
-        if (classIds.includes(classId)) {
-          sketchMetrics.push({
-            metricId,
-            classId: options.classIdMapping[classId],
-            sketchId: sketch.properties.id,
-            value: overallHist[classId] || 0,
-            extra: {
-              sketchName: sketch.properties.name,
-              isCollection: true,
-            },
-          });
-        }
+        const value = overallHist[classId] ? overallHist[classId] : 0;
+        sumByClass[classId] = sumByClass[classId]
+          ? sumByClass[classId] + value
+          : value;
+      });
+    });
+
+    classIds.forEach((classId) => {
+      sketchMetrics.push({
+        metricId,
+        classId: options.classIdMapping[classId],
+        sketchId: sketch.properties.id,
+        value: sumByClass[classId] || 0,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
       });
     });
   }

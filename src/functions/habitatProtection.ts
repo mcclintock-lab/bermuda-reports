@@ -5,7 +5,6 @@ import {
   Polygon,
   toSketchArray,
   loadCogWindow,
-  keyBy,
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";

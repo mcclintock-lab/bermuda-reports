@@ -38,7 +38,9 @@ const HabitatProtection = () => {
           // Collection top-level or single sketch.
           const nearshoreParentPercMetrics = metricsWithSketchId(
             sketchMetricPercent(
-              data.metrics.filter((m) => m.metricId === NEARSHORE_METRIC_ID),
+              data.metrics.filter(
+                (m) => m.metricId === NEARSHORE_METRIC_ID && m.classId
+              ),
               nearshorePrecalcTotals.metrics
             ),
             [data.sketch.properties.id]
@@ -104,7 +106,9 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   const subSketchIds = subSketches.map((sk) => sk.properties.id);
   const subSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
-      data.metrics.filter((m) => m.metricId === NEARSHORE_METRIC_ID),
+      data.metrics.filter(
+        (m) => m.metricId === NEARSHORE_METRIC_ID && m.classId
+      ),
       subSketchIds
     ),
     nearshorePrecalcTotals.metrics
@@ -125,7 +129,9 @@ const genOffshoreSketchTable = (data: ReportResult) => {
   const subSketchIds = subSketches.map((sk) => sk.properties.id);
   const subSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
-      data.metrics.filter((m) => m.metricId === OFFSHORE_METRIC_ID),
+      data.metrics.filter(
+        (m) => m.metricId === OFFSHORE_METRIC_ID && m.classId
+      ),
       subSketchIds
     ),
     offshorePrecalcTotals.metrics
