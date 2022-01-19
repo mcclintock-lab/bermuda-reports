@@ -618,6 +618,26 @@ export const oceanUse: DataGroup = {
   }),
 };
 
+//// SHIPWRECKS ////
+
+const shipwreckReport: Report = {
+  reportId: "shipwreck",
+  metrics: {
+    sumOverlap: {
+      metricId: "sumOverlap",
+      baseFilename: "WreckHeatmap",
+      filename: "WreckHeatmap.fgb",
+      classes: [
+        {
+          classId: "shipwreck",
+          display: "Shipwrecks",
+        },
+      ],
+      layerId: "6164aebea04323106537eb5a",
+    },
+  },
+};
+
 //// PLATFORM EDGE ////
 
 export type PlatformEdgeDataGroup = DataGroup & {
@@ -687,4 +707,5 @@ export default {
   habitatRestore,
   habitatNursery,
   platformEdge,
+  shipwreck: shipwreckReport,
 };

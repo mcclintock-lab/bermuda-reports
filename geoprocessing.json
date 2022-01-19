@@ -47,6 +47,11 @@
       "name": "ExistingProtections",
       "description": "report overlap with existing protections",
       "source": "src/clients/ExistingProtections.tsx"
+    },
+    {
+      "name": "Shipwreck",
+      "description": "report overlap with shipwrecks",
+      "source": "src/clients/Shipwreck.tsx"
     }
   ],
   "preprocessingFunctions": [
@@ -62,6 +67,7 @@
     "src/functions/reefIndex.ts",
     "src/functions/renewable.ts",
     "src/functions/habitatRestore.ts",
-    "src/functions/habitatNursery.ts"
+    "src/functions/habitatNursery.ts",
+    "src/functions/shipwreck.ts"
   ]
 }

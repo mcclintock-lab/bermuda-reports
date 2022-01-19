@@ -1,0 +1,103 @@
+{
+  "metrics": [
+    {
+      "reportId": "shipwreck",
+      "classId": "shipwreck",
+      "metricId": "sumOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "value": 216,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "reportId": "shipwreck",
+      "classId": "shipwreck",
+      "metricId": "sumOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "value": 235,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "shipwreck",
+      "classId": "shipwreck",
+      "metricId": "sumOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "value": 19,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-high-network",
+      "updatedAt": "2021-10-19T23:07:10.877Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "full mpa",
+          "updatedAt": "2021-10-19T23:06:50.458Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "low mpa",
+          "updatedAt": "2021-10-19T23:07:10.884Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

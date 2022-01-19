@@ -29,17 +29,22 @@ const SketchClassTableStyled = styled(SmallReportTableStyled)`
 export interface SketchClassTableProps {
   rows: Record<string, string | number>[];
   classes: DataClass[];
+  /** Whether to interpret and format values as percentages, defaults to true */
+  usePerc?: boolean;
 }
 
 const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   rows,
   classes,
+  usePerc = false,
 }) => {
   const classColumns: Column<Record<string, string | number>>[] = classes.map(
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => {
-        return percentWithEdge(row[curClass.classId] as number);
+        return usePerc
+          ? percentWithEdge(row[curClass.classId] as number)
+          : row[curClass.classId];
       },
     })
   );
