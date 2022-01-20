@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "full mpa"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 1895555.1181703717,
       "extra": {
         "sketchName": "no-high-network",
@@ -22,30 +24,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 1895555.1181703717,
       "extra": {
         "sketchName": "low mpa"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 556999.6672391263,
       "extra": {
         "sketchName": "full mpa"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 556999.6672391263,
       "extra": {
         "sketchName": "no-high-network",
@@ -53,10 +58,11 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low mpa"

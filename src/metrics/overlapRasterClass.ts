@@ -6,7 +6,7 @@ import {
   toSketchArray,
   isSketchCollection,
 } from "@seasketch/geoprocessing";
-import { ClassSketchMetric } from "./types";
+import { Metric } from "./types";
 import flatten from "@turf/flatten";
 import { clip } from "../util/clip";
 import area from "@turf/area";
@@ -17,6 +17,7 @@ import {
 
 // @ts-ignore
 import geoblaze from "geoblaze";
+import { createMetric } from "./metrics";
 
 /**
  * Calculates sum of overlap between sketches and feature classes in raster
@@ -34,7 +35,7 @@ export async function overlapRasterClass(
     /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them. Default to true */
     removeSketchHoles?: boolean;
   } = { classIdMapping: {}, removeSketchHoles: true }
-): Promise<ClassSketchMetric[]> {
+): Promise<Metric[]> {
   if (!options.classIdMapping)
     throw new Error("Missing classIdMapping in config");
   const sketches = toSketchArray(sketch);
@@ -100,35 +101,39 @@ export async function overlapRasterClass(
     };
   })();
 
-  let sketchMetrics: ClassSketchMetric[] = [];
+  let sketchMetrics: Metric[] = [];
 
   if (sketches) {
     sketchHistograms.forEach((sketchHist, index) => {
       if (!sketchHist) {
         // push zero result for sketch for all classes
         classIds.forEach((classId) =>
-          sketchMetrics.push({
-            metricId,
-            classId: options.classIdMapping[classId],
-            sketchId: sketches[index].properties.id,
-            value: 0,
-            extra: {
-              sketchName: sketches[index].properties.name,
-            },
-          })
+          sketchMetrics.push(
+            createMetric({
+              metricId,
+              classId: options.classIdMapping[classId],
+              sketchId: sketches[index].properties.id,
+              value: 0,
+              extra: {
+                sketchName: sketches[index].properties.name,
+              },
+            })
+          )
         );
       } else {
         classIds.forEach((classId) => {
           if (classIds.includes(classId)) {
-            sketchMetrics.push({
-              metricId,
-              classId: options.classIdMapping[classId],
-              sketchId: sketches[index].properties.id,
-              value: sketchHist[classId] || 0,
-              extra: {
-                sketchName: sketches[index].properties.name,
-              },
-            });
+            sketchMetrics.push(
+              createMetric({
+                metricId,
+                classId: options.classIdMapping[classId],
+                sketchId: sketches[index].properties.id,
+                value: sketchHist[classId] || 0,
+                extra: {
+                  sketchName: sketches[index].properties.name,
+                },
+              })
+            );
           }
         });
       }
@@ -151,16 +156,18 @@ export async function overlapRasterClass(
     });
 
     classIds.forEach((classId) => {
-      sketchMetrics.push({
-        metricId,
-        classId: options.classIdMapping[classId],
-        sketchId: sketch.properties.id,
-        value: sumByClass[classId] || 0,
-        extra: {
-          sketchName: sketch.properties.name,
-          isCollection: true,
-        },
-      });
+      sketchMetrics.push(
+        createMetric({
+          metricId,
+          classId: options.classIdMapping[classId],
+          sketchId: sketch.properties.id,
+          value: sumByClass[classId] || 0,
+          extra: {
+            sketchName: sketch.properties.name,
+            isCollection: true,
+          },
+        })
+      );
     });
   }
 

@@ -5,14 +5,13 @@ import {
   Feature,
   Polygon,
   fgbFetchAll,
-  toSketchArray,
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { metricSort } from "../metrics/metrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.habitatRestore;
 const REPORT_ID = "existingProtections";
@@ -37,10 +36,9 @@ export async function habitatRestore(
         );
         // Transform from simple to extended metric
         return overlapResult.map(
-          (metric): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metric): Metric => ({
             ...metric,
+            classId: curClass.classId,
           })
         );
       })
@@ -52,7 +50,7 @@ export async function habitatRestore(
   );
 
   return {
-    metrics: metricSort(metrics),
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

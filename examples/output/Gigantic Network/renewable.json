@@ -1,30 +1,33 @@
 {
   "metrics": [
     {
-      "reportId": "renewable",
-      "classId": "Fixed Offshore Wind",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 991147.264895618,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Fixed Offshore Wind",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 833147.2661019266,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Fixed Offshore Wind",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 991147.264895618,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -32,61 +35,33 @@
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
-      "value": 1555720.8217766285,
-      "extra": {
-        "sketchName": "Gigantic MPA"
-      }
-    },
-    {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
-      "metricId": "areaOverlap",
-      "sketchId": "619834683ff3e57f7333d93d",
-      "value": 1254996.874171406,
-      "extra": {
-        "sketchName": "Gigantic MPA 2"
-      }
-    },
-    {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
-      "metricId": "areaOverlap",
-      "sketchId": "619834743ff3e57f7333d93e",
-      "value": 1555720.8217766285,
-      "extra": {
-        "sketchName": "Gigantic Network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "renewable",
       "classId": "Floating Offshore Wind",
-      "metricId": "areaOverlap",
-      "sketchId": "617e59f3198e046808b50fb2",
+      "groupId": null,
+      "geographyId": null,
       "value": 444938.63100481033,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Offshore Wind",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 408207.01623010635,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Offshore Wind",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 444938.63100481033,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -94,30 +69,67 @@
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1555720.8217766285,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1254996.874171406,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1555720.8217766285,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
       "value": 450788.52027624846,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
       "value": 411888.2518416345,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
       "value": 450788.52027624846,
       "extra": {
         "sketchName": "Gigantic Network",

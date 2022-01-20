@@ -11,10 +11,10 @@ import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { overlapRasterClass } from "../metrics/overlapRasterClass";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { metricSort } from "../metrics/metrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 import { groupClassIdMapping } from "../metrics/classId";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 
 const OFFSHORE_CLASSES = config.offshore.classes;
 const REPORT_ID = "habitatProtection";
@@ -32,7 +32,7 @@ export async function habitatProtection(
     `${config.dataBucketUrl}${config.nearshore.filename}`,
     { windowBox: box }
   );
-  const nearshoreMetrics: ReportSketchMetric[] = (
+  const nearshoreMetrics: Metric[] = (
     await overlapRasterClass(NEARSHORE_METRIC_ID, nearshoreRaster, sketch, {
       classIdMapping: groupClassIdMapping(config.nearshore),
     })
@@ -42,7 +42,7 @@ export async function habitatProtection(
   }));
 
   // Individual rasters - single-class
-  const offshoreMetrics: ReportSketchMetric[] = (
+  const offshoreMetrics: Metric[] = (
     await Promise.all(
       OFFSHORE_CLASSES.map(async (curClass) => {
         const raster = await loadCogWindow(
@@ -58,10 +58,9 @@ export async function habitatProtection(
           sketch
         );
         return overlapResult.map(
-          (metrics): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metrics): Metric => ({
             ...metrics,
+            classId: curClass.classId,
           })
         );
       })
@@ -73,7 +72,7 @@ export async function habitatProtection(
   );
 
   return {
-    metrics: metricSort([...nearshoreMetrics, ...offshoreMetrics]),
+    metrics: metricSort(metricRekey([...nearshoreMetrics, ...offshoreMetrics])),
     sketch: toNullSketch(sketch, true),
   };
 }

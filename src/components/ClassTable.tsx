@@ -2,18 +2,14 @@ import React from "react";
 import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
 import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { GreenPill } from "../components/Pill";
-import {
-  DataClass,
-  ExtendedMetric,
-  ExtendedSketchMetric,
-} from "../metrics/types";
+import { DataClass, Metric } from "../metrics/types";
 import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface ClassTableProps {
   titleText: string;
   percText?: string;
   // Metrics with percent value
-  rows: ExtendedMetric[] | ExtendedSketchMetric[];
+  rows: Metric[] | Metric[];
   classes: DataClass[];
   showGoal?: boolean;
   options?: {
@@ -56,7 +52,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       : "50%",
   };
   const classesByName = keyBy(classes, (curClass) => curClass.classId);
-  const columns: Column<ExtendedMetric>[] = [
+  const columns: Column<Metric>[] = [
     {
       Header: titleText,
       accessor: (row) =>

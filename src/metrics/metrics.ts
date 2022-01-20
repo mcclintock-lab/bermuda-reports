@@ -1,25 +1,63 @@
-import { SimpleMetric, ReportSketchMetric } from "./types";
+import {
+  Metric,
+  MetricDimension,
+  MetricProperties,
+  MetricProperty,
+} from "./types";
+
+export const createMetric = (metricProps: Partial<Metric>): Metric => {
+  return {
+    metricId: "metric",
+    value: 0,
+    classId: null,
+    groupId: null,
+    geographyId: null,
+    sketchId: null,
+    ...metricProps,
+  };
+};
 
 /**
- * Sorts metrics by reportId, then metricId, classId, sketchId.
- * Use to produce consistent metric data that is grouped for ease of
- * scanning for accuracy
+ * Reorders metrics to a consistent key order for readability
  */
-export const metricSort = (metrics: ReportSketchMetric[]) => {
-  return metrics.sort(
-    (a, b) =>
-      a.reportId.localeCompare(b.reportId) ||
-      a.metricId.localeCompare(b.metricId) ||
-      a.classId?.localeCompare(b?.classId || "missing") ||
-      a.sketchId.localeCompare(b.sketchId)
-  );
+export const metricRekey = (
+  metrics: Metric[],
+  idOrder: MetricProperty[] = [...MetricProperties]
+) => {
+  return metrics.map((curMetric) => {
+    var newMetric: Record<string, any> = {};
+    idOrder.forEach((id) => {
+      newMetric[id] = curMetric[id];
+    });
+    return newMetric;
+  }) as Metric[];
+};
+
+/**
+ * Sorts metrics to a consistent order for readability
+ * Defaults to [metricId, classId, sketchId]
+ */
+export const metricSort = (
+  metrics: Metric[],
+  sortIds: MetricDimension[] = ["metricId", "classId", "sketchId"]
+) => {
+  return metrics.sort((a, b) => {
+    return sortIds.reduce((sortResult, idName) => {
+      // if sort result alread found then skip
+      if (sortResult !== 0) return sortResult;
+      const aVal = a[idName];
+      const bVal = b[idName];
+      if (aVal && bVal) return aVal.localeCompare(bVal);
+      return 0;
+    }, 0);
+  });
 };
 
 /**
  * Returns new sketchMetrics array with first sketchMetric matched set with new value.
  * If no match, returns copy of sketchMetrics.  Does not mutate array in place.
  */
-export const findAndUpdateMetricValue = <T extends SimpleMetric>(
+export const findAndUpdateMetricValue = <T extends Metric>(
   sketchMetrics: T[],
   matcher: (sk: T) => boolean,
   value: number

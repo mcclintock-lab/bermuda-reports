@@ -1,230 +1,253 @@
 {
   "metrics": [
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bathypelagic",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 9,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Bays and Coast",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Castle Harbour Madracis",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Diploria Porites Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 261,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Fore Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 127,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 1813,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesopelagic",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 1469,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesophotic",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 670,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 272,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rim Reef",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 64,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Abyssopelagic",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Bathypelagic",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Cold water coral",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Escarpments",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Knolls",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Pelagic zone 1",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Pelagic zone 2",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Pelagic zone 3",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Plains",
-      "metricId": "offshore",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"

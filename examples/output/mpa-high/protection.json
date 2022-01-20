@@ -1,54 +1,55 @@
 {
   "metrics": [
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 24031748.116384912,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "eez",
       "groupId": "4/6",
-      "metricId": "areaOverlap",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "geographyId": null,
       "value": 24031748.116384912,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "full",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "high",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
       "value": 24031748.116384912,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "low",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"

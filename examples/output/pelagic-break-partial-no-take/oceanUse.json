@@ -1,90 +1,99 @@
 {
   "metrics": [
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 133.64044189453125,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 3802.0274279229343,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 3294.543529510498,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 9775.465261237696,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 3924.9022018164396,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 900.2259992361069,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 26660.67877505347,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 348.446845471859,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 116.12503337860107,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"

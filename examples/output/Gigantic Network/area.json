@@ -1,30 +1,33 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 74441430177.46776,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 60595104877.38999,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 80684770294.54762,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -32,30 +35,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 2564477386.490682,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 1874517003.482576,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 2564477386.49068,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -63,30 +69,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 71876952791.07402,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 58720269943.97343,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 78120292908.15387,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -94,30 +103,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.15983570829857782,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.13010579571637262,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.1732409946745029,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -125,30 +137,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.9999926706652551,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.7309494224416251,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.9999926706652543,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -156,30 +171,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.15518392408872478,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.12677835606000568,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.16866343290437016,
       "extra": {
         "sketchName": "Gigantic Network",

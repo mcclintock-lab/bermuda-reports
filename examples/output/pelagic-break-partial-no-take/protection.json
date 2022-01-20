@@ -1,54 +1,55 @@
 {
   "metrics": [
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 251253216.90383413,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "classId": "eez",
       "groupId": "4/6",
-      "metricId": "areaOverlap",
-      "sketchId": "61803a1a04baa808681f0a8f",
+      "geographyId": null,
       "value": 251253216.90383413,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "full",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "high",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
       "value": 251253216.90383413,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "low",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"

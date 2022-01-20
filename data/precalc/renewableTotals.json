@@ -1,27 +1,31 @@
 {
   "metrics": [
     {
-      "reportId": "renewable",
-      "classId": "Fixed Offshore Wind",
       "metricId": "renewable",
+      "sketchId": null,
+      "classId": "Fixed Offshore Wind",
+      "geographyId": null,
       "value": 991147.264895618
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
       "metricId": "renewable",
+      "sketchId": null,
+      "classId": "Floating Solar",
+      "geographyId": null,
       "value": 1555720.8217766285
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Offshore Wind",
       "metricId": "renewable",
+      "sketchId": null,
+      "classId": "Floating Offshore Wind",
+      "geographyId": null,
       "value": 444938.63100481033
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "renewable",
+      "sketchId": null,
+      "classId": "Wave Energy",
+      "geographyId": null,
       "value": 450788.52027624846
     }
   ]

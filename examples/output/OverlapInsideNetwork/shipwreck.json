@@ -1,10 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 13,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -12,20 +13,22 @@
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 13,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 10,
       "extra": {
         "sketchName": "MPA inside"

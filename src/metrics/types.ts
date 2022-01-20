@@ -1,3 +1,7 @@
+export type Nullable<T> = T | null;
+export type ISO8601Duration = string;
+export type ISO8601DateTime = string;
+
 /**
  * Represents a single class of data within a report.
  * Used to access the data, calculate and report metrics based on them.
@@ -55,142 +59,58 @@ export interface Report {
   metrics: Record<string, MetricGroup>;
 }
 
-export type MetricIdNames = "metricId" | "classId" | "groupId" | "geographyId";
+//// METRICS ////
+
 export type MetricIdTypes = string | number;
 
-/** Single value metric */
-export interface SimpleMetric {
+/** Properties used in Metric */
+export const MetricProperties = [
+  "metricId",
+  "sketchId",
+  "classId",
+  "groupId",
+  "geographyId",
+  "value",
+  "extra",
+] as const;
+export type MetricProperty = typeof MetricProperties[number] & keyof Metric;
+
+/** Dimensions used in Metric */
+export const MetricDimensions = [
+  "metricId",
+  "geographyId",
+  "sketchId",
+  "groupId",
+  "classId",
+] as const;
+export type MetricDimension = typeof MetricDimensions[number] & keyof Metric;
+
+/**
+ * Flexible domain model for a metric - a single measurement stratified by one or more dimensions
+ */
+export interface Metric {
   /** Name of the metric */
   metricId: string;
   /** The metric value */
   value: number;
   /** Additional ad-hoc properties, often used to ease interpretation */
   extra?: Record<string, string | number | boolean>;
-}
 
-/**
- * Catch-all representation of metrics with one or more
- * optional properties used for stratification and handling time
- * Use when mixing metrics or need to support a variety
- */
-export interface ExtendedMetric extends SimpleMetric {
-  /** Optional, if metric is for specific classification - typically data class */
-  classId?: string;
-  /** Optional. if metric is for specific group - e.g. protection level*/
-  groupId?: string;
-  /** Optional, if metric is for specific geography */
-  geographyId?: string;
-  /** Optional, if metric covers specific time period */
-  duration?: string;
-  /** Optional, if metric covers specific time period, milliseconds since epoch  */
-  startTime?: number;
-}
+  // Time
+  /** Metric duration of time */
+  // duration: Nullable<ISO8601Duration>;
+  /** Metric for event at specific time  */
+  // startTime: Nullable<ISO8601DateTime>;
 
-/**
- * Metric for sketch or sketch collection
- */
-export interface SimpleSketchMetric extends SimpleMetric {
-  /** ID of sketch or sketch collection the metric is calculated for. */
-  sketchId: string;
-}
-
-/**
- * Metric for sketch or sketch collection as member of a class
- */
-export interface ClassSketchMetric extends SimpleSketchMetric {
-  /** Optional, if metric is for specific classification - typically data class */
-  classId: string;
-}
-
-/**
- * Metric for sketch or sketch collection as member of a group
- */
-export interface GroupSketchMetric extends SimpleSketchMetric {
-  /** metric group - e.g. protection level*/
-  groupId: string;
-  /** Optional, if metric is for specific classification - typically data class */
-  classId?: string;
-}
-
-/**
- * Metric for a sketch or sketch collection with additional properties supporting stratification.
- */
-export type ExtendedSketchMetric = SimpleSketchMetric & ExtendedMetric;
-
-/**
- * Extended metric with additional report ID
- */
-export type ReportMetric = ExtendedMetric & { reportId: string };
-
-/**
- * ExtendedSketchMetric with additional report ID.
- */
-export type ReportSketchMetric = SimpleSketchMetric & ReportMetric;
-
-//// DEPRECATED ////
-
-/**
- * Properties for representing metric value and perc value, such as area or sum
- * ValueMetric is the core metric representation. It can related to a class of data or a sketch
- */
-export interface ValueMetric {
-  /** The raw metric value, the heart of it all */
-  value: number;
-  /** Proportion of value to total value, so common its included */
-  percValue: number;
-}
-
-/** ValueMetric for a sketch */
-export type SketchMetric = ValueMetric & {
-  id: string;
-  name: string;
-};
-
-/**
- * ValueMetric for a named class of data
- */
-export type ClassMetric = ValueMetric & {
-  /** Name of class */
-  name: string;
-};
-
-/**
- * ValueMetric for a named class of data, with additional per-sketch
- */
-export type ClassMetricSketch = ClassMetric & {
-  sketchMetrics: SketchMetric[];
-};
-
-/**
- * Object containing a ValueMetric for one or more named class of data
- */
-export interface ClassMetrics {
-  [name: string]: ClassMetric;
-}
-
-/**
- * Object containing a ValueMetric for one or more named class of data, with additional per-sketch
- */
-export interface ClassMetricsSketch {
-  [name: string]: ClassMetricSketch;
-}
-
-// GroupMetrics have named ClassMetrics
-
-/**
- * Object containing one or more named groups, each with one or more named ClassMetric
- * Useful for larger groupings of classes e.g. protection categories and levels
- */
-export interface GroupMetrics {
-  [name: string]: ClassMetrics;
-}
-
-/**
- * Object containing one or more named groups, each with one or more named ClassMetric, with additional per-sketch
- * Useful for larger groupings of classes e.g. protection categories and levels
- */
-export interface GroupMetricsSketch {
-  [name: string]: ClassMetricsSketch;
+  // Other Dimensions
+  /** Metric from specific data class */
+  classId: Nullable<string>;
+  /** Identifier for group - e.g. protection level.  A sketch can only be a member of one*/
+  groupId: Nullable<string>;
+  /** Identifier for geography */
+  geographyId: Nullable<string>;
+  /** Identifier for sketch or sketch collection */
+  sketchId: Nullable<string>;
 }
 
 //// AGGREGATIONS ////

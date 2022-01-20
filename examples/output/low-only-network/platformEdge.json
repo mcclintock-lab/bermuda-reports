@@ -1,10 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-1",
@@ -13,10 +14,24 @@
       }
     },
     {
-      "reportId": "platformEdge",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low-1",
+        "numFishingRestricted": 3,
+        "overlapEdge": false
+      }
+    },
+    {
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -24,11 +39,11 @@
       }
     },
     {
-      "reportId": "platformEdge",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
       "classId": "Platform Edge",
       "groupId": "definite",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a19b503392035ed519c",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -36,11 +51,11 @@
       }
     },
     {
-      "reportId": "platformEdge",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
       "classId": "Platform Edge",
       "groupId": "partial",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a19b503392035ed519c",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -48,24 +63,11 @@
       }
     },
     {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "no",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "value": 0,
-      "extra": {
-        "sketchName": "low-1",
-        "numFishingRestricted": 3,
-        "overlapEdge": false
-      }
-    },
-    {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "no",
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",

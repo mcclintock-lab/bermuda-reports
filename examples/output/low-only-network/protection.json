@@ -1,54 +1,44 @@
 {
   "metrics": [
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "value": 13281509.242890002,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "metricId": "areaOverlapPerc",
-      "sketchId": "61685a19b503392035ed519c",
-      "value": 0.000028517176954426482,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "None",
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "eez",
-      "groupId": "None",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 13281509.242890002,
+      "extra": {
+        "sketchName": "low-1"
+      }
+    },
+    {
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-only-network",
@@ -56,11 +46,23 @@
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
+      "value": 13281509.242890002,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
       "classId": "eez",
       "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a19b503392035ed519c",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -68,11 +70,11 @@
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
       "classId": "eez",
       "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a19b503392035ed519c",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -80,23 +82,24 @@
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
       "classId": "eez",
       "groupId": "low",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
-        "sketchName": "low-1"
+        "sketchName": "low-only-network",
+        "isCollection": true
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "low",
-      "metricId": "areaOverlap",
+      "metricId": "areaOverlapPerc",
       "sketchId": "61685a19b503392035ed519c",
-      "value": 13281509.242890002,
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000028517176954426482,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true

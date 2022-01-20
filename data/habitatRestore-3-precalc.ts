@@ -4,17 +4,17 @@
 import fs from "fs";
 import config from "../src/_config";
 import area from "@turf/area";
-import { ReportMetric } from "../src/metrics/types";
+import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
+import { createMetric, metricRekey } from "../src/metrics/metrics";
 
 const CLASSES = config.habitatRestore.classes;
 const DATASET = "habitatRestore";
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-const REPORT_ID = "habitatRestore";
 const METRIC_ID = "areaOverlap";
 
 async function main() {
-  const metrics: ReportMetric[] = await Promise.all(
+  const metrics: Metric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
       const fc = JSON.parse(
@@ -23,17 +23,16 @@ async function main() {
           .toString()
       );
       const value = area(fc);
-      return {
-        reportId: REPORT_ID,
+      return createMetric({
         classId: curClass.classId,
         metricId: METRIC_ID,
         value,
-      };
+      });
     })
   );
 
   const result: ReportResultBase = {
-    metrics,
+    metrics: metricRekey(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

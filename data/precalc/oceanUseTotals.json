@@ -1,57 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Aquaculture",
+      "geographyId": null,
       "value": 14972.600296854973
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Boating",
+      "geographyId": null,
       "value": 430346.0135562408
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "CommercialFishing",
+      "geographyId": null,
       "value": 296287.77351568406
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "PassiveRecreation_Conservation",
+      "geographyId": null,
       "value": 230850.84109385265
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Recreational Fishing",
+      "geographyId": null,
       "value": 231050.7586448742
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Shipping",
+      "geographyId": null,
       "value": 14768.226010799408
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Swimming_Snorkeling_Diving",
+      "geographyId": null,
       "value": 613759.638105642
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Tourism",
+      "geographyId": null,
       "value": 20206.746555360034
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Utilities",
+      "geographyId": null,
       "value": 15146.934098422527
     }
   ]

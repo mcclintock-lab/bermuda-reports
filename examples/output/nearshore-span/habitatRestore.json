@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 1435855.4765313931,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 2097591.7151726917,
       "extra": {
         "sketchName": "nearshore-span"
@@ -26,7 +28,7 @@
     "properties": {
       "id": "61649a3c1e0a596510ad8329",
       "name": "nearshore-span",
-      "updatedAt": "2021-10-11T20:10:36.004Z",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
       "createdAt": "2021-10-11T20:10:36.004Z",
       "sketchClassId": "615b59e1aac8c8285d50d9b8",
       "isCollection": false,

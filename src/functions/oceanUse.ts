@@ -7,8 +7,9 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
+import { metricRekey, metricSort } from "../metrics/metrics";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
 
 const CONFIG = config.oceanUse;
@@ -19,7 +20,7 @@ export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
-  const metrics: ReportSketchMetric[] = (
+  const metrics: Metric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         // start raster load and move on in loop while awaiting finish
@@ -32,10 +33,9 @@ export async function oceanUse(
         // start analysis as soon as source load done
         const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
         return overlapResult.map(
-          (metrics): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metrics): Metric => ({
             ...metrics,
+            classId: curClass.classId,
           })
         );
       })
@@ -47,7 +47,7 @@ export async function oceanUse(
   );
 
   return {
-    metrics,
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

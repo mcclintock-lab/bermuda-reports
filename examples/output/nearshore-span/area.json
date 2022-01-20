@@ -1,61 +1,67 @@
 {
   "metrics": [
     {
-      "reportId": "area",
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "eez",
-      "metricId": "areaOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 1562787998.1749337,
+      "groupId": null,
+      "geographyId": null,
+      "value": 1608688161.7497506,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "area",
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "nearshore",
-      "metricId": "areaOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 224096911.34016454,
+      "groupId": null,
+      "geographyId": null,
+      "value": 225266115.12672675,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "area",
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "offshore",
-      "metricId": "areaOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 1339128223.69728,
+      "groupId": null,
+      "geographyId": null,
+      "value": 1383955495.4865284,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "area",
+      "metricId": "areaOverlapPerc",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "eez",
-      "metricId": "areaOverlapPerc",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 0.003355514879460421,
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0034540686705215456,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "area",
+      "metricId": "areaOverlapPerc",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "nearshore",
-      "metricId": "areaOverlapPerc",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 0.08738438094224944,
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.08784030043026499,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 0.0028912073278253166,
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.002987990394890887,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -66,7 +72,7 @@
     "properties": {
       "id": "61649a3c1e0a596510ad8329",
       "name": "nearshore-span",
-      "updatedAt": "2021-10-11T20:10:36.004Z",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
       "createdAt": "2021-10-11T20:10:36.004Z",
       "sketchClassId": "615b59e1aac8c8285d50d9b8",
       "isCollection": false,

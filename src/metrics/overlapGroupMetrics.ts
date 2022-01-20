@@ -1,4 +1,4 @@
-import { ExtendedSketchMetric, GroupSketchMetric } from "./types";
+import { Metric } from "./types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { overlapArea } from "./overlapArea";
 
@@ -18,6 +18,7 @@ import {
 import flatten from "@turf/flatten";
 import { featureCollection } from "@turf/helpers";
 import cloneDeep from "lodash/cloneDeep";
+import { createMetric } from "./metrics";
 
 type OverlapGroupOperation = (
   metricId: string,
@@ -36,14 +37,14 @@ export async function overlapFeaturesGroupMetrics(options: {
   /** Sketch - single or collection */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>;
   /** Function that given sketch metric and group name, returns true if sketch is in the group, otherwise false */
-  metricToGroup: (sketchMetric: ExtendedSketchMetric) => string;
+  metricToGroup: (sketchMetric: Metric) => string;
   /** The metrics to group */
-  metrics: ExtendedSketchMetric[];
+  metrics: Metric[];
   /** features to overlap, keyed by class ID, use empty array if overlapArea operation */
   featuresByClass: Record<string, Feature<Polygon>[]>;
   /** only generate metrics for groups that sketches match to, rather than all */
   onlyPresentGroups?: boolean;
-}): Promise<GroupSketchMetric[]> {
+}): Promise<Metric[]> {
   return overlapGroupMetrics({
     ...options,
     operation: async (
@@ -57,6 +58,7 @@ export async function overlapFeaturesGroupMetrics(options: {
         sc,
         {
           calcSketchMetrics: false,
+          operation: "area",
         }
       );
       return overallGroupMetrics[0].value;
@@ -75,15 +77,15 @@ export async function overlapAreaGroupMetrics(options: {
   /** Sketch - single or collection */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>;
   /** Function that given sketch metric and group name, returns true if sketch is in the group, otherwise false */
-  metricToGroup: (sketchMetric: ExtendedSketchMetric) => string;
+  metricToGroup: (sketchMetric: Metric) => string;
   /** The metrics to group */
-  metrics: ExtendedSketchMetric[];
+  metrics: Metric[];
   classId: string;
   /** area of outer boundary (typically EEZ or planning area) */
   outerArea: number;
   /** only generate metrics for groups that sketches match to, rather than all */
   onlyPresentGroups?: boolean;
-}): Promise<GroupSketchMetric[]> {
+}): Promise<Metric[]> {
   return overlapGroupMetrics({
     ...options,
     featuresByClass: { [options.classId]: [] },
@@ -120,16 +122,16 @@ export async function overlapGroupMetrics(options: {
   /** Sketch - single or collection */
   sketch: Sketch<Polygon> | SketchCollection<Polygon>;
   /** Function that given sketch metric returns the group ID */
-  metricToGroup: (sketchMetric: ExtendedSketchMetric) => string;
+  metricToGroup: (sketchMetric: Metric) => string;
   /** The metrics to group */
-  metrics: ExtendedSketchMetric[];
+  metrics: Metric[];
   /** features to overlap, keyed by class ID, use empty array if overlapArea operation */
   featuresByClass: Record<string, Feature<Polygon>[]>;
   /** overlap operation, defaults to overlapFeatures */
   operation: OverlapGroupOperation;
   /** only generate metrics for groups that sketches match to, rather than all groupIds */
   onlyPresentGroups?: boolean;
-}): Promise<GroupSketchMetric[]> {
+}): Promise<Metric[]> {
   const {
     metricId,
     groupIds,
@@ -147,54 +149,55 @@ export async function overlapGroupMetrics(options: {
     ? cloneDeep(metrics).filter((sm) => sm.sketchId !== sketch.properties.id)
     : cloneDeep(metrics).filter((sm) => sm.sketchId === sketch.properties.id);
 
-  // Lookup group for each metric and convert to stronger typed GroupSketchMetric
-  let groupSketchMetrics: GroupSketchMetric[] = sketchMetrics.map((m) => ({
-    groupId: metricToGroup(m),
+  // Lookup group for each metric and convert to stronger typed Metric
+  let groupSketchMetrics: Metric[] = sketchMetrics.map((m) => ({
     ...m,
+    groupId: metricToGroup(m),
   }));
 
   // For each group
-  const groupMetricsPromises = groupIds.reduce<Promise<GroupSketchMetric[]>[]>(
+  const groupMetricsPromises = groupIds.reduce<Promise<Metric[]>[]>(
     (groupMetricsPromisesSoFar, curGroup) => {
       // For each class
-      const groupMetricsPromise = classes.reduce<
-        Promise<GroupSketchMetric[]>[]
-      >((classMetricsPromisesSoFar, curClass) => {
-        // async iife to wrap in new promise
-        const curClassMetricsPromise = (async () => {
-          // Filter to cur class metrics
-          const curGroupSketchMetrics = groupSketchMetrics.filter(
-            (sm) => sm.classId === curClass && sm.metricId === metricId
-          );
+      const groupMetricsPromise = classes.reduce<Promise<Metric[]>[]>(
+        (classMetricsPromisesSoFar, curClass) => {
+          // async iife to wrap in new promise
+          const curClassMetricsPromise = (async () => {
+            // Filter to cur class metrics
+            const curGroupSketchMetrics = groupSketchMetrics.filter(
+              (sm) => sm.classId === curClass && sm.metricId === metricId
+            );
 
-          // Optionally, skip this group if not present in metrics
-          const curClassGroupIds = onlyPresentGroups
-            ? Object.keys(groupBy(curGroupSketchMetrics, (m) => m.groupId))
-            : groupIds;
-          if (onlyPresentGroups && !curClassGroupIds.includes(curGroup)) {
-            return [];
-          }
+            // Optionally, skip this group if not present in metrics
+            const curClassGroupIds = onlyPresentGroups
+              ? Object.keys(groupBy(curGroupSketchMetrics, (m) => m.groupId!))
+              : groupIds;
+            if (onlyPresentGroups && !curClassGroupIds.includes(curGroup)) {
+              return [];
+            }
 
-          const classGroupMetrics = await getClassGroupMetrics({
-            sketch,
-            groupSketchMetrics: curGroupSketchMetrics,
-            groups: groupIds,
-            groupId: curGroup,
-            metricId,
-            features: featuresByClass[curClass],
-            operation,
-          });
+            const classGroupMetrics = await getClassGroupMetrics({
+              sketch,
+              groupSketchMetrics: curGroupSketchMetrics,
+              groups: groupIds,
+              groupId: curGroup,
+              metricId,
+              features: featuresByClass[curClass],
+              operation,
+            });
 
-          return classGroupMetrics.map(
-            (metric): GroupSketchMetric => ({
-              classId: curClass,
-              ...metric,
-            })
-          );
-        })();
+            return classGroupMetrics.map(
+              (metric): Metric => ({
+                ...metric,
+                classId: curClass,
+              })
+            );
+          })();
 
-        return [...classMetricsPromisesSoFar, curClassMetricsPromise];
-      }, []);
+          return [...classMetricsPromisesSoFar, curClassMetricsPromise];
+        },
+        []
+      );
       return [...groupMetricsPromisesSoFar, ...groupMetricsPromise];
     },
     []
@@ -215,13 +218,13 @@ export async function overlapGroupMetrics(options: {
  */
 const getClassGroupMetrics = async (options: {
   sketch: Sketch<Polygon> | SketchCollection<Polygon>;
-  groupSketchMetrics: GroupSketchMetric[];
+  groupSketchMetrics: Metric[];
   groups: string[];
   groupId: string;
   metricId: string;
   features: Feature<Polygon>[];
   operation: OverlapGroupOperation;
-}): Promise<GroupSketchMetric[]> => {
+}): Promise<Metric[]> => {
   const {
     sketch,
     groupSketchMetrics,
@@ -235,21 +238,21 @@ const getClassGroupMetrics = async (options: {
   const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
   // Filter to group.  May result in empty list
-  const curGroupSketchMetrics: GroupSketchMetric[] = groupSketchMetrics.filter(
+  const curGroupSketchMetrics: Metric[] = groupSketchMetrics.filter(
     (m) => m.groupId === groupId
   );
-  const results: GroupSketchMetric[] = curGroupSketchMetrics;
+  const results: Metric[] = curGroupSketchMetrics;
 
   // If collection account for overlap
   if (isSketchCollection(sketch)) {
     // Get IDs of all sketches (non-collection) with current group and collection, from metrics
     const curGroupSketches = curGroupSketchMetrics
       .filter((gm) => gm.groupId === groupId)
-      .map((gm) => sketchMap[gm.sketchId]) // sketchMap will be undefined for collection metrics
+      .map((gm) => sketchMap[gm.sketchId!]) // sketchMap will be undefined for collection metrics
       .filter((gm) => !!gm); // so remove undefined
 
     // Get sketch metrics from higher groups (lower index value) and convert to sketches
-    const higherGroupSketchMetrics = groups.reduce<GroupSketchMetric[]>(
+    const higherGroupSketchMetrics = groups.reduce<Metric[]>(
       (otherSoFar, otherGroupName) => {
         // Append if lower index than current group
         const groupIndex = groups.findIndex((grp) => grp === groupId);
@@ -267,8 +270,8 @@ const getClassGroupMetrics = async (options: {
       []
     );
     const higherGroupSketches = Object.values(
-      keyBy(higherGroupSketchMetrics, (m) => m.sketchId)
-    ).map((ogm) => sketchMap[ogm.sketchId]);
+      keyBy(higherGroupSketchMetrics, (m) => m.sketchId!)
+    ).map((ogm) => sketchMap[ogm.sketchId!]);
 
     let groupValue: number = 0;
     if (curGroupSketches.length > 1 || higherGroupSketches.length > 0) {
@@ -286,29 +289,33 @@ const getClassGroupMetrics = async (options: {
       );
     }
 
-    results.push({
-      groupId: groupId,
-      metricId: metricId,
-      sketchId: sketch.properties.id,
-      value: groupValue,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
+    results.push(
+      createMetric({
+        groupId: groupId,
+        metricId: metricId,
+        sketchId: sketch.properties.id,
+        value: groupValue,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
   }
 
   // If no single sketch metrics for group, add a zero for group
   if (curGroupSketchMetrics.length === 0) {
-    results.push({
-      groupId: groupId,
-      metricId: metricId,
-      sketchId: sketch.properties.id,
-      value: 0,
-      extra: {
-        sketchName: sketch.properties.name,
-      },
-    });
+    results.push(
+      createMetric({
+        groupId: groupId,
+        metricId: metricId,
+        sketchId: sketch.properties.id,
+        value: 0,
+        extra: {
+          sketchName: sketch.properties.name,
+        },
+      })
+    );
   }
 
   return results;

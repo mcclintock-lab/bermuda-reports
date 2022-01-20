@@ -1,90 +1,99 @@
 {
   "metrics": [
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 636.6625752672553,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 2498.733153760433,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 136.4808122352697,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 1044.944389806129,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 816.8006114214659,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-activity-mpa"

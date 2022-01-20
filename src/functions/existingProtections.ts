@@ -8,9 +8,9 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { metricSort } from "../metrics/metrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
 
 // Multi-class vector dataset
@@ -38,7 +38,7 @@ export async function existingProtections(
     box
   );
 
-  const metrics: ReportSketchMetric[] = (
+  const metrics: Metric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
@@ -54,10 +54,9 @@ export async function existingProtections(
         );
         // Transform from simple to extended metric
         return overlapResult.map(
-          (metric): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metric): Metric => ({
             ...metric,
+            classId: curClass.classId,
           })
         );
       })
@@ -69,7 +68,7 @@ export async function existingProtections(
   );
 
   return {
-    metrics: metricSort(metrics),
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

@@ -169,8 +169,8 @@ const genNetworkSizeTable = (data: ReportResult) => {
   const sketches = toNullSketchArray(data.sketch);
   const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
   const sketchIds = sketches.map((sk) => sk.properties.id);
-  const sketchMetrics = data.metrics.filter((m) =>
-    sketchIds.includes(m.sketchId)
+  const sketchMetrics = data.metrics.filter(
+    (m) => m.sketchId && sketchIds.includes(m.sketchId)
   );
   const aggMetrics = nestMetrics(sketchMetrics, [
     "sketchId",

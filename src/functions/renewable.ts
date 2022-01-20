@@ -9,7 +9,8 @@ import {
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.renewable;
 const REPORT_ID = "renewable";
@@ -21,7 +22,7 @@ export async function renewable(
   const box = sketch.bbox || bbox(sketch);
 
   // Calc metrics for each class and merge the result
-  const metrics: ReportSketchMetric[] = (
+  const metrics: Metric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         const raster = await loadCogWindow(
@@ -33,10 +34,9 @@ export async function renewable(
         );
         const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
         return overlapResult.map(
-          (metrics): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metrics): Metric => ({
             ...metrics,
+            classId: curClass.classId,
           })
         );
       })
@@ -48,7 +48,7 @@ export async function renewable(
   );
 
   return {
-    metrics,
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

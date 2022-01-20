@@ -1,30 +1,33 @@
 {
   "metrics": [
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 14972.600296854973,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 1642.6003056913614,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Aquaculture",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 14972.600296854973,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -32,30 +35,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 426925.62420272315,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 43763.55872530374,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Boating",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 427039.62420813786,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -63,30 +69,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 181286.65499873646,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 125767.89007508755,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "CommercialFishing",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 183984.78191943094,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -94,30 +103,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 230850.84109385265,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 48486.17270811414,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "PassiveRecreation_Conservation",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 230850.84109385265,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -125,30 +137,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 230792.51365064643,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 103463.48065350112,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Recreational Fishing",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 230817.5786500862,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -156,30 +171,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 14768.226010799408,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 758.891068905592,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Shipping",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 14768.226010799408,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -187,30 +205,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 613759.638105642,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 113225.84537600353,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Swimming_Snorkeling_Diving",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 613759.638105642,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -218,30 +239,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 20206.746555360034,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 1059.8661341387779,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Tourism",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 20206.746555360034,
       "extra": {
         "sketchName": "Gigantic Network",
@@ -249,30 +273,33 @@
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 15146.934098422527,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 3536.5324890613556,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Utilities",
       "metricId": "valueOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 15146.934098422527,
       "extra": {
         "sketchName": "Gigantic Network",

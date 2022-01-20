@@ -1,57 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "reefIndex",
-      "classId": "Coral Cover",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Coral Cover",
+      "geographyId": null,
       "value": 219142.73238153942
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Coral Diversity",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Coral Diversity",
+      "geographyId": null,
       "value": 231924.1468730762
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Coral Recruit Density",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Coral Recruit Density",
+      "geographyId": null,
       "value": 73405.34650501853
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Rugosity",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Rugosity",
+      "geographyId": null,
       "value": 72297.22302708979
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Fish Diversity BRUV",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Fish Diversity BRUV",
+      "geographyId": null,
       "value": 194649.20529744774
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Fish Density",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Fish Density",
+      "geographyId": null,
       "value": 253383.98754745774
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Fish Diversity BREAM",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Fish Diversity BREAM",
+      "geographyId": null,
       "value": 333552.74660776486
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Fish Recruit Density",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Fish Recruit Density",
+      "geographyId": null,
       "value": 75390.81803614809
     },
     {
-      "reportId": "reefIndex",
-      "classId": "Seagrass",
       "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Seagrass",
+      "geographyId": null,
       "value": 2892.556873383932
     }
   ]

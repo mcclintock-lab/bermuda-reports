@@ -1,34 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "metricId": "areaOverlap",
-      "sketchId": "619a8e39a717c5a0742cafb9",
-      "value": 239653565.47493845,
-      "extra": {
-        "sketchName": "Large MPA",
-        "numFishingRestricted": 3,
-        "overlapEdge": true
-      }
-    },
-    {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "metricId": "areaOverlap",
-      "sketchId": "619a8e39a717c5a0742cafba",
-      "value": 161290260.76581994,
-      "extra": {
-        "sketchName": "MPA inside",
-        "numFishingRestricted": 3,
-        "overlapEdge": true
-      }
-    },
-    {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
       "value": 239653565.47493845,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -36,37 +13,11 @@
       }
     },
     {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "definite",
-      "metricId": "areaOverlap",
-      "sketchId": "619a8e39a717c5a0742cafb9",
-      "value": 239653565.47493845,
-      "extra": {
-        "sketchName": "Large MPA",
-        "numFishingRestricted": 3,
-        "overlapEdge": true
-      }
-    },
-    {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "definite",
-      "metricId": "areaOverlap",
-      "sketchId": "619a8e39a717c5a0742cafba",
-      "value": 161290260.76581994,
-      "extra": {
-        "sketchName": "MPA inside",
-        "numFishingRestricted": 3,
-        "overlapEdge": true
-      }
-    },
-    {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "definite",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
       "value": 239653565.47493845,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -74,11 +25,11 @@
       }
     },
     {
-      "reportId": "platformEdge",
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Platform Edge",
       "groupId": "partial",
-      "metricId": "areaOverlap",
-      "sketchId": "619a8e39a717c5a0742cafb8",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -86,15 +37,67 @@
       }
     },
     {
-      "reportId": "platformEdge",
-      "classId": "Platform Edge",
-      "groupId": "no",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 239653565.47493845,
+      "extra": {
+        "sketchName": "Large MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 239653565.47493845,
+      "extra": {
+        "sketchName": "Large MPA",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 161290260.76581994,
+      "extra": {
+        "sketchName": "MPA inside",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 161290260.76581994,
+      "extra": {
+        "sketchName": "MPA inside",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
       }
     }
   ],

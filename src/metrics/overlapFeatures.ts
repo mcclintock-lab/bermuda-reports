@@ -9,11 +9,12 @@ import {
 } from "@seasketch/geoprocessing";
 import { featureCollection, MultiPolygon } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
-import { SimpleSketchMetric } from "./types";
+import { Metric } from "./types";
 import area from "@turf/area";
 import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
 import { clip } from "../util/clip";
+import { createMetric } from "./metrics";
 
 /**
  * Calculates overlap between sketches and features, including overall and per sketch
@@ -34,7 +35,7 @@ export async function overlapFeatures(
     operation: "area" | "sum";
     sumProperty?: string;
   } = { calcSketchMetrics: true, operation: "area" }
-): Promise<SimpleSketchMetric[]> {
+): Promise<Metric[]> {
   let sumValue: number = 0;
   let isOverlap = false;
   const sketches = Array.isArray(sketch) ? sketch : toSketchArray(sketch);
@@ -63,7 +64,7 @@ export async function overlapFeatures(
   }
 
   // Calc sketchMetrics if enabled
-  let sketchMetrics: SimpleSketchMetric[] = !options.calcSketchMetrics
+  let sketchMetrics: Metric[] = !options.calcSketchMetrics
     ? []
     : sketches.map((curSketch) => {
         let sketchValue: number = doIntersect(
@@ -71,14 +72,14 @@ export async function overlapFeatures(
           features as Feature<Polygon | MultiPolygon>[],
           options
         );
-        return {
+        return createMetric({
           metricId,
           sketchId: curSketch.properties.id,
           value: sketchValue,
           extra: {
             sketchName: curSketch.properties.name,
           },
-        };
+        });
       });
 
   if (!isOverlap && options.calcSketchMetrics) {
@@ -87,15 +88,17 @@ export async function overlapFeatures(
 
   if (isSketchCollection(sketch)) {
     // Push collection with accumulated sumValue
-    sketchMetrics.push({
-      metricId,
-      sketchId: sketch.properties.id,
-      value: sumValue,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
+    sketchMetrics.push(
+      createMetric({
+        metricId,
+        sketchId: sketch.properties.id,
+        value: sumValue,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
   }
 
   return sketchMetrics;

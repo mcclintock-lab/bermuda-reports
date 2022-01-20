@@ -1,15 +1,17 @@
 {
   "metrics": [
     {
-      "reportId": "habitatRestore",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Seagrass",
+      "geographyId": null,
       "value": 32670378.385694697
     },
     {
-      "reportId": "habitatRestore",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Mangrove_Saltmarsh",
+      "geographyId": null,
       "value": 383910881.3258027
     }
   ]

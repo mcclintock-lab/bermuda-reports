@@ -1,63 +1,73 @@
 {
   "metrics": [
     {
-      "reportId": "habitatProtection",
-      "classId": "Abyssopelagic",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Abyssopelagic",
+      "geographyId": null,
       "value": 6093
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Bathypelagic",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Bathypelagic",
+      "geographyId": null,
       "value": 124
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Cold water coral",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Cold water coral",
+      "geographyId": null,
       "value": 9
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Escarpments",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Escarpments",
+      "geographyId": null,
       "value": 103
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Knolls",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Knolls",
+      "geographyId": null,
       "value": 1587
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 1",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Pelagic zone 1",
+      "geographyId": null,
       "value": 2979
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 2",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Pelagic zone 2",
+      "geographyId": null,
       "value": 1529
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 3",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Pelagic zone 3",
+      "geographyId": null,
       "value": 2601
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Plains",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Plains",
+      "geographyId": null,
       "value": 5481
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
+      "sketchId": null,
+      "classId": "Seamounts",
+      "geographyId": null,
       "value": 379
     }
   ]

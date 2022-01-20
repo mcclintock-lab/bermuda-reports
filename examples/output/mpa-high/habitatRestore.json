@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-high"

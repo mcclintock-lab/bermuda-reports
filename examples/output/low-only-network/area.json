@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-only-network",
@@ -22,20 +24,22 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 13281509.242890002,
       "extra": {
         "sketchName": "low-only-network",
@@ -43,20 +47,22 @@
       }
     },
     {
-      "reportId": "area",
+      "metricId": "areaOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "offshore",
-      "metricId": "areaOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",
@@ -64,20 +70,22 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000028517176954426482,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000028517176954426482,
       "extra": {
         "sketchName": "low-only-network",
@@ -85,20 +93,22 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.005178993571254523,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.005178993571254523,
       "extra": {
         "sketchName": "low-only-network",
@@ -106,20 +116,22 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-1"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61685a19b503392035ed519c",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low-only-network",

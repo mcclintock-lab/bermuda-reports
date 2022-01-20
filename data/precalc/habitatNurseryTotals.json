@@ -1,26 +1,31 @@
 {
   "metrics": [
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Nursery Reef",
+      "geographyId": null,
       "value": 11651653.092987554
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Mangrove",
+      "geographyId": null,
       "value": 174538.70779643767
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Seagrass",
+      "geographyId": null,
       "value": 2884769.994477741
     },
     {
-      "reportId": "habitatNursery",
       "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": null,
+      "geographyId": null,
       "value": 14710961.795261733
     }
   ]

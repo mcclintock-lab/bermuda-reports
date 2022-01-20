@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 216,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 235,
       "extra": {
         "sketchName": "no-full-network",
@@ -22,10 +24,11 @@
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 19,
       "extra": {
         "sketchName": "MPA 2"

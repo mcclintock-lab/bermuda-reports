@@ -1,60 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 251253216.90383413,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 62228333.88027496,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 188999666.4793882,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0005394742657466582,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.024265325214327615,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000408054442443948,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"

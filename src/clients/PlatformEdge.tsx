@@ -19,11 +19,7 @@ import {
 } from "@seasketch/geoprocessing/client-ui";
 import { getBreakGroup } from "../util/getBreakGroup";
 import { GroupCircleRow } from "../components/Circle";
-import {
-  ReportMetric,
-  GroupMetricAgg,
-  GroupMetricSketchAgg,
-} from "../metrics/types";
+import { Metric, GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { Collapse } from "../components/Collapse";
 import {
   firstMatchingMetric,
@@ -45,7 +41,7 @@ const precalcTotals = platformEdgeTotals as ReportResultBase;
 const CLASS = config.platformEdge.classes[0];
 const BREAK_MAP = config.platformEdge.breakMap;
 
-const toEdgeSketchMetric = (metric: ReportMetric): EdgeSketchMetric => {
+const toEdgeSketchMetric = (metric: Metric): EdgeSketchMetric => {
   if (
     metric?.extra?.numFishingRestricted !== undefined &&
     metric?.extra?.overlapEdge !== undefined

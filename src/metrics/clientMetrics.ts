@@ -1,12 +1,10 @@
 import {
   GroupMetricSketchAgg,
   DataClass,
-  ExtendedSketchMetric,
-  ExtendedMetric,
-  SimpleMetric,
-  SimpleSketchMetric,
-  MetricIdNames,
+  Metric,
   MetricIdTypes,
+  MetricDimension,
+  MetricProperty,
 } from "./types";
 
 import {
@@ -70,26 +68,26 @@ export const toSketchShortAll = (
 /**
  * Returns metrics with matching sketchId (can be an array of sketchids)
  */
-export const metricsSketchIds = <M extends SimpleSketchMetric>(metrics: M[]) =>
-  Object.keys(groupBy(metrics, (m) => m.sketchId));
+export const metricsSketchIds = <M extends Metric>(metrics: M[]) =>
+  Object.keys(groupBy(metrics, (m) => m.sketchId || "missing"));
 
 /**
  * Returns metrics with matching sketchId (can be an array of sketchids)
  */
-export const metricsWithSketchId = <M extends SimpleSketchMetric>(
+export const metricsWithSketchId = <M extends Metric>(
   metrics: M[],
   sketchId: string | string[]
 ) =>
   metrics.filter((m) =>
     Array.isArray(sketchId)
-      ? sketchId.includes(m.sketchId)
+      ? m.sketchId && sketchId.includes(m.sketchId)
       : sketchId === m.sketchId
   );
 
 /**
  * Returns metrics with matching sketchId (can be an array of sketchids)
  */
-export const metricsWithClassId = <M extends ExtendedSketchMetric>(
+export const metricsWithClassId = <M extends Metric>(
   metrics: M[],
   classId: string | string[]
 ) =>
@@ -102,7 +100,7 @@ export const metricsWithClassId = <M extends ExtendedSketchMetric>(
 /**
  * Returns metrics for given sketch (can be an array of sketches)
  */
-export const metricsForSketch = <M extends SimpleSketchMetric>(
+export const metricsForSketch = <M extends Metric>(
   metrics: M[],
   sketch: Sketch | NullSketch | Sketch[] | NullSketch[]
 ) => metricsWithSketchId(metrics, sketchToId(sketch));
@@ -111,7 +109,7 @@ export const metricsForSketch = <M extends SimpleSketchMetric>(
  * Returns the first metric that returns true for metricFilter
  * @returns
  */
-export const firstMatchingMetric = <M extends SimpleMetric>(
+export const firstMatchingMetric = <M extends Metric>(
   metrics: M[],
   metricFilter: (metric: M) => boolean
 ) => {
@@ -138,9 +136,9 @@ const classSortAlphaDisplay = (a: DataClass, b: DataClass) => {
  * Deep copies and maintains all other properties from the original metric
  */
 export const sketchMetricPercent = (
-  metrics: ExtendedSketchMetric[],
-  totals: ExtendedMetric[]
-): ExtendedSketchMetric[] => {
+  metrics: Metric[],
+  totals: Metric[]
+): Metric[] => {
   const totalsByKey = (() => {
     return keyBy(totals, (total) =>
       total.classId ? total.classId : total.metricId
@@ -205,7 +203,7 @@ export const nestMetrics = (
  * @returns
  */
 export const flattenSketchAllClassNext = (
-  metrics: ExtendedSketchMetric[],
+  metrics: Metric[],
   classes: DataClass[],
   sketches: Sketch[] | NullSketch[],
   /** function to sort class configs using Array.sort, defaults to alphabetical by display name */
@@ -221,7 +219,7 @@ export const flattenSketchAllClassNext = (
       .sort(sortFn || classSortAlphaDisplay)
       .reduce<Record<string, number>>((aggSoFar, curClass) => {
         const sketchMetricsById = metricsByClass[curClass.classId].reduce<
-          Record<string, ExtendedSketchMetric>
+          Record<string, Metric>
         >((soFar, sm) => ({ ...soFar, [sm.sketchId || "undefined"]: sm }), {});
         return {
           ...aggSoFar,
@@ -241,18 +239,17 @@ export const flattenSketchAllClassNext = (
 };
 
 /**
- * Returns aggregate sketch metric, containing all metric values using metricId property
+ * Returns aggregate sketch metric, containing all metric values using id property
  * @param metrics - class metric data with sketch
  * @param extraFlatProperty - optional id property to cross flatten with metric.  Properties will be keyed extraId_metricId
  */
 export const flattenSketchMetric = (
-  metrics: ExtendedSketchMetric[],
-  flatProperty: MetricIdNames,
+  metrics: Metric[],
+  flatProperty: MetricDimension,
   options: {
-    extraFlatProperty?: MetricIdNames;
-    // groupProperty?: "classId" | "groupId" | "reportId" | "geographyId",
+    extraFlatProperty?: MetricDimension;
   } = {}
-): Record<string, MetricIdTypes>[] => {
+): Record<MetricProperty | string, MetricIdTypes>[] => {
   const { extraFlatProperty } = options;
   const flatMetrics = groupBy(metrics, (m) => {
     if (m[flatProperty]) {
@@ -263,7 +260,10 @@ export const flattenSketchMetric = (
     );
   });
 
-  const metricsBySketchId = groupBy(metrics, (metric) => metric.sketchId);
+  const metricsBySketchId = groupBy(
+    metrics,
+    (metric) => metric.sketchId || "missing"
+  );
 
   const sketchRows = Object.keys(metricsBySketchId).reduce<
     Record<string, MetricIdTypes>[]
@@ -310,9 +310,9 @@ export const flattenSketchMetric = (
 export const flattenByGroup = (
   collection: SketchCollection | NullSketchCollection,
   /** Group metrics for collection and its child sketches */
-  groupMetrics: ExtendedSketchMetric[],
+  groupMetrics: Metric[],
   /** Totals by class */
-  totals: ExtendedMetric[]
+  totals: Metric[]
 ): {
   value: number;
   groupId: string;
@@ -381,9 +381,9 @@ export const flattenByGroupSketch = (
   /** ToDo: is this needed? can the caller just pre-filter groupMetrics? */
   sketches: Sketch[] | NullSketch[],
   /** Group metrics for collection and its child sketches */
-  groupMetrics: ExtendedSketchMetric[],
+  groupMetrics: Metric[],
   /** Totals by class */
-  totals: ExtendedMetric[]
+  totals: Metric[]
 ): GroupMetricSketchAgg[] => {
   const sketchIds = sketches.map((sk) => sk.properties.id);
   let sketchRows: GroupMetricSketchAgg[] = [];
@@ -393,15 +393,15 @@ export const flattenByGroupSketch = (
   const metricsByGroup = groupBy(groupMetrics, (m) => m.groupId || "undefined");
 
   Object.keys(metricsByGroup).forEach((curGroupId) => {
-    const groupSketchMetrics = metricsByGroup[curGroupId].filter((m) =>
-      sketchIds.includes(m.sketchId)
+    const groupSketchMetrics = metricsByGroup[curGroupId].filter(
+      (m) => m.sketchId && sketchIds.includes(m.sketchId)
     );
     const groupSketchMetricsByClass = groupBy(
       groupSketchMetrics,
       (m) => m.classId || "undefined"
     );
     const groupSketchMetricIds = Object.keys(
-      groupBy(groupSketchMetrics, (m) => m.sketchId)
+      groupBy(groupSketchMetrics, (m) => m.sketchId || "missing")
     );
 
     groupSketchMetricIds.forEach((curSketchId) => {

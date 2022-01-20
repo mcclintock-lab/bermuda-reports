@@ -1,60 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 956935.1638319656,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 956935.1638317418,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0000020546678018176244,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.00037314743158764594,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-no-land-eez-overlap"

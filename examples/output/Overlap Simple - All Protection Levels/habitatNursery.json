@@ -1,50 +1,169 @@
 {
   "metrics": [
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Mangrove",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Mangrove",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Mangrove",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Mangrove",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Mangrove",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Mangrove",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Mangrove",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 1611235.8186861514,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
       "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 973920.3334244265,
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Nursery Reef",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 1611235.8186861514,
       "extra": {
-        "sketchName": "full MPA"
+        "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 973920.3334244265,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 1596930.4856124802,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 2027271.8351702024,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -52,203 +171,11 @@
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 0,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 0,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 0,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 0,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 0,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 534740.1102749393,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 474215.38441563497,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 474215.38441563497,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 567783.4986989509,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 612890.1643095777,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 0,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 0,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 0,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 474215.38441563497,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 474215.38441563497,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 474215.38441563497,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
       "classId": "Nursery Reef",
       "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 973920.3334244265,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 973920.3334244265,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
+      "geographyId": null,
       "value": 973920.3334244265,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -256,68 +183,11 @@
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 0,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "high",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 0,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 534740.1102749393,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 105199.70841768029,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatNursery",
       "classId": "Nursery Reef",
       "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 1611235.8186861514,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
+      "geographyId": null,
       "value": 1053351.501745521,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -325,22 +195,11 @@
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "low",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 0,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "habitatNursery",
-      "classId": "Mangrove",
-      "groupId": "low",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Nursery Reef",
+      "groupId": "low",
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -348,22 +207,135 @@
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
-      "groupId": "low",
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 973920.3334244265,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Nursery Reef",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 973920.3334244265,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 973920.3334244265,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Nursery Reef",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 973920.3334244265,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 567783.4986989509,
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1596930.4856124802,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Seagrass",
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Nursery Reef",
       "groupId": "low",
+      "geographyId": null,
+      "value": 1596930.4856124802,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 534740.1102749393,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Seagrass",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 534740.1102749393,
+      "extra": {
+        "sketchName": "high MPA"
+      }
+    },
+    {
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 612890.1643095777,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Seagrass",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 474215.38441563497,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Seagrass",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 105199.70841768029,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Seagrass",
+      "groupId": "low",
+      "geographyId": null,
       "value": 33475.07147626246,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -371,26 +343,69 @@
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "groupId": "low",
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 474215.38441563497,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Seagrass",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 474215.38441563497,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 474215.38441563497,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Seagrass",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 474215.38441563497,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 1596930.4856124802,
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 567783.4986989509,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "habitatNursery",
-      "classId": "Nursery Reef",
-      "groupId": "low",
       "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 0,
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Seagrass",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 567783.4986989509,
       "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
+        "sketchName": "low MPA"
       }
     }
   ],

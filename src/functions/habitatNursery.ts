@@ -12,10 +12,11 @@ import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
-import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 
 import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.habitatNursery;
 const REPORT_ID = "habitatNursery";
@@ -29,7 +30,7 @@ export async function habitatNursery(
 
   // Class metrics
   const featuresByClass: Record<string, Feature<Polygon>[]> = {};
-  const classMetrics: ReportSketchMetric[] = (
+  const classMetrics: Metric[] = (
     await Promise.all(
       CONFIG.classes.map(async (curClass) => {
         featuresByClass[curClass.classId] = await fgbFetchAll(
@@ -45,10 +46,9 @@ export async function habitatNursery(
         // Sum for overall?
 
         return classFeatures.map(
-          (metric): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metric): Metric => ({
             ...metric,
+            classId: curClass.classId,
           })
         );
       })
@@ -61,27 +61,20 @@ export async function habitatNursery(
 
   // Calculate group metrics - from individual sketch metrics
   const sketchCategoryMap = getLevelNameForSketches(sketches);
-  const metricToGroup = (sketchMetric: ExtendedSketchMetric) =>
-    sketchCategoryMap[sketchMetric.sketchId];
+  const metricToGroup = (sketchMetric: Metric) =>
+    sketchCategoryMap[sketchMetric.sketchId!];
 
-  const groupMetrics = (
-    await overlapFeaturesGroupMetrics({
-      metricId: METRIC_ID,
-      groupIds: levels,
-      sketch,
-      metricToGroup,
-      metrics: classMetrics,
-      featuresByClass,
-    })
-  ).map(
-    (gm): ReportSketchMetric => ({
-      reportId: REPORT_ID,
-      ...gm,
-    })
-  );
+  const groupMetrics = await overlapFeaturesGroupMetrics({
+    metricId: METRIC_ID,
+    groupIds: levels,
+    sketch,
+    metricToGroup,
+    metrics: classMetrics,
+    featuresByClass,
+  });
 
   return {
-    metrics: [...classMetrics, ...groupMetrics],
+    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
     sketch: toNullSketch(sketch, true),
   };
 }

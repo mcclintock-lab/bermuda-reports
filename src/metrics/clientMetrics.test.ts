@@ -8,8 +8,9 @@ import {
   flattenSketchAllClassNext,
   nestMetrics,
 } from "./clientMetrics";
-import { ReportSketchMetric } from "./types";
+import { Metric } from "./types";
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
+import { createMetric } from "./metrics";
 
 const CLASSES = [
   {
@@ -22,24 +23,21 @@ const CLASSES = [
   },
 ];
 
-const PRECALC_TOTALS = [
-  {
-    reportId: "report1",
+const PRECALC_TOTALS: Metric[] = [
+  createMetric({
     metricId: "metric1",
     value: 100,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     classId: "class1",
     metricId: "metric1",
     value: 100,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     classId: "class2",
     metricId: "metric1",
     value: 100,
-  },
+  }),
 ];
 
 const collectionId = "CCCC";
@@ -106,182 +104,160 @@ const collection: NullSketchCollection = {
   features: sketches,
 };
 
-const metrics: ReportSketchMetric[] = [
-  {
-    reportId: "report1",
+const metrics: Metric[] = [
+  createMetric({
     metricId: "metric1",
     sketchId: sketchAId,
     value: 10,
     classId: "class1",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: sketchBId,
     value: 20,
     classId: "class1",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: sketchDId,
     value: 40,
     classId: "class1",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: collectionId,
     value: 30,
     classId: "class1",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: sketchAId,
     value: 40,
     classId: "class2",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: sketchBId,
     value: 50,
     classId: "class2",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: sketchDId,
     value: 60,
     classId: "class2",
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     metricId: "metric1",
     sketchId: collectionId,
     value: 90,
     classId: "class2",
-  },
+  }),
 ];
 
-const groupMetrics = [
+const groupMetrics: Metric[] = [
   // collection
-  {
-    reportId: "report1",
+  createMetric({
     groupId: "group1",
     classId: "class1",
     metricId: "metric1",
     sketchId: collectionId,
     value: 25,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group2",
     classId: "class1",
     metricId: "metric1",
     sketchId: collectionId,
     value: 30,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group3",
     classId: "class1",
     metricId: "metric1",
     sketchId: collectionId,
     value: 35,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group1",
     classId: "class2",
     metricId: "metric1",
     sketchId: collectionId,
     value: 25,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group2",
     classId: "class2",
     metricId: "metric1",
     sketchId: collectionId,
     value: 30,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group3",
     classId: "class2",
     metricId: "metric1",
     sketchId: collectionId,
     value: 35,
-  },
+  }),
   // sketch class 1
-  {
-    reportId: "report1",
+  createMetric({
     groupId: "group1",
     classId: "class1",
     metricId: "metric1",
     sketchId: sketchAId,
     value: 15,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group1",
     classId: "class1",
     metricId: "metric1",
     sketchId: sketchBId,
     value: 20,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group2",
     classId: "class1",
     metricId: "metric1",
     sketchId: sketchDId,
     value: 30,
-  },
+  }),
   // sketch class 2
-  {
-    reportId: "report1",
+  createMetric({
     groupId: "group1",
     classId: "class2",
     metricId: "metric1",
     sketchId: sketchAId,
     value: 15,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group1",
     classId: "class2",
     metricId: "metric1",
     sketchId: sketchBId,
     value: 20,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group2",
     classId: "class2",
     metricId: "metric1",
     sketchId: sketchDId,
     value: 30,
-  },
+  }),
   // sketch class 3
-  {
-    reportId: "report1",
+  createMetric({
     groupId: "group3",
     classId: "class2",
     metricId: "metric1",
     sketchId: sketchAId,
     value: 20,
-  },
-  {
-    reportId: "report1",
+  }),
+  createMetric({
     groupId: "group3",
     classId: "class2",
     metricId: "metric1",
     sketchId: sketchDId,
     value: 15,
-  },
+  }),
 ];
 
 describe("flattenSketchAllClass", () => {
@@ -403,11 +379,11 @@ test("nestMetrics", async () => {
       class1: {
         group1: [
           {
-            reportId: "report1",
             groupId: "group1",
             classId: "class1",
             metricId: "metric1",
             sketchId: "AAAA",
+            geographyId: null,
             value: 15,
           },
         ],
@@ -415,21 +391,21 @@ test("nestMetrics", async () => {
       class2: {
         group1: [
           {
-            reportId: "report1",
             groupId: "group1",
             classId: "class2",
             metricId: "metric1",
             sketchId: "AAAA",
+            geographyId: null,
             value: 15,
           },
         ],
         group3: [
           {
-            reportId: "report1",
             groupId: "group3",
             classId: "class2",
             metricId: "metric1",
             sketchId: "AAAA",
+            geographyId: null,
             value: 20,
           },
         ],

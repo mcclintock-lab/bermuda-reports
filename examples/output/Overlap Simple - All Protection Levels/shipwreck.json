@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 163,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 180,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -22,30 +24,33 @@
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 164,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 164,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 166,
       "extra": {
         "sketchName": "low MPA"

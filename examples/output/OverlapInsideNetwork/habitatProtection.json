@@ -1,10 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 6,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -12,71 +13,67 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Fore Reef",
-      "sketchId": "619a8e39a717c5a0742cafb8",
-      "value": 6124,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "sketchId": "619a8e39a717c5a0742cafb8",
-      "value": 0,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "habitatProtection",
-      "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 6,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 6,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 19879,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 19879,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bathypelagic",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 12707,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bays and Coast",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -84,30 +81,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bays and Coast",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bays and Coast",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Castle Harbour Madracis",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -115,30 +115,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Castle Harbour Madracis",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Castle Harbour Madracis",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Diploria Porites Reef",
-      "sketchId": "619a8e39a717c5a0742cafb8",
+      "groupId": null,
+      "geographyId": null,
       "value": 378,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -146,50 +149,67 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Diploria Porites Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 378,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Diploria Porites Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 297,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6124,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 6124,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Fore Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 4853,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -197,30 +217,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 2883,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -228,30 +251,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 2883,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 2068,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesopelagic",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 7612,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -259,30 +285,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesopelagic",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 7612,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesopelagic",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 5976,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesophotic",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 1536,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -290,30 +319,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesophotic",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 1536,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesophotic",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 1293,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -321,30 +353,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 743,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -352,30 +387,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 743,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 585,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rim Reef",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 501,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -383,30 +421,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rim Reef",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 501,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rim Reef",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 357,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Abyssopelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 149,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -414,30 +455,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Abyssopelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 149,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Abyssopelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 3,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Bathypelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 18,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -445,30 +489,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Bathypelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 18,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Bathypelagic",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 7,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Cold water coral",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
       "value": 4,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -476,30 +523,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Cold water coral",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
       "value": 4,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "Cold water coral",
-      "metricId": "offshore",
-      "sketchId": "619a8e39a717c5a0742cafba",
+      "groupId": null,
+      "geographyId": null,
       "value": 3,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Escarpments",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
       "value": 3,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -507,30 +557,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Escarpments",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
       "value": 3,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Escarpments",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Knolls",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
       "value": 16,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -538,30 +591,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Knolls",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
       "value": 16,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "Knolls",
-      "metricId": "offshore",
-      "sketchId": "619a8e39a717c5a0742cafba",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 1",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
       "value": 2,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -569,30 +625,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 1",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
       "value": 2,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "Pelagic zone 1",
-      "metricId": "offshore",
-      "sketchId": "619a8e39a717c5a0742cafba",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 2",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -600,30 +659,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 2",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 2",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 3",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
       "value": 199,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -631,30 +693,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 3",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
       "value": 199,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 3",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
       "value": 10,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Plains",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
       "value": 165,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -662,30 +727,33 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Plains",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
       "value": 165,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Plains",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -693,20 +761,22 @@
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"

@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Amenity Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Amenity Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 16006.057598326901,
       "extra": {
         "sketchName": "no-full-network",
@@ -22,30 +24,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Amenity Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 16006.057598326901,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CableZone",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CableZone",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
       "value": 4790271.701608213,
       "extra": {
         "sketchName": "no-full-network",
@@ -53,30 +58,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CableZone",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
       "value": 4790271.701608213,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CoralPreserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CoralPreserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 3134035.8272787007,
       "extra": {
         "sketchName": "no-full-network",
@@ -84,30 +92,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "CoralPreserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 3134035.8272787007,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Ferry Route",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Ferry Route",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -115,30 +126,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Ferry Route",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "MPAExtendedClosure",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "MPAExtendedClosure",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -146,30 +160,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "MPAExtendedClosure",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Nature Reserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Nature Reserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 5989.827928885183,
       "extra": {
         "sketchName": "no-full-network",
@@ -177,30 +194,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Nature Reserve",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 5989.827928885183,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "NoLobsterFish",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "NoLobsterFish",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -208,30 +228,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "NoLobsterFish",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "NoNetFish",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "NoNetFish",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -239,30 +262,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "NoNetFish",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Prohibited",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Prohibited",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -270,30 +296,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Prohibited",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Recreational Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Recreational Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -301,30 +330,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Recreational Park",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Reef",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Reef",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 283438.23137359484,
       "extra": {
         "sketchName": "no-full-network",
@@ -332,30 +364,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Reef",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 283438.23137359484,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "SeasonalPA",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "SeasonalPA",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -363,30 +398,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "SeasonalPA",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Shipping Lane",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Shipping Lane",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "no-full-network",
@@ -394,30 +432,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Shipping Lane",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "SpearfishEx",
-      "metricId": "areaOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
+      "groupId": null,
+      "geographyId": null,
       "value": 196078.7853898973,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "SpearfishEx",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
       "value": 21213129.212330084,
       "extra": {
         "sketchName": "no-full-network",
@@ -425,30 +466,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "SpearfishEx",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
       "value": 21017050.426940188,
       "extra": {
         "sketchName": "MPA 2"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Wreck",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 1075275.0769517776,
       "extra": {
         "sketchName": "MPA 1"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Wreck",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 1075275.0769517776,
       "extra": {
         "sketchName": "no-full-network",
@@ -456,10 +500,11 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Wreck",
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA 2"

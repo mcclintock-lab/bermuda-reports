@@ -6,13 +6,12 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
   toNullSketch,
-  keyBy,
 } from "@seasketch/geoprocessing";
 import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import bbox from "@turf/bbox";
-import { ReportSketchMetric } from "../metrics/types";
-import { metricSort } from "../metrics/metrics";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config;
 const REPORT = CONFIG.size;
@@ -28,45 +27,56 @@ export async function area(
     `${CONFIG.dataBucketUrl}${METRIC.filename}`,
     box
   );
-  const classesById = keyBy(METRIC.classes, (c) => c.classId);
 
-  const eez = (
-    await overlapArea(METRIC.metricId, sketch, STUDY_REGION_AREA_SQ_METERS)
-  ).map(
-    (metrics): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      classId: classesById.eez.classId,
-      ...metrics,
-    })
+  const metrics: Metric[] = (
+    await Promise.all(
+      METRIC.classes.map(async (curClass) => {
+        let overlapResult: Metric[] = [];
+        switch (curClass.classId) {
+          case "eez":
+            overlapResult = await overlapArea(
+              METRIC.metricId,
+              sketch,
+              STUDY_REGION_AREA_SQ_METERS
+            );
+            break;
+          case "nearshore":
+            overlapResult = await overlapSubarea(
+              METRIC.metricId,
+              sketch,
+              nearshorePolys[0]
+            );
+            break;
+          case "offshore":
+            overlapResult = await overlapSubarea(
+              METRIC.metricId,
+              sketch,
+              nearshorePolys[0],
+              {
+                operation: "difference",
+                outerArea: STUDY_REGION_AREA_SQ_METERS,
+              }
+            );
+            break;
+          default:
+            throw new Error("unknown class");
+        }
+        return overlapResult.map(
+          (metric): Metric => ({
+            ...metric,
+            classId: curClass.classId,
+          })
+        );
+      })
+    )
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
-
-  const nearshore = (
-    await overlapSubarea(METRIC.metricId, sketch, nearshorePolys[0])
-  ).map(
-    (metrics): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      classId: classesById.nearshore.classId,
-      ...metrics,
-    })
-  );
-
-  const offshore = (
-    await overlapSubarea(METRIC.metricId, sketch, nearshorePolys[0], {
-      operation: "difference",
-      outerArea: STUDY_REGION_AREA_SQ_METERS,
-    })
-  ).map(
-    (metrics): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      classId: classesById.offshore.classId,
-      ...metrics,
-    })
-  );
-
-  const metrics = metricSort([...eez, ...nearshore, ...offshore]);
 
   return {
-    metrics,
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

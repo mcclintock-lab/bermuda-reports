@@ -1,230 +1,253 @@
 {
   "metrics": [
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Algal Vermetid Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 8,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bathypelagic",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 16023,
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16241,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Bays and Coast",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
       "value": 94,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Castle Harbour Madracis",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Diploria Porites Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 4823,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Fore Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 510,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Madracis Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Main Terrace Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 7934,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesopelagic",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 5608,
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5619,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Mesophotic",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 2021,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Montastraea Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rariphotic",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
       "value": 2134,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
-      "classId": "Rim Reef",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 1750,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Abyssopelagic",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 17,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Bathypelagic",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 11,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Cold water coral",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Escarpments",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
       "value": 9,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Knolls",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
       "value": 3,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Pelagic zone 1",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
       "value": 30,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "Pelagic zone 2",
-      "metricId": "offshore",
-      "sketchId": "61649a3c1e0a596510ad8329",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
+      "metricId": "offshore",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "Pelagic zone 3",
-      "metricId": "offshore",
-      "sketchId": "61649a3c1e0a596510ad8329",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Plains",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
       "value": 19,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "habitatProtection",
-      "classId": "Seamounts",
       "metricId": "offshore",
       "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
@@ -236,7 +259,7 @@
     "properties": {
       "id": "61649a3c1e0a596510ad8329",
       "name": "nearshore-span",
-      "updatedAt": "2021-10-11T20:10:36.004Z",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
       "createdAt": "2021-10-11T20:10:36.004Z",
       "sketchClassId": "615b59e1aac8c8285d50d9b8",
       "isCollection": false,

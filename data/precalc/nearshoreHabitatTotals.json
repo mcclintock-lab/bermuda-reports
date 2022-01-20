@@ -1,81 +1,94 @@
 {
   "metrics": [
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Bays and Coast",
+      "geographyId": null,
       "value": 11318
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Madracis Reef",
+      "geographyId": null,
       "value": 7786
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Montastraea Reef",
+      "geographyId": null,
       "value": 30106
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Diploria Porites Reef",
+      "geographyId": null,
       "value": 41973
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Castle Harbour Madracis",
+      "geographyId": null,
       "value": 781
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Algal Vermetid Reef",
+      "geographyId": null,
       "value": 167
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Rim Reef",
+      "geographyId": null,
       "value": 14981
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Main Terrace Reef",
+      "geographyId": null,
       "value": 37988
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Fore Reef",
+      "geographyId": null,
       "value": 29994
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Mesophotic",
+      "geographyId": null,
       "value": 37926
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Rariphotic",
+      "geographyId": null,
       "value": 25473
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Mesopelagic",
+      "geographyId": null,
       "value": 85341
     },
     {
-      "reportId": "habitatProtection",
       "metricId": "nearshore",
+      "sketchId": null,
       "classId": "Bathypelagic",
+      "geographyId": null,
       "value": 174816
     }
   ]

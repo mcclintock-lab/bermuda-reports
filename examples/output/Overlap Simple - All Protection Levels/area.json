@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 320052736.91190267,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 388235454.3080779,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -22,50 +24,55 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 313000393.6112994,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 313000393.6112994,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 332082981.0585949,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 320052736.9119009,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 387282939.33869296,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -73,50 +80,55 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 312047878.6419047,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 312047878.6419047,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 332082981.0585888,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 952643.5828112711,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -124,50 +136,55 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 952643.5828112711,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 952643.5828112711,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0006871960382176592,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0008335934529739127,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -175,50 +192,55 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0006720537137898591,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0006720537137898591,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000713026581634239,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.12480140898267925,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.15101716351742012,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -226,50 +248,55 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.12167999342960067,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.12167999342960067,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.12949248406736308,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000002056778476242719,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -277,30 +304,33 @@
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000002056778476242719,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.000002056778476242719,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low MPA"

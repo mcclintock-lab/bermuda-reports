@@ -16,7 +16,8 @@ import config, { ReportResult } from "../_config";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { getBreakGroup } from "../util/getBreakGroup";
-import { ExtendedSketchMetric, ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.platformEdge;
 const CLASS = CONFIG.classes[0];
@@ -36,20 +37,19 @@ export async function platformEdge(
   );
 
   // Calc area sketch metrics
-  const classMetrics: ReportSketchMetric[] = (
+  const classMetrics: Metric[] = (
     await overlapFeatures(METRIC_ID, edgeMultiPoly, sketch)
   ).map((sm) => {
     if (isSketchCollection(sketch) && sm.sketchId === sketch.properties.id) {
       return {
-        reportId: REPORT_ID,
-        classId: CLASS.classId,
         ...sm,
+        classId: CLASS.classId,
       };
     }
 
     // Add extra numFishingRestriced and overlap to individual sketches
     const sketchActivities: string[] = getJsonUserAttribute(
-      sketchesById[sm.sketchId],
+      sketchesById[sm.sketchId!],
       "ACTIVITIES",
       []
     );
@@ -62,9 +62,8 @@ export async function platformEdge(
     );
 
     return {
-      reportId: REPORT_ID,
-      classId: CLASS.classId,
       ...sm,
+      classId: CLASS.classId,
       extra: {
         ...sm.extra,
         numFishingRestricted:
@@ -81,7 +80,7 @@ export async function platformEdge(
   // Match sketch to first break group where it has at least min number of restricted activities
   // If no overlap then it's always no break
   // Return true if matches current group
-  const metricToGroup = (sketchMetric: ExtendedSketchMetric) =>
+  const metricToGroup = (sketchMetric: Metric) =>
     getBreakGroup(
       CONFIG.breakMap,
       sketchMetric?.extra?.numFishingRestricted as number,
@@ -96,7 +95,7 @@ export async function platformEdge(
     }
   })();
 
-  const groupMetrics: ReportSketchMetric[] = (
+  const groupMetrics: Metric[] = (
     await overlapFeaturesGroupMetrics({
       metricId: METRIC_ID,
       groupIds: Object.keys(CONFIG.breakMap),
@@ -111,7 +110,7 @@ export async function platformEdge(
   }));
 
   return {
-    metrics: [...classMetrics, ...groupMetrics],
+    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
     sketch: toNullSketch(sketch, true),
   };
 }

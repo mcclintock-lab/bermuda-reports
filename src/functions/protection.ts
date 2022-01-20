@@ -8,13 +8,14 @@ import {
 } from "@seasketch/geoprocessing";
 import { overlapArea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
-import { ReportSketchMetric, ExtendedSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 import { iucnCategories, levels } from "../util/iucnProtectionLevel";
 import {
   getCategoryNameForSketches,
   getLevelNameForSketches,
 } from "../util/iucnHelpers";
 import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config;
 const REPORT = CONFIG.protection;
@@ -41,60 +42,47 @@ export async function protection(
       false
     )
   ).map(
-    (metrics): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      classId: "eez",
+    (metrics): Metric => ({
       ...metrics,
+      classId: "eez",
     })
   );
 
   // category - group metrics
   const sketchCategoryMap = getCategoryNameForSketches(sketches);
-  const metricToCategory = (sketchMetric: ExtendedSketchMetric) =>
-    sketchCategoryMap[sketchMetric.sketchId];
+  const metricToCategory = (sketchMetric: Metric) =>
+    sketchCategoryMap[sketchMetric.sketchId!];
 
-  const categoryMetrics = (
-    await overlapAreaGroupMetrics({
-      metricId: METRIC.metricId,
-      groupIds: Object.keys(iucnCategories),
-      sketch,
-      metricToGroup: metricToCategory,
-      metrics: classMetrics,
-      classId: "eez",
-      outerArea: STUDY_REGION_AREA_SQ_METERS,
-      onlyPresentGroups: true,
-    })
-  ).map(
-    (gm): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      ...gm,
-    })
-  );
+  const categoryMetrics = await overlapAreaGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: Object.keys(iucnCategories),
+    sketch,
+    metricToGroup: metricToCategory,
+    metrics: classMetrics,
+    classId: "eez",
+    outerArea: STUDY_REGION_AREA_SQ_METERS,
+    onlyPresentGroups: true,
+  });
 
   // protection level - group metrics
   const sketchLevelMap = getLevelNameForSketches(sketches);
-  const metricToLevel = (sketchMetric: ExtendedSketchMetric) =>
-    sketchLevelMap[sketchMetric.sketchId];
+  const metricToLevel = (sketchMetric: Metric) =>
+    sketchLevelMap[sketchMetric.sketchId!];
 
-  const levelMetrics = (
-    await overlapAreaGroupMetrics({
-      metricId: METRIC.metricId,
-      groupIds: levels,
-      sketch,
-      metricToGroup: metricToLevel,
-      metrics: classMetrics,
-      classId: "eez",
-      outerArea: STUDY_REGION_AREA_SQ_METERS,
-    })
-  ).map(
-    (gm): ReportSketchMetric => ({
-      reportId: REPORT.reportId,
-      ...gm,
-    })
-  );
+  const levelMetrics = await overlapAreaGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: levels,
+    sketch,
+    metricToGroup: metricToLevel,
+    metrics: classMetrics,
+    classId: "eez",
+    outerArea: STUDY_REGION_AREA_SQ_METERS,
+  });
 
   return {
-    metrics: [...classMetrics, ...categoryMetrics, ...levelMetrics],
+    metrics: metricSort(
+      metricRekey([...classMetrics, ...categoryMetrics, ...levelMetrics])
+    ),
     sketch: toNullSketch(sketch, true),
   };
 }

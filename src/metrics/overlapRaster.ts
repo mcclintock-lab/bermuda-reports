@@ -14,7 +14,8 @@ import {
 
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
-import { SimpleSketchMetric } from "./types";
+import { Metric } from "./types";
+import { createMetric } from "./metrics";
 
 /**
  * Returns sum metric for raster.  If sketch parameter provided, sum overlap is also calculated for each sketch polygon.
@@ -31,7 +32,7 @@ export async function overlapRaster(
     /** Whether to remove holes from sketch polygons. Geoblaze can overcount with them.  Default to true */
     removeSketchHoles: boolean;
   } = { removeSketchHoles: true }
-): Promise<SimpleSketchMetric[]> {
+): Promise<Metric[]> {
   let isOverlap = false;
   let sumValue = 0;
 
@@ -57,7 +58,7 @@ export async function overlapRaster(
 
   // Get raster sum for each feature
   // If there was no overlap found above, accumulate collection sumValue here instead
-  let sketchMetrics: SimpleSketchMetric[] = [];
+  let sketchMetrics: Metric[] = [];
   featureEach(sketch, (feat) => {
     const remSketch = options.removeSketchHoles
       ? removeSketchPolygonHoles(feat)
@@ -67,27 +68,31 @@ export async function overlapRaster(
     if (!isOverlap) {
       sumValue += sketchValue;
     }
-    sketchMetrics.push({
-      metricId,
-      sketchId: feat.properties.id,
-      value: sketchValue,
-      extra: {
-        sketchName: feat.properties.name,
-      },
-    });
+    sketchMetrics.push(
+      createMetric({
+        metricId,
+        sketchId: feat.properties.id,
+        value: sketchValue,
+        extra: {
+          sketchName: feat.properties.name,
+        },
+      })
+    );
   });
 
   if (isSketchCollection(sketch)) {
     // Push collection with accumulated sumValue
-    sketchMetrics.push({
-      metricId,
-      sketchId: sketch.properties.id,
-      value: sumValue,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
+    sketchMetrics.push(
+      createMetric({
+        metricId,
+        sketchId: sketch.properties.id,
+        value: sumValue,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
   }
 
   return sketchMetrics;

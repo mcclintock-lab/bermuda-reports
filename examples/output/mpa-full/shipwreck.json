@@ -1,10 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "shipwreck",
-      "classId": "shipwreck",
       "metricId": "sumOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 42,
       "extra": {
         "sketchName": "mpa-full"

@@ -1,10 +1,11 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -12,30 +13,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 1974.8538384886633,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
@@ -43,20 +47,22 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 1974.8538384886633,
       "extra": {
         "sketchName": "Large MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "MPA inside"

@@ -1,60 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 471997272.05642706,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 88303118.39811556,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 383702044.71772295,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0010134412801350323,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.03443293033511124,
       "extra": {
         "sketchName": "no-activity-mpa"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0008284211651715718,
       "extra": {
         "sketchName": "no-activity-mpa"

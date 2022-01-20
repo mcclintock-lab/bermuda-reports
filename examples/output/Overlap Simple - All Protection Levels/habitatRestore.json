@@ -1,20 +1,22 @@
 {
   "metrics": [
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -22,50 +24,55 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Mangrove_Saltmarsh",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "low MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 4654827.9498203015,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 5668686.454278964,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -73,30 +80,33 @@
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 4189928.983326363,
       "extra": {
         "sketchName": "full MPA"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 4189928.983326363,
       "extra": {
         "sketchName": "full MPA copy"
       }
     },
     {
-      "reportId": "existingProtections",
-      "classId": "Seagrass",
       "metricId": "areaOverlap",
       "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 5066213.166697266,
       "extra": {
         "sketchName": "low MPA"

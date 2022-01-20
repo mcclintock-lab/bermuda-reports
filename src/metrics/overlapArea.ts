@@ -13,7 +13,8 @@ import { featureCollection } from "@turf/helpers";
 import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
 import { clip } from "../util/clip";
-import { SimpleSketchMetric } from "./types";
+import { Metric } from "./types";
+import { createMetric } from "./metrics";
 
 /**
  * Assuming sketches are within some outer boundary with size outerArea,
@@ -27,7 +28,7 @@ export async function overlapArea(
   /** area of outer boundary (typically EEZ or planning area) */
   outerArea: number,
   includePercMetric: boolean = true
-): Promise<SimpleSketchMetric[]> {
+): Promise<Metric[]> {
   const percMetricId = `${metricId}Perc`;
   // Union to remove overlap
   const combinedSketch = isSketchCollection(sketch)
@@ -37,7 +38,7 @@ export async function overlapArea(
   if (!combinedSketch) throw new Error("areaStats - invalid sketch");
   const combinedSketchArea = turfArea(combinedSketch);
 
-  let metrics: SimpleSketchMetric[] = [];
+  let metrics: Metric[] = [];
   if (sketch) {
     featureEach(sketch, (curSketch) => {
       if (!curSketch || !curSketch.properties) {
@@ -48,67 +49,79 @@ export async function overlapArea(
         console.log(
           `Warning: feature is missing geometry, zeroed: sketchId:${curSketch.properties.id}, name:${curSketch.properties.name}`
         );
-        metrics.push({
-          metricId,
-          sketchId: curSketch.properties.id,
-          value: 0,
-          extra: {
-            sketchName: curSketch.properties.name,
-          },
-        });
-        if (includePercMetric) {
-          metrics.push({
-            metricId: percMetricId,
+        metrics.push(
+          createMetric({
+            metricId,
             sketchId: curSketch.properties.id,
             value: 0,
             extra: {
               sketchName: curSketch.properties.name,
             },
-          });
+          })
+        );
+        if (includePercMetric) {
+          metrics.push(
+            createMetric({
+              metricId: percMetricId,
+              sketchId: curSketch.properties.id,
+              value: 0,
+              extra: {
+                sketchName: curSketch.properties.name,
+              },
+            })
+          );
         }
       } else {
         const sketchArea = turfArea(curSketch);
-        metrics.push({
-          metricId,
-          sketchId: curSketch.properties.id,
-          value: sketchArea,
-          extra: {
-            sketchName: curSketch.properties.name,
-          },
-        });
-        if (includePercMetric) {
-          metrics.push({
-            metricId: percMetricId,
+        metrics.push(
+          createMetric({
+            metricId,
             sketchId: curSketch.properties.id,
-            value: sketchArea / outerArea,
+            value: sketchArea,
             extra: {
               sketchName: curSketch.properties.name,
             },
-          });
+          })
+        );
+        if (includePercMetric) {
+          metrics.push(
+            createMetric({
+              metricId: percMetricId,
+              sketchId: curSketch.properties.id,
+              value: sketchArea / outerArea,
+              extra: {
+                sketchName: curSketch.properties.name,
+              },
+            })
+          );
         }
       }
     });
   }
 
   if (isSketchCollection(sketch)) {
-    metrics.push({
-      metricId,
-      sketchId: sketch.properties.id,
-      value: combinedSketchArea,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
-    metrics.push({
-      metricId: percMetricId,
-      sketchId: sketch.properties.id,
-      value: combinedSketchArea / outerArea,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
+    metrics.push(
+      createMetric({
+        metricId,
+        sketchId: sketch.properties.id,
+        value: combinedSketchArea,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
+    metrics.push(
+      createMetric({
+        metricId: percMetricId,
+        sketchId: sketch.properties.id,
+        value: combinedSketchArea / outerArea,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
   }
 
   return metrics;
@@ -132,7 +145,7 @@ export async function overlapSubarea(
     /** area of outer boundary.  Use for total area of the subarea for intersection when you don't have the whole feature, or use for the total area of the boundar outside of the subarea for difference (typically EEZ or planning area) */
     outerArea?: number | undefined;
   }
-): Promise<SimpleSketchMetric[]> {
+): Promise<Metric[]> {
   const percMetricId = `${metricId}Perc`;
   const operation = options?.operation || "intersect";
   const subareaArea =
@@ -183,68 +196,80 @@ export async function overlapSubarea(
     }
   })();
 
-  let metrics: SimpleSketchMetric[] = [];
+  let metrics: Metric[] = [];
   if (subsketches) {
     subsketches.forEach((feat, index) => {
       const origSketch = sketches[index];
       if (feat) {
         const subsketchArea = turfArea(feat);
-        metrics.push({
-          metricId,
-          sketchId: origSketch.properties.id,
-          value: subsketchArea,
-          extra: {
-            sketchName: origSketch.properties.name,
-          },
-        });
-        metrics.push({
-          metricId: percMetricId,
-          sketchId: origSketch.properties.id,
-          value: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
-          extra: {
-            sketchName: origSketch.properties.name,
-          },
-        });
+        metrics.push(
+          createMetric({
+            metricId,
+            sketchId: origSketch.properties.id,
+            value: subsketchArea,
+            extra: {
+              sketchName: origSketch.properties.name,
+            },
+          })
+        );
+        metrics.push(
+          createMetric({
+            metricId: percMetricId,
+            sketchId: origSketch.properties.id,
+            value: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
+            extra: {
+              sketchName: origSketch.properties.name,
+            },
+          })
+        );
       } else {
-        metrics.push({
-          metricId,
-          sketchId: origSketch.properties.id,
-          value: 0,
-          extra: {
-            sketchName: origSketch.properties.name,
-          },
-        });
-        metrics.push({
-          metricId: percMetricId,
-          sketchId: origSketch.properties.id,
-          value: 0,
-          extra: {
-            sketchName: origSketch.properties.name,
-          },
-        });
+        metrics.push(
+          createMetric({
+            metricId,
+            sketchId: origSketch.properties.id,
+            value: 0,
+            extra: {
+              sketchName: origSketch.properties.name,
+            },
+          })
+        );
+        metrics.push(
+          createMetric({
+            metricId: percMetricId,
+            sketchId: origSketch.properties.id,
+            value: 0,
+            extra: {
+              sketchName: origSketch.properties.name,
+            },
+          })
+        );
       }
     });
   }
 
   if (isSketchCollection(sketch)) {
-    metrics.push({
-      metricId,
-      sketchId: sketch.properties.id,
-      value: subsketchArea,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
-    metrics.push({
-      metricId: percMetricId,
-      sketchId: sketch.properties.id,
-      value: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
-      extra: {
-        sketchName: sketch.properties.name,
-        isCollection: true,
-      },
-    });
+    metrics.push(
+      createMetric({
+        metricId,
+        sketchId: sketch.properties.id,
+        value: subsketchArea,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
+    metrics.push(
+      createMetric({
+        metricId: percMetricId,
+        sketchId: sketch.properties.id,
+        value: subsketchArea === 0 ? 0 : subsketchArea / operationArea,
+        extra: {
+          sketchName: sketch.properties.name,
+          isCollection: true,
+        },
+      })
+    );
   }
 
   return metrics;

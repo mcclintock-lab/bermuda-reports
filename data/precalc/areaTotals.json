@@ -1,0 +1,28 @@
+{
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 465737168307.9038
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2587739629.079098
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 463149428678.8247
+    }
+  ]
+}

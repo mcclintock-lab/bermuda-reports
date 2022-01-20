@@ -20,7 +20,6 @@ import {
   sketchMetricPercent,
 } from "../metrics/clientMetrics";
 import config, { ReportResultBase, ReportResult } from "../_config";
-// import { sketchMetricPercent } from "../metrics/clientMetrics";
 
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
 import SketchClassTable from "../components/SketchClassTable";
@@ -30,7 +29,6 @@ const METRIC_ID = "sumOverlap";
 const CONFIG = config;
 const REPORT = CONFIG.shipwreck;
 const METRIC = REPORT.metrics[METRIC_ID];
-const CLASS = METRIC.classes[0];
 
 const Shipwreck = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
@@ -73,11 +71,11 @@ const Shipwreck = () => {
         return (
           <ReportError>
             <KeySection>{keySection}</KeySection>
+            {isCollection && genSketchTable(data)}
             <LayerToggle
               label="View Shipwreck Heatmap Layer"
               layerId={METRIC.layerId}
             />
-            {isCollection && genSketchTable(data)}
           </ReportError>
         );
       }}

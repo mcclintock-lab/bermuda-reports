@@ -1,50 +1,44 @@
 {
   "metrics": [
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 320052736.91190267,
       "extra": {
         "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 313000393.6112994,
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "eez",
+      "groupId": "4/6",
+      "geographyId": null,
+      "value": 320052736.91190267,
       "extra": {
-        "sketchName": "full MPA"
+        "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 313000393.6112994,
+      "sketchId": "61a8155531c466cf4a0621a7",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 320052736.91190267,
       "extra": {
-        "sketchName": "full MPA copy"
+        "sketchName": "high MPA"
       }
     },
     {
-      "reportId": "protection",
-      "classId": "eez",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 332082981.0585949,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 388235454.3080779,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
@@ -52,171 +46,183 @@
       }
     },
     {
-      "reportId": "protection",
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
       "classId": "eez",
+      "groupId": "1a",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": "4/6",
+      "geographyId": null,
+      "value": 59212243.77799278,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
+      "value": 16022567.23611117,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 59212243.77799278,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 16022567.23611117,
+      "extra": {
+        "sketchName": "Overlap Simple - All Protection Levels",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "eez",
+      "groupId": "1a",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a819ba9942fd4acf0d18d2",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "eez",
+      "groupId": "1a",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a81aad31c466cf4a062493",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 313000393.6112994,
+      "extra": {
+        "sketchName": "full MPA copy"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 332082981.0585949,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
+      "value": 332082981.0585949,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61a932cc9942fd4acf0d1e4a",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 332082981.0585949,
+      "extra": {
+        "sketchName": "low MPA"
+      }
+    },
+    {
       "metricId": "areaOverlapPerc",
       "sketchId": "61a8155531c466cf4a0621a8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.0008335934529739127,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "1a",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "1a",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "1a",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "4/6",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 320052736.91190267,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "4/6",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 59212243.77799278,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "None",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 332082981.0585949,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "None",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 16022567.23611117,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a819ba9942fd4acf0d18d2",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "full MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a81aad31c466cf4a062493",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "full MPA copy"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "full",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 313000393.6112994,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a7",
-      "value": 320052736.91190267,
-      "extra": {
-        "sketchName": "high MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "high",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 59212243.77799278,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "low",
-      "metricId": "areaOverlap",
-      "sketchId": "61a932cc9942fd4acf0d1e4a",
-      "value": 332082981.0585949,
-      "extra": {
-        "sketchName": "low MPA"
-      }
-    },
-    {
-      "reportId": "protection",
-      "classId": "eez",
-      "groupId": "low",
-      "metricId": "areaOverlap",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "value": 16022567.23611117,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true

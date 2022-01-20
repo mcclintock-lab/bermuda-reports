@@ -9,7 +9,8 @@ import {
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { ReportSketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.reefIndex;
 const REPORT_ID = "oceanUse";
@@ -35,10 +36,9 @@ export async function reefIndex(
         const curClass = CONFIG.classes[index];
         const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
         return overlapResult.map(
-          (metrics): ReportSketchMetric => ({
-            reportId: REPORT_ID,
-            classId: curClass.classId,
+          (metrics): Metric => ({
             ...metrics,
+            classId: curClass.classId,
           })
         );
       })
@@ -50,7 +50,7 @@ export async function reefIndex(
   );
 
   return {
-    metrics,
+    metrics: metricSort(metricRekey(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

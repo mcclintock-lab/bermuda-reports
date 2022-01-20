@@ -1,60 +1,66 @@
 {
   "metrics": [
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlap",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 36282559.79247418,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlap",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 36282559.792477764,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlap",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
     },
     {
-      "reportId": "area",
-      "classId": "eez",
       "metricId": "areaOverlapPerc",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.00007790350923525046,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
     },
     {
-      "reportId": "area",
-      "classId": "nearshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0.014148026438673949,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
     },
     {
-      "reportId": "area",
-      "classId": "offshore",
       "metricId": "areaOverlapPerc",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
       "extra": {
         "sketchName": "mpa-no-desig"
