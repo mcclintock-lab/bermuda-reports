@@ -2,8 +2,8 @@
 cd ../
 npm run ts-node data/area-3-precalc.ts
 npm run ts-node data/existingProtections-3-precalc.ts
-npm run ts-node data/habitat-3-nearshore-precalc.ts
-npm run ts-node data/habitat-3-offshore-precalc.ts
+npm run ts-node data/habitatProtection-3-nearshore-precalc.ts
+npm run ts-node data/habitatProtection-3-offshore-precalc.ts
 npm run ts-node data/habitatNursery-3-precalc.ts
 npm run ts-node data/habitatRestore-3-precalc.ts
 npm run ts-node data/oceanuse-3-precalc.ts

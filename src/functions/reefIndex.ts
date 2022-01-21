@@ -13,7 +13,6 @@ import { Metric } from "../metrics/types";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.reefIndex;
-const REPORT_ID = "oceanUse";
 const METRIC_ID = "valueOverlap";
 
 export async function reefIndex(

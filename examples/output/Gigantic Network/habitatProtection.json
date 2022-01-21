@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Algal Vermetid Reef",
       "groupId": null,
@@ -12,7 +12,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Algal Vermetid Reef",
       "groupId": null,
@@ -23,7 +23,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Algal Vermetid Reef",
       "groupId": null,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -46,7 +46,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -57,7 +57,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -69,7 +69,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Bays and Coast",
       "groupId": null,
@@ -80,7 +80,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Bays and Coast",
       "groupId": null,
@@ -91,7 +91,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Bays and Coast",
       "groupId": null,
@@ -103,7 +103,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Castle Harbour Madracis",
       "groupId": null,
@@ -114,7 +114,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Castle Harbour Madracis",
       "groupId": null,
@@ -125,7 +125,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Castle Harbour Madracis",
       "groupId": null,
@@ -137,7 +137,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Diploria Porites Reef",
       "groupId": null,
@@ -148,7 +148,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Diploria Porites Reef",
       "groupId": null,
@@ -159,7 +159,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Diploria Porites Reef",
       "groupId": null,
@@ -171,7 +171,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Fore Reef",
       "groupId": null,
@@ -182,7 +182,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Fore Reef",
       "groupId": null,
@@ -193,7 +193,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Fore Reef",
       "groupId": null,
@@ -205,7 +205,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Madracis Reef",
       "groupId": null,
@@ -216,7 +216,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Madracis Reef",
       "groupId": null,
@@ -227,7 +227,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Madracis Reef",
       "groupId": null,
@@ -239,7 +239,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Main Terrace Reef",
       "groupId": null,
@@ -250,7 +250,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Main Terrace Reef",
       "groupId": null,
@@ -261,7 +261,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Main Terrace Reef",
       "groupId": null,
@@ -273,7 +273,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Mesopelagic",
       "groupId": null,
@@ -284,7 +284,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Mesopelagic",
       "groupId": null,
@@ -295,7 +295,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Mesopelagic",
       "groupId": null,
@@ -307,7 +307,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Mesophotic",
       "groupId": null,
@@ -318,7 +318,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Mesophotic",
       "groupId": null,
@@ -329,7 +329,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Mesophotic",
       "groupId": null,
@@ -341,7 +341,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Montastraea Reef",
       "groupId": null,
@@ -352,7 +352,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Montastraea Reef",
       "groupId": null,
@@ -363,7 +363,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Montastraea Reef",
       "groupId": null,
@@ -375,7 +375,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Rariphotic",
       "groupId": null,
@@ -386,7 +386,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Rariphotic",
       "groupId": null,
@@ -397,7 +397,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Rariphotic",
       "groupId": null,
@@ -409,7 +409,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Rim Reef",
       "groupId": null,
@@ -420,7 +420,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Rim Reef",
       "groupId": null,
@@ -431,7 +431,7 @@
       }
     },
     {
-      "metricId": "nearshore",
+      "metricId": "nearshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Rim Reef",
       "groupId": null,
@@ -443,7 +443,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Abyssopelagic",
       "groupId": null,
@@ -454,7 +454,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Abyssopelagic",
       "groupId": null,
@@ -465,7 +465,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Abyssopelagic",
       "groupId": null,
@@ -477,7 +477,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -488,7 +488,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -499,7 +499,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Bathypelagic",
       "groupId": null,
@@ -511,7 +511,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Cold water coral",
       "groupId": null,
@@ -522,7 +522,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Cold water coral",
       "groupId": null,
@@ -533,7 +533,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Cold water coral",
       "groupId": null,
@@ -545,7 +545,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Escarpments",
       "groupId": null,
@@ -556,7 +556,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Escarpments",
       "groupId": null,
@@ -567,7 +567,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Escarpments",
       "groupId": null,
@@ -579,7 +579,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Knolls",
       "groupId": null,
@@ -590,7 +590,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Knolls",
       "groupId": null,
@@ -601,7 +601,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Knolls",
       "groupId": null,
@@ -613,7 +613,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Pelagic zone 1",
       "groupId": null,
@@ -624,7 +624,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Pelagic zone 1",
       "groupId": null,
@@ -635,7 +635,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Pelagic zone 1",
       "groupId": null,
@@ -647,7 +647,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Pelagic zone 2",
       "groupId": null,
@@ -658,7 +658,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Pelagic zone 2",
       "groupId": null,
@@ -669,7 +669,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Pelagic zone 2",
       "groupId": null,
@@ -681,7 +681,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Pelagic zone 3",
       "groupId": null,
@@ -692,7 +692,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Pelagic zone 3",
       "groupId": null,
@@ -703,7 +703,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Pelagic zone 3",
       "groupId": null,
@@ -715,7 +715,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Plains",
       "groupId": null,
@@ -726,7 +726,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Plains",
       "groupId": null,
@@ -737,7 +737,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Plains",
       "groupId": null,
@@ -749,7 +749,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Seamounts",
       "groupId": null,
@@ -760,7 +760,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834683ff3e57f7333d93d",
       "classId": "Seamounts",
       "groupId": null,
@@ -771,7 +771,7 @@
       }
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": "619834743ff3e57f7333d93e",
       "classId": "Seamounts",
       "groupId": null,

@@ -18,8 +18,8 @@ import {
 import existingProtectionsTotals from "../../data/precalc/existingProtectionsTotals.json";
 const existingPrecalcTotals = existingProtectionsTotals as ReportResultBase;
 
-const CONFIG = config.existingProtection;
-const METRIC_ID = "areaOverlap";
+const REPORT = config.existingProtection;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const ExistingProtections = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -35,7 +35,7 @@ const ExistingProtections = () => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
             sketchMetricPercent(
-              data.metrics.filter((m) => m.metricId === METRIC_ID),
+              data.metrics.filter((m) => m.metricId === METRIC.metricId),
               existingPrecalcTotals.metrics
             ),
             [data.sketch.properties.id]
@@ -51,7 +51,7 @@ const ExistingProtections = () => {
               <ClassTable
                 titleText="Area Type"
                 rows={parentMetrics}
-                classes={CONFIG.classes}
+                classes={METRIC.classes}
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -70,17 +70,17 @@ const genSketchTable = (data: ReportResult) => {
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
-      data.metrics.filter((m) => m.metricId === METRIC_ID),
+      data.metrics.filter((m) => m.metricId === METRIC.metricId),
       childSketchIds
     ),
     existingPrecalcTotals.metrics
   );
   const sketchRows = flattenSketchAllClassNext(
     childSketchMetrics,
-    CONFIG.classes,
+    METRIC.classes,
     childSketches
   );
-  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
+  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
 };
 
 const LoadingSkeleton = () => (

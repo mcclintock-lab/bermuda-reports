@@ -18,7 +18,7 @@ import { ClassTable } from "../components/ClassTable";
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
 const precalcTotals = reefIndexTotals as ReportResultBase;
 
-const CONFIG = config.reefIndex;
+const DATA = config.dataGroups.reefIndex;
 
 const SpeciesProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -67,7 +67,7 @@ const SpeciesProtection = () => {
               <ClassTable
                 titleText="Indicator"
                 rows={topMetrics}
-                classes={CONFIG.classes}
+                classes={DATA.classes}
                 showGoal
               />
               {isCollection && (
@@ -90,11 +90,11 @@ const genSketchTable = (data: ReportResult) => {
   );
   const sketchRows = flattenSketchAllClassNext(
     childSketchMetrics,
-    CONFIG.classes,
+    DATA.classes,
     childSketches
   );
 
-  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
+  return <SketchClassTable rows={sketchRows} classes={DATA.classes} />;
 };
 
 const LoadingSkeleton = () => (

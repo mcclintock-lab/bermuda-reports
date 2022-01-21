@@ -22,8 +22,9 @@ const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
 const offshorePrecalcTotals = offshoreHabitatTotals as ReportResultBase;
 
-const NEARSHORE_METRIC_ID = "nearshore";
-const OFFSHORE_METRIC_ID = "offshore";
+const REPORT = config.habitatProtection;
+const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;
+const OFFSHORE_METRIC = REPORT.metrics.offshoreAreaOverlap;
 
 const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -39,7 +40,7 @@ const HabitatProtection = () => {
           const nearshoreParentPercMetrics = metricsWithSketchId(
             sketchMetricPercent(
               data.metrics.filter(
-                (m) => m.metricId === NEARSHORE_METRIC_ID && m.classId
+                (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
               ),
               nearshorePrecalcTotals.metrics
             ),
@@ -47,7 +48,9 @@ const HabitatProtection = () => {
           );
           const offshoreParentPercMetrics = metricsWithSketchId(
             sketchMetricPercent(
-              data.metrics.filter((m) => m.metricId === OFFSHORE_METRIC_ID),
+              data.metrics.filter(
+                (m) => m.metricId === OFFSHORE_METRIC.metricId
+              ),
               offshorePrecalcTotals.metrics
             ),
             [data.sketch.properties.id]
@@ -71,9 +74,9 @@ const HabitatProtection = () => {
               </Collapse>
               <CategoricalClassTable
                 titleText="Nearshore/Platform"
-                layerId={config.nearshore.layerId}
+                layerId={NEARSHORE_METRIC.layerId}
                 rows={nearshoreParentPercMetrics}
-                classes={config.nearshore.classes}
+                classes={NEARSHORE_METRIC.classes}
                 showGoal
               />
               {isCollection && (
@@ -84,7 +87,7 @@ const HabitatProtection = () => {
               <ClassTable
                 titleText="Offshore"
                 rows={offshoreParentPercMetrics}
-                classes={config.offshore.classes}
+                classes={OFFSHORE_METRIC.classes}
                 showGoal
               />
               {isCollection && (
@@ -107,7 +110,7 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   const subSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
       data.metrics.filter(
-        (m) => m.metricId === NEARSHORE_METRIC_ID && m.classId
+        (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
       ),
       subSketchIds
     ),
@@ -115,11 +118,11 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   );
   const sketchRows = flattenSketchAllClassNext(
     subSketchMetrics,
-    config.nearshore.classes,
+    NEARSHORE_METRIC.classes,
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.nearshore.classes} />
+    <SketchClassTable rows={sketchRows} classes={NEARSHORE_METRIC.classes} />
   );
 };
 
@@ -130,7 +133,7 @@ const genOffshoreSketchTable = (data: ReportResult) => {
   const subSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
       data.metrics.filter(
-        (m) => m.metricId === OFFSHORE_METRIC_ID && m.classId
+        (m) => m.metricId === OFFSHORE_METRIC.metricId && m.classId
       ),
       subSketchIds
     ),
@@ -138,11 +141,11 @@ const genOffshoreSketchTable = (data: ReportResult) => {
   );
   const sketchRows = flattenSketchAllClassNext(
     subSketchMetrics,
-    config.offshore.classes,
+    OFFSHORE_METRIC.classes,
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.offshore.classes} />
+    <SketchClassTable rows={sketchRows} classes={OFFSHORE_METRIC.classes} />
   );
 };
 

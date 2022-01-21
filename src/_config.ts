@@ -3,7 +3,8 @@ import {
   DataClass,
   Report,
   Metric,
-  MetricGroup,
+  MetricGroupNew,
+  ReportNew,
 } from "../src/metrics/types";
 
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
@@ -89,185 +90,100 @@ const protectionReport: Report = {
 
 //// EXISTING PROTECTIONS ////
 
-// Single vector with multiple classes
-const existingProtectionBaseFilename = "existingProtections";
-export const existingProtectionClasses: DataClass[] = [
-  {
-    classId: "Ferry Route",
-    display: "Ferry Routes",
-    layerId: "5dc07170cae3e4074e651716",
+// Single vector dataset with multiple classes
+const existingProtectionReport: Report = {
+  reportId: "existingProtections",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      baseFilename: "existingProtections",
+      filename: "existingProtections.fgb",
+      classProperty: "Type",
+      classes: [
+        {
+          classId: "Ferry Route",
+          display: "Ferry Routes",
+          layerId: "5dc07170cae3e4074e651716",
+        },
+        {
+          classId: "Shipping Lane",
+          display: "Shipping Lanes",
+          layerId: "5dc07170cae3e4074e65172e",
+        },
+        {
+          classId: "CableZone",
+          display: "Cable Zones",
+          layerId: "5e6acf64bef390124c2b4952",
+        },
+        {
+          classId: "SpearfishEx",
+          display: "Spearfish Exclusion Zones",
+          layerId: "615b214142b883e66c1a6cb3",
+        },
+        {
+          classId: "SeasonalPA",
+          display: "Seasonally Protected Areas",
+          layerId: "615b207f42b883e66c1a6c0d",
+        },
+        {
+          classId: "MPAExtendedClosure",
+          display: "MPA Extended Closures",
+          layerId: "61538b8cd5974aea32a4a5e6",
+        },
+        {
+          classId: "Wreck",
+          display: "Wrecks",
+          layerId: "5dc07170cae3e4074e651722",
+        },
+        {
+          classId: "Reef",
+          display: "Protected Dive Sites",
+          layerId: "615b204f42b883e66c1a6bf3",
+        },
+        {
+          classId: "Prohibited",
+          display: "Prohibited Marine Board Notice Areas",
+          layerId: "61538b8cd5974aea32a4a5e8",
+        },
+        {
+          classId: "NoNetFish",
+          display: "No Net Fishing Areas",
+          layerId: "615b211242b883e66c1a6c99",
+        },
+        {
+          classId: "NoLobsterFish",
+          display: "No Lobster Fishing Areas",
+          layerId: "615b216242b883e66c1a6ccb",
+        },
+        {
+          classId: "Amenity Park",
+          display: "Amenity Parks",
+          layerId: "615b209a42b883e66c1a6c20",
+        },
+        {
+          classId: "Recreational Park",
+          display: "Recreational Parks",
+          layerId: "615b209a42b883e66c1a6c20",
+        },
+        {
+          classId: "Nature Reserve",
+          display: "Nature Reserves",
+          layerId: "615b209a42b883e66c1a6c20",
+        },
+        {
+          classId: "CoralPreserve",
+          display: "Coral Preserves",
+          layerId: "615b202642b883e66c1a6b8b",
+        },
+      ],
+    },
   },
-  {
-    classId: "Shipping Lane",
-    display: "Shipping Lanes",
-    layerId: "5dc07170cae3e4074e65172e",
-  },
-  {
-    classId: "CableZone",
-    display: "Cable Zones",
-    layerId: "5e6acf64bef390124c2b4952",
-  },
-  {
-    classId: "SpearfishEx",
-    display: "Spearfish Exclusion Zones",
-    layerId: "615b214142b883e66c1a6cb3",
-  },
-  {
-    classId: "SeasonalPA",
-    display: "Seasonally Protected Areas",
-    layerId: "615b207f42b883e66c1a6c0d",
-  },
-  {
-    classId: "MPAExtendedClosure",
-    display: "MPA Extended Closures",
-    layerId: "61538b8cd5974aea32a4a5e6",
-  },
-  {
-    classId: "Wreck",
-    display: "Wrecks",
-    layerId: "5dc07170cae3e4074e651722",
-  },
-  {
-    classId: "Reef",
-    display: "Protected Dive Sites",
-    layerId: "615b204f42b883e66c1a6bf3",
-  },
-  {
-    classId: "Prohibited",
-    display: "Prohibited Marine Board Notice Areas",
-    layerId: "61538b8cd5974aea32a4a5e8",
-  },
-  {
-    classId: "NoNetFish",
-    display: "No Net Fishing Areas",
-    layerId: "615b211242b883e66c1a6c99",
-  },
-  {
-    classId: "NoLobsterFish",
-    display: "No Lobster Fishing Areas",
-    layerId: "615b216242b883e66c1a6ccb",
-  },
-  {
-    classId: "Amenity Park",
-    display: "Amenity Parks",
-    layerId: "615b209a42b883e66c1a6c20",
-  },
-  {
-    classId: "Recreational Park",
-    display: "Recreational Parks",
-    layerId: "615b209a42b883e66c1a6c20",
-  },
-  {
-    classId: "Nature Reserve",
-    display: "Nature Reserves",
-    layerId: "615b209a42b883e66c1a6c20",
-  },
-  {
-    classId: "CoralPreserve",
-    display: "Coral Preserves",
-    layerId: "615b202642b883e66c1a6b8b",
-  },
-];
-
-export const existingProtection: DataGroup = {
-  baseFilename: existingProtectionBaseFilename,
-  filename: `${existingProtectionBaseFilename}${fgbFileSuffix}`,
-  classes: existingProtectionClasses,
 };
 
-//// HABITAT ////
+//// HABITAT PROTECTION ////
 
-// Categorical raster
-const nearshoreBaseFilename = "Habitat Zones1";
-const nearshoreClasses: DataClass[] = [
-  {
-    numericClassId: 1,
-    classId: "Bays and Coast",
-    display: "Bays and Coast",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 2,
-    classId: "Madracis Reef",
-    display: "Madracis Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 3,
-    classId: "Montastraea Reef",
-    display: "Montastraea Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 4,
-    classId: "Diploria Porites Reef",
-    display: "Diploria Porites Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 5,
-    classId: "Castle Harbour Madracis",
-    display: "Castle Harbour Madracis",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 6,
-    classId: "Algal Vermetid Reef",
-    display: "Algal Vermetid Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 7,
-    classId: "Rim Reef",
-    display: "Rim Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 8,
-    classId: "Main Terrace Reef",
-    display: "Main Terrace Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 9,
-    classId: "Fore Reef",
-    display: "Fore Reef",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 10,
-    classId: "Mesophotic",
-    display: "Mesophotic",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 11,
-    classId: "Rariphotic",
-    display: "Rariphotic",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 12,
-    classId: "Mesopelagic",
-    display: "Mesopelagic",
-    goalPerc: 0.2,
-  },
-  {
-    numericClassId: 13,
-    classId: "Bathypelagic",
-    display: "Bathypelagic",
-    goalPerc: 0.2,
-  },
-];
-
-export const nearshore: DataGroup = {
-  baseFilename: nearshoreBaseFilename,
-  filename: `${nearshoreBaseFilename}${cogFileSuffix}`,
-  layerId: "614df361c33508c127015a1c",
-  classes: nearshoreClasses,
-};
-
-export const offshoreClasses: DataClass[] = [
+// Single-class rasters
+const offshoreClasses: DataClass[] = [
   {
     baseFilename: "feature_abyssopelagic",
     noDataValue: -3.39999995214436425e38,
@@ -350,7 +266,120 @@ export const offshoreClasses: DataClass[] = [
   },
 ];
 
-export const offshore: DataGroup = {
+// Multi-class raster (categorical)
+const nearshoreClasses: DataClass[] = [
+  {
+    numericClassId: 1,
+    classId: "Bays and Coast",
+    display: "Bays and Coast",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 2,
+    classId: "Madracis Reef",
+    display: "Madracis Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 3,
+    classId: "Montastraea Reef",
+    display: "Montastraea Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 4,
+    classId: "Diploria Porites Reef",
+    display: "Diploria Porites Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 5,
+    classId: "Castle Harbour Madracis",
+    display: "Castle Harbour Madracis",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 6,
+    classId: "Algal Vermetid Reef",
+    display: "Algal Vermetid Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 7,
+    classId: "Rim Reef",
+    display: "Rim Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 8,
+    classId: "Main Terrace Reef",
+    display: "Main Terrace Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 9,
+    classId: "Fore Reef",
+    display: "Fore Reef",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 10,
+    classId: "Mesophotic",
+    display: "Mesophotic",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 11,
+    classId: "Rariphotic",
+    display: "Rariphotic",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 12,
+    classId: "Mesopelagic",
+    display: "Mesopelagic",
+    goalPerc: 0.2,
+  },
+  {
+    numericClassId: 13,
+    classId: "Bathypelagic",
+    display: "Bathypelagic",
+    goalPerc: 0.2,
+  },
+];
+
+const habitatProtectionReport: Report = {
+  reportId: "habitatProtection",
+  metrics: {
+    nearshoreAreaOverlap: {
+      metricId: "nearshoreAreaOverlap",
+      baseFilename: "Habitat Zones1",
+      filename: `Habitat Zones1${cogFileSuffix}`,
+      classes: nearshoreClasses,
+      layerId: "614df361c33508c127015a1c",
+    },
+    offshoreAreaOverlap: {
+      metricId: "offshoreAreaOverlap",
+      classes: offshoreClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${cogFileSuffix}`,
+        };
+      }),
+    },
+  },
+};
+
+export const nearshoreDataGroup: DataGroup = {
+  datasourceId: "nearshore",
+  baseFilename: "Habitat Zones1",
+  filename: `Habitat Zones1${cogFileSuffix}`,
+  classes: nearshoreClasses,
+  layerId: "614df361c33508c127015a1c",
+};
+
+export const offshoreDataGroup: DataGroup = {
+  datasourceId: "offshore",
   classes: offshoreClasses.map((curClass) => {
     return {
       ...curClass,
@@ -437,6 +466,7 @@ export const reefIndexClasses: DataClass[] = [
 ];
 
 export const reefIndex: DataGroup = {
+  datasourceId: "reefIndex",
   classes: reefIndexClasses.map((curClass) => {
     return {
       ...curClass,
@@ -618,8 +648,8 @@ export const oceanUse: DataGroup = {
 const shipwreckReport: Report = {
   reportId: "shipwreck",
   metrics: {
-    sumOverlap: {
-      metricId: "sumOverlap",
+    valueOverlap: {
+      metricId: "valueOverlap",
       baseFilename: "WreckHeatmap",
       filename: "WreckHeatmap.fgb",
       classes: [
@@ -693,9 +723,8 @@ export default {
   objectives,
   size: sizeReport,
   protection: protectionReport,
-  existingProtection,
-  nearshore,
-  offshore,
+  existingProtection: existingProtectionReport,
+  habitatProtection: habitatProtectionReport,
   reefIndex,
   renewable,
   oceanUse,
@@ -703,4 +732,36 @@ export default {
   habitatNursery,
   platformEdge,
   shipwreck: shipwreckReport,
+
+  reports: {
+    speciesProtection: {
+      reportId: "speciesProtection",
+      metrics: ["nearshore", "offshore"],
+    },
+    habitatProtection: {
+      reportId: "habitatProtection",
+      metrics: ["nearshoreAreaOverlap", "offshoreAreaOverlap"],
+    },
+  },
+
+  metrics: {
+    reefIndexValueOverlap: {
+      metricId: "reefIndexValueOverlap",
+      datasources: ["reefIndex"],
+    },
+    nearshoreAreaOverlap: {
+      metricId: "nearshoreAreaOverlap",
+      datasources: ["nearshore"],
+    },
+    offshoreAreaOverlap: {
+      metricId: "offshoreAreaOverlap",
+      datasources: ["offshore"],
+    },
+  },
+
+  dataGroups: {
+    reefIndex,
+    nearshoreDataGroup,
+    offshoreDataGroup,
+  },
 };

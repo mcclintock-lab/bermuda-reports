@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "sumOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "615ffd9d045840708a6e54e5",
       "classId": "shipwreck",
       "groupId": null,

@@ -10,13 +10,13 @@ import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
+const REPORT = config.habitatProtection;
+const METRIC = REPORT.metrics.offshoreAreaOverlap;
 const DEST_PATH = `${__dirname}/precalc/offshoreHabitatTotals.json`;
-const CONFIG = config.offshore;
-const METRIC_ID = "offshore";
 
 async function main() {
   const metrics: Metric[] = await Promise.all(
-    CONFIG.classes.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {
         noDataValue: curClass.noDataValue,
@@ -24,7 +24,7 @@ async function main() {
       const sum = geoblaze.sum(raster)[0] as number;
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value: sum,
       });
     })

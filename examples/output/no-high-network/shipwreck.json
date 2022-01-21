@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "sumOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "shipwreck",
       "groupId": null,
@@ -12,7 +12,7 @@
       }
     },
     {
-      "metricId": "sumOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "shipwreck",
       "groupId": null,
@@ -24,7 +24,7 @@
       }
     },
     {
-      "metricId": "sumOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "shipwreck",
       "groupId": null,

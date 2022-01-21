@@ -12,14 +12,13 @@ import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const CONFIG = config.reefIndex;
-const DATASET = "reefIndex";
-const METRIC_ID = "valueOverlap";
+const METRIC = config.metrics.reefIndexValueOverlap;
+const DATA = config.dataGroups.reefIndex;
 
 async function main() {
-  const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
+  const DEST_PATH = `${__dirname}/precalc/${DATA.datasourceId}Totals.json`;
   const metrics: Metric[] = await Promise.all(
-    CONFIG.classes.map(async (curClass) => {
+    DATA.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const response = await fetch(url);
       const rasterBuf = await response.arrayBuffer();
@@ -27,7 +26,7 @@ async function main() {
       const value = geoblaze.sum(raster)[0] as number;
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value,
       });
     })

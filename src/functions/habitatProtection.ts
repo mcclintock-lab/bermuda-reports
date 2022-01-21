@@ -16,10 +16,9 @@ import { metricRekey, metricSort } from "../metrics/metrics";
 import { groupClassIdMapping } from "../metrics/classId";
 import { Metric } from "../metrics/types";
 
-const OFFSHORE_CLASSES = config.offshore.classes;
-const REPORT_ID = "habitatProtection";
-const NEARSHORE_METRIC_ID = "nearshore";
-const OFFSHORE_METRIC_ID = "offshore";
+const REPORT = config.habitatProtection;
+const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;
+const OFFSHORE_METRIC = REPORT.metrics.offshoreAreaOverlap;
 
 export async function habitatProtection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -29,22 +28,26 @@ export async function habitatProtection(
 
   // Categorical raster - multi-class
   const nearshoreRaster = await loadCogWindow(
-    `${config.dataBucketUrl}${config.nearshore.filename}`,
+    `${config.dataBucketUrl}${NEARSHORE_METRIC.filename}`,
     { windowBox: box }
   );
   const nearshoreMetrics: Metric[] = (
-    await overlapRasterClass(NEARSHORE_METRIC_ID, nearshoreRaster, sketch, {
-      classIdMapping: groupClassIdMapping(config.nearshore),
-    })
+    await overlapRasterClass(
+      NEARSHORE_METRIC.metricId,
+      nearshoreRaster,
+      sketch,
+      {
+        classIdMapping: groupClassIdMapping(NEARSHORE_METRIC),
+      }
+    )
   ).map((metrics) => ({
-    reportId: REPORT_ID,
     ...metrics,
   }));
 
   // Individual rasters - single-class
   const offshoreMetrics: Metric[] = (
     await Promise.all(
-      OFFSHORE_CLASSES.map(async (curClass) => {
+      OFFSHORE_METRIC.classes.map(async (curClass) => {
         const raster = await loadCogWindow(
           `${config.dataBucketUrl}${curClass.filename}`,
           {
@@ -53,7 +56,7 @@ export async function habitatProtection(
           }
         );
         const overlapResult = await overlapRaster(
-          OFFSHORE_METRIC_ID,
+          OFFSHORE_METRIC.metricId,
           raster,
           sketch
         );

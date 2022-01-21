@@ -37,6 +37,10 @@ export interface DataClass {
 export interface DataGroup {
   /** data classes used by report group */
   classes: DataClass[];
+  /** Identifier for datasource */
+  datasourceId?: string;
+  /** Optional name of feature property containing class ID */
+  classProperty?: string;
   /** Optional filename of dataset, sans extension. May contain data for one or more classes */
   baseFilename?: string;
   /** Optional filename of dataset for use by GP function, with extension */

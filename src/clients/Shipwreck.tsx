@@ -25,7 +25,7 @@ import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
 import SketchClassTable from "../components/SketchClassTable";
 const precalcTotals = WreckHeatmapTotals as ReportResultBase;
 
-const METRIC_ID = "sumOverlap";
+const METRIC_ID = "valueOverlap";
 const CONFIG = config;
 const REPORT = CONFIG.shipwreck;
 const METRIC = REPORT.metrics[METRIC_ID];

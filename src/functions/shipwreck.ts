@@ -19,7 +19,7 @@ export type ShipwreckProperties = {
 };
 export type ShipwreckFeature = Feature<Polygon, ShipwreckProperties>;
 
-const METRIC_ID = "sumOverlap";
+const METRIC_ID = "valueOverlap";
 const CONFIG = config;
 const REPORT = CONFIG.shipwreck;
 const METRIC = REPORT.metrics[METRIC_ID];

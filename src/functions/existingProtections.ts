@@ -25,22 +25,21 @@ export type ExistingProtectionFeature = Feature<
   ExistingProtectionProperties
 >;
 
-const CONFIG = config.existingProtection;
-const REPORT_ID = "existingProtections";
-const METRIC_ID = "areaOverlap";
+const REPORT = config.existingProtection;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const features = await fgbFetchAll<ExistingProtectionFeature>(
-    `${config.dataBucketUrl}${CONFIG.filename}`,
+    `${config.dataBucketUrl}${METRIC.filename}`,
     box
   );
 
   const metrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
         const classFeatures = features.filter((feat) => {
           return (
@@ -48,7 +47,7 @@ export async function existingProtections(
           );
         }, []);
         const overlapResult = await overlapFeatures(
-          METRIC_ID,
+          METRIC.metricId,
           classFeatures,
           sketch
         );
