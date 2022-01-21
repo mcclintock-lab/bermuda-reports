@@ -4,29 +4,33 @@
       "metricId": "renewable",
       "sketchId": null,
       "classId": "Fixed Offshore Wind",
+      "groupId": null,
       "geographyId": null,
-      "value": 991147.264895618
+      "value": 3728809.8454754353
     },
     {
       "metricId": "renewable",
       "sketchId": null,
       "classId": "Floating Solar",
+      "groupId": null,
       "geographyId": null,
-      "value": 1555720.8217766285
+      "value": 5143254.350547314
     },
     {
       "metricId": "renewable",
       "sketchId": null,
       "classId": "Floating Offshore Wind",
+      "groupId": null,
       "geographyId": null,
-      "value": 444938.63100481033
+      "value": 827941.9285855293
     },
     {
       "metricId": "renewable",
       "sketchId": null,
       "classId": "Wave Energy",
+      "groupId": null,
       "geographyId": null,
-      "value": 450788.52027624846
+      "value": 1692259.6028084755
     }
   ]
 }

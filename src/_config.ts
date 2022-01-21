@@ -1,11 +1,4 @@
-import {
-  DataGroup,
-  DataClass,
-  Report,
-  Metric,
-  MetricGroupNew,
-  ReportNew,
-} from "../src/metrics/types";
+import { DataGroup, DataClass, Report, Metric } from "../src/metrics/types";
 
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
 

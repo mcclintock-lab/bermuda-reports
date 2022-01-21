@@ -4,6 +4,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Ferry Route",
+      "groupId": null,
       "geographyId": null,
       "value": 6531869.4800553275
     },
@@ -11,6 +12,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Shipping Lane",
+      "groupId": null,
       "geographyId": null,
       "value": 6404448.404035611
     },
@@ -18,6 +20,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "CableZone",
+      "groupId": null,
       "geographyId": null,
       "value": 724129832.7142962
     },
@@ -25,6 +28,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "SpearfishEx",
+      "groupId": null,
       "geographyId": null,
       "value": 190898381.11518282
     },
@@ -32,6 +36,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "SeasonalPA",
+      "groupId": null,
       "geographyId": null,
       "value": 86861956.52690658
     },
@@ -39,6 +44,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "MPAExtendedClosure",
+      "groupId": null,
       "geographyId": null,
       "value": 16223333.48414083
     },
@@ -46,6 +52,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Wreck",
+      "groupId": null,
       "geographyId": null,
       "value": 8346169.285616089
     },
@@ -53,6 +60,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Reef",
+      "groupId": null,
       "geographyId": null,
       "value": 7244658.235392232
     },
@@ -60,6 +68,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Prohibited",
+      "groupId": null,
       "geographyId": null,
       "value": 415252.02290973207
     },
@@ -67,6 +76,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "NoNetFish",
+      "groupId": null,
       "geographyId": null,
       "value": 478936.7152099035
     },
@@ -74,6 +84,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "NoLobsterFish",
+      "groupId": null,
       "geographyId": null,
       "value": 81967128.62906441
     },
@@ -81,6 +92,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Amenity Park",
+      "groupId": null,
       "geographyId": null,
       "value": 893250.188420536
     },
@@ -88,6 +100,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Recreational Park",
+      "groupId": null,
       "geographyId": null,
       "value": 45354.238667298945
     },
@@ -95,6 +108,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Nature Reserve",
+      "groupId": null,
       "geographyId": null,
       "value": 483071.3674229983
     },
@@ -102,6 +116,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "CoralPreserve",
+      "groupId": null,
       "geographyId": null,
       "value": 131462891.60720466
     }

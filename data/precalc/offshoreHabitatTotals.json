@@ -1,72 +1,82 @@
 {
   "metrics": [
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Abyssopelagic",
+      "groupId": null,
       "geographyId": null,
       "value": 6093
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Bathypelagic",
+      "groupId": null,
       "geographyId": null,
       "value": 124
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Cold water coral",
+      "groupId": null,
       "geographyId": null,
       "value": 9
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Escarpments",
+      "groupId": null,
       "geographyId": null,
       "value": 103
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Knolls",
+      "groupId": null,
       "geographyId": null,
       "value": 1587
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Pelagic zone 1",
+      "groupId": null,
       "geographyId": null,
       "value": 2979
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Pelagic zone 2",
+      "groupId": null,
       "geographyId": null,
       "value": 1529
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Pelagic zone 3",
+      "groupId": null,
       "geographyId": null,
       "value": 2601
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Plains",
+      "groupId": null,
       "geographyId": null,
       "value": 5481
     },
     {
-      "metricId": "offshore",
+      "metricId": "offshoreAreaOverlap",
       "sketchId": null,
       "classId": "Seamounts",
+      "groupId": null,
       "geographyId": null,
       "value": 379
     }

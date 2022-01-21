@@ -4,15 +4,17 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Seagrass",
+      "groupId": null,
       "geographyId": null,
-      "value": 32670378.385694697
+      "value": 54334525.677660696
     },
     {
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
       "geographyId": null,
-      "value": 383910881.3258027
+      "value": 7505642013.866692
     }
   ]
 }

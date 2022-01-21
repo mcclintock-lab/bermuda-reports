@@ -4,6 +4,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Nursery Reef",
+      "groupId": null,
       "geographyId": null,
       "value": 11651653.092987554
     },
@@ -11,6 +12,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Mangrove",
+      "groupId": null,
       "geographyId": null,
       "value": 174538.70779643767
     },
@@ -18,6 +20,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": "Seagrass",
+      "groupId": null,
       "geographyId": null,
       "value": 2884769.994477741
     },
@@ -25,6 +28,7 @@
       "metricId": "areaOverlap",
       "sketchId": null,
       "classId": null,
+      "groupId": null,
       "geographyId": null,
       "value": 14710961.795261733
     }

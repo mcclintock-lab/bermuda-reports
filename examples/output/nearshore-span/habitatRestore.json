@@ -6,7 +6,7 @@
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
-      "value": 1435855.4765313931,
+      "value": 0,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -17,7 +17,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 2097591.7151726917,
+      "value": 3284824.439995314,
       "extra": {
         "sketchName": "nearshore-span"
       }

@@ -1,41 +1,45 @@
 {
   "metrics": [
     {
-      "reportId": "renewable",
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Fixed Offshore Wind",
-      "metricId": "areaOverlap",
-      "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 652.3174185752869,
+      "groupId": null,
+      "geographyId": null,
+      "value": 1386.410255432129,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 7336.127771854401,
-      "extra": {
-        "sketchName": "mpa-high"
-      }
-    },
-    {
-      "reportId": "renewable",
       "classId": "Floating Offshore Wind",
-      "metricId": "areaOverlap",
-      "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 5056.116574764252,
+      "groupId": null,
+      "geographyId": null,
+      "value": 9795.894483566284,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "areaOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 1733.900220990181,
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 15051.169289588928,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4275.671894073486,
       "extra": {
         "sketchName": "mpa-high"
       }

@@ -1,41 +1,45 @@
 {
   "metrics": [
     {
-      "reportId": "renewable",
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "Fixed Offshore Wind",
-      "metricId": "areaOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 21734.027351796627,
+      "groupId": null,
+      "geographyId": null,
+      "value": 265884.14039325714,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Floating Solar",
       "metricId": "areaOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 49128.152675926685,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "reportId": "renewable",
       "classId": "Floating Offshore Wind",
-      "metricId": "areaOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 8604.270055055618,
+      "groupId": null,
+      "geographyId": null,
+      "value": 112271.20314335823,
       "extra": {
         "sketchName": "nearshore-span"
       }
     },
     {
-      "reportId": "renewable",
-      "classId": "Wave Energy",
       "metricId": "areaOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "value": 19312.111798286438,
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 475733.4994997978,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 173903.067568779,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -46,7 +50,7 @@
     "properties": {
       "id": "61649a3c1e0a596510ad8329",
       "name": "nearshore-span",
-      "updatedAt": "2021-10-11T20:10:36.004Z",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
       "createdAt": "2021-10-11T20:10:36.004Z",
       "sketchClassId": "615b59e1aac8c8285d50d9b8",
       "isCollection": false,

@@ -4,6 +4,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Aquaculture",
+      "groupId": null,
       "geographyId": null,
       "value": 14972.600296854973
     },
@@ -11,6 +12,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Boating",
+      "groupId": null,
       "geographyId": null,
       "value": 430346.0135562408
     },
@@ -18,6 +20,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "CommercialFishing",
+      "groupId": null,
       "geographyId": null,
       "value": 296287.77351568406
     },
@@ -25,6 +28,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
       "geographyId": null,
       "value": 230850.84109385265
     },
@@ -32,6 +36,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Recreational Fishing",
+      "groupId": null,
       "geographyId": null,
       "value": 231050.7586448742
     },
@@ -39,6 +44,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Shipping",
+      "groupId": null,
       "geographyId": null,
       "value": 14768.226010799408
     },
@@ -46,6 +52,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
       "geographyId": null,
       "value": 613759.638105642
     },
@@ -53,6 +60,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Tourism",
+      "groupId": null,
       "geographyId": null,
       "value": 20206.746555360034
     },
@@ -60,6 +68,7 @@
       "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Utilities",
+      "groupId": null,
       "geographyId": null,
       "value": 15146.934098422527
     }
