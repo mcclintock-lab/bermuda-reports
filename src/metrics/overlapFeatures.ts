@@ -131,7 +131,7 @@ const getSketchPolygonIntersectArea = (
   featuresB: Feature<Polygon | MultiPolygon>[]
 ) => {
   // chunk to avoid blowing up intersect
-  const chunks = chunk(featuresB, 5000);
+  const chunks = chunk(featuresB, 2000);
   // intersect and get area of remainder
   const sketchValue = chunks
     .map((curChunk) => intersect(featureA, curChunk))
