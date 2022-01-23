@@ -5,13 +5,15 @@
 import polygonClipping from "polygon-clipping";
 import {
   Feature,
+  featureCollection,
   multiPolygon,
   MultiPolygon,
   polygon,
   Polygon,
+  Position,
   Properties,
 } from "@turf/helpers";
-import { getGeom } from "@turf/invariant";
+import { geomEach } from "@turf/turf";
 
 export function clip<P = Properties>(
   features: Feature<Polygon | MultiPolygon>[],
@@ -19,10 +21,13 @@ export function clip<P = Properties>(
   options: {
     properties?: P;
   } = {}
-): Feature<Polygon | MultiPolygon, any> | null {
-  const coords = features.map((feat) => getGeom(feat).coordinates);
+): Feature<Polygon | MultiPolygon> | null {
+  const coords: (Position[][] | Position[][][])[] = [];
+  geomEach(featureCollection(features), (geom) => {
+    coords.push(geom.coordinates);
+  });
   //@ts-ignore
-  const clipped = polygonClipping[operation](...coords);
+  const clipped = polygonClipping[operation](coords[0], ...coords.slice(1));
 
   if (clipped.length === 0) return null;
   if (clipped.length === 1) return polygon(clipped[0], options.properties);

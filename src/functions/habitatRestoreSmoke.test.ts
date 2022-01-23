@@ -12,7 +12,7 @@ describe("habitatRestoreSmoke - Basic smoke tests", () => {
     expect(typeof habitatRestore).toBe("function");
   });
   test("tests run against all examples", async () => {
-    const examples = await getExamplePolygonSketchAll("Gigantic Network");
+    const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await habitatRestore(example);
       expect(result).toBeTruthy();

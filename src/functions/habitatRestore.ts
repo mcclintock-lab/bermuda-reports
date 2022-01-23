@@ -58,7 +58,7 @@ export async function habitatRestore(
 export default new GeoprocessingHandler(habitatRestore, {
   title: "habitatRestore",
   description: "habitat restoration area within sketch",
-  timeout: 120, // seconds
+  timeout: 240, // seconds
   executionMode: "async",
   memory: 8192,
   // Specify any Sketch Class form attributes that are required
