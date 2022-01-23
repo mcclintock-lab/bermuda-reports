@@ -92,18 +92,6 @@
         "sketchName": "low-only-network",
         "isCollection": true
       }
-    },
-    {
-      "metricId": "areaOverlapPerc",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "eez",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.000028517176954426482,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
     }
   ],
   "sketch": {

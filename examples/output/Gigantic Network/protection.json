@@ -96,7 +96,7 @@
       "classId": "eez",
       "groupId": "4/6",
       "geographyId": null,
-      "value": 595844246.3363541,
+      "value": 6233285266.335688,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -120,7 +120,7 @@
       "classId": "eez",
       "groupId": "high",
       "geographyId": null,
-      "value": 595844246.3363541,
+      "value": 6233285266.335688,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -133,18 +133,6 @@
       "groupId": "low",
       "geographyId": null,
       "value": 0,
-      "extra": {
-        "sketchName": "Gigantic Network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "areaOverlapPerc",
-      "sketchId": "619834743ff3e57f7333d93e",
-      "classId": "eez",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.1732409946745029,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

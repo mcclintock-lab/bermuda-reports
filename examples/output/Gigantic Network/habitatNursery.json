@@ -98,7 +98,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11648327.625597764,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -109,7 +109,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11648327.625597764,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -120,7 +120,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 4062595.4425024344,
+      "value": 4062595.442502447,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -131,7 +131,7 @@
       "classId": "Nursery Reef",
       "groupId": "high",
       "geographyId": null,
-      "value": 4062595.4425024344,
+      "value": 4062595.442502447,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -142,7 +142,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11648327.625597764,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -154,7 +154,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11648327.625597764,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

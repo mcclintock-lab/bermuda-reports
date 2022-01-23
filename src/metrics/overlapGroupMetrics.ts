@@ -94,11 +94,15 @@ export async function overlapAreaGroupMetrics(options: {
       features: Feature<Polygon>[],
       sc: SketchCollection<Polygon>
     ) => {
+      // Calculate just the overall area sum for group
       const overallGroupMetrics = await overlapArea(
         metricId,
         sc,
         options.outerArea,
-        false
+        {
+          includePercMetric: false,
+          includeChildMetrics: false,
+        }
       );
       return overallGroupMetrics[0].value;
     },
@@ -149,7 +153,7 @@ export async function overlapGroupMetrics(options: {
     ? cloneDeep(metrics).filter((sm) => sm.sketchId !== sketch.properties.id)
     : cloneDeep(metrics).filter((sm) => sm.sketchId === sketch.properties.id);
 
-  // Lookup group for each metric and convert to stronger typed Metric
+  // Lookup and add group
   let groupSketchMetrics: Metric[] = sketchMetrics.map((m) => ({
     ...m,
     groupId: metricToGroup(m),

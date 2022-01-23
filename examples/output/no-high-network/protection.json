@@ -137,18 +137,6 @@
       "extra": {
         "sketchName": "low mpa"
       }
-    },
-    {
-      "metricId": "areaOverlapPerc",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "eez",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.0002786123691900815,
-      "extra": {
-        "sketchName": "no-high-network",
-        "isCollection": true
-      }
     }
   ],
   "sketch": {

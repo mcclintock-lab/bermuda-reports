@@ -18,7 +18,7 @@
       "classId": "eez",
       "groupId": "1a",
       "geographyId": null,
-      "value": 12311918758.318974,
+      "value": 12311918758.319027,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -30,7 +30,7 @@
       "classId": "eez",
       "groupId": "full",
       "geographyId": null,
-      "value": 12311918758.318974,
+      "value": 12311918758.319027,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -124,18 +124,6 @@
       "value": 673240597.1411997,
       "extra": {
         "sketchName": "MPA inside"
-      }
-    },
-    {
-      "metricId": "areaOverlapPerc",
-      "sketchId": "619a8e39a717c5a0742cafb8",
-      "classId": "eez",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.026435336486134785,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
       }
     }
   ],

@@ -12,11 +12,11 @@ describe("habitatRestoreSmoke - Basic smoke tests", () => {
     expect(typeof habitatRestore).toBe("function");
   });
   test("tests run against all examples", async () => {
-    const examples = await getExamplePolygonSketchAll();
+    const examples = await getExamplePolygonSketchAll("Gigantic Network");
     for (const example of examples) {
       const result = await habitatRestore(example);
       expect(result).toBeTruthy();
       writeResultOutput(result, "habitatRestore", example.properties.name);
     }
-  }, 60000);
+  }, 180000);
 });

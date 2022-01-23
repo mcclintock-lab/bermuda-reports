@@ -35,12 +35,9 @@ export async function protection(
   const sketches = toSketchArray(sketch);
 
   const classMetrics = (
-    await overlapArea(
-      METRIC.metricId,
-      sketch,
-      STUDY_REGION_AREA_SQ_METERS,
-      false
-    )
+    await overlapArea(METRIC.metricId, sketch, STUDY_REGION_AREA_SQ_METERS, {
+      includePercMetric: false,
+    })
   ).map(
     (metrics): Metric => ({
       ...metrics,

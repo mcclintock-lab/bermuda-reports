@@ -37,6 +37,8 @@ import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import protectionTotals from "../../data/precalc/protectionTotals.json";
 const precalcTotals = protectionTotals as ReportResultBase;
 
+const REPORT = config.protection;
+const METRIC = REPORT.metrics.areaOverlap;
 const EEZ_OBJECTIVE = config.objectives.eez;
 
 const ProtectionCard = () => {
@@ -87,7 +89,10 @@ const networkProtection = (data: ReportResult) => {
   let sketchLevelAggs: GroupMetricSketchAgg[] = [];
   if (isSketchCollection(data.sketch)) {
     const categoryMetrics = data.metrics.filter(
-      (m) => m.groupId && categories.includes(m.groupId)
+      (m) =>
+        m.metricId === METRIC.metricId &&
+        m.groupId &&
+        categories.includes(m.groupId)
     );
     groupCategoryAggs = flattenByGroup(
       data.sketch,

@@ -51,7 +51,7 @@
       "classId": "eez",
       "groupId": "1a",
       "geographyId": null,
-      "value": 313000393.6112994,
+      "value": 313000393.6112896,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -87,7 +87,7 @@
       "classId": "eez",
       "groupId": "full",
       "geographyId": null,
-      "value": 313000393.6112994,
+      "value": 313000393.6112896,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -214,18 +214,6 @@
       "value": 332082981.0585949,
       "extra": {
         "sketchName": "low MPA"
-      }
-    },
-    {
-      "metricId": "areaOverlapPerc",
-      "sketchId": "61a8155531c466cf4a0621a8",
-      "classId": "eez",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.0008335934529739127,
-      "extra": {
-        "sketchName": "Overlap Simple - All Protection Levels",
-        "isCollection": true
       }
     }
   ],

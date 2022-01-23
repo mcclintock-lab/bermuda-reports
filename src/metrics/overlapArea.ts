@@ -27,8 +27,14 @@ export async function overlapArea(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>,
   /** area of outer boundary (typically EEZ or planning area) */
   outerArea: number,
-  includePercMetric: boolean = true
+  options: {
+    /** If sketch collection, will include its child sketch metrics in addition to collection metrics, defaults to true */
+    includeChildMetrics?: boolean;
+    /** Includes metrics with percent of total area, in addition to raw area value metrics, defaults to true */
+    includePercMetric?: boolean;
+  } = {}
 ): Promise<Metric[]> {
+  const { includePercMetric = true, includeChildMetrics = true } = options;
   const percMetricId = `${metricId}Perc`;
   // Union to remove overlap
   const combinedSketch = isSketchCollection(sketch)
@@ -38,7 +44,7 @@ export async function overlapArea(
   if (!combinedSketch) throw new Error("areaStats - invalid sketch");
   const combinedSketchArea = turfArea(combinedSketch);
 
-  let metrics: Metric[] = [];
+  let sketchMetrics: Metric[] = [];
   if (sketch) {
     featureEach(sketch, (curSketch) => {
       if (!curSketch || !curSketch.properties) {
@@ -49,7 +55,8 @@ export async function overlapArea(
         console.log(
           `Warning: feature is missing geometry, zeroed: sketchId:${curSketch.properties.id}, name:${curSketch.properties.name}`
         );
-        metrics.push(
+
+        sketchMetrics.push(
           createMetric({
             metricId,
             sketchId: curSketch.properties.id,
@@ -60,7 +67,7 @@ export async function overlapArea(
           })
         );
         if (includePercMetric) {
-          metrics.push(
+          sketchMetrics.push(
             createMetric({
               metricId: percMetricId,
               sketchId: curSketch.properties.id,
@@ -73,7 +80,7 @@ export async function overlapArea(
         }
       } else {
         const sketchArea = turfArea(curSketch);
-        metrics.push(
+        sketchMetrics.push(
           createMetric({
             metricId,
             sketchId: curSketch.properties.id,
@@ -84,7 +91,7 @@ export async function overlapArea(
           })
         );
         if (includePercMetric) {
-          metrics.push(
+          sketchMetrics.push(
             createMetric({
               metricId: percMetricId,
               sketchId: curSketch.properties.id,
@@ -99,8 +106,9 @@ export async function overlapArea(
     });
   }
 
+  let collMetrics: Metric[] = [];
   if (isSketchCollection(sketch)) {
-    metrics.push(
+    collMetrics.push(
       createMetric({
         metricId,
         sketchId: sketch.properties.id,
@@ -111,20 +119,22 @@ export async function overlapArea(
         },
       })
     );
-    metrics.push(
-      createMetric({
-        metricId: percMetricId,
-        sketchId: sketch.properties.id,
-        value: combinedSketchArea / outerArea,
-        extra: {
-          sketchName: sketch.properties.name,
-          isCollection: true,
-        },
-      })
-    );
+    if (includePercMetric) {
+      collMetrics.push(
+        createMetric({
+          metricId: percMetricId,
+          sketchId: sketch.properties.id,
+          value: combinedSketchArea / outerArea,
+          extra: {
+            sketchName: sketch.properties.name,
+            isCollection: true,
+          },
+        })
+      );
+    }
   }
 
-  return metrics;
+  return [...(includeChildMetrics ? sketchMetrics : []), ...collMetrics];
 }
 
 /**

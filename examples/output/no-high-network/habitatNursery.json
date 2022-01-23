@@ -98,7 +98,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1662934.5983589217,
+      "value": 1662934.5983587445,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -109,7 +109,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1662934.5983589217,
+      "value": 1662934.5983587445,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -120,7 +120,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1662934.5983589217,
+      "value": 1662934.5983587445,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -132,7 +132,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1662934.5983589217,
+      "value": 1662934.5983587445,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
