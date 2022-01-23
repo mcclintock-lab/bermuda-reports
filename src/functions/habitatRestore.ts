@@ -32,7 +32,12 @@ export async function habitatRestore(
         const overlapResult = await overlapFeatures(
           METRIC_ID,
           features,
-          sketch
+          sketch,
+          {
+            chunkSize: 2000,
+            operation: "area",
+            calcSketchMetrics: true,
+          }
         );
         // Transform from simple to extended metric
         return overlapResult.map(

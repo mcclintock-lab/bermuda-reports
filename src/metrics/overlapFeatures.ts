@@ -34,7 +34,9 @@ export async function overlapFeatures(
     /** Operation to perform, supports area or sum.  Defaults to area */
     operation: "area" | "sum";
     sumProperty?: string;
-  } = { calcSketchMetrics: true, operation: "area" }
+    /** Intersection calls are chunked to avoid infinite loop error, defaults to 5000 features */
+    chunkSize: number;
+  } = { calcSketchMetrics: true, operation: "area", chunkSize: 5000 }
 ): Promise<Metric[]> {
   let sumValue: number = 0;
   let isOverlap = false;
@@ -111,9 +113,10 @@ const doIntersect = (
     /** Operation to perform, supports area or sum.  Defaults to area */
     operation: "area" | "sum";
     sumProperty?: string;
+    chunkSize: number;
   }
 ) => {
-  const { operation = "area" } = options;
+  const { chunkSize, operation = "area" } = options;
   switch (operation) {
     case "sum":
       return getSketchPolygonIntersectSumValue(
@@ -122,16 +125,17 @@ const doIntersect = (
         options.sumProperty
       );
     default:
-      return getSketchPolygonIntersectArea(featureA, featuresB);
+      return getSketchPolygonIntersectArea(featureA, featuresB, chunkSize);
   }
 };
 
 const getSketchPolygonIntersectArea = (
   featureA: Feature<Polygon | MultiPolygon>,
-  featuresB: Feature<Polygon | MultiPolygon>[]
+  featuresB: Feature<Polygon | MultiPolygon>[],
+  chunkSize: number
 ) => {
   // chunk to avoid blowing up intersect
-  const chunks = chunk(featuresB, 2000);
+  const chunks = chunk(featuresB, chunkSize);
   // intersect and get area of remainder
   const sketchValue = chunks
     .map((curChunk) => intersect(featureA, curChunk))

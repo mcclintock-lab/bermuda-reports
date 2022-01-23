@@ -13,7 +13,7 @@ import {
   Position,
   Properties,
 } from "@turf/helpers";
-import { geomEach } from "@turf/turf";
+import { geomEach } from "@turf/meta";
 
 export function clip<P = Properties>(
   features: Feature<Polygon | MultiPolygon>[],
