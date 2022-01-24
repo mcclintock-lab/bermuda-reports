@@ -517,7 +517,7 @@ const habitatRestoreClasses: DataClass[] = [
     baseFilename: "coral_restoration_areas",
     classId: "Coral",
     display: "Coral",
-    layerId: "",
+    layerId: "61ef2713051c62a214df90a8",
   },
   {
     baseFilename: "seagrass_restoration_500mbuff",
