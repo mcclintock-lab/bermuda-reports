@@ -16,6 +16,19 @@ import { chunk } from "../util/chunk";
 import { clip } from "../util/clip";
 import { createMetric } from "./metrics";
 
+// ToDo: tests
+//
+
+interface OverlapFeatureOptions {
+  /** Operation to perform, supports area or sum.  Defaults to area */
+  operation: "area" | "sum";
+  /** Intersection calls are chunked to avoid infinite loop error, defaults to 5000 features */
+  chunkSize: number;
+  /** If sketch collection, will include its child sketch metrics in addition to collection metrics, defaults to true */
+  includeChildMetrics?: boolean;
+  sumProperty?: string;
+}
+
 /**
  * Calculates overlap between sketches and features, including overall and per sketch
  * point - sum of points
@@ -28,16 +41,15 @@ export async function overlapFeatures(
   features: Feature<Polygon | MultiPolygon>[],
   /** the sketches.  If empty will return 0 result. */
   sketch: Sketch<Polygon> | SketchCollection<Polygon> | Sketch<Polygon>[],
-  options: {
-    /** Whether to calculate individual sketch metrics, otherwide just overall */
-    calcSketchMetrics?: boolean;
-    /** Operation to perform, supports area or sum.  Defaults to area */
-    operation: "area" | "sum";
-    sumProperty?: string;
-    /** Intersection calls are chunked to avoid infinite loop error, defaults to 5000 features */
-    chunkSize: number;
-  } = { calcSketchMetrics: true, operation: "area", chunkSize: 5000 }
+  options?: Partial<OverlapFeatureOptions>
 ): Promise<Metric[]> {
+  const newOptions: OverlapFeatureOptions = {
+    includeChildMetrics: true,
+    operation: "area",
+    chunkSize: 5000,
+    ...(options || {}),
+  };
+  const { includeChildMetrics } = newOptions;
   let sumValue: number = 0;
   let isOverlap = false;
   const sketches = Array.isArray(sketch) ? sketch : toSketchArray(sketch);
@@ -55,66 +67,63 @@ export async function overlapFeatures(
     const finalSketches =
       sketches.length > 1 && isOverlap ? flatten(sketchUnion) : sketchColl;
 
-    featureEach(finalSketches, (feat) => {
-      const curSum = doIntersect(
-        feat,
-        features as Feature<Polygon | MultiPolygon>[],
-        options
-      );
-      sumValue += curSum;
-    });
+    if (isOverlap) {
+      featureEach(finalSketches, (feat) => {
+        const curSum = doIntersect(
+          feat,
+          features as Feature<Polygon | MultiPolygon>[],
+          newOptions
+        );
+        sumValue += curSum;
+      });
+    }
   }
 
-  // Calc sketchMetrics if enabled
-  let sketchMetrics: Metric[] = !options.calcSketchMetrics
-    ? []
-    : sketches.map((curSketch) => {
-        let sketchValue: number = doIntersect(
-          curSketch as Feature<Polygon | MultiPolygon>,
-          features as Feature<Polygon | MultiPolygon>[],
-          options
-        );
-        return createMetric({
-          metricId,
-          sketchId: curSketch.properties.id,
-          value: sketchValue,
-          extra: {
-            sketchName: curSketch.properties.name,
-          },
-        });
-      });
+  let sketchMetrics: Metric[] = sketches.map((curSketch) => {
+    let sketchValue: number = doIntersect(
+      curSketch as Feature<Polygon | MultiPolygon>,
+      features as Feature<Polygon | MultiPolygon>[],
+      newOptions
+    );
+    return createMetric({
+      metricId,
+      sketchId: curSketch.properties.id,
+      value: sketchValue,
+      extra: {
+        sketchName: curSketch.properties.name,
+      },
+    });
+  });
 
-  if (!isOverlap && options.calcSketchMetrics) {
+  if (!isOverlap) {
     sumValue = sketchMetrics.reduce((sumSoFar, sm) => sumSoFar + sm.value, 0);
   }
 
-  if (isSketchCollection(sketch)) {
-    // Push collection with accumulated sumValue
-    sketchMetrics.push(
-      createMetric({
-        metricId,
-        sketchId: sketch.properties.id,
-        value: sumValue,
-        extra: {
-          sketchName: sketch.properties.name,
-          isCollection: true,
-        },
-      })
-    );
-  }
+  const collMetrics: Metric[] = (() => {
+    if (isSketchCollection(sketch)) {
+      // Push collection with accumulated sumValue
+      return [
+        createMetric({
+          metricId,
+          sketchId: sketch.properties.id,
+          value: sumValue,
+          extra: {
+            sketchName: sketch.properties.name,
+            isCollection: true,
+          },
+        }),
+      ];
+    } else {
+      return [];
+    }
+  })();
 
-  return sketchMetrics;
+  return [...(includeChildMetrics ? sketchMetrics : []), ...collMetrics];
 }
-
 const doIntersect = (
   featureA: Feature<Polygon | MultiPolygon>,
   featuresB: Feature<Polygon | MultiPolygon>[],
-  options: {
-    /** Operation to perform, supports area or sum.  Defaults to area */
-    operation: "area" | "sum";
-    sumProperty?: string;
-    chunkSize: number;
-  }
+  options: OverlapFeatureOptions
 ) => {
   const { chunkSize, operation = "area" } = options;
   switch (operation) {
@@ -135,7 +144,7 @@ const getSketchPolygonIntersectArea = (
   chunkSize: number
 ) => {
   // chunk to avoid blowing up intersect
-  const chunks = chunk(featuresB, chunkSize);
+  const chunks = chunk(featuresB, chunkSize || 5000);
   // intersect and get area of remainder
   const sketchValue = chunks
     .map((curChunk) => intersect(featureA, curChunk))

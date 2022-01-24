@@ -44,7 +44,7 @@ export async function overlapArea(
   if (!combinedSketch) throw new Error("areaStats - invalid sketch");
   const combinedSketchArea = turfArea(combinedSketch);
 
-  let sketchMetrics: Metric[] = [];
+  const sketchMetrics: Metric[] = [];
   if (sketch) {
     featureEach(sketch, (curSketch) => {
       if (!curSketch || !curSketch.properties) {
@@ -106,7 +106,7 @@ export async function overlapArea(
     });
   }
 
-  let collMetrics: Metric[] = [];
+  const collMetrics: Metric[] = [];
   if (isSketchCollection(sketch)) {
     collMetrics.push(
       createMetric({

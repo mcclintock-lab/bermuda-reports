@@ -14,7 +14,6 @@ import { overlapFeatures } from "../metrics/overlapFeatures";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
 const CONFIG = config.habitatRestore;
-const REPORT_ID = "existingProtections";
 const METRIC_ID = "areaOverlap";
 
 export async function habitatRestore(
@@ -35,8 +34,6 @@ export async function habitatRestore(
           sketch,
           {
             chunkSize: 2000,
-            operation: "area",
-            calcSketchMetrics: true,
           }
         );
         // Transform from simple to extended metric

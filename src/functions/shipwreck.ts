@@ -43,7 +43,6 @@ export async function existingProtections(
           {
             operation: "sum",
             sumProperty: shipwreckSumProperty,
-            calcSketchMetrics: true,
           }
         );
         // Transform from simple to extended metric

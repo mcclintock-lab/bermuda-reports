@@ -57,8 +57,7 @@ export async function overlapFeaturesGroupMetrics(options: {
         features,
         sc,
         {
-          calcSketchMetrics: false,
-          operation: "area",
+          includeChildMetrics: false,
         }
       );
       return overallGroupMetrics[0].value;
