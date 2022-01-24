@@ -6,7 +6,7 @@
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
-      "value": 11883892.15601749,
+      "value": 10355789.741895087,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -28,7 +28,7 @@
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
-      "value": 11883892.15601749,
+      "value": 10355789.741895087,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -40,7 +40,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 39388730.52647676,
+      "value": 28740519.875175975,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -51,7 +51,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 11484423.472035453,
+      "value": 8080084.972556394,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -62,7 +62,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 39388730.52647676,
+      "value": 28740519.875175975,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

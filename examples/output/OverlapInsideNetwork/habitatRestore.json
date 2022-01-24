@@ -40,7 +40,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 20264.61408434066,
+      "value": 3666.980129191518,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -52,7 +52,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 20264.61408434066,
+      "value": 3666.980129191518,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -63,7 +63,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 3718.576795414314,
+      "value": 0,
       "extra": {
         "sketchName": "MPA inside"
       }

@@ -17,7 +17,7 @@
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
-      "value": 394907.3465656367,
+      "value": 390854.0153236016,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -29,7 +29,7 @@
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
-      "value": 394907.3465656367,
+      "value": 390854.0153236016,
       "extra": {
         "sketchName": "low mpa"
       }
@@ -40,7 +40,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 979640.5304975144,
+      "value": 661142.9200230574,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -51,7 +51,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 979640.5304975144,
+      "value": 661142.9200230574,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
