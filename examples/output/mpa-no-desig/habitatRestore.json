@@ -3,6 +3,17 @@
     {
       "metricId": "areaOverlap",
       "sketchId": "615c6af3aac8c8285d50dc42",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-desig"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615c6af3aac8c8285d50dc42",
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,

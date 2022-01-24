@@ -3,6 +3,17 @@
     {
       "metricId": "areaOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,

@@ -3,6 +3,14 @@
     {
       "metricId": "areaOverlap",
       "sketchId": null,
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4535793.568465294
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,

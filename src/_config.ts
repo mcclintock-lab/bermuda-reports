@@ -514,6 +514,12 @@ export const renewable: DataGroup = {
 
 const habitatRestoreClasses: DataClass[] = [
   {
+    baseFilename: "coral_restoration_areas",
+    classId: "Coral",
+    display: "Coral",
+    layerId: "",
+  },
+  {
     baseFilename: "seagrass_restoration_500mbuff",
     classId: "Seagrass",
     display: "Seagrass",

@@ -3,6 +3,40 @@
     {
       "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7899.9905442590125,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7899.9905442590125,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,

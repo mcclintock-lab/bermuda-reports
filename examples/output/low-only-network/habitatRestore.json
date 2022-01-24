@@ -3,6 +3,29 @@
     {
       "metricId": "areaOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low-1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "Mangrove_Saltmarsh",
       "groupId": null,
       "geographyId": null,
