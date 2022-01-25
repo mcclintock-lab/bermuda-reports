@@ -38,7 +38,8 @@ import { ClassTable } from "../components/ClassTable";
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as ReportResultBase;
 
-const CONFIG = config.habitatNursery;
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const KeyNurseryHabitat = () => {
   const [{ isCollection, userAttributes }] = useSketchProperties();
@@ -109,7 +110,7 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
       <ClassTable
         titleText="Type"
         rows={Object.values(classPercMetrics)}
-        classes={CONFIG.classes}
+        classes={METRIC.classes}
       />
       {genHelp()}
     </>
@@ -157,7 +158,7 @@ const genNetwork = (data: ReportResult) => {
 const genHabitatToggles = () => {
   return (
     <>
-      {CONFIG.classes.map((curClass) => (
+      {METRIC.classes.map((curClass) => (
         <LayerToggle
           key={curClass.layerId}
           label={`Show ${curClass.display} Layer`}
@@ -172,7 +173,7 @@ const genSketchTable = (
   sketchesById: Record<string, NullSketch>,
   sketchRows: GroupMetricSketchAgg[]
 ) => {
-  const classColumns: Column<GroupMetricSketchAgg>[] = CONFIG.classes.map(
+  const classColumns: Column<GroupMetricSketchAgg>[] = METRIC.classes.map(
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => percentWithEdge(row[curClass.classId] as number),
@@ -214,7 +215,7 @@ const genSketchTable = (
 };
 
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
-  const classColumns: Column<GroupMetricAgg>[] = CONFIG.classes.map(
+  const classColumns: Column<GroupMetricAgg>[] = METRIC.classes.map(
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => percentWithEdge(row[curClass.classId] as number),

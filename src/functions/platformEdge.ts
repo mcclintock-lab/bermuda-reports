@@ -19,10 +19,9 @@ import { getBreakGroup } from "../util/getBreakGroup";
 import { Metric } from "../metrics/types";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
-const CONFIG = config.platformEdge;
-const CLASS = CONFIG.classes[0];
-const REPORT_ID = "platformEdge";
-const METRIC_ID = "areaOverlap";
+const REPORT = config.platformEdge;
+const METRIC = REPORT.metrics.areaOverlap;
+const CLASS = METRIC.classes[0];
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -38,7 +37,7 @@ export async function platformEdge(
 
   // Calc area sketch metrics
   const classMetrics: Metric[] = (
-    await overlapFeatures(METRIC_ID, edgeMultiPoly, sketch)
+    await overlapFeatures(METRIC.metricId, edgeMultiPoly, sketch)
   ).map((sm) => {
     if (isSketchCollection(sketch) && sm.sketchId === sketch.properties.id) {
       return {
@@ -53,7 +52,7 @@ export async function platformEdge(
       "ACTIVITIES",
       []
     );
-    const numFishingActivities = CONFIG.fishingActivities.reduce(
+    const numFishingActivities = METRIC.fishingActivities.reduce(
       (hasFishingSoFar, fishingActivity) =>
         sketchActivities.includes(fishingActivity)
           ? hasFishingSoFar + 1
@@ -67,10 +66,10 @@ export async function platformEdge(
       extra: {
         ...sm.extra,
         numFishingRestricted:
-          CONFIG.fishingActivities.length - numFishingActivities,
+          METRIC.fishingActivities.length - numFishingActivities,
         overlapEdge:
           sm.value > 0 &&
-          numFishingActivities < CONFIG.fishingActivities.length,
+          numFishingActivities < METRIC.fishingActivities.length,
       },
     };
   });
@@ -82,7 +81,7 @@ export async function platformEdge(
   // Return true if matches current group
   const metricToGroup = (sketchMetric: Metric) =>
     getBreakGroup(
-      CONFIG.breakMap,
+      METRIC.breakMap,
       sketchMetric?.extra?.numFishingRestricted as number,
       sketchMetric?.extra?.overlapEdge as boolean
     );
@@ -95,19 +94,14 @@ export async function platformEdge(
     }
   })();
 
-  const groupMetrics: Metric[] = (
-    await overlapFeaturesGroupMetrics({
-      metricId: METRIC_ID,
-      groupIds: Object.keys(CONFIG.breakMap),
-      sketch,
-      metricToGroup,
-      metrics: sketchMetrics,
-      featuresByClass: { [CLASS.classId]: edgeMultiPoly },
-    })
-  ).map((gm) => ({
-    reportId: REPORT_ID,
-    ...gm,
-  }));
+  const groupMetrics: Metric[] = await overlapFeaturesGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: Object.keys(METRIC.breakMap),
+    sketch,
+    metricToGroup,
+    metrics: sketchMetrics,
+    featuresByClass: { [CLASS.classId]: edgeMultiPoly },
+  });
 
   return {
     metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),

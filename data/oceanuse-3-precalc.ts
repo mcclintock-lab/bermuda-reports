@@ -14,20 +14,19 @@ import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const CLASSES = config.oceanUse.classes;
-const DATASET = "oceanUse";
-const METRIC_ID = "valueOverlap";
+const REPORT = config.oceanUse;
+const METRIC = REPORT.metrics.valueOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
-  const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
   const metrics: Metric[] = await Promise.all(
-    CLASSES.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {});
       const value = geoblaze.sum(raster)[0] as number;
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value,
       });
     })

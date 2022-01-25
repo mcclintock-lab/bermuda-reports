@@ -18,9 +18,8 @@ import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
-const CONFIG = config.habitatNursery;
-const REPORT_ID = "habitatNursery";
-const METRIC_ID = "areaOverlap";
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -32,13 +31,13 @@ export async function habitatNursery(
   const featuresByClass: Record<string, Feature<Polygon>[]> = {};
   const classMetrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         featuresByClass[curClass.classId] = await fgbFetchAll(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
         const classFeatures = await overlapFeatures(
-          METRIC_ID,
+          METRIC.metricId,
           featuresByClass[curClass.classId],
           sketch
         );
@@ -65,7 +64,7 @@ export async function habitatNursery(
     sketchCategoryMap[sketchMetric.sketchId!];
 
   const groupMetrics = await overlapFeaturesGroupMetrics({
-    metricId: METRIC_ID,
+    metricId: METRIC.metricId,
     groupIds: levels,
     sketch,
     metricToGroup,

@@ -13,8 +13,8 @@ import { Metric } from "../metrics/types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
-const CONFIG = config.habitatRestore;
-const METRIC_ID = "areaOverlap";
+const REPORT = config.habitatRestore;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function habitatRestore(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -23,13 +23,13 @@ export async function habitatRestore(
 
   const metrics = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         const features = await fgbFetchAll<Feature<Polygon>>(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
         const overlapResult = await overlapFeatures(
-          METRIC_ID,
+          METRIC.metricId,
           features,
           sketch,
           {

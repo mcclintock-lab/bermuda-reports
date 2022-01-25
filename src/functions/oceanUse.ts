@@ -12,9 +12,8 @@ import { overlapRaster } from "../metrics/overlapRaster";
 import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
 
-const CONFIG = config.oceanUse;
-const REPORT_ID = "oceanUse";
-const METRIC_ID = "valueOverlap";
+const REPORT = config.oceanUse;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -22,7 +21,7 @@ export async function oceanUse(
   const box = sketch.bbox || bbox(sketch);
   const metrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         // start raster load and move on in loop while awaiting finish
         const raster = await loadCogWindow(
           `${config.dataBucketUrl}${curClass.filename}`,
@@ -31,7 +30,11 @@ export async function oceanUse(
           }
         );
         // start analysis as soon as source load done
-        const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
         return overlapResult.map(
           (metrics): Metric => ({
             ...metrics,

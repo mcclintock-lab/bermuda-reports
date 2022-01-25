@@ -9,14 +9,13 @@ import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const CLASSES = config.habitatNursery.classes;
-const DATASET = "habitatNursery";
-const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-const METRIC_ID = "areaOverlap";
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
   const metrics: Metric[] = await Promise.all(
-    CLASSES.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       const fc = JSON.parse(
         fs
           .readFileSync(`${__dirname}/dist/${curClass.baseFilename}.json`)
@@ -25,7 +24,7 @@ async function main() {
       const value = area(fc);
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value,
       });
     })
@@ -39,7 +38,7 @@ async function main() {
   // Aggregrate metric across all classes
   metrics.push(
     createMetric({
-      metricId: METRIC_ID,
+      metricId: METRIC.metricId,
       value: sumArea,
     })
   );

@@ -9,11 +9,10 @@ import { createMetric } from "../src/metrics/metrics";
 const DATASET = `WreckHeatmap`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
 
-const CONFIG = config;
-const REPORT = CONFIG.shipwreck;
+const REPORT = config.shipwreck;
 const METRIC = REPORT.metrics.valueOverlap;
 const CLASS = METRIC.classes[0];
-if (!CONFIG || !REPORT || !METRIC || !CLASS)
+if (!REPORT || !METRIC || !CLASS)
   throw new Error("Problem accessing report config");
 
 const allFc = JSON.parse(

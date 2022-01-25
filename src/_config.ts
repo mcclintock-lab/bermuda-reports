@@ -1,4 +1,10 @@
-import { DataGroup, DataClass, Report, Metric } from "../src/metrics/types";
+import {
+  DataGroup,
+  DataClass,
+  Report,
+  Metric,
+  MetricGroup,
+} from "../src/metrics/types";
 
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
 
@@ -546,13 +552,20 @@ const habitatRestoreClasses: DataClass[] = [
   },
 ];
 
-export const habitatRestore: DataGroup = {
-  classes: habitatRestoreClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
-    };
-  }),
+const habitatRestoreReport: Report = {
+  reportId: "habitatRestore",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      datasourceId: "habitatRestore",
+      classes: habitatRestoreClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+        };
+      }),
+    },
+  },
 };
 
 //// KEY NURSERY HABITAT ////
@@ -578,13 +591,20 @@ const habitatNurseryClasses: DataClass[] = [
   },
 ];
 
-export const habitatNursery: DataGroup = {
-  classes: habitatNurseryClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
-    };
-  }),
+const habitatNurseryReport: Report = {
+  reportId: "habitatNursery",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      datasourceId: "habitatNursery",
+      classes: habitatNurseryClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+        };
+      }),
+    },
+  },
 };
 
 //// OCEAN USE ////
@@ -646,13 +666,20 @@ const oceanUseClasses: DataClass[] = [
   },
 ];
 
-export const oceanUse: DataGroup = {
-  classes: oceanUseClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${cogFileSuffix}`,
-    };
-  }),
+const oceanUseReport: Report = {
+  reportId: "oceanUse",
+  metrics: {
+    valueOverlap: {
+      metricId: "valueOverlap",
+      datasourceId: "oceanUse",
+      classes: oceanUseClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${cogFileSuffix}`,
+        };
+      }),
+    },
+  },
 };
 
 //// SHIPWRECKS ////
@@ -680,6 +707,14 @@ const shipwreckReport: Report = {
 export type PlatformEdgeDataGroup = DataGroup & {
   fishingActivities: string[];
   breakMap: Record<string, number>;
+};
+interface PlatformEdgeMetricGroup extends PlatformEdgeDataGroup {
+  /** Unique identifier for metric */
+  metricId: string;
+}
+
+export type PlatformEdgeReport = Omit<Report, "metrics"> & {
+  metrics: Record<string, PlatformEdgeMetricGroup>;
 };
 
 export interface EdgeSketchMetric extends Metric {
@@ -714,15 +749,22 @@ const breakMap: Record<string, number> = {
   no: 0,
 };
 
-export const platformEdge: PlatformEdgeDataGroup = {
-  classes: platformEdgeClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${fgbFileSuffix}`,
-    };
-  }),
-  fishingActivities,
-  breakMap,
+const platformEdgeReport: PlatformEdgeReport = {
+  reportId: "platformEdgeEnergy",
+  metrics: {
+    areaOverlap: {
+      metricId: "areaOverlap",
+      datasourceId: "platformEdge",
+      classes: platformEdgeClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+        };
+      }),
+      fishingActivities,
+      breakMap,
+    },
+  },
 };
 
 //// Export ////
@@ -739,10 +781,10 @@ export default {
   habitatProtection: habitatProtectionReport,
   speciesProtection: speciesProtectionReport,
   renewable: renewableReport,
-  oceanUse,
-  habitatRestore,
-  habitatNursery,
-  platformEdge,
+  oceanUse: oceanUseReport,
+  habitatRestore: habitatRestoreReport,
+  habitatNursery: habitatNurseryReport,
+  platformEdge: platformEdgeReport,
   shipwreck: shipwreckReport,
 
   reports: {

@@ -19,8 +19,8 @@ import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 const precalcTotals = habitatRestoreTotals as ReportResultBase;
 
-const CONFIG = config.habitatRestore;
-const METRIC_ID = "areaOverlap";
+const REPORT = config.habitatRestore;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const HabitatRestoration = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -36,7 +36,7 @@ const HabitatRestoration = () => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
             sketchMetricPercent(
-              data.metrics.filter((m) => m.metricId === METRIC_ID),
+              data.metrics.filter((m) => m.metricId === METRIC.metricId),
               precalcTotals.metrics
             ),
             [data.sketch.properties.id]
@@ -82,7 +82,7 @@ const HabitatRestoration = () => {
                   titleText="RestorationType"
                   percText="% Area Within Plan"
                   rows={parentMetrics}
-                  classes={CONFIG.classes}
+                  classes={METRIC.classes}
                 />
                 {isCollection && genSketchTable(data)}
               </ReportError>
@@ -100,19 +100,19 @@ const genSketchTable = (data: ReportResult) => {
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = sketchMetricPercent(
     metricsWithSketchId(
-      data.metrics.filter((m) => m.metricId === METRIC_ID),
+      data.metrics.filter((m) => m.metricId === METRIC.metricId),
       childSketchIds
     ),
     precalcTotals.metrics
   );
   const sketchRows = flattenSketchAllClassNext(
     childSketchMetrics,
-    CONFIG.classes,
+    METRIC.classes,
     childSketches
   );
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />
+      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
     </Collapse>
   );
 };

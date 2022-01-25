@@ -38,8 +38,9 @@ import { sketchMetricPercent } from "../metrics/clientMetrics";
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 const precalcTotals = platformEdgeTotals as ReportResultBase;
 
-const CLASS = config.platformEdge.classes[0];
-const BREAK_MAP = config.platformEdge.breakMap;
+const REPORT = config.platformEdge;
+const METRIC = REPORT.metrics.areaOverlap;
+const CLASS = METRIC.classes[0];
 
 const toEdgeSketchMetric = (metric: Metric): EdgeSketchMetric => {
   if (
@@ -95,7 +96,7 @@ const PlatformEdge = () => {
           Record<string, number>
         >((soFar, sm) => {
           const breakGroup = getBreakGroup(
-            BREAK_MAP,
+            METRIC.breakMap,
             sm.extra.numFishingRestricted,
             sm.extra.overlapEdge
           );

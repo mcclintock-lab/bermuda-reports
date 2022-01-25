@@ -18,7 +18,8 @@ import SketchClassTable from "../components/SketchClassTable";
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
 const precalcTotals = oceanUseTotals as ReportResultBase;
 
-const CONFIG = config.oceanUse;
+const REPORT = config.oceanUse;
+const METRIC = REPORT.metrics.valueOverlap;
 
 const OceanUse = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -75,7 +76,7 @@ const OceanUse = () => {
                 titleText="Sector"
                 percText="% Value In Plan"
                 rows={parentMetrics}
-                classes={CONFIG.classes}
+                classes={METRIC.classes}
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -97,11 +98,11 @@ const genSketchTable = (data: ReportResult) => {
   );
   const sketchRows = flattenSketchAllClassNext(
     childSketchMetrics,
-    CONFIG.classes,
+    METRIC.classes,
     childSketches
   );
 
-  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
+  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
 };
 
 const LoadingSkeleton = () => (

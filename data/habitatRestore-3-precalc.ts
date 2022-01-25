@@ -8,14 +8,13 @@ import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const CLASSES = config.habitatRestore.classes;
-const DATASET = "habitatRestore";
-const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-const METRIC_ID = "areaOverlap";
+const REPORT = config.habitatRestore;
+const METRIC = REPORT.metrics.areaOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
   const metrics: Metric[] = await Promise.all(
-    CLASSES.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
       const fc = JSON.parse(
         fs
@@ -25,7 +24,7 @@ async function main() {
       const value = area(fc);
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value,
       });
     })
