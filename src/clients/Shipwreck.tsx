@@ -15,9 +15,9 @@ import {
 import { Collapse } from "../components/Collapse";
 import {
   firstMatchingMetric,
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
-  sketchMetricPercent,
+  toPercentMetric,
 } from "../metrics/clientMetrics";
 import config, { ReportResultBase, ReportResult } from "../_config";
 
@@ -43,7 +43,7 @@ const Shipwreck = () => {
         );
 
         const shipwreckCount = parentShipwreckMetric.value;
-        const shipwreckPerc = sketchMetricPercent(
+        const shipwreckPerc = toPercentMetric(
           [parentShipwreckMetric],
           precalcTotals.metrics
         )[0];
@@ -85,7 +85,7 @@ const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = metricsWithSketchId(data.metrics, childSketchIds);
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     childSketchMetrics,
     METRIC.classes,
     childSketches

@@ -8,7 +8,7 @@ import { Metric } from "../src/metrics/types";
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.renewable;
 const METRIC = REPORT.metrics.valueOverlap;
@@ -31,7 +31,7 @@ async function main() {
   );
 
   const result: ReportResultBase = {
-    metrics: metricRekey(metrics),
+    metrics: rekeyMetrics(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

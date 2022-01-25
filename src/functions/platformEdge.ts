@@ -17,7 +17,7 @@ import { overlapFeatures } from "../metrics/overlapFeatures";
 import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { getBreakGroup } from "../util/getBreakGroup";
 import { Metric } from "../metrics/types";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.platformEdge;
 const METRIC = REPORT.metrics.areaOverlap;
@@ -104,7 +104,7 @@ export async function platformEdge(
   });
 
   return {
-    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
+    metrics: sortMetrics(rekeyMetrics([...classMetrics, ...groupMetrics])),
     sketch: toNullSketch(sketch, true),
   };
 }

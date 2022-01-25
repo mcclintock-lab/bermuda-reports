@@ -12,7 +12,7 @@ import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
 import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.oceanUse;
 const METRIC = REPORT.metrics.valueOverlap;
@@ -33,7 +33,7 @@ async function main() {
   );
 
   const result: ReportResultBase = {
-    metrics: metricRekey(metrics),
+    metrics: rekeyMetrics(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

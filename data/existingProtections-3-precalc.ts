@@ -6,7 +6,7 @@ import area from "@turf/area";
 import { featureCollection } from "@turf/helpers";
 import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.existingProtection;
 const METRIC = REPORT.metrics.areaOverlap;
@@ -39,7 +39,7 @@ async function main() {
   );
 
   const result: ReportResultBase = {
-    metrics: metricRekey(metrics),
+    metrics: rekeyMetrics(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

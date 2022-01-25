@@ -3,14 +3,14 @@
  */
 
 import {
-  flattenByGroup,
-  flattenByGroupSketch,
-  flattenSketchAllClassNext,
+  flattenByGroupAllClass,
+  flattenByGroupSketchAllClass,
+  flattenBySketchAllClass,
   nestMetrics,
 } from "./clientMetrics";
 import { Metric } from "./types";
 import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
-import { createMetric } from "./metrics";
+import { createMetric } from "./helpers";
 
 const CLASSES = [
   {
@@ -283,12 +283,16 @@ describe("flattenSketchAllClass", () => {
       },
     ];
 
-    const rows = flattenSketchAllClassNext(metrics, CLASSES, sketches);
+    const rows = flattenBySketchAllClass(metrics, CLASSES, sketches);
     expect(rows).toEqual(answer);
   });
 
   test("flattenByGroup - single class", async () => {
-    const rows = flattenByGroup(collection, groupMetrics, PRECALC_TOTALS);
+    const rows = flattenByGroupAllClass(
+      collection,
+      groupMetrics,
+      PRECALC_TOTALS
+    );
 
     const answer = [
       {
@@ -322,7 +326,11 @@ describe("flattenSketchAllClass", () => {
 });
 
 test("flattenByGroupSketch", async () => {
-  const rows = flattenByGroupSketch(sketches, groupMetrics, PRECALC_TOTALS);
+  const rows = flattenByGroupSketchAllClass(
+    sketches,
+    groupMetrics,
+    PRECALC_TOTALS
+  );
 
   const answer = [
     {

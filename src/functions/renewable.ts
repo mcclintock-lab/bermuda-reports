@@ -10,7 +10,7 @@ import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
 import { Metric } from "../metrics/types";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.renewable;
 const METRIC = REPORT.metrics.valueOverlap;
@@ -51,7 +51,7 @@ export async function renewable(
   );
 
   return {
-    metrics: metricSort(metricRekey(metrics)),
+    metrics: sortMetrics(rekeyMetrics(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

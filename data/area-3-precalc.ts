@@ -3,7 +3,7 @@
 import fs from "fs";
 import { Metric } from "../src/metrics/types";
 import { ReportResultBase, STUDY_REGION_AREA_SQ_METERS } from "../src/_config";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const DATASET = `area`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
@@ -33,7 +33,7 @@ async function main() {
   ];
 
   const result: ReportResultBase = {
-    metrics: metricRekey(metrics),
+    metrics: rekeyMetrics(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

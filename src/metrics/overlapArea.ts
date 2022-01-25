@@ -14,7 +14,7 @@ import { featureEach } from "@turf/meta";
 import turfArea from "@turf/area";
 import { clip } from "../util/clip";
 import { Metric } from "./types";
-import { createMetric } from "./metrics";
+import { createMetric } from "./helpers";
 
 /**
  * Assuming sketches are within some outer boundary with size outerArea,

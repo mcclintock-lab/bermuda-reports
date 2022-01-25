@@ -7,7 +7,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 import { overlapRaster } from "../metrics/overlapRaster";
 import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
@@ -50,7 +50,7 @@ export async function oceanUse(
   );
 
   return {
-    metrics: metricSort(metricRekey(metrics)),
+    metrics: sortMetrics(rekeyMetrics(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

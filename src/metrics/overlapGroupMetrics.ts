@@ -18,7 +18,7 @@ import {
 import flatten from "@turf/flatten";
 import { featureCollection } from "@turf/helpers";
 import cloneDeep from "lodash/cloneDeep";
-import { createMetric } from "./metrics";
+import { createMetric } from "./helpers";
 
 type OverlapGroupOperation = (
   metricId: string,

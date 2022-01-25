@@ -8,9 +8,9 @@ import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import {
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
-  sketchMetricPercent,
+  toPercentMetric,
 } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
@@ -38,7 +38,7 @@ const HabitatProtection = () => {
         {(data: ReportResult) => {
           // Collection top-level or single sketch.
           const nearshoreParentPercMetrics = metricsWithSketchId(
-            sketchMetricPercent(
+            toPercentMetric(
               data.metrics.filter(
                 (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
               ),
@@ -47,7 +47,7 @@ const HabitatProtection = () => {
             [data.sketch.properties.id]
           );
           const offshoreParentPercMetrics = metricsWithSketchId(
-            sketchMetricPercent(
+            toPercentMetric(
               data.metrics.filter(
                 (m) => m.metricId === OFFSHORE_METRIC.metricId
               ),
@@ -107,7 +107,7 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   // Build agg sketch group objects with percValue for each class
   const subSketches = toNullSketchArray(data.sketch);
   const subSketchIds = subSketches.map((sk) => sk.properties.id);
-  const subSketchMetrics = sketchMetricPercent(
+  const subSketchMetrics = toPercentMetric(
     metricsWithSketchId(
       data.metrics.filter(
         (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
@@ -116,7 +116,7 @@ const genNearshoreSketchTable = (data: ReportResult) => {
     ),
     nearshorePrecalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     subSketchMetrics,
     NEARSHORE_METRIC.classes,
     subSketches
@@ -130,7 +130,7 @@ const genOffshoreSketchTable = (data: ReportResult) => {
   // Build agg sketch group objects with percValue for each class
   const subSketches = toNullSketchArray(data.sketch);
   const subSketchIds = subSketches.map((sk) => sk.properties.id);
-  const subSketchMetrics = sketchMetricPercent(
+  const subSketchMetrics = toPercentMetric(
     metricsWithSketchId(
       data.metrics.filter(
         (m) => m.metricId === OFFSHORE_METRIC.metricId && m.classId
@@ -139,7 +139,7 @@ const genOffshoreSketchTable = (data: ReportResult) => {
     ),
     offshorePrecalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     subSketchMetrics,
     OFFSHORE_METRIC.classes,
     subSketches

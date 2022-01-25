@@ -15,7 +15,7 @@ import {
 // @ts-ignore
 import geoblaze, { Georaster } from "geoblaze";
 import { Metric } from "./types";
-import { createMetric } from "./metrics";
+import { createMetric } from "./helpers";
 
 /**
  * Returns sum metric for raster.  If sketch parameter provided, sum overlap is also calculated for each sketch polygon.
