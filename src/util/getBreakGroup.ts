@@ -4,10 +4,13 @@
  */
 export const getBreakGroup = (
   breakMap: Record<string, number>,
-  numFishingRestricted: number,
-  overlap: boolean
+  numFishingRestricted?: number,
+  overlap?: boolean
 ): string => {
-  if (!overlap) return "no";
+  if (!numFishingRestricted)
+    throw new Error("numFishingRestricted is undefined");
+  if (overlap === undefined) throw new Error("overlap is undefined");
+  if (overlap === false) return "no";
   const breakGroup = Object.keys(breakMap).find(
     (breakGroup) => numFishingRestricted >= breakMap[breakGroup]
   );

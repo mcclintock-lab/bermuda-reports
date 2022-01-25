@@ -1,51 +1,79 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
       "value": 10852157.094060296,
-      "percValue": 0.006257615658889126,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-high",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 10852157.094060296,
+      "extra": {
+        "sketchName": "mpa-high",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Platform Edge",
+      "groupId": "partial",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbc28aac8c8285d50db2f",
+      "name": "mpa-high",
+      "updatedAt": "2021-10-05T02:44:56.968Z",
+      "createdAt": "2021-10-05T02:44:56.968Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbc28aac8c8285d50db2f",
-          "name": "mpa-high",
-          "value": 10852157.094060296,
-          "percValue": 0.006257615658889126,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"TOURISM\"]"
         }
       ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 10852157.094060296,
-        "percValue": 0.006257615658889126,
-        "sketchMetrics": [
-          {
-            "id": "615bbc28aac8c8285d50db2f",
-            "name": "mpa-high",
-            "value": 10852157.094060296,
-            "percValue": 0.006257615658889126,
-            "numFishingRestricted": 3,
-            "overlap": true
-          }
-        ]
-      }
     },
-    "partial": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    "id": "1",
+    "bbox": [
+      -64.86625596136682,
+      32.20595207620439,
+      -64.76875229925741,
+      32.250097107343166
+    ],
+    "geometry": null
   }
 }

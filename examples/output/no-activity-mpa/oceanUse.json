@@ -1,121 +1,130 @@
 {
-  "byClass": {
-    "Aquaculture": {
-      "name": "Aquaculture",
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Boating": {
-      "name": "Boating",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
       "value": 636.6625752672553,
-      "percValue": 0.0014794201763508412,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 636.6625752672553,
-          "percValue": 0.0014794201763508412
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "CommercialFishing": {
-      "name": "CommercialFishing",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "CommercialFishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 2498.733153760433,
-      "percValue": 0.008433466977428828,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 2498.733153760433,
-          "percValue": 0.008433466977428828
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "PassiveRecreation_Conservation": {
-      "name": "PassiveRecreation_Conservation",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
       "value": 136.4808122352697,
-      "percValue": 0.0005912077754994329,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 136.4808122352697,
-          "percValue": 0.0005912077754994329
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Recreational Fishing": {
-      "name": "Recreational Fishing",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
       "value": 1044.944389806129,
-      "percValue": 0.00452257502176053,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 1044.944389806129,
-          "percValue": 0.00452257502176053
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Shipping": {
-      "name": "Shipping",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Swimming_Snorkeling_Diving": {
-      "name": "Swimming_Snorkeling_Diving",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
       "value": 816.8006114214659,
-      "percValue": 0.0013308151281216636,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 816.8006114214659,
-          "percValue": 0.0013308151281216636
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Tourism": {
-      "name": "Tourism",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     },
-    "Utilities": {
-      "name": "Utilities",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "618abe61e4efd949c23c5899",
-          "name": "no-activity-mpa",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "618abe61e4efd949c23c5899",
+      "name": "no-activity-mpa",
+      "updatedAt": "2021-11-09T18:30:57.892Z",
+      "createdAt": "2021-11-09T18:30:57.892Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": ""
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.61027849772681,
+      32.19068339515532,
+      -64.33287371257072,
+      32.41123101229184
+    ],
+    "geometry": null
   }
 }

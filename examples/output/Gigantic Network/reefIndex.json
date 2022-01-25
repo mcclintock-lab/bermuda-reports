@@ -1,175 +1,378 @@
 {
-  "reefIndex": {
-    "Coral Cover": {
-      "name": "Coral Cover",
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
       "value": 219142.73238153942,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 219142.73238153942,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 137302.57715274394,
-          "percValue": 0.6265440594839927
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Coral Diversity": {
-      "name": "Coral Diversity",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 137302.57715274394,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 219142.73238153942,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
       "value": 231924.1468730762,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 231924.1468730762,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 161862.52308906033,
-          "percValue": 0.6979114735200121
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Coral Recruit Density": {
-      "name": "Coral Recruit Density",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 161862.52308906033,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 231924.1468730762,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
       "value": 73405.34650501852,
-      "percValue": 0.9999999999999998,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 73405.34650501852,
-          "percValue": 0.9999999999999998
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 48645.80611066746,
-          "percValue": 0.6627011304597775
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Rugosity": {
-      "name": "Rugosity",
-      "value": 72297.22302708976,
-      "percValue": 0.9999999999999996,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 72297.22302708976,
-          "percValue": 0.9999999999999996
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 51771.2308666507,
-          "percValue": 0.7160887887388429
-        }
-      ]
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 48645.80611066746,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
     },
-    "Fish Diversity BRUV": {
-      "name": "Fish Diversity BRUV",
-      "value": 194649.20529744774,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 194649.20529744774,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 155113.49749080837,
-          "percValue": 0.7968873916221544
-        }
-      ]
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 73405.34650501852,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
     },
-    "Fish Density": {
-      "name": "Fish Density",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
       "value": 253383.98754745774,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 253383.98754745774,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 127291.00812936627,
-          "percValue": 0.5023640576558738
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Fish Diversity BREAM": {
-      "name": "Fish Diversity BREAM",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 127291.00812936627,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 253383.98754745774,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
       "value": 333552.74660776486,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 333552.74660776486,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 181807.51147012343,
-          "percValue": 0.5450637517427389
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Fish Recruit Density": {
-      "name": "Fish Recruit Density",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 181807.51147012343,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 333552.74660776486,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 194649.20529744774,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 155113.49749080837,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 194649.20529744774,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
       "value": 75390.81803614809,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
-          "id": "617e59f3198e046808b50fb2",
-          "name": "Gigantic MPA",
-          "value": 75390.81803614809,
-          "percValue": 1
-        },
-        {
-          "id": "619834683ff3e57f7333d93d",
-          "name": "Gigantic MPA 2",
-          "value": 24082.600811312906,
-          "percValue": 0.31943678870503667
-        }
-      ]
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
     },
-    "Seagrass": {
-      "name": "Seagrass",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 24082.600811312906,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 75390.81803614809,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 72297.22302708976,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 51771.2308666507,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 72297.22302708976,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 2892.556873383932,
-      "percValue": 1,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 832.7947520087473,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2892.556873383932,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619834743ff3e57f7333d93e",
+      "name": "Gigantic Network",
+      "updatedAt": "2021-11-20T00:00:34.269Z",
+      "createdAt": "2021-11-19T23:34:12.889Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "617e59f3198e046808b50fb2",
           "name": "Gigantic MPA",
-          "value": 2892.556873383932,
-          "percValue": 1
+          "updatedAt": "2021-11-20T00:00:34.365Z",
+          "createdAt": "2021-10-28T13:49:22.785Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.82155643515347,
+          31.12299873603807,
+          -62.698478088902476,
+          33.86373197667135
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619834683ff3e57f7333d93d",
           "name": "Gigantic MPA 2",
-          "value": 832.7947520087473,
-          "percValue": 0.2879095514669971
-        }
-      ]
-    }
+          "updatedAt": "2021-11-19T23:59:16.315Z",
+          "createdAt": "2021-11-19T23:34:00.777Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -65.92172084860616,
+          31.426079167891885,
+          -63.197111473606924,
+          34.14549731338192
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

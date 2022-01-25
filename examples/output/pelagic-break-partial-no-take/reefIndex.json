@@ -1,121 +1,121 @@
 {
-  "reefIndex": {
-    "Coral Cover": {
-      "name": "Coral Cover",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 11748.026195526123,
-      "percValue": 0.05360901576727706,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 11748.026195526123,
-          "percValue": 0.05360901576727706
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Coral Diversity": {
-      "name": "Coral Diversity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 6615.522239089012,
-      "percValue": 0.02852450824238431,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6615.522239089012,
-          "percValue": 0.02852450824238431
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Coral Recruit Density": {
-      "name": "Coral Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 221.40369267162623,
-      "percValue": 0.0030161793821992166,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 221.40369267162623,
-          "percValue": 0.0030161793821992166
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Rugosity": {
-      "name": "Rugosity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 2203.2448607981205,
-      "percValue": 0.030474820035239308,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 2203.2448607981205,
-          "percValue": 0.030474820035239308
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Fish Diversity BRUV": {
-      "name": "Fish Diversity BRUV",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 2953.4780147597194,
-      "percValue": 0.015173337133570336,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 2953.4780147597194,
-          "percValue": 0.015173337133570336
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Fish Density": {
-      "name": "Fish Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 5776.366065237671,
-      "percValue": 0.022796886737587483,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 5776.366065237671,
-          "percValue": 0.022796886737587483
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Fish Diversity BREAM": {
-      "name": "Fish Diversity BREAM",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 6836.847297310829,
-      "percValue": 0.020497049917416788,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6836.847297310829,
-          "percValue": 0.020497049917416788
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Fish Recruit Density": {
-      "name": "Fish Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "value": 378.70038014510646,
-      "percValue": 0.0050231631650889995,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "value": 0.4485566867515445,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 378.70038014510646,
-          "percValue": 0.0050231631650889995
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
         }
       ]
     },
-    "Seagrass": {
-      "name": "Seagrass",
-      "value": 0.4485566867515445,
-      "percValue": 0.0001550727285188308,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0.4485566867515445,
-          "percValue": 0.0001550727285188308
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

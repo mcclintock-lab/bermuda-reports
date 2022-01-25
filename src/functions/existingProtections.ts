@@ -5,16 +5,13 @@ import {
   Feature,
   Polygon,
   fgbFetchAll,
-  toSketchArray,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
+import { metricRekey, metricSort } from "../metrics/metrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { ClassMetricsSketch } from "../metrics/types";
-import config, {
-  ExistingProtectionBaseResults,
-  ExistingProtectionResults,
-} from "../_config";
-import legislatedAreaTotals from "../../data/precalc/existingProtectionsTotals.json";
+import { Metric } from "../metrics/types";
+import config, { ReportResult } from "../_config";
 
 // Multi-class vector dataset
 export const nameProperty = "Name";
@@ -28,45 +25,50 @@ export type ExistingProtectionFeature = Feature<
   ExistingProtectionProperties
 >;
 
-const precalcTotals = legislatedAreaTotals as ExistingProtectionBaseResults;
-const CONFIG = config.existingProtection;
+const REPORT = config.existingProtection;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function existingProtections(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<ExistingProtectionResults> {
-  const sketches = toSketchArray(sketch);
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
   const features = await fgbFetchAll<ExistingProtectionFeature>(
-    `${config.dataBucketUrl}${CONFIG.filename}`,
+    `${config.dataBucketUrl}${METRIC.filename}`,
     box
   );
 
-  const classMetrics = (
+  const metrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         // Filter out single class, exclude null geometry too
         const classFeatures = features.filter((feat) => {
           return (
-            feat.geometry && feat.properties[classProperty] === curClass.name
+            feat.geometry && feat.properties[classProperty] === curClass.classId
           );
         }, []);
-        return overlapFeatures(
+        const overlapResult = await overlapFeatures(
+          METRIC.metricId,
           classFeatures,
-          curClass.name,
-          sketches,
-          precalcTotals.byClass[curClass.name].value
+          sketch
+        );
+        // Transform from simple to extended metric
+        return overlapResult.map(
+          (metric): Metric => ({
+            ...metric,
+            classId: curClass.classId,
+          })
         );
       })
     )
-  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
-    return {
-      ...metricsSoFar,
-      [metric.name]: metric,
-    };
-  }, {});
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
+  );
 
   return {
-    byClass: classMetrics,
+    metrics: metricSort(metricRekey(metrics)),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

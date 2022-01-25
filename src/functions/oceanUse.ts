@@ -3,46 +3,55 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  Georaster,
   loadCogWindow,
-  keyBy,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
+import { metricRekey, metricSort } from "../metrics/metrics";
 import { overlapRaster } from "../metrics/overlapRaster";
-import config, { OceanUseResults } from "../_config";
+import { Metric } from "../metrics/types";
+import config, { ReportResult } from "../_config";
 
-import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
-
-// Define at module level for potential cache and reuse by Lambda
-const CLASSES = config.oceanUse.classes;
+const REPORT = config.oceanUse;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function oceanUse(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<OceanUseResults> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
-  let rasters: Georaster[];
-
-  const metrics = await Promise.all(
-    CLASSES.map(async (curClass) => {
-      // start raster load and move on in loop while awaiting finish
-      const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${curClass.filename}`,
-        {
-          windowBox: box,
-        }
-      );
-      // start analysis as soon as source load done
-      return overlapRaster(
-        raster,
-        curClass.name,
-        (oceanUseTotals as Record<string, number>)[curClass.name],
-        sketch
-      );
-    })
+  const metrics: Metric[] = (
+    await Promise.all(
+      METRIC.classes.map(async (curClass) => {
+        // start raster load and move on in loop while awaiting finish
+        const raster = await loadCogWindow(
+          `${config.dataBucketUrl}${curClass.filename}`,
+          {
+            windowBox: box,
+          }
+        );
+        // start analysis as soon as source load done
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
+        return overlapResult.map(
+          (metrics): Metric => ({
+            ...metrics,
+            classId: curClass.classId,
+          })
+        );
+      })
+    )
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
   return {
-    byClass: keyBy(metrics, (metric) => metric.name),
+    metrics: metricSort(metricRekey(metrics)),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

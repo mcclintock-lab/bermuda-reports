@@ -1,305 +1,284 @@
 {
-  "nearshore": {
-    "Bays and Coast": {
-      "name": "Bays and Coast",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Madracis Reef": {
-      "name": "Madracis Reef",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Montastraea Reef": {
-      "name": "Montastraea Reef",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Diploria Porites Reef": {
-      "name": "Diploria Porites Reef",
-      "value": 489,
-      "percValue": 0.011650346651418769,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 489,
-          "percValue": 0.011650346651418769
-        }
-      ]
-    },
-    "Castle Harbour Madracis": {
-      "name": "Castle Harbour Madracis",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Algal Vermetid Reef": {
-      "name": "Algal Vermetid Reef",
+  "metrics": [
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 1,
-      "percValue": 0.005988023952095809,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 1,
-          "percValue": 0.005988023952095809
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Rim Reef": {
-      "name": "Rim Reef",
-      "value": 13,
-      "percValue": 0.0008677658367265203,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 13,
-          "percValue": 0.0008677658367265203
-        }
-      ]
-    },
-    "Main Terrace Reef": {
-      "name": "Main Terrace Reef",
-      "value": 2113,
-      "percValue": 0.05562282826155628,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 2113,
-          "percValue": 0.05562282826155628
-        }
-      ]
-    },
-    "Fore Reef": {
-      "name": "Fore Reef",
-      "value": 147,
-      "percValue": 0.0049009801960392075,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 147,
-          "percValue": 0.0049009801960392075
-        }
-      ]
-    },
-    "Mesophotic": {
-      "name": "Mesophotic",
-      "value": 811,
-      "percValue": 0.02138374729736856,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 811,
-          "percValue": 0.02138374729736856
-        }
-      ]
-    },
-    "Rariphotic": {
-      "name": "Rariphotic",
-      "value": 346,
-      "percValue": 0.013583009460997919,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 346,
-          "percValue": 0.013583009460997919
-        }
-      ]
-    },
-    "Mesopelagic": {
-      "name": "Mesopelagic",
-      "value": 2079,
-      "percValue": 0.024361092558090484,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 2079,
-          "percValue": 0.024361092558090484
-        }
-      ]
-    },
-    "Bathypelagic": {
-      "name": "Bathypelagic",
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 6039,
-      "percValue": 0.03454489291598023,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6039,
-          "percValue": 0.03454489291598023
-        }
-      ]
-    }
-  },
-  "offshore": {
-    "Abyssopelagic": {
-      "name": "Abyssopelagic",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Bathypelagic": {
-      "name": "Bathypelagic",
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 489,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 147,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2113,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2079,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 811,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 346,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 13,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
       "value": 6,
-      "percValue": 0.04838709677419355,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6,
-          "percValue": 0.04838709677419355
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Cold water coral": {
-      "name": "Cold water coral",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Escarpments": {
-      "name": "Escarpments",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
       "value": 1,
-      "percValue": 0.009708737864077669,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 1,
-          "percValue": 0.009708737864077669
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Knolls": {
-      "name": "Knolls",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
       "value": 4,
-      "percValue": 0.002520478890989288,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 4,
-          "percValue": 0.002520478890989288
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Pelagic zone 1": {
-      "name": "Pelagic zone 1",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
       "value": 6,
-      "percValue": 0.002014098690835851,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 6,
-          "percValue": 0.002014098690835851
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Pelagic zone 2": {
-      "name": "Pelagic zone 2",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Pelagic zone 3": {
-      "name": "Pelagic zone 3",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Plains": {
-      "name": "Plains",
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
       "value": 2,
-      "percValue": 0.00036489691662105453,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 2,
-          "percValue": 0.00036489691662105453
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
         }
       ]
     },
-    "Seamounts": {
-      "name": "Seamounts",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

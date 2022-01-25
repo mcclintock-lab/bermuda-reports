@@ -1,56 +1,210 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
-      "name": "MPA 1",
-      "category": "4/6",
-      "level": "high",
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
     },
     {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "eez",
+      "groupId": "4/6",
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 129760135.88214482,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": "4/6",
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
+      "value": 30946853.36627568,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 30946853.36627568,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
-      "name": "MPA 2",
-      "category": "None",
-      "level": "low",
-      "area": 30946853.366245817,
-      "percPlanningArea": 0.00006644703380380953
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "eez",
+      "groupId": "None",
+      "geographyId": null,
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
     }
   ],
-  "categoryStats": [
-    {
-      "category": "4/6",
-      "level": "high",
-      "numSketches": 1,
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-full-network",
+      "updatedAt": "2021-10-19T19:25:31.562Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
     },
-    {
-      "category": "None",
-      "level": "low",
-      "numSketches": 1,
-      "area": 30946853.36627568,
-      "percPlanningArea": 0.00006644703380387366
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    },
-    {
-      "level": "high",
-      "numSketches": 1,
-      "area": 98813282.51586914,
-      "percPlanningArea": 0.00021216533538620785
-    },
-    {
-      "level": "low",
-      "numSketches": 1,
-      "area": 30946853.36627568,
-      "percPlanningArea": 0.00006644703380387366
-    }
-  ]
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f18f",
+          "name": "MPA 1",
+          "updatedAt": "2021-10-19T19:22:17.900Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESEARCH\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "616f1ae906f1b7772b51f191",
+          "name": "MPA 2",
+          "updatedAt": "2021-10-19T19:22:17.905Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"FISH_AQUA_INDUSTRIAL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
+      }
+    ]
+  }
 }

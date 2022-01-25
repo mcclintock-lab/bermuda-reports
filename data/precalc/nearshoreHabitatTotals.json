@@ -1,15 +1,108 @@
 {
-  "1": 11318,
-  "2": 7786,
-  "3": 30106,
-  "4": 41973,
-  "5": 781,
-  "6": 167,
-  "7": 14981,
-  "8": 37988,
-  "9": 29994,
-  "10": 37926,
-  "11": 25473,
-  "12": 85341,
-  "13": 174816
+  "metrics": [
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11318
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7786
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 30106
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 41973
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 781
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 167
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 14981
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 37988
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 29994
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 37926
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 25473
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 85341
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 174816
+    }
+  ]
 }

@@ -1,0 +1,12 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "value": 1018,
+      "classId": "shipwreck",
+      "groupId": null,
+      "geographyId": null,
+      "sketchId": null
+    }
+  ]
+}

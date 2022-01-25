@@ -1,121 +1,234 @@
 {
-  "reefIndex": {
-    "Coral Cover": {
-      "name": "Coral Cover",
+  "metrics": [
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 4167.905519247055,
-      "percValue": 0.019019136404626484,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 4167.905519247055,
-          "percValue": 0.019019136404626484
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Coral Diversity": {
-      "name": "Coral Diversity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Cover",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 4167.905519247055,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 3782.0307517051697,
-      "percValue": 0.016307188374718652,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 3782.0307517051697,
-          "percValue": 0.016307188374718652
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Coral Recruit Density": {
-      "name": "Coral Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Diversity",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 3782.0307517051697,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 2790.4645529687405,
-      "percValue": 0.03801445924348254,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 2790.4645529687405,
-          "percValue": 0.03801445924348254
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Rugosity": {
-      "name": "Rugosity",
+    {
+      "reportId": "oceanUse",
+      "classId": "Coral Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 2790.4645529687405,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 4550.3155797719955,
-      "percValue": 0.06293900912441673,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 4550.3155797719955,
-          "percValue": 0.06293900912441673
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Fish Diversity BRUV": {
-      "name": "Fish Diversity BRUV",
+    {
+      "reportId": "oceanUse",
+      "classId": "Rugosity",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 4550.3155797719955,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Fish Density": {
-      "name": "Fish Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BRUV",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 0,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 1749.162387996912,
-      "percValue": 0.006903208071383364,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 1749.162387996912,
-          "percValue": 0.006903208071383364
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Fish Diversity BREAM": {
-      "name": "Fish Diversity BREAM",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 1749.162387996912,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 5200.9665286540985,
-      "percValue": 0.015592635892068003,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 5200.9665286540985,
-          "percValue": 0.015592635892068003
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Fish Recruit Density": {
-      "name": "Fish Recruit Density",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Diversity BREAM",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 5200.9665286540985,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 213.8244166513905,
-      "percValue": 0.002836212979528446,
-      "sketchMetrics": [
-        {
-          "id": "61685a10f3f078352076a1fb",
-          "name": "low-1",
-          "value": 213.8244166513905,
-          "percValue": 0.002836212979528446
-        }
-      ]
+      "extra": {
+        "sketchName": "low-1"
+      }
     },
-    "Seagrass": {
-      "name": "Seagrass",
+    {
+      "reportId": "oceanUse",
+      "classId": "Fish Recruit Density",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 213.8244166513905,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a10f3f078352076a1fb",
       "value": 10.399999618530273,
-      "percValue": 0.0035954347913524573,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "low-1"
+      }
+    },
+    {
+      "reportId": "oceanUse",
+      "classId": "Seagrass",
+      "metricId": "valueOverlap",
+      "sketchId": "61685a19b503392035ed519c",
+      "value": 10.399999618530273,
+      "extra": {
+        "sketchName": "low-only-network",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "61685a19b503392035ed519c",
+      "name": "low-only-network",
+      "updatedAt": "2021-10-19T23:05:03.182Z",
+      "createdAt": "2021-10-14T16:26:01.633Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "61685a10f3f078352076a1fb",
           "name": "low-1",
-          "value": 10.399999618530273,
-          "percValue": 0.0035954347913524573
-        }
-      ]
-    }
+          "updatedAt": "2021-10-14T16:26:05.166Z",
+          "createdAt": "2021-10-08T00:06:24.521Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\",\"UNTREATED_WATER\",\"HABITATION\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.67536851019531,
+          32.39843594260134,
+          -64.6108238324609,
+          32.42857863764303
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

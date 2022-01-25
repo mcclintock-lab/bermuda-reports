@@ -1,23 +1,36 @@
 {
-  "overall": {
-    "value": 14710961.795261733,
-    "percValue": 1
-  },
-  "byClass": {
-    "Nursery Reef": {
-      "name": "Nursery Reef",
-      "value": 11651653.092987554,
-      "percValue": 0.7920388384626521
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Nursery Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11651653.092987554
     },
-    "Mangrove": {
-      "name": "Mangrove",
-      "value": 174538.70779643767,
-      "percValue": 0.011864534095429096
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Mangrove",
+      "groupId": null,
+      "geographyId": null,
+      "value": 174538.70779643767
     },
-    "Seagrass": {
-      "name": "Seagrass",
-      "value": 2884769.994477741,
-      "percValue": 0.1960966274419188
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2884769.994477741
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": null,
+      "groupId": null,
+      "geographyId": null,
+      "value": 14710961.795261733
     }
-  }
+  ]
 }

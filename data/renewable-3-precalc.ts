@@ -1,44 +1,45 @@
 // Run inside workspace
-// Precalculates overall stats used by habitat function
+// Precalculates overall stats used by habitat protection function
 
 import fs from "fs";
-import config from "../src/_config";
+import config, { ReportResultBase } from "../src/_config";
+import { Metric } from "../src/metrics/types";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
-
 import { strict as assert } from "assert";
+import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const LAYERS = config.renewable.classes;
-const DATASET = "renewable";
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
-  const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-  const totals = await Promise.all(
-    LAYERS.map(async (curClass) => {
+  const metrics: Metric[] = await Promise.all(
+    METRIC.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {
         noDataValue: curClass.noDataValue,
       }); // Load wole raster
       const sum = geoblaze.sum(raster)[0] as number;
-      return sum;
+      return createMetric({
+        classId: curClass.classId,
+        metricId: METRIC.metricId,
+        value: sum,
+      });
     })
   );
 
-  const totalMap = totals.reduce(
-    (totalMap, total, index) => ({
-      ...totalMap,
-      [LAYERS[index].name]: total,
-    }),
-    {}
-  );
+  const result: ReportResultBase = {
+    metrics: metricRekey(metrics),
+  };
 
-  fs.writeFile(DEST_PATH, JSON.stringify(totalMap, null, 2), (err) =>
+  fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
     err
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(totalMap).length === LAYERS.length);
+  assert(Object.keys(result.metrics).length === METRIC.classes.length);
 }
 
 main();

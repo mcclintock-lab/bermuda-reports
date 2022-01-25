@@ -1,30 +1,57 @@
 import React from "react";
 import {
+  percentWithEdge,
+  capitalize,
+  toNullSketchArray,
+  keyBy,
+  isSketchCollection,
+  NullSketch,
+} from "@seasketch/geoprocessing/client-core";
+import {
   ResultsCard,
   Skeleton,
   KeySection,
-  percentWithEdge,
   LayerToggle,
   useSketchProperties,
   ReportError,
   Table,
   Column,
-  capitalize,
-} from "@seasketch/geoprocessing/client";
-import { GroupCircleRow } from "../components/Circle";
-import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
-import { Collapse } from "../components/Collapse";
-import { flattenGroupSketch } from "../metrics/clientMetrics";
-import config, { PlatformEdgeResult, EdgeGroupMetricsSketch } from "../_config";
+} from "@seasketch/geoprocessing/client-ui";
 import { getBreakGroup } from "../util/getBreakGroup";
-import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
+import { GroupCircleRow } from "../components/Circle";
+import { Metric, GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
+import { Collapse } from "../components/Collapse";
+import {
+  firstMatchingMetric,
+  flattenByGroup,
+  flattenByGroupSketch,
+  metricsForSketch,
+} from "../metrics/clientMetrics";
+import config, {
+  ReportResultBase,
+  ReportResult,
+  EdgeSketchMetric,
+} from "../_config";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
+import { sketchMetricPercent } from "../metrics/clientMetrics";
 
-const precalcTotals = platformEdgeTotals as Record<string, number>;
+import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
+const precalcTotals = platformEdgeTotals as ReportResultBase;
 
-const CLASSES = config.platformEdge.classes;
-const CLASS = CLASSES[0];
-const BREAK_MAP = config.platformEdge.breakMap;
+const REPORT = config.platformEdge;
+const METRIC = REPORT.metrics.areaOverlap;
+const CLASS = METRIC.classes[0];
+
+const toEdgeSketchMetric = (metric: Metric): EdgeSketchMetric => {
+  if (
+    metric?.extra?.numFishingRestricted !== undefined &&
+    metric?.extra?.overlapEdge !== undefined
+  ) {
+    return metric as EdgeSketchMetric;
+  } else {
+    throw new Error("Not an EdgeSketchmetric");
+  }
+};
 
 const PlatformEdge = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
@@ -34,23 +61,44 @@ const PlatformEdge = () => {
       functionName="platformEdge"
       skeleton={<LoadingSkeleton />}
     >
-      {(data: PlatformEdgeResult) => {
-        const classMetric = data.byClass[CLASS.name];
+      {(data: ReportResult) => {
+        const sketches = toNullSketchArray(data.sketch);
+        const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 
-        // Get aggregate sketch metric stats
-        const totalCount = classMetric.sketchMetrics.length;
-        const overlapCount = classMetric.sketchMetrics.reduce(
-          (sumSoFar, sm) => (sm.overlap ? sumSoFar + 1 : sumSoFar),
+        // Build class percent metrics (non-group)
+        const classPercMetrics = sketchMetricPercent(
+          data.metrics.filter((m) => !m.groupId && m.classId === CLASS.classId),
+          precalcTotals.metrics
+        );
+        const classPercMetric = firstMatchingMetric(
+          classPercMetrics,
+          (m) =>
+            m.sketchId === data.sketch.properties.id &&
+            m.classId === CLASS.classId
+        );
+
+        const singleClassMetrics = metricsForSketch(
+          data.metrics,
+          sketches
+        ).filter((m) => !m.groupId);
+        const singleClassEdgeMetrics = singleClassMetrics.map((smp) =>
+          toEdgeSketchMetric(smp)
+        );
+
+        // Count total number of sketches with overlap
+        const overlapCount = singleClassEdgeMetrics.reduce(
+          (sumSoFar, sm) => (sm?.extra?.overlapEdge ? sumSoFar + 1 : sumSoFar),
           0
         );
-        // get map of [groupName] => group name count
-        const numGroupsMap = classMetric.sketchMetrics.reduce<
+
+        // Create map of groupId => overlap count for group
+        const numGroupsMap = singleClassEdgeMetrics.reduce<
           Record<string, number>
         >((soFar, sm) => {
           const breakGroup = getBreakGroup(
-            BREAK_MAP,
-            sm.numFishingRestricted,
-            sm.overlap
+            METRIC.breakMap,
+            sm.extra.numFishingRestricted,
+            sm.extra.overlapEdge
           );
           return {
             ...soFar,
@@ -75,7 +123,7 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 {keySection} It overlaps with{" "}
-                <b>{percentWithEdge(classMetric.percValue)}</b> of the nearshore
+                <b>{percentWithEdge(classPercMetric.value)}</b> of the nearshore
                 pelagic fishing zone.
               </>
             );
@@ -91,9 +139,9 @@ const PlatformEdge = () => {
             keySection = (
               <>
                 {keySection}{" "}
-                <b>{classMetric.sketchMetrics[0].numFishingRestricted}</b>{" "}
-                fishing activities are restricted and it overlaps with{" "}
-                <b>{percentWithEdge(classMetric.percValue)}</b> of the nearshore
+                <b>{classPercMetric?.extra?.numFishingRestricted}</b> fishing
+                activities are restricted and it overlaps with{" "}
+                <b>{percentWithEdge(classPercMetric.value)}</b> of the nearshore
                 pelagic fishing zone.
               </>
             );
@@ -102,19 +150,22 @@ const PlatformEdge = () => {
 
         let groupRows: GroupMetricAgg[] = [];
         let sketchRows: GroupMetricSketchAgg[] = [];
-        if (isCollection) {
+        if (isCollection && isSketchCollection(data.sketch)) {
+          const groupMetrics = data.metrics.filter((m) => m.groupId);
+
           // Build agg group objects with percValue for each class
-          groupRows = getBreakGroupMetricsAgg(
-            data.byGroup,
-            precalcTotals[CLASS.name]
+          groupRows = flattenByGroup(
+            data.sketch,
+            groupMetrics,
+            precalcTotals.metrics
           );
 
           // Build agg sketch group objects with percValue for each class
-          // groupId, sketchId, lagoon, mangrove, seagrass, total
-          sketchRows = flattenGroupSketch(
-            data.byGroup,
-            precalcTotals[CLASS.name],
-            CLASSES
+          // groupId, sketchId, class1, class2, ..., total
+          sketchRows = flattenByGroupSketch(
+            sketches,
+            groupMetrics,
+            precalcTotals.metrics
           );
         }
 
@@ -131,7 +182,7 @@ const PlatformEdge = () => {
             {isCollection && (
               <>
                 <Collapse title="Show by MPA">
-                  {genSketchTable(sketchRows)}
+                  {genSketchTable(sketchesById, sketchRows)}
                 </Collapse>
               </>
             )}
@@ -141,35 +192,30 @@ const PlatformEdge = () => {
                 one fishing activity is restricted, and the boundary overlaps
                 with the 55-2000m fishing zone of the platform.
               </p>
-              <p>
-                Fishing activities that breaks are assessed for include:
-                <ul>
-                  <li>Fishing/collection: recreational (sustainable)</li>
-                  <li>
-                    Fishing/collection: local fishing (sustainable) Industrial
-                  </li>
-                  <li>Fishing, industrial scale aquaculture</li>
-                </ul>
-                Fishing activities that breaks are not assessed for include:
-                <ul>
-                  <li>Traditional fishing/collection</li>
-                </ul>
-              </p>
-
-              <p>
-                Breaks are further broken down into 3 levels:
-                <ul>
-                  <li>
-                    <b>Definite</b> break: all 3 fishing activities restricted
-                  </li>
-                  <li>
-                    <b>Partial</b> break: 1-2 fishing activities restricted
-                  </li>
-                  <li>
-                    <b>No</b> break: 0 fishing activities restricted
-                  </li>
-                </ul>
-              </p>
+              <p>Fishing activities that breaks are assessed for include:</p>
+              <ul>
+                <li>Fishing/collection: recreational (sustainable)</li>
+                <li>
+                  Fishing/collection: local fishing (sustainable) Industrial
+                </li>
+                <li>Fishing, industrial scale aquaculture</li>
+              </ul>
+              Fishing activities that breaks are not assessed for include:
+              <ul>
+                <li>Traditional fishing/collection</li>
+              </ul>
+              <p>Breaks are further broken down into 3 levels:</p>
+              <ul>
+                <li>
+                  <b>Definite</b> break: all 3 fishing activities restricted
+                </li>
+                <li>
+                  <b>Partial</b> break: 1-2 fishing activities restricted
+                </li>
+                <li>
+                  <b>No</b> break: 0 fishing activities restricted
+                </li>
+              </ul>
               <p>
                 In addition, if MPA boundaries within a given break category
                 overlap with each other, the overlap is only counted once
@@ -272,7 +318,10 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   );
 };
 
-const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
+const genSketchTable = (
+  sketchesById: Record<string, NullSketch>,
+  sketchRows: GroupMetricSketchAgg[]
+) => {
   const columns: Column<GroupMetricSketchAgg>[] = [
     {
       Header: "MPA:",
@@ -284,7 +333,7 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
             partial: "#FFE1A3",
             no: "#BEE4BE",
           }}
-          rowText={row.sketchName}
+          rowText={sketchesById[row.sketchId].properties.name}
         />
       ),
     },
@@ -307,36 +356,10 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
   );
 };
 
-/**
- * Build agg group objects with groupId, percValue for each class, and total percValue across classes per group
- */
-export const getBreakGroupMetricsAgg = (
-  groupData: EdgeGroupMetricsSketch,
-  totalValue: number
-) => {
-  return Object.keys(groupData).map((groupName) => {
-    const levelClassMetrics = groupData[groupName];
-    const classAgg = Object.keys(levelClassMetrics).reduce(
-      (rowSoFar, className) => ({
-        ...rowSoFar,
-        [className]: levelClassMetrics[className].percValue,
-        numSketches: levelClassMetrics[className].sketchMetrics.length,
-        value: rowSoFar.value + levelClassMetrics[className].value,
-      }),
-      { value: 0 }
-    );
-    return {
-      groupId: groupName,
-      percValue: classAgg.value / totalValue,
-      ...classAgg,
-    };
-  });
-};
-
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default PlatformEdge;

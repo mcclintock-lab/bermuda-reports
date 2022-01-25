@@ -1,199 +1,196 @@
 {
-  "byClass": {
-    "Ferry Route": {
-      "name": "Ferry Route",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Shipping Lane": {
-      "name": "Shipping Lane",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "CableZone": {
-      "name": "CableZone",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "SpearfishEx": {
-      "name": "SpearfishEx",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "SeasonalPA": {
-      "name": "SeasonalPA",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "MPAExtendedClosure": {
-      "name": "MPAExtendedClosure",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Wreck": {
-      "name": "Wreck",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Reef": {
-      "name": "Reef",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Prohibited": {
-      "name": "Prohibited",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "NoNetFish": {
-      "name": "NoNetFish",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "NoLobsterFish": {
-      "name": "NoLobsterFish",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Amenity Park": {
-      "name": "Amenity Park",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Recreational Park": {
-      "name": "Recreational Park",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "Nature Reserve": {
-      "name": "Nature Reserve",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     },
-    "CoralPreserve": {
-      "name": "CoralPreserve",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615ffd9d045840708a6e54e5",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615ffd9d045840708a6e54e5",
-          "name": "big-1",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "big-1"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615ffd9d045840708a6e54e5",
+      "name": "big-1",
+      "updatedAt": "2021-10-10T15:30:59.004Z",
+      "createdAt": "2021-10-08T08:13:17.626Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -68.73444933466465,
+      31.020518609240725,
+      -64.37667771429706,
+      35.11592304895137
+    ],
+    "geometry": null
   }
 }

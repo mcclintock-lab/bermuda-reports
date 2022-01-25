@@ -6,28 +6,28 @@ import {
   GeoprocessingHandler,
   fgbFetchAll,
   toSketchArray,
+  toNullSketch,
+  isSketchCollection,
   keyBy,
 } from "@seasketch/geoprocessing";
 import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import bbox from "@turf/bbox";
-import config, {
-  EdgeGroupMetricsSketch,
-  EdgeSketchMetric,
-  PlatformEdgeResult,
-} from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { getGroupMetrics } from "../metrics/metrics";
+import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { getBreakGroup } from "../util/getBreakGroup";
-import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
-const precalcTotals = platformEdgeTotals as Record<string, number>;
-const CONFIG = config.platformEdge;
-const CLASS = CONFIG.classes[0];
+const REPORT = config.platformEdge;
+const METRIC = REPORT.metrics.areaOverlap;
+const CLASS = METRIC.classes[0];
 
 export async function platformEdge(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<PlatformEdgeResult> {
+): Promise<ReportResult> {
   const sketches = toSketchArray(sketch);
+  const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
   const box = sketch.bbox || bbox(sketch);
 
   const edgeMultiPoly = await fgbFetchAll<Feature<Polygon>>(
@@ -35,22 +35,24 @@ export async function platformEdge(
     box
   );
 
-  const classMetric = await overlapFeatures(
-    edgeMultiPoly,
-    CLASS.name,
-    sketches,
-    precalcTotals[CLASS.name]
-  );
+  // Calc area sketch metrics
+  const classMetrics: Metric[] = (
+    await overlapFeatures(METRIC.metricId, edgeMultiPoly, sketch)
+  ).map((sm) => {
+    if (isSketchCollection(sketch) && sm.sketchId === sketch.properties.id) {
+      return {
+        ...sm,
+        classId: CLASS.classId,
+      };
+    }
 
-  // Sketch metrics
-  const sketchMetricsById = keyBy(classMetric.sketchMetrics, (item) => item.id);
-  const edgeSketchMetrics = sketches.map((sketch) => {
+    // Add extra numFishingRestriced and overlap to individual sketches
     const sketchActivities: string[] = getJsonUserAttribute(
-      sketch,
+      sketchesById[sm.sketchId!],
       "ACTIVITIES",
       []
     );
-    const numFishingActivities = CONFIG.fishingActivities.reduce(
+    const numFishingActivities = METRIC.fishingActivities.reduce(
       (hasFishingSoFar, fishingActivity) =>
         sketchActivities.includes(fishingActivity)
           ? hasFishingSoFar + 1
@@ -58,53 +60,52 @@ export async function platformEdge(
       0
     );
 
-    const curSketchMetric = sketchMetricsById[sketch.properties.id];
-
     return {
-      ...curSketchMetric,
-      numFishingRestricted:
-        CONFIG.fishingActivities.length - numFishingActivities,
-      overlap:
-        curSketchMetric.value > 0 &&
-        numFishingActivities < CONFIG.fishingActivities.length,
+      ...sm,
+      classId: CLASS.classId,
+      extra: {
+        ...sm.extra,
+        numFishingRestricted:
+          METRIC.fishingActivities.length - numFishingActivities,
+        overlapEdge:
+          sm.value > 0 &&
+          numFishingActivities < METRIC.fishingActivities.length,
+      },
     };
   });
 
-  // Class metrics
-  const edgeClassMetric = {
-    ...classMetric,
-    sketchMetrics: edgeSketchMetrics,
-  };
-  const edgeClassMetrics = { [edgeClassMetric.name]: edgeClassMetric };
-
-  // Edge group metrics
+  // Add group metrics
 
   // Match sketch to first break group where it has at least min number of restricted activities
   // If no overlap then it's always no break
   // Return true if matches current group
-  const sketchMetricsFilter = (
-    sketchMetric: EdgeSketchMetric,
-    curGroup: string
-  ) =>
-    curGroup ===
+  const metricToGroup = (sketchMetric: Metric) =>
     getBreakGroup(
-      CONFIG.breakMap,
-      sketchMetric.numFishingRestricted,
-      sketchMetric.overlap
+      METRIC.breakMap,
+      sketchMetric?.extra?.numFishingRestricted as number,
+      sketchMetric?.extra?.overlapEdge as boolean
     );
 
-  let edgeGroupMetrics = getGroupMetrics(
-    Object.keys(CONFIG.breakMap),
-    sketches,
-    sketchMetricsFilter,
-    edgeClassMetrics,
-    { [CLASS.name]: { value: precalcTotals[CLASS.name] } },
-    { [CLASS.name]: edgeMultiPoly }
-  );
+  const sketchMetrics = (() => {
+    if (isSketchCollection(sketch)) {
+      return classMetrics.filter((sm) => sm.sketchId !== sketch.properties.id);
+    } else {
+      return classMetrics.filter((sm) => sm.sketchId === sketch.properties.id);
+    }
+  })();
+
+  const groupMetrics: Metric[] = await overlapFeaturesGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: Object.keys(METRIC.breakMap),
+    sketch,
+    metricToGroup,
+    metrics: sketchMetrics,
+    featuresByClass: { [CLASS.classId]: edgeMultiPoly },
+  });
 
   return {
-    byClass: edgeClassMetrics,
-    byGroup: edgeGroupMetrics as EdgeGroupMetricsSketch,
+    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

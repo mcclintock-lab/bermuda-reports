@@ -338,6 +338,8 @@ export const iucnCategories: Record<string, IucnCategoryCombined> = {
   },
 };
 
+export const categories = Object.keys(iucnCategories);
+
 /**
  * Given list of allowed activities in the sketch, returns the highest category allowable
  * The lack of an activity assumes it is not allowed

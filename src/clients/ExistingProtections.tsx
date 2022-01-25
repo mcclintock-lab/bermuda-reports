@@ -3,17 +3,23 @@ import {
   ResultsCard,
   Skeleton,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
-import config from "../_config";
-import { ExistingProtectionResults } from "../_config";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
-// Import the results type definition from your functions to type-check your
-// component render functions
+import config, { ReportResult, ReportResultBase } from "../_config";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
 
-const CONFIG = config.existingProtection;
+import existingProtectionsTotals from "../../data/precalc/existingProtectionsTotals.json";
+const existingPrecalcTotals = existingProtectionsTotals as ReportResultBase;
+
+const REPORT = config.existingProtection;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const ExistingProtections = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -25,11 +31,16 @@ const ExistingProtections = () => {
         functionName="existingProtections"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: ExistingProtectionResults) => {
-          const sketchRows = flattenSketchAllClass(
-            data.byClass,
-            CONFIG.classes
+        {(data: ReportResult) => {
+          // Collection or single sketch
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(
+              data.metrics.filter((m) => m.metricId === METRIC.metricId),
+              existingPrecalcTotals.metrics
+            ),
+            [data.sketch.properties.id]
           );
+
           return (
             <>
               <p>
@@ -39,18 +50,11 @@ const ExistingProtections = () => {
               </p>
               <ClassTable
                 titleText="Area Type"
-                rows={Object.values(data.byClass).sort((a, b) =>
-                  a.name.localeCompare(b.name)
-                )}
-                classes={CONFIG.classes}
+                rows={parentMetrics}
+                classes={METRIC.classes}
               />
               {isCollection && (
-                <Collapse title="Show by MPA">
-                  <SketchClassTable
-                    rows={sketchRows}
-                    classes={CONFIG.classes}
-                  />
-                </Collapse>
+                <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
               )}
             </>
           );
@@ -60,10 +64,29 @@ const ExistingProtections = () => {
   );
 };
 
+const genSketchTable = (data: ReportResult) => {
+  // Build agg metric objects for each child sketch in collection with percValue for each class
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(
+      data.metrics.filter((m) => m.metricId === METRIC.metricId),
+      childSketchIds
+    ),
+    existingPrecalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    METRIC.classes,
+    childSketches
+  );
+  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
+};
+
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default ExistingProtections;

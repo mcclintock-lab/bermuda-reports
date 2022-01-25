@@ -1,6 +1,6 @@
 import React from "react";
 import { IucnDesignationTable } from "./IucnDesignationTable";
-import { Card, ReportDecorator } from "@seasketch/geoprocessing/client";
+import { Card, ReportDecorator } from "@seasketch/geoprocessing/client-ui";
 
 export default {
   component: IucnDesignationTable,

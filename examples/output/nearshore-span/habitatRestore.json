@@ -1,30 +1,64 @@
 {
-  "byClass": {
-    "Seagrass": {
-      "name": "Seagrass",
-      "value": 2097591.7151726917,
-      "percValue": 0.0642046960830781,
-      "sketchMetrics": [
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2417299.766079996,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61649a3c1e0a596510ad8329",
+      "name": "nearshore-span",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
+      "createdAt": "2021-10-11T20:10:36.004Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 2097591.7151726917,
-          "percValue": 0.0642046960830781
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\"]"
         }
       ]
     },
-    "Mangrove_Saltmarsh": {
-      "name": "Mangrove_Saltmarsh",
-      "value": 1435855.4765313931,
-      "percValue": 0.003740074966285904,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 1435855.4765313931,
-          "percValue": 0.003740074966285904
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -65.09902878851547,
+      31.50541071353797,
+      -64.79380174261453,
+      32.28908133136779
+    ],
+    "geometry": null
   }
 }

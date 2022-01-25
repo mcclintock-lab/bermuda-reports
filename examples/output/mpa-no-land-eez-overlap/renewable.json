@@ -1,56 +1,75 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-no-land-eez-overlap",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

@@ -1,39 +1,22 @@
-/**
- * Represents a grouping of data, used by GP functions to calculate and report
- * metrics based on them. This interface is murky but it supports a variety of
- * scenarios for mapping one or more feature classes to datasources:
- * - Vector dataset with one feature class
- * - Vector dataset with multiple feature class, each with their own datasource for analysis, and possibly only one layerId for display
- * - Vector dataset with multiple feature classes, in one datasource, each class with its own layerId
- * - Raster with multiple feature classes represented by unique integer values
- */
-export interface DataGroup {
-  /** data classes used by report group */
-  classes: DataClass[];
-  /** Optional filename of dataset, sans extension. May contain data for one or more classes */
-  baseFilename?: string;
-  /** Optional filename of dataset for use by GP function, with extension */
-  filename?: string;
-  /** Optional ID of map layer associated with this metric */
-  layerId?: string;
-  /** Optional mapping of class integer ID to its name */
-  classIdToName?: Record<string, string>;
-}
+export type Nullable<T> = T | null;
+export type ISO8601Duration = string;
+export type ISO8601DateTime = string;
 
 /**
- * Represents a single class of data and its source
+ * Represents a single class of data within a report.
+ * Used to access the data, calculate and report metrics based on them.
  */
 export interface DataClass {
-  /** Unique name for class.  ToDo: consolidate on this for unique name */
-  name: string;
+  /** Unique name for class */
+  classId: string;
   /** Name of class suitable for user display */
   display: string;
   /** Optional filename of dataset used for metric class, sans extension. */
   baseFilename?: string;
   /** Optional filename of dataset for metric class for use by GP function, with extension. */
   filename?: string;
-  /** Optional unique integer used by raster datasets to represent class */
-  classId?: string;
+  /** Optional unique number used by some datasets (e.g. raster) to represent data class instead of string */
+  numericClassId?: number;
   /** Optional ID of map layer associated with this class */
   layerId?: string;
   /** Optional nodata value used by raster dataset */
@@ -43,67 +26,95 @@ export interface DataClass {
 }
 
 /**
- * Properties for representing metric value and perc value, such as area or sum
- * ValueMetric is the core metric representation. It can related to a class of data or a sketch
+ * Represents a group of data classes.
+ * Used to access the data, calculate and report metrics based on them.
+ * This interface is murky but it supports a variety of scenarios:
+ * - Vector dataset with one feature class
+ * - Vector dataset with multiple feature class, each with their own file datasource, and possibly only one layerId to display them all
+ * - Vector dataset with multiple feature classes, all in one file datasource, each class with its own layerId
+ * - Raster with multiple feature classes represented by unique integer values that map to class names
  */
-export interface ValueMetric {
-  /** The raw metric value, the heart of it all */
+export interface DataGroup {
+  /** data classes used by report group */
+  classes: DataClass[];
+  /** Identifier for datasource */
+  datasourceId?: string;
+  /** Optional name of feature property containing class ID */
+  classProperty?: string;
+  /** Optional filename of dataset, sans extension. May contain data for one or more classes */
+  baseFilename?: string;
+  /** Optional filename of dataset for use by GP function, with extension */
+  filename?: string;
+  /** Optional ID of map layer associated with this metric */
+  layerId?: string;
+}
+
+/** Represents a single metric, having one DataGroup */
+export interface MetricGroup extends DataGroup {
+  /** Unique identifier for metric */
+  metricId: string;
+}
+
+/** Represents a single report */
+export interface Report {
+  /** unique identifier for report */
+  reportId: string;
+  /** report metrics keyed by metricId for easy retrieval */
+  metrics: Record<string, MetricGroup>;
+}
+
+//// METRICS ////
+
+export type MetricIdTypes = string | number;
+
+/** Properties used in Metric */
+export const MetricProperties = [
+  "metricId",
+  "sketchId",
+  "classId",
+  "groupId",
+  "geographyId",
+  "value",
+  "extra",
+] as const;
+export type MetricProperty = typeof MetricProperties[number] & keyof Metric;
+
+/** Dimensions used in Metric */
+export const MetricDimensions = [
+  "metricId",
+  "geographyId",
+  "sketchId",
+  "groupId",
+  "classId",
+] as const;
+export type MetricDimension = typeof MetricDimensions[number] & keyof Metric;
+
+/**
+ * Flexible domain model for a metric - a single measurement stratified by one or more dimensions
+ */
+export interface Metric {
+  /** Name of the metric */
+  metricId: string;
+  /** The metric value */
   value: number;
-  /** Proportion of value to total value, so common its included */
-  percValue: number;
-}
+  /** Additional ad-hoc properties, often used to ease interpretation */
+  extra?: Record<string, string | number | boolean>;
 
-/** ValueMetric for a sketch */
-export type SketchMetric = ValueMetric & {
-  id: string;
-  name: string;
-};
+  // Time
+  /** Metric duration of time */
+  // duration: Nullable<ISO8601Duration>;
+  /** Metric for event at specific time  */
+  // startTime: Nullable<ISO8601DateTime>;
 
-/**
- * ValueMetric for a named class of data
- */
-export type ClassMetric = ValueMetric & {
-  /** Name of class */
-  name: string;
-};
-
-/**
- * ValueMetric for a named class of data, with additional per-sketch
- */
-export type ClassMetricSketch = ClassMetric & {
-  sketchMetrics: SketchMetric[];
-};
-
-/**
- * Object containing a ValueMetric for one or more named class of data
- */
-export interface ClassMetrics {
-  [name: string]: ClassMetric;
-}
-
-/**
- * Object containing a ValueMetric for one or more named class of data, with additional per-sketch
- */
-export interface ClassMetricsSketch {
-  [name: string]: ClassMetricSketch;
-}
-
-// GroupMetrics have named ClassMetrics
-
-/**
- * Object containing one or more named groups, each with one or more named ClassMetric
- * Useful for larger groupings of classes e.g. protection categories and levels
- */
-export interface GroupMetrics {
-  [name: string]: ClassMetrics;
-}
-
-/**
- * Object containing one or more named groups, each with one or more named ClassMetric, with additional per-sketch
- * Useful for larger groupings of classes e.g. protection categories and levels
- */
-export interface GroupMetricsSketch {
-  [name: string]: ClassMetricsSketch;
+  // Other Dimensions
+  /** Metric from specific data class */
+  classId: Nullable<string>;
+  /** Identifier for group - e.g. protection level.  A sketch can only be a member of one*/
+  groupId: Nullable<string>;
+  /** Identifier for geography */
+  geographyId: Nullable<string>;
+  /** Identifier for sketch or sketch collection */
+  sketchId: Nullable<string>;
 }
 
 //// AGGREGATIONS ////
@@ -112,22 +123,6 @@ export interface GroupMetricsSketch {
  * Single flattened metric with class values keyed by class name
  * Useful for rendering table rows with the values of multiple classes for a group
  */
-export interface ClassMetricAgg {
-  value: number;
-  percValue: number;
-  [className: string]: string | number;
-}
-
-export type ClassMetricSketchAgg = ClassMetricAgg & {
-  sketchId: string;
-  sketchName: string;
-};
-
-/**
- * Single flattened metric with class values keyed by class name
- * Useful for rendering table rows with the values of multiple classes for a group
- */
-
 export type GroupMetricAgg = {
   groupId: string;
   value: number;
@@ -137,33 +132,6 @@ export type GroupMetricAgg = {
 
 export type GroupMetricSketchAgg = GroupMetricAgg & {
   sketchId: string;
-  sketchName: string;
+  /** @deprecated */
+  sketchName?: string;
 };
-
-// Deprecated
-
-export interface SketchStat {
-  sketchId: string;
-  name: string;
-  // category stats
-  category: string;
-  level: string;
-  // area stats
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface CategoryStat {
-  category: string;
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}
-
-export interface LevelStat {
-  level: string;
-  numSketches: number;
-  area: number;
-  percPlanningArea: number;
-}

@@ -1,56 +1,75 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 49128.152675926685,
-      "percValue": 0.03157902882589338,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 49128.152675926685,
-          "percValue": 0.03157902882589338
-        }
-      ]
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 265884.14039325714,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
-      "value": 21734.027351796627,
-      "percValue": 0.021928151468072237,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 21734.027351796627,
-          "percValue": 0.021928151468072237
-        }
-      ]
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 112271.20314335823,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
     },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
-      "value": 8604.270055055618,
-      "percValue": 0.019338105202563533,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 8604.270055055618,
-          "percValue": 0.019338105202563533
-        }
-      ]
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 475733.4994997978,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
-      "value": 19312.111798286438,
-      "percValue": 0.042840735576965785,
-      "sketchMetrics": [
-        {
-          "id": "61649a3c1e0a596510ad8329",
-          "name": "nearshore-span",
-          "value": 19312.111798286438,
-          "percValue": 0.042840735576965785
-        }
-      ]
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 173903.067568779,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61649a3c1e0a596510ad8329",
+      "name": "nearshore-span",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
+      "createdAt": "2021-10-11T20:10:36.004Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -65.09902878851547,
+      31.50541071353797,
+      -64.79380174261453,
+      32.28908133136779
+    ],
+    "geometry": null
   }
 }

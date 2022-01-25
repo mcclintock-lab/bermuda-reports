@@ -6,72 +6,75 @@ import {
   Polygon,
   fgbFetchAll,
   toSketchArray,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, {
-  HabitatNurseryResults,
-  HabitatNurseryLevelResults,
-} from "../_config";
+import config, { ReportResult } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
-import { ClassMetricsSketch, SketchMetric } from "../metrics/types";
+import { Metric } from "../metrics/types";
 
+import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { getGroupMetrics } from "../metrics/metrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
-import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
-
-const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
-const CONFIG = config.habitatNursery;
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function habitatNursery(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<HabitatNurseryLevelResults> {
-  const sketches = toSketchArray(sketch);
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
+  const sketches = toSketchArray(sketch);
 
   // Class metrics
   const featuresByClass: Record<string, Feature<Polygon>[]> = {};
-  const classMetrics = (
+  const classMetrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
-        featuresByClass[curClass.name] = await fgbFetchAll(
+      METRIC.classes.map(async (curClass) => {
+        featuresByClass[curClass.classId] = await fgbFetchAll(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
-        return overlapFeatures(
-          featuresByClass[curClass.name],
-          curClass.name,
-          sketches,
-          precalcTotals.byClass[curClass.name].value
+        const classFeatures = await overlapFeatures(
+          METRIC.metricId,
+          featuresByClass[curClass.classId],
+          sketch
+        );
+
+        // Sum for overall?
+
+        return classFeatures.map(
+          (metric): Metric => ({
+            ...metric,
+            classId: curClass.classId,
+          })
         );
       })
     )
-  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
-    return {
-      ...metricsSoFar,
-      [metric.name]: metric,
-    };
-  }, {});
-
-  // Level metrics
-  const sketchCategoryMap = getLevelNameForSketches(sketches);
-  const sketchMetricsFilter = (sketchMetric: SketchMetric, curGroup: string) =>
-    sketchCategoryMap[sketchMetric.id] === curGroup;
-
-  const levelMetrics = getGroupMetrics(
-    levels,
-    sketches,
-    sketchMetricsFilter,
-    classMetrics,
-    precalcTotals.byClass,
-    featuresByClass
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
+  // Calculate group metrics - from individual sketch metrics
+  const sketchCategoryMap = getLevelNameForSketches(sketches);
+  const metricToGroup = (sketchMetric: Metric) =>
+    sketchCategoryMap[sketchMetric.sketchId!];
+
+  const groupMetrics = await overlapFeaturesGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: levels,
+    sketch,
+    metricToGroup,
+    metrics: classMetrics,
+    featuresByClass,
+  });
+
   return {
-    overall: precalcTotals.overall,
-    byClass: classMetrics,
-    byLevel: levelMetrics,
+    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

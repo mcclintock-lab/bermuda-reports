@@ -1,11 +1,76 @@
 {
-  "Coral Cover": 219142.73238153942,
-  "Coral Diversity": 231924.1468730762,
-  "Coral Recruit Density": 73405.34650501853,
-  "Rugosity": 72297.22302708979,
-  "Fish Diversity BRUV": 194649.20529744774,
-  "Fish Density": 253383.98754745774,
-  "Fish Diversity BREAM": 333552.74660776486,
-  "Fish Recruit Density": 75390.81803614809,
-  "Seagrass": 2892.556873383932
+  "metrics": [
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 219142.73238153942
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 231924.1468730762
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 73405.34650501853
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 72297.22302708979
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 194649.20529744774
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 253383.98754745774
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 333552.74660776486
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 75390.81803614809
+    },
+    {
+      "metricId": "reefIndexValueOverlap",
+      "sketchId": null,
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2892.556873383932
+    }
+  ]
 }

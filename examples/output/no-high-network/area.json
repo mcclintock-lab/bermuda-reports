@@ -1,61 +1,276 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 129760135.88214482,
-      "percValue": 0.0002786123691900815,
-      "sketchMetrics": [
-        {
-          "id": "616f1ae906f1b7772b51f18f",
-          "name": "full mpa",
-          "value": 98813282.51586914,
-          "percValue": 0.00021216533538620785
-        },
-        {
-          "id": "616f1ae906f1b7772b51f191",
-          "name": "low mpa",
-          "value": 30946853.366245817,
-          "percValue": 0.00006644703380380953
-        }
-      ]
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 30946853.366245817,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 98813282.51586914,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 129760018.35105023,
-      "percValue": 0.050598639699453905,
-      "sketchMetrics": [
-        {
-          "id": "616f1ae906f1b7772b51f18f",
-          "name": "full mpa",
-          "value": 98813282.51586914,
-          "percValue": 0.038531265200767786
-        },
-        {
-          "id": "616f1ae906f1b7772b51f191",
-          "name": "low mpa",
-          "value": 30946735.83518108,
-          "percValue": 0.012067374498686117
-        }
-      ]
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
     },
-    "offshore": {
-      "name": "offshore",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 30946735.83518108,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 117.54897254908393,
-      "percValue": 2.5379082062351933e-10,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 117.54897254908393,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00021216533538620785,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0002786123691900815,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00006644703380380953,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.038531265200767786,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.050598639699453905,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.012067374498686117,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "full mpa"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2.5379082062351933e-10,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2.5379082062351933e-10,
+      "extra": {
+        "sketchName": "low mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-high-network",
+      "updatedAt": "2021-10-19T23:07:10.877Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "full mpa",
-          "value": 0,
-          "percValue": 0
+          "updatedAt": "2021-10-19T23:06:50.458Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f191",
           "name": "low mpa",
-          "value": 117.54897254908393,
-          "percValue": 2.5379082062351933e-10
-        }
-      ]
-    }
+          "updatedAt": "2021-10-19T23:07:10.884Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

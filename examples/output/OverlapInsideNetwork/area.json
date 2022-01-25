@@ -1,61 +1,276 @@
 {
-  "byClass": {
-    "eez": {
-      "name": "eez",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
       "value": 12311918758.319027,
-      "percValue": 0.026435336486134785,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 12311918758.318974,
-          "percValue": 0.02643533648613467
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 673240597.1411997,
-          "percValue": 0.0014455376185396334
-        }
-      ]
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
     },
-    "nearshore": {
-      "name": "nearshore",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12311918758.318974,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 673240597.1411997,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 205766069.87605166,
-      "percValue": 0.08023645005863031,
-      "sketchMetrics": [
-        {
-          "id": "619a8e39a717c5a0742cafb9",
-          "name": "Large MPA",
-          "value": 205766069.87605166,
-          "percValue": 0.08023645005863031
-        },
-        {
-          "id": "619a8e39a717c5a0742cafba",
-          "name": "MPA inside",
-          "value": 144652685.80328757,
-          "percValue": 0.056405888528140914
-        }
-      ]
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
     },
-    "offshore": {
-      "name": "offshore",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 205766069.87605166,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 144652685.80328757,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
       "value": 12106093033.805384,
-      "percValue": 0.026137321483700904,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12106093033.805384,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 528582653.74453104,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.026435336486134785,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.02643533648613467,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0014455376185396334,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.08023645005863031,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.08023645005863031,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "nearshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.056405888528140914,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.026137321483700904,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.026137321483700904,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "areaOverlapPerc",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "offshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0011412215909004774,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619a8e39a717c5a0742cafb8",
+      "name": "OverlapInsideNetwork",
+      "updatedAt": "2021-11-30T00:27:09.918Z",
+      "createdAt": "2021-10-28T17:43:51.029Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafb9",
           "name": "Large MPA",
-          "value": 12106093033.805384,
-          "percValue": 0.026137321483700904
+          "updatedAt": "2021-11-21T18:26:41.435Z",
+          "createdAt": "2021-10-28T17:34:24.300Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -64.69359098486977,
+          32.44980942063518,
+          -63.603991852331994,
+          33.55643352377083
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "619a8e39a717c5a0742cafba",
           "name": "MPA inside",
-          "value": 528582653.74453104,
-          "percValue": 0.0011412215909004774
-        }
-      ]
-    }
+          "updatedAt": "2021-11-30T00:27:09.924Z",
+          "createdAt": "2021-11-03T14:28:36.389Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.68357919967069,
+          32.45363443027919,
+          -64.53976093344767,
+          32.944735150647226
+        ],
+        "geometry": null
+      }
+    ]
   }
 }

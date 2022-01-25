@@ -1,41 +1,86 @@
 {
-  "sketchStats": [
+  "metrics": [
     {
+      "metricId": "areaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": null,
+      "geographyId": null,
+      "value": 33228300.225384366,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": "1a",
+      "geographyId": null,
+      "value": 33228300.225384366,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 33228300.225384366,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "eez",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
       "name": "mpa-full",
-      "category": "1a",
-      "level": "full",
-      "area": 33228300.225384366,
-      "percPlanningArea": 0.00007134560538964067
-    }
-  ],
-  "categoryStats": [
-    {
-      "category": "1a",
-      "level": "full",
-      "numSketches": 1,
-      "area": 33228300.225379605,
-      "percPlanningArea": 0.00007134560538963045
-    }
-  ],
-  "levelStats": [
-    {
-      "level": "full",
-      "numSketches": 1,
-      "area": 33228300.225379605,
-      "percPlanningArea": 0.00007134560538963045
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
+        }
+      ]
     },
-    {
-      "level": "high",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    },
-    {
-      "level": "low",
-      "numSketches": 0,
-      "area": 0,
-      "percPlanningArea": 0
-    }
-  ]
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
+  }
 }

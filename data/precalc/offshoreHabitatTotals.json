@@ -1,12 +1,84 @@
 {
-  "Abyssopelagic": 6093,
-  "Bathypelagic": 124,
-  "Cold water coral": 9,
-  "Escarpments": 103,
-  "Knolls": 1587,
-  "Pelagic zone 1": 2979,
-  "Pelagic zone 2": 1529,
-  "Pelagic zone 3": 2601,
-  "Plains": 5481,
-  "Seamounts": 379
+  "metrics": [
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6093
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 124
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 103
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1587
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2979
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1529
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2601
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5481
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": null,
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 379
+    }
+  ]
 }

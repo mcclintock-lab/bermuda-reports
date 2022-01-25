@@ -7,7 +7,7 @@ import {
   writeResultOutput,
 } from "@seasketch/geoprocessing/scripts/testing";
 
-describe("Basic smoke tests", () => {
+describe("habitatRestoreSmoke - Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof habitatRestore).toBe("function");
   });
@@ -18,5 +18,5 @@ describe("Basic smoke tests", () => {
       expect(result).toBeTruthy();
       writeResultOutput(result, "habitatRestore", example.properties.name);
     }
-  }, 60000);
+  }, 180000);
 });

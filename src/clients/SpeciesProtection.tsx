@@ -3,14 +3,23 @@ import {
   ResultsCard,
   Skeleton,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
-import config, { ReefIndexResults } from "../_config";
+} from "@seasketch/geoprocessing/client-ui";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
 
-const CONFIG = config.reefIndex;
+import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
+const precalcTotals = reefIndexTotals as ReportResultBase;
+
+const REPORT = config.speciesProtection;
+const METRIC = REPORT.metrics.valueOverlap;
 
 const SpeciesProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -21,8 +30,12 @@ const SpeciesProtection = () => {
         functionName="reefIndex"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: ReefIndexResults) => {
-          const results = Object.values(data.reefIndex);
+        {(data: ReportResult) => {
+          // Single sketch or collection top-level
+          const topMetrics = metricsWithSketchId(
+            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            [data.sketch.properties.id]
+          );
           return (
             <>
               <p>
@@ -54,8 +67,8 @@ const SpeciesProtection = () => {
               </Collapse>
               <ClassTable
                 titleText="Indicator"
-                rows={results}
-                classes={CONFIG.classes}
+                rows={topMetrics}
+                classes={METRIC.classes}
                 showGoal
               />
               {isCollection && (
@@ -69,16 +82,26 @@ const SpeciesProtection = () => {
   );
 };
 
-const genSketchTable = (data: ReefIndexResults) => {
-  // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.reefIndex, CONFIG.classes);
-  return <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />;
+const genSketchTable = (data: ReportResult) => {
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(data.metrics, childSketchIds),
+    precalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    METRIC.classes,
+    childSketches
+  );
+
+  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default SpeciesProtection;

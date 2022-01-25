@@ -1,56 +1,75 @@
 {
-  "renewable": {
-    "Floating Solar": {
-      "name": "Floating Solar",
-      "value": 17171.597364604473,
-      "percValue": 0.011037711345275023,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 17171.597364604473,
-          "percValue": 0.011037711345275023
-        }
-      ]
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 142187.61062812805,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
     },
-    "Fixed Offshore Wind": {
-      "name": "Fixed Offshore Wind",
-      "value": 8687.752108514309,
-      "percValue": 0.008765349425071817,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 8687.752108514309,
-          "percValue": 0.008765349425071817
-        }
-      ]
-    },
-    "Floating Offshore Wind": {
-      "name": "Floating Offshore Wind",
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 178234.56237268448,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 47808.72842168808,
+      "extra": {
+        "sketchName": "mpa-full"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-full",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 0,
-          "percValue": 0
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
         }
       ]
     },
-    "Wave Energy": {
-      "name": "Wave Energy",
-      "value": 3627.8118220567703,
-      "percValue": 0.008047702323549866,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-full",
-          "value": 3627.8118220567703,
-          "percValue": 0.008047702323549866
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

@@ -3,14 +3,28 @@ import {
   ResultsCard,
   Skeleton,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
-import config, { HabitatResults } from "../_config";
+} from "@seasketch/geoprocessing/client-ui";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
 import SketchClassTable from "../components/SketchClassTable";
 import { ClassTable } from "../components/ClassTable";
 import { CategoricalClassTable } from "../components/CategoricalClassTable";
-import { ClassMetricSketch } from "../metrics/types";
+
+import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
+const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
+
+import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
+const offshorePrecalcTotals = offshoreHabitatTotals as ReportResultBase;
+
+const REPORT = config.habitatProtection;
+const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;
+const OFFSHORE_METRIC = REPORT.metrics.offshoreAreaOverlap;
 
 const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -21,7 +35,27 @@ const HabitatProtection = () => {
         functionName="habitatProtection"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: HabitatResults) => {
+        {(data: ReportResult) => {
+          // Collection top-level or single sketch.
+          const nearshoreParentPercMetrics = metricsWithSketchId(
+            sketchMetricPercent(
+              data.metrics.filter(
+                (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
+              ),
+              nearshorePrecalcTotals.metrics
+            ),
+            [data.sketch.properties.id]
+          );
+          const offshoreParentPercMetrics = metricsWithSketchId(
+            sketchMetricPercent(
+              data.metrics.filter(
+                (m) => m.metricId === OFFSHORE_METRIC.metricId
+              ),
+              offshorePrecalcTotals.metrics
+            ),
+            [data.sketch.properties.id]
+          );
+
           return (
             <>
               <p>
@@ -40,13 +74,9 @@ const HabitatProtection = () => {
               </Collapse>
               <CategoricalClassTable
                 titleText="Nearshore/Platform"
-                layerId={config.nearshore.layerId}
-                rows={Object.values(
-                  data.nearshore
-                ).sort((a: ClassMetricSketch, b: ClassMetricSketch) =>
-                  a.name.localeCompare(b.name)
-                )}
-                classes={config.nearshore.classes}
+                layerId={NEARSHORE_METRIC.layerId}
+                rows={nearshoreParentPercMetrics}
+                classes={NEARSHORE_METRIC.classes}
                 showGoal
               />
               {isCollection && (
@@ -56,8 +86,8 @@ const HabitatProtection = () => {
               )}
               <ClassTable
                 titleText="Offshore"
-                rows={Object.values(data.offshore)}
-                classes={config.offshore.classes}
+                rows={offshoreParentPercMetrics}
+                classes={OFFSHORE_METRIC.classes}
                 showGoal
               />
               {isCollection && (
@@ -73,32 +103,56 @@ const HabitatProtection = () => {
   );
 };
 
-const genNearshoreSketchTable = (data: HabitatResults) => {
+const genNearshoreSketchTable = (data: ReportResult) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(
-    data.nearshore,
-    config.nearshore.classes
+  const subSketches = toNullSketchArray(data.sketch);
+  const subSketchIds = subSketches.map((sk) => sk.properties.id);
+  const subSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(
+      data.metrics.filter(
+        (m) => m.metricId === NEARSHORE_METRIC.metricId && m.classId
+      ),
+      subSketchIds
+    ),
+    nearshorePrecalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    subSketchMetrics,
+    NEARSHORE_METRIC.classes,
+    subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.nearshore.classes} />
+    <SketchClassTable rows={sketchRows} classes={NEARSHORE_METRIC.classes} />
   );
 };
 
-const genOffshoreSketchTable = (data: HabitatResults) => {
+const genOffshoreSketchTable = (data: ReportResult) => {
   // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(
-    data.offshore,
-    config.offshore.classes
+  const subSketches = toNullSketchArray(data.sketch);
+  const subSketchIds = subSketches.map((sk) => sk.properties.id);
+  const subSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(
+      data.metrics.filter(
+        (m) => m.metricId === OFFSHORE_METRIC.metricId && m.classId
+      ),
+      subSketchIds
+    ),
+    offshorePrecalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    subSketchMetrics,
+    OFFSHORE_METRIC.classes,
+    subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={config.offshore.classes} />
+    <SketchClassTable rows={sketchRows} classes={OFFSHORE_METRIC.classes} />
   );
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default HabitatProtection;

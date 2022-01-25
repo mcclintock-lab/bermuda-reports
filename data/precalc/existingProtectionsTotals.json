@@ -1,79 +1,124 @@
 {
-  "byClass": {
-    "Ferry Route": {
-      "name": "Ferry Route",
-      "value": 6531869.4800553275,
-      "percValue": 0.005174223032372881
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6531869.4800553275
     },
-    "Shipping Lane": {
-      "name": "Shipping Lane",
-      "value": 6404448.404035611,
-      "percValue": 0.005073286375820863
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6404448.404035611
     },
-    "CableZone": {
-      "name": "CableZone",
-      "value": 724129832.7142962,
-      "percValue": 0.5736197378559523
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 724129832.7142962
     },
-    "SpearfishEx": {
-      "name": "SpearfishEx",
-      "value": 190898381.11518282,
-      "percValue": 0.1512202292812055
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 190898381.11518282
     },
-    "SeasonalPA": {
-      "name": "SeasonalPA",
-      "value": 86861956.52690658,
-      "percValue": 0.06880773375384178
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 86861956.52690658
     },
-    "MPAExtendedClosure": {
-      "name": "MPAExtendedClosure",
-      "value": 16223333.48414083,
-      "percValue": 0.012851320136114635
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16223333.48414083
     },
-    "Wreck": {
-      "name": "Wreck",
-      "value": 8346169.285616089,
-      "percValue": 0.006611421352122928
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8346169.285616089
     },
-    "Reef": {
-      "name": "Reef",
-      "value": 7244658.235392232,
-      "percValue": 0.0057388589312288045
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7244658.235392232
     },
-    "Prohibited": {
-      "name": "Prohibited",
-      "value": 415252.02290973207,
-      "percValue": 0.000328942056748012
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 415252.02290973207
     },
-    "NoNetFish": {
-      "name": "NoNetFish",
-      "value": 478936.7152099035,
-      "percValue": 0.0003793899113347107
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 478936.7152099035
     },
-    "NoLobsterFish": {
-      "name": "NoLobsterFish",
-      "value": 81967128.62906441,
-      "percValue": 0.06493029386839236
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 81967128.62906441
     },
-    "Amenity Park": {
-      "name": "Amenity Park",
-      "value": 893250.188420536,
-      "percValue": 0.0007075884955615806
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 893250.188420536
     },
-    "Recreational Park": {
-      "name": "Recreational Park",
-      "value": 45354.238667298945,
-      "percValue": 0.00003592737837837004
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 45354.238667298945
     },
-    "Nature Reserve": {
-      "name": "Nature Reserve",
-      "value": 483071.3674229983,
-      "percValue": 0.00038266517774613717
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 483071.3674229983
     },
-    "CoralPreserve": {
-      "name": "CoralPreserve",
-      "value": 131462891.60720466,
-      "percValue": 0.10413838239317913
+    {
+      "metricId": "areaOverlap",
+      "sketchId": null,
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 131462891.60720466
     }
-  }
+  ]
 }

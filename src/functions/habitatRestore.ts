@@ -5,60 +5,64 @@ import {
   Feature,
   Polygon,
   fgbFetchAll,
-  toSketchArray,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, {
-  HabitatRestoreBaseResults,
-  HabitatRestoreResults,
-} from "../_config";
-import { ClassMetricsSketch } from "../metrics/types";
-
+import config, { ReportResult } from "../_config";
+import { Metric } from "../metrics/types";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
-const precalcTotals = habitatRestoreTotals as HabitatRestoreBaseResults;
-const CLASSES = config.habitatRestore.classes;
+const REPORT = config.habitatRestore;
+const METRIC = REPORT.metrics.areaOverlap;
 
 export async function habitatRestore(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<HabitatRestoreResults> {
-  const sketches = toSketchArray(sketch);
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
 
-  const classMetrics = (
+  const metrics = (
     await Promise.all(
-      CLASSES.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         const features = await fgbFetchAll<Feature<Polygon>>(
           `${config.dataBucketUrl}${curClass.filename}`,
           box
         );
-        return overlapFeatures(
+        const overlapResult = await overlapFeatures(
+          METRIC.metricId,
           features,
-          curClass.name,
-          sketches,
-          precalcTotals.byClass[curClass.name].value
+          sketch,
+          {
+            chunkSize: 2000,
+          }
+        );
+        // Transform from simple to extended metric
+        return overlapResult.map(
+          (metric): Metric => ({
+            ...metric,
+            classId: curClass.classId,
+          })
         );
       })
     )
-  ).reduce<ClassMetricsSketch>((metricsSoFar, metric) => {
-    return {
-      ...metricsSoFar,
-      [metric.name]: metric,
-    };
-  }, {});
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
+  );
 
   return {
-    byClass: classMetrics,
+    metrics: metricSort(metricRekey(metrics)),
+    sketch: toNullSketch(sketch, true),
   };
 }
 
 export default new GeoprocessingHandler(habitatRestore, {
   title: "habitatRestore",
   description: "habitat restoration area within sketch",
-  timeout: 120, // seconds
+  timeout: 240, // seconds
   executionMode: "async",
-  memory: 4096,
+  memory: 8192,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });

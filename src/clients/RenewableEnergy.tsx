@@ -1,18 +1,30 @@
 import React from "react";
 import {
+  isNullSketchCollection,
+  toNullSketchArray,
+} from "@seasketch/geoprocessing/client-core";
+import {
   ResultsCard,
   Skeleton,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
-import config, { RenewableResults } from "../_config";
+} from "@seasketch/geoprocessing/client-ui";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+} from "../metrics/clientMetrics";
+import { sketchMetricPercent } from "../metrics/clientMetrics";
 
-const CONFIG = config.renewable;
+import renewableTotals from "../../data/precalc/renewableTotals.json";
+const precalcTotals = renewableTotals as ReportResultBase;
 
-const SpeciesProtection = () => {
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
+
+const RenewableEnergy = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
@@ -21,11 +33,13 @@ const SpeciesProtection = () => {
         functionName="renewable"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: RenewableResults) => {
-          const sketchRows = flattenSketchAllClass(
-            data.renewable,
-            CONFIG.classes
+        {(data: ReportResult) => {
+          // Single sketch or collection top-level
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            [data.sketch.properties.id]
           );
+
           return (
             <>
               <p>
@@ -56,17 +70,12 @@ const SpeciesProtection = () => {
               </Collapse>
               <ClassTable
                 titleText="Type"
-                rows={Object.values(data.renewable)}
-                classes={CONFIG.classes}
+                rows={Object.values(parentMetrics)}
+                classes={METRIC.classes}
               />
-              {isCollection && (
-                <Collapse title="Show by MPA">
-                  <SketchClassTable
-                    rows={sketchRows}
-                    classes={CONFIG.classes}
-                  />
-                </Collapse>
-              )}
+              {isCollection &&
+                isNullSketchCollection(data.sketch) &&
+                genSketchTable(data)}
             </>
           );
         }}
@@ -75,10 +84,30 @@ const SpeciesProtection = () => {
   );
 };
 
+const genSketchTable = (data: ReportResult) => {
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(data.metrics, childSketchIds),
+    precalcTotals.metrics
+  );
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    METRIC.classes,
+    childSketches
+  );
+
+  return (
+    <Collapse title="Show by MPA">
+      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
+    </Collapse>
+  );
+};
+
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
-export default SpeciesProtection;
+export default RenewableEnergy;

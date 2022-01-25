@@ -1,68 +1,172 @@
 {
-  "byClass": {
-    "Platform Edge": {
-      "name": "Platform Edge",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "full mpa",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "full mpa",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
       "value": 21517894.43305575,
-      "percValue": 0.012407737188425985,
-      "sketchMetrics": [
-        {
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 12160320.09128951,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Platform Edge",
+      "groupId": "partial",
+      "geographyId": null,
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-high-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "low mpa",
+        "numFishingRestricted": 2,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Platform Edge",
+      "groupId": "partial",
+      "geographyId": null,
+      "value": 9357574.341766244,
+      "extra": {
+        "sketchName": "low mpa",
+        "numFishingRestricted": 2,
+        "overlapEdge": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "616f1ae906f1b7772b51f190",
+      "name": "no-high-network",
+      "updatedAt": "2021-10-19T23:07:10.877Z",
+      "createdAt": "2021-10-14T15:53:12.935Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f18f",
           "name": "full mpa",
-          "value": 12160320.09128951,
-          "percValue": 0.007011934010981658,
-          "numFishingRestricted": 3,
-          "overlap": true
+          "updatedAt": "2021-10-19T23:06:50.458Z",
+          "createdAt": "2021-10-14T15:52:43.614Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
         },
-        {
+        "id": "1",
+        "bbox": [
+          -65.02344219435086,
+          32.282251822474706,
+          -64.86688701856981,
+          32.39827923576554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "id": "616f1ae906f1b7772b51f191",
           "name": "low mpa",
-          "value": 9357574.341766244,
-          "percValue": 0.005395803177444328,
-          "numFishingRestricted": 2,
-          "overlap": true
-        }
-      ]
-    }
-  },
-  "byGroup": {
-    "definite": {
-      "Platform Edge": {
-        "value": 12160320.09128951,
-        "percValue": 0.007011934010981658,
-        "sketchMetrics": [
-          {
-            "id": "616f1ae906f1b7772b51f18f",
-            "name": "full mpa",
-            "value": 12160320.09128951,
-            "percValue": 0.007011934010981658,
-            "numFishingRestricted": 3,
-            "overlap": true
-          }
-        ]
+          "updatedAt": "2021-10-19T23:07:10.884Z",
+          "createdAt": "2021-10-14T15:53:05.560Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_REC\",\"MINING_OIL_GAS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.78865226813404,
+          32.25264103877739,
+          -64.68492595899974,
+          32.3286754472956
+        ],
+        "geometry": null
       }
-    },
-    "partial": {
-      "Platform Edge": {
-        "value": 9357574.341766244,
-        "percValue": 0.005395803177444328,
-        "sketchMetrics": [
-          {
-            "id": "616f1ae906f1b7772b51f191",
-            "name": "low mpa",
-            "value": 9357574.341766244,
-            "percValue": 0.005395803177444328,
-            "numFishingRestricted": 2,
-            "overlap": true
-          }
-        ]
-      }
-    },
-    "no": {
-      "Platform Edge": {
-        "value": 0,
-        "percValue": 0,
-        "sketchMetrics": []
-      }
-    }
+    ]
   }
 }

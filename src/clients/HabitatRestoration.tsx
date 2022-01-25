@@ -4,15 +4,23 @@ import {
   Skeleton,
   ReportError,
   useSketchProperties,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
-import config, { HabitatRestoreResults } from "../_config";
-import { ClassMetric } from "../metrics/types";
-import { flattenSketchAllClass } from "../metrics/clientMetrics";
+import config, { ReportResult, ReportResultBase } from "../_config";
+import {
+  flattenSketchAllClassNext,
+  metricsWithSketchId,
+  sketchMetricPercent,
+} from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 
-const CLASSES = config.habitatRestore.classes;
+import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
+import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+const precalcTotals = habitatRestoreTotals as ReportResultBase;
+
+const REPORT = config.habitatRestore;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const HabitatRestoration = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -24,8 +32,16 @@ const HabitatRestoration = () => {
         functionName="habitatRestore"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: HabitatRestoreResults) => {
-          const results = Object.values(data.byClass);
+        {(data: ReportResult) => {
+          // Collection or single sketch
+          const parentMetrics = metricsWithSketchId(
+            sketchMetricPercent(
+              data.metrics.filter((m) => m.metricId === METRIC.metricId),
+              precalcTotals.metrics
+            ),
+            [data.sketch.properties.id]
+          );
+
           return (
             <>
               <p>
@@ -41,31 +57,34 @@ const HabitatRestoration = () => {
                   A suitability analysis was conducted for multiple habitat
                   types and identified areas with restoration potential.
                 </p>
-                <p>
-                  Objectives:
-                  <ul>
-                    <li>
-                      Establish active restoration of areas that were formerly
-                      seagrass habitats (100m2) through turtle exclusion.
-                    </li>
-                    <li>
-                      Inventory and assess past, present and potential salt
-                      marsh and mangrove habitat areas and develop a strategic
-                      plan for conservation and restoration.
-                    </li>
-                    <li>
-                      Initiate active restoration of threatened mangrove
-                      habitats.
-                    </li>
-                    <li>
-                      Initiate active restoration of damaged and/or degraded
-                      coral habitats in protected areas.
-                    </li>
-                  </ul>
-                </p>
+                <p>Objectives:</p>
+                <ul>
+                  <li>
+                    Establish active restoration of areas that were formerly
+                    seagrass habitats (100m2) through turtle exclusion.
+                  </li>
+                  <li>
+                    Inventory and assess past, present and potential salt marsh
+                    and mangrove habitat areas and develop a strategic plan for
+                    conservation and restoration.
+                  </li>
+                  <li>
+                    Initiate active restoration of threatened mangrove habitats.
+                  </li>
+                  <li>
+                    Initiate active restoration of damaged and/or degraded coral
+                    habitats in protected areas.
+                  </li>
+                </ul>
               </Collapse>
               <ReportError>
-                {isCollection ? genNetwork(data) : genSingle(data)}
+                <ClassTable
+                  titleText="RestorationType"
+                  percText="% Area Within Plan"
+                  rows={parentMetrics}
+                  classes={METRIC.classes}
+                />
+                {isCollection && genSketchTable(data)}
               </ReportError>
             </>
           );
@@ -75,40 +94,33 @@ const HabitatRestoration = () => {
   );
 };
 
-const genSingle = (data: HabitatRestoreResults) => {
-  return <>{genTable(Object.values(data.byClass))}</>;
-};
-
-const genNetwork = (data: HabitatRestoreResults) => {
-  return (
-    <>
-      {genTable(Object.values(data.byClass))}
-      <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
-    </>
+const genSketchTable = (data: ReportResult) => {
+  // Build agg metric objects for each child sketch in collection with percValue for each class
+  const childSketches = toNullSketchArray(data.sketch);
+  const childSketchIds = childSketches.map((sk) => sk.properties.id);
+  const childSketchMetrics = sketchMetricPercent(
+    metricsWithSketchId(
+      data.metrics.filter((m) => m.metricId === METRIC.metricId),
+      childSketchIds
+    ),
+    precalcTotals.metrics
   );
-};
-
-const genTable = (data: ClassMetric[]) => {
-  return (
-    <ClassTable
-      titleText="RestorationType"
-      percText="% Area Within Plan"
-      rows={data}
-      classes={CLASSES}
-    />
+  const sketchRows = flattenSketchAllClassNext(
+    childSketchMetrics,
+    METRIC.classes,
+    childSketches
   );
-};
-
-const genSketchTable = (data: HabitatRestoreResults) => {
-  // Build agg sketch group objects with percValue for each class
-  const sketchRows = flattenSketchAllClass(data.byClass, CLASSES);
-  return <SketchClassTable rows={sketchRows} classes={CLASSES} />;
+  return (
+    <Collapse title="Show by MPA">
+      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
+    </Collapse>
+  );
 };
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default HabitatRestoration;

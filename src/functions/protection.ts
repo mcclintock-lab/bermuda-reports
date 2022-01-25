@@ -2,145 +2,85 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
-  MultiPolygon,
-  Feature,
   GeoprocessingHandler,
   toSketchArray,
-  groupBy,
-  keyBy,
-  genSampleSketchCollection,
-  getJsonUserAttribute,
-  difference,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
-import { featureCollection } from "@turf/helpers";
-import flatten from "@turf/flatten";
 import { overlapArea } from "../metrics/overlapArea";
-import { STUDY_REGION_AREA_SQ_METERS, ProtectionResult } from "../_config";
-import { SketchStat, CategoryStat, LevelStat } from "../metrics/types";
+import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
+import { Metric } from "../metrics/types";
+import { iucnCategories, levels } from "../util/iucnProtectionLevel";
 import {
-  getCategoryForActivities,
-  iucnCategories,
-  levels,
-} from "../util/iucnProtectionLevel";
+  getCategoryNameForSketches,
+  getLevelNameForSketches,
+} from "../util/iucnHelpers";
+import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
+const CONFIG = config;
+const REPORT = CONFIG.protection;
+const METRIC = REPORT.metrics.areaOverlap;
+if (!CONFIG || !REPORT || !METRIC)
+  throw new Error("Problem accessing report config");
+
+/**
+ * Calculates area of overlap between each sketch/collection and eez.
+ * Also includes group metrics for both IUCN protection level and category
+ * @param sketch single sketch or sketch collection
+ * @returns metrics
+ */
 export async function protection(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<ProtectionResult> {
+): Promise<ReportResult> {
   const sketches = toSketchArray(sketch);
-  const sketchMap = keyBy(sketches, (item) => item.properties.id);
 
-  const planningAreaStats = await overlapArea(
-    "eez",
-    sketch,
-    STUDY_REGION_AREA_SQ_METERS
+  const classMetrics = (
+    await overlapArea(METRIC.metricId, sketch, STUDY_REGION_AREA_SQ_METERS, {
+      includePercMetric: false,
+    })
+  ).map(
+    (metrics): Metric => ({
+      ...metrics,
+      classId: "eez",
+    })
   );
 
-  const sketchStats: SketchStat[] = sketches.map((s, index) => {
-    // Get sketch allowed activities, then category
-    const activities: string[] = getJsonUserAttribute(s, "ACTIVITIES", []);
-    const category = getCategoryForActivities(activities);
-    const level = category.level;
+  // category - group metrics
+  const sketchCategoryMap = getCategoryNameForSketches(sketches);
+  const metricToCategory = (sketchMetric: Metric) =>
+    sketchCategoryMap[sketchMetric.sketchId!];
 
-    return {
-      sketchId: s.properties.id,
-      name: s.properties.name,
-      category: category.category,
-      level,
-      area: planningAreaStats.sketchMetrics[index].value,
-      percPlanningArea: planningAreaStats.sketchMetrics[index].percValue,
-    };
+  const categoryMetrics = await overlapAreaGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: Object.keys(iucnCategories),
+    sketch,
+    metricToGroup: metricToCategory,
+    metrics: classMetrics,
+    classId: "eez",
+    outerArea: STUDY_REGION_AREA_SQ_METERS,
+    onlyPresentGroups: true,
   });
 
-  // Rollup to category stats
-  const catGroups = groupBy(sketchStats, (item) => item.category);
-  const categoryStats: CategoryStat[] = await Promise.all(
-    Object.keys(catGroups).map(async (categoryName) => {
-      const catSketchStats = catGroups[categoryName];
-      const catSketches = catSketchStats.map(
-        (stat) => sketchMap[stat.sketchId]
-      );
-      // Calc area stats for each category, accounting for overlap, to get true area and %
-      const sc = genSampleSketchCollection(featureCollection(catSketches));
-      const catAreaStats = await overlapArea(
-        "eez",
-        sc as SketchCollection<Polygon>,
-        STUDY_REGION_AREA_SQ_METERS
-      );
+  // protection level - group metrics
+  const sketchLevelMap = getLevelNameForSketches(sketches);
+  const metricToLevel = (sketchMetric: Metric) =>
+    sketchLevelMap[sketchMetric.sketchId!];
 
-      return {
-        category: categoryName,
-        level: iucnCategories[categoryName].level,
-        numSketches: catGroups[categoryName].length,
-        area: catAreaStats.value,
-        percPlanningArea: catAreaStats.percValue,
-      };
-    })
-  );
-
-  // rollup to level stats
-  const levelGroups = groupBy(sketchStats, (item) => item.level);
-  const levelStats: LevelStat[] = await Promise.all(
-    levels.map(async (levelName, levelIndex) => {
-      const levelSketchStats = levelGroups[levelName];
-
-      if (!levelSketchStats) {
-        return {
-          level: levelName,
-          numSketches: 0,
-          area: 0,
-          percPlanningArea: 0,
-        };
-      }
-
-      const levelSketches = levelSketchStats.map(
-        (stat) => sketchMap[stat.sketchId]
-      );
-
-      // Remove overlap with higher level sketch stats (which trump current level)
-      const otherLevelSketchStats = Object.keys(levelGroups).reduce<
-        SketchStat[]
-      >((otherSketchStats, otherName) => {
-        // Append other stats if higher level (lower index)
-        const otherIndex = levels.findIndex((level) => otherName === level);
-        return otherSketchStats.concat(
-          otherIndex < levelIndex ? levelGroups[otherName] : otherSketchStats
-        );
-      }, []);
-      const otherLevelSketches = otherLevelSketchStats.map(
-        (stat) => sketchMap[stat.sketchId]
-      );
-      const nonOverlap = levelSketches
-        .map((levelSketch) => difference(levelSketch, otherLevelSketches))
-        .reduce<Feature<Polygon | MultiPolygon>[]>(
-          (rem, diff) => (diff ? rem.concat(diff) : rem),
-          []
-        );
-      const remFeatures =
-        otherLevelSketches.length > 0 ? nonOverlap : levelSketches;
-
-      // Calc area stats for each level, accounting for overlap, to get true area and %
-      const sl = genSampleSketchCollection(
-        flatten(featureCollection(remFeatures))
-      );
-      const levelAreaStats = await overlapArea(
-        "eez",
-        sl,
-        STUDY_REGION_AREA_SQ_METERS
-      );
-
-      return {
-        level: levelName,
-        numSketches: levelGroups[levelName].length,
-        area: levelAreaStats.value,
-        percPlanningArea: levelAreaStats.percValue,
-      };
-    })
-  );
+  const levelMetrics = await overlapAreaGroupMetrics({
+    metricId: METRIC.metricId,
+    groupIds: levels,
+    sketch,
+    metricToGroup: metricToLevel,
+    metrics: classMetrics,
+    classId: "eez",
+    outerArea: STUDY_REGION_AREA_SQ_METERS,
+  });
 
   return {
-    sketchStats,
-    categoryStats,
-    levelStats,
+    metrics: metricSort(
+      metricRekey([...classMetrics, ...categoryMetrics, ...levelMetrics])
+    ),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

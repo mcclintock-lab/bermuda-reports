@@ -1,26 +1,33 @@
 import React from "react";
 import {
-  ResultsCard,
   squareMeterToMile,
+  percentWithEdge,
+  keyBy,
+  toNullSketchArray,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  ResultsCard,
   LayerToggle,
   Column,
   Table,
   useSketchProperties,
-  percentWithEdge,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
-import { AreaResults } from "../_config";
 import { ReportTableStyled } from "../components/ReportTableStyled";
-import { ClassMetricSketch } from "../metrics/types";
+import config, { ReportResult } from "../_config";
+import { nestMetrics } from "../metrics/clientMetrics";
+
+const METRIC_NAME = "areaOverlap";
+const PERC_METRIC_NAME = "areaOverlapPerc";
+
+const CONFIG = config;
+const REPORT = CONFIG.size;
+const METRIC = REPORT.metrics[METRIC_NAME];
+if (!CONFIG || !REPORT || !METRIC)
+  throw new Error("Problem accessing report config");
 
 const Number = new Intl.NumberFormat("en", { style: "decimal" });
-
-const regionLabels: Record<string, string> = {
-  eez: "EEZ",
-  nearshore: "Nearshore",
-  offshore: "Offshore",
-};
 
 const SingleTableStyled = styled.span`
   table {
@@ -69,11 +76,9 @@ const SizeCard = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <ResultsCard title="Size" functionName="area">
-      {(data: AreaResults) => {
+      {(data: ReportResult) => {
         if (Object.keys(data).length === 0)
           throw new Error("Protection results not found");
-
-        const areaUnitDisplay = "square kilometers";
 
         return (
           <>
@@ -125,21 +130,31 @@ const SizeCard = () => {
   );
 };
 
-const genSingleSizeTable = (data: AreaResults) => {
-  const rows = Object.values(data.byClass);
-  const areaColumns: Column<ClassMetricSketch>[] = [
+const genSingleSizeTable = (data: ReportResult) => {
+  const classesById = keyBy(METRIC.classes, (c) => c.classId);
+  const singleMetrics = data.metrics.filter(
+    (m) => m.sketchId === data.sketch.properties.id
+  );
+  const aggMetrics = nestMetrics(singleMetrics, ["classId", "metricId"]);
+  // Use sketch ID for each table row, index into aggMetrics
+  const rows = Object.keys(aggMetrics).map((classId) => ({ classId }));
+
+  const areaColumns: Column<{ classId: string }>[] = [
     {
       Header: " ",
-      accessor: (row) => <b>{regionLabels[row.name]}</b>,
+      accessor: (row) => <b>{classesById[row.classId || "missing"].display}</b>,
     },
     {
       Header: "Area Within Plan",
-      accessor: (row) =>
-        Number.format(Math.round(squareMeterToMile(row.value))) + " sq. mi.",
+      accessor: (row) => {
+        const value = aggMetrics[row.classId][METRIC_NAME][0].value;
+        return Number.format(Math.round(squareMeterToMile(value))) + " sq. mi.";
+      },
     },
     {
       Header: "% Within Plan",
-      accessor: (row) => percentWithEdge(row.percValue),
+      accessor: (row) =>
+        percentWithEdge(aggMetrics[row.classId][PERC_METRIC_NAME][0].value),
     },
   ];
 
@@ -150,89 +165,59 @@ const genSingleSizeTable = (data: AreaResults) => {
   );
 };
 
-const genNetworkSizeTable = (data: AreaResults) => {
-  type MergedAreaResult = {
-    sketchId: string;
-    name: string;
-    overallArea: number;
-    overallPercArea: number;
-    nearshoreArea: number;
-    nearshorePercArea: number;
-    offshoreArea: number;
-    offshorePercArea: number;
-  };
+const genNetworkSizeTable = (data: ReportResult) => {
+  const sketches = toNullSketchArray(data.sketch);
+  const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
+  const sketchIds = sketches.map((sk) => sk.properties.id);
+  const sketchMetrics = data.metrics.filter(
+    (m) => m.sketchId && sketchIds.includes(m.sketchId)
+  );
+  const aggMetrics = nestMetrics(sketchMetrics, [
+    "sketchId",
+    "classId",
+    "metricId",
+  ]);
+  // Use sketch ID for each table row, index into aggMetrics
+  const rows = Object.keys(aggMetrics).map((sketchId) => ({
+    sketchId,
+  }));
 
-  const rows: MergedAreaResult[] = data.byClass.eez.sketchMetrics.map(
-    (eezArea, index) => {
-      const nearshoreArea = data.byClass.nearshore.sketchMetrics[index];
-      const offshoreArea = data.byClass.offshore.sketchMetrics[index];
-      return {
-        sketchId: eezArea.id,
-        name: eezArea.name,
-        overallArea: eezArea.value,
-        overallPercArea: eezArea.percValue,
-        nearshoreArea: nearshoreArea.value,
-        nearshorePercArea: nearshoreArea.percValue,
-        offshoreArea: offshoreArea.value,
-        offshorePercArea: offshoreArea.percValue,
-      };
-    }
+  const classColumns: Column<{ sketchId: string }>[] = METRIC.classes.map(
+    (curClass, index) => ({
+      Header: curClass.display,
+      style: { color: "#777" },
+      columns: [
+        {
+          Header: "Area" + " ".repeat(index),
+          accessor: (row) => {
+            const value =
+              aggMetrics[row.sketchId][curClass.classId as string]
+                .areaOverlap[0].value;
+            return (
+              Number.format(Math.round(squareMeterToMile(value))) + " sq. mi."
+            );
+          },
+        },
+        {
+          Header: "% Area" + " ".repeat(index),
+          accessor: (row) => {
+            const value =
+              aggMetrics[row.sketchId][curClass.classId as string][
+                PERC_METRIC_NAME
+              ][0].value;
+            return percentWithEdge(value);
+          },
+        },
+      ],
+    })
   );
 
-  const columns: Column<MergedAreaResult>[] = [
+  const columns: Column<any>[] = [
     {
       Header: " ",
-      accessor: (row) => <b>{row.name}</b>,
+      accessor: (row) => <b>{sketchesById[row.sketchId].properties.name}</b>,
     },
-    {
-      Header: "Nearshore",
-      style: { color: "#777" },
-      columns: [
-        {
-          Header: "Area",
-          accessor: (row) =>
-            Number.format(Math.round(squareMeterToMile(row.nearshoreArea))) +
-            " sq. mi.",
-        },
-        {
-          Header: "% Area",
-          accessor: (row) =>
-            percentWithEdge(row.nearshorePercArea, { lowerOverride: "0.1%" }),
-        },
-      ],
-    },
-    {
-      Header: "Offshore",
-      style: { color: "#777" },
-      columns: [
-        {
-          Header: "Area ",
-          accessor: (row) =>
-            Number.format(Math.round(squareMeterToMile(row.offshoreArea))) +
-            " sq. mi.",
-        },
-        {
-          Header: "% Area ",
-          accessor: (row) => percentWithEdge(row.offshorePercArea),
-        },
-      ],
-    },
-    {
-      Header: "EEZ",
-      style: { color: "#777" },
-      columns: [
-        {
-          Header: "Area  ",
-          accessor: (row) =>
-            Number.format(Math.round(squareMeterToMile(row.overallArea))) +
-            " sq. mi.",
-        },
-        {
-          Header: "% Area  ",
-          accessor: (row) => percentWithEdge(row.overallPercArea),
-        },
-      ],
-    },
+    ...classColumns,
   ];
 
   return (

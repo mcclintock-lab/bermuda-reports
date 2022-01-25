@@ -1,199 +1,196 @@
 {
-  "byClass": {
-    "Ferry Route": {
-      "name": "Ferry Route",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "Shipping Lane": {
-      "name": "Shipping Lane",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "CableZone": {
-      "name": "CableZone",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
       "value": 102121416.51624829,
-      "percValue": 0.14102639043810816,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 102121416.51624829,
-          "percValue": 0.14102639043810816
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "SpearfishEx": {
-      "name": "SpearfishEx",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
       "value": 9780406.620245397,
-      "percValue": 0.051233575492419546,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 9780406.620245397,
-          "percValue": 0.051233575492419546
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     },
-    "SeasonalPA": {
-      "name": "SeasonalPA",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "MPAExtendedClosure": {
-      "name": "MPAExtendedClosure",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Wreck": {
-      "name": "Wreck",
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
       "value": 1744122.710416675,
-      "percValue": 0.20897284139952946,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 1744122.710416675,
-          "percValue": 0.20897284139952946
-        }
-      ]
-    },
-    "Reef": {
-      "name": "Reef",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Prohibited": {
-      "name": "Prohibited",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "NoNetFish": {
-      "name": "NoNetFish",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "NoLobsterFish": {
-      "name": "NoLobsterFish",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Amenity Park": {
-      "name": "Amenity Park",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Recreational Park": {
-      "name": "Recreational Park",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "Nature Reserve": {
-      "name": "Nature Reserve",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    },
-    "CoralPreserve": {
-      "name": "CoralPreserve",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "61803a1a04baa808681f0a8f",
-          "name": "pelagic-break-partial-no-take",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
     }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61803a1a04baa808681f0a8f",
+      "name": "pelagic-break-partial-no-take",
+      "updatedAt": "2021-11-01T19:03:54.251Z",
+      "createdAt": "2021-11-01T19:03:54.251Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.8556987866837,
+      31.965310042793664,
+      -64.60163994879296,
+      32.263079451320635
+    ],
+    "geometry": null
   }
 }

@@ -1,73 +1,48 @@
 import React from "react";
 import {
+  percentWithEdge,
+  keyBy,
+  capitalize,
+  percentGoalWithEdge,
+  UserAttribute,
+  toNullSketchArray,
+  NullSketch,
+  isSketchCollection,
+} from "@seasketch/geoprocessing/client-core";
+import {
   ResultsCard,
   Skeleton,
   ReportError,
   useSketchProperties,
-  percentWithEdge,
-  UserAttribute,
   Table,
   Column,
-  keyBy,
-  capitalize,
-  percentGoalWithEdge,
-} from "@seasketch/geoprocessing/client";
+} from "@seasketch/geoprocessing/client-ui";
 // Import the results type definition from your functions to type-check your
 // component render functions
-import config, {
-  HabitatNurseryResults,
-  HabitatNurseryLevelResults,
-} from "../_config";
-import {
-  ClassMetrics,
-  GroupMetricAgg,
-  GroupMetricSketchAgg,
-} from "../metrics/types";
-import {
-  IucnCategory,
-  getCategoryForActivities,
-} from "../util/iucnProtectionLevel";
+import config, { ReportResult, ReportResultBase } from "../_config";
+import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
+import { getCategoryForActivities } from "../util/iucnProtectionLevel";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
 import { Pill, LevelPill } from "../components/Pill";
-import { ClassMetric } from "../metrics/types";
-import { LayerToggle } from "@seasketch/geoprocessing/client";
+import { LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { LevelCircleRow } from "../components/Circle";
-import { flattenGroup, flattenGroupSketch } from "../metrics/clientMetrics";
-import { ReportTableStyled } from "../components/ReportTableStyled";
+import {
+  sketchMetricPercent,
+  flattenByGroupSketch,
+  flattenByGroup,
+} from "../metrics/clientMetrics";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
+import { ClassTable } from "../components/ClassTable";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
-const precalcTotals = habitatNurseryTotals as HabitatNurseryResults;
+const precalcTotals = habitatNurseryTotals as ReportResultBase;
 
-const CONFIG = config.habitatNursery;
-
-const sumValue = (metrics: ClassMetrics) =>
-  Object.values(metrics).reduce(
-    (sumSoFar, metric) => sumSoFar + metric.value,
-    0
-  );
-const getPercValue = (metrics: ClassMetrics, total: number) =>
-  sumValue(metrics) / total;
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
 
 const KeyNurseryHabitat = () => {
   const [{ isCollection, userAttributes }] = useSketchProperties();
-
-  let category: IucnCategory;
-  if (!isCollection) {
-    const activityProp = userAttributes.find(
-      (a) => a.exportId === "ACTIVITIES"
-    ) as UserAttribute | undefined;
-    if (!activityProp)
-      throw new Error("Missing activities in sketch, something is not right");
-    const activities =
-      typeof activityProp.value === "string"
-        ? activityProp.value === ""
-          ? []
-          : JSON.parse(activityProp.value)
-        : activityProp.value;
-    category = getCategoryForActivities(activities);
-  }
 
   return (
     <>
@@ -76,10 +51,12 @@ const KeyNurseryHabitat = () => {
         functionName="habitatNursery"
         skeleton={<LoadingSkeleton />}
       >
-        {(data: HabitatNurseryLevelResults) => {
+        {(data: ReportResult) => {
           return (
             <ReportError>
-              {isCollection ? genNetwork(data) : genSingle(data, category)}
+              {isCollection
+                ? genNetwork(data)
+                : genSingle(data, userAttributes)}
             </ReportError>
           );
         }}
@@ -88,47 +65,90 @@ const KeyNurseryHabitat = () => {
   );
 };
 
-const genSingle = (
-  data: HabitatNurseryLevelResults,
-  category: IucnCategory
-) => {
+const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
+  // Lookup group ID
+  const activityProp = userAttributes.find(
+    (a) => a.exportId === "ACTIVITIES"
+  ) as UserAttribute | undefined;
+  if (!activityProp)
+    throw new Error("Missing activities in sketch, something is not right");
+  const activities =
+    typeof activityProp.value === "string"
+      ? activityProp.value === ""
+        ? []
+        : JSON.parse(activityProp.value)
+      : activityProp.value;
+  const groupId = getCategoryForActivities(activities).level;
+
+  // Class metrics
+  const classPercMetrics = sketchMetricPercent(
+    data.metrics.filter(
+      (m) => m.classId && !m.groupId && m.sketchId === data.sketch.properties.id
+    ),
+    precalcTotals.metrics
+  );
+
+  // Class aggregate by group - only one group can have value > 0 per sketch
+  const groupMetrics = data.metrics.filter(
+    (m) => !!m.groupId && m.sketchId === data.sketch.properties.id
+  );
+  const groupAggs = flattenByGroupSketch(
+    toNullSketchArray(data.sketch),
+    groupMetrics,
+    precalcTotals.metrics
+  );
+  const groupAgg = groupAggs.find((agg) => agg.value > 0);
+  const groupValue = groupAgg ? groupAgg.percValue : 0;
+
   return (
     <>
       {genSingleObjective(
-        category,
-        config.objectives.habitatNursery,
-        flattenGroupSketch(
-          data.byLevel,
-          precalcTotals.overall.value,
-          CONFIG.classes
-        )[0].percValue
+        groupId,
+        groupValue,
+        config.objectives.habitatNursery
       )}
-      {genHabitatTable(Object.values(data.byClass))}
+      <ClassTable
+        titleText="Type"
+        rows={Object.values(classPercMetrics)}
+        classes={METRIC.classes}
+      />
       {genHelp()}
     </>
   );
 };
 
-const genNetwork = (data: HabitatNurseryLevelResults) => {
-  // Build agg group objects with percValue for each class
-  const levelRows: GroupMetricAgg[] = flattenGroup(
-    data.byLevel,
-    precalcTotals.overall.value
-  );
+const genNetwork = (data: ReportResult) => {
+  const sketches = toNullSketchArray(data.sketch);
+  const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 
-  // Build agg sketch group objects with percValue for each class
-  // groupId, sketchId, lagoon, mangrove, seagrass, total
-  const sketchRows = flattenGroupSketch(
-    data.byLevel,
-    precalcTotals.overall.value,
-    CONFIG.classes
-  );
+  let groupAggs: GroupMetricAgg[] = [];
+  let sketchAggs: GroupMetricSketchAgg[] = [];
+  if (isSketchCollection(data.sketch)) {
+    const groupMetrics = data.metrics.filter((m) => m.groupId);
+
+    // Build agg group objects with percValue for each class
+    groupAggs = flattenByGroup(
+      data.sketch,
+      groupMetrics,
+      precalcTotals.metrics
+    );
+
+    // Build agg sketch group objects with percValue for each class
+    // groupId, sketchId, class1, class2, ..., total
+    sketchAggs = flattenByGroupSketch(
+      sketches,
+      groupMetrics,
+      precalcTotals.metrics
+    );
+  }
 
   return (
     <>
-      {genNetworkObjective(data, config.objectives.habitatNursery)}
-      {genGroupTable(levelRows)}
-      <Collapse title="Show by MPA">{genSketchTable(sketchRows)}</Collapse>
+      {genNetworkObjective(groupAggs, config.objectives.habitatNursery)}
+      {genGroupTable(groupAggs)}
+      <Collapse title="Show by MPA">
+        {genSketchTable(sketchesById, sketchAggs)}
+      </Collapse>
       {genHelp()}
       {genHabitatToggles()}
     </>
@@ -138,8 +158,9 @@ const genNetwork = (data: HabitatNurseryLevelResults) => {
 const genHabitatToggles = () => {
   return (
     <>
-      {CONFIG.classes.map((curClass) => (
+      {METRIC.classes.map((curClass) => (
         <LayerToggle
+          key={curClass.layerId}
           label={`Show ${curClass.display} Layer`}
           layerId={curClass.layerId}
         />
@@ -148,11 +169,14 @@ const genHabitatToggles = () => {
   );
 };
 
-const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
-  const classColumns: Column<GroupMetricSketchAgg>[] = CONFIG.classes.map(
+const genSketchTable = (
+  sketchesById: Record<string, NullSketch>,
+  sketchRows: GroupMetricSketchAgg[]
+) => {
+  const classColumns: Column<GroupMetricSketchAgg>[] = METRIC.classes.map(
     (curClass) => ({
       Header: curClass.display,
-      accessor: (row) => percentWithEdge(row[curClass.name] as number),
+      accessor: (row) => percentWithEdge(row[curClass.classId] as number),
     })
   );
 
@@ -160,7 +184,10 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
     {
       Header: "MPA",
       accessor: (row) => (
-        <LevelCircleRow level={row.groupId} rowText={row.sketchName} />
+        <LevelCircleRow
+          level={row.groupId}
+          rowText={sketchesById[row.sketchId].properties.name}
+        />
       ),
     },
     ...classColumns,
@@ -188,10 +215,10 @@ const genSketchTable = (sketchRows: GroupMetricSketchAgg[]) => {
 };
 
 const genGroupTable = (groupRows: GroupMetricAgg[]) => {
-  const classColumns: Column<GroupMetricAgg>[] = CONFIG.classes.map(
+  const classColumns: Column<GroupMetricAgg>[] = METRIC.classes.map(
     (curClass) => ({
       Header: curClass.display,
-      accessor: (row) => percentWithEdge(row[curClass.name] as number),
+      accessor: (row) => percentWithEdge(row[curClass.classId] as number),
       style: { width: "10%" },
     })
   );
@@ -236,50 +263,16 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
   );
 };
 
-const genHabitatTable = (data: ClassMetric[]) => {
-  const classesByName = keyBy(CONFIG.classes, (curClass) => curClass.name);
-
-  const columns: Column<ClassMetric>[] = [
-    {
-      Header: "Habitat Type",
-      accessor: (row) => classesByName[row.name].display,
-      style: { width: "30%" },
-    },
-    {
-      Header: "% Within Plan",
-      style: { textAlign: "right", width: "30%" },
-      accessor: (row, index) => percentWithEdge(row.percValue),
-    },
-    {
-      Header: "Show Map",
-      accessor: (row) => (
-        <LayerToggle
-          simple
-          layerId={classesByName[row.name].layerId}
-          style={{ marginTop: 0, marginLeft: 15 }}
-        />
-      ),
-      style: { width: "20%" },
-    },
-  ];
-
-  return (
-    <ReportTableStyled>
-      <Table className="styled" columns={columns} data={data} />
-    </ReportTableStyled>
-  );
-};
-
 /**
  * Single objective status component
  */
 const genSingleObjective = (
-  category: IucnCategory,
-  objective: number,
-  actual: number
+  groupId: string,
+  actual: number,
+  objective: number
 ) => {
   let objectiveCmp;
-  switch (category.level) {
+  switch (groupId) {
     case "full":
       objectiveCmp = (
         <ObjectiveStatus
@@ -350,11 +343,12 @@ const genSingleObjective = (
 };
 
 const genNetworkObjective = (
-  data: HabitatNurseryLevelResults,
+  aggMetrics: GroupMetricAgg[],
   objective: number
 ) => {
-  const fullPerc = getPercValue(data.byLevel.full, precalcTotals.overall.value);
-  const highPerc = getPercValue(data.byLevel.high, precalcTotals.overall.value);
+  const aggMetricsByGroup = keyBy(aggMetrics, (am) => am.groupId);
+  const fullPerc = aggMetricsByGroup["full"].percValue;
+  const highPerc = aggMetricsByGroup["high"].percValue;
   const needed = objective - fullPerc - highPerc;
 
   const fullPercDisplay = percentGoalWithEdge(fullPerc, objective);
@@ -458,9 +452,9 @@ const genHelp = () => (
 );
 
 const LoadingSkeleton = () => (
-  <p>
+  <div>
     <Skeleton style={{}}>&nbsp;</Skeleton>
-  </p>
+  </div>
 );
 
 export default KeyNurseryHabitat;

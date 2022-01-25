@@ -1,15 +1,16 @@
 // Run inside workspace
-// Precalculates overall stats
 
 import fs from "fs";
 import config from "../src/_config";
-import { strict as assert } from "assert";
 import area from "@turf/area";
 import { featureCollection } from "@turf/helpers";
+import { Metric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
+import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-export const nameProperty = "Name";
-export const classProperty = "Type";
-const CLASSES = config.existingProtection.classes;
+const REPORT = config.existingProtection;
+const METRIC = REPORT.metrics.areaOverlap;
+const CLASSES = METRIC.classes;
 const DATASET = `existingProtections`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
 
@@ -18,33 +19,27 @@ const allFc = JSON.parse(
 );
 
 async function main() {
-  const totals = await Promise.all(
+  const metrics: Metric[] = await Promise.all(
     CLASSES.map(async (curClass) => {
       // Filter out single class, exclude null geometry too
       const classFeatures = allFc.features.filter((feat: any) => {
         return (
-          feat.geometry && feat.properties[classProperty] === curClass.name
+          feat.geometry &&
+          feat.properties[METRIC.classProperty!] === curClass.classId
         );
       }, []);
       const classFC = featureCollection(classFeatures);
-      return area(classFC);
+      const value = area(classFC);
+      return createMetric({
+        classId: curClass.classId,
+        metricId: METRIC.metricId,
+        value,
+      });
     })
   );
 
-  const totalArea = totals.reduce((sumSoFar, total) => sumSoFar + total, 0);
-
-  const result = {
-    byClass: CLASSES.reduce(
-      (soFar, curClass, index) => ({
-        ...soFar,
-        [curClass.name]: {
-          name: curClass.name,
-          value: totals[index],
-          percValue: totals[index] / totalArea,
-        },
-      }),
-      {}
-    ),
+  const result: ReportResultBase = {
+    metrics: metricRekey(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
@@ -52,7 +47,6 @@ async function main() {
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(result.byClass).length === CLASSES.length);
 }
 
 main();

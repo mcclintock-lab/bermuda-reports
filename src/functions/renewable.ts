@@ -4,43 +4,55 @@ import {
   GeoprocessingHandler,
   Polygon,
   loadCogWindow,
-  keyBy,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { RenewableResults } from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
-import renewableTotals from "../../data/precalc/renewableTotals.json";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
-const precalcTotals = renewableTotals as Record<string, number>;
-const CLASSES = config.renewable.classes;
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<RenewableResults> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
 
-  const metrics = await Promise.all(
-    CLASSES.map(async (curClass) => {
-      // start raster load and move on in loop while awaiting finish
-      const raster = await loadCogWindow(
-        `${config.dataBucketUrl}${curClass.filename}`,
-        {
-          windowBox: box,
-          noDataValue: curClass.noDataValue,
-        }
-      );
-      // start analysis as soon as source load done
-      return overlapRaster(
-        raster,
-        curClass.name,
-        precalcTotals[curClass.name],
-        sketch
-      );
-    })
+  // Calc metrics for each class and merge the result
+  const metrics: Metric[] = (
+    await Promise.all(
+      METRIC.classes.map(async (curClass) => {
+        const raster = await loadCogWindow(
+          `${config.dataBucketUrl}${curClass.filename}`,
+          {
+            windowBox: box,
+            noDataValue: curClass.noDataValue,
+          }
+        );
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
+        return overlapResult.map(
+          (metrics): Metric => ({
+            ...metrics,
+            classId: curClass.classId,
+          })
+        );
+      })
+    )
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
   return {
-    renewable: keyBy(metrics, (metric) => metric.name),
+    metrics: metricSort(metricRekey(metrics)),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { IucnMatrix } from "./IucnMatrix";
-import { Card, ReportDecorator } from "@seasketch/geoprocessing/client";
+import { Card, ReportDecorator } from "@seasketch/geoprocessing/client-ui";
 
 export default {
   component: IucnMatrix,

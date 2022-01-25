@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SegmentControl } from "@seasketch/geoprocessing/client";
+import { SegmentControl } from "@seasketch/geoprocessing/client-ui";
 import Overview from "./Overview";
 import HumanUse from "./HumanUse";
 import Energy from "./Energy";

@@ -1,19 +1,15 @@
 import React from "react";
-import {
-  Column,
-  Table,
-  percentWithEdge,
-  keyBy,
-  LayerToggle,
-} from "@seasketch/geoprocessing/client";
+import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
+import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { GreenPill } from "../components/Pill";
-import { DataClass, ClassMetric, ClassMetricSketch } from "../metrics/types";
+import { DataClass, Metric } from "../metrics/types";
 import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface ClassTableProps {
   titleText: string;
   percText?: string;
-  rows: ClassMetric[] | ClassMetricSketch[];
+  // Metrics with percent value
+  rows: Metric[] | Metric[];
   classes: DataClass[];
   showGoal?: boolean;
   options?: {
@@ -55,21 +51,23 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(classes, (curClass) => curClass.name);
-  const columns: Column<ClassMetric>[] = [
+  const classesByName = keyBy(classes, (curClass) => curClass.classId);
+  const columns: Column<Metric>[] = [
     {
       Header: titleText,
-      accessor: (row) => classesByName[row.name].display,
+      accessor: (row) =>
+        classesByName[row.classId || "missing"]?.display || "missing",
       style: { width: colWidths.classColWidth },
     },
     {
       Header: percText,
       style: { textAlign: "right", width: colWidths.percColWidth },
       accessor: (row) => {
-        const percDisplay = percentWithEdge(row.percValue);
+        const percDisplay = percentWithEdge(row.value);
         const goal =
-          classes.find((curClass) => curClass.name === row.name)?.goalPerc || 0;
-        if (showGoal && row.percValue > goal) {
+          classes.find((curClass) => curClass.classId === row.classId)
+            ?.goalPerc || 0;
+        if (showGoal && row.value > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
           return percDisplay;
@@ -79,7 +77,7 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
     {
       Header: "Show Map",
       accessor: (row) => {
-        const layerId = classesByName[row.name].layerId;
+        const layerId = classesByName[row.classId || "missing"].layerId;
         return layerId ? (
           <LayerToggle
             simple
@@ -100,8 +98,9 @@ export const ClassTable: React.FunctionComponent<ClassTableProps> = ({
       Header: "Goal",
       style: { textAlign: "right", width: colWidths.goalWidth },
       accessor: (row) => {
-        const goalPerc = classes.find((curClass) => curClass.name === row.name)
-          ?.goalPerc;
+        const goalPerc = classes.find(
+          (curClass) => curClass.classId === row.classId
+        )?.goalPerc;
         return percentWithEdge(goalPerc || 0);
       },
     });

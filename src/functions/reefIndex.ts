@@ -3,27 +3,25 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  Georaster,
   loadCogWindow,
-  keyBy,
+  toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { ReefIndexResults } from "../_config";
+import config, { ReportResult } from "../_config";
 import { overlapRaster } from "../metrics/overlapRaster";
+import { Metric } from "../metrics/types";
+import { metricRekey, metricSort } from "../metrics/metrics";
 
-import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
-
-// Define at module level for potential cache and reuse by Lambda
-let rasters: Georaster[];
-const CLASSES = config.reefIndex.classes;
+const REPORT = config.speciesProtection;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function reefIndex(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
-): Promise<ReefIndexResults> {
+): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
 
-  rasters = await Promise.all(
-    CLASSES.map((curClass) =>
+  const rasters = await Promise.all(
+    METRIC.classes.map((curClass) =>
       loadCogWindow(`${config.dataBucketUrl}${curClass.filename}`, {
         windowBox: box,
         noDataValue: curClass.noDataValue,
@@ -31,20 +29,32 @@ export async function reefIndex(
     )
   );
 
-  const metrics = await Promise.all(
-    rasters.map(async (raster, index) => {
-      const curClass = CLASSES[index];
-      return overlapRaster(
-        raster,
-        curClass.name,
-        (reefIndexTotals as Record<string, number>)[curClass.name],
-        sketch
-      );
-    })
+  const metrics = (
+    await Promise.all(
+      rasters.map(async (raster, index) => {
+        const curClass = METRIC.classes[index];
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
+        return overlapResult.map(
+          (metrics): Metric => ({
+            ...metrics,
+            classId: curClass.classId,
+          })
+        );
+      })
+    )
+  ).reduce(
+    // merge
+    (metricsSoFar, curClassMetrics) => [...metricsSoFar, ...curClassMetrics],
+    []
   );
 
   return {
-    reefIndex: keyBy(metrics, (metric) => metric.name),
+    metrics: metricSort(metricRekey(metrics)),
+    sketch: toNullSketch(sketch, true),
   };
 }
 

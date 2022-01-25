@@ -1,14 +1,11 @@
 import React from "react";
-import {
-  Column,
-  Table,
-  percentWithEdge,
-} from "@seasketch/geoprocessing/client";
+import { percentWithEdge } from "@seasketch/geoprocessing/client-core";
+import { Column, Table } from "@seasketch/geoprocessing/client-ui";
 import styled from "styled-components";
 import { DataClass } from "../metrics/types";
 import { SmallReportTableStyled } from "./SmallReportTableStyled";
 
-const SmallTableStyled = styled.div`
+const SketchClassTableStyled = styled(SmallReportTableStyled)`
   & {
     width: 100%;
     overflow-x: scroll;
@@ -25,35 +22,29 @@ const SmallTableStyled = styled.div`
   & td {
   }
 
-  .squeeze {
+  .styled {
     font-size: 12px;
-
-    td,
-    th {
-      padding: 5px 5px;
-    }
-
-    td:last-child,
-    th:last-child {
-      text-align: right;
-    }
-  }
 `;
 
 export interface SketchClassTableProps {
   rows: Record<string, string | number>[];
   classes: DataClass[];
+  /** Whether to interpret and format values as percentages, defaults to true */
+  usePerc?: boolean;
 }
 
 const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   rows,
   classes,
+  usePerc = true,
 }) => {
   const classColumns: Column<Record<string, string | number>>[] = classes.map(
     (curClass) => ({
       Header: curClass.display,
       accessor: (row) => {
-        return percentWithEdge(row[curClass.name] as number);
+        return usePerc
+          ? percentWithEdge(row[curClass.classId] as number)
+          : row[curClass.classId];
       },
     })
   );
@@ -69,7 +60,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
   ];
 
   return (
-    <SmallReportTableStyled>
+    <SketchClassTableStyled>
       <Table
         className="styled"
         columns={columns}
@@ -77,7 +68,7 @@ const SketchClassTable: React.FunctionComponent<SketchClassTableProps> = ({
           (a.sketchName as string).localeCompare(b.sketchName as string)
         )}
       />
-    </SmallReportTableStyled>
+    </SketchClassTableStyled>
   );
 };
 

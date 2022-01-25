@@ -1,30 +1,64 @@
 {
-  "byClass": {
-    "Seagrass": {
-      "name": "Seagrass",
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
       "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "615bbbe9aac8c8285d50db2d",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-no-land-eez-overlap"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbbe9aac8c8285d50db2d",
+      "name": "mpa-no-land-eez-overlap",
+      "updatedAt": "2021-10-05T02:43:53.326Z",
+      "createdAt": "2021-10-05T02:43:53.326Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
         {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\"]"
         }
       ]
     },
-    "Mangrove_Saltmarsh": {
-      "name": "Mangrove_Saltmarsh",
-      "value": 0,
-      "percValue": 0,
-      "sketchMetrics": [
-        {
-          "id": "615bbbe9aac8c8285d50db2d",
-          "name": "mpa-no-land-eez-overlap",
-          "value": 0,
-          "percValue": 0
-        }
-      ]
-    }
+    "id": "1",
+    "bbox": [
+      -64.96238633246062,
+      32.22570381962202,
+      -64.8854820355856,
+      32.28261130024477
+    ],
+    "geometry": null
   }
 }

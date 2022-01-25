@@ -1,19 +1,15 @@
 import React from "react";
-import {
-  Column,
-  Table,
-  percentWithEdge,
-  keyBy,
-  LayerToggle,
-} from "@seasketch/geoprocessing/client";
+import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
+import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { GreenPill } from "./Pill";
-import { DataClass, ClassMetric, ClassMetricSketch } from "../metrics/types";
+import { DataClass, Metric } from "../metrics/types";
 import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface CategoricalClassTableProps {
   titleText: string;
   layerId?: string;
-  rows: ClassMetric[] | ClassMetricSketch[];
+  /** Metrics with percent value */
+  rows: Metric[];
   classes: DataClass[];
   showGoal: boolean;
   options?: {
@@ -55,24 +51,23 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
       ? "20%"
       : "50%",
   };
-  const classesByName = keyBy(
-    classes,
-    (curClass) => curClass.name || "unknown"
-  );
-  const columns: Column<ClassMetric>[] = [
+  const classesByName = keyBy(classes, (curClass) => curClass.classId);
+  const columns: Column<Metric>[] = [
     {
       Header: titleText,
-      accessor: (row) => classesByName[row.name].name,
+      accessor: (row) =>
+        classesByName[row.classId || "missing"]?.display || "missing",
       style: { width: colWidths.classColWidth },
     },
     {
       Header: "% Within Plan",
       style: { textAlign: "right", width: colWidths.percColWidth },
       accessor: (row) => {
-        const percDisplay = percentWithEdge(row.percValue);
+        const percDisplay = percentWithEdge(row.value);
         const goal =
-          classes.find((curClass) => curClass.name === row.name)?.goalPerc || 0;
-        if (row.percValue > goal) {
+          classes.find((curClass) => curClass.classId === row.classId)
+            ?.goalPerc || 0;
+        if (row.value > goal) {
           return <GreenPill>{percDisplay}</GreenPill>;
         } else {
           return percDisplay;
@@ -102,8 +97,9 @@ export const CategoricalClassTable: React.FunctionComponent<CategoricalClassTabl
       Header: "Goal",
       style: { textAlign: "right", width: colWidths.goalWidth },
       accessor: (row) => {
-        const goalPerc = classes.find((curClass) => curClass.name === row.name)
-          ?.goalPerc;
+        const goalPerc = classes.find(
+          (curClass) => curClass.classId === row.classId
+        )?.goalPerc;
         return percentWithEdge(goalPerc || 0);
       },
     });

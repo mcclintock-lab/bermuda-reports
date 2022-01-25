@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { Card } from "@seasketch/geoprocessing/client";
+import { Card } from "@seasketch/geoprocessing/client-ui";
 import { InfoStatus } from "../components/InfoStatus";
 import SizeCard from "./SizeCard";
 import ProtectionCard from "./ProtectionCard";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Collapse } from "../components/Collapse";
-import { ReportDecorator, Card } from "@seasketch/geoprocessing/client";
+import { ReportDecorator, Card } from "@seasketch/geoprocessing/client-ui";
 
 export default {
   component: Collapse,

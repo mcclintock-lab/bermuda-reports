@@ -4,43 +4,47 @@
 import fs from "fs";
 import config from "../src/_config";
 
-import { strict as assert } from "assert";
 import area from "@turf/area";
+import { Metric } from "../src/metrics/types";
+import { ReportResultBase } from "../src/_config";
+import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const CLASSES = config.habitatNursery.classes;
-const DATASET = "habitatNursery";
+const REPORT = config.habitatNursery;
+const METRIC = REPORT.metrics.areaOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
-  const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
-  const totals = await Promise.all(
-    CLASSES.map(async (curClass) => {
+  const metrics: Metric[] = await Promise.all(
+    METRIC.classes.map(async (curClass) => {
       const fc = JSON.parse(
         fs
           .readFileSync(`${__dirname}/dist/${curClass.baseFilename}.json`)
           .toString()
       );
-      return area(fc);
+      const value = area(fc);
+      return createMetric({
+        classId: curClass.classId,
+        metricId: METRIC.metricId,
+        value,
+      });
     })
   );
 
-  const totalArea = totals.reduce((sumSoFar, total) => sumSoFar + total, 0);
+  const sumArea = metrics.reduce(
+    (sumSoFar, metric) => sumSoFar + metric.value,
+    0
+  );
 
-  const result = {
-    overall: {
-      value: totalArea,
-      percValue: 1,
-    },
-    byClass: CLASSES.reduce(
-      (soFar, curClass, index) => ({
-        ...soFar,
-        [curClass.name]: {
-          name: curClass.name,
-          value: totals[index],
-          percValue: totals[index] / totalArea,
-        },
-      }),
-      {}
-    ),
+  // Aggregrate metric across all classes
+  metrics.push(
+    createMetric({
+      metricId: METRIC.metricId,
+      value: sumArea,
+    })
+  );
+
+  const result: ReportResultBase = {
+    metrics: metricRekey(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>
@@ -48,7 +52,6 @@ async function main() {
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(result.byClass).length === CLASSES.length);
 }
 
 main();
