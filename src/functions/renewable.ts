@@ -12,9 +12,8 @@ import { overlapRaster } from "../metrics/overlapRaster";
 import { Metric } from "../metrics/types";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
-const CONFIG = config.renewable;
-const REPORT_ID = "renewable";
-const METRIC_ID = "areaOverlap";
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function renewable(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -24,7 +23,7 @@ export async function renewable(
   // Calc metrics for each class and merge the result
   const metrics: Metric[] = (
     await Promise.all(
-      CONFIG.classes.map(async (curClass) => {
+      METRIC.classes.map(async (curClass) => {
         const raster = await loadCogWindow(
           `${config.dataBucketUrl}${curClass.filename}`,
           {
@@ -32,7 +31,11 @@ export async function renewable(
             noDataValue: curClass.noDataValue,
           }
         );
-        const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
         return overlapResult.map(
           (metrics): Metric => ({
             ...metrics,

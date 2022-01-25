@@ -458,14 +458,20 @@ export const reefIndexClasses: DataClass[] = [
   },
 ];
 
-export const reefIndex: DataGroup = {
-  datasourceId: "reefIndex",
-  classes: reefIndexClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${cogFileSuffix}`,
-    };
-  }),
+const speciesProtectionReport: Report = {
+  reportId: "speciesProtection",
+  metrics: {
+    valueOverlap: {
+      metricId: "valueOverlap",
+      datasourceId: "reefIndex",
+      classes: reefIndexClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${cogFileSuffix}`,
+        };
+      }),
+    },
+  },
 };
 
 //// RENEWABLE ENERGY ////
@@ -501,13 +507,20 @@ export const renewableClasses: DataClass[] = [
   },
 ];
 
-export const renewable: DataGroup = {
-  classes: renewableClasses.map((curClass) => {
-    return {
-      ...curClass,
-      filename: `${curClass.baseFilename}${cogFileSuffix}`,
-    };
-  }),
+const renewableReport: Report = {
+  reportId: "renewableEnergy",
+  metrics: {
+    valueOverlap: {
+      metricId: "valueOverlap",
+      datasourceId: "renewable",
+      classes: renewableClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${cogFileSuffix}`,
+        };
+      }),
+    },
+  },
 };
 
 //// HABITAT RESTORATION ////
@@ -724,8 +737,8 @@ export default {
   protection: protectionReport,
   existingProtection: existingProtectionReport,
   habitatProtection: habitatProtectionReport,
-  reefIndex,
-  renewable,
+  speciesProtection: speciesProtectionReport,
+  renewable: renewableReport,
   oceanUse,
   habitatRestore,
   habitatNursery,
@@ -759,7 +772,6 @@ export default {
   },
 
   dataGroups: {
-    reefIndex,
     nearshoreDataGroup,
     offshoreDataGroup,
   },

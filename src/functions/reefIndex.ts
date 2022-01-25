@@ -12,8 +12,8 @@ import { overlapRaster } from "../metrics/overlapRaster";
 import { Metric } from "../metrics/types";
 import { metricRekey, metricSort } from "../metrics/metrics";
 
-const CONFIG = config.reefIndex;
-const METRIC_ID = "valueOverlap";
+const REPORT = config.speciesProtection;
+const METRIC = REPORT.metrics.valueOverlap;
 
 export async function reefIndex(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
@@ -21,7 +21,7 @@ export async function reefIndex(
   const box = sketch.bbox || bbox(sketch);
 
   const rasters = await Promise.all(
-    CONFIG.classes.map((curClass) =>
+    METRIC.classes.map((curClass) =>
       loadCogWindow(`${config.dataBucketUrl}${curClass.filename}`, {
         windowBox: box,
         noDataValue: curClass.noDataValue,
@@ -32,8 +32,12 @@ export async function reefIndex(
   const metrics = (
     await Promise.all(
       rasters.map(async (raster, index) => {
-        const curClass = CONFIG.classes[index];
-        const overlapResult = await overlapRaster(METRIC_ID, raster, sketch);
+        const curClass = METRIC.classes[index];
+        const overlapResult = await overlapRaster(
+          METRIC.metricId,
+          raster,
+          sketch
+        );
         return overlapResult.map(
           (metrics): Metric => ({
             ...metrics,

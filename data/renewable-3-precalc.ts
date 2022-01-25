@@ -10,13 +10,13 @@ import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const DEST_PATH = `${__dirname}/precalc/renewableTotals.json`;
-const LAYERS = config.renewable.classes;
-const METRIC_ID = "renewable";
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
+const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 
 async function main() {
   const metrics: Metric[] = await Promise.all(
-    LAYERS.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const raster = await loadCogWindow(url, {
         noDataValue: curClass.noDataValue,
@@ -24,7 +24,7 @@ async function main() {
       const sum = geoblaze.sum(raster)[0] as number;
       return createMetric({
         classId: curClass.classId,
-        metricId: METRIC_ID,
+        metricId: METRIC.metricId,
         value: sum,
       });
     })
@@ -39,7 +39,7 @@ async function main() {
       ? console.error("Error", err)
       : console.info(`Successfully wrote ${DEST_PATH}`)
   );
-  assert(Object.keys(result.metrics).length === LAYERS.length);
+  assert(Object.keys(result.metrics).length === METRIC.classes.length);
 }
 
 main();

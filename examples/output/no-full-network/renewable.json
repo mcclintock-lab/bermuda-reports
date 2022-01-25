@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Fixed Offshore Wind",
       "groupId": null,
@@ -12,7 +12,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "Fixed Offshore Wind",
       "groupId": null,
@@ -24,7 +24,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "Fixed Offshore Wind",
       "groupId": null,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Floating Offshore Wind",
       "groupId": null,
@@ -46,7 +46,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "Floating Offshore Wind",
       "groupId": null,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "Floating Offshore Wind",
       "groupId": null,
@@ -69,7 +69,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Floating Solar",
       "groupId": null,
@@ -80,7 +80,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "Floating Solar",
       "groupId": null,
@@ -92,7 +92,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "Floating Solar",
       "groupId": null,
@@ -103,7 +103,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Wave Energy",
       "groupId": null,
@@ -114,7 +114,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f190",
       "classId": "Wave Energy",
       "groupId": null,
@@ -126,7 +126,7 @@
       }
     },
     {
-      "metricId": "areaOverlap",
+      "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f191",
       "classId": "Wave Energy",
       "groupId": null,

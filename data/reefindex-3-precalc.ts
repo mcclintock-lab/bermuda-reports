@@ -12,13 +12,13 @@ import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
 import { createMetric, metricRekey } from "../src/metrics/metrics";
 
-const METRIC = config.metrics.reefIndexValueOverlap;
-const DATA = config.dataGroups.reefIndex;
+const REPORT = config.speciesProtection;
+const METRIC = REPORT.metrics.valueOverlap;
 
 async function main() {
-  const DEST_PATH = `${__dirname}/precalc/${DATA.datasourceId}Totals.json`;
+  const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
   const metrics: Metric[] = await Promise.all(
-    DATA.classes.map(async (curClass) => {
+    METRIC.classes.map(async (curClass) => {
       const url = `${config.localDataUrl}${curClass.filename}`;
       const response = await fetch(url);
       const rasterBuf = await response.arrayBuffer();

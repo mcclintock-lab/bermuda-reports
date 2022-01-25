@@ -1,7 +1,6 @@
 import React from "react";
 import {
   isNullSketchCollection,
-  NullSketchCollection,
   toNullSketchArray,
 } from "@seasketch/geoprocessing/client-core";
 import {
@@ -22,7 +21,8 @@ import { sketchMetricPercent } from "../metrics/clientMetrics";
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 const precalcTotals = renewableTotals as ReportResultBase;
 
-const CONFIG = config.renewable;
+const REPORT = config.renewable;
+const METRIC = REPORT.metrics.valueOverlap;
 
 const RenewableEnergy = () => {
   const [{ isCollection }] = useSketchProperties();
@@ -71,7 +71,7 @@ const RenewableEnergy = () => {
               <ClassTable
                 titleText="Type"
                 rows={Object.values(parentMetrics)}
-                classes={CONFIG.classes}
+                classes={METRIC.classes}
               />
               {isCollection &&
                 isNullSketchCollection(data.sketch) &&
@@ -93,13 +93,13 @@ const genSketchTable = (data: ReportResult) => {
   );
   const sketchRows = flattenSketchAllClassNext(
     childSketchMetrics,
-    CONFIG.classes,
+    METRIC.classes,
     childSketches
   );
 
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable rows={sketchRows} classes={CONFIG.classes} />
+      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
     </Collapse>
   );
 };

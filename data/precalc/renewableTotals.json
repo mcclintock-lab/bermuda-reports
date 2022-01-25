@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "renewable",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Fixed Offshore Wind",
       "groupId": null,
@@ -9,7 +9,7 @@
       "value": 3728809.8454754353
     },
     {
-      "metricId": "renewable",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Floating Solar",
       "groupId": null,
@@ -17,7 +17,7 @@
       "value": 5143254.350547314
     },
     {
-      "metricId": "renewable",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Floating Offshore Wind",
       "groupId": null,
@@ -25,7 +25,7 @@
       "value": 827941.9285855293
     },
     {
-      "metricId": "renewable",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Wave Energy",
       "groupId": null,
