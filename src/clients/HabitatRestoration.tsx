@@ -8,9 +8,9 @@ import {
 import { Collapse } from "../components/Collapse";
 import config, { ReportResult, ReportResultBase } from "../_config";
 import {
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
-  sketchMetricPercent,
+  toPercentMetric,
 } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
@@ -35,7 +35,7 @@ const HabitatRestoration = () => {
         {(data: ReportResult) => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
-            sketchMetricPercent(
+            toPercentMetric(
               data.metrics.filter((m) => m.metricId === METRIC.metricId),
               precalcTotals.metrics
             ),
@@ -98,14 +98,14 @@ const genSketchTable = (data: ReportResult) => {
   // Build agg metric objects for each child sketch in collection with percValue for each class
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
-  const childSketchMetrics = sketchMetricPercent(
+  const childSketchMetrics = toPercentMetric(
     metricsWithSketchId(
       data.metrics.filter((m) => m.metricId === METRIC.metricId),
       childSketchIds
     ),
     precalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     childSketchMetrics,
     METRIC.classes,
     childSketches

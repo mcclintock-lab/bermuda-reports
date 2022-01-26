@@ -132,6 +132,4 @@ export type GroupMetricAgg = {
 
 export type GroupMetricSketchAgg = GroupMetricAgg & {
   sketchId: string;
-  /** @deprecated */
-  sketchName?: string;
 };

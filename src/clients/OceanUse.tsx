@@ -8,9 +8,9 @@ import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import { Collapse } from "../components/Collapse";
 import config, { ReportResult, ReportResultBase } from "../_config";
 import {
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
-  sketchMetricPercent,
+  toPercentMetric,
 } from "../metrics/clientMetrics";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
@@ -33,7 +33,7 @@ const OceanUse = () => {
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
-            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            toPercentMetric(data.metrics, precalcTotals.metrics),
             [data.sketch.properties.id]
           );
 
@@ -92,11 +92,11 @@ const OceanUse = () => {
 const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
-  const childSketchMetrics = sketchMetricPercent(
+  const childSketchMetrics = toPercentMetric(
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     childSketchMetrics,
     METRIC.classes,
     childSketches

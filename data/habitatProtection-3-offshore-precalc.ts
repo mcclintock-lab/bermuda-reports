@@ -8,7 +8,7 @@ import { ReportResultBase } from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.offshoreAreaOverlap;
@@ -31,7 +31,7 @@ async function main() {
   );
 
   const result: ReportResultBase = {
-    metrics: metricRekey(metrics),
+    metrics: rekeyMetrics(metrics),
   };
 
   fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

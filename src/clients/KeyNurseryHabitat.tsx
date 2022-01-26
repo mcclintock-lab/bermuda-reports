@@ -28,9 +28,9 @@ import { Pill, LevelPill } from "../components/Pill";
 import { LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { LevelCircleRow } from "../components/Circle";
 import {
-  sketchMetricPercent,
-  flattenByGroupSketch,
-  flattenByGroup,
+  toPercentMetric,
+  flattenByGroupSketchAllClass,
+  flattenByGroupAllClass,
 } from "../metrics/clientMetrics";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import { ClassTable } from "../components/ClassTable";
@@ -81,7 +81,7 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
   const groupId = getCategoryForActivities(activities).level;
 
   // Class metrics
-  const classPercMetrics = sketchMetricPercent(
+  const classPercMetrics = toPercentMetric(
     data.metrics.filter(
       (m) => m.classId && !m.groupId && m.sketchId === data.sketch.properties.id
     ),
@@ -92,7 +92,7 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
   const groupMetrics = data.metrics.filter(
     (m) => !!m.groupId && m.sketchId === data.sketch.properties.id
   );
-  const groupAggs = flattenByGroupSketch(
+  const groupAggs = flattenByGroupSketchAllClass(
     toNullSketchArray(data.sketch),
     groupMetrics,
     precalcTotals.metrics
@@ -127,7 +127,7 @@ const genNetwork = (data: ReportResult) => {
     const groupMetrics = data.metrics.filter((m) => m.groupId);
 
     // Build agg group objects with percValue for each class
-    groupAggs = flattenByGroup(
+    groupAggs = flattenByGroupAllClass(
       data.sketch,
       groupMetrics,
       precalcTotals.metrics
@@ -135,7 +135,7 @@ const genNetwork = (data: ReportResult) => {
 
     // Build agg sketch group objects with percValue for each class
     // groupId, sketchId, class1, class2, ..., total
-    sketchAggs = flattenByGroupSketch(
+    sketchAggs = flattenByGroupSketchAllClass(
       sketches,
       groupMetrics,
       precalcTotals.metrics

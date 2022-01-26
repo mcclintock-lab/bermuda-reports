@@ -20,7 +20,7 @@ export const createMetric = (metricProps: Partial<Metric>): Metric => {
 /**
  * Reorders metrics to a consistent key order for readability
  */
-export const metricRekey = (
+export const rekeyMetrics = (
   metrics: Metric[],
   idOrder: MetricProperty[] = [...MetricProperties]
 ) => {
@@ -37,7 +37,7 @@ export const metricRekey = (
  * Sorts metrics to a consistent order for readability
  * Defaults to [metricId, classId, sketchId]
  */
-export const metricSort = (
+export const sortMetrics = (
   metrics: Metric[],
   sortIds: MetricDimension[] = ["metricId", "classId", "sketchId"]
 ) => {

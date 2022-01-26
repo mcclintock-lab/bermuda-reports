@@ -13,10 +13,10 @@ import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 import {
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
 } from "../metrics/clientMetrics";
-import { sketchMetricPercent } from "../metrics/clientMetrics";
+import { toPercentMetric } from "../metrics/clientMetrics";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 const precalcTotals = renewableTotals as ReportResultBase;
@@ -36,7 +36,7 @@ const RenewableEnergy = () => {
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
-            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            toPercentMetric(data.metrics, precalcTotals.metrics),
             [data.sketch.properties.id]
           );
 
@@ -87,11 +87,11 @@ const RenewableEnergy = () => {
 const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
-  const childSketchMetrics = sketchMetricPercent(
+  const childSketchMetrics = toPercentMetric(
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     childSketchMetrics,
     METRIC.classes,
     childSketches

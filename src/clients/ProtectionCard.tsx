@@ -29,8 +29,8 @@ import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 import { categories, levels } from "../util/iucnProtectionLevel";
 import {
   firstMatchingMetric,
-  flattenByGroup,
-  flattenByGroupSketch,
+  flattenByGroupAllClass,
+  flattenByGroupSketchAllClass,
 } from "../metrics/clientMetrics";
 import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 
@@ -94,12 +94,12 @@ const networkProtection = (data: ReportResult) => {
         m.groupId &&
         categories.includes(m.groupId)
     );
-    groupCategoryAggs = flattenByGroup(
+    groupCategoryAggs = flattenByGroupAllClass(
       data.sketch,
       categoryMetrics,
       precalcTotals.metrics
     );
-    sketchCategoryAggs = flattenByGroupSketch(
+    sketchCategoryAggs = flattenByGroupSketchAllClass(
       sketches,
       categoryMetrics,
       precalcTotals.metrics
@@ -108,12 +108,12 @@ const networkProtection = (data: ReportResult) => {
     const levelMetrics = data.metrics.filter(
       (m) => m.groupId && levels.includes(m.groupId)
     );
-    groupLevelAggs = flattenByGroup(
+    groupLevelAggs = flattenByGroupAllClass(
       data.sketch,
       levelMetrics,
       precalcTotals.metrics
     );
-    sketchLevelAggs = flattenByGroupSketch(
+    sketchLevelAggs = flattenByGroupSketchAllClass(
       sketches,
       levelMetrics,
       precalcTotals.metrics

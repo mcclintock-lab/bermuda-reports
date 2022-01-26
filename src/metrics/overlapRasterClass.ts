@@ -17,7 +17,7 @@ import {
 
 // @ts-ignore
 import geoblaze from "geoblaze";
-import { createMetric } from "./metrics";
+import { createMetric } from "./helpers";
 
 /**
  * Calculates sum of overlap between sketches and feature classes in raster

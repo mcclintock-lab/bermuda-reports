@@ -15,7 +15,7 @@ import {
   getLevelNameForSketches,
 } from "../util/iucnHelpers";
 import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const CONFIG = config;
 const REPORT = CONFIG.protection;
@@ -77,8 +77,8 @@ export async function protection(
   });
 
   return {
-    metrics: metricSort(
-      metricRekey([...classMetrics, ...categoryMetrics, ...levelMetrics])
+    metrics: sortMetrics(
+      rekeyMetrics([...classMetrics, ...categoryMetrics, ...levelMetrics])
     ),
     sketch: toNullSketch(sketch, true),
   };

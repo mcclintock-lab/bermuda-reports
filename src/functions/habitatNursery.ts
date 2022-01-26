@@ -16,7 +16,7 @@ import { Metric } from "../metrics/types";
 
 import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
 import { overlapFeatures } from "../metrics/overlapFeatures";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.habitatNursery;
 const METRIC = REPORT.metrics.areaOverlap;
@@ -73,7 +73,7 @@ export async function habitatNursery(
   });
 
   return {
-    metrics: metricSort(metricRekey([...classMetrics, ...groupMetrics])),
+    metrics: sortMetrics(rekeyMetrics([...classMetrics, ...groupMetrics])),
     sketch: toNullSketch(sketch, true),
   };
 }

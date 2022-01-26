@@ -5,10 +5,10 @@ import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { Georaster } from "@seasketch/geoprocessing";
-import { groupClassIdMapping } from "../src/metrics/classId";
+import { groupClassIdMapping } from "../src/datasources/helpers";
 import { Metric } from "../src/metrics/types";
 import { ReportResultBase } from "../src/_config";
-import { createMetric, metricRekey } from "../src/metrics/metrics";
+import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.nearshoreAreaOverlap;
@@ -24,7 +24,7 @@ async function main() {
     });
 
     const result: ReportResultBase = {
-      metrics: metricRekey(metrics),
+      metrics: rekeyMetrics(metrics),
     };
 
     fs.writeFile(DEST_PATH, JSON.stringify(result, null, 2), (err) =>

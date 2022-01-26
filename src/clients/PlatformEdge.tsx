@@ -23,8 +23,8 @@ import { Metric, GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { Collapse } from "../components/Collapse";
 import {
   firstMatchingMetric,
-  flattenByGroup,
-  flattenByGroupSketch,
+  flattenByGroupAllClass,
+  flattenByGroupSketchAllClass,
   metricsForSketch,
 } from "../metrics/clientMetrics";
 import config, {
@@ -33,7 +33,7 @@ import config, {
   EdgeSketchMetric,
 } from "../_config";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
-import { sketchMetricPercent } from "../metrics/clientMetrics";
+import { toPercentMetric } from "../metrics/clientMetrics";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 const precalcTotals = platformEdgeTotals as ReportResultBase;
@@ -66,7 +66,7 @@ const PlatformEdge = () => {
         const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 
         // Build class percent metrics (non-group)
-        const classPercMetrics = sketchMetricPercent(
+        const classPercMetrics = toPercentMetric(
           data.metrics.filter((m) => !m.groupId && m.classId === CLASS.classId),
           precalcTotals.metrics
         );
@@ -154,7 +154,7 @@ const PlatformEdge = () => {
           const groupMetrics = data.metrics.filter((m) => m.groupId);
 
           // Build agg group objects with percValue for each class
-          groupRows = flattenByGroup(
+          groupRows = flattenByGroupAllClass(
             data.sketch,
             groupMetrics,
             precalcTotals.metrics
@@ -162,7 +162,7 @@ const PlatformEdge = () => {
 
           // Build agg sketch group objects with percValue for each class
           // groupId, sketchId, class1, class2, ..., total
-          sketchRows = flattenByGroupSketch(
+          sketchRows = flattenByGroupSketchAllClass(
             sketches,
             groupMetrics,
             precalcTotals.metrics

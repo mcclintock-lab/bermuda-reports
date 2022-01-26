@@ -8,7 +8,7 @@ import {
   toNullSketch,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 import { overlapFeatures } from "../metrics/overlapFeatures";
 import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
@@ -61,7 +61,7 @@ export async function existingProtections(
   );
 
   return {
-    metrics: metricSort(metricRekey(metrics)),
+    metrics: sortMetrics(rekeyMetrics(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

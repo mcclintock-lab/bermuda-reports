@@ -6,9 +6,9 @@ import {
 } from "@seasketch/geoprocessing/client-ui";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import {
-  flattenSketchAllClassNext,
+  flattenBySketchAllClass,
   metricsWithSketchId,
-  sketchMetricPercent,
+  toPercentMetric,
 } from "../metrics/clientMetrics";
 import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
@@ -33,7 +33,7 @@ const SpeciesProtection = () => {
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const topMetrics = metricsWithSketchId(
-            sketchMetricPercent(data.metrics, precalcTotals.metrics),
+            toPercentMetric(data.metrics, precalcTotals.metrics),
             [data.sketch.properties.id]
           );
           return (
@@ -85,11 +85,11 @@ const SpeciesProtection = () => {
 const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
-  const childSketchMetrics = sketchMetricPercent(
+  const childSketchMetrics = toPercentMetric(
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenSketchAllClassNext(
+  const sketchRows = flattenBySketchAllClass(
     childSketchMetrics,
     METRIC.classes,
     childSketches

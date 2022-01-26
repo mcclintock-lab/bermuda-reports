@@ -11,7 +11,7 @@ import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import bbox from "@turf/bbox";
 import { Metric } from "../metrics/types";
-import { metricRekey, metricSort } from "../metrics/metrics";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const CONFIG = config;
 const REPORT = CONFIG.size;
@@ -76,7 +76,7 @@ export async function area(
   );
 
   return {
-    metrics: metricSort(metricRekey(metrics)),
+    metrics: sortMetrics(rekeyMetrics(metrics)),
     sketch: toNullSketch(sketch, true),
   };
 }

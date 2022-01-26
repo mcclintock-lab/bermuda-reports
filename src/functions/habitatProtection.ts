@@ -11,9 +11,8 @@ import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { overlapRasterClass } from "../metrics/overlapRasterClass";
 import { overlapRaster } from "../metrics/overlapRaster";
-import { metricRekey, metricSort } from "../metrics/metrics";
-
-import { groupClassIdMapping } from "../metrics/classId";
+import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
+import { groupClassIdMapping } from "../datasources/helpers";
 import { Metric } from "../metrics/types";
 
 const REPORT = config.habitatProtection;
@@ -75,7 +74,9 @@ export async function habitatProtection(
   );
 
   return {
-    metrics: metricSort(metricRekey([...nearshoreMetrics, ...offshoreMetrics])),
+    metrics: sortMetrics(
+      rekeyMetrics([...nearshoreMetrics, ...offshoreMetrics])
+    ),
     sketch: toNullSketch(sketch, true),
   };
 }

@@ -1,10 +1,10 @@
 import {
-  GroupMetricSketchAgg,
   DataClass,
   Metric,
   MetricIdTypes,
   MetricDimension,
   MetricProperty,
+  GroupMetricSketchAgg,
 } from "./types";
 
 import {
@@ -24,17 +24,6 @@ import reduce from "lodash/reduce";
 import cloneDeep from "lodash/cloneDeep";
 
 /**
- * Helper methods for using metrics in browser client
- */
-
-/**
- * Given sketch collection, returns IDs of sketches in the collection
- */
-export const getSketchCollectionChildIds = (
-  collection: SketchCollection | NullSketchCollection
-) => collection.features.map((sk) => sk.properties.id);
-
-/**
  * Given sketch(es), returns ID(s)
  */
 export const sketchToId = (
@@ -43,27 +32,6 @@ export const sketchToId = (
   Array.isArray(sketch)
     ? sketch.map((sk) => sk.properties.id)
     : sketch.properties.id;
-
-/**
- * Returns a shorthand Sketch array given a Sketch or SketchCollection.
- * Includes the collection as a shorthand sketch also
- */
-export const toSketchShortAll = (
-  input: Sketch | SketchCollection | NullSketch | NullSketchCollection
-): { id: string; name: string }[] => {
-  if (isSketch(input) || isNullSketch(input)) {
-    return [{ id: input.properties.id, name: input.properties.name }];
-  } else if (isSketchCollection(input) || isNullSketchCollection(input)) {
-    return [
-      { id: input.properties.id, name: input.properties.name },
-      ...input.features.map((sk) => ({
-        id: sk.properties.id,
-        name: sk.properties.name,
-      })),
-    ];
-  }
-  throw new Error("invalid input, must be Sketch or SketchCollection");
-};
 
 /**
  * Returns metrics with matching sketchId (can be an array of sketchids)
@@ -131,11 +99,11 @@ const classSortAlphaDisplay = (a: DataClass, b: DataClass) => {
 };
 
 /**
- * Returns new sketch metrics with percentage of total value
- * If metrics and totals are additionally stratified by classId, then that will be used
+ * Returns new metrics with their values transformed to percentage of corresponding totals
+ * metrics are paired with total based on classId if present, falling back to metricId
  * Deep copies and maintains all other properties from the original metric
  */
-export const sketchMetricPercent = (
+export const toPercentMetric = (
   metrics: Metric[],
   totals: Metric[]
 ): Metric[] => {
@@ -177,10 +145,10 @@ export const sketchMetricPercent = (
  * If an id property is not defined on a metric, then 'undefined' will be used for the key
  */
 export const nestMetrics = (
-  metrics: Record<string, any>[],
-  ids: string[]
+  metrics: Metric[],
+  ids: MetricDimension[]
 ): Record<string, any> => {
-  const grouped = groupBy(metrics, (m) => m[ids[0]]);
+  const grouped = groupBy(metrics, (curMetric) => curMetric[ids[0]]!);
   if (ids.length === 1) {
     return grouped;
   }
@@ -202,7 +170,7 @@ export const nestMetrics = (
  * @param classes
  * @returns
  */
-export const flattenSketchAllClassNext = (
+export const flattenBySketchAllClass = (
   metrics: Metric[],
   classes: DataClass[],
   sketches: Sketch[] | NullSketch[],
@@ -239,80 +207,19 @@ export const flattenSketchAllClassNext = (
 };
 
 /**
- * Returns aggregate sketch metric, containing all metric values using id property
- * @param metrics - class metric data with sketch
- * @param extraFlatProperty - optional id property to cross flatten with metric.  Properties will be keyed extraId_metricId
+ * Returns one aggregate object for every groupId present in metrics
+ * Each object includes following properties:
+ * numSketches - count of child sketches in the group
+ * [classId] - a percValue for each classId present in metrics for group
+ * value - sum of value across all classIds present in metrics for group
+ * percValue - given sum value across all classIds, contains ratio of total sum across all class IDs
  */
-export const flattenSketchMetric = (
-  metrics: Metric[],
-  flatProperty: MetricDimension,
-  options: {
-    extraFlatProperty?: MetricDimension;
-  } = {}
-): Record<MetricProperty | string, MetricIdTypes>[] => {
-  const { extraFlatProperty } = options;
-  const flatMetrics = groupBy(metrics, (m) => {
-    if (m[flatProperty]) {
-      return m[flatProperty] as MetricIdTypes;
-    }
-    throw new Error(
-      `Metric is missing flatProperty ${flatProperty}: ${JSON.stringify(m)}`
-    );
-  });
-
-  const metricsBySketchId = groupBy(
-    metrics,
-    (metric) => metric.sketchId || "missing"
-  );
-
-  const sketchRows = Object.keys(metricsBySketchId).reduce<
-    Record<string, MetricIdTypes>[]
-  >((rowsSoFar, curSketchId) => {
-    const metricAgg = Object.keys(flatMetrics).reduce<
-      Record<string, string | number>
-    >((aggSoFar, curMetricId) => {
-      // GET ONE OR GET MULTIPLE BY GROUP
-      const curMetric = metricsBySketchId[curSketchId].find(
-        (m) => m.metricId === curMetricId
-      );
-
-      if (curMetric === undefined) return aggSoFar;
-      const prop = extraFlatProperty
-        ? `${curMetric[extraFlatProperty]}_${curMetric?.metricId}`
-        : curMetric?.metricId;
-
-      // RETURN ONE OR RETURN MULTIPLE BY SAY CLASS
-      return {
-        ...aggSoFar,
-        ...{
-          [prop]: curMetric?.value || 0,
-        },
-      };
-    }, {});
-
-    return [
-      ...rowsSoFar,
-      {
-        sketchId: curSketchId,
-        ...metricAgg,
-      },
-    ];
-  }, []);
-  return sketchRows;
-};
-
-/**
- * Flattens group class metrics, one object for each group.
- * Each object includes a percValue for each
- * class, count of child sketches in the group, and sum of value and percValue
- * across classes.
- */
-export const flattenByGroup = (
+export const flattenByGroupAllClass = (
   collection: SketchCollection | NullSketchCollection,
   /** Group metrics for collection and its child sketches */
   groupMetrics: Metric[],
   /** Totals by class */
-  totals: Metric[]
+  totalMetrics: Metric[]
 ): {
   value: number;
   groupId: string;
@@ -340,13 +247,9 @@ export const flattenByGroup = (
         );
 
         const curValue = collGroupMetricsByClass[curClassId]?.value;
-        // Skip if no metric for this class
-        // if (!curValue) {
-        //   return rowsSoFar;
-        // }
 
         const classTotal = firstMatchingMetric(
-          totals,
+          totalMetrics,
           (totalMetric) => totalMetric.classId === curClassId
         ).value;
 
@@ -360,7 +263,8 @@ export const flattenByGroup = (
       { value: 0 }
     );
 
-    const groupTotal = firstMatchingMetric(totals, (m) => !m.classId).value;
+    const groupTotal = firstMatchingMetric(totalMetrics, (m) => !m.classId)
+      .value;
     return {
       groupId: curGroupId,
       percValue: classAgg.value / groupTotal,
@@ -377,7 +281,7 @@ export const flattenByGroup = (
  * @param totalValue - total value with classes combined
  * @param classes - class config
  */
-export const flattenByGroupSketch = (
+export const flattenByGroupSketchAllClass = (
   /** ToDo: is this needed? can the caller just pre-filter groupMetrics? */
   sketches: Sketch[] | NullSketch[],
   /** Group metrics for collection and its child sketches */
@@ -437,5 +341,102 @@ export const flattenByGroupSketch = (
       });
     });
   });
+  return sketchRows;
+};
+
+//// DEPRECATED
+
+/**
+ * UNUSED
+ * Given sketch collection, returns IDs of sketches in the collection
+ */
+export const getSketchCollectionChildIds = (
+  collection: SketchCollection | NullSketchCollection
+) => collection.features.map((sk) => sk.properties.id);
+
+/**
+ * UNUSED
+ * Returns an array of shorthand sketches (id + name) given a Sketch or SketchCollection.
+ * Includes a shorthand of parent collection also
+ */
+export const toShortSketches = (
+  input: Sketch | SketchCollection | NullSketch | NullSketchCollection
+): { id: string; name: string }[] => {
+  if (isSketch(input) || isNullSketch(input)) {
+    return [{ id: input.properties.id, name: input.properties.name }];
+  } else if (isSketchCollection(input) || isNullSketchCollection(input)) {
+    return [
+      { id: input.properties.id, name: input.properties.name },
+      ...input.features.map((sk) => ({
+        id: sk.properties.id,
+        name: sk.properties.name,
+      })),
+    ];
+  }
+  throw new Error("invalid input, must be Sketch or SketchCollection");
+};
+
+/**
+ * UNUSED
+ * Returns one aggregate object for every sketch ID present in metrics,
+ * with additional property for each unique value for idProperty present for sketch.
+ * Example - idProperty of 'classId', and two classes are present in metrics of 'classA', and 'classB'
+ * then each flattened object will have two extra properties per sketch, .classA and .classB, each with the first metric value for that sketch/idProperty found
+ * @param metrics - metrics with assigned sketch
+ * @param extraIdProperty - optional second id property to cross flatten with idProperty.  Properties will be keyed extraId_idProperty
+ */
+export const flattenSketchAllId = (
+  metrics: Metric[],
+  idProperty: MetricDimension,
+  options: {
+    extraIdProperty?: MetricDimension;
+  } = {}
+): Record<MetricProperty | string, MetricIdTypes>[] => {
+  const { extraIdProperty } = options;
+  const flatMetrics = groupBy(metrics, (m) => {
+    if (m[idProperty]) {
+      return m[idProperty] as MetricIdTypes;
+    }
+    throw new Error(
+      `Metric is missing idProperty ${idProperty}: ${JSON.stringify(m)}`
+    );
+  });
+
+  const metricsBySketchId = groupBy(
+    metrics,
+    (metric) => metric.sketchId || "missing"
+  );
+
+  const sketchRows = Object.keys(metricsBySketchId).reduce<
+    Record<string, MetricIdTypes>[]
+  >((rowsSoFar, curSketchId) => {
+    const metricAgg = Object.keys(flatMetrics).reduce<
+      Record<string, string | number>
+    >((aggSoFar, curIdValue) => {
+      const curMetric = metricsBySketchId[curSketchId].find(
+        (m) => m[idProperty] === curIdValue
+      );
+
+      if (curMetric === undefined) return aggSoFar;
+      const prop = extraIdProperty
+        ? `${curMetric[extraIdProperty]}_${curMetric[idProperty]}`
+        : curMetric[idProperty];
+
+      return {
+        ...aggSoFar,
+        ...{
+          [prop!]: curMetric?.value || 0,
+        },
+      };
+    }, {});
+
+    return [
+      ...rowsSoFar,
+      {
+        sketchId: curSketchId,
+        ...metricAgg,
+      },
+    ];
+  }, []);
   return sketchRows;
 };

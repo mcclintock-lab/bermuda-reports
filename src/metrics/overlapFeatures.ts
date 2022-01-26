@@ -14,10 +14,7 @@ import area from "@turf/area";
 import flatten from "@turf/flatten";
 import { chunk } from "../util/chunk";
 import { clip } from "../util/clip";
-import { createMetric } from "./metrics";
-
-// ToDo: tests
-//
+import { createMetric } from "./helpers";
 
 interface OverlapFeatureOptions {
   /** Operation to perform, supports area or sum.  Defaults to area */
