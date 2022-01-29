@@ -2,20 +2,21 @@ import {
   Sketch,
   SketchCollection,
   Polygon,
+  Metric,
   GeoprocessingHandler,
   toSketchArray,
   toNullSketch,
+  overlapArea,
+  overlapAreaGroupMetrics,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
-import { overlapArea } from "../metrics/overlapArea";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
-import { Metric } from "../metrics/types";
 import { iucnCategories, levels } from "../util/iucnProtectionLevel";
 import {
   getCategoryNameForSketches,
   getLevelNameForSketches,
 } from "../util/iucnHelpers";
-import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const CONFIG = config;
 const REPORT = CONFIG.protection;

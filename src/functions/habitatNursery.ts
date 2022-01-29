@@ -4,19 +4,19 @@ import {
   GeoprocessingHandler,
   Feature,
   Polygon,
-  fgbFetchAll,
+  Metric,
   toSketchArray,
   toNullSketch,
+  overlapFeaturesGroupMetrics,
+  overlapFeatures,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
 import { levels } from "../util/iucnProtectionLevel";
 import { getLevelNameForSketches } from "../util/iucnHelpers";
-import { Metric } from "../metrics/types";
-
-import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.habitatNursery;
 const METRIC = REPORT.metrics.areaOverlap;

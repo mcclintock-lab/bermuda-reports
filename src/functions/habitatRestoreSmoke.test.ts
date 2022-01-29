@@ -1,5 +1,6 @@
 /**
  * @group smoke
+ * @jest-environment node
  */
 import { habitatRestore } from "./habitatRestore";
 import {

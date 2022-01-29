@@ -2,12 +2,11 @@ import {
   ValidationError,
   PreprocessingHandler,
   VectorDataSource,
-  intersect,
-  difference,
   isPolygonFeature,
   Feature,
   Polygon,
   MultiPolygon,
+  clip,
 } from "@seasketch/geoprocessing";
 import area from "@turf/area";
 import bbox from "@turf/bbox";
@@ -36,7 +35,7 @@ export async function clipLand(feature: Feature<Polygon | MultiPolygon>) {
   );
   if (landFeatures.features.length === 0) return feature;
   const combined = combine(landFeatures).features[0] as Feature<MultiPolygon>;
-  return difference(feature, combined);
+  return combined ? clip(fc([feature, combined]), "difference") : feature;
 }
 
 export async function clipOutsideEez(
@@ -53,7 +52,7 @@ export async function clipOutsideEez(
   if (eezFeatures.length === 0) return feature;
   const combined = combine(fc(eezFeatures))
     .features[0] as Feature<MultiPolygon>;
-  return intersect(feature, combined);
+  return clip(fc([feature, combined]), "intersection");
 }
 
 /**

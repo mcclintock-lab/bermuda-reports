@@ -10,9 +10,8 @@ import geoblaze from "geoblaze";
 // TODO: fix, uses local cog because get esmodule error due to fgb when importing from geoprocessing
 // @ts-ignore
 import { loadCogWindow } from "../src/datasources/cog";
-import { Metric } from "../src/metrics/types";
+import { Metric, createMetric, rekeyMetrics } from "@seasketch/geoprocessing";
 import { ReportResultBase } from "../src/_config";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.oceanUse;
 const METRIC = REPORT.metrics.valueOverlap;

@@ -4,14 +4,15 @@ import {
   GeoprocessingHandler,
   Feature,
   Polygon,
-  fgbFetchAll,
+  Metric,
   toNullSketch,
+  overlapFeatures,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
-import { Metric } from "../metrics/types";
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 
 const REPORT = config.habitatRestore;
 const METRIC = REPORT.metrics.areaOverlap;

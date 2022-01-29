@@ -2,6 +2,9 @@ import React from "react";
 import {
   isNullSketchCollection,
   toNullSketchArray,
+  flattenBySketchAllClass,
+  metricsWithSketchId,
+  toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ResultsCard,
@@ -12,11 +15,6 @@ import config, { ReportResult, ReportResultBase } from "../_config";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
-import {
-  flattenBySketchAllClass,
-  metricsWithSketchId,
-} from "../metrics/clientMetrics";
-import { toPercentMetric } from "../metrics/clientMetrics";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 const precalcTotals = renewableTotals as ReportResultBase;

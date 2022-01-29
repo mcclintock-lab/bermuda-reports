@@ -1,37 +1,36 @@
 import React from "react";
 import {
+  GroupMetricAgg,
+  GroupMetricSketchAgg,
+  NullSketch,
   percentWithEdge,
   keyBy,
   capitalize,
   percentGoalWithEdge,
   UserAttribute,
   toNullSketchArray,
-  NullSketch,
   isSketchCollection,
+  toPercentMetric,
+  flattenByGroupSketchAllClass,
+  flattenByGroupAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ResultsCard,
   Skeleton,
-  ReportError,
-  useSketchProperties,
   Table,
   Column,
+  ReportError,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 // Import the results type definition from your functions to type-check your
 // component render functions
 import config, { ReportResult, ReportResultBase } from "../_config";
-import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 import { getCategoryForActivities } from "../util/iucnProtectionLevel";
 import { ObjectiveStatus } from "../components/ObjectiveStatus";
 import { Collapse } from "../components/Collapse";
 import { Pill, LevelPill } from "../components/Pill";
 import { LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { LevelCircleRow } from "../components/Circle";
-import {
-  toPercentMetric,
-  flattenByGroupSketchAllClass,
-  flattenByGroupAllClass,
-} from "../metrics/clientMetrics";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import { ClassTable } from "../components/ClassTable";
 

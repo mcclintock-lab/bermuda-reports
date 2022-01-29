@@ -1,12 +1,17 @@
 import React from "react";
 import {
+  NullSketch,
+  GroupMetricAgg,
+  GroupMetricSketchAgg,
   capitalize,
   keyBy,
   percentWithEdge,
   percentGoalWithEdge,
   toNullSketchArray,
   isSketchCollection,
-  NullSketch,
+  firstMatchingMetric,
+  flattenByGroupAllClass,
+  flattenByGroupSketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ResultsCard,
@@ -27,12 +32,6 @@ import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 import config, { ReportResult, ReportResultBase } from "../_config";
 import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
 import { categories, levels } from "../util/iucnProtectionLevel";
-import {
-  firstMatchingMetric,
-  flattenByGroupAllClass,
-  flattenByGroupSketchAllClass,
-} from "../metrics/clientMetrics";
-import { GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
 
 import protectionTotals from "../../data/precalc/protectionTotals.json";
 const precalcTotals = protectionTotals as ReportResultBase;

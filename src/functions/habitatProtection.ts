@@ -3,17 +3,18 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
+  Metric,
   toSketchArray,
-  loadCogWindow,
   toNullSketch,
+  overlapRasterClass,
+  overlapRaster,
+  rekeyMetrics,
+  sortMetrics,
+  classIdMapping,
 } from "@seasketch/geoprocessing";
+import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
-import { overlapRasterClass } from "../metrics/overlapRasterClass";
-import { overlapRaster } from "../metrics/overlapRaster";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
-import { groupClassIdMapping } from "../datasources/helpers";
-import { Metric } from "../metrics/types";
 
 const REPORT = config.habitatProtection;
 const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;
@@ -35,9 +36,7 @@ export async function habitatProtection(
       NEARSHORE_METRIC.metricId,
       nearshoreRaster,
       sketch,
-      {
-        classIdMapping: groupClassIdMapping(NEARSHORE_METRIC),
-      }
+      classIdMapping(NEARSHORE_METRIC.classes)
     )
   ).map((metrics) => ({
     ...metrics,

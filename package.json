@@ -48,12 +48,10 @@
     "@types/lodash": "^4.14.178",
     "geoblaze": "^0.3.2",
     "georaster": "1.0.3",
-    "lodash": "^4.17.21",
-    "simple-statistics": "^7.7.0",
-    "union-subdivided-polygons": "^0.9.1"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@seasketch/geoprocessing": "0.13.1-alpha.75",
+    "@seasketch/geoprocessing": "0.13.1-alpha.94",
     "@turf/boolean-disjoint": "6.3.0",
     "@turf/boolean-valid": "6.3.0",
     "http-server": "^0.12.3",

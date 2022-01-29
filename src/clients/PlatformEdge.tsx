@@ -1,39 +1,40 @@
 import React from "react";
 import {
+  NullSketch,
+  Metric,
+  GroupMetricAgg,
+  GroupMetricSketchAgg,
   percentWithEdge,
   capitalize,
   toNullSketchArray,
   keyBy,
   isSketchCollection,
-  NullSketch,
-} from "@seasketch/geoprocessing/client-core";
-import {
-  ResultsCard,
-  Skeleton,
-  KeySection,
-  LayerToggle,
-  useSketchProperties,
-  ReportError,
-  Table,
-  Column,
-} from "@seasketch/geoprocessing/client-ui";
-import { getBreakGroup } from "../util/getBreakGroup";
-import { GroupCircleRow } from "../components/Circle";
-import { Metric, GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
-import { Collapse } from "../components/Collapse";
-import {
   firstMatchingMetric,
   flattenByGroupAllClass,
   flattenByGroupSketchAllClass,
   metricsForSketch,
-} from "../metrics/clientMetrics";
+  toPercentMetric,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  ResultsCard,
+  Skeleton,
+  ReportError,
+  Table,
+  Column,
+  KeySection,
+  LayerToggle,
+  useSketchProperties,
+} from "@seasketch/geoprocessing/client-ui";
+import { getBreakGroup } from "../util/getBreakGroup";
+import { GroupCircleRow } from "../components/Circle";
+import { Collapse } from "../components/Collapse";
+
 import config, {
   ReportResultBase,
   ReportResult,
   EdgeSketchMetric,
 } from "../_config";
 import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
-import { toPercentMetric } from "../metrics/clientMetrics";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 const precalcTotals = platformEdgeTotals as ReportResultBase;

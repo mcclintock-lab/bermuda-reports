@@ -5,13 +5,13 @@ import {
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { Collapse } from "../components/Collapse";
-import config, { ReportResult, ReportResultBase } from "../_config";
 import {
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
+} from "@seasketch/geoprocessing/client-core";
+import { Collapse } from "../components/Collapse";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 

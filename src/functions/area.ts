@@ -4,14 +4,16 @@ import {
   Feature,
   Polygon,
   GeoprocessingHandler,
-  fgbFetchAll,
+  Metric,
   toNullSketch,
+  overlapArea,
+  overlapSubarea,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
-import { overlapArea, overlapSubarea } from "../metrics/overlapArea";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
 import bbox from "@turf/bbox";
-import { Metric } from "../metrics/types";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const CONFIG = config;
 const REPORT = CONFIG.size;

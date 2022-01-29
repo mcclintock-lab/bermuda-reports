@@ -4,16 +4,16 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+import {
+  toNullSketchArray,
+  flattenBySketchAllClass,
+  metricsWithSketchId,
+  toPercentMetric,
+} from "@seasketch/geoprocessing/client-core";
 import { Collapse } from "../components/Collapse";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 import config, { ReportResult, ReportResultBase } from "../_config";
-import {
-  flattenBySketchAllClass,
-  metricsWithSketchId,
-  toPercentMetric,
-} from "../metrics/clientMetrics";
 
 import existingProtectionsTotals from "../../data/precalc/existingProtectionsTotals.json";
 const existingPrecalcTotals = existingProtectionsTotals as ReportResultBase;

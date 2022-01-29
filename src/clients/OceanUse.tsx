@@ -4,14 +4,14 @@ import {
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
-import { Collapse } from "../components/Collapse";
-import config, { ReportResult, ReportResultBase } from "../_config";
 import {
+  toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
+} from "@seasketch/geoprocessing/client-core";
+import { Collapse } from "../components/Collapse";
+import config, { ReportResult, ReportResultBase } from "../_config";
 import { ClassTable } from "../components/ClassTable";
 import SketchClassTable from "../components/SketchClassTable";
 

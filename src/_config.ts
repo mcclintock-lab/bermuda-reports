@@ -1,12 +1,11 @@
 import {
+  NullSketch,
+  NullSketchCollection,
   DataGroup,
   DataClass,
   Report,
   Metric,
-  MetricGroup,
-} from "../src/metrics/types";
-
-import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
+} from "@seasketch/geoprocessing";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing

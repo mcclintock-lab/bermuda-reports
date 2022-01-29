@@ -4,6 +4,7 @@ import {
   percentWithEdge,
   keyBy,
   toNullSketchArray,
+  nestMetrics,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ResultsCard,
@@ -16,7 +17,6 @@ import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
 import { ReportTableStyled } from "../components/ReportTableStyled";
 import config, { ReportResult } from "../_config";
-import { nestMetrics } from "../metrics/clientMetrics";
 
 const METRIC_NAME = "areaOverlap";
 const PERC_METRIC_NAME = "areaOverlapPerc";

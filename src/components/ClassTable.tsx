@@ -1,8 +1,12 @@
 import React from "react";
-import { percentWithEdge, keyBy } from "@seasketch/geoprocessing/client-core";
+import {
+  DataClass,
+  Metric,
+  percentWithEdge,
+  keyBy,
+} from "@seasketch/geoprocessing/client-core";
 import { Column, Table, LayerToggle } from "@seasketch/geoprocessing/client-ui";
 import { GreenPill } from "../components/Pill";
-import { DataClass, Metric } from "../metrics/types";
 import { ReportTableStyled } from "./ReportTableStyled";
 
 export interface ClassTableProps {

@@ -2,6 +2,10 @@ import React from "react";
 import {
   percentWithEdge,
   toNullSketchArray,
+  firstMatchingMetric,
+  flattenBySketchAllClass,
+  metricsWithSketchId,
+  toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
 import {
   ResultsCard,
@@ -13,12 +17,6 @@ import {
 } from "@seasketch/geoprocessing/client-ui";
 
 import { Collapse } from "../components/Collapse";
-import {
-  firstMatchingMetric,
-  flattenBySketchAllClass,
-  metricsWithSketchId,
-  toPercentMetric,
-} from "../metrics/clientMetrics";
 import config, { ReportResultBase, ReportResult } from "../_config";
 
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
