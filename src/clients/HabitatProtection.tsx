@@ -1,20 +1,21 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
+  SketchClassTable,
   ResultsCard,
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {
+  ReportResult,
+  ReportResultBase,
   toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { Collapse } from "../components/Collapse";
-import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTable";
-import { CategoricalClassTable } from "../components/CategoricalClassTable";
+import config from "../_config";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
@@ -72,12 +73,13 @@ const HabitatProtection = () => {
                   Protection designation count towards meeting this objective.
                 </p>
               </Collapse>
-              <CategoricalClassTable
+              <ClassTable
                 titleText="Nearshore/Platform"
-                layerId={NEARSHORE_METRIC.layerId}
                 rows={nearshoreParentPercMetrics}
-                classes={NEARSHORE_METRIC.classes}
+                dataGroup={NEARSHORE_METRIC}
                 showGoal
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show Nearshore by MPA">
@@ -87,8 +89,10 @@ const HabitatProtection = () => {
               <ClassTable
                 titleText="Offshore"
                 rows={offshoreParentPercMetrics}
-                classes={OFFSHORE_METRIC.classes}
+                dataGroup={OFFSHORE_METRIC}
                 showGoal
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show Offshore by MPA">
@@ -122,7 +126,11 @@ const genNearshoreSketchTable = (data: ReportResult) => {
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={NEARSHORE_METRIC.classes} />
+    <SketchClassTable
+      rows={sketchRows}
+      dataGroup={NEARSHORE_METRIC}
+      formatPerc
+    />
   );
 };
 
@@ -145,7 +153,11 @@ const genOffshoreSketchTable = (data: ReportResult) => {
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={OFFSHORE_METRIC.classes} />
+    <SketchClassTable
+      rows={sketchRows}
+      dataGroup={OFFSHORE_METRIC}
+      formatPerc
+    />
   );
 };
 

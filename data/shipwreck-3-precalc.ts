@@ -2,9 +2,12 @@
 
 import fs from "fs";
 import config from "../src/_config";
-import { FeatureCollection, Polygon } from "@turf/helpers";
-import { ReportResultBase } from "../src/_config";
-import { createMetric } from "@seasketch/geoprocessing";
+import {
+  FeatureCollection,
+  Polygon,
+  ReportResultBase,
+  createMetric,
+} from "@seasketch/geoprocessing";
 
 const DATASET = `WreckHeatmap`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;

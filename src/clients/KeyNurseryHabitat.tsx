@@ -3,7 +3,10 @@ import {
   GroupMetricAgg,
   GroupMetricSketchAgg,
   NullSketch,
+  ReportResult,
+  ReportResultBase,
   percentWithEdge,
+  getIucnCategoryForActivities,
   keyBy,
   capitalize,
   percentGoalWithEdge,
@@ -15,24 +18,22 @@ import {
   flattenByGroupAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
+  ClassTable,
+  Column,
+  Collapse,
+  LayerToggle,
+  IucnLevelCircleRow,
+  IucnLevelPill,
+  ObjectiveStatus,
+  Pill,
+  ReportError,
   ResultsCard,
   Skeleton,
+  SmallReportTableStyled,
   Table,
-  Column,
-  ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-// Import the results type definition from your functions to type-check your
-// component render functions
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { getCategoryForActivities } from "../util/iucnProtectionLevel";
-import { ObjectiveStatus } from "../components/ObjectiveStatus";
-import { Collapse } from "../components/Collapse";
-import { Pill, LevelPill } from "../components/Pill";
-import { LayerToggle } from "@seasketch/geoprocessing/client-ui";
-import { LevelCircleRow } from "../components/Circle";
-import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
-import { ClassTable } from "../components/ClassTable";
+import config from "../_config";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
 const precalcTotals = habitatNurseryTotals as ReportResultBase;
@@ -77,7 +78,7 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
         ? []
         : JSON.parse(activityProp.value)
       : activityProp.value;
-  const groupId = getCategoryForActivities(activities).level;
+  const groupId = getIucnCategoryForActivities(activities).level;
 
   // Class metrics
   const classPercMetrics = toPercentMetric(
@@ -109,7 +110,9 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
       <ClassTable
         titleText="Type"
         rows={Object.values(classPercMetrics)}
-        classes={METRIC.classes}
+        dataGroup={METRIC}
+        showLayerToggle
+        formatPerc
       />
       {genHelp()}
     </>
@@ -183,9 +186,10 @@ const genSketchTable = (
     {
       Header: "MPA",
       accessor: (row) => (
-        <LevelCircleRow
+        <IucnLevelCircleRow
           level={row.groupId}
           rowText={sketchesById[row.sketchId].properties.name}
+          circleText={capitalize(row.groupId[0])}
         />
       ),
     },
@@ -194,9 +198,9 @@ const genSketchTable = (
       Header: "Total",
       accessor: (row) => {
         return (
-          <LevelPill level={row.groupId}>
+          <IucnLevelPill level={row.groupId}>
             {percentWithEdge(row.percValue as number)}
-          </LevelPill>
+          </IucnLevelPill>
         );
       },
     },
@@ -226,7 +230,7 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
     {
       Header: "By Protection Level:",
       accessor: (row) => (
-        <LevelCircleRow
+        <IucnLevelCircleRow
           level={row.groupId}
           circleText={`${row.numSketches}`}
           rowText={
@@ -243,9 +247,9 @@ const genGroupTable = (groupRows: GroupMetricAgg[]) => {
       Header: "Total",
       accessor: (row) => {
         return (
-          <LevelPill level={row.groupId}>
+          <IucnLevelPill level={row.groupId}>
             {percentWithEdge(row.percValue as number)}
-          </LevelPill>
+          </IucnLevelPill>
         );
       },
     },
@@ -362,8 +366,8 @@ const genNetworkObjective = (
       <div style={{ display: "flex", paddingTop: 15 }}>
         <span style={{ paddingBottom: 15, width: 100 }}>So far:</span>
         <span>
-          <LevelPill level="full">{fullPercDisplay} Full</LevelPill> +{" "}
-          <LevelPill level="high">{highPercDisplay} High</LevelPill> ={" "}
+          <IucnLevelPill level="full">{fullPercDisplay} Full</IucnLevelPill> +{" "}
+          <IucnLevelPill level="high">{highPercDisplay} High</IucnLevelPill> ={" "}
           <Pill>{combinedPercDisplay}</Pill>
         </span>
       </div>

@@ -3,7 +3,13 @@ import {
   NullSketch,
   GroupMetricAgg,
   GroupMetricSketchAgg,
+  ReportResult,
+  ReportResultBase,
   capitalize,
+  iucnCategoryNames,
+  iucnCategoriesMap,
+  IucnCategory,
+  iucnLevels,
   keyBy,
   percentWithEdge,
   percentGoalWithEdge,
@@ -14,24 +20,23 @@ import {
   flattenByGroupSketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
-  ResultsCard,
-  Table,
+  Collapse,
   Column,
+  IucnDesignationTable,
+  IucnLevelPill,
+  IucnLevelCircleRow,
+  IucnMatrix,
+  ObjectiveStatus,
+  Pill,
   ReportError,
+  ResultsCard,
+  SmallReportTableStyled,
+  Table,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { ObjectiveStatus } from "../components/ObjectiveStatus";
-import { Pill, LevelPill } from "../components/Pill";
-import { LevelCircleRow } from "../components/Circle";
-import { IucnMatrix } from "../components/IucnMatrix";
-import { Collapse } from "../components/Collapse";
-import { IucnDesignationTable } from "../components/IucnDesignationTable";
-import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
 
 // Import type definitions from function
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { iucnCategories, IucnCategory } from "../util/iucnProtectionLevel";
-import { categories, levels } from "../util/iucnProtectionLevel";
+import config from "../_config";
 
 import protectionTotals from "../../data/precalc/protectionTotals.json";
 const precalcTotals = protectionTotals as ReportResultBase;
@@ -63,11 +68,11 @@ const singleProtection = (data: ReportResult) => {
     data.metrics,
     (m) =>
       !!m.groupId &&
-      categories.includes(m.groupId) &&
+      iucnCategoryNames.includes(m.groupId) &&
       m.sketchId === data.sketch.properties.id
   );
   const category: IucnCategory =
-    iucnCategories[categoryMetric.groupId as string];
+    iucnCategoriesMap[categoryMetric.groupId as string];
 
   return (
     <>
@@ -91,7 +96,7 @@ const networkProtection = (data: ReportResult) => {
       (m) =>
         m.metricId === METRIC.metricId &&
         m.groupId &&
-        categories.includes(m.groupId)
+        iucnCategoryNames.includes(m.groupId)
     );
     groupCategoryAggs = flattenByGroupAllClass(
       data.sketch,
@@ -105,7 +110,7 @@ const networkProtection = (data: ReportResult) => {
     );
 
     const levelMetrics = data.metrics.filter(
-      (m) => m.groupId && levels.includes(m.groupId)
+      (m) => m.groupId && iucnLevels.includes(m.groupId)
     );
     groupLevelAggs = flattenByGroupAllClass(
       data.sketch,
@@ -200,8 +205,8 @@ const genNetworkObjective = (
       <div style={{ display: "flex", paddingTop: 15 }}>
         <span style={{ paddingBottom: 15, width: 100 }}>So far:</span>
         <span>
-          <LevelPill level="full">{fullPercDisplay} Full</LevelPill> +{" "}
-          <LevelPill level="high">{highPercDisplay} High</LevelPill> ={" "}
+          <IucnLevelPill level="full">{fullPercDisplay} Full</IucnLevelPill> +{" "}
+          <IucnLevelPill level="high">{highPercDisplay} High</IucnLevelPill> ={" "}
           <Pill>{combinedPercDisplay}</Pill>
         </span>
       </div>
@@ -361,7 +366,7 @@ const genGroupLevelTable = (levelAggs: GroupMetricAgg[]) => {
     {
       Header: "Based on allowed activities, this plan contains:",
       accessor: (row) => (
-        <LevelCircleRow
+        <IucnLevelCircleRow
           level={row.groupId}
           circleText={`${row.numSketches}`}
           rowText={
@@ -377,9 +382,9 @@ const genGroupLevelTable = (levelAggs: GroupMetricAgg[]) => {
       Header: "% EEZ",
       accessor: (row) => {
         return (
-          <LevelPill level={row.groupId}>
+          <IucnLevelPill level={row.groupId}>
             {percentWithEdge(row.percValue as number)}
-          </LevelPill>
+          </IucnLevelPill>
         );
       },
     },
@@ -404,7 +409,7 @@ const genGroupCategoryTable = (
     {
       Header: "  ",
       accessor: (row, index) => (
-        <LevelCircleRow
+        <IucnLevelCircleRow
           level={levelAggs[index].groupId}
           circleText={row.numSketches}
         />
@@ -434,7 +439,7 @@ const genGroupCategoryTable = (
 
 const genCategoryRowText = (categoryAgg: GroupMetricAgg) => {
   let rowText: string = "";
-  const cats = iucnCategories[categoryAgg.groupId].categories;
+  const cats = iucnCategoriesMap[categoryAgg.groupId].categories;
   if (cats) {
     return cats
       .map((cat, index) => {
@@ -465,7 +470,7 @@ const genCategoryRowText = (categoryAgg: GroupMetricAgg) => {
         <span>
           {categoryAgg.groupId !== "None" && <Pill>{categoryAgg.groupId}</Pill>}
         </span>{" "}
-        <span>{iucnCategories[categoryAgg.groupId].name}</span>
+        <span>{iucnCategoriesMap[categoryAgg.groupId].name}</span>
       </span>
     );
   }
@@ -479,12 +484,20 @@ const genSketchTable = (
   const columns: Column<GroupMetricSketchAgg>[] = [
     {
       Header: "MPA",
-      accessor: (row, index) => (
-        <LevelCircleRow
-          level={sketchLevelAggs[index].groupId}
-          rowText={sketchesById[row.sketchId].properties.name}
-        />
-      ),
+      accessor: (row) => {
+        const theAgg = sketchLevelAggs.find(
+          (agg) => agg.sketchId === row.sketchId
+        );
+        if (!theAgg)
+          throw new Error(`Agg metric not found for sketch ${row.sketchId}`);
+        return (
+          <IucnLevelCircleRow
+            level={theAgg.groupId}
+            rowText={sketchesById[row.sketchId].properties.name}
+            circleText={capitalize(theAgg.groupId[0])}
+          />
+        );
+      },
     },
     {
       Header: "Category",

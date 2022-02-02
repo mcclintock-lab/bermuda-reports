@@ -1,9 +1,10 @@
 import {
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Polygon,
-  Metric,
   toSketchArray,
   toNullSketch,
   overlapRasterClass,
@@ -14,7 +15,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 const REPORT = config.habitatProtection;
 const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;

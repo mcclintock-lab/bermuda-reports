@@ -1,10 +1,11 @@
 import {
   Sketch,
-  SketchCollection,
   Feature,
-  Polygon,
   GeoprocessingHandler,
   Metric,
+  Polygon,
+  ReportResult,
+  SketchCollection,
   toNullSketch,
   overlapArea,
   overlapSubarea,
@@ -12,7 +13,7 @@ import {
   sortMetrics,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
-import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
+import config, { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 import bbox from "@turf/bbox";
 
 const CONFIG = config;

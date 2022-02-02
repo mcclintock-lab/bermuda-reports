@@ -1,10 +1,11 @@
 import {
+  Feature,
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Feature,
-  Polygon,
-  Metric,
   toNullSketch,
   rekeyMetrics,
   sortMetrics,
@@ -12,7 +13,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 // Multi-class vector dataset
 export const nameProperty = "Name";

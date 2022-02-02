@@ -1,15 +1,19 @@
 // Run inside workspace
 // Precalculates overall stats used by habitat function
 
-import fs from "fs";
-import config from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
 // @ts-ignore
 import parseGeoraster from "georaster";
 import fetch from "node-fetch";
-import { Metric, createMetric, rekeyMetrics } from "@seasketch/geoprocessing";
-import { ReportResultBase } from "../src/_config";
+import fs from "fs";
+import config from "../src/_config";
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 
 const REPORT = config.speciesProtection;
 const METRIC = REPORT.metrics.valueOverlap;

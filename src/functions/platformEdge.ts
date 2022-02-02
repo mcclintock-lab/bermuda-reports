@@ -1,10 +1,12 @@
 import {
+  ReportResult,
   Sketch,
   SketchCollection,
   Polygon,
   Feature,
   Metric,
   GeoprocessingHandler,
+  getJsonUserAttribute,
   toSketchArray,
   toNullSketch,
   isSketchCollection,
@@ -15,9 +17,8 @@ import {
   sortMetrics,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
-import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 import { getBreakGroup } from "../util/getBreakGroup";
 
 const REPORT = config.platformEdge;

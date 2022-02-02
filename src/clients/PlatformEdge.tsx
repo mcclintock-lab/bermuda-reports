@@ -4,6 +4,8 @@ import {
   Metric,
   GroupMetricAgg,
   GroupMetricSketchAgg,
+  ReportResult,
+  ReportResultBase,
   percentWithEdge,
   capitalize,
   toNullSketchArray,
@@ -16,25 +18,21 @@ import {
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
 import {
-  ResultsCard,
-  Skeleton,
-  ReportError,
-  Table,
+  Collapse,
   Column,
+  GroupCircleRow,
   KeySection,
   LayerToggle,
+  ResultsCard,
+  ReportError,
+  Skeleton,
+  SmallReportTableStyled,
+  Table,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import { getBreakGroup } from "../util/getBreakGroup";
-import { GroupCircleRow } from "../components/Circle";
-import { Collapse } from "../components/Collapse";
 
-import config, {
-  ReportResultBase,
-  ReportResult,
-  EdgeSketchMetric,
-} from "../_config";
-import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
+import config, { EdgeSketchMetric } from "../_config";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 const precalcTotals = platformEdgeTotals as ReportResultBase;

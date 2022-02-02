@@ -1,17 +1,18 @@
 import {
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
   Feature,
-  Polygon,
+  GeoprocessingHandler,
   Metric,
+  Polygon,
+  ReportResult,
   toNullSketch,
   overlapFeatures,
   rekeyMetrics,
   sortMetrics,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 
 const REPORT = config.habitatRestore;

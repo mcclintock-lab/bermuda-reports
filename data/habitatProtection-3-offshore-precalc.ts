@@ -3,9 +3,13 @@
 
 import fs from "fs";
 import config from "../src/_config";
-import { Metric, createMetric, rekeyMetrics } from "@seasketch/geoprocessing";
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 import { loadCogWindow } from "../src/datasources/cog";
-import { ReportResultBase } from "../src/_config";
 // @ts-ignore
 import geoblaze from "geoblaze";
 

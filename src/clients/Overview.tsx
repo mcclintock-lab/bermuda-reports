@@ -1,10 +1,12 @@
 import React, { FunctionComponent } from "react";
-import { Card } from "@seasketch/geoprocessing/client-ui";
-import { InfoStatus } from "../components/InfoStatus";
+import {
+  Card,
+  InfoStatus,
+  IucnActivitiesCard,
+} from "@seasketch/geoprocessing/client-ui";
 import SizeCard from "./SizeCard";
 import ProtectionCard from "./ProtectionCard";
 import ExistingProtections from "./ExistingProtections";
-import AttributesCard from "./AttributesCard";
 
 interface ReportProps {
   hidden: boolean;
@@ -27,7 +29,7 @@ const Overview: FunctionComponent<ReportProps> = ({ hidden }) => {
       <SizeCard />
       <ProtectionCard />
       <ExistingProtections />
-      <AttributesCard />
+      <IucnActivitiesCard />
     </div>
   );
 };

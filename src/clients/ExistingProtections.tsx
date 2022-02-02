@@ -1,19 +1,22 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
+  SketchClassTable,
   ResultsCard,
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {
+  ReportResult,
+  ReportResultBase,
   toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
-import { Collapse } from "../components/Collapse";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
-import config, { ReportResult, ReportResultBase } from "../_config";
+
+import config from "../_config";
 
 import existingProtectionsTotals from "../../data/precalc/existingProtectionsTotals.json";
 const existingPrecalcTotals = existingProtectionsTotals as ReportResultBase;
@@ -51,7 +54,9 @@ const ExistingProtections = () => {
               <ClassTable
                 titleText="Area Type"
                 rows={parentMetrics}
-                classes={METRIC.classes}
+                dataGroup={METRIC}
+                formatPerc
+                showLayerToggle
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -80,7 +85,7 @@ const genSketchTable = (data: ReportResult) => {
     METRIC.classes,
     childSketches
   );
-  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
+  return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
 
 const LoadingSkeleton = () => (

@@ -1,10 +1,13 @@
 import {
+  Feature,
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Feature,
-  Polygon,
-  Metric,
+  iucnLevels,
+  getIucnLevelNameForSketches,
   toSketchArray,
   toNullSketch,
   overlapFeaturesGroupMetrics,
@@ -14,9 +17,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
-import { levels } from "../util/iucnProtectionLevel";
-import { getLevelNameForSketches } from "../util/iucnHelpers";
+import config from "../_config";
 
 const REPORT = config.habitatNursery;
 const METRIC = REPORT.metrics.areaOverlap;
@@ -59,13 +60,13 @@ export async function habitatNursery(
   );
 
   // Calculate group metrics - from individual sketch metrics
-  const sketchCategoryMap = getLevelNameForSketches(sketches);
+  const sketchCategoryMap = getIucnLevelNameForSketches(sketches);
   const metricToGroup = (sketchMetric: Metric) =>
     sketchCategoryMap[sketchMetric.sketchId!];
 
   const groupMetrics = await overlapFeaturesGroupMetrics({
     metricId: METRIC.metricId,
-    groupIds: levels,
+    groupIds: iucnLevels,
     sketch,
     metricToGroup,
     metrics: classMetrics,

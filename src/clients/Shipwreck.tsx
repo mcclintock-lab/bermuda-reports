@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  ReportResultBase,
+  ReportResult,
   percentWithEdge,
   toNullSketchArray,
   firstMatchingMetric,
@@ -8,19 +10,18 @@ import {
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
 import {
-  ResultsCard,
-  Skeleton,
+  Collapse,
   KeySection,
-  useSketchProperties,
-  ReportError,
   LayerToggle,
+  ResultsCard,
+  ReportError,
+  Skeleton,
+  SketchClassTable,
+  useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 
-import { Collapse } from "../components/Collapse";
-import config, { ReportResultBase, ReportResult } from "../_config";
-
+import config from "../_config";
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
-import SketchClassTable from "../components/SketchClassTable";
 const precalcTotals = WreckHeatmapTotals as ReportResultBase;
 
 const REPORT = config.shipwreck;
@@ -91,11 +92,7 @@ const genSketchTable = (data: ReportResult) => {
 
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable
-        rows={sketchRows}
-        classes={METRIC.classes}
-        usePerc={false}
-      />
+      <SketchClassTable rows={sketchRows} dataGroup={METRIC} />
     </Collapse>
   );
 };

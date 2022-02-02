@@ -1,19 +1,21 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
   ResultsCard,
   Skeleton,
+  SketchClassTable,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {
+  ReportResult,
+  ReportResultBase,
   toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
-import { Collapse } from "../components/Collapse";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
+import config from "../_config";
 
 import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
 const precalcTotals = oceanUseTotals as ReportResultBase;
@@ -74,9 +76,11 @@ const OceanUse = () => {
 
               <ClassTable
                 titleText="Sector"
-                percText="% Value In Plan"
+                valueColText="% Value In Plan"
                 rows={parentMetrics}
-                classes={METRIC.classes}
+                dataGroup={METRIC}
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -102,7 +106,7 @@ const genSketchTable = (data: ReportResult) => {
     childSketches
   );
 
-  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
+  return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
 
 const LoadingSkeleton = () => (

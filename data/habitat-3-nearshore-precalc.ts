@@ -7,11 +7,11 @@ import geoblaze from "geoblaze";
 import {
   Georaster,
   Metric,
+  ReportResultBase,
   createMetric,
   rekeyMetrics,
 } from "@seasketch/geoprocessing";
 import { classIdMapping } from "@seasketch/geoprocessing";
-import { ReportResultBase } from "../src/_config";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.nearshoreAreaOverlap;

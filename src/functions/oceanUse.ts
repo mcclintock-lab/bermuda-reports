@@ -1,9 +1,10 @@
 import {
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Polygon,
-  Metric,
   toNullSketch,
   rekeyMetrics,
   sortMetrics,
@@ -11,7 +12,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 const REPORT = config.oceanUse;
 const METRIC = REPORT.metrics.valueOverlap;

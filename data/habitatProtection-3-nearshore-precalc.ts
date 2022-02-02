@@ -5,13 +5,13 @@ import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import {
-  Metric,
   Georaster,
+  Metric,
+  ReportResultBase,
   classIdMapping,
   createMetric,
   rekeyMetrics,
 } from "@seasketch/geoprocessing";
-import { ReportResultBase } from "../src/_config";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.nearshoreAreaOverlap;

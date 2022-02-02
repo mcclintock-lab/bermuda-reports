@@ -1,19 +1,21 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
   ResultsCard,
   Skeleton,
+  SketchClassTable,
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {
+  ReportResultBase,
+  ReportResult,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
-import { Collapse } from "../components/Collapse";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
+import config from "../_config";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
@@ -80,9 +82,11 @@ const HabitatRestoration = () => {
               <ReportError>
                 <ClassTable
                   titleText="RestorationType"
-                  percText="% Area Within Plan"
+                  valueColText="% Area Within Plan"
                   rows={parentMetrics}
-                  classes={METRIC.classes}
+                  dataGroup={METRIC}
+                  showLayerToggle
+                  formatPerc
                 />
                 {isCollection && genSketchTable(data)}
               </ReportError>
@@ -112,7 +116,7 @@ const genSketchTable = (data: ReportResult) => {
   );
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
+      <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />
     </Collapse>
   );
 };
