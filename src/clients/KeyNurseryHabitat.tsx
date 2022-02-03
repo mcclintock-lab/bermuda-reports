@@ -46,11 +46,7 @@ const KeyNurseryHabitat = () => {
 
   return (
     <>
-      <ResultsCard
-        title="Key Nursery Habitat"
-        functionName="habitatNursery"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Key Nursery Habitat" functionName="habitatNursery">
         {(data: ReportResult) => {
           return (
             <ReportError>
@@ -452,12 +448,6 @@ const genHelp = () => (
       <p></p>
     </Collapse>
   </>
-);
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
 );
 
 export default KeyNurseryHabitat;

@@ -30,11 +30,7 @@ const METRIC = REPORT.metrics.valueOverlap;
 const Shipwreck = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
   return (
-    <ResultsCard
-      title="Shipwrecks"
-      functionName="shipwreck"
-      skeleton={<LoadingSkeleton />}
-    >
+    <ResultsCard title="Shipwrecks" functionName="shipwreck">
       {(data: ReportResult) => {
         const parentShipwreckMetric = firstMatchingMetric(
           data.metrics,
@@ -96,11 +92,5 @@ const genSketchTable = (data: ReportResult) => {
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default Shipwreck;

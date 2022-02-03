@@ -27,11 +27,7 @@ const SpeciesProtection = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Species Protection"
-        functionName="reefIndex"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Species Protection" functionName="reefIndex">
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const topMetrics = metricsWithSketchId(
@@ -101,11 +97,5 @@ const genSketchTable = (data: ReportResult) => {
 
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default SpeciesProtection;

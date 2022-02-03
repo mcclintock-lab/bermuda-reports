@@ -28,11 +28,7 @@ const RenewableEnergy = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Renewable Energy"
-        functionName="renewable"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Renewable Energy" functionName="renewable">
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
@@ -105,11 +101,5 @@ const genSketchTable = (data: ReportResult) => {
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default RenewableEnergy;

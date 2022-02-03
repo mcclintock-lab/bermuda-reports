@@ -27,11 +27,7 @@ const OceanUse = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Ocean Use"
-        functionName="oceanUse"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Ocean Use" functionName="oceanUse">
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
@@ -108,11 +104,5 @@ const genSketchTable = (data: ReportResult) => {
 
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default OceanUse;

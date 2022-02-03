@@ -29,11 +29,7 @@ const HabitatRestoration = () => {
 
   return (
     <>
-      <ResultsCard
-        title="Habitat Restoration"
-        functionName="habitatRestore"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Habitat Restoration" functionName="habitatRestore">
         {(data: ReportResult) => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
@@ -116,15 +112,10 @@ const genSketchTable = (data: ReportResult) => {
   );
   return (
     <Collapse title="Show by MPA">
+      Foo
       <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default HabitatRestoration;

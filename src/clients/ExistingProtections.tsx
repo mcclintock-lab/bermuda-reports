@@ -32,7 +32,6 @@ const ExistingProtections = () => {
       <ResultsCard
         title="Existing Protections"
         functionName="existingProtections"
-        skeleton={<LoadingSkeleton />}
       >
         {(data: ReportResult) => {
           // Collection or single sketch
@@ -87,11 +86,5 @@ const genSketchTable = (data: ReportResult) => {
   );
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default ExistingProtections;

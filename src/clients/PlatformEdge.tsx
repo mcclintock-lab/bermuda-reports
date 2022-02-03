@@ -58,7 +58,6 @@ const PlatformEdge = () => {
     <ResultsCard
       title="Pelagic Fisheries Access - Platform Edge"
       functionName="platformEdge"
-      skeleton={<LoadingSkeleton />}
     >
       {(data: ReportResult) => {
         const sketches = toNullSketchArray(data.sketch);
@@ -354,11 +353,5 @@ const genSketchTable = (
     </SmallReportTableStyled>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default PlatformEdge;

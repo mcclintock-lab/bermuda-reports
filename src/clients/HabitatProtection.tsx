@@ -31,11 +31,7 @@ const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Habitat Protection"
-        functionName="habitatProtection"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Habitat Protection" functionName="habitatProtection">
         {(data: ReportResult) => {
           // Collection top-level or single sketch.
           const nearshoreParentPercMetrics = metricsWithSketchId(
@@ -160,11 +156,5 @@ const genOffshoreSketchTable = (data: ReportResult) => {
     />
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default HabitatProtection;
