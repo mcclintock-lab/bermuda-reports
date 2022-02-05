@@ -1,19 +1,21 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
   ResultsCard,
   Skeleton,
+  SketchClassTable,
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { Collapse } from "../components/Collapse";
-import config, { ReportResult, ReportResultBase } from "../_config";
 import {
+  ReportResultBase,
+  ReportResult,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
+} from "@seasketch/geoprocessing/client-core";
+import config from "../_config";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
@@ -27,11 +29,7 @@ const HabitatRestoration = () => {
 
   return (
     <>
-      <ResultsCard
-        title="Habitat Restoration"
-        functionName="habitatRestore"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Habitat Restoration" functionName="habitatRestore">
         {(data: ReportResult) => {
           // Collection or single sketch
           const parentMetrics = metricsWithSketchId(
@@ -80,9 +78,11 @@ const HabitatRestoration = () => {
               <ReportError>
                 <ClassTable
                   titleText="RestorationType"
-                  percText="% Area Within Plan"
+                  valueColText="% Area Within Plan"
                   rows={parentMetrics}
-                  classes={METRIC.classes}
+                  dataGroup={METRIC}
+                  showLayerToggle
+                  formatPerc
                 />
                 {isCollection && genSketchTable(data)}
               </ReportError>
@@ -112,15 +112,10 @@ const genSketchTable = (data: ReportResult) => {
   );
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
+      Foo
+      <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default HabitatRestoration;

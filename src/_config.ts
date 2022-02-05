@@ -1,12 +1,4 @@
-import {
-  DataGroup,
-  DataClass,
-  Report,
-  Metric,
-  MetricGroup,
-} from "../src/metrics/types";
-
-import { NullSketch, NullSketchCollection } from "@seasketch/geoprocessing";
+import { DataGroup, DataClass, Report, Metric } from "@seasketch/geoprocessing";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing
@@ -24,16 +16,6 @@ export const dataBucketUrl =
 
 export const cogFileSuffix = "_cog.tif";
 export const fgbFileSuffix = ".fgb";
-
-export interface ReportResultBase {
-  metrics: Metric[];
-}
-
-export interface ReportResult {
-  metrics: Metric[];
-  /** The sketch used, without geometry */
-  sketch: NullSketch | NullSketchCollection;
-}
 
 //// OBJECTIVES ////
 
@@ -189,7 +171,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Abyssopelagic",
     display: "Abyssopelagic",
     layerId: "61771f5ae9125f452fe759f8",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Bathypelagic1",
@@ -197,7 +179,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Bathypelagic",
     display: "Bathypelagic",
     layerId: "614df361c33508c1270159f2",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Cold water coral1",
@@ -205,7 +187,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Cold water coral",
     display: "Cold water coral",
     layerId: "614df361c33508c1270159f4",
-    goalPerc: 1,
+    goalValue: 1,
   },
   {
     baseFilename: "Escarpments1",
@@ -213,7 +195,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Escarpments",
     display: "Escarpments",
     layerId: "614df361c33508c1270159f6",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Knolls1",
@@ -221,7 +203,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Knolls",
     display: "Knolls",
     layerId: "614df361c33508c1270159f8",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Pelagic zone 1",
@@ -229,7 +211,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Pelagic zone 1",
     display: "Pelagic zone 1",
     layerId: "614df361c33508c1270159fc",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Pelagic zone 2",
@@ -237,7 +219,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Pelagic zone 2",
     display: "Pelagic zone 2",
     layerId: "614df361c33508c1270159fe",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Pelagic zone 3",
@@ -245,7 +227,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Pelagic zone 3",
     display: "Pelagic zone 3",
     layerId: "614df361c33508c127015a00",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "Plains",
@@ -253,7 +235,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Plains",
     display: "Plains",
     layerId: "614df361c33508c127015a02a",
-    goalPerc: 0.1,
+    goalValue: 0.1,
   },
   {
     baseFilename: "seamounts_buffered",
@@ -261,7 +243,7 @@ const offshoreClasses: DataClass[] = [
     classId: "Seamounts",
     display: "Seamounts",
     layerId: "61771fcde9125f452fe75b01",
-    goalPerc: 0.4,
+    goalValue: 0.4,
   },
 ];
 
@@ -271,79 +253,79 @@ const nearshoreClasses: DataClass[] = [
     numericClassId: 1,
     classId: "Bays and Coast",
     display: "Bays and Coast",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 2,
     classId: "Madracis Reef",
     display: "Madracis Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 3,
     classId: "Montastraea Reef",
     display: "Montastraea Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 4,
     classId: "Diploria Porites Reef",
     display: "Diploria Porites Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 5,
     classId: "Castle Harbour Madracis",
     display: "Castle Harbour Madracis",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 6,
     classId: "Algal Vermetid Reef",
     display: "Algal Vermetid Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 7,
     classId: "Rim Reef",
     display: "Rim Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 8,
     classId: "Main Terrace Reef",
     display: "Main Terrace Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 9,
     classId: "Fore Reef",
     display: "Fore Reef",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 10,
     classId: "Mesophotic",
     display: "Mesophotic",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 11,
     classId: "Rariphotic",
     display: "Rariphotic",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 12,
     classId: "Mesopelagic",
     display: "Mesopelagic",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     numericClassId: 13,
     classId: "Bathypelagic",
     display: "Bathypelagic",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
 ];
 
@@ -396,7 +378,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Coral Cover",
     display: "Coral Cover",
     layerId: "614df361c33508c127015a20",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Coral diversity (richness)1",
@@ -404,7 +386,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Coral Diversity",
     display: "Coral Diversity (richness)",
     layerId: "614df361c33508c127015a22",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Coral recruit density1",
@@ -412,7 +394,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Coral Recruit Density",
     display: "Coral Recruit Density",
     layerId: "614df361c33508c127015a24",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Rugosity1",
@@ -420,7 +402,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Rugosity",
     display: "Rugosity (complexity)",
     layerId: "614df361c33508c127015a26",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Fish diversity (BRUVs data)1",
@@ -428,7 +410,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Fish Diversity BRUV",
     display: "Fish Diversity (BRUV)",
     layerId: "614df361c33508c127015a14",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Fish density1",
@@ -436,7 +418,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Fish Density",
     display: "Fish Density",
     layerId: "614df361c33508c127015a18",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Fish diversity (BREAM data)1",
@@ -444,7 +426,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Fish Diversity BREAM",
     display: "Fish Diversity (BREAM)",
     layerId: "614df361c33508c127015a16",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Fish recruit density1",
@@ -452,7 +434,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Fish Recruit Density",
     display: "Fish Recruit Density",
     layerId: "614df361c33508c127015a1a",
-    goalPerc: 0.2,
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Seagrass Index Value1",
@@ -460,7 +442,7 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Seagrass",
     display: "Seagrass",
     layerId: "614df361c33508c127015a1e",
-    goalPerc: 0.5,
+    goalValue: 0.5,
   },
 ];
 

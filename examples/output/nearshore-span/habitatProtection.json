@@ -28,7 +28,7 @@
       "classId": "Bays and Coast",
       "groupId": null,
       "geographyId": null,
-      "value": 94,
+      "value": 90,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -50,7 +50,7 @@
       "classId": "Diploria Porites Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 4823,
+      "value": 4822,
       "extra": {
         "sketchName": "nearshore-span"
       }

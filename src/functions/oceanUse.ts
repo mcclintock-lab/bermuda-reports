@@ -1,16 +1,18 @@
 import {
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Polygon,
-  loadCogWindow,
   toNullSketch,
+  rekeyMetrics,
+  sortMetrics,
+  overlapRaster,
 } from "@seasketch/geoprocessing";
+import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
-import { overlapRaster } from "../metrics/overlapRaster";
-import { Metric } from "../metrics/types";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 const REPORT = config.oceanUse;
 const METRIC = REPORT.metrics.valueOverlap;

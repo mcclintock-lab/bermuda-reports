@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Coral Cover",
       "groupId": null,
@@ -9,7 +9,7 @@
       "value": 219142.73238153942
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Coral Diversity",
       "groupId": null,
@@ -17,7 +17,7 @@
       "value": 231924.1468730762
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Coral Recruit Density",
       "groupId": null,
@@ -25,7 +25,7 @@
       "value": 73405.34650501853
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Rugosity",
       "groupId": null,
@@ -33,7 +33,7 @@
       "value": 72297.22302708979
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Fish Diversity BRUV",
       "groupId": null,
@@ -41,7 +41,7 @@
       "value": 194649.20529744774
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Fish Density",
       "groupId": null,
@@ -49,7 +49,7 @@
       "value": 253383.98754745774
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Fish Diversity BREAM",
       "groupId": null,
@@ -57,7 +57,7 @@
       "value": 333552.74660776486
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Fish Recruit Density",
       "groupId": null,
@@ -65,7 +65,7 @@
       "value": 75390.81803614809
     },
     {
-      "metricId": "reefIndexValueOverlap",
+      "metricId": "valueOverlap",
       "sketchId": null,
       "classId": "Seagrass",
       "groupId": null,

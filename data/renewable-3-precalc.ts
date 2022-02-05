@@ -2,13 +2,17 @@
 // Precalculates overall stats used by habitat protection function
 
 import fs from "fs";
-import config, { ReportResultBase } from "../src/_config";
-import { Metric } from "../src/metrics/types";
+import config from "../src/_config";
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 // @ts-ignore
 import geoblaze from "geoblaze";
 import { loadCogWindow } from "../src/datasources/cog";
 import { strict as assert } from "assert";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.renewable;
 const METRIC = REPORT.metrics.valueOverlap;

@@ -3,11 +3,13 @@
 
 import fs from "fs";
 import config from "../src/_config";
-
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 import area from "@turf/area";
-import { Metric } from "../src/metrics/types";
-import { ReportResultBase } from "../src/_config";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.habitatNursery;
 const METRIC = REPORT.metrics.areaOverlap;

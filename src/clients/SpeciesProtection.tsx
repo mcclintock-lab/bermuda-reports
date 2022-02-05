@@ -1,20 +1,22 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
   ResultsCard,
   Skeleton,
+  SketchClassTable,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
 import {
+  ReportResult,
+  ReportResultBase,
+  toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { Collapse } from "../components/Collapse";
-import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTable";
+} from "@seasketch/geoprocessing/client-core";
 
+import config from "../_config";
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
 const precalcTotals = reefIndexTotals as ReportResultBase;
 
@@ -25,11 +27,7 @@ const SpeciesProtection = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Species Protection"
-        functionName="reefIndex"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Species Protection" functionName="reefIndex">
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const topMetrics = metricsWithSketchId(
@@ -68,8 +66,10 @@ const SpeciesProtection = () => {
               <ClassTable
                 titleText="Indicator"
                 rows={topMetrics}
-                classes={METRIC.classes}
+                dataGroup={METRIC}
                 showGoal
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -95,13 +95,7 @@ const genSketchTable = (data: ReportResult) => {
     childSketches
   );
 
-  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
+  return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default SpeciesProtection;

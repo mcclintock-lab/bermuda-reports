@@ -4,9 +4,12 @@
 import fs from "fs";
 import config from "../src/_config";
 import area from "@turf/area";
-import { Metric } from "../src/metrics/types";
-import { ReportResultBase } from "../src/_config";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 
 const REPORT = config.habitatRestore;
 const METRIC = REPORT.metrics.areaOverlap;

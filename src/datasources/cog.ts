@@ -5,9 +5,8 @@ import { maxWidth } from "../util/width";
 import buffer from "@turf/buffer";
 import bboxPolygon from "@turf/bbox-polygon";
 import bbox from "@turf/bbox";
-import { featureCollection } from "@turf/helpers";
 
-// COPIED HERE FOR PRECALC NEEDING LOCAL COPY
+// COPIED HERE FOR TS-NODE PRECALC SCRIPT NEEDING LOCAL COPY.  NEEDS FIXED
 
 interface CogOptions {
   noDataValue?: number;

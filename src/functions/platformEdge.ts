@@ -1,23 +1,25 @@
 import {
+  ReportResult,
   Sketch,
   SketchCollection,
   Polygon,
   Feature,
+  Metric,
   GeoprocessingHandler,
-  fgbFetchAll,
+  getJsonUserAttribute,
   toSketchArray,
   toNullSketch,
   isSketchCollection,
   keyBy,
+  overlapFeatures,
+  overlapFeaturesGroupMetrics,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
-import { getJsonUserAttribute } from "../util/getJsonUserAttribute";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import { overlapFeaturesGroupMetrics } from "../metrics/overlapGroupMetrics";
+import config from "../_config";
 import { getBreakGroup } from "../util/getBreakGroup";
-import { Metric } from "../metrics/types";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.platformEdge;
 const METRIC = REPORT.metrics.areaOverlap;

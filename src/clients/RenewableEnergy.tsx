@@ -1,22 +1,22 @@
 import React from "react";
 import {
+  ReportResult,
+  ReportResultBase,
   isNullSketchCollection,
   toNullSketchArray,
-} from "@seasketch/geoprocessing/client-core";
-import {
-  ResultsCard,
-  Skeleton,
-  useSketchProperties,
-} from "@seasketch/geoprocessing/client-ui";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { Collapse } from "../components/Collapse";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
-import {
   flattenBySketchAllClass,
   metricsWithSketchId,
-} from "../metrics/clientMetrics";
-import { toPercentMetric } from "../metrics/clientMetrics";
+  toPercentMetric,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  Collapse,
+  ClassTable,
+  Skeleton,
+  SketchClassTable,
+  ResultsCard,
+  useSketchProperties,
+} from "@seasketch/geoprocessing/client-ui";
+import config from "../_config";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 const precalcTotals = renewableTotals as ReportResultBase;
@@ -28,11 +28,7 @@ const RenewableEnergy = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Renewable Energy"
-        functionName="renewable"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Renewable Energy" functionName="renewable">
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
@@ -71,7 +67,9 @@ const RenewableEnergy = () => {
               <ClassTable
                 titleText="Type"
                 rows={Object.values(parentMetrics)}
-                classes={METRIC.classes}
+                dataGroup={METRIC}
+                showLayerToggle
+                formatPerc
               />
               {isCollection &&
                 isNullSketchCollection(data.sketch) &&
@@ -99,15 +97,9 @@ const genSketchTable = (data: ReportResult) => {
 
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable rows={sketchRows} classes={METRIC.classes} />
+      <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default RenewableEnergy;

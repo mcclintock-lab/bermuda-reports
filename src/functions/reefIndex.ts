@@ -3,14 +3,15 @@ import {
   SketchCollection,
   GeoprocessingHandler,
   Polygon,
-  loadCogWindow,
+  Metric,
   toNullSketch,
+  overlapRaster,
+  rekeyMetrics,
+  sortMetrics,
 } from "@seasketch/geoprocessing";
+import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config, { ReportResult } from "../_config";
-import { overlapRaster } from "../metrics/overlapRaster";
-import { Metric } from "../metrics/types";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
 
 const REPORT = config.speciesProtection;
 const METRIC = REPORT.metrics.valueOverlap;

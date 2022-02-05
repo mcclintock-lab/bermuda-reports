@@ -1,28 +1,27 @@
 import React from "react";
 import {
+  ReportResultBase,
+  ReportResult,
   percentWithEdge,
   toNullSketchArray,
-} from "@seasketch/geoprocessing/client-core";
-import {
-  ResultsCard,
-  Skeleton,
-  KeySection,
-  useSketchProperties,
-  ReportError,
-  LayerToggle,
-} from "@seasketch/geoprocessing/client-ui";
-
-import { Collapse } from "../components/Collapse";
-import {
   firstMatchingMetric,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
-import config, { ReportResultBase, ReportResult } from "../_config";
+} from "@seasketch/geoprocessing/client-core";
+import {
+  Collapse,
+  KeySection,
+  LayerToggle,
+  ResultsCard,
+  ReportError,
+  Skeleton,
+  SketchClassTable,
+  useSketchProperties,
+} from "@seasketch/geoprocessing/client-ui";
 
+import config from "../_config";
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
-import SketchClassTable from "../components/SketchClassTable";
 const precalcTotals = WreckHeatmapTotals as ReportResultBase;
 
 const REPORT = config.shipwreck;
@@ -31,11 +30,7 @@ const METRIC = REPORT.metrics.valueOverlap;
 const Shipwreck = () => {
   const [{ isCollection, ...rest }] = useSketchProperties();
   return (
-    <ResultsCard
-      title="Shipwrecks"
-      functionName="shipwreck"
-      skeleton={<LoadingSkeleton />}
-    >
+    <ResultsCard title="Shipwrecks" functionName="shipwreck">
       {(data: ReportResult) => {
         const parentShipwreckMetric = firstMatchingMetric(
           data.metrics,
@@ -93,19 +88,9 @@ const genSketchTable = (data: ReportResult) => {
 
   return (
     <Collapse title="Show by MPA">
-      <SketchClassTable
-        rows={sketchRows}
-        classes={METRIC.classes}
-        usePerc={false}
-      />
+      <SketchClassTable rows={sketchRows} dataGroup={METRIC} />
     </Collapse>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default Shipwreck;

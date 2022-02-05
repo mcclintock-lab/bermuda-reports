@@ -1,17 +1,19 @@
 import {
+  Feature,
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  GeoprocessingHandler,
-  Feature,
-  Polygon,
-  fgbFetchAll,
   toNullSketch,
+  rekeyMetrics,
+  sortMetrics,
+  overlapFeatures,
 } from "@seasketch/geoprocessing";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import { Metric } from "../metrics/types";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 // Multi-class vector dataset
 export const nameProperty = "Name";

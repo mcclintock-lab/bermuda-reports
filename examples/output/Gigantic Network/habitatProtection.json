@@ -74,7 +74,7 @@
       "classId": "Bays and Coast",
       "groupId": null,
       "geographyId": null,
-      "value": 11154,
+      "value": 11318,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -96,7 +96,7 @@
       "classId": "Bays and Coast",
       "groupId": null,
       "geographyId": null,
-      "value": 11154,
+      "value": 11318,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -142,7 +142,7 @@
       "classId": "Diploria Porites Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 41977,
+      "value": 41973,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -164,7 +164,7 @@
       "classId": "Diploria Porites Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 41977,
+      "value": 41973,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

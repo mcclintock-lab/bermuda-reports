@@ -4,11 +4,14 @@ import config from "../src/_config";
 import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
-import { Georaster } from "@seasketch/geoprocessing";
-import { groupClassIdMapping } from "../src/datasources/helpers";
-import { Metric } from "../src/metrics/types";
-import { ReportResultBase } from "../src/_config";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
+import {
+  Georaster,
+  Metric,
+  ReportResultBase,
+  classIdMapping,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.nearshoreAreaOverlap;
@@ -20,7 +23,7 @@ async function main() {
   try {
     const raster = await loadCogWindow(url, {}); // Load wole raster
     const metrics: Metric[] = await countByClass(raster, {
-      classIdToName: groupClassIdMapping(METRIC),
+      classIdToName: classIdMapping(METRIC.classes),
     });
 
     const result: ReportResultBase = {

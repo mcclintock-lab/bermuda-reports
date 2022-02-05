@@ -1,39 +1,38 @@
 import React from "react";
 import {
+  NullSketch,
+  Metric,
+  GroupMetricAgg,
+  GroupMetricSketchAgg,
+  ReportResult,
+  ReportResultBase,
   percentWithEdge,
   capitalize,
   toNullSketchArray,
   keyBy,
   isSketchCollection,
-  NullSketch,
-} from "@seasketch/geoprocessing/client-core";
-import {
-  ResultsCard,
-  Skeleton,
-  KeySection,
-  LayerToggle,
-  useSketchProperties,
-  ReportError,
-  Table,
-  Column,
-} from "@seasketch/geoprocessing/client-ui";
-import { getBreakGroup } from "../util/getBreakGroup";
-import { GroupCircleRow } from "../components/Circle";
-import { Metric, GroupMetricAgg, GroupMetricSketchAgg } from "../metrics/types";
-import { Collapse } from "../components/Collapse";
-import {
   firstMatchingMetric,
   flattenByGroupAllClass,
   flattenByGroupSketchAllClass,
   metricsForSketch,
-} from "../metrics/clientMetrics";
-import config, {
-  ReportResultBase,
-  ReportResult,
-  EdgeSketchMetric,
-} from "../_config";
-import { SmallReportTableStyled } from "../components/SmallReportTableStyled";
-import { toPercentMetric } from "../metrics/clientMetrics";
+  toPercentMetric,
+} from "@seasketch/geoprocessing/client-core";
+import {
+  Collapse,
+  Column,
+  GroupCircleRow,
+  KeySection,
+  LayerToggle,
+  ResultsCard,
+  ReportError,
+  Skeleton,
+  SmallReportTableStyled,
+  Table,
+  useSketchProperties,
+} from "@seasketch/geoprocessing/client-ui";
+import { getBreakGroup } from "../util/getBreakGroup";
+
+import config, { EdgeSketchMetric } from "../_config";
 
 import platformEdgeTotals from "../../data/precalc/platformEdgeTotals.json";
 const precalcTotals = platformEdgeTotals as ReportResultBase;
@@ -59,7 +58,6 @@ const PlatformEdge = () => {
     <ResultsCard
       title="Pelagic Fisheries Access - Platform Edge"
       functionName="platformEdge"
-      skeleton={<LoadingSkeleton />}
     >
       {(data: ReportResult) => {
         const sketches = toNullSketchArray(data.sketch);
@@ -355,11 +353,5 @@ const genSketchTable = (
     </SmallReportTableStyled>
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default PlatformEdge;

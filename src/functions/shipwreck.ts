@@ -4,13 +4,14 @@ import {
   GeoprocessingHandler,
   Feature,
   Polygon,
-  fgbFetchAll,
+  Metric,
   toNullSketch,
+  rekeyMetrics,
+  sortMetrics,
+  overlapFeatures,
 } from "@seasketch/geoprocessing";
+import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
-import { overlapFeatures } from "../metrics/overlapFeatures";
-import { Metric } from "../metrics/types";
 import config, { ReportResult } from "../_config";
 
 export const shipwreckSumProperty = "NumberOfRe";

@@ -1,19 +1,22 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
+  SketchClassTable,
   ResultsCard,
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
-import { Collapse } from "../components/Collapse";
-import { ClassTable } from "../components/ClassTable";
-import SketchClassTable from "../components/SketchClassTable";
-import config, { ReportResult, ReportResultBase } from "../_config";
 import {
+  ReportResult,
+  ReportResultBase,
+  toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
+} from "@seasketch/geoprocessing/client-core";
+
+import config from "../_config";
 
 import existingProtectionsTotals from "../../data/precalc/existingProtectionsTotals.json";
 const existingPrecalcTotals = existingProtectionsTotals as ReportResultBase;
@@ -29,7 +32,6 @@ const ExistingProtections = () => {
       <ResultsCard
         title="Existing Protections"
         functionName="existingProtections"
-        skeleton={<LoadingSkeleton />}
       >
         {(data: ReportResult) => {
           // Collection or single sketch
@@ -51,7 +53,9 @@ const ExistingProtections = () => {
               <ClassTable
                 titleText="Area Type"
                 rows={parentMetrics}
-                classes={METRIC.classes}
+                dataGroup={METRIC}
+                formatPerc
+                showLayerToggle
               />
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
@@ -80,13 +84,7 @@ const genSketchTable = (data: ReportResult) => {
     METRIC.classes,
     childSketches
   );
-  return <SketchClassTable rows={sketchRows} classes={METRIC.classes} />;
+  return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default ExistingProtections;

@@ -1,20 +1,21 @@
 import React from "react";
 import {
+  Collapse,
+  ClassTable,
+  SketchClassTable,
   ResultsCard,
   Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
-import config, { ReportResult, ReportResultBase } from "../_config";
-import { Collapse } from "../components/Collapse";
 import {
+  ReportResult,
+  ReportResultBase,
+  toNullSketchArray,
   flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
-} from "../metrics/clientMetrics";
-import SketchClassTable from "../components/SketchClassTable";
-import { ClassTable } from "../components/ClassTable";
-import { CategoricalClassTable } from "../components/CategoricalClassTable";
+} from "@seasketch/geoprocessing/client-core";
+import config from "../_config";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
@@ -30,11 +31,7 @@ const HabitatProtection = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard
-        title="Habitat Protection"
-        functionName="habitatProtection"
-        skeleton={<LoadingSkeleton />}
-      >
+      <ResultsCard title="Habitat Protection" functionName="habitatProtection">
         {(data: ReportResult) => {
           // Collection top-level or single sketch.
           const nearshoreParentPercMetrics = metricsWithSketchId(
@@ -72,12 +69,13 @@ const HabitatProtection = () => {
                   Protection designation count towards meeting this objective.
                 </p>
               </Collapse>
-              <CategoricalClassTable
+              <ClassTable
                 titleText="Nearshore/Platform"
-                layerId={NEARSHORE_METRIC.layerId}
                 rows={nearshoreParentPercMetrics}
-                classes={NEARSHORE_METRIC.classes}
+                dataGroup={NEARSHORE_METRIC}
                 showGoal
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show Nearshore by MPA">
@@ -87,8 +85,10 @@ const HabitatProtection = () => {
               <ClassTable
                 titleText="Offshore"
                 rows={offshoreParentPercMetrics}
-                classes={OFFSHORE_METRIC.classes}
+                dataGroup={OFFSHORE_METRIC}
                 showGoal
+                showLayerToggle
+                formatPerc
               />
               {isCollection && (
                 <Collapse title="Show Offshore by MPA">
@@ -122,7 +122,11 @@ const genNearshoreSketchTable = (data: ReportResult) => {
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={NEARSHORE_METRIC.classes} />
+    <SketchClassTable
+      rows={sketchRows}
+      dataGroup={NEARSHORE_METRIC}
+      formatPerc
+    />
   );
 };
 
@@ -145,14 +149,12 @@ const genOffshoreSketchTable = (data: ReportResult) => {
     subSketches
   );
   return (
-    <SketchClassTable rows={sketchRows} classes={OFFSHORE_METRIC.classes} />
+    <SketchClassTable
+      rows={sketchRows}
+      dataGroup={OFFSHORE_METRIC}
+      formatPerc
+    />
   );
 };
-
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton style={{}}>&nbsp;</Skeleton>
-  </div>
-);
 
 export default HabitatProtection;

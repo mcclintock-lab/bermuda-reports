@@ -1,22 +1,23 @@
 import React from "react";
 import {
+  ReportResult,
   squareMeterToMile,
   percentWithEdge,
   keyBy,
   toNullSketchArray,
+  nestMetrics,
 } from "@seasketch/geoprocessing/client-core";
 import {
-  ResultsCard,
-  LayerToggle,
+  Collapse,
   Column,
+  LayerToggle,
+  ReportTableStyled,
+  ResultsCard,
   Table,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
-import { Collapse } from "../components/Collapse";
 import styled from "styled-components";
-import { ReportTableStyled } from "../components/ReportTableStyled";
-import config, { ReportResult } from "../_config";
-import { nestMetrics } from "../metrics/clientMetrics";
+import config from "../_config";
 
 const METRIC_NAME = "areaOverlap";
 const PERC_METRIC_NAME = "areaOverlapPerc";

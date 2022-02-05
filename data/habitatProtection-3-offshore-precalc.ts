@@ -3,12 +3,15 @@
 
 import fs from "fs";
 import config from "../src/_config";
-import { Metric } from "../src/metrics/types";
-import { ReportResultBase } from "../src/_config";
+import {
+  Metric,
+  ReportResultBase,
+  createMetric,
+  rekeyMetrics,
+} from "@seasketch/geoprocessing";
+import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
-import { loadCogWindow } from "../src/datasources/cog";
-import { createMetric, rekeyMetrics } from "../src/metrics/helpers";
 
 const REPORT = config.habitatProtection;
 const METRIC = REPORT.metrics.offshoreAreaOverlap;

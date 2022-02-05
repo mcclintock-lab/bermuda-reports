@@ -1,21 +1,22 @@
 import {
+  GeoprocessingHandler,
+  Metric,
+  Polygon,
+  ReportResult,
   Sketch,
   SketchCollection,
-  Polygon,
-  GeoprocessingHandler,
+  iucnCategoryNames,
+  iucnLevels,
+  getIucnCategoryNameForSketches,
+  getIucnLevelNameForSketches,
+  overlapArea,
+  overlapAreaGroupMetrics,
+  rekeyMetrics,
+  sortMetrics,
   toSketchArray,
   toNullSketch,
 } from "@seasketch/geoprocessing";
-import { overlapArea } from "../metrics/overlapArea";
-import config, { STUDY_REGION_AREA_SQ_METERS, ReportResult } from "../_config";
-import { Metric } from "../metrics/types";
-import { iucnCategories, levels } from "../util/iucnProtectionLevel";
-import {
-  getCategoryNameForSketches,
-  getLevelNameForSketches,
-} from "../util/iucnHelpers";
-import { overlapAreaGroupMetrics } from "../metrics/overlapGroupMetrics";
-import { rekeyMetrics, sortMetrics } from "../metrics/helpers";
+import config, { STUDY_REGION_AREA_SQ_METERS } from "../_config";
 
 const CONFIG = config;
 const REPORT = CONFIG.protection;
@@ -46,13 +47,13 @@ export async function protection(
   );
 
   // category - group metrics
-  const sketchCategoryMap = getCategoryNameForSketches(sketches);
+  const sketchCategoryMap = getIucnCategoryNameForSketches(sketches);
   const metricToCategory = (sketchMetric: Metric) =>
     sketchCategoryMap[sketchMetric.sketchId!];
 
   const categoryMetrics = await overlapAreaGroupMetrics({
     metricId: METRIC.metricId,
-    groupIds: Object.keys(iucnCategories),
+    groupIds: iucnCategoryNames,
     sketch,
     metricToGroup: metricToCategory,
     metrics: classMetrics,
@@ -62,13 +63,13 @@ export async function protection(
   });
 
   // protection level - group metrics
-  const sketchLevelMap = getLevelNameForSketches(sketches);
+  const sketchLevelMap = getIucnLevelNameForSketches(sketches);
   const metricToLevel = (sketchMetric: Metric) =>
     sketchLevelMap[sketchMetric.sketchId!];
 
   const levelMetrics = await overlapAreaGroupMetrics({
     metricId: METRIC.metricId,
-    groupIds: levels,
+    groupIds: iucnLevels,
     sketch,
     metricToGroup: metricToLevel,
     metrics: classMetrics,
