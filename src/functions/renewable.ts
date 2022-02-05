@@ -4,6 +4,7 @@ import {
   GeoprocessingHandler,
   Polygon,
   Metric,
+  ReportResult,
   toNullSketch,
   overlapRaster,
   rekeyMetrics,
@@ -11,7 +12,7 @@ import {
 } from "@seasketch/geoprocessing";
 import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 const REPORT = config.renewable;
 const METRIC = REPORT.metrics.valueOverlap;
