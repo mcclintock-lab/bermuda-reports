@@ -410,7 +410,7 @@ const genGroupCategoryTable = (
       Header: "  ",
       accessor: (row, index) => (
         <IucnLevelCircleRow
-          level={levelAggs[index].groupId}
+          level={iucnCategoriesMap[categoryAggs[index].groupId].level}
           circleText={row.numSketches}
         />
       ),

@@ -18,5 +18,5 @@ describe("Basic smoke tests", () => {
       const result = await area(example);
       writeResultOutput(result, "area", example.properties.name);
     }
-  });
+  }, 30000);
 });
