@@ -242,7 +242,7 @@ const offshoreClasses: DataClass[] = [
     noDataValue: -3.39999995214436425e38,
     classId: "Seamounts",
     display: "Seamounts",
-    layerId: "61771fcde9125f452fe75b01",
+    layerId: "6192b0fbf1d07d5b37bfe3fd",
     goalValue: 0.4,
   },
 ];
