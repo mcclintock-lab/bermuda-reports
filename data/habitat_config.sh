@@ -11,5 +11,5 @@ declare -a LAYERS=(
   "Pelagic zone 2"
   "Pelagic zone 3"
   "Plains"
-  "seamounts_buffered"
+  "SeamountsAll"
 )

@@ -754,7 +754,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 45,
+      "value": 54977,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -765,7 +765,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 26,
+      "value": 39984,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -776,7 +776,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 54,
+      "value": 57802,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

@@ -1238,7 +1238,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 182,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -1249,7 +1249,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 248,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -1261,7 +1261,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 87,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -1272,7 +1272,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 87,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -1283,7 +1283,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 198,
       "extra": {
         "sketchName": "low MPA"
       }

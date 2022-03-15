@@ -754,7 +754,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 11862,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -766,7 +766,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 11862,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -777,7 +777,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 3776,
       "extra": {
         "sketchName": "MPA inside"
       }

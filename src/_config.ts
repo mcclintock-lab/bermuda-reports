@@ -238,7 +238,7 @@ const offshoreClasses: DataClass[] = [
     goalValue: 0.1,
   },
   {
-    baseFilename: "seamounts_buffered",
+    baseFilename: "SeamountsAll",
     noDataValue: -3.39999995214436425e38,
     classId: "Seamounts",
     display: "Seamounts",

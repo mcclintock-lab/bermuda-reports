@@ -754,7 +754,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 289,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -765,7 +765,7 @@
       "classId": "Seamounts",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 289,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
