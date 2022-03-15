@@ -1,90 +1,99 @@
 {
   "metrics": [
     {
-      "reportId": "oceanUse",
-      "classId": "Coral Cover",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
       "value": 9187.74433541298,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Coral Diversity",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
       "value": 5558.307178139687,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Coral Recruit Density",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
       "value": 259.4769993423879,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Rugosity",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 1272.8401431441307,
-      "extra": {
-        "sketchName": "mpa-high"
-      }
-    },
-    {
-      "reportId": "oceanUse",
-      "classId": "Fish Diversity BRUV",
-      "metricId": "valueOverlap",
-      "sketchId": "615bbc28aac8c8285d50db2f",
-      "value": 2492.1799270436168,
-      "extra": {
-        "sketchName": "mpa-high"
-      }
-    },
-    {
-      "reportId": "oceanUse",
       "classId": "Fish Density",
-      "metricId": "valueOverlap",
-      "sketchId": "615bbc28aac8c8285d50db2f",
+      "groupId": null,
+      "geographyId": null,
       "value": 4603.212556313723,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Fish Diversity BREAM",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
       "value": 5882.048098921776,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Fish Recruit Density",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2492.1799270436168,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
       "value": 330.6439597182907,
       "extra": {
         "sketchName": "mpa-high"
       }
     },
     {
-      "reportId": "oceanUse",
-      "classId": "Seagrass",
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1272.8401431441307,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
       "value": 22.3999996855855,
       "extra": {
         "sketchName": "mpa-high"
