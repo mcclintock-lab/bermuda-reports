@@ -9,10 +9,11 @@ import {
   rekeyMetrics,
   sortMetrics,
   overlapFeatures,
+  ReportResult,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 export const shipwreckSumProperty = "NumberOfRe";
 export type ShipwreckProperties = {

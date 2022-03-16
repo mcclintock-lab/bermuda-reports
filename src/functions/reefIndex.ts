@@ -8,10 +8,11 @@ import {
   overlapRaster,
   rekeyMetrics,
   sortMetrics,
+  ReportResult,
 } from "@seasketch/geoprocessing";
 import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
-import config, { ReportResult } from "../_config";
+import config from "../_config";
 
 const REPORT = config.speciesProtection;
 const METRIC = REPORT.metrics.valueOverlap;
