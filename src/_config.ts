@@ -373,6 +373,20 @@ export const offshoreDataGroup: DataGroup = {
 
 export const reefIndexClasses: DataClass[] = [
   {
+    baseFilename: "wgs84_commercial_fish_density_platform",
+    noDataValue: -3.39999995214436425e38,
+    classId: "Commercial Fish Density",
+    display: "Commercial Fish Density",
+    layerId: "628eb14a662193ee010776b6",
+  },
+  {
+    baseFilename: "wgs84_commercial_fish_diversity_platform",
+    noDataValue: -3.39999995214436425e38,
+    classId: "Commercial Fish Diversity BREAM",
+    display: "Commercial Fish Diversity (BREAM)",
+    layerId: "628eb0f6662193ee010775d9",
+  },
+  {
     baseFilename: "wgs84_Coral cover1",
     noDataValue: -3.39999995214436425e38,
     classId: "Coral Cover",

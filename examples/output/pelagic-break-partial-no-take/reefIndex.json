@@ -3,6 +3,28 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 218.67654708772898,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9434.937596082687,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,

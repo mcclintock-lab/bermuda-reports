@@ -3,6 +3,74 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11156.712074426003,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5541.960784206167,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11156.712074426003,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 482777.3326125145,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 239621.6877913475,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 482777.3326125145,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,

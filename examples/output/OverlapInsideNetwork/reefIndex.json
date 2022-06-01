@@ -3,6 +3,74 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 381.58612563088536,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 381.58612563088536,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 292.78367844969034,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12437.139249801636,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12437.139249801636,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9073.873614311218,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,
