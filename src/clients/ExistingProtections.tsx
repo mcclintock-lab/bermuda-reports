@@ -4,7 +4,6 @@ import {
   ClassTable,
   SketchClassTable,
   ResultsCard,
-  Skeleton,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {

@@ -1,8 +1,13 @@
 // Run inside workspace
 
 import fs from "fs";
-import { Metric, createMetric, rekeyMetrics } from "@seasketch/geoprocessing";
-import { ReportResultBase, STUDY_REGION_AREA_SQ_METERS } from "../src/_config";
+import {
+  Metric,
+  createMetric,
+  rekeyMetrics,
+  ReportResultBase,
+} from "@seasketch/geoprocessing";
+import { STUDY_REGION_AREA_SQ_METERS } from "../src/_config";
 
 const DATASET = `area`;
 const DEST_PATH = `${__dirname}/precalc/${DATASET}Totals.json`;
