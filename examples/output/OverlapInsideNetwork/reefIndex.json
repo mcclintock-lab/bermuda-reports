@@ -71,6 +71,74 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9250.88275963068,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9250.88275963068,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7015.584082067013,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 145.39840912644286,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 145.39840912644286,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 105.2144352219766,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,

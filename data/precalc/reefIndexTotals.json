@@ -11,10 +11,26 @@
     {
       "metricId": "valueOverlap",
       "sketchId": null,
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3690.062302817755
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": null,
       "classId": "Commercial Fish Diversity BREAM",
       "groupId": null,
       "geographyId": null,
       "value": 482777.3326125145
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": null,
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 124271.32557606697
     },
     {
       "metricId": "valueOverlap",

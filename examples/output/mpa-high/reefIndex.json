@@ -25,6 +25,28 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2268.9334720373154,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 55.872637524138554,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,

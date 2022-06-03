@@ -71,6 +71,74 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 124271.32557606697,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 98374.59401291609,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 124271.32557606697,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3690.062302817755,
+      "extra": {
+        "sketchName": "Gigantic MPA"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834683ff3e57f7333d93d",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1684.1795456479945,
+      "extra": {
+        "sketchName": "Gigantic MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "619834743ff3e57f7333d93e",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3690.062302817755,
+      "extra": {
+        "sketchName": "Gigantic Network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "617e59f3198e046808b50fb2",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,

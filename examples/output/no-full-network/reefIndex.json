@@ -71,6 +71,74 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5377.239279091358,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8137.432782948017,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2760.193503856659,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 343.5180494787751,
+      "extra": {
+        "sketchName": "MPA 1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f190",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 391.35863310545255,
+      "extra": {
+        "sketchName": "no-full-network",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f191",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 47.84058362667747,
+      "extra": {
+        "sketchName": "MPA 2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "Coral Cover",
       "groupId": null,
       "geographyId": null,
