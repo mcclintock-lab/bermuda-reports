@@ -378,13 +378,15 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Commercial Fish Density",
     display: "Commercial Fish Density",
     layerId: "628eb14a662193ee010776b6",
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_fish_recruit_density",
     noDataValue: -3.39999995214436425e38,
     classId: "Commercial Fish Recruit Density",
     display: "Commercial Fish Recruit Density",
-    layerId: "628eb0f6662193ee010775d9",
+    layerId: "",
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_commercial_fish_diversity_platform",
@@ -392,13 +394,15 @@ export const reefIndexClasses: DataClass[] = [
     classId: "Commercial Fish Diversity BREAM",
     display: "Commercial Fish Diversity (BREAM)",
     layerId: "628eb0f6662193ee010775d9",
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_bruvs_fish_diversity",
     noDataValue: -3.39999995214436425e38,
     classId: "Commercial Fish Diversity BRUV",
     display: "Commercial Fish Diversity (BRUV)",
-    layerId: "628eb0f6662193ee010775d9",
+    layerId: "",
+    goalValue: 0.2,
   },
   {
     baseFilename: "wgs84_Coral cover1",
