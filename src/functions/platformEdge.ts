@@ -114,7 +114,8 @@ export async function platformEdge(
 export default new GeoprocessingHandler(platformEdge, {
   title: "platformEdge",
   description: "Calculates area stats",
-  timeout: 30, // seconds
+  timeout: 300, // seconds
+  memory: 10240,
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],

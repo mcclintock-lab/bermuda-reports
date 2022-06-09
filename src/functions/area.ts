@@ -87,9 +87,9 @@ export async function area(
 export default new GeoprocessingHandler(area, {
   title: "area",
   description: "Calculates area stats",
-  timeout: 120, // seconds
+  timeout: 180, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
-  memory: 8192,
+  memory: 10240,
   requiresProperties: [],
 });

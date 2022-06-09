@@ -60,9 +60,9 @@ export async function oceanUse(
 export default new GeoprocessingHandler(oceanUse, {
   title: "oceanUse",
   description: "ocean use survey stats",
-  timeout: 180, // seconds
+  timeout: 300, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
-  memory: 8192,
+  memory: 10240,
 });

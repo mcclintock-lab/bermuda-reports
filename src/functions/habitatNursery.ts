@@ -82,9 +82,9 @@ export async function habitatNursery(
 export default new GeoprocessingHandler(habitatNursery, {
   title: "habitatNursery",
   description: "key nursery habitat within sketch",
-  timeout: 180, // seconds
+  timeout: 600, // seconds
   executionMode: "async",
-  memory: 8192,
+  memory: 10240,
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],
 });
