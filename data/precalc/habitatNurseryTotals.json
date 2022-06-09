@@ -6,7 +6,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 11651653.092987554
+      "value": 11525525.087205973
     },
     {
       "metricId": "areaOverlap",
@@ -22,7 +22,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 2884769.994477741
+      "value": 2884769.9944776017
     },
     {
       "metricId": "areaOverlap",
@@ -30,7 +30,7 @@
       "classId": null,
       "groupId": null,
       "geographyId": null,
-      "value": 14710961.795261733
+      "value": 14584833.789480012
     }
   ]
 }

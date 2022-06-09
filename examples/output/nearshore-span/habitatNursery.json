@@ -94,7 +94,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 172514.14489405323,
+      "value": 172514.1448938758,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -116,7 +116,7 @@
       "classId": "Seagrass",
       "groupId": "high",
       "geographyId": null,
-      "value": 172514.14489405323,
+      "value": 172514.1448938758,
       "extra": {
         "sketchName": "nearshore-span"
       }

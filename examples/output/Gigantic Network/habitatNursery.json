@@ -98,7 +98,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11521410.037786081,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -109,7 +109,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11521410.037786081,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -120,7 +120,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 4062595.4425024344,
+      "value": 4023661.283498306,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -131,7 +131,7 @@
       "classId": "Nursery Reef",
       "groupId": "high",
       "geographyId": null,
-      "value": 4062595.4425024344,
+      "value": 4023661.283498306,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -142,7 +142,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11521410.037786081,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -154,7 +154,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 11648327.62559769,
+      "value": 11521410.037786081,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -190,7 +190,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 2846838.338304913,
+      "value": 2846838.3383044046,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -201,7 +201,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 2846838.338304913,
+      "value": 2846838.3383044046,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -212,7 +212,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 1066079.297522283,
+      "value": 1066079.2975215358,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -223,7 +223,7 @@
       "classId": "Seagrass",
       "groupId": "high",
       "geographyId": null,
-      "value": 1066079.297522283,
+      "value": 1066079.2975215358,
       "extra": {
         "sketchName": "Gigantic MPA 2"
       }
@@ -234,7 +234,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 2846838.338304913,
+      "value": 2846838.3383044046,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -246,7 +246,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 2846838.338304913,
+      "value": 2846838.3383044046,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

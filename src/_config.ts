@@ -586,7 +586,7 @@ const habitatRestoreReport: Report = {
 
 const habitatNurseryClasses: DataClass[] = [
   {
-    baseFilename: "PatchReef_JoannaEdit",
+    baseFilename: "PatchReef_JoannaEdit_simplify_00002",
     classId: "Nursery Reef",
     display: "Nursery Reef",
     layerId: "619420a12633975e13933fe0",
