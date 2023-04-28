@@ -18,7 +18,6 @@ import {
   flattenByGroupAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
-  ClassTable,
   Column,
   Collapse,
   LayerToggle,
@@ -33,6 +32,8 @@ import {
   Table,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
+import { ClassTable } from "../components/ClassTable";
+
 import config from "../_config";
 
 import habitatNurseryTotals from "../../data/precalc/habitatNurseryTotals.json";
