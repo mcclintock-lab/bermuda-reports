@@ -16,9 +16,10 @@ import {
   ResultsCard,
   ReportError,
   Skeleton,
-  SketchClassTable,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
+
+import { SketchClassTable } from "../components/SketchClassTable";
 
 import config from "../_config";
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";

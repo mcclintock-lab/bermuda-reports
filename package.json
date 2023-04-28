@@ -1,16 +1,16 @@
 {
-  "name": "bermuda-reports",
-  "version": "1.0.0",
+  "name": "bermuda-reports-two",
+  "version": "1.1.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "ts-node": "ts-node --transpile-only --compiler-options '{\"esModuleInterop\":true, \"module\":\"commonjs\"}'",
-    "start-data": "http-server data/dist -c-1 --silent",
+    "start-data": "http-server data/dist -c-1",
     "__test": "geoprocessing test",
     "test": "npm run test:unit && npm run test:smoke",
     "test:unit": "npm run __test -- --group=unit",
     "test:unit:matching": "npm run __test -- --runInBand --group=unit -t",
-    "test:smoke": "start-server-and-test start-data 8080 'npm run __test -- --runInBand --group=smoke --silent'",
+    "test:smoke": "start-server-and-test start-data 8080 'npm run __test -- --runInBand --group=smoke'",
     "test:smoke:matching": "npm run __test -- --runInBand --group=smoke -t",
     "add:template": "geoprocessing add:template",
     "create:function": "geoprocessing create:function",
@@ -50,7 +50,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@seasketch/geoprocessing": "0.14.0",
+    "@seasketch/geoprocessing": "1.0.0",
     "@turf/boolean-disjoint": "6.5.0",
     "@turf/boolean-valid": "6.5.0",
     "http-server": "^0.12.3",

@@ -6,7 +6,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 10599.046396714139,
+      "value": 10584.94946622784,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -17,7 +17,7 @@
       "classId": "Mangrove",
       "groupId": "full",
       "geographyId": null,
-      "value": 10599.046396714139,
+      "value": 10584.94946622784,
       "extra": {
         "sketchName": "Gigantic MPA"
       }
@@ -50,7 +50,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 10599.046396714139,
+      "value": 10584.94946622784,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true
@@ -62,7 +62,7 @@
       "classId": "Mangrove",
       "groupId": "full",
       "geographyId": null,
-      "value": 10599.046396714139,
+      "value": 10584.94946622784,
       "extra": {
         "sketchName": "Gigantic Network",
         "isCollection": true

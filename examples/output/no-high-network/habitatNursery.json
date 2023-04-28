@@ -28,7 +28,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 273.3103637133644,
+      "value": 273.29316924064176,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -64,7 +64,7 @@
       "classId": "Mangrove",
       "groupId": "low",
       "geographyId": null,
-      "value": 273.3103637133644,
+      "value": 273.29316924064176,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -76,7 +76,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 273.3103637133644,
+      "value": 273.29316924064176,
       "extra": {
         "sketchName": "low mpa"
       }
@@ -87,7 +87,7 @@
       "classId": "Mangrove",
       "groupId": "low",
       "geographyId": null,
-      "value": 273.3103637133644,
+      "value": 273.29316924064176,
       "extra": {
         "sketchName": "low mpa"
       }

@@ -39,7 +39,7 @@ describe("Basic unit tests", () => {
         }
       }
     }
-  }, 10000);
+  }, 60000);
 
   test("clipOutsideEez", async () => {
     const examples = (await getExampleFeatures(
@@ -63,7 +63,7 @@ describe("Basic unit tests", () => {
         }
       }
     }
-  }, 10000);
+  }, 60000);
 
   test("clipOutsideBarbadosEez", async () => {
     const examples = await getExampleFeaturesByName("gp-clip-ocean");
@@ -91,7 +91,7 @@ describe("Basic unit tests", () => {
         throw e;
       }
     }
-  }, 10000);
+  }, 60000);
 
   test("clipOutsideMultipleEez", async () => {
     const examples = await getExampleFeaturesByName("gp-clip-ocean");
@@ -122,5 +122,5 @@ describe("Basic unit tests", () => {
         throw e;
       }
     }
-  }, 10000);
+  }, 60000);
 });

@@ -1,10 +1,8 @@
 import React from "react";
 import {
   Collapse,
-  ClassTable,
   ResultsCard,
   Skeleton,
-  SketchClassTable,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import {
@@ -15,6 +13,8 @@ import {
   metricsWithSketchId,
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
+import { ClassTable } from "../components/ClassTable";
+import { SketchClassTable } from "../components/SketchClassTable";
 
 import config from "../_config";
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";

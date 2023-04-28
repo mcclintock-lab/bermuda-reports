@@ -1,10 +1,8 @@
 import React from "react";
 import {
   Collapse,
-  ClassTable,
   ResultsCard,
   Skeleton,
-  SketchClassTable,
   ReportError,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
@@ -16,6 +14,8 @@ import {
   toPercentMetric,
 } from "@seasketch/geoprocessing/client-core";
 import config from "../_config";
+import { ClassTable } from "../components/ClassTable";
+import { SketchClassTable } from "../components/SketchClassTable";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";

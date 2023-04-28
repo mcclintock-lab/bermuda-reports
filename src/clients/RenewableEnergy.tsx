@@ -10,13 +10,14 @@ import {
 } from "@seasketch/geoprocessing/client-core";
 import {
   Collapse,
-  ClassTable,
   Skeleton,
-  SketchClassTable,
   ResultsCard,
   useSketchProperties,
 } from "@seasketch/geoprocessing/client-ui";
 import config from "../_config";
+
+import { ClassTable } from "../components/ClassTable";
+import { SketchClassTable } from "../components/SketchClassTable";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
 const precalcTotals = renewableTotals as ReportResultBase;

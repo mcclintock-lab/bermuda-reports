@@ -1,4 +1,5 @@
-import { DataGroup, DataClass, Report, Metric } from "@seasketch/geoprocessing";
+import { DataGroup, DataClass, Metric } from "./util/metrics";
+import { Report } from "./util/reports";
 
 /**
  * Area of ocean within eez minus land in square miles. Calculated by drawing
