@@ -71,7 +71,7 @@ export async function existingProtections(
 export default new GeoprocessingHandler(existingProtections, {
   title: "shipwreck",
   description: "Find number of shipwrecks within sketch",
-  timeout: 120, // seconds
+  timeout: 900, // seconds
   executionMode: "async",
   memory: 4096,
   // Specify any Sketch Class form attributes that are required

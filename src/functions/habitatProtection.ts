@@ -84,7 +84,7 @@ export async function habitatProtection(
 export default new GeoprocessingHandler(habitatProtection, {
   title: "habitatProtection",
   description: "habitat protection metrics",
-  timeout: 300, // seconds
+  timeout: 900, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],

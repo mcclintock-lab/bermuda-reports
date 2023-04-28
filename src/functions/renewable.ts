@@ -61,7 +61,7 @@ export async function renewable(
 export default new GeoprocessingHandler(renewable, {
   title: "renewable",
   description: "high quality reef protection metrics",
-  timeout: 300, // seconds
+  timeout: 900, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
   requiresProperties: [],

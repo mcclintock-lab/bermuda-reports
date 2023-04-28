@@ -50,7 +50,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@seasketch/geoprocessing": "1.0.0",
+    "@seasketch/geoprocessing": "1.0.2",
     "@turf/boolean-disjoint": "6.5.0",
     "@turf/boolean-valid": "6.5.0",
     "http-server": "^0.12.3",
