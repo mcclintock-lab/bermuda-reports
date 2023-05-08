@@ -190,7 +190,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 22307.91680142325,
+      "value": 22307.916801422172,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -202,7 +202,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 22307.91680142325,
+      "value": 22307.916801422172,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -238,7 +238,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 22307.91680142325,
+      "value": 22307.916801422172,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -249,7 +249,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 22307.91680142325,
+      "value": 22307.916801422172,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -260,7 +260,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 16730.54971431661,
+      "value": 16730.549714316072,
       "extra": {
         "sketchName": "MPA inside"
       }
@@ -271,7 +271,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 16730.54971431661,
+      "value": 16730.549714316072,
       "extra": {
         "sketchName": "MPA inside"
       }

@@ -146,7 +146,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 33490.24824563272,
+      "value": 33490.248245668256,
       "extra": {
         "sketchName": "low-1"
       }
@@ -157,7 +157,7 @@
       "classId": "Seagrass",
       "groupId": "low",
       "geographyId": null,
-      "value": 33490.24824563272,
+      "value": 33490.248245668256,
       "extra": {
         "sketchName": "low-1"
       }
@@ -168,7 +168,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 33490.24824563272,
+      "value": 33490.248245668256,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true
@@ -204,7 +204,7 @@
       "classId": "Seagrass",
       "groupId": "low",
       "geographyId": null,
-      "value": 33490.24824563272,
+      "value": 33490.248245668256,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true

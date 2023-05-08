@@ -6,3 +6,4 @@ cdk.out
 .workspace.env
 data/src
 data/dist/**
+cdk-outputs.json

@@ -94,7 +94,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 134130.20731430175,
+      "value": 134130.20731433594,
       "extra": {
         "sketchName": "mpa-no-desig"
       }
@@ -127,7 +127,7 @@
       "classId": "Seagrass",
       "groupId": "low",
       "geographyId": null,
-      "value": 134130.20731430175,
+      "value": 134130.20731433594,
       "extra": {
         "sketchName": "mpa-no-desig"
       }

@@ -14,7 +14,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 174538.70779643767
+      "value": 207297.25769234056
     },
     {
       "metricId": "areaOverlap",
@@ -22,7 +22,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 2884769.9944776017
+      "value": 2884769.9944778
     },
     {
       "metricId": "areaOverlap",
@@ -30,7 +30,7 @@
       "classId": null,
       "groupId": null,
       "geographyId": null,
-      "value": 14584833.789480012
+      "value": 14617592.339376114
     }
   ]
 }

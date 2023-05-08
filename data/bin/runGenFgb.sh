@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Use to run the genFgb.sh script directly from your local machine
+# Run from data folder
+# Example command: ./bin/runGenFgb.sh src/NurseryHabs dist Mangroves_2023.shp Mangroves_2023 'SELECT * FROM Mangroves_2023' -explodeCollections
 
 inPath=$1
 outPath=$2

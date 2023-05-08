@@ -14,3 +14,8 @@ Created using the SeaSketch [Geoprocessing framework](https://github.com/seasket
 * `npm run test` - run unit and smoke test suites
 * `npm run test:unit` - run unit test suite
 * `npm run test:smoke` - run smoke test suite
+
+## Data
+
+Data is in Box, symlink to Box Drive sync folder `box/GIS/Waitt/Bermuda_Blue_Prosperity/Analytics`
+See [Getting Started](https://github.com/seasketch/geoprocessing/wiki/GettingStarted) docs for more instruction

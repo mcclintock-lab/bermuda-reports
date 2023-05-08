@@ -593,10 +593,10 @@ const habitatNurseryClasses: DataClass[] = [
     layerId: "619420a12633975e13933fe0",
   },
   {
-    baseFilename: "Mangrove_shp_2012",
+    baseFilename: "Mangroves_2023",
     classId: "Mangrove",
     display: "Mangrove",
-    layerId: "5dc07170cae3e4074e65170b",
+    layerId: "",
   },
   {
     baseFilename: "Seagrass_2014_50mbuff",
