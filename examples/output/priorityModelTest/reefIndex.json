@@ -1,0 +1,855 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1768.0558536723256,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1120.380388575606,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 472.99220406264067,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Commercial Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 174.6832610340789,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 74184.42438876629,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 48107.56643509865,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 17961.753612041473,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Commercial Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8115.104341626167,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 43867.38016462326,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16481.16988801956,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 13611.806361079216,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Commercial Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 13774.403915524483,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 571.3012045665846,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 473.585198791563,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 82.14106350857764,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Commercial Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 15.574942266443996,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 52596.2051550895,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 24478.01316471398,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 17977.029523730278,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Coral Cover",
+      "groupId": null,
+      "geographyId": null,
+      "value": 10141.16246664524,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 58891.890692958375,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 22843.222877034685,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18765.844663858414,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Coral Diversity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 17282.823152065277,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18661.13328694245,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 12221.605270243905,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2219.0573830725625,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Coral Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4220.470633625984,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 37656.31368587911,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 22396.8617875278,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11631.849310174584,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Fish Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3627.6025881767273,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 58782.27218384971,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 36181.262912228005,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 15530.455391287804,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Fish Diversity BREAM",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7070.5538803339,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 64549.12829178572,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 25580.986715078354,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 24576.289823055267,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Fish Diversity BRUV",
+      "groupId": null,
+      "geographyId": null,
+      "value": 14391.851753652096,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7448.506783065386,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6830.275781895965,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 524.1888054683805,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Fish Recruit Density",
+      "groupId": null,
+      "geographyId": null,
+      "value": 94.04219570104033,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 17935.56961596629,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8725.558438366861,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4235.24341493845,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Rugosity",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4974.76776266098,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 93.92777156457305,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 93.92777156457305,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cf6792cc9670844063866",
+      "name": "priorityModelTest",
+      "updatedAt": "2023-05-11T14:09:03.441Z",
+      "createdAt": "2023-05-11T14:06:49.089Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "name": "priorityModelTest",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "1",
+        "properties": {
+          "id": "645cf6902cc9670844063868",
+          "name": "test1",
+          "updatedAt": "2023-05-11T14:08:53.543Z",
+          "createdAt": "2023-05-11T14:07:12.957Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.92995454900297,
+          32.36378518210429,
+          -64.81208474752604,
+          32.470567602409005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "2",
+        "properties": {
+          "id": "645cf6a22cc967084406386a",
+          "name": "test2",
+          "updatedAt": "2023-05-11T14:08:58.573Z",
+          "createdAt": "2023-05-11T14:07:30.812Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -65.12257105385551,
+          32.14375645949631,
+          -64.9917643229482,
+          32.32370920884117
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "3",
+        "properties": {
+          "id": "645cf6bf2cc967084406386d",
+          "name": "test3",
+          "updatedAt": "2023-05-11T14:09:00.925Z",
+          "createdAt": "2023-05-11T14:07:59.308Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.74021291735718,
+          32.20945618347307,
+          -64.58496976419245,
+          32.29333680880523
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "4",
+        "properties": {
+          "id": "645cf6ce2cc967084406386f",
+          "name": "test4",
+          "updatedAt": "2023-05-11T14:09:03.442Z",
+          "createdAt": "2023-05-11T14:08:14.517Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.63096773550053,
+          32.371069815309085,
+          -64.53465948307425,
+          32.44024454094963
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

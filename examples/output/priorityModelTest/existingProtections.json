@@ -1,0 +1,967 @@
+{
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 91970970.74005237,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 91970970.74005237,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 20123398.957247782,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 20123398.957247782,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4483232.444106215,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4483232.444106215,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1927852.8892557365,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1700825.1663994566,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 227027.7228562799,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 34876329.61199122,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 32543041.742095873,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2333287.869895344,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 872704.0658961602,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 615028.5785601228,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 257675.48733603745,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4775.6763433783935,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4775.6763433783935,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1011494.0188601406,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1011494.0188601406,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test4"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cf6792cc9670844063866",
+      "name": "priorityModelTest",
+      "updatedAt": "2023-05-11T14:09:03.441Z",
+      "createdAt": "2023-05-11T14:06:49.089Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "name": "priorityModelTest",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "1",
+        "properties": {
+          "id": "645cf6902cc9670844063868",
+          "name": "test1",
+          "updatedAt": "2023-05-11T14:08:53.543Z",
+          "createdAt": "2023-05-11T14:07:12.957Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.92995454900297,
+          32.36378518210429,
+          -64.81208474752604,
+          32.470567602409005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "2",
+        "properties": {
+          "id": "645cf6a22cc967084406386a",
+          "name": "test2",
+          "updatedAt": "2023-05-11T14:08:58.573Z",
+          "createdAt": "2023-05-11T14:07:30.812Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -65.12257105385551,
+          32.14375645949631,
+          -64.9917643229482,
+          32.32370920884117
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "3",
+        "properties": {
+          "id": "645cf6bf2cc967084406386d",
+          "name": "test3",
+          "updatedAt": "2023-05-11T14:09:00.925Z",
+          "createdAt": "2023-05-11T14:07:59.308Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.74021291735718,
+          32.20945618347307,
+          -64.58496976419245,
+          32.29333680880523
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "4",
+        "properties": {
+          "id": "645cf6ce2cc967084406386f",
+          "name": "test4",
+          "updatedAt": "2023-05-11T14:09:03.442Z",
+          "createdAt": "2023-05-11T14:08:14.517Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.63096773550053,
+          32.371069815309085,
+          -64.53465948307425,
+          32.44024454094963
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

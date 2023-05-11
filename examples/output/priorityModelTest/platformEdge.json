@@ -1,0 +1,279 @@
+{
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 232882932.30554768,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 232882932.30554768,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Platform Edge",
+      "groupId": "partial",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Platform Edge",
+      "groupId": "no",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18134093.36547398,
+      "extra": {
+        "sketchName": "test1",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 18134093.36547398,
+      "extra": {
+        "sketchName": "test1",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 131370311.60605238,
+      "extra": {
+        "sketchName": "test2",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 131370311.60605238,
+      "extra": {
+        "sketchName": "test2",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 66799598.487243965,
+      "extra": {
+        "sketchName": "test3",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 66799598.487243965,
+      "extra": {
+        "sketchName": "test3",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Platform Edge",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16578928.846777357,
+      "extra": {
+        "sketchName": "test4",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Platform Edge",
+      "groupId": "definite",
+      "geographyId": null,
+      "value": 16578928.846777357,
+      "extra": {
+        "sketchName": "test4",
+        "numFishingRestricted": 3,
+        "overlapEdge": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cf6792cc9670844063866",
+      "name": "priorityModelTest",
+      "updatedAt": "2023-05-11T14:09:03.441Z",
+      "createdAt": "2023-05-11T14:06:49.089Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "name": "priorityModelTest",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "1",
+        "properties": {
+          "id": "645cf6902cc9670844063868",
+          "name": "test1",
+          "updatedAt": "2023-05-11T14:08:53.543Z",
+          "createdAt": "2023-05-11T14:07:12.957Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.92995454900297,
+          32.36378518210429,
+          -64.81208474752604,
+          32.470567602409005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "2",
+        "properties": {
+          "id": "645cf6a22cc967084406386a",
+          "name": "test2",
+          "updatedAt": "2023-05-11T14:08:58.573Z",
+          "createdAt": "2023-05-11T14:07:30.812Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -65.12257105385551,
+          32.14375645949631,
+          -64.9917643229482,
+          32.32370920884117
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "3",
+        "properties": {
+          "id": "645cf6bf2cc967084406386d",
+          "name": "test3",
+          "updatedAt": "2023-05-11T14:09:00.925Z",
+          "createdAt": "2023-05-11T14:07:59.308Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.74021291735718,
+          32.20945618347307,
+          -64.58496976419245,
+          32.29333680880523
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "4",
+        "properties": {
+          "id": "645cf6ce2cc967084406386f",
+          "name": "test4",
+          "updatedAt": "2023-05-11T14:09:03.442Z",
+          "createdAt": "2023-05-11T14:08:14.517Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.63096773550053,
+          32.371069815309085,
+          -64.53465948307425,
+          32.44024454094963
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

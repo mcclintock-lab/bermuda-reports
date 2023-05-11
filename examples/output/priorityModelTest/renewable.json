@@ -1,0 +1,351 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 814304.7308409214,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 531011.5130534172,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 161905.37975287437,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Fixed Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 121387.83803462982,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 286991.4782357216,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 139587.0815038681,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 137750.8875837326,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Floating Offshore Wind",
+      "groupId": null,
+      "geographyId": null,
+      "value": 9653.50914812088,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1111028.8698055744,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 675306.1784362793,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 302786.1746184826,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Floating Solar",
+      "groupId": null,
+      "geographyId": null,
+      "value": 132936.51675081253,
+      "extra": {
+        "sketchName": "test4"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6792cc9670844063866",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 524777.1299190521,
+      "extra": {
+        "sketchName": "priorityModelTest",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6902cc9670844063868",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 242285.77404212952,
+      "extra": {
+        "sketchName": "test1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6a22cc967084406386a",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 161539.5579366684,
+      "extra": {
+        "sketchName": "test2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6bf2cc967084406386d",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test3"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cf6ce2cc967084406386f",
+      "classId": "Wave Energy",
+      "groupId": null,
+      "geographyId": null,
+      "value": 120951.79794025421,
+      "extra": {
+        "sketchName": "test4"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cf6792cc9670844063866",
+      "name": "priorityModelTest",
+      "updatedAt": "2023-05-11T14:09:03.441Z",
+      "createdAt": "2023-05-11T14:06:49.089Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "name": "priorityModelTest",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "1",
+        "properties": {
+          "id": "645cf6902cc9670844063868",
+          "name": "test1",
+          "updatedAt": "2023-05-11T14:08:53.543Z",
+          "createdAt": "2023-05-11T14:07:12.957Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.92995454900297,
+          32.36378518210429,
+          -64.81208474752604,
+          32.470567602409005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "2",
+        "properties": {
+          "id": "645cf6a22cc967084406386a",
+          "name": "test2",
+          "updatedAt": "2023-05-11T14:08:58.573Z",
+          "createdAt": "2023-05-11T14:07:30.812Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -65.12257105385551,
+          32.14375645949631,
+          -64.9917643229482,
+          32.32370920884117
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "3",
+        "properties": {
+          "id": "645cf6bf2cc967084406386d",
+          "name": "test3",
+          "updatedAt": "2023-05-11T14:09:00.925Z",
+          "createdAt": "2023-05-11T14:07:59.308Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.74021291735718,
+          32.20945618347307,
+          -64.58496976419245,
+          32.29333680880523
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "id": "4",
+        "properties": {
+          "id": "645cf6ce2cc967084406386f",
+          "name": "test4",
+          "updatedAt": "2023-05-11T14:09:03.442Z",
+          "createdAt": "2023-05-11T14:08:14.517Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "bbox": [
+          -64.63096773550053,
+          32.371069815309085,
+          -64.53465948307425,
+          32.44024454094963
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

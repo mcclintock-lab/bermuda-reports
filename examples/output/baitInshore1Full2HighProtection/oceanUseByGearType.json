@@ -1,0 +1,819 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.20394438153169858,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.07443322487910109,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.09722399451891306,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.03228716213368443,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bottom_all",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0007675489523144563,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bottom_all",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2.5917720236634523e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bottom_all",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0002458513494474346,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bottom_all",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0005214384256646554,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000043896472732285474,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.324631284660427e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0000033903864391504612,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00004037362316466897,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0000016411197947263645,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.324631284660427e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0000015086566662603218,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000002098631979308152,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.2770511759185865e-8,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000002085861467548966,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000038968268611938583,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000002016138935800882,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0000369521296761377,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000001206493138283804,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.991030877945832e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5.53529460489699e-7,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.5386058999952184e-7,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.000001007724360846396,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.6923615220321153e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3.8462761864366257e-7,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.5386058999952184e-7,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0000012257979467023006,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.7874016045027474e-7,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5.701195391338842e-7,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.769382471181416e-7,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cfea12cc967084406388f",
+      "name": "baitInshore1Full2HighProtection",
+      "updatedAt": "2023-05-11T14:45:09.319Z",
+      "createdAt": "2023-05-11T14:41:37.825Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cfeec2cc9670844063891",
+          "name": "high1",
+          "updatedAt": "2023-05-11T14:45:05.655Z",
+          "createdAt": "2023-05-11T14:42:52.581Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.8481584941254,
+          32.310429286063496,
+          -64.84202159989917,
+          32.31298632218311
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cff422cc9670844063893",
+          "name": "low1",
+          "updatedAt": "2023-05-11T14:45:07.658Z",
+          "createdAt": "2023-05-11T14:44:18.115Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH\",\"FISH_COLLECT_REC\",\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.71978797067247,
+          32.35353561348283,
+          -64.71026076425132,
+          32.36049597150418
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cff6c2cc9670844063895",
+          "name": "low2",
+          "updatedAt": "2023-05-11T14:45:09.320Z",
+          "createdAt": "2023-05-11T14:45:00.383Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.71129073251306,
+          32.34447184446137,
+          -64.70429553140204,
+          32.35411566377895
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}
