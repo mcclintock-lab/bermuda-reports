@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
-import OceanUse from "./OceanUse";
+import OceanUseBySector from "./OceanUseBySector";
+import OceanUseByGearType from "./OceanUseByGearType";
 import PlatformEdge from "./PlatformEdge";
 import Shipwreck from "./Shipwreck";
 
@@ -10,7 +11,8 @@ interface ReportProps {
 const Report: FunctionComponent<ReportProps> = ({ hidden }) => {
   return (
     <div style={{ display: hidden ? "none" : "block" }}>
-      <OceanUse />
+      <OceanUseBySector />
+      <OceanUseByGearType />
       <PlatformEdge />
       <Shipwreck />
     </div>

@@ -1,0 +1,130 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 199.8930206298828,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16725.571073157713,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.07677529880766798,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 10299.929348160978,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 35794.77811028529,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 423.6451639533043,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 59619.292184472084,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 701.2442903518677,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61649a3c1e0a596510ad8329",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3.745968818664551,
+      "extra": {
+        "sketchName": "nearshore-span"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61649a3c1e0a596510ad8329",
+      "name": "nearshore-span",
+      "updatedAt": "2022-01-13T06:24:25.201Z",
+      "createdAt": "2021-10-11T20:10:36.004Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -65.09902878851547,
+      31.50541071353797,
+      -64.79380174261453,
+      32.28908133136779
+    ],
+    "geometry": null
+  }
+}

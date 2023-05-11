@@ -14,7 +14,7 @@ import {
   rekeyMetrics,
 } from "@seasketch/geoprocessing";
 
-const REPORT = config.oceanUse;
+const REPORT = config.oceanUseBySector;
 const METRIC = REPORT.metrics.valueOverlap;
 const DEST_PATH = `${__dirname}/precalc/${METRIC.datasourceId}Totals.json`;
 

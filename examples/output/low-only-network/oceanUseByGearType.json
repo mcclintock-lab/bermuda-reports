@@ -3,29 +3,6 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "bait_inshore",
       "groupId": null,
       "geographyId": null,
@@ -64,29 +41,6 @@
       "groupId": null,
       "geographyId": null,
       "value": 0,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 759.3441792726517,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 759.3441792726517,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true
@@ -233,75 +187,6 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.007681381140855592,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.007681381140855592,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 2003.5355859398842,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 2003.5355859398842,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 1345.2165312767029,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 1345.2165312767029,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
       "classId": "shark",
       "groupId": null,
       "geographyId": null,
@@ -317,75 +202,6 @@
       "groupId": null,
       "geographyId": null,
       "value": 0.000015950152228327852,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.9337697625160217,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.9337697625160217,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 353.0757955610752,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 353.0757955610752,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true
@@ -524,29 +340,6 @@
       "groupId": null,
       "geographyId": null,
       "value": 0.001876016428781213,
-      "extra": {
-        "sketchName": "low-only-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a10f3f078352076a1fb",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 204.9499797821045,
-      "extra": {
-        "sketchName": "low-1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61685a19b503392035ed519c",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 204.9499797821045,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true

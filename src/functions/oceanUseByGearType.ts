@@ -14,10 +14,10 @@ import { loadCogWindow } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config from "../_config";
 
-const REPORT = config.oceanUse;
+const REPORT = config.oceanUseByGearType;
 const METRIC = REPORT.metrics.valueOverlap;
 
-export async function oceanUse(
+export async function oceanUseByGearType(
   sketch: Sketch<Polygon> | SketchCollection<Polygon>
 ): Promise<ReportResult> {
   const box = sketch.bbox || bbox(sketch);
@@ -57,8 +57,8 @@ export async function oceanUse(
   };
 }
 
-export default new GeoprocessingHandler(oceanUse, {
-  title: "oceanUse",
+export default new GeoprocessingHandler(oceanUseByGearType, {
+  title: "oceanUseByGearType",
   description: "ocean use survey stats",
   timeout: 900, // seconds
   executionMode: "async",

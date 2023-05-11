@@ -14,6 +14,28 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0002794403529549072,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00024787863532083065,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "classId": "Boating",
       "groupId": null,
       "geographyId": null,
@@ -25,10 +47,76 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
-      "classId": "CommercialFishing",
+      "classId": "bottom_all",
       "groupId": null,
       "geographyId": null,
-      "value": 3294.543529510498,
+      "value": 0.007787789807921275,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.002793825725837973,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.002565552141540639,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0007295549090953202,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00001411940685258628,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.003964320499777685,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.019950410337185254,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
@@ -51,6 +139,17 @@
       "groupId": null,
       "geographyId": null,
       "value": 3924.9022018164396,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00008223513933458548,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
@@ -91,10 +190,87 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0012807377767032335,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0002365833717874466,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0010478863944101136,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.008605903103981793,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.007630046165132631,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0038021440907352044,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
       "classId": "Utilities",
       "groupId": null,
       "geographyId": null,
       "value": 116.12503337860107,
+      "extra": {
+        "sketchName": "pelagic-break-partial-no-take"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61803a1a04baa808681f0a8f",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.003964320499777685,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }

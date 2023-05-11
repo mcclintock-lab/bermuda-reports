@@ -1,0 +1,130 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 758.1952996253967,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.017286332933508675,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1333.3544864058495,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2771.8880276679993,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 961.365641772747,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.93990883231163,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 40.773808002471924,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61c4db8c075845572905b21f",
+      "name": "2.9. - Nearshore 9 - West Closure Area - IUCN2 ",
+      "updatedAt": "2021-12-23T20:26:52.502Z",
+      "createdAt": "2021-11-16T19:00:31.375Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\",\"TRAD_USE_NE\",\"TRAD_FISH_COLLECT\",\"RECREATE_NE\",\"TOURISM\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -65.05367383580214,
+      32.181554123541495,
+      -64.97484609438975,
+      32.27382271153579
+    ],
+    "geometry": null
+  }
+}

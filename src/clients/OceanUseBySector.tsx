@@ -17,17 +17,20 @@ import config from "../_config";
 import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
 
-import oceanUseTotals from "../../data/precalc/oceanUseTotals.json";
-const precalcTotals = oceanUseTotals as ReportResultBase;
+import oceanUseBySectorTotals from "../../data/precalc/oceanUseBySectorTotals.json";
+const precalcTotals = oceanUseBySectorTotals as ReportResultBase;
 
-const REPORT = config.oceanUse;
+const REPORT = config.oceanUseBySector;
 const METRIC = REPORT.metrics.valueOverlap;
 
-const OceanUse = () => {
+const OceanUseBySector = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard title="Ocean Use" functionName="oceanUse">
+      <ResultsCard
+        title="Ocean Use - By Sector"
+        functionName="oceanUseBySector"
+      >
         {(data: ReportResult) => {
           // Single sketch or collection top-level
           const parentMetrics = metricsWithSketchId(
@@ -40,7 +43,7 @@ const OceanUse = () => {
               <p>
                 Plans should ensure continued access to the most highly valued
                 areas for each sector. This report summarizes how much value
-                falls within this MPA plan for each sector . The higher the
+                falls within this MPA plan for each sector. The higher the
                 percentage, the greater the potential impact if access or
                 activities are restricted.
               </p>
@@ -62,7 +65,7 @@ const OceanUse = () => {
                 <p>
                   <a
                     target="_blank"
-                    href="https://seasketch.github.io/python-sap-map/algorithm.html"
+                    href="https://seasketch.github.io/heatmap/"
                   >
                     Read more
                   </a>{" "}
@@ -105,4 +108,4 @@ const genSketchTable = (data: ReportResult) => {
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
 
-export default OceanUse;
+export default OceanUseBySector;

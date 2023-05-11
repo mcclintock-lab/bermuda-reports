@@ -3,17 +3,6 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 199.8930206298828,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "bait_inshore",
       "groupId": null,
       "geographyId": null,
@@ -29,17 +18,6 @@
       "groupId": null,
       "geographyId": null,
       "value": 0.0008001958495675865,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 16725.571073157713,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -113,76 +91,10 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.07677529880766798,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 10299.929348160978,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 35794.77811028529,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
       "classId": "shark",
       "groupId": null,
       "geographyId": null,
       "value": 0.0012833331346140397,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 423.6451639533043,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 59619.292184472084,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 701.2442903518677,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -249,17 +161,6 @@
       "groupId": null,
       "geographyId": null,
       "value": 0.015560257740171224,
-      "extra": {
-        "sketchName": "nearshore-span"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "61649a3c1e0a596510ad8329",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 3.745968818664551,
       "extra": {
         "sketchName": "nearshore-span"
       }

@@ -2,7 +2,7 @@
  * @jest-environment node
  * @group smoke
  */
-import { oceanUse } from "./oceanUse";
+import { oceanUseBySector } from "./oceanUseBySector";
 import {
   getExamplePolygonSketchAll,
   writeResultOutput,
@@ -10,14 +10,14 @@ import {
 
 describe("Basic smoke tests", () => {
   test("handler function is present", () => {
-    expect(typeof oceanUse).toBe("function");
+    expect(typeof oceanUseBySector).toBe("function");
   });
-  test("oceanUseSmoke - tests run against all examples", async () => {
+  test("oceanUseBySectorSmoke - tests run against all examples", async () => {
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
-      const result = await oceanUse(example);
+      const result = await oceanUseBySector(example);
       expect(result).toBeTruthy();
-      writeResultOutput(result, "oceanUse", example.properties.name);
+      writeResultOutput(result, "oceanUseBySector", example.properties.name);
     }
   }, 60000);
 });

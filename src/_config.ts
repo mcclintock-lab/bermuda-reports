@@ -624,7 +624,7 @@ const habitatNurseryReport: Report = {
 
 //// OCEAN USE ////
 
-const oceanUseClasses: DataClass[] = [
+const oceanUseClassesBySector: DataClass[] = [
   {
     baseFilename: "aquaculture_heatmap",
     classId: "Aquaculture",
@@ -638,10 +638,10 @@ const oceanUseClasses: DataClass[] = [
     layerId: "60ef55245bf512cb19da4d0a",
   },
   {
-    baseFilename: "commercial_fishing_heatmap",
-    classId: "CommercialFishing",
+    baseFilename: "commercial_fishing",
+    classId: "commercial_fishing",
     display: "Commercial Fishing",
-    layerId: "61648ab8a04323106537d190",
+    layerId: "",
   },
   {
     baseFilename: "passiverec_conservation_heatmap",
@@ -681,13 +681,128 @@ const oceanUseClasses: DataClass[] = [
   },
 ];
 
-const oceanUseReport: Report = {
-  reportId: "oceanUse",
+const oceanUseClassesByGearType: DataClass[] = [
+  {
+    baseFilename: "bait_inshore",
+    classId: "bait_inshore",
+    display: "Bait (Inshore)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bait_pelagic",
+    classId: "bait_pelagic",
+    display: "Bait (Pelagic)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bottom_all",
+    classId: "bottom_all",
+    display: "Bottom (All)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bottom_general_other",
+    classId: "bottom_general_other",
+    display: "Bottom General (Other)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bottom_general_snapper",
+    classId: "bottom_general_snapper",
+    display: "Bottom General (Snapper)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bottom_general_turbot",
+    classId: "bottom_general_turbot",
+    display: "Bottom General (Turbot)",
+    layerId: "",
+  },
+  {
+    baseFilename: "bottom_general",
+    classId: "bottom_general",
+    display: "Bottom General",
+    layerId: "",
+  },
+  {
+    baseFilename: "catch_release",
+    classId: "catch_release",
+    display: "Catch Release",
+    layerId: "",
+  },
+  {
+    baseFilename: "shark",
+    classId: "shark",
+    display: "Shark",
+    layerId: "",
+  },
+  {
+    baseFilename: "trapping_guinea_chick",
+    classId: "trapping_guinea_chick",
+    display: "Trapping (Guinea Chick)",
+    layerId: "",
+  },
+  {
+    baseFilename: "trapping_spiny_lobster",
+    classId: "trapping_spiny_lobster",
+    display: "Trapping (Spiny Lobster)",
+    layerId: "",
+  },
+  {
+    baseFilename: "trapping",
+    classId: "trapping",
+    display: "Trapping",
+    layerId: "",
+  },
+  {
+    baseFilename: "trolling_pelagic",
+    classId: "trolling_pelagic",
+    display: "Trolling (Pelagic)",
+    layerId: "",
+  },
+  {
+    baseFilename: "trolling_rockfish",
+    classId: "trolling_rockfish",
+    display: "Trolling (Rockfish)",
+    layerId: "",
+  },
+  {
+    baseFilename: "trolling",
+    classId: "trolling",
+    display: "Trolling",
+    layerId: "",
+  },
+  {
+    baseFilename: "vertical_lining",
+    classId: "vertical_lining",
+    display: "Vertical Lining",
+    layerId: "",
+  },
+];
+
+const oceanUseBySectorReport: Report = {
+  reportId: "oceanUseBySector",
   metrics: {
     valueOverlap: {
       metricId: "valueOverlap",
-      datasourceId: "oceanUse",
-      classes: oceanUseClasses.map((curClass) => {
+      datasourceId: "oceanUseBySector",
+      classes: oceanUseClassesBySector.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${cogFileSuffix}`,
+        };
+      }),
+    },
+  },
+};
+
+const oceanUseByGearTypeReport: Report = {
+  reportId: "oceanUseByGearType",
+  metrics: {
+    valueOverlap: {
+      metricId: "valueOverlap",
+      datasourceId: "oceanUseByGearType",
+      classes: oceanUseClassesByGearType.map((curClass) => {
         return {
           ...curClass,
           filename: `${curClass.baseFilename}${cogFileSuffix}`,
@@ -782,6 +897,33 @@ const platformEdgeReport: PlatformEdgeReport = {
   },
 };
 
+//// PRIORITIZATION MODEL SOLUTIONS
+
+const priorityModelClasses: DataClass[] = [
+  {
+    baseFilename: "POLYGON",
+    classId: "Priority Test Data",
+    display: "Priority Test Data",
+    layerId: "",
+  },
+];
+
+const priorityModelReport: Report = {
+  reportId: "priorityModel",
+  metrics: {
+    priorityModelAreaOverlap: {
+      metricId: "priorityModelAreaOverlap",
+      datasourceId: "priorityModel",
+      classes: priorityModelClasses.map((curClass) => {
+        return {
+          ...curClass,
+          filename: `${curClass.baseFilename}${fgbFileSuffix}`,
+        };
+      }),
+    },
+  },
+};
+
 //// Export ////
 
 export default {
@@ -796,10 +938,12 @@ export default {
   habitatProtection: habitatProtectionReport,
   speciesProtection: speciesProtectionReport,
   renewable: renewableReport,
-  oceanUse: oceanUseReport,
+  oceanUseBySector: oceanUseBySectorReport,
+  oceanUseByGearType: oceanUseByGearTypeReport,
   habitatRestore: habitatRestoreReport,
   habitatNursery: habitatNurseryReport,
   platformEdge: platformEdgeReport,
+  priorityModel: priorityModelReport,
   shipwreck: shipwreckReport,
 
   reports: {

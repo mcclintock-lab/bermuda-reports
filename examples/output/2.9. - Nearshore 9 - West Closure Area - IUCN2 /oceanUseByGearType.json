@@ -1,0 +1,207 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bottom_all",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.010927804895686677,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bottom_general",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.010500011047497537,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.010116155859805076,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0020601185595268134,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00023093809995522463,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "catch_release",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0001384098303063297,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "shark",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00014882098905033558,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trapping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0009611231055899339,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00024157699176896585,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0007180299123490386,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trolling",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.005764630405707294,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.004700142768399473,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.003346509055319302,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "61c4db8c075845572905b21f",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0001384098303063297,
+      "extra": {
+        "sketchName": "2.9. - Nearshore 9 - West Closure Area - IUCN2 "
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "61c4db8c075845572905b21f",
+      "name": "2.9. - Nearshore 9 - West Closure Area - IUCN2 ",
+      "updatedAt": "2021-12-23T20:26:52.502Z",
+      "createdAt": "2021-11-16T19:00:31.375Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH_NE\",\"RESTORE_CON\",\"TRAD_USE_NE\",\"TRAD_FISH_COLLECT\",\"RECREATE_NE\",\"TOURISM\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -65.05367383580214,
+      32.181554123541495,
+      -64.97484609438975,
+      32.27382271153579
+    ],
+    "geometry": null
+  }
+}

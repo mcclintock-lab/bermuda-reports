@@ -3,46 +3,12 @@
     {
       "metricId": "valueOverlap",
       "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 518.643759727478,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Aquaculture",
-      "groupId": null,
-      "geographyId": null,
-      "value": 518.643759727478,
-      "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
       "classId": "bait_inshore",
       "groupId": null,
       "geographyId": null,
       "value": 0,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -53,7 +19,7 @@
       "geographyId": null,
       "value": 0.007485289981417509,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -65,7 +31,7 @@
       "geographyId": null,
       "value": 0.007485289981417509,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -76,7 +42,7 @@
       "geographyId": null,
       "value": 0,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -87,7 +53,7 @@
       "geographyId": null,
       "value": 0.00002602309301380501,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -99,41 +65,7 @@
       "geographyId": null,
       "value": 0.00002602309301380501,
       "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 9187.604118466377,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 12925.732953190804,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Boating",
-      "groupId": null,
-      "geographyId": null,
-      "value": 3738.1288347244263,
-      "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -144,7 +76,7 @@
       "geographyId": null,
       "value": 0.01772496170889326,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -155,7 +87,7 @@
       "geographyId": null,
       "value": 0.021342093038157373,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -167,7 +99,7 @@
       "geographyId": null,
       "value": 0.0036171313292641116,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -178,7 +110,7 @@
       "geographyId": null,
       "value": 0.016357910458282277,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -189,7 +121,7 @@
       "geographyId": null,
       "value": 0.01802178376380681,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -201,7 +133,7 @@
       "geographyId": null,
       "value": 0.0016638733055245325,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -212,7 +144,7 @@
       "geographyId": null,
       "value": 0.013520924060770767,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -223,7 +155,7 @@
       "geographyId": null,
       "value": 0.015176726396084916,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -235,7 +167,7 @@
       "geographyId": null,
       "value": 0.0016558023353141493,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -246,7 +178,7 @@
       "geographyId": null,
       "value": 0.0042697095795523055,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -257,7 +189,7 @@
       "geographyId": null,
       "value": 0.0042808607176008096,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -269,7 +201,7 @@
       "geographyId": null,
       "value": 0.000011151138048504095,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -280,7 +212,7 @@
       "geographyId": null,
       "value": 0.0006950213799985505,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -291,7 +223,7 @@
       "geographyId": null,
       "value": 0.0006950213799985505,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -303,7 +235,7 @@
       "geographyId": null,
       "value": 0,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -314,7 +246,7 @@
       "geographyId": null,
       "value": 0.001149264788168125,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -325,7 +257,7 @@
       "geographyId": null,
       "value": 0.0027368667472416064,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -337,109 +269,7 @@
       "geographyId": null,
       "value": 0.0015876019590734813,
       "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.03369710016409044,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.05206932242251128,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "commercial_fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0.018372222258420834,
-      "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 9043.081317096949,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 38025.141211897135,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "PassiveRecreation_Conservation",
-      "groupId": null,
-      "geographyId": null,
-      "value": 28982.059894800186,
-      "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 11011.319129228592,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 20401.753686785698,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Recreational Fishing",
-      "groupId": null,
-      "geographyId": null,
-      "value": 9390.434557557106,
-      "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -450,7 +280,7 @@
       "geographyId": null,
       "value": 0.0012289862872592039,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -461,7 +291,7 @@
       "geographyId": null,
       "value": 0.0012560751320442876,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -473,109 +303,7 @@
       "geographyId": null,
       "value": 0.000027088844785083666,
       "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 638.486589372158,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Shipping",
-      "groupId": null,
-      "geographyId": null,
-      "value": 638.486589372158,
-      "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 28122.803363710642,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 111947.14645400643,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Swimming_Snorkeling_Diving",
-      "groupId": null,
-      "geographyId": null,
-      "value": 83824.34309029579,
-      "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 506.1353616164997,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 1461.322461818345,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Tourism",
-      "groupId": null,
-      "geographyId": null,
-      "value": 955.1871002018452,
-      "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -586,7 +314,7 @@
       "geographyId": null,
       "value": 0.0049709231325678616,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -597,7 +325,7 @@
       "geographyId": null,
       "value": 0.0066272735542458605,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -609,7 +337,7 @@
       "geographyId": null,
       "value": 0.001656350421677999,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -620,7 +348,7 @@
       "geographyId": null,
       "value": 0.0010297419582201428,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -631,7 +359,7 @@
       "geographyId": null,
       "value": 0.0014791246337182429,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -643,7 +371,7 @@
       "geographyId": null,
       "value": 0.00044938267549810007,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -654,7 +382,7 @@
       "geographyId": null,
       "value": 0.003949613747142422,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -665,7 +393,7 @@
       "geographyId": null,
       "value": 0.005155785732497975,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -677,7 +405,7 @@
       "geographyId": null,
       "value": 0.001206171985355553,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -688,7 +416,7 @@
       "geographyId": null,
       "value": 0.00980960878762005,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -699,7 +427,7 @@
       "geographyId": null,
       "value": 0.013483072813730956,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -711,7 +439,7 @@
       "geographyId": null,
       "value": 0.0036734640261109064,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -722,7 +450,7 @@
       "geographyId": null,
       "value": 0.007678397361509326,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -733,7 +461,7 @@
       "geographyId": null,
       "value": 0.010337519923893979,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -745,7 +473,7 @@
       "geographyId": null,
       "value": 0.0026591225623846526,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -756,7 +484,7 @@
       "geographyId": null,
       "value": 0.006329833739187052,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -767,7 +495,7 @@
       "geographyId": null,
       "value": 0.008372078190088672,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -779,41 +507,7 @@
       "geographyId": null,
       "value": 0.00204224445090162,
       "extra": {
-        "sketchName": "MPA 2"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f18f",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "MPA 1"
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f190",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 300.0423930287361,
-      "extra": {
-        "sketchName": "no-full-network",
-        "isCollection": true
-      }
-    },
-    {
-      "metricId": "valueOverlap",
-      "sketchId": "616f1ae906f1b7772b51f191",
-      "classId": "Utilities",
-      "groupId": null,
-      "geographyId": null,
-      "value": 300.0423930287361,
-      "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     },
     {
@@ -824,7 +518,7 @@
       "geographyId": null,
       "value": 0.001149264788168125,
       "extra": {
-        "sketchName": "MPA 1"
+        "sketchName": "full mpa"
       }
     },
     {
@@ -835,7 +529,7 @@
       "geographyId": null,
       "value": 0.0027368667472416064,
       "extra": {
-        "sketchName": "no-full-network",
+        "sketchName": "no-high-network",
         "isCollection": true
       }
     },
@@ -847,7 +541,7 @@
       "geographyId": null,
       "value": 0.0015876019590734813,
       "extra": {
-        "sketchName": "MPA 2"
+        "sketchName": "low mpa"
       }
     }
   ],
@@ -855,8 +549,8 @@
     "type": "FeatureCollection",
     "properties": {
       "id": "616f1ae906f1b7772b51f190",
-      "name": "no-full-network",
-      "updatedAt": "2021-10-19T19:25:31.562Z",
+      "name": "no-high-network",
+      "updatedAt": "2021-10-19T23:07:10.877Z",
       "createdAt": "2021-10-14T15:53:12.935Z",
       "sketchClassId": "615b65a2aac8c8285d50d9f3",
       "isCollection": true,
@@ -867,8 +561,8 @@
         "type": "Feature",
         "properties": {
           "id": "616f1ae906f1b7772b51f18f",
-          "name": "MPA 1",
-          "updatedAt": "2021-10-19T19:22:17.900Z",
+          "name": "full mpa",
+          "updatedAt": "2021-10-19T23:06:50.458Z",
           "createdAt": "2021-10-14T15:52:43.614Z",
           "sketchClassId": "615b59e1aac8c8285d50d9b8",
           "isCollection": false,
@@ -877,7 +571,7 @@
               "label": "Allowed Activities",
               "fieldType": "ChoiceField",
               "exportId": "ACTIVITIES",
-              "value": "[\"RESEARCH_NE\",\"RESEARCH\"]"
+              "value": ""
             }
           ]
         },
@@ -894,8 +588,8 @@
         "type": "Feature",
         "properties": {
           "id": "616f1ae906f1b7772b51f191",
-          "name": "MPA 2",
-          "updatedAt": "2021-10-19T19:22:17.905Z",
+          "name": "low mpa",
+          "updatedAt": "2021-10-19T23:07:10.884Z",
           "createdAt": "2021-10-14T15:53:05.560Z",
           "sketchClassId": "615b59e1aac8c8285d50d9b8",
           "isCollection": false,
@@ -904,7 +598,7 @@
               "label": "Allowed Activities",
               "fieldType": "ChoiceField",
               "exportId": "ACTIVITIES",
-              "value": "[\"FISH_COLLECT_REC\",\"FISH_AQUA_INDUSTRIAL\"]"
+              "value": "[\"FISH_COLLECT_REC\",\"MINING_OIL_GAS\"]"
             }
           ]
         },
