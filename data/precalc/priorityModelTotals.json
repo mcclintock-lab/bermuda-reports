@@ -1,0 +1,12 @@
+{
+  "metrics": [
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": null,
+      "classId": "Priority Test Data",
+      "groupId": null,
+      "geographyId": null,
+      "value": 119679983.40537398
+    }
+  ]
+}

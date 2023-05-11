@@ -4,8 +4,10 @@
 ./habitatNursery-2-publish.sh
 ./habitatRestore-2-publish.sh
 ./nearshore-2-publish.sh
-./oceanuse-2-publish.sh
+./oceanusebysector-2-publish.sh
+./oceanusebygeartype-2-publish.sh
 ./platformEdge-2-publish.sh
+./priorityModel-2-publish.sh
 ./reefindex-2-publish.sh
 ./renewable-2-publish.sh
 ./shipwreck-2-publish.sh

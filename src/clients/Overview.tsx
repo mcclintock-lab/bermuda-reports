@@ -7,6 +7,7 @@ import {
 import SizeCard from "./SizeCard";
 import ProtectionCard from "./ProtectionCard";
 import ExistingProtections from "./ExistingProtections";
+import PriorityModel from "./PriorityModel";
 
 interface ReportProps {
   hidden: boolean;
@@ -30,6 +31,7 @@ const Overview: FunctionComponent<ReportProps> = ({ hidden }) => {
       <ProtectionCard />
       <ExistingProtections />
       <IucnActivitiesCard />
+      <PriorityModel />
     </div>
   );
 };

@@ -59,7 +59,7 @@ export async function oceanUseBySector(
 
 export default new GeoprocessingHandler(oceanUseBySector, {
   title: "oceanUseBySector",
-  description: "ocean use survey stats",
+  description: "ocean use by sector survey stats",
   timeout: 900, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required

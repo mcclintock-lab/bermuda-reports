@@ -1,0 +1,75 @@
+{
+  "metrics": [
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Priority Test Data",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Priority Test Data",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Priority Test Data",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "618abe61e4efd949c23c5899",
+      "classId": "Priority Test Data",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "no-activity-mpa"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "618abe61e4efd949c23c5899",
+      "name": "no-activity-mpa",
+      "updatedAt": "2021-11-09T18:30:57.892Z",
+      "createdAt": "2021-11-09T18:30:57.892Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": ""
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.61027849772681,
+      32.19068339515532,
+      -64.33287371257072,
+      32.41123101229184
+    ],
+    "geometry": null
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "metrics": [
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Priority Test Data",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Priority Test Data",
+      "groupId": "full",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Priority Test Data",
+      "groupId": "high",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    },
+    {
+      "metricId": "priorityModelAreaOverlap",
+      "sketchId": "615bbc28aac8c8285d50db2f",
+      "classId": "Priority Test Data",
+      "groupId": "low",
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "mpa-high"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "Feature",
+    "properties": {
+      "id": "615bbc28aac8c8285d50db2f",
+      "name": "mpa-high",
+      "updatedAt": "2021-10-05T02:44:56.968Z",
+      "createdAt": "2021-10-05T02:44:56.968Z",
+      "sketchClassId": "615b59e1aac8c8285d50d9b8",
+      "isCollection": false,
+      "userAttributes": [
+        {
+          "label": "Allowed Activities",
+          "fieldType": "ChoiceField",
+          "exportId": "ACTIVITIES",
+          "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"TOURISM\"]"
+        }
+      ]
+    },
+    "id": "1",
+    "bbox": [
+      -64.86625596136682,
+      32.20595207620439,
+      -64.76875229925741,
+      32.250097107343166
+    ],
+    "geometry": null
+  }
+}

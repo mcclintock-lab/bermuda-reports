@@ -59,7 +59,7 @@ export async function oceanUseByGearType(
 
 export default new GeoprocessingHandler(oceanUseByGearType, {
   title: "oceanUseByGearType",
-  description: "ocean use survey stats",
+  description: "ocean use by gear type survey stats",
   timeout: 900, // seconds
   executionMode: "async",
   // Specify any Sketch Class form attributes that are required
