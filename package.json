@@ -4,7 +4,6 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "ts-node": "ts-node --transpile-only --compiler-options '{\"esModuleInterop\":true, \"module\":\"commonjs\"}'",
     "start-data": "http-server data/dist -c-1",
     "__test": "geoprocessing test",
     "test": "npm run test:unit && npm run test:smoke",

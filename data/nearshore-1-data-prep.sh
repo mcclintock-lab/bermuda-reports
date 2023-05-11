@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run in workspace
 
-SRC_DATASET=src/nearshore_dissolved.shp
+SRC_DATASET=src/Analytics/nearshore_dissolved.shp
 DIST_DATASET=dist/nearshore_dissolved
 
 if [ ! -f "$SRC_DATASET" ]; then

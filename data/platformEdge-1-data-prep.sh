@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run in workspace
 
-SRC_DATASET=src/Pelagic_Fishing_Zone_Dissolved.shp
+SRC_DATASET=src/Analytics/Pelagic_Fishing_Zone_Dissolved.shp
 DIST_DATASET=dist/Pelagic_Fishing_Zone_Dissolved.fgb
 JSON_DATASET=dist/Pelagic_Fishing_Zone_Dissolved.json
 

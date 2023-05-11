@@ -3,7 +3,7 @@
 
 source ./habitatNursery_config.sh
 
-SRC_PATH=src/NurseryHabs
+SRC_PATH=src/Analytics/NurseryHabs
 DST_PATH=dist
 
 ITER=0

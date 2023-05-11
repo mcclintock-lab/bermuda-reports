@@ -3,7 +3,7 @@
 
 source ./habitat_config.sh
 
-SRC_PATH=src/Prioritization\ Inputs
+SRC_PATH=src/Analytics/Prioritization\ Inputs
 DST_PATH=dist
 
 for LAYER in "${LAYERS[@]}"

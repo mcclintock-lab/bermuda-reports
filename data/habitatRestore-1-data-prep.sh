@@ -3,7 +3,7 @@
 
 source ./habitatRestore_config.sh
 
-SRC_PATH=src/SiteSuitability
+SRC_PATH=src/Analytics/SiteSuitability
 DST_PATH=dist
 
 LAYER_NUM=0

@@ -7,7 +7,7 @@ psql -t <<SQL
 SQL
 
 # Import, keeping column name casing intact, and setting the SRID field to 4326
-shp2pgsql -D -k -s 4326 src/test_boundary_simple2.shp eez_land_union | psql
+shp2pgsql -D -k -s 4326 src/Analytics/test_boundary_simple2.shp eez_land_union | psql
 
 # Create spatial index
 psql -t <<SQL

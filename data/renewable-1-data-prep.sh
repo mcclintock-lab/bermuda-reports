@@ -3,7 +3,7 @@
 
 source ./renewable_config.sh
 
-SRC_PATH=src/SiteSuitability
+SRC_PATH=src/Analytics/SiteSuitability
 DST_PATH=dist
 
 for LAYER in "${LAYERS[@]}"

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run in workspace
 
-SRC_DATASET=src/WreckHeatmap.shp
+SRC_DATASET=src/Analytics/WreckHeatmap.shp
 DIST_DATASET=dist/WreckHeatmap.fgb
 JSON_DATASET=dist/WreckHeatmap.json
 
