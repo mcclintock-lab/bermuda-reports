@@ -3,10 +3,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfea12cc967084406388f",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 2172.5765339764444,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -15,7 +15,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfea12cc967084406388f",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
       "value": 0,
@@ -27,10 +27,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfea12cc967084406388f",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
-      "value": 0,
+      "value": 2172.5765339764444,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -39,7 +39,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfea12cc967084406388f",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "low",
       "geographyId": null,
       "value": 0,
@@ -51,7 +51,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfeec2cc9670844063891",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
       "value": 0,
@@ -62,7 +62,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cfeec2cc9670844063891",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
       "value": 0,
@@ -73,10 +73,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cff422cc9670844063893",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 2172.5765339764444,
       "extra": {
         "sketchName": "low1"
       }
@@ -84,10 +84,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cff422cc9670844063893",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
-      "value": 0,
+      "value": 2172.5765339764444,
       "extra": {
         "sketchName": "low1"
       }
@@ -95,7 +95,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cff6c2cc9670844063895",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
       "value": 0,
@@ -106,7 +106,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "645cff6c2cc9670844063895",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
       "value": 0,

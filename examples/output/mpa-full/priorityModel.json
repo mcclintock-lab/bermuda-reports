@@ -3,10 +3,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 0,
+      "value": 8147784.905896832,
       "extra": {
         "sketchName": "mpa-full"
       }
@@ -14,10 +14,10 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 0,
+      "value": 8147784.905896832,
       "extra": {
         "sketchName": "mpa-full"
       }
@@ -25,7 +25,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
       "value": 0,
@@ -36,7 +36,7 @@
     {
       "metricId": "priorityModelAreaOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
-      "classId": "Priority Test Data",
+      "classId": "fishing_by_location",
       "groupId": "low",
       "geographyId": null,
       "value": 0,

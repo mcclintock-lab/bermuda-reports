@@ -53,10 +53,17 @@ const PriorityModel = () => {
 
   return (
     <>
-      <ResultsCard title="Priority Model" functionName="priorityModel">
+      <ResultsCard title="Priority Areas" functionName="priorityModel">
         {(data: ReportResult) => {
           return (
             <ReportError>
+              <p>
+                Areas have been pre-identified using a prioritization modeling
+                approach that meets multiple objectives of this planning
+                process. Consider including these areas in order to achieve
+                planning goals. This report summarizes the percentage of the
+                areas that overlap with this plan.
+              </p>
               {isCollection
                 ? genNetwork(data)
                 : genSingle(data, userAttributes)}
@@ -106,7 +113,7 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
   return (
     <>
       <ClassTable
-        titleText="Type"
+        titleText=" "
         rows={Object.values(classPercMetrics)}
         dataGroup={METRIC}
         showLayerToggle
@@ -160,7 +167,7 @@ const genHabitatToggles = () => {
       {METRIC.classes.map((curClass) => (
         <LayerToggle
           key={curClass.layerId}
-          label={`Show ${curClass.display} Layer`}
+          label={`Show Priority Areas`}
           layerId={curClass.layerId}
         />
       ))}
@@ -174,7 +181,7 @@ const genSketchTable = (
 ) => {
   const classColumns: Column<GroupMetricSketchAggNoTotal>[] =
     METRIC.classes.map((curClass) => ({
-      Header: curClass.display,
+      Header: "Within Plan",
       accessor: (row) => percentWithEdge(row[curClass.classId] as number),
     }));
 
@@ -206,7 +213,7 @@ const genSketchTable = (
 const genGroupTable = (groupRows: GroupMetricAggNoTotal[]) => {
   const classColumns: Column<GroupMetricAggNoTotal>[] = METRIC.classes.map(
     (curClass) => ({
-      Header: curClass.display,
+      Header: "Within Plan",
       accessor: (row) => percentWithEdge(row[curClass.classId] as number),
       style: { width: "10%" },
     })
@@ -246,22 +253,32 @@ const genHelp = () => (
   <>
     <Collapse title="Learn More">
       <p>
-        Objective: Identify and protect 50% of coastal habitats that appear to
-        be juvenile fish nursery habitats and/or used by protected marine
-        species.
+        ℹ️ Overview: A prioritization model was used to find optimal areas to
+        meet planning objectives. The model was designed to meet the following
+        targets:
+        <ul>
+          <li>Habitat zones: 20% of each habitat zones</li>
+          <li>
+            Coral/ benthic data: 30% of the total value of each of the coral/
+            benthic data layers
+          </li>
+          <li>Fish: 30% of the total value of each of the fish data layers</li>
+          <li>Seagrass: 50% of the total seagrass index value</li>
+          <li>Mangroves: 50% of mangrove area</li>
+          <li>Nursery reef: 50% of the nursery reef area</li>
+        </ul>{" "}
       </p>
       <p>
-        To achieve the objective, increase enough MPAs in the plan to{" "}
-        <b>full</b> protection. Or discuss appropriate implementation measures
-        that will ensure the objective can still be met under a <b>high</b>{" "}
-        protection level.
+        🎯 Planning Objective: there is no specific objective for including
+        these priority areas in your plan, but they can be used to guide
+        discussion.{" "}
       </p>
       <p>
-        Strategy: The effectiveness of a plan increases when its MPAs contain a
-        mosaic of habitats (two or more types). Strive to include multiple
-        habitat types in MPA boundaries.
+        📈 Report: Percentages are calculated by summing the portion of priority
+        areas found within the plans MPAs, and dividing it by the sum of all
+        priority areas. If the plan includes multiple MPAs that overlap, the
+        overlap is only counted once.
       </p>
-      <p></p>
     </Collapse>
   </>
 );

@@ -901,10 +901,10 @@ const platformEdgeReport: PlatformEdgeReport = {
 
 const priorityModelClasses: DataClass[] = [
   {
-    baseFilename: "POLYGON",
-    classId: "Priority Test Data",
-    display: "Priority Test Data",
-    layerId: "",
+    baseFilename: "prioritySolution",
+    classId: "fishing_by_location",
+    display: "Priority Areas",
+    layerId: "64651c2e0bc8019b3c6b754e",
   },
 ];
 
