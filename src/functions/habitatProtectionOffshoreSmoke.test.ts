@@ -2,7 +2,7 @@
  * @jest-environment node
  * @group smoke
  */
-import handler from "./habitatProtection";
+import handler from "./habitatProtectionOffshore";
 import {
   getExamplePolygonSketchAll,
   writeResultOutput,
@@ -12,13 +12,17 @@ describe("Basic smoke tests", () => {
   test("handler function is present", () => {
     expect(typeof handler.func).toBe("function");
   });
-  test("habitatProtectionSmoke - tests run against all examples", async () => {
+  test("habitatProtectionOffshoreSmoke - tests run against all examples", async () => {
     // data fetch fails if run all sketches, too many requests?
     const examples = await getExamplePolygonSketchAll();
     for (const example of examples) {
       const result = await handler.func(example);
       expect(result).toBeTruthy();
-      writeResultOutput(result, "habitatProtection", example.properties.name);
+      writeResultOutput(
+        result,
+        "habitatProtectionOffshore",
+        example.properties.name
+      );
     }
   }, 60000);
 });

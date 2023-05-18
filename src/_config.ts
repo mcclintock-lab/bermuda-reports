@@ -164,7 +164,7 @@ const existingProtectionReport: Report = {
 
 //// HABITAT PROTECTION ////
 
-// Single-class rasters
+// Single-class rasters for offshore
 const offshoreClasses: DataClass[] = [
   {
     baseFilename: "feature_abyssopelagic",
@@ -248,7 +248,7 @@ const offshoreClasses: DataClass[] = [
   },
 ];
 
-// Multi-class raster (categorical)
+// Multi-class raster (categorical) for nearshore
 const nearshoreClasses: DataClass[] = [
   {
     numericClassId: 1,
@@ -330,8 +330,8 @@ const nearshoreClasses: DataClass[] = [
   },
 ];
 
-const habitatProtectionReport: Report = {
-  reportId: "habitatProtection",
+const habitatProtectionNearshoreReport: Report = {
+  reportId: "habitatProtectionNeashore",
   metrics: {
     nearshoreAreaOverlap: {
       metricId: "nearshoreAreaOverlap",
@@ -340,6 +340,12 @@ const habitatProtectionReport: Report = {
       classes: nearshoreClasses,
       layerId: "614df361c33508c127015a1c",
     },
+  },
+};
+
+const habitatProtectionOffshoreReport: Report = {
+  reportId: "habitatProtectionOffshore",
+  metrics: {
     offshoreAreaOverlap: {
       metricId: "offshoreAreaOverlap",
       classes: offshoreClasses.map((curClass) => {
@@ -935,7 +941,8 @@ export default {
   size: sizeReport,
   protection: protectionReport,
   existingProtection: existingProtectionReport,
-  habitatProtection: habitatProtectionReport,
+  habitatProtectionNearshore: habitatProtectionNearshoreReport,
+  habitatProtectionOffshore: habitatProtectionOffshoreReport,
   speciesProtection: speciesProtectionReport,
   renewable: renewableReport,
   oceanUseBySector: oceanUseBySectorReport,

@@ -13,7 +13,7 @@ import { loadCogWindow } from "../src/datasources/cog";
 // @ts-ignore
 import geoblaze from "geoblaze";
 
-const REPORT = config.habitatProtection;
+const REPORT = config.habitatProtectionOffshore;
 const METRIC = REPORT.metrics.offshoreAreaOverlap;
 const DEST_PATH = `${__dirname}/precalc/offshoreHabitatTotals.json`;
 

@@ -1,0 +1,549 @@
+{
+  "metrics": [
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfea12cc967084406388f",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "baitInshore1Full2HighProtection",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cfeec2cc9670844063891",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "high1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff422cc9670844063893",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low1"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "645cff6c2cc9670844063895",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "low2"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "645cfea12cc967084406388f",
+      "name": "baitInshore1Full2HighProtection",
+      "updatedAt": "2023-05-11T14:45:09.319Z",
+      "createdAt": "2023-05-11T14:41:37.825Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cfeec2cc9670844063891",
+          "name": "high1",
+          "updatedAt": "2023-05-11T14:45:05.655Z",
+          "createdAt": "2023-05-11T14:42:52.581Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.8481584941254,
+          32.310429286063496,
+          -64.84202159989917,
+          32.31298632218311
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cff422cc9670844063893",
+          "name": "low1",
+          "updatedAt": "2023-05-11T14:45:07.658Z",
+          "createdAt": "2023-05-11T14:44:18.115Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH\",\"FISH_COLLECT_REC\",\"AQUA_SMALL\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.71978797067247,
+          32.35353561348283,
+          -64.71026076425132,
+          32.36049597150418
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "645cff6c2cc9670844063895",
+          "name": "low2",
+          "updatedAt": "2023-05-11T14:45:09.320Z",
+          "createdAt": "2023-05-11T14:45:00.383Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH\",\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.71129073251306,
+          32.34447184446137,
+          -64.70429553140204,
+          32.35411566377895
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

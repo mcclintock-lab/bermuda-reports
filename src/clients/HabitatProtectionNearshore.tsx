@@ -20,18 +20,17 @@ import config from "../_config";
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
 const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
 
-import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
-const offshorePrecalcTotals = offshoreHabitatTotals as ReportResultBase;
-
-const REPORT = config.habitatProtection;
+const REPORT = config.habitatProtectionNearshore;
 const NEARSHORE_METRIC = REPORT.metrics.nearshoreAreaOverlap;
-const OFFSHORE_METRIC = REPORT.metrics.offshoreAreaOverlap;
 
-const HabitatProtection = () => {
+const HabitatProtectionNearshore = () => {
   const [{ isCollection }] = useSketchProperties();
   return (
     <>
-      <ResultsCard title="Habitat Protection" functionName="habitatProtection">
+      <ResultsCard
+        title="Habitat Protection - Nearshore"
+        functionName="habitatProtectionNearshore"
+      >
         {(data: ReportResult) => {
           // Collection top-level or single sketch.
           const nearshoreParentPercMetrics = metricsWithSketchId(
@@ -43,22 +42,13 @@ const HabitatProtection = () => {
             ),
             [data.sketch.properties.id]
           );
-          const offshoreParentPercMetrics = metricsWithSketchId(
-            toPercentMetric(
-              data.metrics.filter(
-                (m) => m.metricId === OFFSHORE_METRIC.metricId
-              ),
-              offshorePrecalcTotals.metrics
-            ),
-            [data.sketch.properties.id]
-          );
 
           return (
             <>
               <p>
                 Plans should ensure the representative coverage of each key
                 habitat type. This report summarizes the percentage of each
-                habitat that overlaps with this plan.
+                nearshore/platform habitat that overlaps with this plan.
               </p>
               <Collapse title="Learn more">
                 <p>
@@ -70,7 +60,7 @@ const HabitatProtection = () => {
                 </p>
               </Collapse>
               <ClassTable
-                titleText="Nearshore/Platform"
+                titleText="Habitat"
                 rows={nearshoreParentPercMetrics}
                 dataGroup={NEARSHORE_METRIC}
                 showGoal
@@ -80,19 +70,6 @@ const HabitatProtection = () => {
               {isCollection && (
                 <Collapse title="Show Nearshore by MPA">
                   {genNearshoreSketchTable(data)}
-                </Collapse>
-              )}
-              <ClassTable
-                titleText="Offshore"
-                rows={offshoreParentPercMetrics}
-                dataGroup={OFFSHORE_METRIC}
-                showGoal
-                showLayerToggle
-                formatPerc
-              />
-              {isCollection && (
-                <Collapse title="Show Offshore by MPA">
-                  {genOffshoreSketchTable(data)}
                 </Collapse>
               )}
             </>
@@ -130,31 +107,4 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   );
 };
 
-const genOffshoreSketchTable = (data: ReportResult) => {
-  // Build agg sketch group objects with percValue for each class
-  const subSketches = toNullSketchArray(data.sketch);
-  const subSketchIds = subSketches.map((sk) => sk.properties.id);
-  const subSketchMetrics = toPercentMetric(
-    metricsWithSketchId(
-      data.metrics.filter(
-        (m) => m.metricId === OFFSHORE_METRIC.metricId && m.classId
-      ),
-      subSketchIds
-    ),
-    offshorePrecalcTotals.metrics
-  );
-  const sketchRows = flattenBySketchAllClass(
-    subSketchMetrics,
-    OFFSHORE_METRIC.classes,
-    subSketches
-  );
-  return (
-    <SketchClassTable
-      rows={sketchRows}
-      dataGroup={OFFSHORE_METRIC}
-      formatPerc
-    />
-  );
-};
-
-export default HabitatProtection;
+export default HabitatProtectionNearshore;

@@ -1,0 +1,412 @@
+{
+  "metrics": [
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 149,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 149,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Abyssopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Cold water coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Escarpments",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 16,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Knolls",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Pelagic zone 1",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Pelagic zone 2",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 199,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 199,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Pelagic zone 3",
+      "groupId": null,
+      "geographyId": null,
+      "value": 10,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 165,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 165,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Plains",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb8",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11862,
+      "extra": {
+        "sketchName": "OverlapInsideNetwork",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafb9",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11862,
+      "extra": {
+        "sketchName": "Large MPA"
+      }
+    },
+    {
+      "metricId": "offshoreAreaOverlap",
+      "sketchId": "619a8e39a717c5a0742cafba",
+      "classId": "Seamounts",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3776,
+      "extra": {
+        "sketchName": "MPA inside"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "619a8e39a717c5a0742cafb8",
+      "name": "OverlapInsideNetwork",
+      "updatedAt": "2021-11-30T00:27:09.918Z",
+      "createdAt": "2021-10-28T17:43:51.029Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "619a8e39a717c5a0742cafb9",
+          "name": "Large MPA",
+          "updatedAt": "2021-11-21T18:26:41.435Z",
+          "createdAt": "2021-10-28T17:34:24.300Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69359098486977,
+          32.44980942063518,
+          -63.603991852331994,
+          33.55643352377083
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "619a8e39a717c5a0742cafba",
+          "name": "MPA inside",
+          "updatedAt": "2021-11-30T00:27:09.924Z",
+          "createdAt": "2021-11-03T14:28:36.389Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.68357919967069,
+          32.45363443027919,
+          -64.53976093344767,
+          32.944735150647226
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

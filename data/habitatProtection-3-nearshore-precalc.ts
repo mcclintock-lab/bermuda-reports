@@ -13,7 +13,7 @@ import {
   rekeyMetrics,
 } from "@seasketch/geoprocessing";
 
-const REPORT = config.habitatProtection;
+const REPORT = config.habitatProtectionNearshore;
 const METRIC = REPORT.metrics.nearshoreAreaOverlap;
 const DEST_PATH = `${__dirname}/precalc/nearshoreHabitatTotals.json`;
 
