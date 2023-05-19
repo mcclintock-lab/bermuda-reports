@@ -647,7 +647,7 @@ const oceanUseClassesBySector: DataClass[] = [
     baseFilename: "commercial_fishing",
     classId: "commercial_fishing",
     display: "Commercial Fishing",
-    layerId: "61648ab8a04323106537d190",
+    layerId: "6467b105e462278450085f18",
   },
   {
     baseFilename: "passiverec_conservation_heatmap",

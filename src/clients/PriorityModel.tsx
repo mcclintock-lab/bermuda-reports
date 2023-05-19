@@ -12,6 +12,7 @@ import {
   percentGoalWithEdge,
   UserAttribute,
   toNullSketchArray,
+  firstMatchingMetric,
   isSketchCollection,
   toPercentMetric,
   flattenByGroupSketchAllClass,
@@ -125,6 +126,16 @@ const genSingle = (data: ReportResult, userAttributes: UserAttribute[]) => {
 };
 
 const genNetwork = (data: ReportResult) => {
+  const totalPriorityPerc = toPercentMetric(
+    [
+      firstMatchingMetric(
+        data.metrics,
+        (m) => m.sketchId === data.sketch.properties.id && m.groupId === null
+      ),
+    ],
+    precalcTotals.metrics
+  )[0];
+
   const sketches = toNullSketchArray(data.sketch);
   const sketchesById = keyBy(sketches, (sk) => sk.properties.id);
 
@@ -151,6 +162,13 @@ const genNetwork = (data: ReportResult) => {
 
   return (
     <>
+      <p>
+        <b>
+          This plan contains{" "}
+          <Pill>{percentWithEdge(totalPriorityPerc.value)}</Pill> of priority
+          areas.
+        </b>
+      </p>
       {genGroupTable(groupAggs)}
       <Collapse title="Show by MPA">
         {genSketchTable(sketchesById, sketchAggs)}
