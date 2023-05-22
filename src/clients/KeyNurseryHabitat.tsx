@@ -294,6 +294,7 @@ const genSingleObjective = (
           }
         />
       );
+      break;
     case "high":
       objectiveCmp = (
         <ObjectiveStatus
@@ -316,6 +317,7 @@ const genSingleObjective = (
           }
         />
       );
+      break;
     default:
       objectiveCmp = (
         <ObjectiveStatus

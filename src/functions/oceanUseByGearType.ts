@@ -38,6 +38,8 @@ export async function oceanUseByGearType(
           sketch
         );
         return overlapResult.map((curMetric): Metric => {
+          // Removing geographyId and extra attributes for efficient memory usage
+          // and fit within DynamoDB 400kb limit
           const { geographyId, extra, ...metric } = {
             ...curMetric,
             classId: curClass.classId,
