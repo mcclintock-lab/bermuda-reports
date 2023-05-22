@@ -5,544 +5,336 @@
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bait_inshore",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bait_inshore",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bait_inshore",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bait_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0002477943170333674,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.0002477943170333674
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bait_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0002477943170333674,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.0002477943170333674
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bait_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00024417423935574334,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.00024417423935574334
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bottom_all",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.021749776927139308,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.021749776927139308
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bottom_all",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.021749776927139308,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.021749776927139308
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bottom_all",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.01742980094871527,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.01742980094871527
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bottom_general",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.017500636549085513,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.017500636549085513
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bottom_general",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.017500636549085513,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.017500636549085513
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bottom_general",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.014504708068141525,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.014504708068141525
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bottom_general_other",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.015994841065930743,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.015994841065930743
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bottom_general_other",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.015994841065930743,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.015994841065930743
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bottom_general_other",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.013000146076944219,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.013000146076944219
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bottom_general_snapper",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.008631890791857444,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.008631890791857444
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bottom_general_snapper",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.008631890791857444,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.008631890791857444
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bottom_general_snapper",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.007726178087148483,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.007726178087148483
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "bottom_general_turbot",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0000026443176537327417,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.0000026443176537327417
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "bottom_general_turbot",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0000026443176537327417,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.0000026443176537327417
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "bottom_general_turbot",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0000015193541678115707,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.0000015193541678115707
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "catch_release",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.004132454130374441,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.004132454130374441
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "catch_release",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.004132454130374441,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.004132454130374441
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "catch_release",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.002856808905526975,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.002856808905526975
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "shark",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00012694378537680961,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.00012694378537680961
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "shark",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00012694378537680961,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.00012694378537680961
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "shark",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00011781299273216916,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.00011781299273216916
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trapping",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00457406719803366,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.00457406719803366
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trapping",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.00457406719803366,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.00457406719803366
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trapping",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.003751713597623052,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.003751713597623052
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trapping_guinea_chick",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.001330301467923789,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.001330301467923789
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trapping_guinea_chick",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.001330301467923789,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.001330301467923789
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trapping_guinea_chick",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0010390210272497313,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.0010390210272497313
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trapping_spiny_lobster",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0032633518513218718,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.0032633518513218718
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trapping_spiny_lobster",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0032633518513218718,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.0032633518513218718
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trapping_spiny_lobster",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.0027007417090327834,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.0027007417090327834
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trolling",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.022455029558327677,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.022455029558327677
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trolling",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.022455029558327677,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.022455029558327677
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trolling",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.016552301100819733,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.016552301100819733
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trolling_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.019192001764368083,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.019192001764368083
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trolling_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.019192001764368083,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.019192001764368083
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trolling_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.013955106706140086,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.013955106706140086
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "trolling_rockfish",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.014726134648076261,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.014726134648076261
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "trolling_rockfish",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.014726134648076261,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.014726134648076261
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "trolling_rockfish",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.010721991257389263,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.010721991257389263
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb8",
       "classId": "vertical_lining",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.004132454130374441,
-      "extra": {
-        "sketchName": "OverlapInsideNetwork",
-        "isCollection": true
-      }
+      "value": 0.004132454130374441
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafb9",
       "classId": "vertical_lining",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.004132454130374441,
-      "extra": {
-        "sketchName": "Large MPA"
-      }
+      "value": 0.004132454130374441
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "619a8e39a717c5a0742cafba",
       "classId": "vertical_lining",
       "groupId": null,
-      "geographyId": null,
-      "value": 0.002856808905526975,
-      "extra": {
-        "sketchName": "MPA inside"
-      }
+      "value": 0.002856808905526975
     }
   ],
   "sketch": {

@@ -37,12 +37,14 @@ export async function oceanUseByGearType(
           raster,
           sketch
         );
-        return overlapResult.map(
-          (metrics): Metric => ({
-            ...metrics,
+        return overlapResult.map((curMetric): Metric => {
+          const { geographyId, extra, ...metric } = {
+            ...curMetric,
             classId: curClass.classId,
-          })
-        );
+          };
+
+          return metric as Metric;
+        });
       })
     )
   ).reduce(

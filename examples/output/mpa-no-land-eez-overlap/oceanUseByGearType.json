@@ -5,176 +5,112 @@
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bait_inshore",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bait_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bottom_all",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bottom_general",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bottom_general_other",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bottom_general_snapper",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "bottom_general_turbot",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "catch_release",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "shark",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trapping",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trapping_guinea_chick",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trapping_spiny_lobster",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trolling",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trolling_pelagic",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "trolling_rockfish",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "615bbbe9aac8c8285d50db2d",
       "classId": "vertical_lining",
       "groupId": null,
-      "geographyId": null,
-      "value": 0,
-      "extra": {
-        "sketchName": "mpa-no-land-eez-overlap"
-      }
+      "value": 0
     }
   ],
   "sketch": {
