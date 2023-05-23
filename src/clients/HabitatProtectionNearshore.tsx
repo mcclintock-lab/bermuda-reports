@@ -9,9 +9,9 @@ import {
   ReportResult,
   ReportResultBase,
   toNullSketchArray,
-  flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
@@ -107,4 +107,4 @@ const genNearshoreSketchTable = (data: ReportResult) => {
   );
 };
 
-export default HabitatProtectionNearshore;
+export default React.memo(HabitatProtectionNearshore);

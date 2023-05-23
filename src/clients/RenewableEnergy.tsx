@@ -4,9 +4,9 @@ import {
   ReportResultBase,
   isNullSketchCollection,
   toNullSketchArray,
-  flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
   Collapse,
@@ -103,4 +103,4 @@ const genSketchTable = (data: ReportResult) => {
   );
 };
 
-export default RenewableEnergy;
+export default React.memo(RenewableEnergy);

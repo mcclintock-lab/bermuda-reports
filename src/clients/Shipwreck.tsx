@@ -5,9 +5,9 @@ import {
   percentWithEdge,
   toNullSketchArray,
   firstMatchingMetric,
-  flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import {
   Collapse,
@@ -94,4 +94,4 @@ const genSketchTable = (data: ReportResult) => {
   );
 };
 
-export default Shipwreck;
+export default React.memo(Shipwreck);

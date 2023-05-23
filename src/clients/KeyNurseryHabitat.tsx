@@ -453,4 +453,4 @@ const genHelp = () => (
   </>
 );
 
-export default KeyNurseryHabitat;
+export default React.memo(KeyNurseryHabitat);

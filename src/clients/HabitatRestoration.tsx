@@ -9,9 +9,9 @@ import {
 import {
   ReportResultBase,
   ReportResult,
-  flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import config from "../_config";
 import { ClassTable } from "../components/ClassTable";
@@ -118,4 +118,4 @@ const genSketchTable = (data: ReportResult) => {
   );
 };
 
-export default HabitatRestoration;
+export default React.memo(HabitatRestoration);

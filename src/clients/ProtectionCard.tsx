@@ -527,4 +527,4 @@ const genSketchTable = (
   );
 };
 
-export default ProtectionCard;
+export default React.memo(ProtectionCard);

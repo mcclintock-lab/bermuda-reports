@@ -301,4 +301,4 @@ const genHelp = () => (
   </>
 );
 
-export default PriorityModel;
+export default React.memo(PriorityModel);

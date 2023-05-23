@@ -8,9 +8,9 @@ import {
   ReportResult,
   ReportResultBase,
   toNullSketchArray,
-  flattenBySketchAllClass,
   metricsWithSketchId,
   toPercentMetric,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
 import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
@@ -86,4 +86,4 @@ const genSketchTable = (data: ReportResult) => {
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
 
-export default ExistingProtections;
+export default React.memo(ExistingProtections);

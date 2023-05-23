@@ -354,4 +354,4 @@ const genSketchTable = (
   );
 };
 
-export default PlatformEdge;
+export default React.memo(PlatformEdge);
