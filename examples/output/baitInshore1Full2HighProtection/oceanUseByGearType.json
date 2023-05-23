@@ -201,7 +201,7 @@
       "sketchId": "645cfea12cc967084406388f",
       "classId": "catch_release",
       "groupId": null,
-      "value": 0
+      "value": 0.0006893318859511055
     },
     {
       "metricId": "valueOverlap",
@@ -215,14 +215,14 @@
       "sketchId": "645cff422cc9670844063893",
       "classId": "catch_release",
       "groupId": null,
-      "value": 0
+      "value": 0.0002516115655453177
     },
     {
       "metricId": "valueOverlap",
       "sketchId": "645cff6c2cc9670844063895",
       "classId": "catch_release",
       "groupId": null,
-      "value": 0
+      "value": 0.0004377203204057878
     },
     {
       "metricId": "valueOverlap",
