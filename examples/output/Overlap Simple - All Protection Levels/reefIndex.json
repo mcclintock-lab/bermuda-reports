@@ -174,7 +174,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 906.7962733994174,
+      "value": 903.8566225635493,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -185,7 +185,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 1008.4280517472472,
+      "value": 1005.7697285854281,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -197,7 +197,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 783.9259072223118,
+      "value": 781.9773384643461,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -208,7 +208,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 783.9259072223118,
+      "value": 781.9773384643461,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -219,7 +219,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 958.3148786000494,
+      "value": 955.6111816254468,
       "extra": {
         "sketchName": "low MPA"
       }
@@ -566,7 +566,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 11763.9672107175,
+      "value": 4844.405398059636,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -577,7 +577,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 13401.648141779006,
+      "value": 5568.078983411193,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -589,7 +589,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 11098.331595037133,
+      "value": 4437.186749696732,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -600,7 +600,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 11098.331595037133,
+      "value": 4437.186749696732,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -611,7 +611,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 12170.72481225431,
+      "value": 5153.5439055636525,
       "extra": {
         "sketchName": "low MPA"
       }

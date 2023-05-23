@@ -141,7 +141,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 2.989091635681689,
+      "value": 2.828954256605357,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -153,7 +153,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 0.8817555159330368,
+      "value": 0.681944515556097,
       "extra": {
         "sketchName": "high1"
       }
@@ -164,7 +164,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 1.6348073314875364,
+      "value": 1.6627505999058485,
       "extra": {
         "sketchName": "low1"
       }
@@ -175,7 +175,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 0.47252878826111555,
+      "value": 0.4842591411434114,
       "extra": {
         "sketchName": "low2"
       }
@@ -456,7 +456,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 55.72794872522354,
+      "value": 14.52074870839715,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -468,7 +468,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 23.94048947095871,
+      "value": 3.0042808651924133,
       "extra": {
         "sketchName": "high1"
       }
@@ -479,7 +479,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 26.157397598028183,
+      "value": 8.865412943065166,
       "extra": {
         "sketchName": "low1"
       }
@@ -490,7 +490,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 5.630061656236649,
+      "value": 2.6510549001395702,
       "extra": {
         "sketchName": "low2"
       }

@@ -39,7 +39,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 74.9094432257989,
+      "value": 75.30834035202861,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
@@ -116,7 +116,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 378.70038014510646,
+      "value": 121.88056254759431,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }

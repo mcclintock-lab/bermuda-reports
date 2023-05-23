@@ -108,7 +108,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 343.5180494787751,
+      "value": 342.2381794305443,
       "extra": {
         "sketchName": "MPA 1"
       }
@@ -119,7 +119,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 391.35863310545255,
+      "value": 389.88067915063993,
       "extra": {
         "sketchName": "no-full-network",
         "isCollection": true
@@ -131,7 +131,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 47.84058362667747,
+      "value": 47.64249972009566,
       "extra": {
         "sketchName": "MPA 2"
       }
@@ -346,7 +346,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 5264.065859435126,
+      "value": 2204.0004985602573,
       "extra": {
         "sketchName": "MPA 1"
       }
@@ -357,7 +357,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 5677.342019669712,
+      "value": 2380.116884493269,
       "extra": {
         "sketchName": "no-full-network",
         "isCollection": true
@@ -369,7 +369,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 413.2761602345854,
+      "value": 176.11638593301177,
       "extra": {
         "sketchName": "MPA 2"
       }

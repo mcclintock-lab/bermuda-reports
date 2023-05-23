@@ -39,7 +39,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 189.22469080695396,
+      "value": 190.39129776562777,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -116,7 +116,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 3091.3797818783205,
+      "value": 1064.4634839389473,
       "extra": {
         "sketchName": "nearshore-span"
       }

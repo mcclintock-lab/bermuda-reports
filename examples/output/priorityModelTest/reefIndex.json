@@ -174,7 +174,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 571.3012045665846,
+      "value": 567.8658053219933,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -186,7 +186,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 473.585198791563,
+      "value": 473.0321962568996,
       "extra": {
         "sketchName": "test1"
       }
@@ -197,7 +197,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 82.14106350857764,
+      "value": 80.06154753826559,
       "extra": {
         "sketchName": "test2"
       }
@@ -219,7 +219,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 15.574942266443996,
+      "value": 14.77206152682814,
       "extra": {
         "sketchName": "test4"
       }
@@ -566,7 +566,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 7448.506783065386,
+      "value": 3325.5227265025023,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -578,7 +578,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 6830.275781895965,
+      "value": 2418.720242427662,
       "extra": {
         "sketchName": "test1"
       }
@@ -589,7 +589,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 524.1888054683805,
+      "value": 635.8336934791878,
       "extra": {
         "sketchName": "test2"
       }
@@ -611,7 +611,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 94.04219570104033,
+      "value": 270.96879059565254,
       "extra": {
         "sketchName": "test4"
       }

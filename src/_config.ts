@@ -388,8 +388,8 @@ export const reefIndexClasses: DataClass[] = [
     goalValue: 0.2,
   },
   {
-    baseFilename: "wgs84_fish_recruit_density",
-    noDataValue: -3.39999995214436425e38,
+    baseFilename: "commercial_fish_recruit_density_2023",
+    noDataValue: -3.4e38,
     classId: "Commercial Fish Recruit Density",
     display: "Commercial Fish Recruit Density",
     layerId: "",
@@ -408,7 +408,7 @@ export const reefIndexClasses: DataClass[] = [
     noDataValue: -3.39999995214436425e38,
     classId: "Commercial Fish Diversity BRUV",
     display: "Commercial Fish Diversity (BRUV)",
-    layerId: "",
+    layerId: "629a51ad8c88eaa573a8f63e",
     goalValue: 0.2,
   },
   {
@@ -468,11 +468,11 @@ export const reefIndexClasses: DataClass[] = [
     goalValue: 0.2,
   },
   {
-    baseFilename: "wgs84_Fish recruit density1",
-    noDataValue: -3.39999995214436425e38,
+    baseFilename: "fish_recruit_density_2023",
+    noDataValue: -3.4e38,
     classId: "Fish Recruit Density",
     display: "Fish Recruit Density",
-    layerId: "614df361c33508c127015a1a",
+    layerId: "",
     goalValue: 0.2,
   },
   {

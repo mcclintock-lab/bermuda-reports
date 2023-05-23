@@ -39,7 +39,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 55.872637524138554,
+      "value": 56.368424569955096,
       "extra": {
         "sketchName": "mpa-high"
       }
@@ -116,7 +116,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 330.6439597182907,
+      "value": 109.34268499910831,
       "extra": {
         "sketchName": "mpa-high"
       }

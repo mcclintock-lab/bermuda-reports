@@ -75,7 +75,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 14.047974014064556,
+      "value": 14.043008647242488,
       "extra": {
         "sketchName": "low-1"
       }
@@ -86,7 +86,7 @@
       "classId": "Commercial Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 14.047974014064556,
+      "value": 14.043008647242488,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true
@@ -236,7 +236,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 213.8244166513905,
+      "value": 163.92579097300768,
       "extra": {
         "sketchName": "low-1"
       }
@@ -247,7 +247,7 @@
       "classId": "Fish Recruit Density",
       "groupId": null,
       "geographyId": null,
-      "value": 213.8244166513905,
+      "value": 163.92579097300768,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true
