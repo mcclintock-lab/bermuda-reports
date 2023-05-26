@@ -44,9 +44,11 @@
     "@turf/invariant": "6.5.0",
     "@turf/kinks": "6.5.0",
     "@types/lodash": "^4.14.178",
+    "fast-equals": "^5.0.1",
     "geoblaze": "^0.3.2",
     "georaster": "1.0.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "micro-memoize": "^4.1.2"
   },
   "devDependencies": {
     "@seasketch/geoprocessing": "1.0.2",

@@ -18,6 +18,7 @@ import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
 
 import oceanUseByGearTypeTotals from "../../data/precalc/oceanUseByGearTypeTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const precalcTotals = oceanUseByGearTypeTotals as ReportResultBase;
 
 const REPORT = config.oceanUseByGearType;
@@ -99,7 +100,7 @@ const genSketchTable = (data: ReportResult) => {
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches

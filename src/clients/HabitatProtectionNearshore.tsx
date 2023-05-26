@@ -18,6 +18,7 @@ import { SketchClassTable } from "../components/SketchClassTable";
 import config from "../_config";
 
 import nearshoreHabitatTotals from "../../data/precalc/nearshoreHabitatTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const nearshorePrecalcTotals = nearshoreHabitatTotals as ReportResultBase;
 
 const REPORT = config.habitatProtectionNearshore;
@@ -93,7 +94,7 @@ const genNearshoreSketchTable = (data: ReportResult) => {
     ),
     nearshorePrecalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     subSketchMetrics,
     NEARSHORE_METRIC.classes,
     subSketches

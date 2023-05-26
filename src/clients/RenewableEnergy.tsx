@@ -20,6 +20,7 @@ import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
 
 import renewableTotals from "../../data/precalc/renewableTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const precalcTotals = renewableTotals as ReportResultBase;
 
 const REPORT = config.renewable;
@@ -90,7 +91,7 @@ const genSketchTable = (data: ReportResult) => {
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches

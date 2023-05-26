@@ -18,6 +18,7 @@ import { SketchClassTable } from "../components/SketchClassTable";
 import config from "../_config";
 
 import offshoreHabitatTotals from "../../data/precalc/offshoreHabitatTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const offshorePrecalcTotals = offshoreHabitatTotals as ReportResultBase;
 
 const REPORT = config.habitatProtectionOffshore;
@@ -93,7 +94,7 @@ const genOffshoreSketchTable = (data: ReportResult) => {
     ),
     offshorePrecalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     subSketchMetrics,
     OFFSHORE_METRIC.classes,
     subSketches

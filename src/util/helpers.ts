@@ -7,7 +7,10 @@ import {
   Metric,
   keyBy,
   groupBy,
+  flattenBySketchAllClass,
 } from "@seasketch/geoprocessing/client-core";
+import memoize from "micro-memoize";
+import { deepEqual } from "fast-equals";
 
 /**
  * Single flattened metric with class values keyed by class name
@@ -154,3 +157,17 @@ export const flattenByGroupSketchAllClassNoTotal = (
   });
   return sketchRows;
 };
+
+/**
+ * Memoized version of flattenBySketchAllClass
+ * Flattens group class metrics, one for each group and sketch.
+ * Each object includes the percValue for each class, and the total percValue with classes combined
+ * groupId, sketchId, class1, class2, ...
+ * @param groupMetrics - group metric data
+ * @param totalValue - total value with classes combined
+ * @param classes - class config
+ */
+export const flattenBySketchAllClassMemo = memoize(flattenBySketchAllClass, {
+  maxSize: 20, // Able to store 20 keys in cache (1 key = 1 sketch table)
+  isEqual: deepEqual, // Necessary to compare deep objects being flattened
+});

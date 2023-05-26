@@ -235,7 +235,7 @@ const offshoreClasses: DataClass[] = [
     noDataValue: -3.39999995214436425e38,
     classId: "Plains",
     display: "Plains",
-    layerId: "614df361c33508c127015a02a",
+    layerId: "614df361c33508c127015a02",
     goalValue: 0.1,
   },
   {
@@ -392,7 +392,7 @@ export const reefIndexClasses: DataClass[] = [
     noDataValue: -3.4e38,
     classId: "Commercial Fish Recruit Density",
     display: "Commercial Fish Recruit Density",
-    layerId: "",
+    layerId: "629a51668c88eaa573a8f554",
     goalValue: 0.2,
   },
   {
@@ -472,7 +472,7 @@ export const reefIndexClasses: DataClass[] = [
     noDataValue: -3.4e38,
     classId: "Fish Recruit Density",
     display: "Fish Recruit Density",
-    layerId: "",
+    layerId: "6192ac9af1d07d5b37bfd761",
     goalValue: 0.2,
   },
   {

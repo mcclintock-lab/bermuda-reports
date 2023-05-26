@@ -23,6 +23,7 @@ import { SketchClassTable } from "../components/SketchClassTable";
 
 import config from "../_config";
 import WreckHeatmapTotals from "../../data/precalc/WreckHeatmapTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const precalcTotals = WreckHeatmapTotals as ReportResultBase;
 
 const REPORT = config.shipwreck;
@@ -81,7 +82,7 @@ const genSketchTable = (data: ReportResult) => {
   const childSketches = toNullSketchArray(data.sketch);
   const childSketchIds = childSketches.map((sk) => sk.properties.id);
   const childSketchMetrics = metricsWithSketchId(data.metrics, childSketchIds);
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches

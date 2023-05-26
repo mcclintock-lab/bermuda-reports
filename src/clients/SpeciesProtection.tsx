@@ -18,6 +18,7 @@ import { SketchClassTable } from "../components/SketchClassTable";
 
 import config from "../_config";
 import reefIndexTotals from "../../data/precalc/reefIndexTotals.json";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const precalcTotals = reefIndexTotals as ReportResultBase;
 
 const REPORT = config.speciesProtection;
@@ -89,7 +90,7 @@ const genSketchTable = (data: ReportResult) => {
     metricsWithSketchId(data.metrics, childSketchIds),
     precalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches

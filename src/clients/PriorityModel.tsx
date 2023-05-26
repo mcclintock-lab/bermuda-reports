@@ -270,7 +270,7 @@ const genGroupTable = (groupRows: GroupMetricAggNoTotal[]) => {
 const genHelp = () => (
   <>
     <Collapse title="Learn More">
-      <p>
+      <span>
         ℹ️ Overview: A prioritization model was used to find optimal areas to
         meet planning objectives. The model was designed to meet the following
         targets:
@@ -285,7 +285,7 @@ const genHelp = () => (
           <li>Mangroves: 50% of mangrove area</li>
           <li>Nursery reef: 50% of the nursery reef area</li>
         </ul>{" "}
-      </p>
+      </span>
       <p>
         🎯 Planning Objective: there is no specific objective for including
         these priority areas in your plan, but they can be used to guide

@@ -14,6 +14,7 @@ import {
 } from "@seasketch/geoprocessing/client-core";
 import { ClassTable } from "../components/ClassTable";
 import { SketchClassTable } from "../components/SketchClassTable";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 
 import config from "../_config";
 
@@ -56,6 +57,14 @@ const ExistingProtections = () => {
                 formatPerc
                 showLayerToggle
               />
+
+              {/* {isCollection && (
+                <Collapse title="Show by MPA">
+                  {genSketchTable(data).then((response) => {
+                    return response;
+                  })}
+                </Collapse>
+              )} */}
               {isCollection && (
                 <Collapse title="Show by MPA">{genSketchTable(data)}</Collapse>
               )}
@@ -78,11 +87,12 @@ const genSketchTable = (data: ReportResult) => {
     ),
     existingPrecalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches
   );
+
   return <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />;
 };
 

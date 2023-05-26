@@ -19,6 +19,7 @@ import { SketchClassTable } from "../components/SketchClassTable";
 
 import habitatRestoreTotals from "../../data/precalc/habitatRestoreTotals.json";
 import { toNullSketchArray } from "@seasketch/geoprocessing/client-core";
+import { flattenBySketchAllClassMemo } from "../util/helpers";
 const precalcTotals = habitatRestoreTotals as ReportResultBase;
 
 const REPORT = config.habitatRestore;
@@ -105,14 +106,13 @@ const genSketchTable = (data: ReportResult) => {
     ),
     precalcTotals.metrics
   );
-  const sketchRows = flattenBySketchAllClass(
+  const sketchRows = flattenBySketchAllClassMemo(
     childSketchMetrics,
     METRIC.classes,
     childSketches
   );
   return (
     <Collapse title="Show by MPA">
-      Foo
       <SketchClassTable rows={sketchRows} dataGroup={METRIC} formatPerc />
     </Collapse>
   );
