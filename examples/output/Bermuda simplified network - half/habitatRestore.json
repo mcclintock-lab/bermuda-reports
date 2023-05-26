@@ -1,0 +1,5454 @@
+{
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7189",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 290350.1400709961,
+      "extra": {
+        "sketchName": "Bermuda simplified network - half",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718a",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A8 - South Shore Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718b",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A15 - South Shore Pelagic Zone "
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718c",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A6 - Tyne's Bay Madracis Reef"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718d",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A10 - North Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718e",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A9 - Chubb's Head"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718f",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A13 - Western Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7190",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A12 - Eastern Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7191",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A5 - Coot Pond"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7192",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A14 - Eastern Blue Cut"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7193",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A11 - North Rock"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7194",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 58027.029236463226,
+      "extra": {
+        "sketchName": "A7 - Castle Harbour Islands & Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7195",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A18 - Western Grouper Box Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7196",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A22 - Spiny Lobster Reserve"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7197",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A16 - North Rock Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7198",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A19 - Eastern Blue Cut - Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7199",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A17 - Eastern Grouper Box Pelagic Zon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719a",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A21 - Seasonally Protected Area East"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719b",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A20 - Seasonally Protected Area West"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719c",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719d",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 20822.12091003893,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719e",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M4 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a0",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M2 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a1",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M1 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a2",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M3 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a4",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a6",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a8",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71aa",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M6 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ac",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M7 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ae",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M9 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71af",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M8 -Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b1",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M10 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b3",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C3 - Whalebone Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b4",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 978.6130772354798,
+      "extra": {
+        "sketchName": "M12 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b5",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 208482.62428105544,
+      "extra": {
+        "sketchName": "C4 - Walsingham"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b6",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2068.2934675876545,
+      "extra": {
+        "sketchName": "M13 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b7",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C1 - Bailey's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b8",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C2 - Coney Cove"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b9",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M11 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ba",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M15 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bc",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bd",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71be",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bf",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c0",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M17 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c1",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M19 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c2",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c3",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c4",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c5",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c6",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c7",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c8",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ce",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M16 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d0",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d1",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d2",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M23 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d3",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M22 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d4",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d5",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d6",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d7",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C5 - North of Riddell's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d8",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d9",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71da",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71db",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dc",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dd",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M28 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71de",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M29 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71df",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e0",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e1",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M32 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e2",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M36 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e3",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M35 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e4",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e5",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e6",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M33 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e7",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e8",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e9",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ea",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M38 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71eb",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ec",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ed",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M40 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ef",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C7 - The Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f0",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M41 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f2",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M31 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646648ef22c5975d039e7280",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A1 - Muir Chain - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490122c5975d039e7281",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A2 - Southeast EEZ - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490422c5975d039e7282",
+      "classId": "Coral",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A3 - Crescent Seamount - HIGH"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7189",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1617250.2440208565,
+      "extra": {
+        "sketchName": "Bermuda simplified network - half",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718a",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A8 - South Shore Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718b",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A15 - South Shore Pelagic Zone "
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718c",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A6 - Tyne's Bay Madracis Reef"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718d",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A10 - North Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718e",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A9 - Chubb's Head"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718f",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A13 - Western Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7190",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A12 - Eastern Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7191",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 354845.79340489104,
+      "extra": {
+        "sketchName": "A5 - Coot Pond"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7192",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A14 - Eastern Blue Cut"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7193",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A11 - North Rock"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7194",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A7 - Castle Harbour Islands & Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7195",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A18 - Western Grouper Box Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7196",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1060864.514552236,
+      "extra": {
+        "sketchName": "A22 - Spiny Lobster Reserve"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7197",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A16 - North Rock Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7198",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A19 - Eastern Blue Cut - Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7199",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A17 - Eastern Grouper Box Pelagic Zon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719a",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A21 - Seasonally Protected Area East"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719b",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A20 - Seasonally Protected Area West"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719c",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719d",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719e",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M4 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a0",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3898.998100380655,
+      "extra": {
+        "sketchName": "M2 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a1",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 497.14353345330625,
+      "extra": {
+        "sketchName": "M1 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 205.6280237961586,
+      "extra": {
+        "sketchName": "M3 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a4",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2508.5079055510037,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a6",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 539.7163404252703,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 339.6240297809841,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71aa",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 974.673930893097,
+      "extra": {
+        "sketchName": "M6 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ac",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4804.176959750153,
+      "extra": {
+        "sketchName": "M7 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ae",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6328.1456662435485,
+      "extra": {
+        "sketchName": "M9 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71af",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 11779.104865562205,
+      "extra": {
+        "sketchName": "M8 -Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b1",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 10152.98596144989,
+      "extra": {
+        "sketchName": "M10 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b3",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 31372.45690086,
+      "extra": {
+        "sketchName": "C3 - Whalebone Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b4",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2881.30881411161,
+      "extra": {
+        "sketchName": "M12 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b5",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 240116.87497006205,
+      "extra": {
+        "sketchName": "C4 - Walsingham"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b6",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2409.8521248679904,
+      "extra": {
+        "sketchName": "M13 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b7",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C1 - Bailey's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C2 - Coney Cove"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b9",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M11 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ba",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 53726.23896799261,
+      "extra": {
+        "sketchName": "M15 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bc",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 955.717207246648,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bd",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 373.21436486943935,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71be",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1499.2323844833982,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bf",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1262.9073979282532,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c0",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 13348.286838828775,
+      "extra": {
+        "sketchName": "M17 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c1",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5446.428183343358,
+      "extra": {
+        "sketchName": "M19 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1357.0830693055482,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c3",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 289.45988120201883,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c4",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 451.51092403318296,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c5",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 911.6330322535688,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c6",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 465.2796859303805,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c7",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1670.3262854355835,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4253.749055197308,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ce",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2187.369677774002,
+      "extra": {
+        "sketchName": "M16 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d0",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1987.0941241057963,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d1",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1219.510740361067,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 656.9008656639929,
+      "extra": {
+        "sketchName": "M23 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d3",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 596.7313581517759,
+      "extra": {
+        "sketchName": "M22 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d4",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 599.3105436164573,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d5",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1122.1265964366735,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d6",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 683.9884388591119,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d7",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 19454.529402269498,
+      "extra": {
+        "sketchName": "C5 - North of Riddell's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3392.43985286088,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d9",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 10260.768123350636,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71da",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 18801.20479979993,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71db",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4236.894434589607,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dc",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2977.897750509083,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dd",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3204.2153921773306,
+      "extra": {
+        "sketchName": "M28 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71de",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2788.5717568551495,
+      "extra": {
+        "sketchName": "M29 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71df",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e0",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e1",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 7200.034435453778,
+      "extra": {
+        "sketchName": "M32 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4247.242654095425,
+      "extra": {
+        "sketchName": "M36 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e3",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4203.849888006232,
+      "extra": {
+        "sketchName": "M35 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e4",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1619.4454966681687,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e5",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1805.7742106509568,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e6",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3453.4946797867556,
+      "extra": {
+        "sketchName": "M33 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e7",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 657.6557873232113,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e8",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2010.7241639059644,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e9",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 623.002054537545,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ea",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 13061.391449189363,
+      "extra": {
+        "sketchName": "M38 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71eb",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ec",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ed",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 335.5047693547118,
+      "extra": {
+        "sketchName": "M40 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ef",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 20040.099531152824,
+      "extra": {
+        "sketchName": "C7 - The Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f0",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 546.4850752025737,
+      "extra": {
+        "sketchName": "M41 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f2",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 389.1771502389311,
+      "extra": {
+        "sketchName": "M31 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646648ef22c5975d039e7280",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A1 - Muir Chain - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490122c5975d039e7281",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A2 - Southeast EEZ - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490422c5975d039e7282",
+      "classId": "Mangrove_Saltmarsh",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A3 - Crescent Seamount - HIGH"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7189",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8886861.764945043,
+      "extra": {
+        "sketchName": "Bermuda simplified network - half",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718a",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A8 - South Shore Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718b",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A15 - South Shore Pelagic Zone "
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718c",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 548491.9152604652,
+      "extra": {
+        "sketchName": "A6 - Tyne's Bay Madracis Reef"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718d",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1246242.41802124,
+      "extra": {
+        "sketchName": "A10 - North Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718e",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 93416.1951061856,
+      "extra": {
+        "sketchName": "A9 - Chubb's Head"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e718f",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A13 - Western Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7190",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A12 - Eastern Grouper Box"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7191",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 366278.1208175938,
+      "extra": {
+        "sketchName": "A5 - Coot Pond"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7192",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 253379.99302516354,
+      "extra": {
+        "sketchName": "A14 - Eastern Blue Cut"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7193",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 441677.90408847586,
+      "extra": {
+        "sketchName": "A11 - North Rock"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7194",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1137199.143002132,
+      "extra": {
+        "sketchName": "A7 - Castle Harbour Islands & Reefs"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7195",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A18 - Western Grouper Box Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7196",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6824218.431041184,
+      "extra": {
+        "sketchName": "A22 - Spiny Lobster Reserve"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7197",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A16 - North Rock Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7198",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A19 - Eastern Blue Cut - Pelagic Zone"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e7199",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A17 - Eastern Grouper Box Pelagic Zon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719a",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A21 - Seasonally Protected Area East"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719b",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A20 - Seasonally Protected Area West"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719c",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 234615.6482467731,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719d",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 23111.21566197196,
+      "extra": {
+        "sketchName": "A7.1 - Cable zones adjacent to full protection areas"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e719e",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M4 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a0",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M2 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a1",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M1 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M3 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a4",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a6",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71a8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M5 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71aa",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M6 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ac",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4021.403590644454,
+      "extra": {
+        "sketchName": "M7 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ae",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 6328.1456662435485,
+      "extra": {
+        "sketchName": "M9 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71af",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3053.0977055111766,
+      "extra": {
+        "sketchName": "M8 -Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b1",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M10 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b3",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C3 - Whalebone Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b4",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M12 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b5",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5496.702465443795,
+      "extra": {
+        "sketchName": "C4 - Walsingham"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b6",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M13 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 8562.747448112803,
+      "extra": {
+        "sketchName": "C1 - Bailey's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C2 - Coney Cove"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71b9",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M11 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ba",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M15 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bc",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bd",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71be",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71bf",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M14 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c0",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M17 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c1",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 5446.0415502364185,
+      "extra": {
+        "sketchName": "M19 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1357.0830693055482,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c3",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 289.45988120201883,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c4",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 451.51092403318296,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c5",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 911.6330322535688,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c6",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 465.2796859303805,
+      "extra": {
+        "sketchName": "M20 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71c8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M18 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ce",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M16 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d0",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d1",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M25 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M23 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d3",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M22 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d4",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d5",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d6",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M21 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C5 - North of Riddell's Bay"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71d9",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M26 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71da",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71db",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dc",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M27 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71dd",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M28 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71de",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M29 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71df",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e0",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M30 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e1",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M32 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M36 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e3",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M35 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e4",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e5",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M34 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e6",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M33 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e7",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e8",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71e9",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M37 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ea",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M38 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71eb",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ec",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M39 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ed",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M40 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71ef",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "C7 - The Lagoon"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f0",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M41 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646646b522c5975d039e71f2",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M31 - Mangroves"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "646648ef22c5975d039e7280",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A1 - Muir Chain - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490122c5975d039e7281",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A2 - Southeast EEZ - FULL"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6466490422c5975d039e7282",
+      "classId": "Seagrass",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "A3 - Crescent Seamount - HIGH"
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "646646b522c5975d039e7189",
+      "name": "Bermuda simplified network - half",
+      "updatedAt": "2023-05-18T15:50:39.316Z",
+      "createdAt": "2023-05-16T14:43:29.816Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718b",
+          "name": "A15 - South Shore Pelagic Zone ",
+          "updatedAt": "2023-05-18T15:39:33.482Z",
+          "createdAt": "2023-05-16T14:51:45.685Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.82988728631635,
+          32.13642709780556,
+          -64.75263966668754,
+          32.23783197553976
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718a",
+          "name": "A8 - South Shore Reefs",
+          "updatedAt": "2023-05-18T15:39:33.481Z",
+          "createdAt": "2023-05-16T14:48:46.381Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.83894242395056,
+          32.223703257355616,
+          -64.78881730188031,
+          32.26142362732524
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718c",
+          "name": "A6 - Tyne's Bay Madracis Reef",
+          "updatedAt": "2023-05-18T15:39:33.484Z",
+          "createdAt": "2023-05-16T14:59:39.210Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.7923672055123,
+          32.30797645842654,
+          -64.76751922119769,
+          32.31639105788929
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718d",
+          "name": "A10 - North Lagoon",
+          "updatedAt": "2023-05-18T15:39:33.484Z",
+          "createdAt": "2023-05-16T15:01:22.170Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "4",
+        "bbox": [
+          -64.83115328896768,
+          32.3812877558342,
+          -64.7467696522588,
+          32.41100141531353
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718f",
+          "name": "A13 - Western Grouper Box",
+          "updatedAt": "2023-05-18T15:39:33.489Z",
+          "createdAt": "2023-05-16T15:05:36.757Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "5",
+        "bbox": [
+          -65.0470054005494,
+          32.24424812212336,
+          -65.01215814102798,
+          32.266899161400865
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7190",
+          "name": "A12 - Eastern Grouper Box",
+          "updatedAt": "2023-05-18T15:39:33.490Z",
+          "createdAt": "2023-05-16T15:07:18.240Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "6",
+        "bbox": [
+          -64.6071231221074,
+          32.45580705113309,
+          -64.57373498429006,
+          32.482338770120464
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e718e",
+          "name": "A9 - Chubb's Head",
+          "updatedAt": "2023-05-18T15:39:33.489Z",
+          "createdAt": "2023-05-16T15:02:33.978Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "7",
+        "bbox": [
+          -64.9876105641237,
+          32.25885152763257,
+          -64.94727014053979,
+          32.32183111561866
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7191",
+          "name": "A5 - Coot Pond",
+          "updatedAt": "2023-05-18T15:39:33.496Z",
+          "createdAt": "2023-05-16T15:15:54.467Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "8",
+        "bbox": [
+          -64.69184538770811,
+          32.383557249254665,
+          -64.6696829651701,
+          32.399280182122666
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7192",
+          "name": "A14 - Eastern Blue Cut",
+          "updatedAt": "2023-05-18T15:39:33.498Z",
+          "createdAt": "2023-05-16T15:21:08.056Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "9",
+        "bbox": [
+          -64.92638109672878,
+          32.37924911293388,
+          -64.87634180534562,
+          32.42149850736197
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7193",
+          "name": "A11 - North Rock",
+          "updatedAt": "2023-05-18T15:39:33.501Z",
+          "createdAt": "2023-05-16T15:23:46.529Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "10",
+        "bbox": [
+          -64.79156254280342,
+          32.456268755615476,
+          -64.7466566642,
+          32.494138567223764
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7195",
+          "name": "A18 - Western Grouper Box Pelagic Zone",
+          "updatedAt": "2023-05-18T15:39:33.504Z",
+          "createdAt": "2023-05-16T16:02:01.120Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "11",
+        "bbox": [
+          -65.1343582426395,
+          32.2257164722544,
+          -65.04660843361243,
+          32.27891293596302
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7196",
+          "name": "A22 - Spiny Lobster Reserve",
+          "updatedAt": "2023-05-18T15:39:33.504Z",
+          "createdAt": "2023-05-16T16:14:53.746Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\",\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "12",
+        "bbox": [
+          -64.83227344650992,
+          32.305052020766745,
+          -64.66893194664414,
+          32.41367024013138
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7194",
+          "name": "A7 - Castle Harbour Islands & Reefs",
+          "updatedAt": "2023-05-18T15:39:33.502Z",
+          "createdAt": "2023-05-16T15:48:40.764Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "13",
+        "bbox": [
+          -64.67477115757673,
+          32.33246095182496,
+          -64.64649795043867,
+          32.361719416586205
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7197",
+          "name": "A16 - North Rock Pelagic Zone",
+          "updatedAt": "2023-05-18T15:39:33.506Z",
+          "createdAt": "2023-05-16T16:23:48.332Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "14",
+        "bbox": [
+          -64.90055678833504,
+          32.46125979404878,
+          -64.76004122246265,
+          32.56729248034528
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7199",
+          "name": "A17 - Eastern Grouper Box Pelagic Zon",
+          "updatedAt": "2023-05-18T15:39:33.517Z",
+          "createdAt": "2023-05-16T17:54:02.269Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "15",
+        "bbox": [
+          -64.57383154381337,
+          32.4462963178914,
+          -64.47855947960451,
+          32.50494718505515
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e7198",
+          "name": "A19 - Eastern Blue Cut - Pelagic Zone",
+          "updatedAt": "2023-05-18T15:39:33.516Z",
+          "createdAt": "2023-05-16T17:50:54.737Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "16",
+        "bbox": [
+          -65.01487253654962,
+          32.39427509612727,
+          -64.90784166801949,
+          32.475843753216886
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e719a",
+          "name": "A21 - Seasonally Protected Area East",
+          "updatedAt": "2023-05-18T15:39:33.517Z",
+          "createdAt": "2023-05-16T18:01:49.503Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "17",
+        "bbox": [
+          -64.67249392021705,
+          32.4223181167273,
+          -64.54941271294183,
+          32.52984413775116
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e719c",
+          "name": "A7.1 - Cable zones adjacent to full protection areas",
+          "updatedAt": "2023-05-18T15:39:33.519Z",
+          "createdAt": "2023-05-16T18:10:04.993Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "18",
+        "bbox": [
+          -64.65957640160082,
+          32.348677546226405,
+          -64.64292524803592,
+          32.361257228170835
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e719b",
+          "name": "A20 - Seasonally Protected Area West",
+          "updatedAt": "2023-05-18T15:39:33.518Z",
+          "createdAt": "2023-05-16T18:05:15.873Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "19",
+        "bbox": [
+          -65.05364655006795,
+          32.182730694195655,
+          -64.95133636940402,
+          32.27348929479748
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e719e",
+          "name": "M4 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.523Z",
+          "createdAt": "2023-05-16T18:19:25.924Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "20",
+        "bbox": [
+          -64.652831987033,
+          32.3692124263293,
+          -64.65248329986116,
+          32.36950747232786
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a0",
+          "name": "M2 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.524Z",
+          "createdAt": "2023-05-16T19:53:02.910Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "21",
+        "bbox": [
+          -64.66168461788577,
+          32.37490325227901,
+          -64.66071902264027,
+          32.376029264150965
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a1",
+          "name": "M1 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.525Z",
+          "createdAt": "2023-05-16T21:43:08.760Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "22",
+        "bbox": [
+          -64.66372175563257,
+          32.37619219496286,
+          -64.6633324188497,
+          32.37649881432728
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e719d",
+          "name": "A7.1 - Cable zones adjacent to full protection areas",
+          "updatedAt": "2023-05-18T15:39:33.522Z",
+          "createdAt": "2023-05-16T18:11:43.741Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "23",
+        "bbox": [
+          -64.66656087387578,
+          32.353952525019224,
+          -64.6634280537463,
+          32.35565640432347
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a2",
+          "name": "M3 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.529Z",
+          "createdAt": "2023-05-16T21:46:16.458Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "24",
+        "bbox": [
+          -64.66642408121542,
+          32.37248501934994,
+          -64.66622962106192,
+          32.37268429284379
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a4",
+          "name": "M5 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.530Z",
+          "createdAt": "2023-05-16T21:53:20.120Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "25",
+        "bbox": [
+          -64.69591362822938,
+          32.3745929065671,
+          -64.69507677901699,
+          32.375940750645256
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a6",
+          "name": "M5 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.532Z",
+          "createdAt": "2023-05-16T23:01:16.848Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "26",
+        "bbox": [
+          -64.69434721816492,
+          32.37537669733446,
+          -64.69400657762013,
+          32.37559189881225
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71a8",
+          "name": "M5 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.537Z",
+          "createdAt": "2023-05-16T23:15:08.864Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "27",
+        "bbox": [
+          -64.69424529422237,
+          32.37641419026508,
+          -64.69391806472267,
+          32.37661126727032
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71aa",
+          "name": "M6 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.538Z",
+          "createdAt": "2023-05-17T12:46:39.824Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "28",
+        "bbox": [
+          -64.69840137709069,
+          32.37052659969118,
+          -64.69802586782855,
+          32.37120621803031
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ac",
+          "name": "M7 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.543Z",
+          "createdAt": "2023-05-17T12:49:50.684Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "29",
+        "bbox": [
+          -64.69501642931375,
+          32.37078485526199,
+          -64.69372360456839,
+          32.371650232585246
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71af",
+          "name": "M8 -Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.548Z",
+          "createdAt": "2023-05-17T12:54:12.171Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "30",
+        "bbox": [
+          -64.69819484699592,
+          32.367164679148296,
+          -64.69256220806511,
+          32.37024568928461
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ae",
+          "name": "M9 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.547Z",
+          "createdAt": "2023-05-17T12:52:39.770Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "31",
+        "bbox": [
+          -64.69234763134394,
+          32.369647619060515,
+          -64.68911825169027,
+          32.370426921904574
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b3",
+          "name": "C3 - Whalebone Bay",
+          "updatedAt": "2023-05-18T15:39:33.553Z",
+          "createdAt": "2023-05-17T13:03:23.602Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "32",
+        "bbox": [
+          -64.71483527172542,
+          32.3636938860736,
+          -64.71239982594011,
+          32.36546101669167
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b4",
+          "name": "M12 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.554Z",
+          "createdAt": "2023-05-17T17:13:39.397Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "33",
+        "bbox": [
+          -64.71057994712422,
+          32.350491421359315,
+          -64.70959557641605,
+          32.351497477581596
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b1",
+          "name": "M10 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.552Z",
+          "createdAt": "2023-05-17T12:59:51.025Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "34",
+        "bbox": [
+          -64.71230326641557,
+          32.363557951518445,
+          -64.71077977169524,
+          32.36541570608166
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b5",
+          "name": "C4 - Walsingham",
+          "updatedAt": "2023-05-18T15:39:33.555Z",
+          "createdAt": "2023-05-17T17:22:09.863Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"FISH_COLLECT_LOCAL\"]"
+            }
+          ]
+        },
+        "id": "35",
+        "bbox": [
+          -64.71031038511846,
+          32.34457494995004,
+          -64.70548240889208,
+          32.35298614835457
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b6",
+          "name": "M13 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.558Z",
+          "createdAt": "2023-05-17T17:25:08.674Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "36",
+        "bbox": [
+          -64.70974443901645,
+          32.34519584639231,
+          -64.70895050514793,
+          32.34603427643318
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b7",
+          "name": "C1 - Bailey's Bay",
+          "updatedAt": "2023-05-18T15:39:33.559Z",
+          "createdAt": "2023-05-17T17:27:20.031Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "37",
+        "bbox": [
+          -64.72306697119308,
+          32.34931540902268,
+          -64.72184388388239,
+          32.35044836915382
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b9",
+          "name": "M11 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.560Z",
+          "createdAt": "2023-05-17T17:37:07.451Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "38",
+        "bbox": [
+          -64.71605835903738,
+          32.35735005572693,
+          -64.715639934431,
+          32.35763300641509
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ba",
+          "name": "M15 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.560Z",
+          "createdAt": "2023-05-17T17:40:31.625Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "39",
+        "bbox": [
+          -64.76151911963086,
+          32.28761111818536,
+          -64.75735633123963,
+          32.29243618460493
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71b8",
+          "name": "C2 - Coney Cove",
+          "updatedAt": "2023-05-18T15:39:33.559Z",
+          "createdAt": "2023-05-17T17:33:52.230Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "40",
+        "bbox": [
+          -64.7168898438321,
+          32.35785304709214,
+          -64.71599935043903,
+          32.35841947546045
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71bc",
+          "name": "M14 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.565Z",
+          "createdAt": "2023-05-17T17:46:30.157Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "41",
+        "bbox": [
+          -64.77099536408055,
+          32.29251780945939,
+          -64.77035163391689,
+          32.292866981619554
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71be",
+          "name": "M14 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.566Z",
+          "createdAt": "2023-05-17T17:47:26.822Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "42",
+        "bbox": [
+          -64.77150498379346,
+          32.29327056854473,
+          -64.77064667690857,
+          32.29360159917582
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71bf",
+          "name": "M14 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.567Z",
+          "createdAt": "2023-05-17T17:48:57.769Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "43",
+        "bbox": [
+          -64.77177856911301,
+          32.292404441585724,
+          -64.77104900826086,
+          32.292953140776895
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71bd",
+          "name": "M14 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.566Z",
+          "createdAt": "2023-05-17T17:46:54.911Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "44",
+        "bbox": [
+          -64.77061985481842,
+          32.2933249846219,
+          -64.77030871857265,
+          32.293519975296874
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c1",
+          "name": "M19 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.571Z",
+          "createdAt": "2023-05-17T17:51:45.461Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "45",
+        "bbox": [
+          -64.80447201479626,
+          32.29755573462455,
+          -64.8030987237806,
+          32.29842634678254
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c3",
+          "name": "M20 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.572Z",
+          "createdAt": "2023-05-17T17:53:01.013Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "46",
+        "bbox": [
+          -64.80462758291868,
+          32.295705656023856,
+          -64.80444519270569,
+          32.29596865969601
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c2",
+          "name": "M20 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.572Z",
+          "createdAt": "2023-05-17T17:52:44.285Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "47",
+        "bbox": [
+          -64.80546443213126,
+          32.29606841950996,
+          -64.80452029455809,
+          32.29651280280195
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c0",
+          "name": "M17 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.571Z",
+          "createdAt": "2023-05-17T17:51:11.887Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "48",
+        "bbox": [
+          -64.80543761004165,
+          32.30038519356269,
+          -64.80086712588016,
+          32.302362134887005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c4",
+          "name": "M20 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.573Z",
+          "createdAt": "2023-05-17T17:53:39.021Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "49",
+        "bbox": [
+          -64.80585067022936,
+          32.2962498007086,
+          -64.80553953398365,
+          32.296549078892866
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c5",
+          "name": "M20 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.579Z",
+          "createdAt": "2023-05-17T17:54:01.287Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "50",
+        "bbox": [
+          -64.80640856970442,
+          32.29687556305787,
+          -64.8057111953606,
+          32.29716577021733
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c6",
+          "name": "M20 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.580Z",
+          "createdAt": "2023-05-17T17:54:21.278Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "51",
+        "bbox": [
+          -64.80661241758953,
+          32.29537009850673,
+          -64.80619399298324,
+          32.29562403403943
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c7",
+          "name": "M18 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.580Z",
+          "createdAt": "2023-05-17T17:55:14.099Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "52",
+        "bbox": [
+          -64.80141966093714,
+          32.29407320237124,
+          -64.80078665960968,
+          32.29507081642996
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71c8",
+          "name": "M18 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.581Z",
+          "createdAt": "2023-05-17T17:55:55.909Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "53",
+        "bbox": [
+          -64.802492544543,
+          32.29404599456129,
+          -64.80123727072414,
+          32.29498600549131
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ce",
+          "name": "M16 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.588Z",
+          "createdAt": "2023-05-17T18:38:57.961Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "54",
+        "bbox": [
+          -64.81451956976598,
+          32.30367704904308,
+          -64.81407968748756,
+          32.30445692014891
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d0",
+          "name": "M25 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.596Z",
+          "createdAt": "2023-05-17T18:41:42.381Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "55",
+        "bbox": [
+          -64.83045189131424,
+          32.258097348784204,
+          -64.8292180751675,
+          32.258487481182264
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d2",
+          "name": "M23 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.597Z",
+          "createdAt": "2023-05-17T18:42:51.298Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "56",
+        "bbox": [
+          -64.83327357519767,
+          32.25969415914926,
+          -64.8327478622308,
+          32.260102430017675
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d1",
+          "name": "M25 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.597Z",
+          "createdAt": "2023-05-17T18:42:15.514Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "57",
+        "bbox": [
+          -64.83169643629704,
+          32.25843304420412,
+          -64.83085958708446,
+          32.258795956775145
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d3",
+          "name": "M22 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.598Z",
+          "createdAt": "2023-05-17T18:43:19.896Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "58",
+        "bbox": [
+          -64.83515112150793,
+          32.25883224795245,
+          -64.83464686621319,
+          32.259077213019765
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d4",
+          "name": "M21 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.601Z",
+          "createdAt": "2023-05-17T18:43:57.618Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "59",
+        "bbox": [
+          -64.83740417708026,
+          32.25661845958648,
+          -64.83700721014608,
+          32.25692694153035
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d5",
+          "name": "M21 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.601Z",
+          "createdAt": "2023-05-17T18:44:27.114Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "60",
+        "bbox": [
+          -64.83847706068612,
+          32.256400706994974,
+          -64.8381230090962,
+          32.257081182109225
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d7",
+          "name": "C5 - North of Riddell's Bay",
+          "updatedAt": "2023-05-18T15:39:33.602Z",
+          "createdAt": "2023-05-17T18:46:47.154Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "61",
+        "bbox": [
+          -64.83173398722272,
+          32.26237056807099,
+          -64.82984571207618,
+          32.26447534948065
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d6",
+          "name": "M21 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.602Z",
+          "createdAt": "2023-05-17T18:44:53.145Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "62",
+        "bbox": [
+          -64.8381981109486,
+          32.25596520024513,
+          -64.83784405935866,
+          32.25640978003005
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d8",
+          "name": "M26 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.603Z",
+          "createdAt": "2023-05-17T18:47:26.783Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "63",
+        "bbox": [
+          -64.83001737345315,
+          32.2620621046257,
+          -64.82920198191259,
+          32.26282418888028
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71d9",
+          "name": "M26 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.606Z",
+          "createdAt": "2023-05-17T18:48:21.128Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "64",
+        "bbox": [
+          -64.82903032053564,
+          32.26262459600349,
+          -64.82729224909393,
+          32.264148748668205
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71db",
+          "name": "M27 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.608Z",
+          "createdAt": "2023-05-17T18:51:53.400Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "65",
+        "bbox": [
+          -64.82480315912805,
+          32.263132649735624,
+          -64.82317237604695,
+          32.263604411369016
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71dc",
+          "name": "M27 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.608Z",
+          "createdAt": "2023-05-17T18:53:55.185Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "66",
+        "bbox": [
+          -64.82566683043106,
+          32.262969347060256,
+          -64.82501237143148,
+          32.26376771290129
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71da",
+          "name": "M27 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.607Z",
+          "createdAt": "2023-05-17T18:50:52.299Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "67",
+        "bbox": [
+          -64.82720641840547,
+          32.26400359237431,
+          -64.82471732843958,
+          32.26574545257858
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71dd",
+          "name": "M28 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.609Z",
+          "createdAt": "2023-05-17T18:54:29.877Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "68",
+        "bbox": [
+          -64.82246963728556,
+          32.26269717528204,
+          -64.82091395605708,
+          32.26321430096283
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e0",
+          "name": "M30 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.614Z",
+          "createdAt": "2023-05-17T18:57:26.593Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "69",
+        "bbox": [
+          -64.859258816133,
+          32.25583817704941,
+          -64.85856144178919,
+          32.25632812268159
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71df",
+          "name": "M30 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.614Z",
+          "createdAt": "2023-05-17T18:57:00.475Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "70",
+        "bbox": [
+          -64.85983817328017,
+          32.256763627690475,
+          -64.85867945898583,
+          32.257044890231725
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e1",
+          "name": "M32 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.615Z",
+          "createdAt": "2023-05-17T18:58:59.935Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "71",
+        "bbox": [
+          -64.88614527929744,
+          32.281184855681815,
+          -64.88468615759346,
+          32.28193770885273
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71de",
+          "name": "M29 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.613Z",
+          "createdAt": "2023-05-17T18:55:43.985Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "72",
+        "bbox": [
+          -64.8196506356103,
+          32.26238871294655,
+          -64.81904445637284,
+          32.26329595211674
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e2",
+          "name": "M36 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.616Z",
+          "createdAt": "2023-05-17T18:59:49.896Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "73",
+        "bbox": [
+          -64.8833021377419,
+          32.277239077225346,
+          -64.88290517080773,
+          32.278953471021175
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e3",
+          "name": "M35 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.619Z",
+          "createdAt": "2023-05-17T19:02:03.955Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "74",
+        "bbox": [
+          -64.88162843931674,
+          32.27816430964779,
+          -64.88073794592388,
+          32.279579352745706
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e6",
+          "name": "M33 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.625Z",
+          "createdAt": "2023-05-17T19:04:32.465Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "75",
+        "bbox": [
+          -64.88054482687483,
+          32.28034128988567,
+          -64.87965433348195,
+          32.2809580914539
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e4",
+          "name": "M34 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.621Z",
+          "createdAt": "2023-05-17T19:02:58.422Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "76",
+        "bbox": [
+          -64.88068430174359,
+          32.2793901076005,
+          -64.87986891020313,
+          32.280032887528634
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e7",
+          "name": "M37 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.626Z",
+          "createdAt": "2023-05-17T19:06:38.358Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "77",
+        "bbox": [
+          -64.88092033613688,
+          32.27804638839321,
+          -64.88058774221905,
+          32.278391080860374
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e5",
+          "name": "M34 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.623Z",
+          "createdAt": "2023-05-17T19:03:46.530Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "78",
+        "bbox": [
+          -64.87976162184255,
+          32.27962470632605,
+          -64.87905351866266,
+          32.280159876861475
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e8",
+          "name": "M37 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.629Z",
+          "createdAt": "2023-05-17T19:07:04.216Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "79",
+        "bbox": [
+          -64.88073794592388,
+          32.27717558053657,
+          -64.88019077528489,
+          32.277901254330956
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ea",
+          "name": "M38 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.630Z",
+          "createdAt": "2023-05-17T19:09:34.479Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "80",
+        "bbox": [
+          -64.88198249091056,
+          32.275406726342105,
+          -64.87991182555125,
+          32.277193722451976
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71e9",
+          "name": "M37 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.629Z",
+          "createdAt": "2023-05-17T19:08:20.581Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "81",
+        "bbox": [
+          -64.88137094725522,
+          32.27705765799645,
+          -64.88111345518982,
+          32.27739328328422
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ec",
+          "name": "M39 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.631Z",
+          "createdAt": "2023-05-17T19:11:23.468Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "82",
+        "bbox": [
+          -64.87415312279664,
+          32.28254089393266,
+          -64.87384735096892,
+          32.28274497820172
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71eb",
+          "name": "M39 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.631Z",
+          "createdAt": "2023-05-17T19:10:38.695Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "83",
+        "bbox": [
+          -64.87384198655087,
+          32.28272683739639,
+          -64.8732465361495,
+          32.28329827102087
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71f0",
+          "name": "M41 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.639Z",
+          "createdAt": "2023-05-17T19:17:00.497Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "84",
+        "bbox": [
+          -64.84620450486021,
+          32.31240487483933,
+          -64.84567342747519,
+          32.31264062782179
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ef",
+          "name": "C7 - The Lagoon",
+          "updatedAt": "2023-05-18T15:39:33.639Z",
+          "createdAt": "2023-05-17T19:15:50.458Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "85",
+        "bbox": [
+          -64.84696893442865,
+          32.313134800351904,
+          -64.8442330812337,
+          32.31497545596191
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71ed",
+          "name": "M40 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.635Z",
+          "createdAt": "2023-05-17T19:12:38.597Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "86",
+        "bbox": [
+          -64.86603809942159,
+          32.30588062101921,
+          -64.86574037422102,
+          32.30608011871743
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646646b522c5975d039e71f2",
+          "name": "M31 - Mangroves",
+          "updatedAt": "2023-05-18T15:39:33.644Z",
+          "createdAt": "2023-05-17T19:28:31.336Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": ""
+            }
+          ]
+        },
+        "id": "87",
+        "bbox": [
+          -64.86521600235889,
+          32.270639719355934,
+          -64.86480294217056,
+          32.27082115141886
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "646648ef22c5975d039e7280",
+          "name": "A1 - Muir Chain - FULL",
+          "updatedAt": "2023-05-18T15:49:11.036Z",
+          "createdAt": "2021-11-15T18:40:01.874Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESTORE_CON\",\"TRAD_USE_NE\",\"TRAD_FISH_COLLECT\",\"RECREATE_NE\",\"TOURISM\"]"
+            }
+          ]
+        },
+        "id": "88",
+        "bbox": [
+          -63.585183259546085,
+          32.939672391800784,
+          -60.755682361949525,
+          34.35953357124007
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6466490122c5975d039e7281",
+          "name": "A2 - Southeast EEZ - FULL",
+          "updatedAt": "2023-05-18T15:49:31.369Z",
+          "createdAt": "2021-11-15T18:46:48.006Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESTORE_CON\",\"TRAD_USE_NE\",\"TRAD_FISH_COLLECT\",\"RECREATE_NE\",\"TOURISM\"]"
+            }
+          ]
+        },
+        "id": "89",
+        "bbox": [
+          -63.68916104101087,
+          29.06211312822654,
+          -60.73830981641318,
+          31.987751888388864
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6466490422c5975d039e7282",
+          "name": "A3 - Crescent Seamount - HIGH",
+          "updatedAt": "2023-05-18T15:49:30.972Z",
+          "createdAt": "2021-11-15T18:40:01.874Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"RESEARCH_NE\",\"RESTORE_CON\",\"TRAD_USE_NE\",\"TRAD_FISH_COLLECT\",\"FISH_COLLECT_REC\",\"FISH_COLLECT_LOCAL\",\"RECREATE_NE\",\"TOURISM\"]"
+            }
+          ]
+        },
+        "id": "90",
+        "bbox": [
+          -65.93900426987479,
+          32.93583036861527,
+          -65.34757361978217,
+          33.41934835571679
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}
