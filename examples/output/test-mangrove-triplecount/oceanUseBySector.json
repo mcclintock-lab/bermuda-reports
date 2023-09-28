@@ -1,0 +1,504 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.20563022792339325,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.20563022792339325,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Aquaculture",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.4112604558467865,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Boating",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.00030319750658236444,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0005677549925167114,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "commercial_fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0.0008709524990990758,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "PassiveRecreation_Conservation",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Recreational Fishing",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Shipping",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.078674793243408,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Swimming_Snorkeling_Diving",
+      "groupId": null,
+      "geographyId": null,
+      "value": 4.078674793243408,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.102868914604187,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1.102868914604187,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Tourism",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2.205737829208374,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Utilities",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "6515b128d8af897f11273784",
+      "name": "test-mangrove-triplecount",
+      "updatedAt": "2023-09-28T17:01:04.113Z",
+      "createdAt": "2023-09-28T17:00:24.950Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08d",
+          "name": "M117",
+          "updatedAt": "2023-09-28T17:01:04.112Z",
+          "createdAt": "2023-09-26T13:39:14.184Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69081702069732,
+          32.3700625149345,
+          -64.690580986304,
+          32.370261871200526
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08f",
+          "name": "M119",
+          "updatedAt": "2023-09-28T17:01:04.124Z",
+          "createdAt": "2023-09-26T13:39:40.224Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.69029130773035,
+          32.36980878814182,
+          -64.68991043405018,
+          32.370094230733514
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08e",
+          "name": "M118",
+          "updatedAt": "2023-09-28T17:01:04.013Z",
+          "createdAt": "2023-09-26T13:39:27.815Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.69056489304991,
+          32.36998095997168,
+          -64.69028057889429,
+          32.370175785594135
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

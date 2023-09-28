@@ -1,0 +1,684 @@
+{
+  "metrics": [
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Algal Vermetid Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Bathypelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 2,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 1,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Bays and Coast",
+      "groupId": null,
+      "geographyId": null,
+      "value": 3,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Castle Harbour Madracis",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Diploria Porites Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Fore Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Madracis Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Main Terrace Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Mesopelagic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Mesophotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Montastraea Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Rariphotic",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "nearshoreAreaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Rim Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "6515b128d8af897f11273784",
+      "name": "test-mangrove-triplecount",
+      "updatedAt": "2023-09-28T17:01:04.113Z",
+      "createdAt": "2023-09-28T17:00:24.950Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08d",
+          "name": "M117",
+          "updatedAt": "2023-09-28T17:01:04.112Z",
+          "createdAt": "2023-09-26T13:39:14.184Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69081702069732,
+          32.3700625149345,
+          -64.690580986304,
+          32.370261871200526
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08f",
+          "name": "M119",
+          "updatedAt": "2023-09-28T17:01:04.124Z",
+          "createdAt": "2023-09-26T13:39:40.224Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.69029130773035,
+          32.36980878814182,
+          -64.68991043405018,
+          32.370094230733514
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08e",
+          "name": "M118",
+          "updatedAt": "2023-09-28T17:01:04.013Z",
+          "createdAt": "2023-09-26T13:39:27.815Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.69056489304991,
+          32.36998095997168,
+          -64.69028057889429,
+          32.370175785594135
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

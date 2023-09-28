@@ -1,0 +1,547 @@
+{
+  "metrics": [
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bait_inshore",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bait_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bottom_all",
+      "groupId": null,
+      "value": 0.0000057720180848264135
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bottom_all",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bottom_all",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bottom_all",
+      "groupId": null,
+      "value": 0.0000057720180848264135
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bottom_general",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bottom_general",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bottom_general",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bottom_general",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bottom_general_other",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bottom_general_snapper",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "bottom_general_turbot",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "catch_release",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "catch_release",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "catch_release",
+      "groupId": null,
+      "value": 0.000005469816642289516
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "catch_release",
+      "groupId": null,
+      "value": 0.000005469816642289516
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "shark",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "shark",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "shark",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "shark",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trapping",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trapping",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trapping",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trapping",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trapping_guinea_chick",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trapping_spiny_lobster",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trolling",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trolling",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trolling",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trolling",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trolling_pelagic",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "value": 7.692552372873251e-9
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "value": 7.692552372873251e-9
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "trolling_rockfish",
+      "groupId": null,
+      "value": 1.5385104745746503e-8
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "value": 0
+    },
+    {
+      "metricId": "valueOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "vertical_lining",
+      "groupId": null,
+      "value": 0
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "6515b128d8af897f11273784",
+      "name": "test-mangrove-triplecount",
+      "updatedAt": "2023-09-28T17:01:04.113Z",
+      "createdAt": "2023-09-28T17:00:24.950Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08d",
+          "name": "M117",
+          "updatedAt": "2023-09-28T17:01:04.112Z",
+          "createdAt": "2023-09-26T13:39:14.184Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69081702069732,
+          32.3700625149345,
+          -64.690580986304,
+          32.370261871200526
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08f",
+          "name": "M119",
+          "updatedAt": "2023-09-28T17:01:04.124Z",
+          "createdAt": "2023-09-26T13:39:40.224Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.69029130773035,
+          32.36980878814182,
+          -64.68991043405018,
+          32.370094230733514
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08e",
+          "name": "M118",
+          "updatedAt": "2023-09-28T17:01:04.013Z",
+          "createdAt": "2023-09-26T13:39:27.815Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.69056489304991,
+          32.36998095997168,
+          -64.69028057889429,
+          32.370175785594135
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,774 @@
+{
+  "metrics": [
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 209.5792714335613,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 225.51927644710761,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 365.2051168161798,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Amenity Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 800.3036646968487,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "CableZone",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "CoralPreserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Ferry Route",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "MPAExtendedClosure",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Nature Reserve",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 244.88039694559734,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 195.724892528868,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 481.66719030702205,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "NoLobsterFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 922.2724797814874,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "NoNetFish",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Prohibited",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Recreational Park",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Reef",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "SeasonalPA",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Shipping Lane",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 244.88039694559734,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 195.724892528868,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 481.66719030702205,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "SpearfishEx",
+      "groupId": null,
+      "geographyId": null,
+      "value": 922.2724797814874,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08d",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M117"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08e",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M118"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b11aaff403117f96e08f",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "M119"
+      }
+    },
+    {
+      "metricId": "areaOverlap",
+      "sketchId": "6515b128d8af897f11273784",
+      "classId": "Wreck",
+      "groupId": null,
+      "geographyId": null,
+      "value": 0,
+      "extra": {
+        "sketchName": "test-mangrove-triplecount",
+        "isCollection": true
+      }
+    }
+  ],
+  "sketch": {
+    "type": "FeatureCollection",
+    "properties": {
+      "id": "6515b128d8af897f11273784",
+      "name": "test-mangrove-triplecount",
+      "updatedAt": "2023-09-28T17:01:04.113Z",
+      "createdAt": "2023-09-28T17:00:24.950Z",
+      "sketchClassId": "615b65a2aac8c8285d50d9f3",
+      "isCollection": true,
+      "userAttributes": []
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08d",
+          "name": "M117",
+          "updatedAt": "2023-09-28T17:01:04.112Z",
+          "createdAt": "2023-09-26T13:39:14.184Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "1",
+        "bbox": [
+          -64.69081702069732,
+          32.3700625149345,
+          -64.690580986304,
+          32.370261871200526
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08f",
+          "name": "M119",
+          "updatedAt": "2023-09-28T17:01:04.124Z",
+          "createdAt": "2023-09-26T13:39:40.224Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "2",
+        "bbox": [
+          -64.69029130773035,
+          32.36980878814182,
+          -64.68991043405018,
+          32.370094230733514
+        ],
+        "geometry": null
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "6515b11aaff403117f96e08e",
+          "name": "M118",
+          "updatedAt": "2023-09-28T17:01:04.013Z",
+          "createdAt": "2023-09-26T13:39:27.815Z",
+          "sketchClassId": "615b59e1aac8c8285d50d9b8",
+          "isCollection": false,
+          "userAttributes": [
+            {
+              "label": "Allowed Activities",
+              "fieldType": "ChoiceField",
+              "exportId": "ACTIVITIES",
+              "value": "[\"WORKS\"]"
+            }
+          ]
+        },
+        "id": "3",
+        "bbox": [
+          -64.69056489304991,
+          32.36998095997168,
+          -64.69028057889429,
+          32.370175785594135
+        ],
+        "geometry": null
+      }
+    ]
+  }
+}
