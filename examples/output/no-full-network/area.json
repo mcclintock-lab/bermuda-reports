@@ -85,7 +85,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 117.54897254908393,
+      "value": 117.54897254989152,
       "extra": {
         "sketchName": "no-full-network",
         "isCollection": true
@@ -97,7 +97,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 117.54897254908393,
+      "value": 117.54897254989152,
       "extra": {
         "sketchName": "MPA 2"
       }
@@ -142,7 +142,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.038531265200767786,
+      "value": 0.03853126520076804,
       "extra": {
         "sketchName": "MPA 1"
       }
@@ -153,7 +153,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.050598639699453905,
+      "value": 0.050598639699454245,
       "extra": {
         "sketchName": "no-full-network",
         "isCollection": true
@@ -165,7 +165,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.012067374498686117,
+      "value": 0.012067374498686199,
       "extra": {
         "sketchName": "MPA 2"
       }
@@ -187,7 +187,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 2.5379082062351933e-10,
+      "value": 2.537908206252629e-10,
       "extra": {
         "sketchName": "no-full-network",
         "isCollection": true
@@ -199,7 +199,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 2.5379082062351933e-10,
+      "value": 2.537908206252629e-10,
       "extra": {
         "sketchName": "MPA 2"
       }

@@ -230,7 +230,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.12480140898267925,
+      "value": 0.12480140898268009,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -241,7 +241,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.15101716351742012,
+      "value": 0.15101716351742114,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -253,7 +253,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.12167999342960067,
+      "value": 0.1216799934296015,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -264,7 +264,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.12167999342960067,
+      "value": 0.1216799934296015,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -275,7 +275,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.12949248406736308,
+      "value": 0.12949248406736394,
       "extra": {
         "sketchName": "low MPA"
       }

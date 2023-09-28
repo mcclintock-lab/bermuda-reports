@@ -6,7 +6,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 49308799.80331035,
+      "value": 49308799.80330953,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -17,7 +17,7 @@
       "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
-      "value": 49308799.80331035,
+      "value": 49308799.80330953,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -28,7 +28,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 59197874.40553542,
+      "value": 59197874.40553465,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -40,7 +40,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 39026303.93923122,
+      "value": 39026303.939230986,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -52,7 +52,7 @@
       "classId": "fishing_by_location",
       "groupId": "high",
       "geographyId": null,
-      "value": 13762973.726239465,
+      "value": 13762973.726238914,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -76,7 +76,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 39026303.93923122,
+      "value": 39026303.939230986,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -87,7 +87,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 39026303.93923122,
+      "value": 39026303.939230986,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -98,7 +98,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 39026303.93923122,
+      "value": 39026303.939230986,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -109,7 +109,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 39026303.93923122,
+      "value": 39026303.939230986,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -120,7 +120,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 57081949.30757214,
+      "value": 57081949.30757125,
       "extra": {
         "sketchName": "low MPA"
       }
@@ -131,7 +131,7 @@
       "classId": "fishing_by_location",
       "groupId": "low",
       "geographyId": null,
-      "value": 57081949.30757214,
+      "value": 57081949.30757125,
       "extra": {
         "sketchName": "low MPA"
       }

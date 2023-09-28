@@ -6,7 +6,7 @@
       "classId": "Amenity Park",
       "groupId": null,
       "geographyId": null,
-      "value": 41504.272852328846,
+      "value": 41504.27285232454,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -149,7 +149,7 @@
       "classId": "SpearfishEx",
       "groupId": null,
       "geographyId": null,
-      "value": 16238176.633523483,
+      "value": 16238176.633523487,
       "extra": {
         "sketchName": "nearshore-span"
       }
@@ -160,7 +160,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 308722.927218134,
+      "value": 308722.92721813376,
       "extra": {
         "sketchName": "nearshore-span"
       }

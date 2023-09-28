@@ -6,7 +6,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 8147784.905896832,
+      "value": 8147784.905896557,
       "extra": {
         "sketchName": "mpa-full"
       }
@@ -17,7 +17,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 8147784.905896832,
+      "value": 8147784.905896557,
       "extra": {
         "sketchName": "mpa-full"
       }

@@ -98,7 +98,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1643212.7737636017,
+      "value": 1643212.7737630503,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -109,7 +109,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1643212.7737636017,
+      "value": 1643212.7737630503,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -120,7 +120,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1643212.7737636017,
+      "value": 1643212.7737630503,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -132,7 +132,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1643212.7737636017,
+      "value": 1643212.7737630503,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -190,7 +190,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 251384.25249094923,
+      "value": 251384.25249093227,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -201,7 +201,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 251384.25249094923,
+      "value": 251384.25249093227,
       "extra": {
         "sketchName": "full mpa"
       }
@@ -212,7 +212,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 363329.2306128908,
+      "value": 363329.23061287485,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -224,7 +224,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 251384.25249094923,
+      "value": 251384.25249093227,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -248,7 +248,7 @@
       "classId": "Seagrass",
       "groupId": "low",
       "geographyId": null,
-      "value": 111944.97812194153,
+      "value": 111944.9781219426,
       "extra": {
         "sketchName": "no-high-network",
         "isCollection": true
@@ -260,7 +260,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 111944.97812194153,
+      "value": 111944.9781219426,
       "extra": {
         "sketchName": "low mpa"
       }
@@ -271,7 +271,7 @@
       "classId": "Seagrass",
       "groupId": "low",
       "geographyId": null,
-      "value": 111944.97812194153,
+      "value": 111944.9781219426,
       "extra": {
         "sketchName": "low mpa"
       }

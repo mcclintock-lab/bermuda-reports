@@ -6,7 +6,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 12686.283058209754,
+      "value": 12686.283058193603,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -30,7 +30,7 @@
       "classId": "Mangrove",
       "groupId": "high",
       "geographyId": null,
-      "value": 12686.283058209754,
+      "value": 12686.283058193603,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -98,7 +98,7 @@
       "classId": "Mangrove",
       "groupId": null,
       "geographyId": null,
-      "value": 10279.145303907217,
+      "value": 10279.145303891066,
       "extra": {
         "sketchName": "low2"
       }
@@ -109,7 +109,7 @@
       "classId": "Mangrove",
       "groupId": "high",
       "geographyId": null,
-      "value": 10279.145303907217,
+      "value": 10279.145303891066,
       "extra": {
         "sketchName": "low2"
       }
@@ -120,7 +120,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 71999.97267010056,
+      "value": 71999.9726700914,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -144,7 +144,7 @@
       "classId": "Nursery Reef",
       "groupId": "high",
       "geographyId": null,
-      "value": 71999.97267010056,
+      "value": 71999.9726700914,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -212,7 +212,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 61927.90128350381,
+      "value": 61927.901283494655,
       "extra": {
         "sketchName": "low2"
       }
@@ -223,7 +223,7 @@
       "classId": "Nursery Reef",
       "groupId": "high",
       "geographyId": null,
-      "value": 61927.90128350381,
+      "value": 61927.901283494655,
       "extra": {
         "sketchName": "low2"
       }

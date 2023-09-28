@@ -96,7 +96,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 228042.17653470996,
+      "value": 228042.17653466688,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -108,7 +108,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 13145.15432119326,
+      "value": 13145.154321167416,
       "extra": {
         "sketchName": "high1"
       }
@@ -119,7 +119,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 90210.5541554535,
+      "value": 90210.55415547073,
       "extra": {
         "sketchName": "low1"
       }
@@ -130,7 +130,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 124686.46805806317,
+      "value": 124686.46805802871,
       "extra": {
         "sketchName": "low2"
       }
@@ -186,7 +186,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.0003173378521992141,
+      "value": 0.0003173378521992162,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -198,7 +198,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.00004652285633869014,
+      "value": 0.00004652285633869045,
       "extra": {
         "sketchName": "high1"
       }
@@ -209,7 +209,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.00011845803083819709,
+      "value": 0.00011845803083819788,
       "extra": {
         "sketchName": "low1"
       }
@@ -220,7 +220,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.0001523569650223268,
+      "value": 0.00015235696502232784,
       "extra": {
         "sketchName": "low2"
       }
@@ -231,7 +231,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 4.923480815227979e-7,
+      "value": 4.923480815227049e-7,
       "extra": {
         "sketchName": "baitInshore1Full2HighProtection",
         "isCollection": true
@@ -243,7 +243,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 2.8380677687381773e-8,
+      "value": 2.8380677687325974e-8,
       "extra": {
         "sketchName": "high1"
       }
@@ -254,7 +254,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 1.9476657321232705e-7,
+      "value": 1.9476657321236424e-7,
       "extra": {
         "sketchName": "low1"
       }
@@ -265,7 +265,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 2.69200830623089e-7,
+      "value": 2.6920083062301464e-7,
       "extra": {
         "sketchName": "low2"
       }

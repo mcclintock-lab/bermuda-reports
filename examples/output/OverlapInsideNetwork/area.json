@@ -142,7 +142,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.08023645005863031,
+      "value": 0.08023645005863085,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -154,7 +154,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.08023645005863031,
+      "value": 0.08023645005863085,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -165,7 +165,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.056405888528140914,
+      "value": 0.056405888528141296,
       "extra": {
         "sketchName": "MPA inside"
       }

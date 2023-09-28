@@ -142,7 +142,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1215461.2209962565,
+      "value": 1215461.2209960988,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -154,7 +154,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1215461.2209962565,
+      "value": 1215461.2209960988,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -190,7 +190,7 @@
       "classId": "Nursery Reef",
       "groupId": null,
       "geographyId": null,
-      "value": 1215461.2209962565,
+      "value": 1215461.2209960988,
       "extra": {
         "sketchName": "test1"
       }
@@ -201,7 +201,7 @@
       "classId": "Nursery Reef",
       "groupId": "full",
       "geographyId": null,
-      "value": 1215461.2209962565,
+      "value": 1215461.2209960988,
       "extra": {
         "sketchName": "test1"
       }
@@ -278,7 +278,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 259482.9072519693,
+      "value": 259482.90725198545,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -290,7 +290,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 259482.9072519693,
+      "value": 259482.90725198545,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -326,7 +326,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 243563.7815093022,
+      "value": 243563.78150931836,
       "extra": {
         "sketchName": "test1"
       }
@@ -337,7 +337,7 @@
       "classId": "Seagrass",
       "groupId": "full",
       "geographyId": null,
-      "value": 243563.7815093022,
+      "value": 243563.78150931836,
       "extra": {
         "sketchName": "test1"
       }

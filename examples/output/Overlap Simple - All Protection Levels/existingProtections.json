@@ -241,7 +241,7 @@
       "classId": "MPAExtendedClosure",
       "groupId": null,
       "geographyId": null,
-      "value": 4522998.025696037,
+      "value": 4522998.02569659,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -275,7 +275,7 @@
       "classId": "MPAExtendedClosure",
       "groupId": null,
       "geographyId": null,
-      "value": 4493411.392273336,
+      "value": 4493411.392274438,
       "extra": {
         "sketchName": "low MPA"
       }
@@ -790,7 +790,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1265041.705377901,
+      "value": 1265041.7053781743,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -801,7 +801,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1826496.0643083546,
+      "value": 1826496.0643083523,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -813,7 +813,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1284719.2658566604,
+      "value": 1284719.2658566583,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -824,7 +824,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1284719.2658566604,
+      "value": 1284719.2658566583,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -835,7 +835,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1826416.763083077,
+      "value": 1826416.7630830752,
       "extra": {
         "sketchName": "low MPA"
       }

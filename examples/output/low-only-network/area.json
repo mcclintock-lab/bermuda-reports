@@ -98,7 +98,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.005178993571254523,
+      "value": 0.005178993571254557,
       "extra": {
         "sketchName": "low-1"
       }
@@ -109,7 +109,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.005178993571254523,
+      "value": 0.005178993571254557,
       "extra": {
         "sketchName": "low-only-network",
         "isCollection": true

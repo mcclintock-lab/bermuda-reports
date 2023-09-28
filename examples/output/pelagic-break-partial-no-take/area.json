@@ -28,7 +28,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 188999666.4793882,
+      "value": 188999666.47938815,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
@@ -50,7 +50,7 @@
       "classId": "nearshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.024265325214327615,
+      "value": 0.02426532521432778,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }
@@ -61,7 +61,7 @@
       "classId": "offshore",
       "groupId": null,
       "geographyId": null,
-      "value": 0.000408054442443948,
+      "value": 0.0004080544424439479,
       "extra": {
         "sketchName": "pelagic-break-partial-no-take"
       }

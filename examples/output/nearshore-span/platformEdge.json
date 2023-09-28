@@ -6,7 +6,7 @@
       "classId": "Platform Edge",
       "groupId": null,
       "geographyId": null,
-      "value": 130126914.10136266,
+      "value": 130126914.10136214,
       "extra": {
         "sketchName": "nearshore-span",
         "numFishingRestricted": 3,
@@ -19,7 +19,7 @@
       "classId": "Platform Edge",
       "groupId": "definite",
       "geographyId": null,
-      "value": 130126914.10136266,
+      "value": 130126914.10136214,
       "extra": {
         "sketchName": "nearshore-span",
         "numFishingRestricted": 3,

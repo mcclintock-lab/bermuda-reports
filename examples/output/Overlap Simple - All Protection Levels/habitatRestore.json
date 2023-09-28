@@ -118,7 +118,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 5387178.34907041,
+      "value": 5387178.349070686,
       "extra": {
         "sketchName": "high MPA"
       }
@@ -129,7 +129,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 6540352.050225386,
+      "value": 6540352.050225662,
       "extra": {
         "sketchName": "Overlap Simple - All Protection Levels",
         "isCollection": true
@@ -141,7 +141,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 4823640.468404946,
+      "value": 4823640.468405222,
       "extra": {
         "sketchName": "full MPA"
       }
@@ -152,7 +152,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 4823640.468404946,
+      "value": 4823640.468405222,
       "extra": {
         "sketchName": "full MPA copy"
       }
@@ -163,7 +163,7 @@
       "classId": "Seagrass",
       "groupId": null,
       "geographyId": null,
-      "value": 5839204.253634667,
+      "value": 5839204.253634943,
       "extra": {
         "sketchName": "low MPA"
       }

@@ -6,7 +6,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 72728751.68947405,
+      "value": 72728751.68947367,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -18,7 +18,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 72728751.68947405,
+      "value": 72728751.68947367,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -54,7 +54,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 12830199.234636674,
+      "value": 12830199.234636296,
       "extra": {
         "sketchName": "test1"
       }
@@ -65,7 +65,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 12830199.234636674,
+      "value": 12830199.234636296,
       "extra": {
         "sketchName": "test1"
       }

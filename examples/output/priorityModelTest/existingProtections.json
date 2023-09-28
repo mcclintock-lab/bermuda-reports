@@ -790,7 +790,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1011494.0188601406,
+      "value": 1011494.0188601385,
       "extra": {
         "sketchName": "priorityModelTest",
         "isCollection": true
@@ -802,7 +802,7 @@
       "classId": "Wreck",
       "groupId": null,
       "geographyId": null,
-      "value": 1011494.0188601406,
+      "value": 1011494.0188601385,
       "extra": {
         "sketchName": "test1"
       }

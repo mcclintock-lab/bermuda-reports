@@ -6,7 +6,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 43574847.179094866,
+      "value": 43574847.17909056,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -18,7 +18,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 43574847.179094866,
+      "value": 43574847.17909056,
       "extra": {
         "sketchName": "OverlapInsideNetwork",
         "isCollection": true
@@ -54,7 +54,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 43574847.179094866,
+      "value": 43574847.17909056,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -65,7 +65,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 43574847.179094866,
+      "value": 43574847.17909056,
       "extra": {
         "sketchName": "Large MPA"
       }
@@ -76,7 +76,7 @@
       "classId": "fishing_by_location",
       "groupId": null,
       "geographyId": null,
-      "value": 30306298.27711765,
+      "value": 30306298.277117755,
       "extra": {
         "sketchName": "MPA inside"
       }
@@ -87,7 +87,7 @@
       "classId": "fishing_by_location",
       "groupId": "full",
       "geographyId": null,
-      "value": 30306298.27711765,
+      "value": 30306298.277117755,
       "extra": {
         "sketchName": "MPA inside"
       }
