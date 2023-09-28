@@ -8,12 +8,12 @@ import {
   toNullSketch,
   rekeyMetrics,
   sortMetrics,
-  overlapFeatures,
   ReportResult,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config from "../_config";
+import { overlapFeatures } from "../util/overlapFeatures";
 
 export const shipwreckSumProperty = "NumberOfRe";
 export type ShipwreckProperties = {

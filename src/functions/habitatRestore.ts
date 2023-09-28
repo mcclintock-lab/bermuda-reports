@@ -7,13 +7,13 @@ import {
   Polygon,
   ReportResult,
   toNullSketch,
-  overlapFeatures,
   rekeyMetrics,
   sortMetrics,
 } from "@seasketch/geoprocessing";
 import bbox from "@turf/bbox";
 import config from "../_config";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
+import { overlapFeatures } from "../util/overlapFeatures";
 
 const REPORT = config.habitatRestore;
 const METRIC = REPORT.metrics.areaOverlap;

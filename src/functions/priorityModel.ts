@@ -11,13 +11,13 @@ import {
   toSketchArray,
   toNullSketch,
   overlapFeaturesGroupMetrics,
-  overlapFeatures,
   rekeyMetrics,
   sortMetrics,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config from "../_config";
+import { overlapFeatures } from "../util/overlapFeatures";
 
 const REPORT = config.priorityModel;
 const METRIC = REPORT.metrics.priorityModelAreaOverlap;

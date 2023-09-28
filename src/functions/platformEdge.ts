@@ -11,7 +11,6 @@ import {
   toNullSketch,
   isSketchCollection,
   keyBy,
-  overlapFeatures,
   overlapFeaturesGroupMetrics,
   rekeyMetrics,
   sortMetrics,
@@ -20,6 +19,7 @@ import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config from "../_config";
 import { getBreakGroup } from "../util/getBreakGroup";
+import { overlapFeatures } from "../util/overlapFeatures";
 
 const REPORT = config.platformEdge;
 const METRIC = REPORT.metrics.areaOverlap;

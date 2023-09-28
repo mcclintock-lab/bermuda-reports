@@ -9,11 +9,11 @@ import {
   toNullSketch,
   rekeyMetrics,
   sortMetrics,
-  overlapFeatures,
 } from "@seasketch/geoprocessing";
 import { fgbFetchAll } from "@seasketch/geoprocessing/dataproviders";
 import bbox from "@turf/bbox";
 import config from "../_config";
+import { overlapFeatures } from "@seasketch/geoprocessing/src/toolbox";
 
 // Multi-class vector dataset
 export const nameProperty = "Name";
