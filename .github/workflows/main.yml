@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '14'
       - name: Upgrade npm
-        run: npm install -g npm@latest
+        run: npm install -g npm@9
       - name: Install modules
         run: npm install
       - name: Run unit tests
